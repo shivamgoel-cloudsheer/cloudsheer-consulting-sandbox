@@ -39,27 +39,19 @@ const team = [
   { id: 12, name: 'Vishal Yadav',         role: 'BA - Salesforce',                  photo: BASE + 'team/Vishal Yadav.jpg',         linkedin: '#' },
   { id: 13, name: 'Abhishek Kaplesh',     role: 'Salesforce Developer',             photo: BASE + 'team/Abhishek Kaplesh.jpg',     linkedin: '#' },
   { id: 14, name: 'Ishit Bansal',         role: 'Salesforce Developer',             photo: BASE + 'team/Ishit Bansal.JPG',         linkedin: '#' },
-  { id: 15, name: 'Tania Arora',          role: 'Salesforce Developer',             photo: BASE + 'team/Tania Arora.JPG',          linkedin: '#' },
-  { id: 16, name: 'Shubham Jain',         role: 'Salesforce Developer',             photo: BASE + 'team/Shubham Jain.JPG',         linkedin: '#' },
-  { id: 17, name: 'Amit Yadav',           role: 'Salesforce Developer',             photo: BASE + 'team/Amit Yadav.png',           linkedin: '#' },
-  { id: 18, name: 'Arun Kumar',           role: 'Associate Salesforce Developer',   photo: BASE + 'team/Arun Kumar.JPG',           linkedin: '#' },
-  { id: 19, name: 'Divyansh Sharma',      role: 'Associate Salesforce Developer',   photo: BASE + 'team/Divyansh Sharma.jpg',      linkedin: '#' },
-  { id: 20, name: 'Gaurav Khanna',        role: 'Associate Salesforce Developer',   photo: BASE + 'team/Gaurav Khanna.JPG',        linkedin: '#' },
-  { id: 21, name: 'Piyush Kumar Singh',   role: 'Associate Salesforce Developer',   photo: BASE + 'team/Piyush Kumar Singh.JPG',   linkedin: '#' },
-  { id: 22, name: 'Rahul Babbar',         role: 'Associate Salesforce Developer',   photo: BASE + 'team/Rahul Babbar.jpg',         linkedin: '#' },
-  { id: 23, name: 'Vansh Nandan Mathur',  role: 'Associate Salesforce Developer',   photo: BASE + 'team/Vansh Nandan Mathur.jpg',  linkedin: '#' },
-  { id: 24, name: 'Aman Kumar',           role: 'Associate Salesforce Developer',   photo: BASE + 'team/Aman Kumar.jpg',           linkedin: '#' },
-  { id: 25, name: 'Aayush Gupta',         role: 'Associate Salesforce Developer',   photo: BASE + 'team/Aayush Gupta.JPG',         linkedin: '#' },
-  { id: 26, name: 'Himanshu Yadav',       role: 'QA',                               photo: BASE + 'team/Himanshu Yadav.jpg',       linkedin: '#' },
-  { id: 27, name: 'Manish Pavadiya',      role: 'QA',                               photo: BASE + 'team/Manish Pavadiya.JPG',      linkedin: '#' },
-  { id: 28, name: 'Sweety Singh',         role: 'QA',                               photo: BASE + 'team/Sweety Singh.JPG',         linkedin: '#' },
-  { id: 29, name: 'Payal Thakur',         role: 'QA',                               photo: BASE + 'team/Payal Thakur.JPG',         linkedin: '#' },
-  { id: 30, name: 'Alka Yadav',           role: 'QA',                               photo: BASE + 'team/Alka Yadav.JPG',           linkedin: '#' },
-  { id: 31, name: 'Ankita Mirnali',       role: 'QA',                               photo: BASE + 'team/Ankita Mirnali.JPG',       linkedin: '#' },
-  { id: 32, name: 'Mansi Bhardwaj',       role: 'QA',                               photo: BASE + 'team/Mansi Bhardwaj.JPG',       linkedin: '#' },
-  { id: 33, name: 'Bhu Garima Yadav',     role: 'QA',                               photo: BASE + 'team/Bhu Garima Yadav.jpg',     linkedin: '#' },
-  { id: 34, name: 'Dharmendar',           role: 'Salesforce Developer',             photo: BASE + 'team/Dharmendar.jpg',           linkedin: '#' },
-  { id: 35, name: 'Utkarsh',              role: 'Salesforce Developer',             photo: BASE + 'team/Utkarsh.jpg',              linkedin: '#' },
+  { id: 15, name: 'Arun Kumar',           role: 'Associate Salesforce Developer',   photo: BASE + 'team/Arun Kumar.JPG',           linkedin: '#' },
+  { id: 16, name: 'Divyansh Sharma',      role: 'Associate Salesforce Developer',   photo: BASE + 'team/Divyansh Sharma.jpg',      linkedin: '#' },
+  { id: 17, name: 'Gaurav Khanna',        role: 'Associate Salesforce Developer',   photo: BASE + 'team/Gaurav Khanna.JPG',        linkedin: '#' },
+  { id: 18, name: 'Piyush Kumar Singh',   role: 'Associate Salesforce Developer',   photo: BASE + 'team/Piyush Kumar Singh.JPG',   linkedin: '#' },
+  { id: 19, name: 'Rahul Babbar',         role: 'Associate Salesforce Developer',   photo: BASE + 'team/Rahul Babbar.jpg',         linkedin: '#' },
+  { id: 20, name: 'Vansh Nandan Mathur',  role: 'Associate Salesforce Developer',   photo: BASE + 'team/Vansh Nandan Mathur.jpg',  linkedin: '#' },
+  { id: 21, name: 'Aayush Gupta',         role: 'Associate Salesforce Developer',   photo: BASE + 'team/Aayush Gupta.JPG',         linkedin: '#' },
+  { id: 22, name: 'Himanshu Yadav',       role: 'QA',                               photo: BASE + 'team/Himanshu Yadav.jpg',       linkedin: '#' },
+  { id: 23, name: 'Manish Pavadiya',      role: 'QA',                               photo: BASE + 'team/Manish Pavadiya.JPG',      linkedin: '#' },
+  { id: 24, name: 'Sweety Singh',         role: 'QA',                               photo: BASE + 'team/Sweety Singh.JPG',         linkedin: '#' },
+  { id: 25, name: 'Alka Yadav',           role: 'QA',                               photo: BASE + 'team/Alka Yadav.JPG',           linkedin: '#' },
+  { id: 26, name: 'Bhu Garima Yadav',     role: 'QA',                               photo: BASE + 'team/Bhu Garima Yadav.jpg',     linkedin: '#' },
+  { id: 27, name: 'Utkarsh',              role: 'Salesforce Developer',             photo: BASE + 'team/Utkarsh.jpg',              linkedin: '#' },
 ]
 
 export default function About() {
@@ -187,7 +179,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { value: '60+',    label: 'Salesforce Certifications',     color: '#0176D3' },
-                { value: '35',     label: 'Team Members Globally',         color: '#6366F1' },
+                { value: '27',     label: 'Team Members Globally',         color: '#6366F1' },
                 { value: '4',      label: 'Global Office Locations',       color: '#06B6D4' },
                 { value: '150+',   label: 'Successful Implementations',    color: '#F59E0B' },
               ].map(({ value, label, color }) => (
@@ -236,7 +228,7 @@ export default function About() {
             </div>
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
-              35 experts across Dallas, Delhi, London, and New York - united by a shared passion
+              27 experts across Dallas, Delhi, London, and New York - united by a shared passion
               for Salesforce, Agentforce, and delivering outcomes that matter.
             </p>
           </div>
