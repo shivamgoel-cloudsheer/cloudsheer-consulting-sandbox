@@ -215,7 +215,7 @@ export default function Navbar() {
             className="h-14 w-auto"
             title="Certified Salesforce Partner"
           />
-          <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm px-5 py-2">Free Consultation</a>
+          <Link to="/contact" className="btn-primary text-sm px-5 py-2">Free Consultation</Link>
         </div>
 
         {/* Mobile burger */}
@@ -279,10 +279,10 @@ export default function Navbar() {
             ))}
 
             <div className="pt-3 mt-2" style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-              <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}
+              <Link to="/contact" onClick={() => setOpen(false)}
                 className="btn-primary w-full justify-center text-sm">
                 Free Consultation
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
