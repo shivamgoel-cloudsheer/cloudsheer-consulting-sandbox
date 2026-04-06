@@ -235,10 +235,10 @@ function TrustedBy() {
           <p className="text-xs uppercase tracking-widest shrink-0 font-semibold" style={{ color: '#64748B' }}>Trusted by</p>
           <div className="flex flex-wrap justify-center gap-10">
             {logos.map((l, i) => (
-              <span key={l} className="font-bold text-sm tracking-wide transition-colors duration-300 cursor-default animate-fade-up"
-                style={{ color: 'rgba(3,45,96,0.22)', animationDelay: `${i * 80}ms` }}
+              <span key={l} className="font-black text-base tracking-wide transition-colors duration-300 cursor-default animate-fade-up"
+                style={{ color: '#032D60', animationDelay: `${i * 80}ms` }}
                 onMouseEnter={e => e.currentTarget.style.color = '#0176D3'}
-                onMouseLeave={e => e.currentTarget.style.color = 'rgba(3,45,96,0.22)'}>
+                onMouseLeave={e => e.currentTarget.style.color = '#032D60'}>
                 {l}
               </span>
             ))}
