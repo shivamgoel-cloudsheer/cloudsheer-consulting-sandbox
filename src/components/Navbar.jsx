@@ -99,7 +99,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center animate-fade-in group">
           <img
-            src={import.meta.env.BASE_URL + "cloudsheer-logo.svg"}
+            src={import.meta.env.BASE_URL + "cloudsheer-logo.png"}
             alt="Cloudsheer Consulting"
             className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-85"
           />
@@ -210,7 +210,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3 animate-fade-in">
           <img
-            src={import.meta.env.BASE_URL + "salesforce-partner-badge.svg"}
+            src={import.meta.env.BASE_URL + "salesforce-partner-badge.png"}
             alt="Salesforce Partner"
             className="h-14 w-auto"
             title="Certified Salesforce Partner"

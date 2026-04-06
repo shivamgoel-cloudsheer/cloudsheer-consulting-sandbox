@@ -59,7 +59,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="inline-flex mb-5 group">
               <img
-                src={import.meta.env.BASE_URL + "cloudsheer-logo.svg"}
+                src={import.meta.env.BASE_URL + "cloudsheer-logo.png"}
                 alt="Cloudsheer Consulting"
                 className="h-10 w-auto transition-opacity duration-200 group-hover:opacity-85 rounded"
               />
