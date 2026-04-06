@@ -7,9 +7,9 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "A single unified console surfaces every channel, case history, and AI recommendation in one view — giving agents full context instantly" },
+  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "A single unified console surfaces every channel, case history, and AI recommendation in one view - giving agents full context instantly" },
   { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "Omni-channel routing delivers cases to the right agent with complete conversation history, eliminating transfers and repeat explanations" },
-  { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "Agentforce Service Agent resolves routine cases autonomously around the clock — freeing your team for complex, high-value work" },
+  { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "Agentforce Service Agent resolves routine cases autonomously around the clock - freeing your team for complex, high-value work" },
   { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "Entitlement tracking with milestone alerts flags at-risk cases in real time and auto-triggers escalation workflows before breaches occur" },
   { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "Einstein Search surfaces the most relevant article based on case context, cutting average handle time and improving first-contact resolution" },
 ]
@@ -20,7 +20,7 @@ const outcomes = [
   { icon: Headphones, value: '32%',       label: 'increase in first-contact resolution with unified agent workspace and AI-recommended actions', color: '#0176D3' },
   { icon: TrendingUp, value: '30%+',      label: 'improvement in customer satisfaction (CSAT) scores after deploying omni-channel service operations', color: '#6366F1' },
   { icon: Users,      value: '150K+',     label: 'companies worldwide trust Service Cloud to run their customer support operations', color: '#06B6D4' },
-  { icon: Globe,      value: '#1',        label: 'CRM platform for customer service — named a Leader in the Gartner Magic Quadrant 18 years running', color: '#0176D3' },
+  { icon: Globe,      value: '#1',        label: 'CRM platform for customer service - named a Leader in the Gartner Magic Quadrant 18 years running', color: '#0176D3' },
 ]
 
 const useCases = [
@@ -32,7 +32,7 @@ const useCases = [
     points: [
       'Unify email, chat, phone, WhatsApp, social media, and SMS into a single agent console',
       'Skills-based routing matches each case to the best-qualified available agent automatically',
-      'Full customer timeline — past purchases, open cases, sentiment score — visible before the agent responds',
+      'Full customer timeline - past purchases, open cases, sentiment score - visible before the agent responds',
       'Seamless bot-to-human handoff preserves the entire conversation so customers never repeat themselves',
       'Supervisor console with real-time queue health, agent utilisation, and live monitoring with whisper and barge-in',
     ],
@@ -43,7 +43,7 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve cases before they ever reach your team.',
     points: [
-      'Agentforce Service Agent handles Tier-1 and Tier-2 queries autonomously — grounded in your trusted data',
+      'Agentforce Service Agent handles Tier-1 and Tier-2 queries autonomously - grounded in your trusted data',
       'AI chatbots search your knowledge base, case history, and product docs to deliver precise answers in real time',
       'Branded self-service portals let customers track orders, update accounts, and submit cases on their own',
       'Einstein Article Recommendations surface the right help content to both agents and customers, reducing handle time',
@@ -79,10 +79,10 @@ const useCases = [
 ]
 
 const whyUs = [
-  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud — from straightforward case management rollouts to complex omni-channel operations with Agentforce AI agents, field service, and entitlements. We know this product inside out." },
-  { title: "Designed Around Your SLAs",      desc: "Every implementation maps to your specific support tiers, escalation rules, entitlements, and operating hours. No cookie-cutter templates — a system built around how your team actually delivers support." },
+  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud - from straightforward case management rollouts to complex omni-channel operations with Agentforce AI agents, field service, and entitlements. We know this product inside out." },
+  { title: "Designed Around Your SLAs",      desc: "Every implementation maps to your specific support tiers, escalation rules, entitlements, and operating hours. No cookie-cutter templates - a system built around how your team actually delivers support." },
   { title: 'Fast Time to Value',            desc: "Most Service Cloud deployments go live within 6-8 weeks. We configure in sandbox, test with real-world scenarios, train your team, and get you to production without months of discovery workshops." },
-  { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support operation, identify the highest-impact quick wins, and give you a clear deployment plan — completely free, zero obligation." },
+  { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support operation, identify the highest-impact quick wins, and give you a clear deployment plan - completely free, zero obligation." },
 ]
 
 export default function ServiceCloudPage() {
@@ -106,7 +106,7 @@ export default function ServiceCloudPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Service Cloud brings every support channel, AI-powered automation, and customer insight into one workspace — so your team resolves issues faster, deflects routine tickets automatically, and delivers the experience that turns frustrated customers into loyal advocates.
+              Service Cloud brings every support channel, AI-powered automation, and customer insight into one workspace - so your team resolves issues faster, deflects routine tickets automatically, and delivers the experience that turns frustrated customers into loyal advocates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -198,7 +198,7 @@ export default function ServiceCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">What You Get</div>
             <h2 className="section-title mb-4">
-              A Complete Support Operation —{' '}
+              A Complete Support Operation -{' '}
               <span className="gradient-text">Built For Your Business</span>
             </h2>
             <p className="section-sub">
@@ -284,11 +284,11 @@ export default function ServiceCloudPage() {
             <span className="gradient-text-gold">Drives Loyalty and Cuts Costs?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will audit your current support operation, identify where you are losing time and money, and map out a Service Cloud deployment plan that delivers measurable ROI — at no cost and no obligation.
+            In 30 minutes we will audit your current support operation, identify where you are losing time and money, and map out a Service Cloud deployment plan that delivers measurable ROI - at no cost and no obligation.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['We audit your current setup first', 'No sales pitch — just a plan', 'You leave with clear next steps'].map(i => (
+            {['We audit your current setup first', 'No sales pitch - just a plan', 'You leave with clear next steps'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

@@ -3,7 +3,7 @@ import { ArrowRight, Award, Heart, Lightbulb, Users, Sparkles, MapPin, Star, Lin
 
 const values = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce-First Thinking', desc: 'Every engagement starts by asking: where can an AI agent create the most value? We are built around this question.' },
-  { icon: <Award className="w-5 h-5" />,    title: 'Excellence',               desc: 'We hold ourselves to the highest standard — in our code quality, solution design, and client communication.' },
+  { icon: <Award className="w-5 h-5" />,    title: 'Excellence',               desc: 'We hold ourselves to the highest standard - in our code quality, solution design, and client communication.' },
   { icon: <Heart className="w-5 h-5" />,    title: 'True Partnership',         desc: 'We invest in long-term relationships, not one-off projects. Your success is the only metric we care about.' },
   { icon: <Lightbulb className="w-5 h-5" />,title: 'Relentless Innovation',    desc: 'We stay at the frontier of Salesforce and Agentforce, bringing the latest capabilities to our clients first.' },
   { icon: <Users className="w-5 h-5" />,    title: 'People-First AI',          desc: 'AI agents should empower people, not replace them. We design every agent to make your team more effective.' },
@@ -28,16 +28,16 @@ const offices = [
 const team = [
   { id: 1,  name: 'Tushar Sharma',      role: 'CEO',                              photo: null, linkedin: '#' },
   { id: 2,  name: 'Rajat Sharma',       role: 'Technical Delivery Head',          photo: null, linkedin: '#' },
-  { id: 3,  name: 'Bharat Sharma',      role: 'Head of Operations — UK',          photo: null, linkedin: '#' },
-  { id: 4,  name: 'Shubham Bansal',     role: 'Growth & Marketing — Head',        photo: null, linkedin: '#' },
+  { id: 3,  name: 'Bharat Sharma',      role: 'Head of Operations - UK',          photo: null, linkedin: '#' },
+  { id: 4,  name: 'Shubham Bansal',     role: 'Growth & Marketing - Head',        photo: null, linkedin: '#' },
   { id: 5,  name: 'Shainkey Pawaiya',   role: 'Project Manager',                  photo: null, linkedin: '#' },
-  { id: 6,  name: 'Pranay Pandey',      role: 'Team Lead — QA',                   photo: null, linkedin: '#' },
+  { id: 6,  name: 'Pranay Pandey',      role: 'Team Lead - QA',                   photo: null, linkedin: '#' },
   { id: 7,  name: 'Arihanta Jain',      role: 'Assistant Manager HR',             photo: null, linkedin: '#' },
   { id: 8,  name: 'Arti Bisht',         role: 'Senior Accountant',                photo: null, linkedin: '#' },
-  { id: 9,  name: 'Shivam Goel',        role: 'Strategy & Growth — Associate',    photo: null, linkedin: '#' },
-  { id: 10, name: 'Prateek Jain',       role: 'Growth & Marketing — Associate',   photo: null, linkedin: '#' },
-  { id: 11, name: 'Tammana Gautam',     role: 'BA — Salesforce',                  photo: null, linkedin: '#' },
-  { id: 12, name: 'Vishal Yadav',       role: 'BA — Salesforce',                  photo: null, linkedin: '#' },
+  { id: 9,  name: 'Shivam Goel',        role: 'Strategy & Growth - Associate',    photo: null, linkedin: '#' },
+  { id: 10, name: 'Prateek Jain',       role: 'Growth & Marketing - Associate',   photo: null, linkedin: '#' },
+  { id: 11, name: 'Tammana Gautam',     role: 'BA - Salesforce',                  photo: null, linkedin: '#' },
+  { id: 12, name: 'Vishal Yadav',       role: 'BA - Salesforce',                  photo: null, linkedin: '#' },
   { id: 13, name: 'Abhishek Kaplesh',   role: 'Salesforce Developer',             photo: null, linkedin: '#' },
   { id: 14, name: 'Ishit Bansal',       role: 'Salesforce Developer',             photo: null, linkedin: '#' },
   { id: 15, name: 'Tania Arora',        role: 'Salesforce Developer',             photo: null, linkedin: '#' },
@@ -64,7 +64,7 @@ export default function About() {
             Built by Believers in <span className="gradient-text">Autonomous AI</span>
           </h1>
           <p className="section-sub">
-            We did not just add Agentforce to our service list — we rebuilt our entire
+            We did not just add Agentforce to our service list - we rebuilt our entire
             practice around it. Because we believe it is the most important shift in
             enterprise software since the cloud itself.
           </p>
@@ -124,7 +124,7 @@ export default function About() {
               </p>
               <p>
                 When Salesforce launched Agentforce, we saw something different to most
-                partners — not just a new feature, but a fundamental shift in how work
+                partners - not just a new feature, but a fundamental shift in how work
                 gets done. We made a deliberate decision to rebuild our entire practice
                 around it.
               </p>
@@ -178,7 +178,7 @@ export default function About() {
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
                 We are fortunate to have the skills and experience within our company to
-                serve clients across industries — from enterprise financial institutions to
+                serve clients across industries - from enterprise financial institutions to
                 high-growth technology businesses. Every project benefits from the full
                 depth of our collective knowledge.
               </p>
@@ -237,7 +237,7 @@ export default function About() {
             </div>
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
-              22 experts across Dallas, Delhi, London, and New York — united by a shared passion
+              22 experts across Dallas, Delhi, London, and New York - united by a shared passion
               for Salesforce, Agentforce, and delivering outcomes that matter.
             </p>
           </div>
@@ -276,7 +276,7 @@ export default function About() {
                 <p className="text-xs font-bold leading-tight" style={{ color: '#032D60' }}>{name}</p>
                 <p className="text-[10px] mt-0.5 leading-tight" style={{ color: '#64748B' }}>{role}</p>
 
-                {/* LinkedIn — visible on hover */}
+                {/* LinkedIn - visible on hover */}
                 <a
                   href={linkedin}
                   target="_blank"
@@ -310,7 +310,7 @@ export default function About() {
             Want to join the <span className="gradient-text-gold">Agentforce revolution?</span>
           </h2>
           <p className="mb-8" style={{ color: 'rgba(148,196,255,0.80)' }}>
-            Whether you are a client or a consultant — we would love to talk.
+            Whether you are a client or a consultant - we would love to talk.
           </p>
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold">
             Book a Call <ArrowRight className="w-4 h-4" />

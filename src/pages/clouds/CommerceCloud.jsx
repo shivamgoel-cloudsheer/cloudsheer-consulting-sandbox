@@ -8,7 +8,7 @@ const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=tr
 
 const painPoints = [
   { pain: "Low conversion rates are leaving millions in unrealised revenue on the table", fix: "Einstein AI personalisation delivers up to 29% higher conversion rates through predictive product recommendations and tailored shopping journeys" },
-  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "A single unified commerce platform serves both buyer segments from one codebase — cutting platform costs by up to 50%" },
+  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "A single unified commerce platform serves both buyer segments from one codebase - cutting platform costs by up to 50%" },
   { pain: "Cart abandonment above 70% means most of your traffic generates zero revenue", fix: "Optimised one-page checkout, persistent carts, and Einstein-driven recovery campaigns reduce abandonment by up to 32%" },
   { pain: "Your storefront crashes during peak traffic and cannot support global expansion", fix: "Cloud-native elastic infrastructure handles 500M+ page views per day across 50+ countries with 99.99% uptime SLA" },
   { pain: "Disconnected order, inventory, and customer data creates fulfilment errors and poor CX", fix: "Native integration with Sales Cloud, Service Cloud, and MuleSoft creates a single source of truth across every touchpoint" },
@@ -32,7 +32,7 @@ const useCases = [
     points: [
       'Composable or SFRA storefronts with sub-second page loads and Core Web Vitals optimisation',
       'Einstein AI recommendations that drive 7-15% of total site revenue through personalised product discovery',
-      'Mobile-first PWA experiences — 72% of Commerce Cloud traffic now comes from mobile devices',
+      'Mobile-first PWA experiences - 72% of Commerce Cloud traffic now comes from mobile devices',
       'Built-in A/B testing, predictive sort, and conversion optimisation with no third-party tools required',
       'SEO-ready architecture with structured data, dynamic sitemaps, and pre-rendered meta tags',
     ],
@@ -57,7 +57,7 @@ const useCases = [
     headline: 'Fulfil from anywhere, faster',
     points: [
       'Unified order lifecycle spanning checkout, payment capture, fulfilment, and returns',
-      'Distributed order management that routes orders to the optimal location — warehouse, store, or 3PL',
+      'Distributed order management that routes orders to the optimal location - warehouse, store, or 3PL',
       'Ship-from-store, BOPIS, and curbside pickup orchestration that increases store revenue by up to 25%',
       'Automated returns, exchanges, and instant refund processing with configurable business rules',
       'Real-time order tracking and proactive notifications that reduce WISMO calls by up to 30%',
@@ -70,7 +70,7 @@ const useCases = [
     headline: 'Let AI maximise every transaction',
     points: [
       'Einstein GPT-powered product recommendations on every page, email, and post-purchase touchpoint',
-      'Predictive sort that reorders category pages per shopper — increasing click-through by up to 9.6%',
+      'Predictive sort that reorders category pages per shopper - increasing click-through by up to 9.6%',
       'AI-powered search with natural language understanding, typo tolerance, and zero-result recovery',
       'Automated merchandising rules that optimise for margin, sell-through velocity, and inventory levels',
       'Commerce Insights dashboards with revenue attribution, funnel analysis, and basket trend detection',
@@ -79,10 +79,10 @@ const useCases = [
 ]
 
 const whyUs = [
-  { title: 'Commerce Cloud Specialists',  desc: "We implement and optimise Salesforce Commerce Cloud every day — B2C storefronts, B2B portals, headless composable builds, and Salesforce Order Management. That singular focus means deeper expertise and fewer costly mistakes." },
+  { title: 'Commerce Cloud Specialists',  desc: "We implement and optimise Salesforce Commerce Cloud every day - B2C storefronts, B2B portals, headless composable builds, and Salesforce Order Management. That singular focus means deeper expertise and fewer costly mistakes." },
   { title: "Proven Multi-Cloud Delivery",  desc: "Our team has delivered international multi-site rollouts, complex B2B self-service portals, and high-traffic D2C storefronts. We integrate Commerce Cloud with Sales, Service, and Marketing Cloud for a unified customer experience." },
-  { title: 'Fast Time to Revenue',         desc: "Most Commerce Cloud MVPs launch within 8-12 weeks. We prioritise revenue-generating features first, validate with real customer data, and iterate — so you start earning before competitors finish their discovery phase." },
-  { title: 'No Commitment to Start',       desc: "Book a free 30-minute commerce scoping call. We will audit your current setup, identify the highest-impact revenue opportunities, and deliver a clear implementation roadmap — completely free, no strings attached." },
+  { title: 'Fast Time to Revenue',         desc: "Most Commerce Cloud MVPs launch within 8-12 weeks. We prioritise revenue-generating features first, validate with real customer data, and iterate - so you start earning before competitors finish their discovery phase." },
+  { title: 'No Commitment to Start',       desc: "Book a free 30-minute commerce scoping call. We will audit your current setup, identify the highest-impact revenue opportunities, and deliver a clear implementation roadmap - completely free, no strings attached." },
 ]
 
 export default function CommerceCloudPage() {
@@ -106,7 +106,7 @@ export default function CommerceCloudPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce Commerce Cloud powers the world's leading B2B and B2C buying experiences — with AI-driven personalisation that lifts conversion rates by up to 29%, unified order management, and native CRM integration. Cloudsheer builds commerce experiences that generate revenue from day one.
+              Salesforce Commerce Cloud powers the world's leading B2B and B2C buying experiences - with AI-driven personalisation that lifts conversion rates by up to 29%, unified order management, and native CRM integration. Cloudsheer builds commerce experiences that generate revenue from day one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -168,7 +168,7 @@ export default function CommerceCloudPage() {
               Commerce Cloud Delivers Measurable Revenue Impact
             </h2>
             <p className="section-sub-white">
-              Real outcomes from businesses running Salesforce Commerce Cloud — backed by Forrester research and Salesforce Shopping Index data.
+              Real outcomes from businesses running Salesforce Commerce Cloud - backed by Forrester research and Salesforce Shopping Index data.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export default function CommerceCloudPage() {
               Commerce Capabilities That <span className="gradient-text">Drive Growth</span>
             </h2>
             <p className="section-sub">
-              From storefront launch to global multi-site rollout — we build commerce experiences that convert, scale, and integrate across your entire Salesforce ecosystem.
+              From storefront launch to global multi-site rollout - we build commerce experiences that convert, scale, and integrate across your entire Salesforce ecosystem.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -283,11 +283,11 @@ export default function CommerceCloudPage() {
             <span className="gradient-text-gold">Commerce Revenue Engine?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will audit your current commerce setup, identify the highest-impact revenue opportunities, and deliver a clear implementation roadmap — at no cost and no commitment.
+            In 30 minutes we will audit your current commerce setup, identify the highest-impact revenue opportunities, and deliver a clear implementation roadmap - at no cost and no commitment.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['We come with a commerce plan', 'No sales pitch — just strategy', 'You leave with a clear roadmap'].map(i => (
+            {['We come with a commerce plan', 'No sales pitch - just strategy', 'You leave with a clear roadmap'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

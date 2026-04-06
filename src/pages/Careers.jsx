@@ -15,7 +15,7 @@ const openRoles = [
     badge: 'Hiring Now',
     badgeColor: '#10B981',
     summary:
-      "We're looking for an experienced Project Manager to lead Salesforce implementation engagements end-to-end. You'll be the bridge between our clients and our technical team — owning the plan, the timeline, the risks, and the relationship.",
+      "We're looking for an experienced Project Manager to lead Salesforce implementation engagements end-to-end. You'll be the bridge between our clients and our technical team - owning the plan, the timeline, the risks, and the relationship.",
     responsibilities: [
       'Own end-to-end delivery of Salesforce implementation projects from kick-off to go-live',
       'Manage project plans, budgets, risk registers, and status reporting across multiple concurrent engagements',
@@ -29,7 +29,7 @@ const openRoles = [
     requirements: [
       '3+ years of project management experience delivering CRM or enterprise software implementations',
       'Demonstrated experience with Salesforce projects (Sales Cloud, Service Cloud, or equivalent)',
-      'Strong command of Agile, Scrum, and waterfall methodologies — and when to apply each',
+      'Strong command of Agile, Scrum, and waterfall methodologies - and when to apply each',
       'Exceptional written and verbal communication with the ability to present to C-suite stakeholders',
       'Proficiency with project management tools (Jira, Monday.com, Asana, or equivalent)',
       'PMP, PRINCE2, or equivalent certification preferred',
@@ -51,7 +51,7 @@ const openRoles = [
     badge: 'Hiring Now',
     badgeColor: '#10B981',
     summary:
-      "We're growing our engineering team and looking for a skilled Salesforce Developer to build and configure solutions across Sales Cloud, Service Cloud, and Agentforce. You'll work on challenging, varied projects for clients across industries — and be at the forefront of Agentforce development.",
+      "We're growing our engineering team and looking for a skilled Salesforce Developer to build and configure solutions across Sales Cloud, Service Cloud, and Agentforce. You'll work on challenging, varied projects for clients across industries - and be at the forefront of Agentforce development.",
     responsibilities: [
       'Design, build, and deploy custom Salesforce solutions using Apex, LWC, and Flow',
       'Develop Agentforce agents including topic design, action configuration, and Trust Layer setup',
@@ -86,7 +86,7 @@ const perks = [
   { icon: Zap,         title: 'Agentforce-First',      desc: "Work on the industry's most exciting AI platform before anyone else." },
   { icon: Users,       title: 'Tight-Knit Team',       desc: '28 people who genuinely enjoy working together and learning from each other.' },
   { icon: Heart,       title: 'Flexible Culture',      desc: 'Async-friendly, outcome-driven, and respectful of your time outside of work.' },
-  { icon: Briefcase,   title: 'Varied Projects',       desc: 'No two clients are the same — you will constantly learn across industries.' },
+  { icon: Briefcase,   title: 'Varied Projects',       desc: 'No two clients are the same - you will constantly learn across industries.' },
 ]
 
 function RoleCard({ role }) {
@@ -313,13 +313,13 @@ export default function Careers() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Our Process</div>
             <h2 className="section-title mb-4">Simple. Transparent. <span className="gradient-text">Fast.</span></h2>
-            <p className="section-sub">We respect your time — our hiring process is designed to move quickly and give you a clear picture of the role.</p>
+            <p className="section-sub">We respect your time - our hiring process is designed to move quickly and give you a clear picture of the role.</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
             {[
               { num: '01', title: 'Apply',         desc: 'Send your CV to careers@cloudsheer.com or click Apply on the role below. We review every application personally.' },
               { num: '02', title: 'Intro Call',    desc: 'A 30-minute video call with our hiring lead. We want to understand your background and answer your questions.' },
-              { num: '03', title: 'Skills Review', desc: 'A short take-home task or technical interview relevant to the role — no whiteboard marathons.' },
+              { num: '03', title: 'Skills Review', desc: 'A short take-home task or technical interview relevant to the role - no whiteboard marathons.' },
               { num: '04', title: 'Final & Offer', desc: 'A conversation with a senior leader, followed by a fast decision. We aim to complete the process in under 2 weeks.' },
             ].map(({ num, title, desc }, i) => (
               <div key={num} className="glass-card p-6 relative">

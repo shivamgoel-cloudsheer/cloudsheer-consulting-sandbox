@@ -128,7 +128,7 @@ function CalEmbed() {
         </div>
         <div>
           <p className="font-bold text-sm" style={{ color: '#032D60' }}>Book a Free 30-Min Discovery Call</p>
-          <p className="text-xs" style={{ color: '#64748B' }}>Pick a time that works for you — no commitment</p>
+          <p className="text-xs" style={{ color: '#64748B' }}>Pick a time that works for you - no commitment</p>
         </div>
       </div>
       <div id="cal-inline" style={{ width: '100%', height: '600px', overflow: 'scroll' }} />
@@ -150,7 +150,7 @@ export default function Contact() {
           </h1>
           <p className="section-sub">
             Book a free 30-minute discovery call. We'll map out which AI agents
-            will have the biggest impact on your business — and how fast we can deploy them.
+            will have the biggest impact on your business - and how fast we can deploy them.
           </p>
         </div>
       </section>

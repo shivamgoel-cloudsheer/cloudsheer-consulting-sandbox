@@ -7,15 +7,15 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "Einstein AI personalises content, send times, and frequency for every subscriber — lifting open rates and inbox placement" },
+  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "Einstein AI personalises content, send times, and frequency for every subscriber - lifting open rates and inbox placement" },
   { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "Multi-touch attribution ties every email, ad click, and journey step to closed-won revenue in Sales Cloud" },
-  { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "Journey Builder triggers multi-channel sequences from any CRM event — so no lead goes cold" },
+  { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "Journey Builder triggers multi-channel sequences from any CRM event - so no lead goes cold" },
   { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "Data Cloud unifies every interaction into a single customer profile that powers real-time segmentation" },
   { pain: "Your team wastes hours building emails and pulling lists manually", fix: "Drag-and-drop content builder, dynamic templates, and automated audience refresh cut campaign build time by 50%+" },
 ]
 
 const outcomes = [
-  { icon: DollarSign,        value: '$36:$1', label: 'average email marketing ROI — the highest of any digital channel (Litmus, 2024)', color: '#0176D3' },
+  { icon: DollarSign,        value: '$36:$1', label: 'average email marketing ROI - the highest of any digital channel (Litmus, 2024)', color: '#0176D3' },
   { icon: TrendingUp,        value: '25%',    label: 'average increase in marketing ROI reported by Marketing Cloud customers (Salesforce Customer Success Survey)', color: '#10B981' },
   { icon: MousePointerClick, value: '41%',    label: 'higher click-through rates when using Einstein Send Time Optimisation vs. manual sends', color: '#F59E0B' },
   { icon: Mail,              value: '26%',    label: 'lift in email revenue from dynamic, personalised content powered by CRM data (Salesforce State of Marketing)', color: '#6366F1' },
@@ -32,7 +32,7 @@ const useCases = [
     points: [
       'Journey Builder orchestrates multi-step, multi-channel flows triggered by CRM events, web behaviour, or purchase activity',
       'Pre-built journey templates for welcome series, abandoned cart, win-back, post-purchase, and renewal reminders',
-      'Dynamic content blocks swap images, offers, and copy per subscriber — no duplicate emails needed',
+      'Dynamic content blocks swap images, offers, and copy per subscriber - no duplicate emails needed',
       'Einstein Send Time Optimisation delivers each email when a contact is most likely to engage',
       'Built-in A/B and multivariate testing on subject lines, content, CTAs, and send times at scale',
     ],
@@ -58,7 +58,7 @@ const useCases = [
     points: [
       'Multi-touch attribution connects every marketing touchpoint to pipeline, opportunities, and closed-won revenue in Sales Cloud',
       'Real-time dashboards track email deliverability, journey conversion rates, engagement trends, and ROI by campaign',
-      'Einstein Engagement Scoring predicts which contacts will open, click, or unsubscribe — so you act before they disengage',
+      'Einstein Engagement Scoring predicts which contacts will open, click, or unsubscribe - so you act before they disengage',
       'Campaign influence reporting shows exactly how marketing contributes to every deal in the pipeline',
       'Path analysis visualises the customer journey from first touch to close, revealing which channels accelerate deals',
     ],
@@ -79,10 +79,10 @@ const useCases = [
 ]
 
 const whyUs = [
-  { title: 'Deep Marketing Cloud Expertise',   desc: "We specialise in Marketing Cloud and Account Engagement — not everything Salesforce sells. That focus means faster implementations, fewer issues, and better results than a generalist partner." },
-  { title: "Proven Across Industries",         desc: "Our team has delivered Marketing Cloud for B2B lead nurture, e-commerce lifecycle journeys, financial services onboarding, and nonprofit donor engagement — with measurable ROI in every case." },
+  { title: 'Deep Marketing Cloud Expertise',   desc: "We specialise in Marketing Cloud and Account Engagement - not everything Salesforce sells. That focus means faster implementations, fewer issues, and better results than a generalist partner." },
+  { title: "Proven Across Industries",         desc: "Our team has delivered Marketing Cloud for B2B lead nurture, e-commerce lifecycle journeys, financial services onboarding, and nonprofit donor engagement - with measurable ROI in every case." },
   { title: 'Live in 6-8 Weeks, Not 6 Months',  desc: "We use a phased delivery model: core journeys and integrations go live fast, then we iterate. You start seeing value in weeks, not quarters." },
-  { title: 'Free Roadmap — No Strings',         desc: "Book a 30-minute scoping call and walk away with a personalisation roadmap, a gap analysis of your current stack, and a clear implementation plan — whether you hire us or not." },
+  { title: 'Free Roadmap - No Strings',         desc: "Book a 30-minute scoping call and walk away with a personalisation roadmap, a gap analysis of your current stack, and a clear implementation plan - whether you hire us or not." },
 ]
 
 export default function MarketingCloudPage() {
@@ -106,7 +106,7 @@ export default function MarketingCloudPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Email delivers $36 for every $1 spent — but only when it is personalised, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
+              Email delivers $36 for every $1 spent - but only when it is personalised, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -283,7 +283,7 @@ export default function MarketingCloudPage() {
             <span className="gradient-text-gold">Prove Its Revenue Impact?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will audit your current marketing stack, identify your highest-impact personalisation opportunities, and map out a phased Marketing Cloud roadmap — at no cost.
+            In 30 minutes we will audit your current marketing stack, identify your highest-impact personalisation opportunities, and map out a phased Marketing Cloud roadmap - at no cost.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>

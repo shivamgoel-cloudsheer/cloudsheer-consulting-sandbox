@@ -17,7 +17,7 @@ function PageHero() {
         </h1>
         <p className="section-sub">
           Every solution we build is designed to deliver one thing: measurable business
-          outcomes — lower costs, faster revenue, and happier customers.
+          outcomes - lower costs, faster revenue, and happier customers.
         </p>
       </div>
     </section>
@@ -81,7 +81,7 @@ function AgentforceHero() {
           <h2 className="section-title mb-4">
             Agents That Drive <span className="gradient-text">Real Business Results</span>
           </h2>
-          <p className="section-sub">Each agent is built to solve a specific business problem — reducing costs, accelerating revenue, or improving customer experience.</p>
+          <p className="section-sub">Each agent is built to solve a specific business problem - reducing costs, accelerating revenue, or improving customer experience.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {agents.map(({ name, icon, metric, metricColor, border, features }) => (
@@ -114,10 +114,10 @@ function AgentforceHero() {
 
 function TrustLayer() {
   const pillars = [
-    { title: 'Zero Hallucination Risk',    desc: 'Agents only use your verified Salesforce data — your customers never get a wrong answer.' },
+    { title: 'Zero Hallucination Risk',    desc: 'Agents only use your verified Salesforce data - your customers never get a wrong answer.' },
     { title: 'Full Audit Trail',          desc: 'Every action is logged and traceable. Your compliance team gets complete visibility.' },
-    { title: 'Your Rules, Always',        desc: 'Agents follow the guardrails you set — permissions, escalation rules, and business logic.' },
-    { title: 'Human Handoff in One Click', desc: 'Any conversation can be escalated to a human with full context — no information lost.' },
+    { title: 'Your Rules, Always',        desc: 'Agents follow the guardrails you set - permissions, escalation rules, and business logic.' },
+    { title: 'Human Handoff in One Click', desc: 'Any conversation can be escalated to a human with full context - no information lost.' },
   ]
 
   return (
@@ -131,7 +131,7 @@ function TrustLayer() {
               AI Your Compliance Team<br /><span className="gradient-text">Will Actually Approve.</span>
             </h2>
             <p className="section-sub mb-8">
-              Every AI agent runs on Salesforce's Einstein Trust Layer — meaning
+              Every AI agent runs on Salesforce's Einstein Trust Layer - meaning
               your data stays safe, every action is auditable, and your customers
               always get accurate, governed responses.
             </p>
@@ -160,9 +160,9 @@ const clouds = [
   { icon: <ShoppingCart className="w-6 h-6" />, title: 'Sales Cloud + Agentforce',       desc: 'Close 29% more deals with AI-powered lead qualification, pipeline visibility, and automated follow-ups that never let a lead go cold.', tags: ['29% More Revenue', 'Faster Deals', 'AI Forecasting'] },
   { icon: <Headphones className="w-6 h-6" />,   title: 'Service Cloud + Agentforce',     desc: 'Resolve 78% of support cases without a human. Cut costs by 40% while keeping CSAT above 4.8/5.',             tags: ['78% Deflection', '40% Cost Savings', 'Omni-Channel'] },
   { icon: <Mail className="w-6 h-6" />,         title: 'Marketing Cloud',                desc: 'Increase marketing ROI by 28% with AI-personalised journeys, smart send times, and full attribution reporting.',                  tags: ['28% Higher ROI', '67% Conversion Lift', 'Einstein AI'] },
-  { icon: <Database className="w-6 h-6" />,     title: 'Data Cloud',                     desc: 'Unify every customer data source in real time — powering smarter agents, sharper segmentation, and better decisions.',       tags: ['Real-Time Data', 'Single Customer View', 'AI-Ready'] },
+  { icon: <Database className="w-6 h-6" />,     title: 'Data Cloud',                     desc: 'Unify every customer data source in real time - powering smarter agents, sharper segmentation, and better decisions.',       tags: ['Real-Time Data', 'Single Customer View', 'AI-Ready'] },
   { icon: <BarChart3 className="w-6 h-6" />,    title: 'CRM Analytics',                  desc: 'Cut reporting time by 65% and improve forecast accuracy by 28% with dashboards embedded where your team already works.',      tags: ['65% Faster Reports', '28% Better Forecasts', 'Einstein AI'] },
-  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Builds',       desc: 'Got a unique process? We build custom AI agents for HR, Finance, Operations — any function where automation drives ROI.',         tags: ['Custom Workflows', 'Any Department', 'Measurable ROI'] },
+  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Builds',       desc: 'Got a unique process? We build custom AI agents for HR, Finance, Operations - any function where automation drives ROI.',         tags: ['Custom Workflows', 'Any Department', 'Measurable ROI'] },
 ]
 
 function SalesforceClouds() {
@@ -172,7 +172,7 @@ function SalesforceClouds() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="tag mx-auto mb-5">Full Salesforce Suite</div>
           <h2 className="section-title mb-4">One Platform. <span className="gradient-text">Every Business Outcome Covered.</span></h2>
-          <p className="section-sub">Whether you need to sell more, support better, market smarter, or operate leaner — there is a Salesforce solution that delivers measurable results.</p>
+          <p className="section-sub">Whether you need to sell more, support better, market smarter, or operate leaner - there is a Salesforce solution that delivers measurable results.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {clouds.map(({ icon, title, desc, tags }) => (
@@ -206,7 +206,7 @@ function CTA() {
           Ready to Build Your<br /><span className="gradient-text-gold">First AI Agent?</span>
         </h2>
         <p className="text-blue-200 mb-8">
-          In 30 minutes, we will identify your highest-impact use case, estimate the ROI, and give you a clear plan to get there — no commitment required.
+          In 30 minutes, we will identify your highest-impact use case, estimate the ROI, and give you a clear plan to get there - no commitment required.
         </p>
         <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-8 py-4">
           Book Free Discovery Call <ArrowRight className="w-5 h-5" />

@@ -8,9 +8,9 @@ const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=tr
 
 const painPoints = [
   { pain: "Customers flood your support team with questions they could answer themselves", fix: "Branded self-service portals with knowledge bases and AI-powered search deflect 40-60% of inbound tickets" },
-  { pain: "Partners operate blind — no deal visibility, no shared pipeline, no collaboration tools", fix: "A CRM-connected partner community with deal registration, lead distribution, and real-time pipeline dashboards" },
+  { pain: "Partners operate blind - no deal visibility, no shared pipeline, no collaboration tools", fix: "A CRM-connected partner community with deal registration, lead distribution, and real-time pipeline dashboards" },
   { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "Guided digital onboarding with automated workflows cuts onboarding time by 50% and eliminates manual handoffs" },
-  { pain: "Your portal is disconnected from Salesforce — data is stale, syncs break, users lose trust", fix: "Experience Cloud is native to Salesforce — accounts, cases, opportunities, and knowledge update in real time, zero middleware" },
+  { pain: "Your portal is disconnected from Salesforce - data is stale, syncs break, users lose trust", fix: "Experience Cloud is native to Salesforce - accounts, cases, opportunities, and knowledge update in real time, zero middleware" },
   { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "Pixel-perfect branded portals with your domain, your design system, and responsive layouts across every device" },
 ]
 
@@ -31,7 +31,7 @@ const useCases = [
     headline: "Deflect tickets and delight customers at the same time",
     points: [
       'Branded portals where customers view accounts, track orders, update billing, and manage subscriptions',
-      'Case creation and real-time status tracking — no phone calls or email chains required',
+      'Case creation and real-time status tracking - no phone calls or email chains required',
       'AI-powered knowledge base with smart search that surfaces answers before a case is filed',
       'Embedded Agentforce AI chat that resolves common requests instantly without human intervention',
       'Fully responsive across desktop, tablet, and mobile with consistent brand experience',
@@ -46,7 +46,7 @@ const useCases = [
       'Deal registration, lead distribution, and shared pipeline visibility that drives co-selling',
       'MDF claims, co-marketing asset libraries, and joint campaign management in one place',
       'Automated partner onboarding with guided learning paths, certifications, and tiered enablement',
-      'Role-based access by partner tier — each level sees the right content, pricing, and data',
+      'Role-based access by partner tier - each level sees the right content, pricing, and data',
       'Performance dashboards, leaderboards, and scorecards that motivate and retain top partners',
     ],
   },
@@ -57,9 +57,9 @@ const useCases = [
     headline: "Replace your legacy intranet with a connected digital hub",
     points: [
       'Centralized hub for HR policies, IT service requests, benefits enrollment, and company news',
-      'Guided onboarding flows that walk new hires through every step — from day one to full productivity',
+      'Guided onboarding flows that walk new hires through every step - from day one to full productivity',
       'Social feeds, discussion forums, and team collaboration spaces that drive engagement',
-      'Single sign-on with your identity provider — one login for Salesforce, portal, and connected apps',
+      'Single sign-on with your identity provider - one login for Salesforce, portal, and connected apps',
       'Embedded AI agents that answer common HR, IT, and policy questions instantly',
     ],
   },
@@ -71,18 +71,18 @@ const useCases = [
     points: [
       'Project dashboards with milestone tracking, deliverable status, and real-time progress updates',
       'Invoice viewing, payment history, contract management, and secure document sharing',
-      'Direct messaging with your delivery team — conversations stay in context, not buried in email',
+      'Direct messaging with your delivery team - conversations stay in context, not buried in email',
       'Granular role-based access so each client, contact, and stakeholder sees only their own data',
-      'Fully branded to your business — your domain, your design system, your customer experience',
+      'Fully branded to your business - your domain, your design system, your customer experience',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Portal Specialists, Not Generalists',  desc: "We have delivered Experience Cloud portals across industries — financial services, manufacturing, tech, and professional services. Every portal we build is designed for adoption, not just deployment." },
-  { title: 'CRM-Native Architecture',              desc: "Every portal connects directly to your Salesforce data — cases, accounts, opportunities, knowledge articles, and custom objects. No middleware, no sync delays, no data discrepancies." },
-  { title: 'Live in 6-8 Weeks',                    desc: "We follow a rapid delivery methodology that gets your portal into users' hands fast. Design, build, test, and launch — without months of requirements gathering or scope creep." },
-  { title: 'Free Strategy Session to Start',        desc: "Book a 30-minute scoping call. We will map your portal requirements, sketch the architecture, identify quick wins, and give you a deployment plan — completely free, no commitment." },
+  { title: 'Portal Specialists, Not Generalists',  desc: "We have delivered Experience Cloud portals across industries - financial services, manufacturing, tech, and professional services. Every portal we build is designed for adoption, not just deployment." },
+  { title: 'CRM-Native Architecture',              desc: "Every portal connects directly to your Salesforce data - cases, accounts, opportunities, knowledge articles, and custom objects. No middleware, no sync delays, no data discrepancies." },
+  { title: 'Live in 6-8 Weeks',                    desc: "We follow a rapid delivery methodology that gets your portal into users' hands fast. Design, build, test, and launch - without months of requirements gathering or scope creep." },
+  { title: 'Free Strategy Session to Start',        desc: "Book a 30-minute scoping call. We will map your portal requirements, sketch the architecture, identify quick wins, and give you a deployment plan - completely free, no commitment." },
 ]
 
 export default function ExperienceCloudPage() {
@@ -168,7 +168,7 @@ export default function ExperienceCloudPage() {
               Portals That Deliver Measurable Business Outcomes
             </h2>
             <p className="section-sub-white">
-              These are the outcomes organizations achieve when they replace disconnected tools with a CRM-native Experience Cloud portal — backed by Forrester research and Salesforce customer data.
+              These are the outcomes organizations achieve when they replace disconnected tools with a CRM-native Experience Cloud portal - backed by Forrester research and Salesforce customer data.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export default function ExperienceCloudPage() {
               Portals For Every <span className="gradient-text">Audience and Use Case</span>
             </h2>
             <p className="section-sub">
-              Experience Cloud is not a one-size-fits-all tool. Cloudsheer configures it to match exactly what your customers, partners, or employees need — with the data, workflows, and branding that drive adoption.
+              Experience Cloud is not a one-size-fits-all tool. Cloudsheer configures it to match exactly what your customers, partners, or employees need - with the data, workflows, and branding that drive adoption.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -283,11 +283,11 @@ export default function ExperienceCloudPage() {
             <span className="gradient-text-gold">Drives Revenue and Reduces Cost?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will map your portal requirements, sketch the architecture, identify the highest-impact use cases, and give you a clear deployment plan — at no cost, no commitment.
+            In 30 minutes we will map your portal requirements, sketch the architecture, identify the highest-impact use cases, and give you a clear deployment plan - at no cost, no commitment.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {["Portal designed for adoption, not just deployment", "No sales pitch — just a clear plan", "You leave with architecture, timeline, and ROI estimate"].map(i => (
+            {["Portal designed for adoption, not just deployment", "No sales pitch - just a clear plan", "You leave with architecture, timeline, and ROI estimate"].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

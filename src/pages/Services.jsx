@@ -81,28 +81,28 @@ const services = [
     badge: 'Core Speciality',
     badgeColor: 'bg-cs-blue/8 text-cs-blue border-cs-blue/20',
     title: 'Agentforce Implementation',
-    desc: 'End-to-end design and deployment of autonomous AI agents. From use-case discovery and agent architecture through to prompt engineering, testing, and go-live — we own the full delivery.',
+    desc: 'End-to-end design and deployment of autonomous AI agents. From use-case discovery and agent architecture through to prompt engineering, testing, and go-live - we own the full delivery.',
     deliverables: ['Agent use-case discovery & business case', 'Custom agent design & prompt engineering', 'Topic, action & flow configuration', 'Human hand-off orchestration', 'Einstein Trust Layer governance setup', 'Performance monitoring & ongoing tuning'],
   },
   {
     icon: <Settings className="w-6 h-6" />,
     badge: null, badgeColor: '',
     title: 'Salesforce Implementation',
-    desc: 'Full-lifecycle Salesforce implementations — from requirements and solution design through configuration, data migration, UAT, and go-live support.',
+    desc: 'Full-lifecycle Salesforce implementations - from requirements and solution design through configuration, data migration, UAT, and go-live support.',
     deliverables: ['Solution architecture & design docs', 'Salesforce org configuration', 'Data migration & cleansing', 'User acceptance testing support', 'Go-live hypercare (30 days)', 'Post-go-live optimisation review'],
   },
   {
     icon: <Zap className="w-6 h-6" />,
     badge: null, badgeColor: '',
     title: 'Integration & Automation',
-    desc: 'Connect Salesforce and Agentforce to your wider tech stack. REST, SOAP, MuleSoft, Boomi — robust, scalable integrations that keep your data flowing.',
+    desc: 'Connect Salesforce and Agentforce to your wider tech stack. REST, SOAP, MuleSoft, Boomi - robust, scalable integrations that keep your data flowing.',
     deliverables: ['Integration architecture design', 'REST, SOAP & event-driven APIs', 'MuleSoft & Boomi flows', 'Real-time & batch data sync', 'Agentforce action APIs', 'Error handling & monitoring'],
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
     badge: null, badgeColor: '',
     title: 'CRM Strategy & Health Check',
-    desc: 'Not getting enough value from Salesforce? Our consultants audit your org, identify adoption gaps, and build a prioritised roadmap — including where Agentforce can have the biggest immediate impact.',
+    desc: 'Not getting enough value from Salesforce? Our consultants audit your org, identify adoption gaps, and build a prioritised roadmap - including where Agentforce can have the biggest immediate impact.',
     deliverables: ['Full org health & adoption audit', 'Agentforce readiness assessment', 'Process gap analysis', 'Prioritised improvement roadmap', 'Licence optimisation review', 'Executive strategy presentation'],
   },
   {
@@ -130,7 +130,7 @@ const services = [
     icon: <ShieldCheck className="w-6 h-6" />,
     badge: null, badgeColor: '',
     title: 'Security & Compliance',
-    desc: 'Protect customer data and meet regulatory requirements. We design and audit your Salesforce security model — including Agentforce governance.',
+    desc: 'Protect customer data and meet regulatory requirements. We design and audit your Salesforce security model - including Agentforce governance.',
     deliverables: ['Security model design & review', 'Profile & permission set optimisation', 'GDPR / HIPAA / SOC 2 readiness', 'Agentforce Trust Layer configuration', 'Field-level security audit', 'Salesforce Shield configuration'],
   },
 ]
@@ -170,7 +170,7 @@ export default function Services() {
               <span className="gradient-text">Fixed-Price Package</span>
             </h2>
             <p className="section-sub">
-              Clear scope, clear pricing, no surprises — choose the package
+              Clear scope, clear pricing, no surprises - choose the package
               that fits your needs and we'll get you live fast.
             </p>
           </div>

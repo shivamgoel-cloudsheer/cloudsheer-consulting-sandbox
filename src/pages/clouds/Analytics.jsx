@@ -18,8 +18,8 @@ const outcomes = [
   { icon: BarChart2,   value: '382%',    label: 'three-year ROI from Tableau deployments, per Forrester Total Economic Impact study', color: '#0176D3' },
   { icon: TrendingUp,  value: '28%',     label: 'improvement in forecast accuracy when Einstein predictions replace manual methods', color: '#10B981' },
   { icon: Clock,       value: '65%',     label: 'faster report generation with CRM Analytics automation vs. spreadsheet workflows', color: '#F59E0B' },
-  { icon: DollarSign,  value: '<6 mo',   label: 'payback period — most organisations recoup their CRM Analytics investment in under six months', color: '#6366F1' },
-  { icon: Eye,         value: '10M+',    label: 'Tableau users worldwide — the most widely adopted visual analytics platform on the market', color: '#06B6D4' },
+  { icon: DollarSign,  value: '<6 mo',   label: 'payback period - most organisations recoup their CRM Analytics investment in under six months', color: '#6366F1' },
+  { icon: Eye,         value: '10M+',    label: 'Tableau users worldwide - the most widely adopted visual analytics platform on the market', color: '#06B6D4' },
   { icon: Database,    value: '3.5x',    label: 'more likely to exceed revenue targets when teams adopt analytics-driven decision making', color: '#0176D3' },
 ]
 
@@ -59,7 +59,7 @@ const useCases = [
       'Tableau workbooks pulling live data from Salesforce, NetSuite, Snowflake, BigQuery, and more',
       'Executive scorecards with KPIs, trend lines, and variance analysis in a single view',
       'Cohort analysis and net revenue retention tracking across business lines and geographies',
-      'Automated board-ready reports delivered on schedule — no analyst assembly required',
+      'Automated board-ready reports delivered on schedule - no analyst assembly required',
       'Role-based row-level security so every leader sees exactly what they are authorised to see',
     ],
   },
@@ -79,10 +79,10 @@ const useCases = [
 ]
 
 const whyUs = [
-  { title: 'Analytics-First Expertise',     desc: "We specialise in Salesforce CRM Analytics and Tableau — not general Salesforce admin. That means deeper knowledge, faster builds, and dashboards that actually drive decisions instead of gathering dust." },
+  { title: 'Analytics-First Expertise',     desc: "We specialise in Salesforce CRM Analytics and Tableau - not general Salesforce admin. That means deeper knowledge, faster builds, and dashboards that actually drive decisions instead of gathering dust." },
   { title: "Decision-Driven Design",        desc: "Every engagement starts with the decisions your team needs to make, not the data you happen to have. We reverse-engineer from business outcomes to ensure every dashboard drives action." },
-  { title: 'Fast Time to Insight',          desc: "Most analytics engagements go live within 4-6 weeks. We move fast from discovery to production so you see value before the quarter ends — not after." },
-  { title: 'Free Discovery Call',           desc: "Book a 30-minute scoping call. We will map your top 5 insight gaps, identify the highest-impact dashboards, and design a blueprint to close them — completely free, no commitment." },
+  { title: 'Fast Time to Insight',          desc: "Most analytics engagements go live within 4-6 weeks. We move fast from discovery to production so you see value before the quarter ends - not after." },
+  { title: 'Free Discovery Call',           desc: "Book a 30-minute scoping call. We will map your top 5 insight gaps, identify the highest-impact dashboards, and design a blueprint to close them - completely free, no commitment." },
 ]
 
 export default function AnalyticsPage() {
@@ -102,11 +102,11 @@ export default function AnalyticsPage() {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
               Turn Raw Data Into{' '}
-              <span className="gradient-text-gold">Revenue-Driving Decisions — In Real Time.</span>
+              <span className="gradient-text-gold">Revenue-Driving Decisions - In Real Time.</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce CRM Analytics and Tableau give your leadership team AI-powered forecasts, live dashboards, and unified data — so every decision is backed by evidence, not instinct. Forrester found organisations achieve 382% ROI and payback in under six months.
+              Salesforce CRM Analytics and Tableau give your leadership team AI-powered forecasts, live dashboards, and unified data - so every decision is backed by evidence, not instinct. Forrester found organisations achieve 382% ROI and payback in under six months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -201,7 +201,7 @@ export default function AnalyticsPage() {
               Analytics For Every <span className="gradient-text">Part of Your Business</span>
             </h2>
             <p className="section-sub">
-              From pipeline intelligence to executive scorecards — we build analytics that drive faster decisions across sales, service, finance, and marketing.
+              From pipeline intelligence to executive scorecards - we build analytics that drive faster decisions across sales, service, finance, and marketing.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -283,11 +283,11 @@ export default function AnalyticsPage() {
             <span className="gradient-text-gold">Backed by Real-Time Intelligence?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will map your top insight gaps, identify the dashboards with the highest revenue impact, and give you a clear analytics roadmap — at no cost, no commitment.
+            In 30 minutes we will map your top insight gaps, identify the dashboards with the highest revenue impact, and give you a clear analytics roadmap - at no cost, no commitment.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['We map your top 5 insight gaps', 'You get a dashboard blueprint', 'No sales pitch — just value'].map(i => (
+            {['We map your top 5 insight gaps', 'You get a dashboard blueprint', 'No sales pitch - just value'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

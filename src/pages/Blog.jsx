@@ -8,7 +8,7 @@ const posts = [
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: 'Getting Started with Agentforce: A Practical Guide for 2025',
-    excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps — based on lessons from 20+ live implementations.',
+    excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
     date: 'Mar 18, 2025', readTime: '8 min',
     author: 'Priya Nair', initials: 'PN', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,
@@ -19,7 +19,7 @@ const posts = [
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: "Agentforce vs Einstein Bots: What's the Difference?",
-    excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy — we explain it clearly with real-world examples.",
+    excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy - we explain it clearly with real-world examples.",
     date: 'Feb 28, 2025', readTime: '5 min',
     author: 'Priya Nair', initials: 'PN', avatarColor: 'from-emerald-500 to-teal-500',
     featured: false,
@@ -41,7 +41,7 @@ const posts = [
     categoryIcon: <TrendingUp className="w-3 h-3" />,
     categoryColor: 'text-emerald-600 bg-emerald-50 border-emerald-200',
     title: 'Measuring the ROI of Agentforce: What Our Clients Actually See',
-    excerpt: 'We tracked results across 20 Agentforce deployments — case deflection rates, response times, CSAT scores, and cost savings. Here is what the data shows.',
+    excerpt: 'We tracked results across 20 Agentforce deployments - case deflection rates, response times, CSAT scores, and cost savings. Here is what the data shows.',
     date: 'Jan 22, 2025', readTime: '7 min',
     author: 'Alex Rivera', initials: 'AR', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,
@@ -63,7 +63,7 @@ const posts = [
     categoryIcon: <Users className="w-3 h-3" />,
     categoryColor: 'text-cs-teal bg-cs-teal/10 border-cs-teal/20',
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
-    excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly — here are the adoption patterns Agentforce unlocks that training programmes never could.",
+    excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programmes never could.",
     date: 'Dec 20, 2024', readTime: '5 min',
     author: "James O'Brien", initials: 'JO', avatarColor: 'from-cs-purple to-indigo-600',
     featured: false,
@@ -74,7 +74,7 @@ const posts = [
     categoryIcon: <Zap className="w-3 h-3" />,
     categoryColor: 'text-rose-500 bg-rose-50 border-rose-200',
     title: "Top Agentforce Features in the Salesforce Spring '25 Release",
-    excerpt: "Spring '25 is the biggest Agentforce release yet. New agent templates, expanded action types, improved reasoning, and deeper Data Cloud integration — all covered here.",
+    excerpt: "Spring '25 is the biggest Agentforce release yet. New agent templates, expanded action types, improved reasoning, and deeper Data Cloud integration - all covered here.",
     date: 'Dec 5, 2024', readTime: '9 min',
     author: 'Alex Rivera', initials: 'AR', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,
@@ -169,7 +169,7 @@ export default function Blog() {
           </h1>
           <p className="section-sub">
             Practical guides, real client results, and deep dives into
-            Salesforce Agentforce — from the team that deploys it every day.
+            Salesforce Agentforce - from the team that deploys it every day.
           </p>
         </div>
       </section>
@@ -208,7 +208,7 @@ export default function Blog() {
           <div className="tag mx-auto mb-5"><Zap className="w-3.5 h-3.5" /> Stay Ahead</div>
           <h2 className="section-title text-2xl mb-3">Get Agentforce Insights Monthly</h2>
           <p className="text-cs-muted text-sm mb-7">
-            Join 2,000+ Salesforce professionals. No spam — just the most useful
+            Join 2,000+ Salesforce professionals. No spam - just the most useful
             Agentforce content, delivered once a month.
           </p>
           <form onSubmit={(e) => e.preventDefault()} className="flex gap-3">
