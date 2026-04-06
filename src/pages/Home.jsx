@@ -31,7 +31,7 @@ function Hero() {
           <div>
             <div className="tag-white inline-flex mb-8 animate-fade-up">
               <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#F59E0B' }} />
-              World's First Agentforce-Centric Consultancy
+              Trusted by Businesses to Cut Costs & Scale with AI
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight animate-fade-up-1">
