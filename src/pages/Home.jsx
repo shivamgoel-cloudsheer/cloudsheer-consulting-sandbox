@@ -49,7 +49,7 @@ function Hero() {
 
             <div className="flex flex-wrap gap-4 mb-12 animate-fade-up-3">
               <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-7 py-3.5">
-                Build Your First Agent <ArrowRight className="w-5 h-5 animate-bounce-x" />
+                Deploy Your First Agent <ArrowRight className="w-5 h-5 animate-bounce-x" />
               </a>
               <Link to="/solutions"
                 className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl transition-all duration-200"
