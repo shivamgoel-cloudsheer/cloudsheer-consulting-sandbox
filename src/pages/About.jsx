@@ -9,13 +9,11 @@ const values = [
   { icon: <Users className="w-5 h-5" />,    title: 'People-First AI',          desc: 'AI agents should empower people, not replace them. We design every agent to make your team more effective.' },
 ]
 
-const milestones = [
-  { year: '2012', text: 'Founded as a boutique Salesforce consultancy' },
-  { year: '2015', text: 'Achieved Salesforce Summit (Platinum) Partner status' },
-  { year: '2018', text: 'Expanded to 50+ certified consultants across 12 industries' },
-  { year: '2021', text: 'Launched dedicated Data Cloud & Einstein Analytics practice' },
-  { year: '2024', text: "Restructured as the world's first Agentforce-centric partner" },
-  { year: '2025', text: '150+ implementations, 98% client CSAT, agents running 24/7' },
+const capabilities = [
+  { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce & AI Agents', desc: 'Deploy autonomous agents that handle support, sales, and operations 24/7 - so your team focuses on growth.' },
+  { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',   desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics - all connected.' },
+  { icon: <Users className="w-5 h-5" />,    title: 'Strategy & Implementation', desc: 'From discovery to deployment in 4-6 weeks. We design, build, test, and launch - with measurable ROI from day one.' },
+  { icon: <Heart className="w-5 h-5" />,    title: 'Ongoing Optimisation',    desc: 'Continuous monitoring, performance tuning, and new agent deployments as your business scales.' },
 ]
 
 const offices = [
@@ -106,53 +104,40 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── Story + Timeline ─────────────────────────────────── */}
+      {/* ── What We Do ─────────────────────────────────────── */}
       <section className="py-24" style={{ backgroundColor: '#EFF6FF' }}>
-        <div className="section-wrap grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <div className="tag mb-5">Who We Are</div>
-            <h2 className="section-title mb-6">
-              A Decade of Salesforce.<br />
-              <span className="gradient-text">A Mission for AI.</span>
+        <div className="section-wrap">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="tag mx-auto mb-5">What We Do</div>
+            <h2 className="section-title mb-4">
+              Your Salesforce Partner for<br />
+              <span className="gradient-text">AI-Powered Growth</span>
             </h2>
-            <div className="space-y-4 leading-relaxed text-sm" style={{ color: '#64748B' }}>
-              <p>
-                Cloudsheer Consulting was founded with a single belief: that Salesforce,
-                implemented correctly, can transform any organisation. Over the next decade
-                we built a reputation for rigorous delivery, deep technical expertise, and
-                long-term client partnerships.
-              </p>
-              <p>
-                When Salesforce launched Agentforce, we saw something different to most
-                partners - not just a new feature, but a fundamental shift in how work
-                gets done. We made a deliberate decision to rebuild our entire practice
-                around it.
-              </p>
-              <p>
-                Today, Cloudsheer is the world's first Agentforce-centric consulting
-                partner. Every engagement we take on asks the same first question:
-                where can an autonomous AI agent create the most value for your business?
-              </p>
-            </div>
-            <Link to="/contact" className="btn-primary mt-8">
-              Work With Us <ArrowRight className="w-4 h-4" />
-            </Link>
+            <p className="section-sub">
+              We help businesses cut costs, close more deals, and scale operations
+              with Salesforce and Agentforce - from strategy to deployment to ongoing optimisation.
+            </p>
           </div>
 
-          {/* Timeline */}
-          <div className="relative">
-            <div className="absolute left-4 top-0 bottom-0 w-px"
-              style={{ background: 'linear-gradient(to bottom,#0176D3,#0099E6,#6366F1)' }} />
-            <div className="space-y-8 pl-12">
-              {milestones.map(({ year, text }) => (
-                <div key={year} className="relative">
-                  <div className="absolute -left-8 top-1 w-4 h-4 rounded-full bg-white border-2"
-                    style={{ borderColor: '#0176D3', boxShadow: '0 0 0 4px rgba(1,118,211,0.12)' }} />
-                  <p className="text-sm font-bold mb-1" style={{ color: '#0176D3' }}>{year}</p>
-                  <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{text}</p>
+          <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-10">
+            {capabilities.map(({ icon, title, desc }) => (
+              <div key={title} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300"
+                  style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0176D3'; e.currentTarget.style.color = 'white' }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'rgba(1,118,211,0.08)'; e.currentTarget.style.color = '#0176D3' }}>
+                  {icon}
                 </div>
-              ))}
-            </div>
+                <h3 className="font-semibold mb-2" style={{ color: '#032D60' }}>{title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/contact" className="btn-primary">
+              Work With Us <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
