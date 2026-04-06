@@ -48,7 +48,7 @@ const team = [
   { id: 21, name: 'Aayush Gupta',         role: 'Associate Salesforce Developer',   photo: BASE + 'team/Aayush Gupta.JPG',         linkedin: '#' },
   { id: 22, name: 'Himanshu Yadav',       role: 'QA',                               photo: BASE + 'team/Himanshu Yadav.jpg',       linkedin: '#' },
   { id: 23, name: 'Manish Pavadiya',      role: 'Salesforce Consultant',             photo: BASE + 'team/Manish Pavadiya.JPG',      linkedin: '#' },
-  { id: 24, name: 'Sweety Singh',         role: 'QA',                               photo: BASE + 'team/Sweety Singh.JPG',         linkedin: '#' },
+  { id: 24, name: 'Sweety Singh',         role: 'Associate Salesforce Developer',    photo: BASE + 'team/Sweety Singh.JPG',         linkedin: '#' },
   { id: 25, name: 'Alka Yadav',           role: 'HR Associate',                      photo: BASE + 'team/Alka Yadav.JPG',           linkedin: '#' },
   { id: 26, name: 'Bhu Garima Yadav',     role: 'Associate Salesforce Developer',    photo: BASE + 'team/Bhu Garima Yadav.jpg',     linkedin: '#' },
   { id: 27, name: 'Utkarsh',              role: 'Salesforce Developer',             photo: BASE + 'team/Utkarsh.jpg',              linkedin: '#' },
