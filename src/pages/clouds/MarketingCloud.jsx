@@ -7,20 +7,20 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your campaigns are batch-and-blast with no personalisation", fix: "Every message is dynamically tailored to each customer using real-time CRM data and AI" },
-  { pain: "Marketing and Sales are working from different data", fix: "One connected platform syncs every touchpoint so both teams see the full picture" },
-  { pain: "You have no idea which campaigns actually drive revenue", fix: "Full attribution reporting ties every email, ad, and journey to pipeline and closed deals" },
-  { pain: "Leads go cold because nurture sequences are manual or broken", fix: "Automated multi-channel journeys engage prospects at exactly the right moment" },
-  { pain: "Your email deliverability and engagement rates are declining", fix: "Einstein AI optimises send times, subject lines, and content for maximum engagement" },
+  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "Einstein AI personalises content, send times, and frequency for every subscriber — lifting open rates and inbox placement" },
+  { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "Multi-touch attribution ties every email, ad click, and journey step to closed-won revenue in Sales Cloud" },
+  { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "Journey Builder triggers multi-channel sequences from any CRM event — so no lead goes cold" },
+  { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "Data Cloud unifies every interaction into a single customer profile that powers real-time segmentation" },
+  { pain: "Your team wastes hours building emails and pulling lists manually", fix: "Drag-and-drop content builder, dynamic templates, and automated audience refresh cut campaign build time by 50%+" },
 ]
 
 const outcomes = [
-  { icon: TrendingUp,        value: '28%',   label: 'increase in marketing ROI reported by Marketing Cloud customers', color: '#0176D3' },
-  { icon: MousePointerClick, value: '27%',   label: 'higher email click-through rates with Einstein Send Time Optimisation', color: '#10B981' },
-  { icon: Mail,              value: '3.8×',  label: 'higher ROI from email marketing vs. any other digital channel', color: '#F59E0B' },
-  { icon: DollarSign,        value: '25%',   label: 'increase in customer lifetime value through personalised journeys', color: '#6366F1' },
-  { icon: Clock,             value: '40%',   label: 'reduction in customer churn with automated re-engagement campaigns', color: '#06B6D4' },
-  { icon: Users,             value: '67%',   label: 'lift in conversion rates with data-driven audience segmentation', color: '#0176D3' },
+  { icon: DollarSign,        value: '$36:$1', label: 'average email marketing ROI — the highest of any digital channel (Litmus, 2024)', color: '#0176D3' },
+  { icon: TrendingUp,        value: '25%',    label: 'average increase in marketing ROI reported by Marketing Cloud customers (Salesforce Customer Success Survey)', color: '#10B981' },
+  { icon: MousePointerClick, value: '41%',    label: 'higher click-through rates when using Einstein Send Time Optimisation vs. manual sends', color: '#F59E0B' },
+  { icon: Mail,              value: '26%',    label: 'lift in email revenue from dynamic, personalised content powered by CRM data (Salesforce State of Marketing)', color: '#6366F1' },
+  { icon: Users,             value: '23%',    label: "higher customer lifetime value for brands running personalised lifecycle journeys (McKinsey Next in Personalisation)", color: '#06B6D4' },
+  { icon: Clock,             value: '50%',    label: 'reduction in campaign build time with Journey Builder templates and reusable content blocks', color: '#0176D3' },
 ]
 
 const useCases = [
@@ -28,61 +28,61 @@ const useCases = [
     dept: 'Email & Journey Automation',
     icon: RefreshCw,
     color: '#0176D3',
-    headline: 'Journeys that convert on autopilot',
+    headline: 'Automated journeys that nurture, convert, and retain',
     points: [
-      'Multi-step, multi-channel journeys triggered by real-time customer behaviour',
-      'Welcome series, nurture tracks, win-back, and post-purchase flows — all automated',
-      'Dynamic content blocks that personalise every email based on CRM data',
-      'A/B testing on subject lines, content, and send times at scale',
-      'Einstein engagement scoring to prioritise your highest-value contacts',
+      'Journey Builder orchestrates multi-step, multi-channel flows triggered by CRM events, web behaviour, or purchase activity',
+      'Pre-built journey templates for welcome series, abandoned cart, win-back, post-purchase, and renewal reminders',
+      'Dynamic content blocks swap images, offers, and copy per subscriber — no duplicate emails needed',
+      'Einstein Send Time Optimisation delivers each email when a contact is most likely to engage',
+      'Built-in A/B and multivariate testing on subject lines, content, CTAs, and send times at scale',
     ],
   },
   {
-    dept: 'Audience & Data',
+    dept: 'Audience Segmentation & Data Cloud',
     icon: Target,
     color: '#10B981',
-    headline: 'Right message. Right person. Right time.',
+    headline: 'One unified profile. Limitless segmentation.',
     points: [
-      'Unified customer profiles built from CRM, web, mobile, and purchase data',
-      'Drag-and-drop segmentation using behavioural, demographic, and transactional filters',
-      'Real-time audience activation across email, SMS, ads, and web',
-      'Sync CRM segments directly to Google, Facebook, and LinkedIn ad platforms',
-      'Data Cloud integration for a true single source of truth',
+      'Data Cloud ingests and unifies data from CRM, web, mobile, POS, and third-party sources into a single customer profile',
+      'Drag-and-drop segmentation using behavioural, transactional, demographic, and engagement-based filters',
+      'Real-time audience activation pushes segments to email, SMS, push, ads, and web personalisation simultaneously',
+      'Native sync to Google Ads, Meta, and LinkedIn lets you suppress existing customers and target lookalikes from CRM data',
+      'Calculated insights surface predictive metrics like likelihood to purchase, churn risk, and lifetime value',
     ],
   },
   {
-    dept: 'Analytics & Attribution',
+    dept: 'Analytics & Revenue Attribution',
     icon: BarChart2,
     color: '#F59E0B',
-    headline: 'Prove exactly what marketing is worth',
+    headline: 'Prove exactly which campaigns drive revenue',
     points: [
-      'Multi-touch attribution connects campaigns to pipeline and revenue',
-      'Real-time dashboards for email performance, journey health, and ROI',
-      'Einstein AI predicts which contacts are most likely to engage or churn',
-      'Campaign comparison reporting to double down on what works',
-      'Connects marketing spend to Sales Cloud opportunities end-to-end',
+      'Multi-touch attribution connects every marketing touchpoint to pipeline, opportunities, and closed-won revenue in Sales Cloud',
+      'Real-time dashboards track email deliverability, journey conversion rates, engagement trends, and ROI by campaign',
+      'Einstein Engagement Scoring predicts which contacts will open, click, or unsubscribe — so you act before they disengage',
+      'Campaign influence reporting shows exactly how marketing contributes to every deal in the pipeline',
+      'Path analysis visualises the customer journey from first touch to close, revealing which channels accelerate deals',
     ],
   },
   {
     dept: 'B2B Marketing (Account Engagement)',
     icon: Users,
     color: '#6366F1',
-    headline: 'Turn leads into pipeline — systematically',
+    headline: 'Turn anonymous traffic into qualified pipeline',
     points: [
-      'Lead scoring and grading that surfaces sales-ready prospects automatically',
-      'Automated nurture programs that move MQLs to SQLs without manual effort',
-      'Full CRM sync so sales sees every email open, click, and page visit',
-      'Landing pages, forms, and gated content — built and tracked in one place',
-      'Engagement history feeds directly into Salesforce reports and dashboards',
+      'Lead scoring and grading models automatically surface sales-ready prospects based on engagement and fit',
+      'Automated nurture programs advance MQLs through the funnel with personalised content at each stage',
+      'Bi-directional CRM sync ensures sales sees every email open, link click, form fill, and page visit in real time',
+      'Landing pages, forms, and gated content are built, tracked, and attributed in a single platform',
+      'Engagement Studio provides branching logic for complex B2B buying journeys with multiple decision-makers',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Marketing Cloud Specialists',   desc: "We focus on Marketing Cloud and Account Engagement. That means deeper expertise, faster delivery, and better results than any generalist SI." },
-  { title: "We Have Done This Before",      desc: "Our team has deployed Marketing Cloud for B2B lead nurture, B2C lifecycle journeys, re-engagement campaigns, and paid media sync — across multiple industries." },
-  { title: 'Fast Time to Value',            desc: "Most Marketing Cloud implementations are live within 6-8 weeks. We move fast, build iteratively, and get you sending smarter campaigns quickly." },
-  { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will assess your current marketing stack and give you a personalisation roadmap — completely free." },
+  { title: 'Deep Marketing Cloud Expertise',   desc: "We specialise in Marketing Cloud and Account Engagement — not everything Salesforce sells. That focus means faster implementations, fewer issues, and better results than a generalist partner." },
+  { title: "Proven Across Industries",         desc: "Our team has delivered Marketing Cloud for B2B lead nurture, e-commerce lifecycle journeys, financial services onboarding, and nonprofit donor engagement — with measurable ROI in every case." },
+  { title: 'Live in 6-8 Weeks, Not 6 Months',  desc: "We use a phased delivery model: core journeys and integrations go live fast, then we iterate. You start seeing value in weeks, not quarters." },
+  { title: 'Free Roadmap — No Strings',         desc: "Book a 30-minute scoping call and walk away with a personalisation roadmap, a gap analysis of your current stack, and a clear implementation plan — whether you hire us or not." },
 ]
 
 export default function MarketingCloudPage() {
@@ -101,12 +101,12 @@ export default function MarketingCloudPage() {
               <Megaphone className="w-3.5 h-3.5" /> Salesforce Marketing Cloud
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-              Stop Guessing. Start Sending Campaigns That{' '}
-              <span className="gradient-text-gold">Actually Convert.</span>
+              Turn Every Customer Touchpoint Into{' '}
+              <span className="gradient-text-gold">Measurable Revenue.</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Marketing Cloud lets you personalise every email, journey, and ad using real CRM data and Einstein AI — so every message drives revenue, not noise. Cloudsheer builds the engine.
+              Email delivers $36 for every $1 spent — but only when it is personalised, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -128,7 +128,7 @@ export default function MarketingCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Sound Familiar?</div>
             <h2 className="section-title mb-4">
-              The Problems <span className="gradient-text">Marketing Cloud Solves</span>
+              The Revenue Problems <span className="gradient-text">Marketing Cloud Solves</span>
             </h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -165,10 +165,10 @@ export default function MarketingCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag-white mx-auto mb-5">Real Results</div>
             <h2 className="section-title-white mb-4">
-              Marketing Cloud Delivers Real ROI
+              The Numbers Behind Marketing Cloud
             </h2>
             <p className="section-sub-white">
-              These are results from businesses running Salesforce Marketing Cloud — not projections.
+              Industry benchmarks and customer-reported outcomes from Salesforce, Litmus, and McKinsey research.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -198,10 +198,10 @@ export default function MarketingCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">What It Does For You</div>
             <h2 className="section-title mb-4">
-              Everything You Need to <span className="gradient-text">Market Smarter</span>
+              Four Engines That <span className="gradient-text">Drive Marketing Revenue</span>
             </h2>
             <p className="section-sub">
-              Marketing Cloud connects your data, automates your journeys, and proves what works — across every channel your customers use.
+              Marketing Cloud connects your customer data, automates personalised journeys, and attributes every conversion back to the campaign that caused it.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -279,15 +279,15 @@ export default function MarketingCloudPage() {
             <Zap className="w-3.5 h-3.5" /> Free Scoping Call
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Ready to Build Marketing That<br />
-            <span className="gradient-text-gold">Actually Drives Revenue?</span>
+            Ready to Make Every Campaign<br />
+            <span className="gradient-text-gold">Prove Its Revenue Impact?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will review your current marketing stack, identify your biggest personalisation opportunities, and map out a Marketing Cloud roadmap — at no cost, no commitment.
+            In 30 minutes we will audit your current marketing stack, identify your highest-impact personalisation opportunities, and map out a phased Marketing Cloud roadmap — at no cost.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['Personalisation roadmap included', 'No sales pitch — just value', 'You leave with a clear plan'].map(i => (
+            {['Personalisation roadmap included', 'Revenue attribution plan', 'You leave with a clear next step'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

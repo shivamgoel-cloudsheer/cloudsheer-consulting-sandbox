@@ -7,20 +7,20 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your team spends hours building reports in spreadsheets every week", fix: "Automated dashboards refresh in real time — no manual work, no stale data" },
-  { pain: "Executives make gut decisions because they cannot access insights fast enough", fix: "AI-powered analytics surface the right insight at the right time, inside Salesforce" },
-  { pain: "Your data lives in silos across CRM, ERP, and cloud databases", fix: "Tableau and Data Cloud unify every source into a single pane of glass" },
-  { pain: "Forecast accuracy is low and pipeline risk is invisible until it is too late", fix: "Einstein predictions flag at-risk deals and score leads before your team even asks" },
-  { pain: "You bought analytics tools but adoption is below 20%", fix: "We embed dashboards where your team already works — inside Salesforce records and apps" },
+  { pain: "Leaders wait days for reports while opportunities slip through the cracks", fix: "Real-time dashboards auto-refresh so decisions happen in minutes, not days" },
+  { pain: "Forecasts miss by double digits because reps rely on gut feel over data", fix: "Einstein AI scores every deal and flags pipeline risk before it impacts the quarter" },
+  { pain: "Critical data is trapped in silos across CRM, ERP, spreadsheets, and data warehouses", fix: "Data Cloud and Tableau unify every source into one governed, queryable layer" },
+  { pain: "You invested in analytics tools but fewer than 20% of your team actually use them", fix: "We embed insights directly into Salesforce workflows so adoption happens by default" },
+  { pain: "Finance and sales argue over different versions of the same numbers every month", fix: "A single source of truth eliminates reconciliation and gives everyone the same view" },
 ]
 
 const outcomes = [
-  { icon: BarChart2,   value: '65%',     label: 'faster reporting cycles with CRM Analytics automation', color: '#0176D3' },
-  { icon: TrendingUp,  value: '28%',     label: 'improvement in forecast accuracy with Einstein predictions', color: '#10B981' },
-  { icon: Clock,       value: '40%',     label: 'reduction in time spent on manual reporting and data prep', color: '#F59E0B' },
-  { icon: DollarSign,  value: '3x',      label: 'more data-driven decisions per quarter across business units', color: '#6366F1' },
-  { icon: Eye,         value: '10.5M+',  label: 'Tableau users worldwide trust it for visual analytics', color: '#06B6D4' },
-  { icon: Database,    value: '26%',     label: 'average revenue increase reported by analytics-driven organisations', color: '#0176D3' },
+  { icon: BarChart2,   value: '382%',    label: 'three-year ROI from Tableau deployments, per Forrester Total Economic Impact study', color: '#0176D3' },
+  { icon: TrendingUp,  value: '28%',     label: 'improvement in forecast accuracy when Einstein predictions replace manual methods', color: '#10B981' },
+  { icon: Clock,       value: '65%',     label: 'faster report generation with CRM Analytics automation vs. spreadsheet workflows', color: '#F59E0B' },
+  { icon: DollarSign,  value: '<6 mo',   label: 'payback period — most organisations recoup their CRM Analytics investment in under six months', color: '#6366F1' },
+  { icon: Eye,         value: '10M+',    label: 'Tableau users worldwide — the most widely adopted visual analytics platform on the market', color: '#06B6D4' },
+  { icon: Database,    value: '3.5x',    label: 'more likely to exceed revenue targets when teams adopt analytics-driven decision making', color: '#0176D3' },
 ]
 
 const useCases = [
@@ -28,61 +28,61 @@ const useCases = [
     dept: 'Sales & Revenue Operations',
     icon: TrendingUp,
     color: '#0176D3',
-    headline: 'See your pipeline like never before',
+    headline: 'Close more deals with pipeline intelligence',
     points: [
-      'Executive pipeline dashboards with stage velocity and conversion rates',
-      'Einstein lead scoring and opportunity win-probability predictions',
-      'Rep performance scorecards with quota attainment tracking',
-      'Deal risk signals that flag stalling opportunities before they slip',
-      'Multi-touch attribution connecting marketing spend to closed-won revenue',
+      'Live pipeline dashboards with stage velocity, conversion rates, and weighted forecast',
+      'Einstein opportunity scoring that predicts win probability and flags at-risk deals',
+      'Rep performance scorecards with quota attainment, activity metrics, and coaching signals',
+      'Waterfall analysis showing pipeline movement week-over-week so nothing slips unnoticed',
+      'Multi-touch attribution connecting marketing spend to closed-won revenue by campaign',
     ],
   },
   {
     dept: 'Service & Customer Success',
     icon: Layers,
     color: '#10B981',
-    headline: 'Resolve faster. Retain more.',
+    headline: 'Resolve faster and retain more customers',
     points: [
-      'Real-time service ops dashboards with queue health and SLA status',
-      'CSAT and NPS trend analysis with drill-down by agent, region, or product',
-      'Einstein churn prediction models that flag at-risk accounts 45 days out',
-      'Agent utilisation and case resolution time benchmarking',
-      'Customer health scores combining support, usage, and billing data',
+      'Real-time service operations dashboards with queue health, SLA compliance, and backlog trends',
+      'CSAT and NPS trend analysis with drill-down by agent, region, product, or case category',
+      'Einstein churn prediction models that flag at-risk accounts 30-60 days before renewal',
+      'Agent utilisation and case resolution time benchmarking against team and industry averages',
+      'Customer health scores combining support volume, product usage, and billing data',
     ],
   },
   {
     dept: 'Executive & Finance',
     icon: PieChart,
     color: '#F59E0B',
-    headline: 'One source of truth for the C-suite',
+    headline: 'One source of truth for the leadership team',
     points: [
-      'Tableau workbooks pulling from Salesforce, NetSuite, Snowflake, and more',
-      'Exec scorecards with KPIs, trends, and variance analysis in one view',
-      'Cohort analysis and revenue retention tracking across business lines',
-      'Automated board-ready reports delivered on schedule — no analyst needed',
-      'Role-based access so every leader sees exactly what they need',
+      'Tableau workbooks pulling live data from Salesforce, NetSuite, Snowflake, BigQuery, and more',
+      'Executive scorecards with KPIs, trend lines, and variance analysis in a single view',
+      'Cohort analysis and net revenue retention tracking across business lines and geographies',
+      'Automated board-ready reports delivered on schedule — no analyst assembly required',
+      'Role-based row-level security so every leader sees exactly what they are authorised to see',
     ],
   },
   {
     dept: 'Marketing & Growth',
     icon: Target,
     color: '#6366F1',
-    headline: 'Prove ROI on every campaign dollar',
+    headline: 'Prove ROI on every campaign dollar spent',
     points: [
-      'Multi-touch attribution dashboards connecting campaigns to pipeline',
-      'Marketing Cloud engagement analytics with conversion funnel visibility',
-      'Audience segmentation insights powered by Data Cloud unification',
-      'Campaign performance comparison with cost-per-lead and cost-per-opportunity',
-      'Predictive analytics for next-best-action and content recommendations',
+      'Full-funnel attribution dashboards connecting impressions to pipeline to closed revenue',
+      'Marketing Cloud engagement analytics with conversion rates at every funnel stage',
+      'Audience segmentation insights powered by Data Cloud identity resolution and unification',
+      'Campaign performance comparison with cost-per-lead, cost-per-opportunity, and CAC metrics',
+      'Predictive analytics for next-best-action recommendations and content personalisation',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Analytics-First Expertise',     desc: "We specialise in Salesforce CRM Analytics and Tableau. That means deeper knowledge, faster builds, and dashboards that actually get used — not shelfware." },
-  { title: "Decision-Driven Design",        desc: "We start from the decisions your team needs to make, not from the data you happen to have. Every dashboard is built to drive action, not just display charts." },
-  { title: 'Fast Time to Insight',          desc: "Most analytics engagements go live within 4-6 weeks. We move fast from discovery to production — no months of data modelling before you see value." },
-  { title: 'Free Discovery Call',           desc: "Book a 30-minute scoping call. We will map your top 5 insight gaps and design a dashboard blueprint to close them — completely free, no commitment." },
+  { title: 'Analytics-First Expertise',     desc: "We specialise in Salesforce CRM Analytics and Tableau — not general Salesforce admin. That means deeper knowledge, faster builds, and dashboards that actually drive decisions instead of gathering dust." },
+  { title: "Decision-Driven Design",        desc: "Every engagement starts with the decisions your team needs to make, not the data you happen to have. We reverse-engineer from business outcomes to ensure every dashboard drives action." },
+  { title: 'Fast Time to Insight',          desc: "Most analytics engagements go live within 4-6 weeks. We move fast from discovery to production so you see value before the quarter ends — not after." },
+  { title: 'Free Discovery Call',           desc: "Book a 30-minute scoping call. We will map your top 5 insight gaps, identify the highest-impact dashboards, and design a blueprint to close them — completely free, no commitment." },
 ]
 
 export default function AnalyticsPage() {
@@ -101,12 +101,12 @@ export default function AnalyticsPage() {
               <BarChart2 className="w-3.5 h-3.5" /> CRM Analytics & Tableau
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-              Stop Guessing.{' '}
-              <span className="gradient-text-gold">Start Seeing What Your Data Already Knows.</span>
+              Turn Raw Data Into{' '}
+              <span className="gradient-text-gold">Revenue-Driving Decisions — In Real Time.</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce CRM Analytics and Tableau turn your raw data into real-time dashboards, AI predictions, and executive insights — so every decision is backed by evidence, not instinct.
+              Salesforce CRM Analytics and Tableau give your leadership team AI-powered forecasts, live dashboards, and unified data — so every decision is backed by evidence, not instinct. Forrester found organisations achieve 382% ROI and payback in under six months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -163,12 +163,12 @@ export default function AnalyticsPage() {
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="section-wrap relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="tag-white mx-auto mb-5">Real Results</div>
+            <div className="tag-white mx-auto mb-5">Proven Results</div>
             <h2 className="section-title-white mb-4">
-              Analytics That Move the Needle
+              The Numbers Behind Data-Driven Organisations
             </h2>
             <p className="section-sub-white">
-              These are the results organisations achieve when they move from spreadsheets to Salesforce Analytics and Tableau.
+              These are the outcomes companies achieve when they replace spreadsheets and siloed tools with Salesforce CRM Analytics and Tableau.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export default function AnalyticsPage() {
               Analytics For Every <span className="gradient-text">Part of Your Business</span>
             </h2>
             <p className="section-sub">
-              From pipeline dashboards to executive scorecards — we build analytics that drive decisions across sales, service, finance, and marketing.
+              From pipeline intelligence to executive scorecards — we build analytics that drive faster decisions across sales, service, finance, and marketing.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -279,11 +279,11 @@ export default function AnalyticsPage() {
             <Zap className="w-3.5 h-3.5" /> Free Analytics Scoping Call
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Ready to Make Your Data<br />
-            <span className="gradient-text-gold">Your Competitive Advantage?</span>
+            Ready to Make Every Decision<br />
+            <span className="gradient-text-gold">Backed by Real-Time Intelligence?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will map your top insight gaps, identify the highest-impact dashboards, and give you a clear analytics blueprint — at no cost, no commitment.
+            In 30 minutes we will map your top insight gaps, identify the dashboards with the highest revenue impact, and give you a clear analytics roadmap — at no cost, no commitment.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>

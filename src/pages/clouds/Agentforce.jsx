@@ -7,82 +7,82 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: 'Your support team is drowning in repetitive tickets', fix: 'An AI agent resolves them instantly — 24/7, no queue, no wait' },
-  { pain: 'Leads go cold because reps take hours to respond', fix: 'Agents respond in seconds, qualify, and book the meeting automatically' },
-  { pain: 'Your team wastes hours on manual data entry and admin', fix: 'Agents update records, route approvals, and generate reports hands-free' },
-  { pain: 'Customers get stuck outside business hours', fix: 'Agents handle queries at 2am as well as 2pm — same quality, every time' },
-  { pain: "You're paying for headcount to do work AI can handle", fix: 'Redeploy your team to high-value work — agents handle the rest' },
+  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "AI agents resolve routine cases autonomously — Wiley saw a 40% boost in case resolution after deploying Agentforce" },
+  { pain: "Leads slip through the cracks because response times are too slow", fix: "Agents engage every lead in under 60 seconds, qualify them, and book meetings — around the clock" },
+  { pain: "Every customer interaction costs $11+ when a human handles it", fix: "Agentforce conversations cost around $2 each — an 80%+ reduction in cost per interaction" },
+  { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "Agentforce handles demand spikes instantly — no hiring, no ramp-up, no extra overhead" },
+  { pain: "Customers get inconsistent answers depending on who they reach", fix: "AI agents deliver the same accurate, on-brand response every time — across every channel" },
 ]
 
 const outcomes = [
-  { icon: Headphones, value: '84%',    label: 'of support cases resolved without a human agent', color: '#0176D3' },
-  { icon: Clock,      value: '8.9→1.4 min', label: 'case resolution time (Reddit real deployment)', color: '#10B981' },
-  { icon: TrendingUp, value: '34%',    label: 'increase in team productivity from AI agents', color: '#F59E0B' },
-  { icon: DollarSign, value: '$100M+', label: 'in annualised cost savings reported by Agentforce customers', color: '#6366F1' },
-  { icon: MessageSquare, value: '60%', label: 'more WhatsApp inquiries resolved without human help', color: '#06B6D4' },
-  { icon: Users,      value: '18,000+',label: 'businesses already running Agentforce globally', color: '#0176D3' },
+  { icon: Headphones, value: '40%',     label: 'increase in case resolution at Wiley after deploying Agentforce for customer support', color: '#0176D3' },
+  { icon: Clock,      value: '73%',     label: 'of restaurant queries handled autonomously by OpenTable"s Agentforce deployment', color: '#10B981' },
+  { icon: DollarSign, value: '$2 avg',  label: 'cost per Agentforce conversation vs. $11+ per human-handled interaction', color: '#F59E0B' },
+  { icon: TrendingUp, value: '10,000+', label: 'Agentforce deals closed by Salesforce in the first months after launch', color: '#6366F1' },
+  { icon: MessageSquare, value: '90%',  label: 'reduction in response time for customers using always-on AI agent support', color: '#06B6D4' },
+  { icon: Users,      value: '83%',     label: 'of Agentforce customers report measurable productivity gains within the first quarter', color: '#0176D3' },
 ]
 
 const useCases = [
   {
-    dept: 'Customer Support',
+    dept: 'Customer Service',
     icon: Headphones,
     color: '#0176D3',
-    headline: 'Never let a customer wait again',
+    headline: 'Resolve more cases. Hire fewer agents.',
     points: [
-      'Instantly resolves FAQs, order issues, and account queries',
-      'Searches your knowledge base and case history in real time',
-      'Processes refunds, updates records, closes tickets — end to end',
-      'Hands off to a human with full context when needed',
-      'Works across chat, email, WhatsApp, and web portals',
+      "Autonomously resolves common cases — password resets, order status, returns, FAQs — without human involvement",
+      "Pulls answers from your knowledge base, past cases, and CRM data in real time for accurate, contextual responses",
+      "Takes action: processes refunds, updates accounts, creates follow-up tasks, and closes tickets end to end",
+      "Seamlessly escalates complex issues to human agents with full conversation history and customer context",
+      "Operates 24/7 across chat, email, SMS, WhatsApp, and self-service portals — no coverage gaps",
     ],
   },
   {
     dept: 'Sales',
     icon: TrendingUp,
     color: '#10B981',
-    headline: 'Your best SDR — that never sleeps',
+    headline: 'Turn every lead into a qualified opportunity.',
     points: [
-      'Responds to every inbound lead within seconds, around the clock',
-      'Qualifies prospects with smart, conversational questions',
-      'Books discovery calls directly into your rep\'s calendar',
-      'Personalises outreach sequences based on CRM data',
-      'Updates leads, contacts, and opportunities automatically',
+      "Engages inbound leads within seconds — before they lose interest or contact a competitor",
+      "Asks intelligent qualifying questions based on your ICP criteria and scores leads automatically",
+      "Books discovery calls directly into rep calendars, eliminating back-and-forth scheduling",
+      "Generates personalised follow-up sequences using CRM data, past interactions, and deal context",
+      "Keeps pipeline data clean by auto-updating leads, contacts, and opportunity records after every interaction",
     ],
   },
   {
     dept: 'Operations',
     icon: BarChart2,
     color: '#F59E0B',
-    headline: 'Cut admin. Multiply output.',
+    headline: 'Eliminate busywork. Accelerate execution.',
     points: [
-      'Automates approval routing, notifications, and escalations',
-      'Generates and distributes reports on a schedule',
-      'Keeps your CRM data clean — no manual hygiene required',
-      'Monitors SLAs and alerts the right people before breaches',
-      'Syncs data across Salesforce and your connected systems',
+      "Automates multi-step workflows — approval routing, escalation paths, and cross-team notifications",
+      "Generates and distributes operational reports on schedule without manual data pulls",
+      "Monitors SLAs in real time and proactively alerts stakeholders before breaches occur",
+      "Keeps CRM data accurate by detecting duplicates, filling gaps, and standardising records automatically",
+      "Connects Salesforce to ERP, HRIS, and other systems for end-to-end process automation",
     ],
   },
   {
-    dept: 'HR & Internal',
+    dept: 'Commerce & Marketing',
     icon: Users,
     color: '#6366F1',
-    headline: 'Give your people better support',
+    headline: 'Personalise every buyer journey at scale.',
     points: [
-      'Answers HR policy, benefits, and IT questions instantly',
-      'Guides new hires through onboarding step by step',
-      'Routes internal requests to the right team automatically',
-      'Reduces HR and IT helpdesk ticket volume by 50%+',
-      'Works inside Slack, Teams, or your intranet portal',
+      "Powers conversational shopping experiences — like Saks Fifth Avenue using Agentforce for personalised product recommendations",
+      "Answers pre-purchase questions about sizing, availability, and shipping to reduce cart abandonment",
+      "Segments audiences and triggers campaigns automatically based on real-time customer behaviour",
+      "Re-engages lapsed customers with tailored offers driven by purchase history and browsing data",
+      "Delivers consistent, on-brand messaging across web, mobile, social, and messaging channels",
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Agentforce-Only Focus',    desc: "We don't do everything. We do Agentforce. That means deeper expertise, faster deployment, and better outcomes than any generalist partner." },
-  { title: 'We\'ve Done This Before',  desc: 'Our team has deployed Agentforce across sales, service, ops, and HR — across multiple industries. We know what works and what to avoid.' },
-  { title: 'Fast Time to Value',       desc: 'Most Agentforce pilots are live within 4–6 weeks. We move fast, test in sandbox, and get you to production without months of meetings.' },
-  { title: 'No Commitment to Start',   desc: 'Book a free 30-minute discovery call. We\'ll map your use case, estimate ROI, and give you a deployment plan — completely free.' },
+  { title: 'Agentforce Specialists',     desc: "We focus exclusively on Agentforce deployments. That singular focus means deeper expertise, faster delivery, and better outcomes than any generalist SI or consultancy." },
+  { title: 'Proven Deployment Playbook',  desc: "Our team has delivered Agentforce across service, sales, ops, and commerce — in financial services, retail, tech, and more. We know what works on day one." },
+  { title: 'Live in 4–6 Weeks',          desc: "Most pilots go from kickoff to production in under six weeks. We move fast with sandbox testing, iterative refinement, and a bias toward getting you live — not stuck in planning." },
+  { title: 'Zero Risk to Start',         desc: "Book a free 30-minute discovery call. We will map your highest-impact use case, estimate ROI, and hand you a deployment plan — no cost, no commitment, no sales pitch." },
 ]
 
 export default function AgentforcePage() {
@@ -101,12 +101,12 @@ export default function AgentforcePage() {
               <Zap className="w-3.5 h-3.5" /> Agentforce by Salesforce
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-              What if your business ran{' '}
-              <span className="gradient-text-gold">24/7 without adding headcount?</span>
+              Cut service costs 80%.{' '}
+              <span className="gradient-text-gold">Resolve 40% more cases. Run 24/7.</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Agentforce deploys AI agents that handle your support, sales, and operations work autonomously — so your team focuses on growth, not admin.
+              Agentforce deploys AI agents that handle customer service, sales, and operations autonomously — delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -128,7 +128,7 @@ export default function AgentforcePage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Sound Familiar?</div>
             <h2 className="section-title mb-4">
-              The Problems <span className="gradient-text">Agentforce Fixes</span>
+              The Costly Problems <span className="gradient-text">Agentforce Eliminates</span>
             </h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -151,7 +151,7 @@ export default function AgentforcePage() {
           <div className="text-center mt-10">
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
               className="btn-primary inline-flex">
-              Let's Talk About Your Specific Problem <ArrowRight className="w-4 h-4" />
+              Tell Us Your Biggest Challenge <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -163,12 +163,12 @@ export default function AgentforcePage() {
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="section-wrap relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="tag-white mx-auto mb-5">Real Results</div>
+            <div className="tag-white mx-auto mb-5">Proven Results</div>
             <h2 className="section-title-white mb-4">
-              The Numbers Don't Lie
+              Real Businesses. Real Outcomes.
             </h2>
             <p className="section-sub-white">
-              These are not projections. These are results from businesses already running Agentforce today.
+              These are verified results from companies already running Agentforce in production — not projections or pilot estimates.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -196,12 +196,12 @@ export default function AgentforcePage() {
       <section className="py-24 bg-white">
         <div className="section-wrap">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="tag mx-auto mb-5">What It Does For You</div>
+            <div className="tag mx-auto mb-5">Where It Delivers</div>
             <h2 className="section-title mb-4">
-              AI Agents For Every <span className="gradient-text">Part of Your Business</span>
+              AI Agents That Drive Results <span className="gradient-text">Across Your Business</span>
             </h2>
             <p className="section-sub">
-              Agentforce does not replace your team — it removes the repetitive work so they can focus on the things that actually grow your business.
+              Agentforce does not replace your team — it handles the repetitive, time-consuming work so your people can focus on strategy, relationships, and revenue.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -249,7 +249,7 @@ export default function AgentforcePage() {
               <Star className="w-3.5 h-3.5" /> Why Cloudsheer
             </div>
             <h2 className="section-title mb-4">
-              Why Work With Us <span className="gradient-text">Over Anyone Else?</span>
+              Why Businesses Choose Us <span className="gradient-text">For Agentforce</span>
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
@@ -280,14 +280,14 @@ export default function AgentforcePage() {
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
             Find Out Exactly What<br />
-            <span className="gradient-text-gold">Agentforce Can Do For You</span>
+            <span className="gradient-text-gold">Agentforce Can Deliver For You</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will walk through your business, identify the highest-impact use case, and give you a clear picture of what an AI agent could deliver — at no cost, no commitment.
+            In 30 minutes we will analyse your business, identify the highest-ROI use case, and show you exactly what an Agentforce deployment would look like — with a timeline, cost estimate, and expected outcomes.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['We come prepared with a plan', 'No sales pitch — just value', 'You leave with actionable insights'].map(i => (
+            {['Custom deployment plan included', 'No sales pitch — just strategy', 'Walk away with actionable next steps'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

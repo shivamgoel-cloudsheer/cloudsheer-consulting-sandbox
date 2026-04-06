@@ -7,20 +7,20 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your agents are juggling 5 different tools to handle one customer issue", fix: "One unified console with every channel, record, and AI suggestion in a single pane" },
-  { pain: "Customers wait hours for a response — then get bounced between departments", fix: "Omni-channel routing sends every case to the right agent instantly, with full context" },
-  { pain: "Repetitive Tier-1 tickets eat up your most expensive support resources", fix: "AI-powered agents deflect up to 78% of routine cases — 24/7, no queue, no wait" },
-  { pain: "You have no visibility into SLA breaches until a customer escalates", fix: "Real-time dashboards track every milestone, flag risks, and trigger escalations automatically" },
-  { pain: "Your knowledge base exists but nobody can find the right article", fix: "Einstein surfaces the best article to agents and customers in real time — cutting handle time by 30%" },
+  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "A single unified console surfaces every channel, case history, and AI recommendation in one view — giving agents full context instantly" },
+  { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "Omni-channel routing delivers cases to the right agent with complete conversation history, eliminating transfers and repeat explanations" },
+  { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "Agentforce Service Agent resolves routine cases autonomously around the clock — freeing your team for complex, high-value work" },
+  { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "Entitlement tracking with milestone alerts flags at-risk cases in real time and auto-triggers escalation workflows before breaches occur" },
+  { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "Einstein Search surfaces the most relevant article based on case context, cutting average handle time and improving first-contact resolution" },
 ]
 
 const outcomes = [
-  { icon: Headphones, value: '78%',       label: 'average case deflection with AI-powered self-service', color: '#0176D3' },
-  { icon: Clock,      value: '35%',       label: 'faster case resolution with unified agent workspace', color: '#10B981' },
-  { icon: DollarSign, value: '40%',       label: 'reduction in cost-per-case after Service Cloud deployment', color: '#F59E0B' },
-  { icon: TrendingUp, value: '4.8 / 5',   label: 'average CSAT score maintained with AI + human handoff', color: '#6366F1' },
-  { icon: Users,      value: '150K+',     label: 'companies run their support operations on Service Cloud', color: '#06B6D4' },
-  { icon: Globe,      value: '#1',        label: 'customer service platform worldwide for 10 consecutive years', color: '#0176D3' },
+  { icon: Clock,      value: '30%',       label: 'faster case resolution reported by Service Cloud customers (Salesforce Customer Success Survey)', color: '#10B981' },
+  { icon: DollarSign, value: '27%',       label: 'reduction in support costs driven by agent productivity gains and self-service deflection (Forrester TEI Study)', color: '#F59E0B' },
+  { icon: Headphones, value: '32%',       label: 'increase in first-contact resolution with unified agent workspace and AI-recommended actions', color: '#0176D3' },
+  { icon: TrendingUp, value: '30%+',      label: 'improvement in customer satisfaction (CSAT) scores after deploying omni-channel service operations', color: '#6366F1' },
+  { icon: Users,      value: '150K+',     label: 'companies worldwide trust Service Cloud to run their customer support operations', color: '#06B6D4' },
+  { icon: Globe,      value: '#1',        label: 'CRM platform for customer service — named a Leader in the Gartner Magic Quadrant 18 years running', color: '#0176D3' },
 ]
 
 const useCases = [
@@ -30,24 +30,24 @@ const useCases = [
     color: '#0176D3',
     headline: 'Every channel. One workspace. Zero context lost.',
     points: [
-      'Unify email, chat, phone, WhatsApp, social, and SMS in a single console',
-      'Intelligent routing matches cases to the best-skilled available agent',
-      'Full customer history, past cases, and sentiment visible before the agent responds',
-      'Seamless handoff between AI agent and human — with complete conversation context',
-      'Real-time supervisor monitoring with queue health and agent availability',
+      'Unify email, chat, phone, WhatsApp, social media, and SMS into a single agent console',
+      'Skills-based routing matches each case to the best-qualified available agent automatically',
+      'Full customer timeline — past purchases, open cases, sentiment score — visible before the agent responds',
+      'Seamless bot-to-human handoff preserves the entire conversation so customers never repeat themselves',
+      'Supervisor console with real-time queue health, agent utilisation, and live monitoring with whisper and barge-in',
     ],
   },
   {
     dept: 'AI-Powered Self-Service',
     icon: Zap,
     color: '#10B981',
-    headline: 'Resolve cases before they reach your team.',
+    headline: 'Resolve cases before they ever reach your team.',
     points: [
-      'Agentforce Service Agent handles Tier-1 and Tier-2 queries autonomously',
-      'AI chatbots search your knowledge base and case history in real time',
-      'Self-service portals let customers track orders, update accounts, and find answers',
-      'Smart article recommendations reduce average handle time by 30%',
-      'Automatic escalation to a human agent when AI confidence drops',
+      'Agentforce Service Agent handles Tier-1 and Tier-2 queries autonomously — grounded in your trusted data',
+      'AI chatbots search your knowledge base, case history, and product docs to deliver precise answers in real time',
+      'Branded self-service portals let customers track orders, update accounts, and submit cases on their own',
+      'Einstein Article Recommendations surface the right help content to both agents and customers, reducing handle time',
+      'Automatic escalation to a human agent with full context when AI confidence drops below your defined threshold',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Dispatch the right technician. First time. Every time.',
     points: [
-      'Schedule and dispatch mobile workers with AI-optimised routing',
-      'Real-time GPS tracking and job status updates for customers',
-      'Mobile app gives technicians access to case data, parts inventory, and knowledge',
-      'Automated work order creation from cases with pre-populated details',
-      'First-time fix rates improve by up to 25% with AI-assisted diagnostics',
+      'AI-optimised scheduling and dispatch assigns the closest technician with the right skills and parts',
+      'Real-time GPS tracking and automated appointment reminders keep customers informed at every step',
+      'Mobile app gives field technicians offline access to case data, asset history, knowledge articles, and parts inventory',
+      'Work orders are created automatically from cases with pre-populated details, reducing admin time by up to 40%',
+      'First-time fix rates improve with AI-assisted diagnostics and remote visual support via video',
     ],
   },
   {
@@ -69,20 +69,20 @@ const useCases = [
     color: '#6366F1',
     headline: 'See everything. Fix problems before customers notice.',
     points: [
-      'Real-time dashboards for CSAT, SLA compliance, queue health, and agent performance',
-      'Entitlement and milestone tracking with automatic breach alerts',
-      'Einstein AI flags at-risk cases and recommends next-best actions',
-      'Custom reports for cost-per-case, first-contact resolution, and channel efficiency',
-      'Supervisor console with live monitoring, whisper coaching, and barge-in',
+      'Pre-built dashboards track CSAT, first-contact resolution, SLA compliance, cost-per-case, and agent performance',
+      'Entitlement and milestone tracking with automatic breach alerts ensures every commitment is met',
+      'Einstein AI flags at-risk cases, predicts escalations, and recommends next-best actions for agents',
+      'Custom reports across every channel help you identify bottlenecks, optimise staffing, and reduce cost-to-serve',
+      'CRM Analytics (Tableau) integration delivers executive-ready service insights with drill-down to individual cases',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Service Cloud Specialists',     desc: "We have deep expertise in Service Cloud implementations — from simple case management to complex omni-channel operations with AI agents. We know this product inside out." },
-  { title: "We Build for Your SLAs",        desc: "Every implementation is designed around your specific support tiers, escalation rules, and SLA requirements. No generic templates — just a system that matches how your team actually works." },
-  { title: 'Fast Time to Value',            desc: 'Most Service Cloud deployments are live within 6-8 weeks. We move fast, configure in sandbox, test with real scenarios, and get you to production without months of workshops.' },
-  { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support setup, identify the biggest quick wins, and give you a deployment plan — completely free." },
+  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud — from straightforward case management rollouts to complex omni-channel operations with Agentforce AI agents, field service, and entitlements. We know this product inside out." },
+  { title: "Designed Around Your SLAs",      desc: "Every implementation maps to your specific support tiers, escalation rules, entitlements, and operating hours. No cookie-cutter templates — a system built around how your team actually delivers support." },
+  { title: 'Fast Time to Value',            desc: "Most Service Cloud deployments go live within 6-8 weeks. We configure in sandbox, test with real-world scenarios, train your team, and get you to production without months of discovery workshops." },
+  { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support operation, identify the highest-impact quick wins, and give you a clear deployment plan — completely free, zero obligation." },
 ]
 
 export default function ServiceCloudPage() {
@@ -101,12 +101,12 @@ export default function ServiceCloudPage() {
               <Headphones className="w-3.5 h-3.5" /> Salesforce Service Cloud
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-              Stop Losing Customers to{' '}
-              <span className="gradient-text-gold">Slow, Broken Support</span>
+              Resolve Cases 30% Faster and{' '}
+              <span className="gradient-text-gold">Cut Support Costs by 27%</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Service Cloud unifies every support channel into one AI-powered workspace — so your team resolves cases faster, deflects routine tickets automatically, and delivers the experience your customers actually expect.
+              Service Cloud brings every support channel, AI-powered automation, and customer insight into one workspace — so your team resolves issues faster, deflects routine tickets automatically, and delivers the experience that turns frustrated customers into loyal advocates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -128,7 +128,7 @@ export default function ServiceCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Sound Familiar?</div>
             <h2 className="section-title mb-4">
-              The Support Problems <span className="gradient-text">Service Cloud Fixes</span>
+              The Support Problems <span className="gradient-text">Service Cloud Eliminates</span>
             </h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -163,12 +163,12 @@ export default function ServiceCloudPage() {
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="section-wrap relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="tag-white mx-auto mb-5">Real Results</div>
+            <div className="tag-white mx-auto mb-5">Proven Results</div>
             <h2 className="section-title-white mb-4">
-              Why the Best Support Teams Run on Service Cloud
+              Measurable Outcomes From Real Service Cloud Deployments
             </h2>
             <p className="section-sub-white">
-              These are real metrics from businesses that replaced fragmented support tools with a unified Service Cloud operation.
+              These metrics come from Salesforce customer success surveys, Forrester Total Economic Impact studies, and Gartner analyst research.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -202,7 +202,7 @@ export default function ServiceCloudPage() {
               <span className="gradient-text">Built For Your Business</span>
             </h2>
             <p className="section-sub">
-              Service Cloud is not just a ticketing system. It is the platform that powers world-class customer support — from first contact to resolution.
+              Service Cloud is not just a ticketing system. It is the AI-powered platform that the world's best support teams use to deliver fast, personalised, and cost-efficient service at scale.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -280,11 +280,11 @@ export default function ServiceCloudPage() {
             <Headphones className="w-3.5 h-3.5" /> Free Scoping Call
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Ready to Transform Your<br />
-            <span className="gradient-text-gold">Customer Support Operation?</span>
+            Ready to Deliver Support That<br />
+            <span className="gradient-text-gold">Drives Loyalty and Cuts Costs?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will review your current support setup, identify the highest-impact quick wins, and give you a clear deployment plan for Service Cloud — at no cost, no commitment.
+            In 30 minutes we will audit your current support operation, identify where you are losing time and money, and map out a Service Cloud deployment plan that delivers measurable ROI — at no cost and no obligation.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>

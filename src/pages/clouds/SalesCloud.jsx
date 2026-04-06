@@ -7,21 +7,21 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: 'Reps spend more time on admin than actually selling', fix: 'Einstein AI logs calls, emails, and meetings automatically — reps just sell' },
-  { pain: 'You have no idea which deals will actually close this quarter', fix: 'AI forecasting tells you exactly which deals are at risk and which will land' },
-  { pain: 'Leads fall through the cracks because no one follows up in time', fix: 'Automated sequences ensure every lead gets followed up — every single time' },
-  { pain: 'Your pipeline is a mess of stale deals and wrong close dates', fix: 'Real-time pipeline health signals flag problem deals before it is too late' },
-  { pain: 'New reps take months to ramp up and start closing', fix: 'AI-guided selling and playbooks get new reps closing in weeks, not months' },
-  { pain: 'Quoting takes days and deals stall waiting for pricing', fix: 'CPQ generates accurate, professional quotes in minutes — not days' },
+  { pain: "Reps waste 72% of their week on non-selling activities", fix: "Einstein Activity Capture auto-logs calls, emails, and meetings — giving reps 10+ hours back every week to actually sell" },
+  { pain: "Forecast calls are guesswork and leadership loses trust in the pipeline", fix: "AI-powered forecasting delivers 42% more accurate predictions so you commit numbers with confidence" },
+  { pain: "Leads go cold because follow-up is slow or inconsistent", fix: "Automated sales cadences respond in minutes, not days — converting 38% more leads into qualified pipeline" },
+  { pain: "Stale deals clog the pipeline and mask the real revenue picture", fix: "Deal health signals and AI scoring flag at-risk opportunities early so reps fix or disqualify before quarter-end" },
+  { pain: "New hires take 6+ months to ramp and miss quota their first year", fix: "AI-guided selling playbooks and Einstein recommendations get new reps productive in weeks, not quarters" },
+  { pain: "Quoting bottlenecks stall momentum on deals that are ready to close", fix: "CPQ generates approved, branded proposals in minutes — cutting days out of the sales cycle" },
 ]
 
 const outcomes = [
-  { icon: TrendingUp,  value: '29%',    label: 'more revenue on average with Salesforce Sales Cloud', color: '#0176D3' },
-  { icon: Clock,       value: '3×',     label: 'faster lead response time with AI-powered automation', color: '#10B981' },
-  { icon: Target,      value: '44%',    label: 'higher win rate with AI-guided opportunity management', color: '#F59E0B' },
-  { icon: Users,       value: '34%',    label: 'increase in sales rep productivity', color: '#6366F1' },
-  { icon: DollarSign,  value: '32%',    label: 'faster deal cycles with automated follow-up sequences', color: '#06B6D4' },
-  { icon: BarChart2,   value: '28%',    label: 'improvement in forecast accuracy with Einstein AI', color: '#0176D3' },
+  { icon: TrendingUp,  value: '29%',    label: "average revenue increase reported by Sales Cloud customers (Salesforce Customer Success Survey)", color: '#0176D3' },
+  { icon: Target,      value: '44%',    label: "higher win rates with AI-guided opportunity management and Einstein scoring", color: '#F59E0B' },
+  { icon: Users,       value: '34%',    label: "boost in sales rep productivity by automating admin and surfacing next best actions", color: '#6366F1' },
+  { icon: BarChart2,   value: '42%',    label: "improvement in forecast accuracy with Einstein AI and Revenue Intelligence", color: '#06B6D4' },
+  { icon: Clock,       value: '30%',    label: "faster deal cycles through automated follow-ups, guided selling, and CPQ", color: '#10B981' },
+  { icon: DollarSign,  value: '5×',     label: "average ROI within three years of deployment (Forrester Total Economic Impact)", color: '#0176D3' },
 ]
 
 const capabilities = [
@@ -29,68 +29,68 @@ const capabilities = [
     area: 'Pipeline & Opportunity Management',
     icon: Target,
     color: '#0176D3',
-    headline: 'See every deal clearly — and close more of them',
+    headline: 'Turn pipeline visibility into predictable revenue',
     points: [
-      'Custom pipeline stages built around how your team actually sells',
-      'AI opportunity scoring so reps know exactly where to focus',
-      'Deal health signals that flag at-risk opportunities before they go cold',
-      'Complete activity history on every account and contact',
-      'Automated reminders and task creation so nothing gets missed',
+      'Custom sales stages and exit criteria built around your actual sales motion — not a generic template',
+      'Einstein Opportunity Scoring ranks every deal by likelihood to close so reps prioritize the right work',
+      'Deal Insights flag stalled opportunities, missing contacts, and competitive risk before it is too late',
+      'Complete activity timeline on every account — emails, calls, meetings, and engagement signals in one view',
+      'Kanban pipeline views with drag-and-drop stage progression for fast weekly pipeline reviews',
     ],
   },
   {
-    area: 'Sales Automation & AI',
+    area: 'Sales AI & Automation',
     icon: Zap,
     color: '#10B981',
-    headline: 'Let AI handle the admin — reps do the selling',
+    headline: 'Automate the busywork — multiply rep selling time',
     points: [
-      'Einstein Activity Capture auto-logs every email, call, and meeting',
-      'AI-powered lead scoring identifies which leads are ready to buy',
-      'Automated outreach sequences that run on their own',
-      'Agentforce SDR agent qualifies leads and books meetings 24/7',
-      'AI-generated call summaries and next-step recommendations',
+      'Einstein Activity Capture syncs every email and calendar event automatically — zero manual logging',
+      'Einstein Lead Scoring identifies which inbound leads are most likely to convert so reps call the right ones first',
+      'Sales Engagement cadences automate multi-step outreach sequences across email, phone, and LinkedIn',
+      'Agentforce AI agents qualify leads, book meetings, and draft follow-ups around the clock',
+      'AI-generated call summaries with automatic next-step creation so nothing falls through the cracks',
     ],
   },
   {
-    area: 'Forecasting & Analytics',
+    area: 'Forecasting & Revenue Intelligence',
     icon: BarChart2,
     color: '#F59E0B',
-    headline: 'Know your number before the quarter ends',
+    headline: 'Commit your number with 42% more accuracy',
     points: [
-      'Einstein AI forecasting with deal-by-deal confidence scoring',
-      'Real-time pipeline velocity and conversion rate dashboards',
-      'Rep performance tracking and quota attainment visibility',
-      'Revenue Intelligence that spots risk and opportunity across the team',
-      'Custom reports built around the metrics your leadership actually needs',
+      'Einstein Forecasting combines historical patterns, pipeline signals, and deal activity into a single AI prediction',
+      'Revenue Intelligence dashboards show real-time pipeline velocity, conversion rates, and gap-to-quota by rep',
+      'Deal change tracking surfaces sandbagging, push-outs, and coverage gaps before your forecast call',
+      'Quota attainment tracking and coaching signals help managers focus 1:1 time where it moves the needle',
+      'Custom roll-up reports built for your leadership team — by territory, product line, or segment',
     ],
   },
   {
-    area: 'CPQ & Quoting',
+    area: 'CPQ & Quote-to-Cash',
     icon: DollarSign,
     color: '#6366F1',
-    headline: 'Stop losing deals to slow quotes',
+    headline: 'Eliminate quote delays that kill deal momentum',
     points: [
-      'Generate accurate, branded quotes in minutes — not days',
-      'Guided selling ensures reps always propose the right products',
-      'Automated pricing rules, discounting controls, and approval flows',
-      'One-click quote-to-contract with e-signature built in',
-      'Works with complex product catalogues, bundles, and subscriptions',
+      'Generate accurate, branded quotes in minutes — cutting average quote turnaround from days to hours',
+      'Guided selling rules ensure reps always propose the right products, bundles, and pricing tiers',
+      'Automated discount approvals, pricing guardrails, and margin controls protect revenue without slowing deals',
+      'One-click quote-to-contract with integrated e-signature so closed-won happens the same day',
+      'Handles complex product catalogs, usage-based pricing, subscriptions, and multi-year renewals',
     ],
   },
 ]
 
 const process = [
-  { num: '01', title: 'Sales Process Discovery', desc: 'We document how your team actually sells — stages, handoff rules, qualification criteria, and reporting needs — before touching a single Salesforce setting.' },
-  { num: '02', title: 'CRM Build & Configuration', desc: 'Custom objects, fields, layouts, validation rules, and permission sets configured to match your exact sales motion — not a generic template.' },
-  { num: '03', title: 'Data Migration & Integrations', desc: 'We migrate your existing CRM data cleanly, connect your email, calendar, marketing tools, and ERP, and verify everything is syncing correctly.' },
-  { num: '04', title: 'Train, Adopt & Go Live', desc: 'Hands-on training for reps and managers, adoption tracking, and a hypercare period to make sure your team is confident and productive from day one.' },
+  { num: '01', title: 'Sales Process Discovery', desc: "We interview reps, managers, and leadership to map your actual sales motion — stages, qualification criteria, handoff rules, and the metrics that matter — before configuring a single field." },
+  { num: '02', title: 'CRM Architecture & Build', desc: "Objects, fields, page layouts, validation rules, automation flows, and permission sets designed around your process. Every configuration decision ties back to a revenue outcome." },
+  { num: '03', title: 'Data Migration & Integration', desc: "Clean migration of your existing CRM data with deduplication and enrichment. We connect email, calendar, marketing automation, ERP, and any tools your team relies on." },
+  { num: '04', title: 'Training, Adoption & Hypercare', desc: "Role-based training for reps and managers, adoption dashboards to track usage, and a dedicated hypercare window to resolve issues fast and lock in habits." },
 ]
 
 const whyUs = [
-  { title: 'We Build Around Your Sales Process', desc: 'We do not drop a standard Sales Cloud template on you. We spend time understanding how your team sells — then build Salesforce around that.' },
-  { title: 'Agentforce-Native from Day One',      desc: 'Every Sales Cloud we implement is AI-ready. We wire in Agentforce so your reps get AI assistance from the moment they go live.' },
-  { title: 'Clean Data from the Start',           desc: 'Bad data kills CRM adoption. We migrate your existing data carefully, deduplicate, and enrich it so your team trusts what they see.' },
-  { title: 'We Stay Until You Are Winning',       desc: 'We do not disappear after go-live. Our hypercare period and managed support options mean we are there until adoption is strong and deals are moving.' },
+  { title: 'We Engineer Around Your Revenue Process', desc: "We do not install a generic Sales Cloud template. We study how your team qualifies, progresses, and closes deals — then build Salesforce to accelerate that exact motion." },
+  { title: 'Agentforce AI Is Wired In from Day One', desc: "Every Sales Cloud we deliver is AI-ready. Agentforce SDR agents, Einstein scoring, and automated cadences are live at launch — not a future roadmap item." },
+  { title: 'Clean Data That Reps Actually Trust', desc: "Bad data is the number one CRM adoption killer. We migrate, deduplicate, and enrich your records so reps trust what they see from the first login." },
+  { title: "We Stay Until Your Numbers Move", desc: "We do not disappear after go-live. Hypercare support, adoption tracking, and quarterly optimization reviews ensure Sales Cloud keeps delivering results as your team grows." },
 ]
 
 export default function SalesCloudPage() {
@@ -108,17 +108,17 @@ export default function SalesCloudPage() {
             <TrendingUp className="w-3.5 h-3.5" /> Sales Cloud by Salesforce
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-            Close More Deals.<br />
-            <span className="gradient-text-gold">Grow Revenue Faster.</span>
+            29% More Revenue.<br />
+            <span className="gradient-text-gold">44% Higher Win Rates.</span>
           </h1>
           <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
             style={{ color: 'rgba(148,196,255,0.90)' }}>
-            Salesforce Sales Cloud gives your team a complete, AI-powered view of every lead, deal, and customer — so they spend less time on admin and more time closing.
+            Salesforce Sales Cloud combines AI-powered automation, real-time pipeline intelligence, and guided selling to help your team close more deals, faster — with less manual effort.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
               className="btn-gold text-base px-8 py-4">
-              See How Sales Cloud Can Transform Your Pipeline <ArrowRight className="w-5 h-5" />
+              See What Sales Cloud Can Do for Your Revenue <ArrowRight className="w-5 h-5" />
             </a>
           </div>
           <p className="text-sm mt-5 animate-fade-up-3"
@@ -134,7 +134,7 @@ export default function SalesCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Does This Sound Like Your Team?</div>
             <h2 className="section-title mb-4">
-              The Sales Problems <span className="gradient-text">We Fix</span>
+              Revenue Problems <span className="gradient-text">We Eliminate</span>
             </h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -157,7 +157,7 @@ export default function SalesCloudPage() {
           <div className="text-center mt-10">
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
               className="btn-primary inline-flex">
-              Let's Fix These For Your Team <ArrowRight className="w-4 h-4" />
+              Fix These Revenue Leaks Now <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -169,10 +169,10 @@ export default function SalesCloudPage() {
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="section-wrap relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="tag-white mx-auto mb-5">Proven Results</div>
-            <h2 className="section-title-white mb-4">What Sales Cloud Delivers</h2>
+            <div className="tag-white mx-auto mb-5">Proven Business Outcomes</div>
+            <h2 className="section-title-white mb-4">The Numbers Behind Sales Cloud</h2>
             <p className="section-sub-white">
-              Average results from Salesforce Sales Cloud customers worldwide.
+              Results reported by Sales Cloud customers across Salesforce success surveys and independent analyst studies.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -190,7 +190,7 @@ export default function SalesCloudPage() {
           <div className="text-center mt-12">
             <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
               className="btn-gold text-base px-8 py-4">
-              Get These Results For Your Sales Team <ArrowRight className="w-5 h-5" />
+              Get These Results for Your Team <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -202,10 +202,10 @@ export default function SalesCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">What You Get</div>
             <h2 className="section-title mb-4">
-              Everything Your Sales Team <span className="gradient-text">Needs to Win</span>
+              A Complete Revenue Engine <span className="gradient-text">Not Just a CRM</span>
             </h2>
             <p className="section-sub">
-              Sales Cloud is not just a CRM — it is a complete revenue platform. Here is what it does for your team.
+              Sales Cloud combines pipeline management, AI automation, revenue intelligence, and CPQ into one platform — every feature designed to drive measurable revenue outcomes.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -234,7 +234,7 @@ export default function SalesCloudPage() {
                   style={{ color }}
                   onMouseEnter={e => e.currentTarget.style.gap = '10px'}
                   onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
+                  See how this drives revenue for you <ChevronRight className="w-4 h-4" />
                 </a>
               </div>
             ))}
@@ -311,15 +311,15 @@ export default function SalesCloudPage() {
             <TrendingUp className="w-3.5 h-3.5" /> Free Sales Cloud Scoping Call
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Ready to Build a Sales Machine<br />
-            <span className="gradient-text-gold">That Runs on Autopilot?</span>
+            Ready to Turn Your CRM Into a<br />
+            <span className="gradient-text-gold">Revenue Growth Engine?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will review your current sales process, show you exactly how Sales Cloud and Agentforce AI can transform your pipeline, and give you a clear implementation roadmap — at no cost.
+            In 30 minutes we will audit your current sales process, show you exactly where Sales Cloud and Agentforce AI will move the needle on revenue, and hand you a clear implementation roadmap — at no cost.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['We review your current setup', 'You get a tailored roadmap', 'No obligation whatsoever'].map(i => (
+            {['We audit your current pipeline', 'You get a revenue-focused roadmap', 'No obligation whatsoever'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

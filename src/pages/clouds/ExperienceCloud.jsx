@@ -7,20 +7,20 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Customers call or email for things they could do themselves", fix: "A branded self-service portal lets them manage accounts, raise cases, and find answers — 24/7" },
-  { pain: "Partners have no visibility into deals, leads, or resources", fix: "A partner community with deal registration, lead distribution, and co-selling tools — all in one place" },
-  { pain: "Your support team is buried in low-value, repetitive tickets", fix: "Knowledge base + AI agent deflects 50%+ of tickets before they reach a human" },
-  { pain: "You maintain a separate website or intranet disconnected from Salesforce", fix: "Experience Cloud sites are natively connected to your CRM — real-time data, zero sync headaches" },
-  { pain: "Customers and partners feel disconnected from your brand", fix: "Fully branded, mobile-responsive portals that feel like your product — not a generic form" },
+  { pain: "Customers flood your support team with questions they could answer themselves", fix: "Branded self-service portals with knowledge bases and AI-powered search deflect 40-60% of inbound tickets" },
+  { pain: "Partners operate blind — no deal visibility, no shared pipeline, no collaboration tools", fix: "A CRM-connected partner community with deal registration, lead distribution, and real-time pipeline dashboards" },
+  { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "Guided digital onboarding with automated workflows cuts onboarding time by 50% and eliminates manual handoffs" },
+  { pain: "Your portal is disconnected from Salesforce — data is stale, syncs break, users lose trust", fix: "Experience Cloud is native to Salesforce — accounts, cases, opportunities, and knowledge update in real time, zero middleware" },
+  { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "Pixel-perfect branded portals with your domain, your design system, and responsive layouts across every device" },
 ]
 
 const outcomes = [
-  { icon: Headphones, value: '50%+',     label: 'reduction in support ticket volume with self-service portals', color: '#0176D3' },
-  { icon: TrendingUp, value: '3x',       label: 'increase in partner portal adoption with Experience Cloud', color: '#10B981' },
-  { icon: Clock,      value: '48%',      label: 'faster case resolution with knowledge base and AI agents', color: '#F59E0B' },
-  { icon: DollarSign, value: '30%',      label: 'lower onboarding cost for customers and partners', color: '#6366F1' },
-  { icon: Users,      value: '10M+',     label: 'external users served on Experience Cloud globally', color: '#06B6D4' },
-  { icon: BarChart2,  value: '35%',      label: 'higher customer satisfaction scores with branded portals', color: '#0176D3' },
+  { icon: Headphones, value: '48%',      label: 'average reduction in support case volume through self-service portals and knowledge deflection', color: '#0176D3' },
+  { icon: TrendingUp, value: '3.4x',     label: 'ROI reported in Forrester Total Economic Impact studies of Experience Cloud deployments', color: '#10B981' },
+  { icon: Clock,      value: '40%',      label: 'faster case resolution when customers use portal-based case tracking with knowledge articles', color: '#F59E0B' },
+  { icon: DollarSign, value: '50%',      label: 'reduction in partner onboarding costs through guided digital journeys and automated provisioning', color: '#6366F1' },
+  { icon: Users,      value: '88%',      label: 'of customers say the experience a company provides is as important as its products or services', color: '#06B6D4' },
+  { icon: BarChart2,  value: '2.6x',     label: 'higher partner engagement rates when portal includes deal registration, MDF, and co-selling tools', color: '#0176D3' },
 ]
 
 const useCases = [
@@ -28,61 +28,61 @@ const useCases = [
     dept: 'Customer Self-Service',
     icon: Globe,
     color: '#0176D3',
-    headline: "Let customers help themselves — and love it",
+    headline: "Deflect tickets and delight customers at the same time",
     points: [
-      'Branded portals where customers view accounts, update details, and track orders',
-      'Case creation and tracking without calling or emailing your team',
-      'Knowledge base with AI-powered search for instant answers',
-      'Embedded Agentforce AI chat for real-time, automated support',
-      'Works across desktop, tablet, and mobile — fully responsive',
+      'Branded portals where customers view accounts, track orders, update billing, and manage subscriptions',
+      'Case creation and real-time status tracking — no phone calls or email chains required',
+      'AI-powered knowledge base with smart search that surfaces answers before a case is filed',
+      'Embedded Agentforce AI chat that resolves common requests instantly without human intervention',
+      'Fully responsive across desktop, tablet, and mobile with consistent brand experience',
     ],
   },
   {
     dept: 'Partner Communities',
     icon: Users,
     color: '#10B981',
-    headline: "Give partners everything they need to sell",
+    headline: "Accelerate channel revenue with a portal partners actually use",
     points: [
-      'Deal registration, lead distribution, and pipeline visibility',
-      'MDF claims, co-marketing assets, and campaign collaboration',
-      'Partner onboarding with guided learning paths and certifications',
-      'Tiered access so each partner level sees the right content and data',
-      'Leaderboards, scorecards, and performance dashboards',
+      'Deal registration, lead distribution, and shared pipeline visibility that drives co-selling',
+      'MDF claims, co-marketing asset libraries, and joint campaign management in one place',
+      'Automated partner onboarding with guided learning paths, certifications, and tiered enablement',
+      'Role-based access by partner tier — each level sees the right content, pricing, and data',
+      'Performance dashboards, leaderboards, and scorecards that motivate and retain top partners',
     ],
   },
   {
     dept: 'Employee Experience',
     icon: Shield,
     color: '#F59E0B',
-    headline: "Replace your legacy intranet — for good",
+    headline: "Replace your legacy intranet with a connected digital hub",
     points: [
-      'Internal hub for HR policies, IT requests, and company resources',
-      'Guided onboarding flows for new hires — step by step',
-      'Social feeds, discussion forums, and team collaboration',
-      'Single sign-on with your identity provider for seamless access',
-      'Embedded AI agents for instant answers to common HR and IT questions',
+      'Centralized hub for HR policies, IT service requests, benefits enrollment, and company news',
+      'Guided onboarding flows that walk new hires through every step — from day one to full productivity',
+      'Social feeds, discussion forums, and team collaboration spaces that drive engagement',
+      'Single sign-on with your identity provider — one login for Salesforce, portal, and connected apps',
+      'Embedded AI agents that answer common HR, IT, and policy questions instantly',
     ],
   },
   {
     dept: 'B2B Client Portals',
     icon: Layout,
     color: '#6366F1',
-    headline: "Give every client a white-glove digital experience",
+    headline: "Give every client a white-glove digital experience at scale",
     points: [
-      'Project status, deliverables, and milestone tracking in one place',
-      'Invoice viewing, payment history, and document sharing',
-      'Direct messaging with your team — no more lost email threads',
-      'Role-based access so each client only sees their own data',
-      'Fully branded to your business — your domain, your look, your feel',
+      'Project dashboards with milestone tracking, deliverable status, and real-time progress updates',
+      'Invoice viewing, payment history, contract management, and secure document sharing',
+      'Direct messaging with your delivery team — conversations stay in context, not buried in email',
+      'Granular role-based access so each client, contact, and stakeholder sees only their own data',
+      'Fully branded to your business — your domain, your design system, your customer experience',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Portal Specialists',           desc: "We have built Experience Cloud portals across industries — customer support, partner channels, employee hubs, and B2B client portals. We know what works." },
-  { title: 'CRM-Connected by Default',     desc: "Every portal we build is deeply integrated with your Salesforce data — cases, accounts, opportunities, knowledge — no middleware, no sync delays." },
-  { title: 'Fast Time to Value',           desc: "Most Experience Cloud portals are live within 6-8 weeks. We design, build, and launch — without months of requirements gathering." },
-  { title: 'No Commitment to Start',       desc: "Book a free 30-minute scoping call. We will map your portal requirements, sketch the architecture, and give you a clear plan — completely free." },
+  { title: 'Portal Specialists, Not Generalists',  desc: "We have delivered Experience Cloud portals across industries — financial services, manufacturing, tech, and professional services. Every portal we build is designed for adoption, not just deployment." },
+  { title: 'CRM-Native Architecture',              desc: "Every portal connects directly to your Salesforce data — cases, accounts, opportunities, knowledge articles, and custom objects. No middleware, no sync delays, no data discrepancies." },
+  { title: 'Live in 6-8 Weeks',                    desc: "We follow a rapid delivery methodology that gets your portal into users' hands fast. Design, build, test, and launch — without months of requirements gathering or scope creep." },
+  { title: 'Free Strategy Session to Start',        desc: "Book a 30-minute scoping call. We will map your portal requirements, sketch the architecture, identify quick wins, and give you a deployment plan — completely free, no commitment." },
 ]
 
 export default function ExperienceCloudPage() {
@@ -101,12 +101,12 @@ export default function ExperienceCloudPage() {
               <Globe className="w-3.5 h-3.5" /> Experience Cloud
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
-              Stop Losing Customers to{' '}
-              <span className="gradient-text-gold">Bad Digital Experiences</span>
+              Turn Your Portal Into a{' '}
+              <span className="gradient-text-gold">Revenue and Retention Engine</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce Experience Cloud lets you build branded self-service portals, partner communities, and client hubs — all connected directly to your CRM. Cloudsheer designs and delivers portals that reduce support load and deepen relationships.
+              Companies using Salesforce Experience Cloud deflect up to 48% of support tickets, cut partner onboarding costs in half, and deliver digital experiences that drive loyalty. Cloudsheer builds the portals that make it happen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -165,10 +165,10 @@ export default function ExperienceCloudPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag-white mx-auto mb-5">Real Results</div>
             <h2 className="section-title-white mb-4">
-              Portals That Deliver Measurable ROI
+              Portals That Deliver Measurable Business Outcomes
             </h2>
             <p className="section-sub-white">
-              These are the outcomes businesses achieve when they replace disconnected tools with a properly built Experience Cloud portal.
+              These are the outcomes organizations achieve when they replace disconnected tools with a CRM-native Experience Cloud portal — backed by Forrester research and Salesforce customer data.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -201,7 +201,7 @@ export default function ExperienceCloudPage() {
               Portals For Every <span className="gradient-text">Audience and Use Case</span>
             </h2>
             <p className="section-sub">
-              Experience Cloud is not a one-size-fits-all tool. Cloudsheer configures it to match exactly what your customers, partners, or employees need.
+              Experience Cloud is not a one-size-fits-all tool. Cloudsheer configures it to match exactly what your customers, partners, or employees need — with the data, workflows, and branding that drive adoption.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -279,15 +279,15 @@ export default function ExperienceCloudPage() {
             <Globe className="w-3.5 h-3.5" /> Free Scoping Call
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
-            Ready to Launch Your<br />
-            <span className="gradient-text-gold">Customer or Partner Portal?</span>
+            Ready to Launch a Portal That<br />
+            <span className="gradient-text-gold">Drives Revenue and Reduces Cost?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will walk through your requirements, sketch the portal architecture, and give you a clear deployment plan — at no cost, no commitment.
+            In 30 minutes we will map your portal requirements, sketch the architecture, identify the highest-impact use cases, and give you a clear deployment plan — at no cost, no commitment.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {["We design a portal your users will actually use", "No sales pitch — just a clear plan", "You leave with architecture and timeline"].map(i => (
+            {["Portal designed for adoption, not just deployment", "No sales pitch — just a clear plan", "You leave with architecture, timeline, and ROI estimate"].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>
