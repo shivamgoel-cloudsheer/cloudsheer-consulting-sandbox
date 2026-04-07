@@ -9,8 +9,8 @@ const articles = {
     category: 'Agentforce',
     date: 'Mar 18, 2025',
     readTime: '8 min',
-    author: 'Priya Nair',
-    initials: 'PN',
+    author: 'Rajat Sharma',
+    initials: 'RS',
     avatarColor: 'from-emerald-500 to-teal-500',
     sections: [
       {
@@ -87,8 +87,8 @@ const articles = {
     category: 'Agentforce',
     date: 'Feb 28, 2025',
     readTime: '5 min',
-    author: 'Priya Nair',
-    initials: 'PN',
+    author: 'Rajat Sharma',
+    initials: 'RS',
     avatarColor: 'from-emerald-500 to-teal-500',
     sections: [
       {
@@ -169,8 +169,8 @@ const articles = {
     category: 'Implementation',
     date: 'Feb 10, 2025',
     readTime: '6 min',
-    author: 'Alex Rivera',
-    initials: 'AR',
+    author: 'Tushar Sharma',
+    initials: 'TS',
     avatarColor: 'from-blue-500 to-cyan-500',
     sections: [
       {
@@ -248,8 +248,8 @@ const articles = {
     category: 'ROI & Results',
     date: 'Jan 22, 2025',
     readTime: '7 min',
-    author: 'Alex Rivera',
-    initials: 'AR',
+    author: 'Tushar Sharma',
+    initials: 'TS',
     avatarColor: 'from-blue-500 to-cyan-500',
     sections: [
       {
@@ -341,8 +341,8 @@ const articles = {
     category: 'Data Cloud',
     date: 'Jan 8, 2025',
     readTime: '7 min',
-    author: 'Mei Lin',
-    initials: 'ML',
+    author: 'Shubham Bansal',
+    initials: 'SB',
     avatarColor: 'from-orange-500 to-rose-500',
     sections: [
       {
@@ -410,8 +410,8 @@ const articles = {
     category: 'Strategy',
     date: 'Dec 20, 2024',
     readTime: '5 min',
-    author: "James O'Brien",
-    initials: 'JO',
+    author: 'Shivam Goel',
+    initials: 'SG',
     avatarColor: 'from-purple-500 to-indigo-600',
     sections: [
       {
@@ -472,8 +472,8 @@ const articles = {
     category: 'Salesforce News',
     date: 'Dec 5, 2024',
     readTime: '9 min',
-    author: 'Alex Rivera',
-    initials: 'AR',
+    author: 'Tushar Sharma',
+    initials: 'TS',
     avatarColor: 'from-blue-500 to-cyan-500',
     sections: [
       {

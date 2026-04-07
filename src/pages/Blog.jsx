@@ -11,7 +11,7 @@ const posts = [
     title: 'Getting Started with Agentforce: A Practical Guide for 2025',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
     date: 'Mar 18, 2025', readTime: '8 min',
-    author: 'Priya Nair', initials: 'PN', avatarColor: 'from-emerald-500 to-teal-500',
+    author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,
   },
   {
@@ -22,7 +22,7 @@ const posts = [
     title: "Agentforce vs Einstein Bots: What's the Difference?",
     excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy - we explain it clearly with real-world examples.",
     date: 'Feb 28, 2025', readTime: '5 min',
-    author: 'Priya Nair', initials: 'PN', avatarColor: 'from-emerald-500 to-teal-500',
+    author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: false,
   },
   {
@@ -33,7 +33,7 @@ const posts = [
     title: '10-Point Checklist for a Successful Salesforce Implementation',
     excerpt: 'After 150+ implementations we know exactly what separates a smooth go-live from a painful one. Here is our definitive pre-launch checklist.',
     date: 'Feb 10, 2025', readTime: '6 min',
-    author: 'Alex Rivera', initials: 'AR', avatarColor: 'from-cs-blue to-cs-electric',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,
   },
   {
@@ -44,7 +44,7 @@ const posts = [
     title: 'Measuring the ROI of Agentforce: What Our Clients Actually See',
     excerpt: 'We tracked results across 20 Agentforce deployments - case deflection rates, response times, CSAT scores, and cost savings. Here is what the data shows.',
     date: 'Jan 22, 2025', readTime: '7 min',
-    author: 'Alex Rivera', initials: 'AR', avatarColor: 'from-cs-blue to-cs-electric',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,
   },
   {
@@ -55,7 +55,7 @@ const posts = [
     title: 'How Data Cloud Makes Your Agentforce Agents Smarter',
     excerpt: 'Agentforce agents are only as intelligent as the data they can access. We show you exactly how Data Cloud unification supercharges agent responses and personalisation.',
     date: 'Jan 8, 2025', readTime: '7 min',
-    author: 'Mei Lin', initials: 'ML', avatarColor: 'from-orange-500 to-rose-500',
+    author: 'Shubham Bansal', initials: 'SB', avatarColor: 'from-orange-500 to-rose-500',
     featured: false,
   },
   {
@@ -66,7 +66,7 @@ const posts = [
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
     excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programmes never could.",
     date: 'Dec 20, 2024', readTime: '5 min',
-    author: "James O'Brien", initials: 'JO', avatarColor: 'from-cs-purple to-indigo-600',
+    author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
     featured: false,
   },
   {
@@ -77,7 +77,7 @@ const posts = [
     title: "Top Agentforce Features in the Salesforce Spring '25 Release",
     excerpt: "Spring '25 is the biggest Agentforce release yet. New agent templates, expanded action types, improved reasoning, and deeper Data Cloud integration - all covered here.",
     date: 'Dec 5, 2024', readTime: '9 min',
-    author: 'Alex Rivera', initials: 'AR', avatarColor: 'from-cs-blue to-cs-electric',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,
   },
 ]

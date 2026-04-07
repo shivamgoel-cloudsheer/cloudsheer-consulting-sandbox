@@ -47,7 +47,7 @@ export default function Footer() {
             </p>
           </div>
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold shrink-0 animate-bounce-x">
-            Book Free Call <ArrowRight className="w-4 h-4" />
+            Book Free Discovery Call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>

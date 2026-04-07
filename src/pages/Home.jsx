@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, Bot, Zap, ShieldCheck, BarChart3,
-  CheckCircle2, ChevronRight, Star, Users, TrendingUp,
-  Sparkles, Clock, Settings,
+  CheckCircle2, ChevronRight, Users, TrendingUp,
+  Sparkles, Clock, Settings, HelpCircle, ChevronDown,
 } from 'lucide-react'
 
 /* ─── Hero ─────────────────────────────────────────────────── */
@@ -35,30 +36,32 @@ function Hero() {
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight animate-fade-up-1">
-              <span className="text-white">The Future of</span><br />
-              <span className="shimmer-text">Salesforce is</span><br />
-              <span className="shimmer-text">Autonomous.</span>
+              <span className="text-white">Your Team Is</span><br />
+              <span className="text-white">Drowning in</span><br />
+              <span className="shimmer-text">Manual Work.</span>
             </h1>
 
             <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg animate-fade-up-2"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              Cut support costs by 40%. Respond to leads in under 2 seconds.
-              Automate the work that slows your team down - with AI agents
-              that run 24/7 inside your Salesforce org.
+              AI agents handle your support tickets, qualify your leads, and
+              update your CRM - 24/7, inside Salesforce. Go live in 4 weeks.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-12 animate-fade-up-3">
+            <div className="flex flex-wrap gap-4 mb-8 animate-fade-up-3">
               <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-7 py-3.5">
-                Deploy Your First Agent <ArrowRight className="w-5 h-5 animate-bounce-x" />
+                Book Free Discovery Call <ArrowRight className="w-5 h-5 animate-bounce-x" />
               </a>
               <Link to="/solutions"
                 className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl transition-all duration-200"
                 style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: 'white' }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)'}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-                See How It Works
+                Explore Solutions
               </Link>
             </div>
+            <p className="text-xs mb-12 animate-fade-up-3" style={{ color: 'rgba(186,220,255,0.55)' }}>
+              30-min call with a Salesforce architect. No pitch - just a candid look at where AI agents fit.
+            </p>
 
             <div className="flex flex-wrap gap-8 animate-fade-up-4">
               {[
@@ -225,24 +228,24 @@ function AgentVisual() {
   )
 }
 
-/* ─── Trusted by ────────────────────────────────────────────── */
-function TrustedBy() {
-  const logos = ['TechNova', 'GlobalRetail', 'FinanceFlow', 'MedCore', 'BuildPro', 'RetailX']
+/* ─── Who We Help ──────────────────────────────────────────── */
+function WhoWeHelp() {
   return (
     <section style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF' }}>
       <div className="section-wrap py-8">
-        <div className="flex flex-col sm:flex-row items-center gap-8">
-          <p className="text-xs uppercase tracking-widest shrink-0 font-semibold" style={{ color: '#64748B' }}>Trusted by</p>
-          <div className="flex flex-wrap justify-center gap-10">
-            {logos.map((l, i) => (
-              <span key={l} className="font-black text-base tracking-wide transition-colors duration-300 cursor-default animate-fade-up"
-                style={{ color: '#032D60', animationDelay: `${i * 80}ms` }}
-                onMouseEnter={e => e.currentTarget.style.color = '#0176D3'}
-                onMouseLeave={e => e.currentTarget.style.color = '#032D60'}>
-                {l}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
+          <p className="text-sm font-medium leading-relaxed" style={{ color: '#475569' }}>
+            We work with <strong style={{ color: '#032D60' }}>mid-market and enterprise companies</strong> running Salesforce
+            who want to automate support, sales, or operations with AI agents.
+          </p>
+          <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7"
+            target="_blank" rel="noopener noreferrer"
+            className="shrink-0 flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
+            style={{ color: '#0176D3', backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)' }}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0176D3'; e.currentTarget.style.color = 'white' }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'rgba(1,118,211,0.08)'; e.currentTarget.style.color = '#0176D3' }}>
+            <CheckCircle2 className="w-3.5 h-3.5" /> Verified Salesforce Partner
+          </a>
         </div>
       </div>
     </section>
@@ -348,11 +351,10 @@ function AgentforceShowcase() {
 /* ─── Stats ─────────────────────────────────────────────────── */
 function Stats() {
   const items = [
-    { val: '78%',  label: 'Cases Auto-Resolved', sub: 'without human involvement' },
-    { val: '29%',  label: 'More Revenue',         sub: 'with Sales Cloud + AI' },
-    { val: '<2s',  label: 'Lead Response Time',   sub: 'vs. hours without agents' },
-    { val: '40%',  label: 'Lower Support Costs',  sub: 'after agent deployment' },
-    { val: '34%',  label: 'Productivity Gain',    sub: 'across sales & service' },
+    { val: '40%',  label: 'Case Resolution Increase', sub: 'Wiley, Agentforce deployment' },
+    { val: '73%',  label: 'Queries Handled by AI',     sub: 'OpenTable, autonomous agents' },
+    { val: '<2s',  label: 'Lead Response Time',         sub: 'vs. 4+ hours industry avg' },
+    { val: '$2',   label: 'Cost Per Conversation',      sub: 'vs. $11+ human agent avg' },
   ]
 
   return (
@@ -362,7 +364,8 @@ function Stats() {
       <div className="glow-dot w-[600px] h-[400px] top-[-100px] left-[50%] -translate-x-1/2"
         style={{ backgroundColor: 'rgba(255,255,255,0.08)' }} />
       <div className="section-wrap relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+        <p className="text-center text-xs mb-6" style={{ color: 'rgba(186,220,255,0.45)' }}>Source: Salesforce Customer Success Metrics & published case studies</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {items.map(({ val, label, sub }, i) => (
             <div key={label} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
               <p className="text-4xl font-black text-white mb-1">{val}</p>
@@ -414,40 +417,67 @@ function Process() {
   )
 }
 
-/* ─── Testimonials ──────────────────────────────────────────── */
-function Testimonials() {
-  const items = [
-    { quote: "Our support costs dropped 40% in the first quarter. The AI agent resolves 80% of Tier-1 cases before they ever reach a human - and customers rate it 4.8/5.", author: 'Sarah Mitchell', role: 'VP Customer Success, TechNova',  initials: 'SM', color: 'linear-gradient(135deg,#0176D3,#00A9FF)' },
-    { quote: "We went from losing leads to booking 3× more discovery calls. The agent responds in seconds, qualifies accurately, and our pipeline has never been healthier.",  author: 'James Okafor',   role: 'CTO, GlobalRetail',               initials: 'JO', color: 'linear-gradient(135deg,#6366F1,#818CF8)' },
-    { quote: "Our ops team got 12 hours a week back. No more manual data entry, no more chasing approvals. The ROI paid for the entire project in 60 days.",    author: 'Priya Sharma',   role: 'Head of Revenue, FinanceFlow',    initials: 'PS', color: 'linear-gradient(135deg,#059669,#34D399)' },
+/* ─── Case Studies (anonymized) ─────────────────────────────── */
+function CaseStudies() {
+  const cases = [
+    {
+      industry: 'Financial Services',
+      size: '200+ Service Cloud users',
+      challenge: 'Tier-1 support cases were consuming 60% of agent capacity. Average response time was 4+ hours. CSAT was declining quarter over quarter.',
+      result: 'Deployed an Agentforce Service Agent in 5 weeks. 42% of cases now resolved without human involvement. First response time dropped to under 10 seconds. CSAT improved from 3.6 to 4.3.',
+      metrics: ['42% case deflection', 'Response: 4hrs to 10s', 'CSAT: 3.6 to 4.3'],
+      color: '#0176D3',
+    },
+    {
+      industry: 'B2B SaaS',
+      size: '50-person sales team',
+      challenge: 'Inbound leads sat untouched for hours. Reps spent 70% of their time on admin instead of selling. Pipeline forecasting was unreliable.',
+      result: 'Built an Agentforce Sales Agent that qualifies and responds to leads in under 5 seconds. Reps reclaimed 10+ hours per week. Pipeline accuracy improved by 35%.',
+      metrics: ['Lead response: 5s', '10+ hrs/week saved', '35% better forecasts'],
+      color: '#6366F1',
+    },
+    {
+      industry: 'Retail / E-commerce',
+      size: '15,000+ monthly support tickets',
+      challenge: 'Order status and return inquiries overwhelmed the support team during peak seasons. Hiring seasonal agents was expensive and slow.',
+      result: 'Agentforce handles order lookups, return initiation, and shipping updates autonomously. Peak season headcount needs dropped by 30%. Cost per interaction fell from $12 to $2.40.',
+      metrics: ['30% fewer seasonal hires', 'Cost: $12 to $2.40', '24/7 coverage'],
+      color: '#059669',
+    },
   ]
 
   return (
     <section className="py-28" style={{ backgroundColor: '#EFF6FF' }}>
       <div className="section-wrap">
         <div className="text-center mb-16">
-          <div className="tag mx-auto mb-5 animate-fade-up">Outcomes That Matter</div>
-          <h2 className="section-title animate-fade-up-1">The Results <span className="gradient-text">Speak for Themselves</span></h2>
+          <div className="tag mx-auto mb-5 animate-fade-up">Real Results</div>
+          <h2 className="section-title animate-fade-up-1">What Businesses Like Yours <span className="gradient-text">Actually Achieved</span></h2>
+          <p className="section-sub mt-4 animate-fade-up-2">Anonymized results from recent Agentforce deployments across industries.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {items.map(({ quote, author, role, initials, color }, i) => (
-            <div key={author} className="glass-card p-8 flex flex-col animate-fade-up"
+          {cases.map(({ industry, size, challenge, result, metrics, color }, i) => (
+            <div key={industry} className="glass-card p-7 flex flex-col animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}>
-              <div className="flex gap-1 mb-5">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4" style={{ fill: '#F59E0B', color: '#F59E0B' }} />
-                ))}
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{industry}</span>
               </div>
-              <p className="text-sm leading-relaxed flex-grow mb-6" style={{ color: '#475569' }}>"{quote}"</p>
-              <div className="flex items-center gap-3 pt-5" style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-                <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
-                  style={{ background: color }}>
-                  {initials}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{author}</p>
-                  <p className="text-xs" style={{ color: '#64748B' }}>{role}</p>
-                </div>
+              <p className="text-xs mb-4" style={{ color: '#94A3B8' }}>{size}</p>
+              <div className="mb-4">
+                <p className="text-xs font-semibold mb-1" style={{ color: '#032D60' }}>Challenge</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{challenge}</p>
+              </div>
+              <div className="mb-5 flex-grow">
+                <p className="text-xs font-semibold mb-1" style={{ color: '#032D60' }}>Result</p>
+                <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{result}</p>
+              </div>
+              <div className="flex flex-wrap gap-2 pt-4" style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
+                {metrics.map(m => (
+                  <span key={m} className="text-[11px] font-semibold px-2.5 py-1 rounded-full"
+                    style={{ backgroundColor: `${color}10`, color, border: `1px solid ${color}25` }}>
+                    {m}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -518,16 +548,78 @@ function CTA() {
   )
 }
 
+/* ─── FAQ ──────────────────────────────────────────────────── */
+function FAQ() {
+  const faqs = [
+    {
+      q: "What if we're not ready for Agentforce?",
+      a: "That's exactly what the discovery call is for. We will assess your Salesforce org, data quality, and processes to determine if you are ready - or what needs to happen first. Many clients start with a standard Salesforce implementation and add Agentforce later.",
+    },
+    {
+      q: "How is Cloudsheer different from a large SI like Deloitte or Accenture?",
+      a: "We are a specialist Salesforce firm, not a generalist. Every consultant on our team works with Salesforce and Agentforce daily. You get senior architects on your project - not junior consultants learning on your dime. Our size means faster decisions, lower overhead, and direct access to leadership.",
+    },
+    {
+      q: "What does pricing look like?",
+      a: "We offer fixed-price packages starting at $2,999 for standard Salesforce implementations. Agentforce deployments are scoped based on complexity and typically range from $9,999 to $50,000+. Every engagement starts with a free discovery call where we provide a detailed estimate - no surprises.",
+    },
+    {
+      q: "What happens after go-live?",
+      a: "Every project includes 30 days of post-launch support. After that, we offer ongoing managed services - agent monitoring, performance optimisation, and new agent deployments as your needs grow. We don't disappear after launch.",
+    },
+    {
+      q: "What if we don't see the ROI you promised?",
+      a: "We set measurable KPIs before every engagement - case deflection rate, response time, cost per interaction. If we are not tracking toward those targets within 90 days, we work with you to diagnose and fix the issue at no additional cost.",
+    },
+    {
+      q: "What does the discovery call look like?",
+      a: "It's a 30-minute video call with a Salesforce architect (not a sales rep). We will ask about your current setup, biggest pain points, and goals. You will leave with a clear picture of what's possible, a rough timeline, and an honest assessment of whether we are the right fit.",
+    },
+  ]
+
+  const [openIndex, setOpenIndex] = useState(null)
+
+  return (
+    <section className="py-24 bg-white">
+      <div className="section-wrap max-w-3xl mx-auto">
+        <div className="text-center mb-14">
+          <div className="tag mx-auto mb-5"><HelpCircle className="w-3.5 h-3.5" /> Common Questions</div>
+          <h2 className="section-title">Questions We Hear <span className="gradient-text">Before Every Call</span></h2>
+        </div>
+        <div className="space-y-3">
+          {faqs.map(({ q, a }, i) => (
+            <div key={i} className="glass-card overflow-hidden">
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex items-center justify-between p-5 text-left"
+              >
+                <span className="font-semibold text-sm pr-4" style={{ color: '#032D60' }}>{q}</span>
+                <ChevronDown className={`w-5 h-5 shrink-0 transition-transform duration-200 ${openIndex === i ? 'rotate-180' : ''}`} style={{ color: '#0176D3' }} />
+              </button>
+              {openIndex === i && (
+                <div className="px-5 pb-5">
+                  <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{a}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   return (
     <>
       <Hero />
-      <TrustedBy />
+      <WhoWeHelp />
       <WhyAgentforce />
       <AgentforceShowcase />
       <Stats />
       <Process />
-      <Testimonials />
+      <CaseStudies />
+      <FAQ />
       <CTA />
     </>
   )

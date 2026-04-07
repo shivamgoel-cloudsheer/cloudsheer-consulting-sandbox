@@ -209,12 +209,14 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3 animate-fade-in">
-          <img
-            src={import.meta.env.BASE_URL + "salesforce-partner-badge.png"}
-            alt="Salesforce Partner"
-            className="h-14 w-auto"
-            title="Certified Salesforce Partner"
-          />
+          <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7" target="_blank" rel="noopener noreferrer">
+            <img
+              src={import.meta.env.BASE_URL + "salesforce-partner-badge.png"}
+              alt="Salesforce Partner"
+              className="h-14 w-auto hover:opacity-80 transition-opacity"
+              title="Verified on Salesforce AppExchange - Click to verify"
+            />
+          </a>
           <Link to="/contact" className="btn-primary text-sm px-5 py-2">Free Consultation</Link>
         </div>
 
