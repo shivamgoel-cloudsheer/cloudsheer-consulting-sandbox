@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, Bot, Zap, ShieldCheck, BarChart3,
-  CheckCircle2, ChevronRight, Users, TrendingUp,
+  CheckCircle2, ChevronRight, Star, Users, TrendingUp,
   Sparkles, Clock, Settings, HelpCircle, ChevronDown,
 } from 'lucide-react'
 
