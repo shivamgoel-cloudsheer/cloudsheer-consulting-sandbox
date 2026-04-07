@@ -18,6 +18,8 @@ const cols = [
       { label: 'Experience Cloud',      to: '/solutions/experience-cloud' },
       { label: 'Analytics / Tableau',   to: '/solutions/analytics' },
       { label: 'Platform & AppExchange',to: '/solutions/platform' },
+      { label: 'Slack',                 to: '/solutions/slack' },
+      { label: 'Health Cloud',          to: '/solutions/health-cloud' },
     ],
   },
   {

@@ -17,6 +17,8 @@ import CommerceCloudPage from './pages/clouds/CommerceCloud'
 import ExperienceCloudPage from './pages/clouds/ExperienceCloud'
 import AnalyticsPage     from './pages/clouds/Analytics'
 import PlatformPage      from './pages/clouds/Platform'
+import SlackPage         from './pages/clouds/Slack'
+import HealthCloudPage   from './pages/clouds/HealthCloud'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -41,6 +43,8 @@ export default function App() {
           <Route path="/solutions/experience-cloud" element={<ExperienceCloudPage />} />
           <Route path="/solutions/analytics"        element={<AnalyticsPage />} />
           <Route path="/solutions/platform"         element={<PlatformPage />} />
+          <Route path="/solutions/slack"            element={<SlackPage />} />
+          <Route path="/solutions/health-cloud"     element={<HealthCloudPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

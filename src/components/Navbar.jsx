@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
-         ShoppingCart, Users, BarChart2, Package } from 'lucide-react'
+         ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse } from 'lucide-react'
 
 const clouds = [
   {
@@ -52,6 +52,18 @@ const clouds = [
     to: '/solutions/platform',
     icon: Package,
     desc: 'Custom apps built on the #1 CRM platform',
+  },
+  {
+    label: 'Slack',
+    to: '/solutions/slack',
+    icon: MessageSquare,
+    desc: 'AI-powered work OS connected to your CRM',
+  },
+  {
+    label: 'Health Cloud',
+    to: '/solutions/health-cloud',
+    icon: HeartPulse,
+    desc: 'Patient 360 for healthcare & life sciences',
   },
 ]
 
