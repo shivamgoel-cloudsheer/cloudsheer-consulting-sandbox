@@ -460,25 +460,41 @@ function Testimonials() {
 /* ─── CTA ───────────────────────────────────────────────────── */
 function CTA() {
   return (
-    <section className="py-28 relative overflow-hidden"
+    <section className="py-20 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 60%, #0176D3 100%)' }}>
       <div className="absolute inset-0 bg-grid-dark" />
-      <div className="glow-dot w-[700px] h-[600px] top-[-200px] left-[50%] -translate-x-1/2"
-        style={{ backgroundColor: 'rgba(0,169,255,0.15)' }} />
-      <div className="glow-dot w-[300px] h-[300px] bottom-[-100px] right-[10%]"
-        style={{ backgroundColor: 'rgba(245,158,11,0.10)' }} />
 
-      <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
+      {/* Animated floating orbs */}
+      <div className="absolute w-[400px] h-[400px] rounded-full top-[-100px] left-[-100px] animate-float"
+        style={{ backgroundColor: 'rgba(0,169,255,0.12)', filter: 'blur(80px)' }} />
+      <div className="absolute w-[300px] h-[300px] rounded-full bottom-[-80px] right-[-60px] animate-float"
+        style={{ backgroundColor: 'rgba(245,158,11,0.10)', filter: 'blur(60px)', animationDelay: '2s' }} />
+      <div className="absolute w-[200px] h-[200px] rounded-full top-[30%] right-[15%] animate-float"
+        style={{ backgroundColor: 'rgba(99,102,241,0.08)', filter: 'blur(50px)', animationDelay: '4s' }} />
+
+      {/* Animated spinning rings */}
+      <div className="absolute top-10 left-[10%] w-64 h-64 rounded-full border border-white/5 animate-spin-slow" />
+      <div className="absolute bottom-10 right-[8%] w-48 h-48 rounded-full border border-white/5 animate-spin-slow"
+        style={{ animationDirection: 'reverse', animationDuration: '12s' }} />
+
+      {/* Floating particles */}
+      <div className="absolute top-[20%] left-[20%] w-2 h-2 rounded-full animate-pulse-slow" style={{ backgroundColor: 'rgba(56,189,248,0.4)' }} />
+      <div className="absolute top-[60%] left-[75%] w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: 'rgba(245,158,11,0.4)', animationDelay: '1s' }} />
+      <div className="absolute top-[40%] left-[85%] w-2 h-2 rounded-full animate-pulse-slow" style={{ backgroundColor: 'rgba(99,102,241,0.4)', animationDelay: '2s' }} />
+      <div className="absolute top-[70%] left-[10%] w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: 'rgba(56,189,248,0.3)', animationDelay: '3s' }} />
+      <div className="absolute top-[15%] left-[60%] w-1 h-1 rounded-full animate-pulse-slow" style={{ backgroundColor: 'rgba(255,255,255,0.3)', animationDelay: '1.5s' }} />
+
+      <div className="relative z-10 px-6 md:px-12 lg:px-20 text-center mx-auto" style={{ maxWidth: '1000px' }}>
         <div className="tag-white inline-flex mb-6 animate-fade-up">
           <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#F59E0B' }} />
           Get Started Today
         </div>
-        <h2 className="text-4xl md:text-5xl font-black text-white mb-5 leading-tight animate-fade-up-1">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight animate-fade-up-1">
           Find Out What AI Agents<br />
           <span className="gradient-text-gold">Can Do for Your Business</span>
         </h2>
-        <p className="text-lg mb-10 max-w-xl mx-auto animate-fade-up-2"
-          style={{ color: 'rgba(186,220,255,0.80)' }}>
+        <p className="text-lg md:text-xl mb-10 mx-auto animate-fade-up-2"
+          style={{ color: 'rgba(186,220,255,0.80)', maxWidth: '640px' }}>
           In 30 minutes, we will identify your highest-impact use case and show you
           exactly how much you can save - with a clear plan to get there.
         </p>
