@@ -64,34 +64,122 @@ export default function About() {
       <section className="py-20 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 60%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
-        <div className="glow-dot w-[400px] h-[400px] top-[-100px] right-[-80px]"
-          style={{ backgroundColor: '#38BDF8', opacity: 0.12 }} />
-        <div className="section-wrap relative z-10 text-center">
-          <div className="tag-white mx-auto mb-6 inline-flex">
-            <MapPin className="w-3.5 h-3.5" />
-            Global Presence
+        <div className="section-wrap relative z-10">
+          <div className="text-center mb-10">
+            <div className="tag-white mx-auto mb-6 inline-flex">
+              <MapPin className="w-3.5 h-3.5" />
+              Global Presence
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-3">
+              Connected Across the Globe
+            </h2>
+            <p className="text-base max-w-xl mx-auto" style={{ color: 'rgba(148,196,255,0.75)' }}>
+              Our distributed team delivers round-the-clock capability across 4 time zones.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-            Connected Across the Globe
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-            {offices.map(({ city, flag }, i) => (
-              <div key={city} className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-2 text-white font-semibold text-lg">
-                  <span>{flag}</span> {city}
-                </span>
-                {i < offices.length - 1 && (
-                  <span className="text-blue-400 font-light text-xl select-none">•</span>
-                )}
+
+          {/* World Map with office markers */}
+          <div className="relative max-w-4xl mx-auto mb-10">
+            <svg viewBox="0 0 1000 500" className="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Simplified world map outline */}
+              <g opacity="0.15" stroke="rgba(148,196,255,0.6)" strokeWidth="0.8" fill="none">
+                {/* North America */}
+                <path d="M150,120 C160,100 180,85 200,80 C220,75 250,78 270,85 C280,88 285,92 290,98 C295,105 298,115 295,125 C292,135 288,140 280,148 C275,152 268,158 260,162 C250,168 240,175 230,180 C220,185 210,190 200,195 C190,198 178,200 168,195 C158,190 152,180 148,170 C144,160 142,148 145,138 C147,130 148,125 150,120Z" />
+                {/* USA */}
+                <path d="M130,155 C140,148 155,145 170,148 C185,150 200,158 215,165 C230,172 240,180 248,190 C255,200 258,210 255,220 C252,228 245,232 235,235 C225,238 212,238 200,235 C188,232 178,225 168,218 C158,210 148,200 142,190 C136,180 132,168 130,155Z" />
+                {/* South America */}
+                <path d="M230,270 C238,258 248,250 258,248 C268,246 275,250 280,258 C285,266 288,278 290,290 C292,302 290,315 285,328 C280,340 272,350 265,358 C258,365 250,370 242,368 C234,365 228,358 225,348 C222,338 222,325 224,312 C226,298 228,282 230,270Z" />
+                {/* Europe */}
+                <path d="M440,95 C450,88 462,85 475,88 C488,90 498,98 505,108 C510,115 512,125 508,132 C504,138 498,142 490,145 C482,148 472,148 465,145 C458,142 452,135 448,128 C444,120 442,108 440,95Z" />
+                {/* UK */}
+                <path d="M430,85 C432,78 436,74 442,72 C448,70 452,74 454,80 C456,86 455,92 452,98 C449,102 445,105 440,104 C435,102 432,98 430,92 C429,88 429,86 430,85Z" />
+                {/* Africa */}
+                <path d="M460,180 C468,170 480,165 492,168 C504,170 512,180 518,192 C524,204 528,220 528,238 C528,255 524,272 518,288 C512,302 504,312 494,318 C484,322 474,320 466,312 C458,304 452,290 450,275 C448,258 450,240 454,222 C457,205 458,190 460,180Z" />
+                {/* Asia / India */}
+                <path d="M620,130 C635,122 655,118 675,120 C695,122 712,130 725,142 C738,154 745,170 748,188 C750,205 745,222 738,235 C730,248 718,258 705,262 C692,265 678,262 665,255 C652,248 642,238 635,225 C628,212 624,198 622,182 C620,168 620,150 620,130Z" />
+                {/* India subcontinent */}
+                <path d="M665,200 C672,195 680,194 688,198 C696,202 700,212 702,225 C704,238 702,252 698,265 C694,275 688,282 680,280 C672,278 666,270 662,258 C658,246 658,232 660,220 C661,210 663,204 665,200Z" />
+                {/* East Asia */}
+                <path d="M740,110 C752,105 768,105 780,110 C792,115 800,125 805,138 C810,150 810,165 805,175 C800,185 792,190 782,188 C772,186 762,180 755,170 C748,160 744,148 742,135 C740,125 740,115 740,110Z" />
+                {/* Australia */}
+                <path d="M780,320 C792,312 808,310 822,315 C835,320 845,332 848,345 C850,358 845,370 835,378 C825,385 812,385 800,380 C788,375 780,365 776,352 C772,340 774,328 780,320Z" />
+              </g>
+
+              {/* Connection lines between offices */}
+              <g>
+                <line x1="215" y1="185" x2="445" y2="90" stroke="rgba(56,189,248,0.25)" strokeWidth="1" strokeDasharray="4,4">
+                  <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                </line>
+                <line x1="445" y1="90" x2="680" y2="210" stroke="rgba(56,189,248,0.25)" strokeWidth="1" strokeDasharray="4,4">
+                  <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                </line>
+                <line x1="215" y1="185" x2="680" y2="210" stroke="rgba(56,189,248,0.25)" strokeWidth="1" strokeDasharray="4,4">
+                  <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                </line>
+                <line x1="215" y1="185" x2="255" y2="175" stroke="rgba(56,189,248,0.25)" strokeWidth="1" strokeDasharray="4,4">
+                  <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                </line>
+                <line x1="255" y1="175" x2="445" y2="90" stroke="rgba(56,189,248,0.25)" strokeWidth="1" strokeDasharray="4,4">
+                  <animate attributeName="stroke-dashoffset" from="8" to="0" dur="2s" repeatCount="indefinite" />
+                </line>
+              </g>
+
+              {/* Office markers with pulse animation */}
+              {/* Dallas */}
+              <g>
+                <circle cx="215" cy="185" r="12" fill="rgba(56,189,248,0.15)">
+                  <animate attributeName="r" values="12;18;12" dur="3s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="215" cy="185" r="5" fill="#38BDF8" />
+                <circle cx="215" cy="185" r="2.5" fill="white" />
+              </g>
+              {/* New York */}
+              <g>
+                <circle cx="255" cy="175" r="12" fill="rgba(56,189,248,0.15)">
+                  <animate attributeName="r" values="12;18;12" dur="3s" begin="0.5s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" begin="0.5s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="255" cy="175" r="5" fill="#38BDF8" />
+                <circle cx="255" cy="175" r="2.5" fill="white" />
+              </g>
+              {/* London */}
+              <g>
+                <circle cx="445" cy="90" r="12" fill="rgba(245,158,11,0.15)">
+                  <animate attributeName="r" values="12;18;12" dur="3s" begin="1s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" begin="1s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="445" cy="90" r="5" fill="#F59E0B" />
+                <circle cx="445" cy="90" r="2.5" fill="white" />
+              </g>
+              {/* Delhi */}
+              <g>
+                <circle cx="680" cy="210" r="12" fill="rgba(99,102,241,0.15)">
+                  <animate attributeName="r" values="12;18;12" dur="3s" begin="1.5s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" begin="1.5s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="680" cy="210" r="5" fill="#6366F1" />
+                <circle cx="680" cy="210" r="2.5" fill="white" />
+              </g>
+
+              {/* City labels */}
+              <text x="215" y="210" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">Dallas</text>
+              <text x="255" y="162" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">New York</text>
+              <text x="445" y="78" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">London</text>
+              <text x="680" y="235" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="Inter,sans-serif">Delhi</text>
+            </svg>
+          </div>
+
+          {/* Office cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {offices.map(({ city, flag }) => (
+              <div key={city} className="text-center rounded-xl p-4"
+                style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.10)' }}>
+                <span className="text-2xl mb-2 block">{flag}</span>
+                <p className="text-white font-bold text-sm">{city}</p>
               </div>
             ))}
           </div>
-          <p className="text-lg max-w-2xl mx-auto leading-relaxed"
-            style={{ color: 'rgba(148,196,255,0.85)' }}>
-            Cloudsheer came together out of a shared belief that collaboration and team
-            dynamics are the way to help our clients. Our globally distributed team means
-            we bring diverse perspectives and round-the-clock capability to every engagement.
-          </p>
         </div>
       </section>
 
