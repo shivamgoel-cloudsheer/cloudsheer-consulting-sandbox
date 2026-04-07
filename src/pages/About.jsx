@@ -57,23 +57,8 @@ const team = [
 export default function About() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid" />
-        <div className="glow-dot w-[500px] h-[500px] top-[-150px] left-[50%] -translate-x-1/2"
-          style={{ backgroundColor: 'rgba(1,118,211,0.08)' }} />
-        <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
-          <div className="tag mx-auto mb-6">Our Story</div>
-          <h1 className="section-title mb-5">
-            Built by Believers in <span className="gradient-text">Autonomous AI</span>
-          </h1>
-          <p className="section-sub">
-            We did not just add Agentforce to our service list - we rebuilt our entire
-            practice around it. Because we believe it is the most important shift in
-            enterprise software since the cloud itself.
-          </p>
-        </div>
-      </section>
+      {/* spacer for navbar */}
+      <div className="pt-24" />
 
       {/* ── Connected Across the Globe ───────────────────────── */}
       <section className="py-20 relative overflow-hidden"
