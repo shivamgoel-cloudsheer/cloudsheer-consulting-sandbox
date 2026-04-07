@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap } from 'lucide-react'
 
 const posts = [
@@ -84,11 +85,11 @@ const posts = [
 const categories = ['All', 'Agentforce', 'Implementation', 'ROI & Results', 'Data Cloud', 'Strategy', 'Salesforce News']
 
 function PostCard({ post, large }) {
-  const { category, categoryIcon, categoryColor, title, excerpt, date, readTime, author, initials, avatarColor } = post
+  const { slug, category, categoryIcon, categoryColor, title, excerpt, date, readTime, author, initials, avatarColor } = post
 
   if (large) {
     return (
-      <article className="glass-card p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2">
+      <Link to={`/blog/${slug}`} className="glass-card p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="h-52 bg-gradient-to-br from-cs-bgsub to-cs-blue/10 rounded-xl flex items-center justify-center border border-cs-blue/10">
             <div className="w-16 h-16 rounded-2xl bg-white border border-cs-blue/20 shadow-card flex items-center justify-center">
@@ -116,12 +117,12 @@ function PostCard({ post, large }) {
             </div>
           </div>
         </div>
-      </article>
+      </Link>
     )
   }
 
   return (
-    <article className="glass-card p-6 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300">
+    <Link to={`/blog/${slug}`} className="glass-card p-6 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
       <div className="h-36 bg-gradient-to-br from-cs-bgsub to-cs-blue/8 rounded-xl mb-5 flex items-center justify-center border border-cs-blue/8">
         <div className="w-10 h-10 rounded-xl bg-white border border-cs-blue/15 shadow-sm flex items-center justify-center text-cs-blue">
           <Bot className="w-5 h-5" />
@@ -145,7 +146,7 @@ function PostCard({ post, large }) {
           <Clock className="w-3 h-3" /> {readTime}
         </span>
       </div>
-    </article>
+    </Link>
   )
 }
 
