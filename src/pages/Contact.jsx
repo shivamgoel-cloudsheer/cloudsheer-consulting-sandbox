@@ -3,8 +3,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, Bot, Calendar } from 'l
 
 const contactInfo = [
   { icon: <Mail className="w-4 h-4" />,  label: 'Email',    value: 'hello@cloudsheer.com' },
-  { icon: <Phone className="w-4 h-4" />, label: 'Phone',    value: '+1 (800) 000-0000' },
-  { icon: <MapPin className="w-4 h-4" />,label: 'Location', value: 'United States' },
+  { icon: <MapPin className="w-4 h-4" />,label: 'Offices',  value: 'Dallas | Delhi | London | New York' },
   { icon: <Clock className="w-4 h-4" />, label: 'Response', value: 'Within 1 business day' },
 ]
 

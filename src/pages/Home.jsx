@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   ArrowRight, Bot, Zap, ShieldCheck, BarChart3,
   CheckCircle2, ChevronRight, Star, Users, TrendingUp,
-  Sparkles, Clock, Settings, HelpCircle, ChevronDown,
+  Sparkles, Clock, Settings, HelpCircle, ChevronDown, Award, Building2, UserCheck,
 } from 'lucide-react'
 
 /* ─── Hero ─────────────────────────────────────────────────── */
@@ -609,6 +609,66 @@ function FAQ() {
   )
 }
 
+/* ─── Why Cloudsheer ───────────────────────────────────────── */
+function WhyCloudsheer() {
+  const reasons = [
+    {
+      icon: <Award className="w-5 h-5" />,
+      title: 'Specialists, Not Generalists',
+      problem: 'Large SIs spread thin across 50 technologies',
+      us: 'Every consultant on our team works exclusively with Salesforce and Agentforce. You get senior architects on your project, not junior consultants learning on your org.',
+    },
+    {
+      icon: <Zap className="w-5 h-5" />,
+      title: 'Live in 4 Weeks, Not 4 Months',
+      problem: 'Traditional partners take 3-6 months to go live',
+      us: 'Our deployment playbooks and pre-built agent templates cut timelines by 60%. We have gone live with production agents in as little as 3 weeks.',
+    },
+    {
+      icon: <Building2 className="w-5 h-5" />,
+      title: 'Boutique Agility, Enterprise Capability',
+      problem: 'Big firms = slow decisions, layers of account managers',
+      us: 'Direct access to leadership, fast decisions, and lower overhead. You talk to the people who build your solution, not a sales team.',
+    },
+    {
+      icon: <UserCheck className="w-5 h-5" />,
+      title: "We Don't Disappear After Go-Live",
+      problem: 'Many partners vanish once the SOW is signed off',
+      us: 'Every engagement includes 30 days post-launch support. We offer ongoing managed services for monitoring, optimisation, and new agent deployments as you scale.',
+    },
+  ]
+
+  return (
+    <section className="py-24 bg-white">
+      <div className="section-wrap">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="tag mx-auto mb-5"><Award className="w-3.5 h-3.5" /> Why Cloudsheer</div>
+          <h2 className="section-title mb-4">Why Businesses Choose Us <span className="gradient-text">Over Larger Partners</span></h2>
+          <p className="section-sub">You have options. Here is why mid-market and enterprise teams pick a specialist over a generalist.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+          {reasons.map(({ icon, title, problem, us }, i) => (
+            <div key={title} className="glass-card p-6 animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}>
+                  {icon}
+                </div>
+                <h3 className="font-bold" style={{ color: '#032D60' }}>{title}</h3>
+              </div>
+              <p className="text-xs mb-2 line-through" style={{ color: '#94A3B8' }}>{problem}</p>
+              <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{us}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-center text-xs mt-8" style={{ color: '#94A3B8' }}>
+          Client references available on request.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -619,6 +679,7 @@ export default function Home() {
       <Stats />
       <Process />
       <CaseStudies />
+      <WhyCloudsheer />
       <FAQ />
       <CTA />
     </>

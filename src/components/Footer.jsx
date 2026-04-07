@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Linkedin, Mail, MapPin, Phone, Store } from 'lucide-react'
+import { ArrowRight, Linkedin, Mail, MapPin, Store } from 'lucide-react'
 
 const cols = [
   {
@@ -74,8 +74,7 @@ export default function Footer() {
             <div className="space-y-2 mb-5">
               {[
                 { icon: <Mail className="w-3.5 h-3.5" />,  text: 'hello@cloudsheer.com' },
-                { icon: <Phone className="w-3.5 h-3.5" />, text: '+1 (800) 000-0000' },
-                { icon: <MapPin className="w-3.5 h-3.5" />,text: 'United States' },
+                { icon: <MapPin className="w-3.5 h-3.5" />,text: 'Dallas | Delhi | London | New York' },
               ].map(({ icon, text }) => (
                 <div key={text} className="flex items-center gap-2 text-xs"
                   style={{ color: 'rgba(148,196,255,0.70)' }}>
