@@ -51,7 +51,7 @@ function Hero() {
               <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-7 py-3.5">
                 Book Free Discovery Call <ArrowRight className="w-5 h-5 animate-bounce-x" />
               </a>
-              <Link to="/solutions"
+              <Link to="/solutions/agentforce"
                 className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl transition-all duration-200"
                 style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: 'white' }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)'}
@@ -482,6 +482,11 @@ function CaseStudies() {
             </div>
           ))}
         </div>
+        <div className="text-center mt-10">
+          <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            See If This Works for Your Business <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </section>
   )
@@ -537,7 +542,7 @@ function CTA() {
             style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: 'white' }}
             onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)'}
             onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
-            Explore Agentforce
+            Explore Solutions
           </Link>
         </div>
         <p className="text-sm mt-6 animate-fade-in" style={{ color: 'rgba(186,220,255,0.55)' }}>
@@ -574,6 +579,14 @@ function FAQ() {
     {
       q: "What does the discovery call look like?",
       a: "It's a 30-minute video call with a Salesforce architect (not a sales rep). We will ask about your current setup, biggest pain points, and goals. You will leave with a clear picture of what's possible, a rough timeline, and an honest assessment of whether we are the right fit.",
+    },
+    {
+      q: "Can you handle large or multi-cloud projects?",
+      a: "Yes. Our 27-person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale by bringing in certified specialists from our extended network. We have delivered multi-cloud implementations across Sales, Service, Marketing, and Experience Cloud simultaneously.",
+    },
+    {
+      q: "How do you handle data security and compliance?",
+      a: "All work is done within Salesforce's enterprise security framework (SOC 2 Type II, HIPAA-eligible, GDPR compliant). We follow Salesforce Well-Architected principles for data access, sharing rules, and encryption. For regulated industries, we have delivered Health Cloud implementations with full HIPAA compliance.",
     },
   ]
 

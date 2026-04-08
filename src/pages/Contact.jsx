@@ -211,8 +211,8 @@ export default function Contact() {
               </div>
               <p className="text-cs-navy text-sm font-semibold mb-1">Salesforce & Agentforce Certified</p>
               <p className="text-cs-muted text-xs leading-relaxed">
-                Cloudsheer is a registered Salesforce consulting partner with 50+
-                certified experts across every Salesforce cloud.
+                Cloudsheer is a registered Salesforce consulting partner with 60+
+                certifications across every Salesforce cloud.
               </p>
             </div>
           </div>

@@ -142,8 +142,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
-          className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs"
-          style2={{ color: 'rgba(148,196,255,0.55)' }}>
+          className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
           <p style={{ color: 'rgba(148,196,255,0.55)' }}>
             © {new Date().getFullYear()} Cloudsheer Consulting. All rights reserved.
           </p>

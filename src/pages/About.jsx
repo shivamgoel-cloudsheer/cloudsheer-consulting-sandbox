@@ -147,15 +147,13 @@ export default function About() {
                 Expertise Meets <span className="gradient-text">Knowledge</span>
               </h2>
               <p className="section-sub mb-6">
-                Multiple decades in the financial sector. Leading teams and building systems.
-                60+ Salesforce certifications in-house and a genuine enjoyment of the work
-                we get to do.
+                60+ Salesforce certifications. 10 clouds. 4 offices. Every project gets
+                a senior architect - not a junior learning on your org.
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
-                We are fortunate to have the skills and experience within our company to
-                serve clients across industries - from enterprise financial institutions to
-                high-growth technology businesses. Every project benefits from the full
-                depth of our collective knowledge.
+                Our team has delivered Salesforce across financial services, retail, healthcare,
+                SaaS, and manufacturing. That cross-industry experience means we bring
+                proven patterns to your project instead of figuring it out as we go.
               </p>
             </div>
 
@@ -282,13 +280,13 @@ export default function About() {
       <section className="py-20" style={{ backgroundColor: '#032D60' }}>
         <div className="section-wrap text-center max-w-2xl mx-auto">
           <h2 className="text-3xl font-extrabold text-white mb-4">
-            Want to join the <span className="gradient-text-gold">Agentforce revolution?</span>
+            Ready to See What We Can <span className="gradient-text-gold">Build for You?</span>
           </h2>
           <p className="mb-8" style={{ color: 'rgba(148,196,255,0.80)' }}>
-            Whether you are a client or a consultant - we would love to talk.
+            30-minute call with a Salesforce architect. We will assess your setup, identify quick wins, and give you a clear plan.
           </p>
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold">
-            Book a Call <ArrowRight className="w-4 h-4" />
+            Book Free Discovery Call <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>
