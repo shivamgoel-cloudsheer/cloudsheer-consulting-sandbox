@@ -231,21 +231,32 @@ function AgentVisual() {
 /* ─── Trusted By ──────────────────────────────────────────── */
 function TrustedBy() {
   const clients = ['Storehouse', 'Trexo Robotics', 'Sell That Florida House', 'Green Light Offer', 'Camp Quality', 'Mr-Manhole', 'Airius LLC', 'Beta Agency', 'Givergy', 'Hope-Bio']
+  // Double the list for seamless loop
+  const scrollItems = [...clients, ...clients]
   return (
-    <section style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF' }}>
-      <div className="section-wrap py-8">
-        <div className="flex flex-col sm:flex-row items-center gap-8">
-          <p className="text-xs uppercase tracking-widest shrink-0 font-semibold" style={{ color: '#64748B' }}>Trusted by</p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
-            {clients.map((name, i) => (
-              <span key={name} className="font-bold text-sm tracking-wide animate-fade-up"
-                style={{ color: '#032D60', animationDelay: `${i * 60}ms` }}>
+    <section style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF', overflow: 'hidden' }}>
+      <div className="py-6 flex items-center gap-6">
+        <p className="text-xs uppercase tracking-widest shrink-0 font-semibold pl-6 md:pl-12"
+          style={{ color: '#64748B' }}>Trusted by</p>
+        <div className="relative flex-1 overflow-hidden"
+          style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}>
+          <div className="flex items-center gap-10 whitespace-nowrap"
+            style={{ animation: 'scroll-left 25s linear infinite' }}>
+            {scrollItems.map((name, i) => (
+              <span key={i} className="font-bold text-sm tracking-wide shrink-0"
+                style={{ color: '#032D60' }}>
                 {name}
               </span>
             ))}
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   )
 }
