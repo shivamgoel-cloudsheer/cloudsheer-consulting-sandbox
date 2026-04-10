@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap } from 'lucide-react'
+import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2 } from 'lucide-react'
 
 const posts = [
   {
@@ -150,6 +150,78 @@ function PostCard({ post, large }) {
   )
 }
 
+function NewsletterSection() {
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e) => {
+    e.preventDefault()
+    if (!email) return
+
+    const iframe = document.createElement('iframe')
+    iframe.name = 'sf_newsletter_iframe'
+    iframe.style.display = 'none'
+    document.body.appendChild(iframe)
+
+    const sfForm = document.createElement('form')
+    sfForm.method = 'POST'
+    sfForm.action = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5i00000Cvxdu'
+    sfForm.target = 'sf_newsletter_iframe'
+
+    const fields = {
+      oid: '00D5i00000Cvxdu',
+      retURL: 'https://cloudsheer-consulting.vercel.app/blog',
+      email: email,
+      lead_source: 'Website Newsletter',
+    }
+
+    Object.entries(fields).forEach(([key, value]) => {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = key
+      input.value = value
+      sfForm.appendChild(input)
+    })
+
+    document.body.appendChild(sfForm)
+    sfForm.submit()
+    sfForm.remove()
+
+    setSubscribed(true)
+    setTimeout(() => iframe.remove(), 5000)
+  }
+
+  return (
+    <section className="py-20 bg-white border-t border-cs-blue/8">
+      <div className="section-wrap max-w-xl mx-auto text-center">
+        <div className="tag mx-auto mb-5"><Zap className="w-3.5 h-3.5" /> Stay Ahead</div>
+        <h2 className="section-title text-2xl mb-3">Get Agentforce Insights Monthly</h2>
+        <p className="text-cs-muted text-sm mb-7">
+          Join 2,000+ Salesforce professionals. No spam - just the most useful
+          Agentforce content, delivered once a month.
+        </p>
+        {subscribed ? (
+          <div className="flex items-center justify-center gap-2 py-3 px-5 rounded-xl" style={{ backgroundColor: 'rgba(5,150,105,0.08)', border: '1px solid rgba(5,150,105,0.2)' }}>
+            <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+            <span className="text-sm font-semibold" style={{ color: '#059669' }}>Subscribed! Check your inbox.</span>
+          </div>
+        ) : (
+          <form onSubmit={handleSubscribe} className="flex gap-3">
+            <input
+              type="email" required placeholder="your@email.com" value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-grow bg-cs-bgsub border border-cs-blue/15 focus:border-cs-blue/40 rounded-xl px-4 py-3 text-cs-navy text-sm placeholder-cs-muted/50 outline-none transition-colors"
+            />
+            <button type="submit" className="btn-primary shrink-0 px-5 py-3 text-sm">
+              Subscribe <ArrowRight className="w-4 h-4" />
+            </button>
+          </form>
+        )}
+      </div>
+    </section>
+  )
+}
+
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All')
 
@@ -204,25 +276,7 @@ export default function Blog() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-20 bg-white border-t border-cs-blue/8">
-        <div className="section-wrap max-w-xl mx-auto text-center">
-          <div className="tag mx-auto mb-5"><Zap className="w-3.5 h-3.5" /> Stay Ahead</div>
-          <h2 className="section-title text-2xl mb-3">Get Agentforce Insights Monthly</h2>
-          <p className="text-cs-muted text-sm mb-7">
-            Join 2,000+ Salesforce professionals. No spam - just the most useful
-            Agentforce content, delivered once a month.
-          </p>
-          <form onSubmit={(e) => e.preventDefault()} className="flex gap-3">
-            <input
-              type="email" required placeholder="your@email.com"
-              className="flex-grow bg-cs-bgsub border border-cs-blue/15 focus:border-cs-blue/40 rounded-xl px-4 py-3 text-cs-navy text-sm placeholder-cs-muted/50 outline-none transition-colors"
-            />
-            <button type="submit" className="btn-primary shrink-0 px-5 py-3 text-sm">
-              Subscribe <ArrowRight className="w-4 h-4" />
-            </button>
-          </form>
-        </div>
-      </section>
+      <NewsletterSection />
     </>
   )
 }
