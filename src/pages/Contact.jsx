@@ -20,11 +20,52 @@ const interests = [
 ]
 
 function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', company: '', phone: '', interest: '', message: '' })
+  const [form, setForm] = useState({ first_name: '', last_name: '', email: '', company: '', phone: '', interest: '', description: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true) }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Submit to Salesforce Web-to-Lead via hidden iframe to avoid redirect
+    const iframe = document.createElement('iframe')
+    iframe.name = 'sf_lead_iframe'
+    iframe.style.display = 'none'
+    document.body.appendChild(iframe)
+
+    const sfForm = document.createElement('form')
+    sfForm.method = 'POST'
+    sfForm.action = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5i00000Cvxdu'
+    sfForm.target = 'sf_lead_iframe'
+
+    const fields = {
+      oid: '00D5i00000Cvxdu',
+      retURL: 'https://cloudsheer-consulting.vercel.app/contact',
+      first_name: form.first_name,
+      last_name: form.last_name,
+      email: form.email,
+      phone: form.phone,
+      company: form.company,
+      '00Nfv0000060CQj': form.interest,
+      description: form.description,
+    }
+
+    Object.entries(fields).forEach(([key, value]) => {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = key
+      input.value = value
+      sfForm.appendChild(input)
+    })
+
+    document.body.appendChild(sfForm)
+    sfForm.submit()
+    sfForm.remove()
+
+    setSubmitted(true)
+    // Clean up iframe after a delay
+    setTimeout(() => iframe.remove(), 5000)
+  }
 
   if (submitted) {
     return (
@@ -34,8 +75,8 @@ function ContactForm() {
         </div>
         <h3 className="text-cs-navy text-2xl font-bold mb-2">Message Received</h3>
         <p className="text-cs-muted text-sm max-w-sm">
-          Thanks for reaching out. A member of our Agentforce team will be in
-          touch within one business day.
+          Thanks for reaching out. Your details have been sent to our team.
+          We will be in touch within one business day.
         </p>
       </div>
     )
@@ -47,26 +88,30 @@ function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-cs-navy mb-1.5">Full Name <span className="text-cs-blue">*</span></label>
-          <input type="text" name="name" required value={form.name} onChange={handleChange} placeholder="Jane Smith" className={inputClass} />
+          <label className="block text-xs font-semibold text-cs-navy mb-1.5">First Name <span className="text-cs-blue">*</span></label>
+          <input type="text" name="first_name" required maxLength="40" value={form.first_name} onChange={handleChange} placeholder="Jane" className={inputClass} />
         </div>
         <div>
-          <label className="block text-xs font-semibold text-cs-navy mb-1.5">Work Email <span className="text-cs-blue">*</span></label>
-          <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder="jane@company.com" className={inputClass} />
+          <label className="block text-xs font-semibold text-cs-navy mb-1.5">Last Name <span className="text-cs-blue">*</span></label>
+          <input type="text" name="last_name" required maxLength="80" value={form.last_name} onChange={handleChange} placeholder="Smith" className={inputClass} />
         </div>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-xs font-semibold text-cs-navy mb-1.5">Company</label>
-          <input type="text" name="company" value={form.company} onChange={handleChange} placeholder="Acme Inc." className={inputClass} />
+          <label className="block text-xs font-semibold text-cs-navy mb-1.5">Work Email <span className="text-cs-blue">*</span></label>
+          <input type="email" name="email" required maxLength="80" value={form.email} onChange={handleChange} placeholder="jane@company.com" className={inputClass} />
         </div>
         <div>
           <label className="block text-xs font-semibold text-cs-navy mb-1.5">Phone</label>
-          <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" className={inputClass} />
+          <input type="tel" name="phone" maxLength="40" value={form.phone} onChange={handleChange} placeholder="+1 555 000 0000" className={inputClass} />
         </div>
       </div>
       <div>
-        <label className="block text-xs font-semibold text-cs-navy mb-1.5">I'm interested in…</label>
+        <label className="block text-xs font-semibold text-cs-navy mb-1.5">Company <span className="text-cs-blue">*</span></label>
+        <input type="text" name="company" required maxLength="40" value={form.company} onChange={handleChange} placeholder="Acme Inc." className={inputClass} />
+      </div>
+      <div>
+        <label className="block text-xs font-semibold text-cs-navy mb-1.5">Service Interested In</label>
         <select name="interest" value={form.interest} onChange={handleChange} className={inputClass + ' bg-cs-bgsub'}>
           <option value="">Select a service</option>
           {interests.map((i) => <option key={i} value={i}>{i}</option>)}
@@ -74,8 +119,8 @@ function ContactForm() {
       </div>
       <div>
         <label className="block text-xs font-semibold text-cs-navy mb-1.5">Message <span className="text-cs-blue">*</span></label>
-        <textarea name="message" required value={form.message} onChange={handleChange} rows={5}
-          placeholder="Tell us about your project, current Salesforce setup, and what you're hoping to achieve…"
+        <textarea name="description" required value={form.description} onChange={handleChange} rows={5}
+          placeholder="Tell us about your project, current Salesforce setup, and what you're hoping to achieve..."
           className={inputClass + ' resize-none'} />
       </div>
       <button type="submit" className="btn-primary w-full justify-center">
