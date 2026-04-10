@@ -203,9 +203,6 @@ function RoleCard({ role }) {
               <Send className="w-4 h-4" />
               Apply for this Role
             </a>
-            <Link to="/contact" className="btn-ghost gap-2">
-              Ask us a question <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       )}
@@ -245,7 +242,7 @@ export default function Careers() {
             <a href="#open-roles" className="btn-gold text-base px-8 py-4">
               View Open Roles <ArrowRight className="w-5 h-5" />
             </a>
-            <a href="mailto:hr@cloudsheer.com" className="btn-ghost text-base px-8 py-4"
+            <a href="mailto:hr@cloudsheer.com?subject=CV Submission - Cloudsheer Careers" className="btn-ghost text-base px-8 py-4"
               style={{ borderColor: 'rgba(255,255,255,0.25)', color: 'white' }}
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)' }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
