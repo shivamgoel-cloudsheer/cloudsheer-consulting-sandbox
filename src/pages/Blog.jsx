@@ -4,13 +4,13 @@ import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, Che
 
 const posts = [
   {
-    slug: 'getting-started-agentforce-2025',
+    slug: 'getting-started-agentforce-2026',
     category: 'Agentforce',
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
-    title: 'Getting Started with Agentforce: A Practical Guide for 2025',
+    title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
-    image: '/blog/agentforce-guide.svg',
+    image: '/blog/agentforce-guide.jpeg',
     date: 'Mar 18, 2025', readTime: '8 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,

@@ -4,8 +4,8 @@ import { ArrowLeft, ArrowRight, Clock, Bot } from 'lucide-react'
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const articles = {
-  'getting-started-agentforce-2025': {
-    title: 'Getting Started with Agentforce: A Practical Guide for 2025',
+  'getting-started-agentforce-2026': {
+    title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     category: 'Agentforce',
     date: 'Mar 18, 2025',
     readTime: '8 min',
