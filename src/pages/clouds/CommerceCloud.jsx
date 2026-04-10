@@ -274,11 +274,11 @@ export default function CommerceCloudPage() {
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="glow-dot w-[500px] h-[500px] top-[-100px] left-[50%] -translate-x-1/2"
           style={{ backgroundColor: '#0176D3', opacity: 0.25 }} />
-        <div className="section-wrap relative z-10 text-center max-w-2xl mx-auto">
+        <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
           <div className="tag-white mx-auto mb-6 inline-flex">
             <ShoppingCart className="w-3.5 h-3.5" /> Free Commerce Scoping Call
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
             Ready to Launch or Scale Your<br />
             <span className="gradient-text-gold">Commerce Revenue Engine?</span>
           </h2>
