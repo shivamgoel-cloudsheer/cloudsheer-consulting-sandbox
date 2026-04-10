@@ -197,7 +197,7 @@ function RoleCard({ role }) {
           <div className="flex flex-col sm:flex-row gap-3 pt-6"
             style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
             <a
-              href={`mailto:careers@cloudsheer.com?subject=Application: ${role.title}`}
+              href={`mailto:hr@cloudsheer.com?subject=Application: ${role.title}`}
               className="btn-primary gap-2"
             >
               <Send className="w-4 h-4" />
@@ -245,7 +245,7 @@ export default function Careers() {
             <a href="#open-roles" className="btn-gold text-base px-8 py-4">
               View Open Roles <ArrowRight className="w-5 h-5" />
             </a>
-            <a href="mailto:careers@cloudsheer.com" className="btn-ghost text-base px-8 py-4"
+            <a href="mailto:hr@cloudsheer.com" className="btn-ghost text-base px-8 py-4"
               style={{ borderColor: 'rgba(255,255,255,0.25)', color: 'white' }}
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)' }}
               onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
@@ -317,7 +317,7 @@ export default function Careers() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
             {[
-              { num: '01', title: 'Apply',         desc: 'Send your CV to careers@cloudsheer.com or click Apply on the role below. We review every application personally.' },
+              { num: '01', title: 'Apply',         desc: 'Send your CV to hr@cloudsheer.com or click Apply on the role below. We review every application personally.' },
               { num: '02', title: 'Intro Call',    desc: 'A 30-minute video call with our hiring lead. We want to understand your background and answer your questions.' },
               { num: '03', title: 'Skills Review', desc: 'A short take-home task or technical interview relevant to the role - no whiteboard marathons.' },
               { num: '04', title: 'Final & Offer', desc: 'A conversation with a senior leader, followed by a fast decision. We aim to complete the process in under 2 weeks.' },
@@ -372,7 +372,7 @@ export default function Careers() {
               </p>
             </div>
             <a
-              href="mailto:careers@cloudsheer.com?subject=Speculative Application"
+              href="mailto:hr@cloudsheer.com?subject=Speculative Application"
               className="btn-gold shrink-0"
             >
               Send Your CV <Send className="w-4 h-4" />
