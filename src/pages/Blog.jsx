@@ -10,7 +10,7 @@ const posts = [
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
-    image: '/blog/agentforce-guide-opt.jpeg',
+    image: '/blog/agentforce-guide.svg',
     date: 'Mar 18, 2025', readTime: '8 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,
@@ -21,7 +21,7 @@ const posts = [
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: "Agentforce vs Einstein Bots: What's the Difference?",
-    image: '/blog/agentforce-vs-bots.jpeg',
+    image: '/blog/agentforce-vs-bots.svg',
     excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy - we explain it clearly with real-world examples.",
     date: 'Feb 28, 2025', readTime: '5 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
@@ -99,8 +99,8 @@ function PostCard({ post, large }) {
     return (
       <Link to={`/blog/${slug}`} className="glass-card p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="h-52 rounded-xl overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#EFF6FF' }}>
-            <img src={imgSrc} alt={title} className="w-full h-full object-contain" />
+          <div className="h-52 rounded-xl overflow-hidden">
+            <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
           </div>
           <div>
             <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border ${categoryColor} mb-4`}>
@@ -129,8 +129,8 @@ function PostCard({ post, large }) {
 
   return (
     <Link to={`/blog/${slug}`} className="glass-card p-6 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
-      <div className="h-40 rounded-xl overflow-hidden mb-5 flex items-center justify-center" style={{ backgroundColor: '#EFF6FF' }}>
-        <img src={imgSrc} alt={title} className="w-full h-full object-contain" />
+      <div className="h-40 rounded-xl overflow-hidden mb-5">
+        <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
       <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start mb-3 ${categoryColor}`}>
         {categoryIcon} {category}
