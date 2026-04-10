@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Award, Heart, Lightbulb, Users, Sparkles, MapPin, Star, Linkedin } from 'lucide-react'
+import { ArrowRight, Award, Heart, Lightbulb, Users, Sparkles, MapPin, Star } from 'lucide-react'
 
 const values = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce-First Thinking', desc: 'Every engagement starts by asking: where can an AI agent create the most value? We are built around this question.' },
@@ -28,11 +28,10 @@ const team = [
   { id: 1,  name: 'Tushar Sharma',        role: 'CEO',                              photo: BASE + 'team-opt/Tushar Sharma.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 2,  name: 'Rajat Sharma',         role: 'Technical Delivery Head',          photo: BASE + 'team-opt/Rajat Sharma.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 3,  name: 'Shubham Bansal',       role: 'Growth & Marketing - Head',        photo: BASE + 'team-opt/Shubham Bansal.webp',       linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
-  { id: 4,  name: 'Ankur Trivedi',        role: 'Salesforce Architect',             photo: BASE + 'team-opt/Ankur Trivedi.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
+  { id: 4,  name: 'Ankur Trivedi',        role: 'Salesforce Developer',             photo: BASE + 'team-opt/Ankur Trivedi.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 5,  name: 'Shainkey Pawaiya',     role: 'Project Manager',                  photo: BASE + 'team-opt/Shainkey Pawaiya.webp',     linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 6,  name: 'Pranay Pandey',        role: 'Team Lead - QA',                   photo: BASE + 'team-opt/Pranay Pandey.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 7,  name: 'Arihanta Jain',        role: 'Assistant Manager HR',             photo: BASE + 'team-opt/Arihanta Jain.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
-  { id: 8,  name: 'Arti Bisht',           role: 'Senior Accountant',                photo: BASE + 'team-opt/Arti Bisht.webp',           linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 9,  name: 'Shivam Goel',          role: 'Strategy & Growth - Associate',    photo: BASE + 'team-opt/Shivam Goel.webp',          linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 10, name: 'Prateek Jain',         role: 'Growth & Marketing - Associate',   photo: BASE + 'team-opt/Prateek Jain.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 11, name: 'Tammana Gautam',       role: 'BA - Salesforce',                  photo: BASE + 'team-opt/Tammana Gautam.webp',       linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
@@ -161,7 +160,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { value: '60+',    label: 'Salesforce Certifications',     color: '#0176D3' },
-                { value: '27',     label: 'Team Members Globally',         color: '#6366F1' },
+                { value: '26',     label: 'Team Members Globally',         color: '#6366F1' },
                 { value: '4',      label: 'Global Office Locations',       color: '#06B6D4' },
                 { value: '150+',   label: 'Successful Implementations',    color: '#F59E0B' },
               ].map(({ value, label, color }) => (
@@ -210,7 +209,7 @@ export default function About() {
             </div>
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
-              27 experts across Dallas, Delhi, London, and New York - united by a shared passion
+              26 experts across Dallas, Delhi, London, and New York - united by a shared passion
               for Salesforce, Agentforce, and delivering outcomes that matter.
             </p>
           </div>
@@ -249,19 +248,6 @@ export default function About() {
                 <p className="text-xs font-bold leading-tight" style={{ color: '#032D60' }}>{name}</p>
                 <p className="text-[10px] mt-0.5 leading-tight" style={{ color: '#64748B' }}>{role}</p>
 
-                {/* LinkedIn - visible on hover */}
-                <a
-                  href={linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={e => e.stopPropagation()}
-                  className="mt-2.5 flex items-center gap-1 text-[10px] font-semibold px-2.5 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-200"
-                  style={{ backgroundColor: '#0176D3', color: 'white' }}
-                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#032D60' }}
-                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = '#0176D3' }}
-                >
-                  <Linkedin className="w-3 h-3" /> LinkedIn
-                </a>
               </div>
             ))}
           </div>
