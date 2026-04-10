@@ -10,7 +10,7 @@ const posts = [
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
-    image: '/blog/agentforce-guide.jpeg',
+    image: '/blog/agentforce-guide-opt.jpeg',
     date: 'Mar 18, 2025', readTime: '8 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,
