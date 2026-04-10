@@ -146,10 +146,13 @@ export default function Footer() {
           <p style={{ color: 'rgba(148,196,255,0.55)' }}>
             © {new Date().getFullYear()} Cloudsheer Consulting. All rights reserved.
           </p>
-          <div className="flex items-center gap-1.5" style={{ color: 'rgba(148,196,255,0.55)' }}>
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow"
-              style={{ backgroundColor: '#38BDF8' }} />
-            Certified Salesforce & Agentforce Partner
+          <div className="flex items-center gap-4" style={{ color: 'rgba(148,196,255,0.55)' }}>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#38BDF8' }} />
+              Salesforce Partner
+            </span>
           </div>
         </div>
       </div>

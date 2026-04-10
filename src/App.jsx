@@ -9,6 +9,8 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Careers from './pages/Careers'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 import AgentforcePage    from './pages/clouds/Agentforce'
 import SalesCloudPage    from './pages/clouds/SalesCloud'
 import ServiceCloudPage  from './pages/clouds/ServiceCloud'
@@ -50,6 +52,8 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </main>
       <Footer />
