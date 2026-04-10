@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#032D60"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg5)" rx="16"/>
+  <g opacity="0.06" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
+  </g>
+  <!-- Data nodes connected -->
+  <circle cx="300" cy="120" r="25" fill="white" opacity="0.12" stroke="white" stroke-opacity="0.15"/>
+  <circle cx="500" cy="120" r="25" fill="white" opacity="0.12" stroke="white" stroke-opacity="0.15"/>
+  <circle cx="400" cy="180" r="35" fill="#A78BFA" opacity="0.3" stroke="#A78BFA" stroke-opacity="0.4"/>
+  <circle cx="250" cy="200" r="20" fill="white" opacity="0.08" stroke="white" stroke-opacity="0.1"/>
+  <circle cx="550" cy="200" r="20" fill="white" opacity="0.08" stroke="white" stroke-opacity="0.1"/>
+  <!-- Connection lines -->
+  <line x1="300" y1="120" x2="400" y2="180" stroke="#A78BFA" stroke-width="1.5" opacity="0.4"/>
+  <line x1="500" y1="120" x2="400" y2="180" stroke="#A78BFA" stroke-width="1.5" opacity="0.4"/>
+  <line x1="250" y1="200" x2="400" y2="180" stroke="white" stroke-width="1" opacity="0.2"/>
+  <line x1="550" y1="200" x2="400" y2="180" stroke="white" stroke-width="1" opacity="0.2"/>
+  <!-- Center icon -->
+  <circle cx="400" cy="180" r="12" fill="#A78BFA"/>
+  <text x="400" y="185" text-anchor="middle" fill="white" font-size="14" font-weight="800">D</text>
+  <!-- Text -->
+  <text x="400" y="280" text-anchor="middle" fill="white" font-family="Inter,sans-serif" font-size="22" font-weight="800">How Data Cloud Makes Your</text>
+  <text x="400" y="315" text-anchor="middle" fill="#F59E0B" font-family="Inter,sans-serif" font-size="26" font-weight="800">Agents Smarter</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#032D60"/>
+      <stop offset="100%" style="stop-color:#0891B2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg6)" rx="16"/>
+  <g opacity="0.06" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
+  </g>
+  <!-- People icons in a row -->
+  <g opacity="0.6">
+    <circle cx="280" cy="130" r="18" fill="white" opacity="0.15"/><circle cx="280" cy="122" r="7" fill="white" opacity="0.25"/>
+    <circle cx="340" cy="130" r="18" fill="#38BDF8" opacity="0.25"/><circle cx="340" cy="122" r="7" fill="#38BDF8" opacity="0.35"/>
+    <circle cx="400" cy="130" r="22" fill="#F59E0B" opacity="0.3"/><circle cx="400" cy="120" r="8" fill="#F59E0B" opacity="0.45"/>
+    <circle cx="460" cy="130" r="18" fill="#38BDF8" opacity="0.25"/><circle cx="460" cy="122" r="7" fill="#38BDF8" opacity="0.35"/>
+    <circle cx="520" cy="130" r="18" fill="white" opacity="0.15"/><circle cx="520" cy="122" r="7" fill="white" opacity="0.25"/>
+  </g>
+  <!-- Arrow up -->
+  <text x="400" y="200" text-anchor="middle" fill="#22C55E" font-size="40" opacity="0.6">&#x2191;</text>
+  <!-- Text -->
+  <text x="400" y="280" text-anchor="middle" fill="white" font-family="Inter,sans-serif" font-size="22" font-weight="800">7 Ways Agentforce Drives</text>
+  <text x="400" y="315" text-anchor="middle" fill="#F59E0B" font-family="Inter,sans-serif" font-size="26" font-weight="800">Salesforce Adoption</text>
+  <text x="400" y="350" text-anchor="middle" fill="rgba(186,220,255,0.6)" font-family="Inter,sans-serif" font-size="14">Across Your Team</text>
+</svg>

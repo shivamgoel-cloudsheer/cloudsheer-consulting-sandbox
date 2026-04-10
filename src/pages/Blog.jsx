@@ -10,6 +10,7 @@ const posts = [
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: 'Getting Started with Agentforce: A Practical Guide for 2025',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
+    image: '/blog/agentforce-guide.svg',
     date: 'Mar 18, 2025', readTime: '8 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
     featured: true,
@@ -20,6 +21,7 @@ const posts = [
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
     title: "Agentforce vs Einstein Bots: What's the Difference?",
+    image: '/blog/agentforce-vs-bots.svg',
     excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy - we explain it clearly with real-world examples.",
     date: 'Feb 28, 2025', readTime: '5 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
@@ -31,6 +33,7 @@ const posts = [
     categoryIcon: <Sparkles className="w-3 h-3" />,
     categoryColor: 'text-cs-gold bg-cs-gold/10 border-cs-gold/25',
     title: '10-Point Checklist for a Successful Salesforce Implementation',
+    image: '/blog/implementation-checklist.svg',
     excerpt: 'After 250+ implementations we know exactly what separates a smooth go-live from a painful one. Here is our definitive pre-launch checklist.',
     date: 'Feb 10, 2025', readTime: '6 min',
     author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
@@ -42,6 +45,7 @@ const posts = [
     categoryIcon: <TrendingUp className="w-3 h-3" />,
     categoryColor: 'text-emerald-600 bg-emerald-50 border-emerald-200',
     title: 'Measuring the ROI of Agentforce: What Our Clients Actually See',
+    image: '/blog/roi-agentforce.svg',
     excerpt: 'We tracked results across 20 Agentforce deployments - case deflection rates, response times, CSAT scores, and cost savings. Here is what the data shows.',
     date: 'Jan 22, 2025', readTime: '7 min',
     author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
@@ -53,6 +57,7 @@ const posts = [
     categoryIcon: <Database className="w-3 h-3" />,
     categoryColor: 'text-cs-purple bg-cs-purple/10 border-cs-purple/20',
     title: 'How Data Cloud Makes Your Agentforce Agents Smarter',
+    image: '/blog/data-cloud.svg',
     excerpt: 'Agentforce agents are only as intelligent as the data they can access. We show you exactly how Data Cloud unification supercharges agent responses and personalisation.',
     date: 'Jan 8, 2025', readTime: '7 min',
     author: 'Shubham Bansal', initials: 'SB', avatarColor: 'from-orange-500 to-rose-500',
@@ -64,6 +69,7 @@ const posts = [
     categoryIcon: <Users className="w-3 h-3" />,
     categoryColor: 'text-cs-teal bg-cs-teal/10 border-cs-teal/20',
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
+    image: '/blog/crm-adoption.svg',
     excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programmes never could.",
     date: 'Dec 20, 2024', readTime: '5 min',
     author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
@@ -75,6 +81,7 @@ const posts = [
     categoryIcon: <Zap className="w-3 h-3" />,
     categoryColor: 'text-rose-500 bg-rose-50 border-rose-200',
     title: "Top Agentforce Features in the Salesforce Spring '25 Release",
+    image: '/blog/spring-25.svg',
     excerpt: "Spring '25 is the biggest Agentforce release yet. New agent templates, expanded action types, improved reasoning, and deeper Data Cloud integration - all covered here.",
     date: 'Dec 5, 2024', readTime: '9 min',
     author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
@@ -85,16 +92,15 @@ const posts = [
 const categories = ['All', 'Agentforce', 'Implementation', 'ROI & Results', 'Data Cloud', 'Strategy', 'Salesforce News']
 
 function PostCard({ post, large }) {
-  const { slug, category, categoryIcon, categoryColor, title, excerpt, date, readTime, author, initials, avatarColor } = post
+  const { slug, category, categoryIcon, categoryColor, title, excerpt, image, date, readTime, author, initials, avatarColor } = post
+  const imgSrc = import.meta.env.BASE_URL + (image || '').replace(/^\//, '')
 
   if (large) {
     return (
       <Link to={`/blog/${slug}`} className="glass-card p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="h-52 bg-gradient-to-br from-cs-bgsub to-cs-blue/10 rounded-xl flex items-center justify-center border border-cs-blue/10">
-            <div className="w-16 h-16 rounded-2xl bg-white border border-cs-blue/20 shadow-card flex items-center justify-center">
-              <Bot className="w-8 h-8 text-cs-blue" />
-            </div>
+          <div className="h-52 rounded-xl overflow-hidden">
+            <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
           </div>
           <div>
             <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border ${categoryColor} mb-4`}>
@@ -123,10 +129,8 @@ function PostCard({ post, large }) {
 
   return (
     <Link to={`/blog/${slug}`} className="glass-card p-6 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
-      <div className="h-36 bg-gradient-to-br from-cs-bgsub to-cs-blue/8 rounded-xl mb-5 flex items-center justify-center border border-cs-blue/8">
-        <div className="w-10 h-10 rounded-xl bg-white border border-cs-blue/15 shadow-sm flex items-center justify-center text-cs-blue">
-          <Bot className="w-5 h-5" />
-        </div>
+      <div className="h-40 rounded-xl overflow-hidden mb-5">
+        <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
       <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start mb-3 ${categoryColor}`}>
         {categoryIcon} {category}
