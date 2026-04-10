@@ -1,9 +1,9 @@
 # Cloudsheer Consulting - Full Context
 
-> Certified Salesforce & Agentforce consulting partner. Mid-market and enterprise focus. 26 team members, 60+ certifications, 4 global offices.
+> Certified Salesforce & Agentforce consulting partner. Mid-market and enterprise focus. 40+ team members, 60+ certifications, 4 global offices.
 
 ## Company Overview
-Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce AI agents. We are a certified Salesforce partner listed on AppExchange. Our team of 26 spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
+Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce AI agents. We are a certified Salesforce partner listed on AppExchange. Our team of 40+ spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
 
 ## What We Do
 We implement the full Salesforce suite with a specialty in Agentforce - autonomous AI agents that work 24/7 inside your CRM. We handle everything from discovery to deployment to ongoing optimization.
@@ -92,7 +92,7 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 - Multi-cloud implementation: 8-16 weeks
 
 ## Team
-26 members across 4 offices with 60+ Salesforce certifications covering:
+40+ members across 4 offices with 60+ Salesforce certifications covering:
 - Salesforce Administrator
 - Platform Developer I & II
 - Sales Cloud Consultant

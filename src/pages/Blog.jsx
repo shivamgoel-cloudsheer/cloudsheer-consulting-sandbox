@@ -31,7 +31,7 @@ const posts = [
     categoryIcon: <Sparkles className="w-3 h-3" />,
     categoryColor: 'text-cs-gold bg-cs-gold/10 border-cs-gold/25',
     title: '10-Point Checklist for a Successful Salesforce Implementation',
-    excerpt: 'After 150+ implementations we know exactly what separates a smooth go-live from a painful one. Here is our definitive pre-launch checklist.',
+    excerpt: 'After 250+ implementations we know exactly what separates a smooth go-live from a painful one. Here is our definitive pre-launch checklist.',
     date: 'Feb 10, 2025', readTime: '6 min',
     author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
     featured: false,

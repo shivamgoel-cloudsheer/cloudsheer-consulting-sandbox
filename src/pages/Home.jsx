@@ -582,7 +582,7 @@ function FAQ() {
     },
     {
       q: "Can you handle large or multi-cloud projects?",
-      a: "Yes. Our 26-person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale by bringing in certified specialists from our extended network. We have delivered multi-cloud implementations across Sales, Service, Marketing, and Experience Cloud simultaneously.",
+      a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale by bringing in certified specialists from our extended network. We have delivered multi-cloud implementations across Sales, Service, Marketing, and Experience Cloud simultaneously.",
     },
     {
       q: "How do you handle data security and compliance?",

@@ -160,9 +160,9 @@ export default function About() {
             <div className="grid grid-cols-2 gap-5">
               {[
                 { value: '60+',    label: 'Salesforce Certifications',     color: '#0176D3' },
-                { value: '26',     label: 'Team Members Globally',         color: '#6366F1' },
+                { value: '40+',    label: 'Team Members Globally',         color: '#6366F1' },
                 { value: '4',      label: 'Global Office Locations',       color: '#06B6D4' },
-                { value: '150+',   label: 'Successful Implementations',    color: '#F59E0B' },
+                { value: '250+',   label: 'Successful Projects',    color: '#F59E0B' },
               ].map(({ value, label, color }) => (
                 <div key={label} className="glass-card p-6 text-center">
                   <p className="text-4xl font-black mb-2" style={{ color }}>{value}</p>
@@ -209,7 +209,7 @@ export default function About() {
             </div>
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
-              26 experts across Dallas, Delhi, London, and New York - united by a shared passion
+              40+ experts across Dallas, Delhi, London, and New York - united by a shared passion
               for Salesforce, Agentforce, and delivering outcomes that matter.
             </p>
           </div>

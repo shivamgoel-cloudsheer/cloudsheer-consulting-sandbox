@@ -176,7 +176,7 @@ const articles = {
       {
         heading: 'Why Implementations Fail',
         paragraphs: [
-          "After 150+ Salesforce implementations, we have seen every type of failure. The pattern is almost always the same: not a technology problem, but a process problem. Poor requirements, bad data, insufficient training, or unrealistic timelines. This checklist covers the 10 things that separate a smooth go-live from a painful one.",
+          "After 250+ Salesforce implementations, we have seen every type of failure. The pattern is almost always the same: not a technology problem, but a process problem. Poor requirements, bad data, insufficient training, or unrealistic timelines. This checklist covers the 10 things that separate a smooth go-live from a painful one.",
         ],
       },
       {
