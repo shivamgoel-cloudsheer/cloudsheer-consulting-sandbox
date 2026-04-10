@@ -84,7 +84,7 @@ const perks = [
   { icon: Globe,       title: 'Global Exposure',        desc: 'Work alongside colleagues across Dallas, Delhi, London, and New York on real international projects.' },
   { icon: TrendingUp,  title: 'Career Growth',         desc: 'Dedicated training budget, Salesforce cert support, and a clear progression path.' },
   { icon: Zap,         title: 'Agentforce-First',      desc: "Work on the industry's most exciting AI platform before anyone else." },
-  { icon: Users,       title: 'Tight-Knit Team',       desc: '28 people who genuinely enjoy working together and learning from each other.' },
+  { icon: Users,       title: 'Tight-Knit Team',       desc: '26 people who genuinely enjoy working together and learning from each other.' },
   { icon: Heart,       title: 'Flexible Culture',      desc: 'Async-friendly, outcome-driven, and respectful of your time outside of work.' },
   { icon: Briefcase,   title: 'Varied Projects',       desc: 'No two clients are the same - you will constantly learn across industries.' },
 ]
@@ -258,7 +258,7 @@ export default function Careers() {
         <div className="section-wrap py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: '28',    label: 'Team Members Globally' },
+              { value: '26',    label: 'Team Members Globally' },
               { value: '4',     label: 'Office Locations' },
               { value: '60+',   label: 'Salesforce Certifications' },
               { value: '2',     label: 'Roles Open Now' },
