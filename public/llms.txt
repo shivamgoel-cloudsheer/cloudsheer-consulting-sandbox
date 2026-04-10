@@ -1,0 +1,67 @@
+# Cloudsheer Consulting
+
+> Salesforce & Agentforce consulting partner helping mid-market and enterprise businesses cut costs, close more deals, and scale operations with AI agents.
+
+## About
+Cloudsheer Consulting is a certified Salesforce partner specializing in Agentforce (autonomous AI agents), Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics/Tableau, Platform, Slack, and Health Cloud. We have 26 team members across Dallas, Delhi, London, and New York with 60+ Salesforce certifications.
+
+## Solutions
+
+### Agentforce
+Autonomous AI agents that handle support, sales, and operations 24/7 inside Salesforce. Typical results: 40% case resolution increase, 73% queries handled autonomously, $2 cost per conversation vs $11+ human agent.
+URL: /solutions/agentforce
+
+### Sales Cloud
+AI-powered CRM for pipeline management, lead qualification, forecasting, and CPQ. Typical results: 29% more revenue, 44% higher win rates, 5x ROI over 3 years.
+URL: /solutions/sales-cloud
+
+### Service Cloud
+Customer support platform with omni-channel routing, AI-powered self-service, and field service. Typical results: 30% faster resolution, 27% lower costs, 32% first-contact resolution.
+URL: /solutions/service-cloud
+
+### Marketing Cloud
+Personalized customer journeys across email, SMS, and advertising. Typical results: $36:$1 email ROI, 25% marketing ROI increase, 41% higher CTR with Einstein AI.
+URL: /solutions/marketing-cloud
+
+### Commerce Cloud
+Unified B2B and B2C commerce platform. Typical results: 29% conversion lift, 25% AOV increase, 68% faster time-to-market.
+URL: /solutions/commerce-cloud
+
+### Experience Cloud
+Customer and partner portals, self-service communities. Typical results: 48% ticket deflection, 3.4x ROI, 50% lower onboarding costs.
+URL: /solutions/experience-cloud
+
+### Analytics / Tableau
+CRM Analytics and Tableau for real-time dashboards and AI predictions. Typical results: 382% ROI, 28% better forecasts, 65% faster reporting.
+URL: /solutions/analytics
+
+### Platform & AppExchange
+Custom app development, Flow Builder automation, integrations. Typical results: 478% ROI, 70% faster delivery, 80% less code.
+URL: /solutions/platform
+
+### Slack
+AI-powered work OS connected to Salesforce CRM. Typical results: 47% productivity increase, 29% fewer meetings, 32% fewer emails.
+URL: /solutions/slack
+
+### Health Cloud
+Patient 360, care coordination, and engagement for healthcare and life sciences. HIPAA compliant. Typical results: 30% patient satisfaction improvement, 25% admin cost reduction, 40% faster coordination.
+URL: /solutions/health-cloud
+
+## Process
+1. Discovery - Identify highest-impact use case based on your data
+2. Design - Custom agents designed around your workflows and Salesforce org
+3. Build & Validate - Rigorous sandbox testing before production
+4. Go Live & Measure - Launch with KPI tracking from day one
+
+## Contact
+- Email: hello@cloudsheer.com
+- Book a call: https://cal.com/cloudsheer-consulting/30min
+- Website: https://cloudsheer-consulting.vercel.app
+- LinkedIn: https://www.linkedin.com/company/cloud-sheer/
+- AppExchange: https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7
+
+## Offices
+- Dallas, USA
+- Delhi, India
+- London, UK
+- New York, USA
