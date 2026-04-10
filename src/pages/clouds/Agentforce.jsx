@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "AI agents resolve routine cases autonomously - Wiley saw a 40% boost in case resolution after deploying Agentforce" },
-  { pain: "Leads slip through the cracks because response times are too slow", fix: "Agents engage every lead in under 60 seconds, qualify them, and book meetings - around the clock" },
-  { pain: "Every customer interaction costs $11+ when a human handles it", fix: "Agentforce conversations cost around $2 each - an 80%+ reduction in cost per interaction" },
-  { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "Agentforce handles demand spikes instantly - no hiring, no ramp-up, no extra overhead" },
-  { pain: "Customers get inconsistent answers depending on who they reach", fix: "AI agents deliver the same accurate, on-brand response every time - across every channel" },
+  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "<strong>AI agents</strong> resolve routine cases autonomously - Wiley saw 40% more resolutions" },
+  { pain: "Leads slip through the cracks because response times are too slow", fix: "<strong>Agentforce</strong> engages every lead in under 60 seconds and books meetings 24/7" },
+  { pain: "Every customer interaction costs $11+ when a human handles it", fix: "<strong>Agentforce</strong> conversations cost around $2 each - 80%+ cost reduction" },
+  { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "<strong>Agentforce</strong> handles demand spikes instantly - no hiring or ramp-up needed" },
+  { pain: "Customers get inconsistent answers depending on who they reach", fix: "<strong>AI agents</strong> deliver the same accurate, on-brand response every time" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Resolve more cases. Hire fewer agents.',
     points: [
-      "Autonomously resolves common cases - password resets, order status, returns, FAQs - without human involvement",
-      "Pulls answers from your knowledge base, past cases, and CRM data in real time for accurate, contextual responses",
-      "Takes action: processes refunds, updates accounts, creates follow-up tasks, and closes tickets end to end",
-      "Seamlessly escalates complex issues to human agents with full conversation history and customer context",
-      "Operates 24/7 across chat, email, SMS, WhatsApp, and self-service portals - no coverage gaps",
+      "<strong>Autonomous resolution</strong> of password resets, order status, returns, and FAQs",
+      "<strong>Real-time answers</strong> from your knowledge base, past cases, and CRM data",
+      "<strong>Takes action</strong> - processes refunds, updates accounts, and closes tickets end to end",
+      "<strong>Smart escalation</strong> to human agents with full conversation history and context",
+      "<strong>24/7 coverage</strong> across chat, email, SMS, WhatsApp, and self-service portals",
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Turn every lead into a qualified opportunity.',
     points: [
-      "Engages inbound leads within seconds - before they lose interest or contact a competitor",
-      "Asks intelligent qualifying questions based on your ICP criteria and scores leads automatically",
-      "Books discovery calls directly into rep calendars, eliminating back-and-forth scheduling",
-      "Generates personalised follow-up sequences using CRM data, past interactions, and deal context",
-      "Keeps pipeline data clean by auto-updating leads, contacts, and opportunity records after every interaction",
+      "<strong>Instant engagement</strong> - contacts inbound leads within seconds, before they go cold",
+      "<strong>Intelligent qualification</strong> based on your ICP criteria with automatic lead scoring",
+      "<strong>Calendar booking</strong> schedules discovery calls directly into rep calendars",
+      "<strong>Personalised follow-ups</strong> generated from CRM data, interactions, and deal context",
+      "<strong>Auto-updated pipeline</strong> - leads, contacts, and opportunities stay clean after every interaction",
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Eliminate busywork. Accelerate execution.',
     points: [
-      "Automates multi-step workflows - approval routing, escalation paths, and cross-team notifications",
-      "Generates and distributes operational reports on schedule without manual data pulls",
-      "Monitors SLAs in real time and proactively alerts stakeholders before breaches occur",
-      "Keeps CRM data accurate by detecting duplicates, filling gaps, and standardising records automatically",
-      "Connects Salesforce to ERP, HRIS, and other systems for end-to-end process automation",
+      "<strong>Multi-step automation</strong> for approval routing, escalations, and cross-team notifications",
+      "<strong>Scheduled reports</strong> generated and distributed without manual data pulls",
+      "<strong>SLA monitoring</strong> with proactive alerts to stakeholders before breaches occur",
+      "<strong>Data hygiene</strong> - detects duplicates, fills gaps, and standardises records automatically",
+      "<strong>System integration</strong> connects Salesforce to ERP, HRIS, and other platforms",
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Personalise every buyer journey at scale.',
     points: [
-      "Powers conversational shopping experiences - like Saks Fifth Avenue using Agentforce for personalised product recommendations",
-      "Answers pre-purchase questions about sizing, availability, and shipping to reduce cart abandonment",
-      "Segments audiences and triggers campaigns automatically based on real-time customer behaviour",
-      "Re-engages lapsed customers with tailored offers driven by purchase history and browsing data",
-      "Delivers consistent, on-brand messaging across web, mobile, social, and messaging channels",
+      "<strong>Conversational shopping</strong> - personalised product recommendations like Saks Fifth Avenue",
+      "<strong>Pre-purchase answers</strong> on sizing, availability, and shipping reduce cart abandonment",
+      "<strong>Auto-triggered campaigns</strong> segment audiences based on real-time customer behaviour",
+      "<strong>Lapsed customer re-engagement</strong> with tailored offers from purchase and browsing data",
+      "<strong>On-brand messaging</strong> delivered consistently across web, mobile, social, and messaging",
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function AgentforcePage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function AgentforcePage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

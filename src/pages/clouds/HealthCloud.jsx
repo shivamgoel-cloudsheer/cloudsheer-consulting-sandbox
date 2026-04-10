@@ -8,11 +8,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Care teams work from disconnected systems with no unified view of the patient or member", fix: "Health Cloud builds a complete Patient/Member 360 - pulling in clinical, claims, and engagement data so every team member sees the full picture" },
-  { pain: "Care coordination is manual, error-prone, and slows down treatment timelines", fix: "Automated care plans, task assignments, and real-time alerts cut coordination time by 40% and keep every provider in sync" },
-  { pain: "Patients and members struggle to engage with their care outside of appointments", fix: "Self-service portals, secure messaging, and automated outreach keep patients connected and adherent to their care plans" },
-  { pain: "EHR and claims data lives in silos that your CRM cannot access or act on", fix: "Native HL7 FHIR and EHR integrations bring clinical data directly into Salesforce - no middleware, no manual imports" },
-  { pain: "Prior authorizations and utilization reviews take days and frustrate providers and patients alike", fix: "Automated utilization management workflows cut prior auth turnaround from days to hours while reducing denials" },
+  { pain: "Care teams work from disconnected systems with no unified view of the patient or member", fix: "<strong>Patient/Member 360</strong> unifies clinical, claims, and engagement data in one profile" },
+  { pain: "Care coordination is manual, error-prone, and slows down treatment timelines", fix: "<strong>Automated care plans</strong> and real-time alerts cut coordination time by 40%" },
+  { pain: "Patients and members struggle to engage with their care outside of appointments", fix: "<strong>Self-service portals</strong> and secure messaging keep patients connected to their care plans" },
+  { pain: "EHR and claims data lives in silos that your CRM cannot access or act on", fix: "<strong>HL7 FHIR integrations</strong> bring clinical data directly into Salesforce - no middleware" },
+  { pain: "Prior authorizations and utilization reviews take days and frustrate providers and patients alike", fix: "<strong>Automated UM workflows</strong> cut prior auth turnaround from days to hours" },
 ]
 
 const outcomes = [
@@ -31,11 +31,11 @@ const capabilities = [
     color: '#0176D3',
     headline: 'One view of every patient. Every interaction. Every outcome.',
     points: [
-      "Unifies clinical, claims, behavioral, and social determinants data into a single actionable patient profile",
-      "Surfaces care gaps, medication adherence risks, and outstanding referrals so nothing falls through the cracks",
-      "Gives care teams real-time visibility into the full care journey - across providers, facilities, and payers",
-      "Integrates EHR data via HL7 FHIR APIs so clinical context is always current and accessible in Salesforce",
-      "Supports both provider and payer workflows - from individual care plans to population health dashboards",
+      "<strong>Unified profile</strong> combines clinical, claims, behavioral, and social determinants data",
+      "<strong>Care gap alerts</strong> surface medication risks and outstanding referrals automatically",
+      "<strong>Real-time visibility</strong> into the full care journey across providers, facilities, and payers",
+      "<strong>HL7 FHIR APIs</strong> keep EHR data current and accessible inside Salesforce",
+      "<strong>Provider and payer workflows</strong> - from individual care plans to population health dashboards",
     ],
   },
   {
@@ -44,11 +44,11 @@ const capabilities = [
     color: '#10B981',
     headline: 'Faster handoffs. Fewer gaps. Better outcomes.',
     points: [
-      "Automates care plan creation with configurable templates for chronic conditions, post-discharge, and wellness programs",
-      "Routes tasks to the right care team member automatically based on role, availability, and patient acuity",
-      "Tracks care plan milestones in real time and escalates when patients fall behind on goals or appointments",
-      "Enables seamless collaboration between PCPs, specialists, social workers, and community health partners",
-      "Reduces readmission risk with automated post-discharge follow-up workflows and patient check-ins",
+      "<strong>Care plan templates</strong> for chronic conditions, post-discharge, and wellness programs",
+      "<strong>Smart task routing</strong> assigns work based on role, availability, and patient acuity",
+      "<strong>Milestone tracking</strong> escalates when patients fall behind on goals or appointments",
+      "<strong>Cross-team collaboration</strong> between PCPs, specialists, social workers, and community partners",
+      "<strong>Post-discharge workflows</strong> reduce readmission risk with automated follow-ups and check-ins",
     ],
   },
   {
@@ -57,11 +57,11 @@ const capabilities = [
     color: '#F59E0B',
     headline: 'Keep patients connected between visits.',
     points: [
-      "Deploys branded patient portals where members can view care plans, message providers, and manage appointments",
-      "Sends automated appointment reminders, medication alerts, and wellness nudges via SMS, email, or app notifications",
-      "Powers secure two-way messaging between patients and care teams - fully compliant and audit-trailed",
-      "Delivers personalized health content and education based on conditions, care plans, and engagement history",
-      "Captures patient-reported outcomes and satisfaction surveys to drive continuous care improvement",
+      "<strong>Patient portals</strong> let members view care plans, message providers, and manage appointments",
+      "<strong>Automated reminders</strong> for appointments, medications, and wellness via SMS, email, or app",
+      "<strong>Secure two-way messaging</strong> between patients and care teams - fully compliant and audited",
+      "<strong>Personalised content</strong> delivers health education based on conditions and care plans",
+      "<strong>Patient-reported outcomes</strong> and satisfaction surveys drive continuous care improvement",
     ],
   },
   {
@@ -70,11 +70,11 @@ const capabilities = [
     color: '#6366F1',
     headline: 'Cut prior auth from days to hours.',
     points: [
-      "Automates prior authorization submissions with rules-based routing, auto-population, and status tracking",
-      "Gives utilization management teams a single workspace for reviewing, approving, and denying requests",
-      "Reduces provider abrasion with real-time auth status visibility and automated update notifications",
-      "Flags high-cost or outlier cases for clinical review while fast-tracking routine authorizations automatically",
-      "Delivers analytics on denial rates, turnaround times, and approval patterns to optimize UM performance",
+      "<strong>Automated prior auth</strong> with rules-based routing, auto-population, and status tracking",
+      "<strong>Single UM workspace</strong> for reviewing, approving, and denying authorization requests",
+      "<strong>Real-time auth visibility</strong> and automated notifications reduce provider abrasion",
+      "<strong>Smart case flagging</strong> routes outliers to clinical review, fast-tracks routine auths",
+      "<strong>UM analytics</strong> track denial rates, turnaround times, and approval patterns",
     ],
   },
 ]
@@ -144,7 +144,7 @@ export default function HealthCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -225,7 +225,7 @@ export default function HealthCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

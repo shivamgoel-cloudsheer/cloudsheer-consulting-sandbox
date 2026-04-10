@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Customers flood your support team with questions they could answer themselves", fix: "Branded self-service portals with knowledge bases and AI-powered search deflect 40-60% of inbound tickets" },
-  { pain: "Partners operate blind - no deal visibility, no shared pipeline, no collaboration tools", fix: "A CRM-connected partner community with deal registration, lead distribution, and real-time pipeline dashboards" },
-  { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "Guided digital onboarding with automated workflows cuts onboarding time by 50% and eliminates manual handoffs" },
-  { pain: "Your portal is disconnected from Salesforce - data is stale, syncs break, users lose trust", fix: "Experience Cloud is native to Salesforce - accounts, cases, opportunities, and knowledge update in real time, zero middleware" },
-  { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "Pixel-perfect branded portals with your domain, your design system, and responsive layouts across every device" },
+  { pain: "Customers flood your support team with questions they could answer themselves", fix: "<strong>Self-service portals</strong> with AI-powered search deflect 40-60% of inbound tickets" },
+  { pain: "Partners operate blind - no deal visibility, no shared pipeline, no collaboration tools", fix: "<strong>Partner community</strong> with deal registration, lead distribution, and pipeline dashboards" },
+  { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "<strong>Guided digital onboarding</strong> cuts onboarding time by 50% and eliminates manual handoffs" },
+  { pain: "Your portal is disconnected from Salesforce - data is stale, syncs break, users lose trust", fix: "<strong>Native Salesforce integration</strong> - accounts, cases, and knowledge update in real time" },
+  { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "<strong>Pixel-perfect branded portals</strong> with your domain and responsive layouts on every device" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: "Deflect tickets and delight customers at the same time",
     points: [
-      'Branded portals where customers view accounts, track orders, update billing, and manage subscriptions',
-      'Case creation and real-time status tracking - no phone calls or email chains required',
-      'AI-powered knowledge base with smart search that surfaces answers before a case is filed',
-      'Embedded Agentforce AI chat that resolves common requests instantly without human intervention',
-      'Fully responsive across desktop, tablet, and mobile with consistent brand experience',
+      '<strong>Branded portals</strong> for account views, order tracking, billing, and subscriptions',
+      '<strong>Case creation</strong> and real-time status tracking - no phone calls required',
+      '<strong>AI-powered knowledge base</strong> surfaces answers before a case is filed',
+      '<strong>Agentforce AI chat</strong> resolves common requests instantly without human intervention',
+      '<strong>Fully responsive</strong> across desktop, tablet, and mobile with consistent branding',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: "Accelerate channel revenue with a portal partners actually use",
     points: [
-      'Deal registration, lead distribution, and shared pipeline visibility that drives co-selling',
-      'MDF claims, co-marketing asset libraries, and joint campaign management in one place',
-      'Automated partner onboarding with guided learning paths, certifications, and tiered enablement',
-      'Role-based access by partner tier - each level sees the right content, pricing, and data',
-      'Performance dashboards, leaderboards, and scorecards that motivate and retain top partners',
+      '<strong>Deal registration</strong> and shared pipeline visibility that drives co-selling',
+      '<strong>MDF claims</strong> and co-marketing asset libraries in one place',
+      '<strong>Automated onboarding</strong> with guided learning paths, certifications, and enablement',
+      '<strong>Role-based access</strong> by partner tier - each level sees the right content and data',
+      '<strong>Performance dashboards</strong> and leaderboards that motivate and retain top partners',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: "Replace your legacy intranet with a connected digital hub",
     points: [
-      'Centralized hub for HR policies, IT service requests, benefits enrollment, and company news',
-      'Guided onboarding flows that walk new hires through every step - from day one to full productivity',
-      'Social feeds, discussion forums, and team collaboration spaces that drive engagement',
-      'Single sign-on with your identity provider - one login for Salesforce, portal, and connected apps',
-      'Embedded AI agents that answer common HR, IT, and policy questions instantly',
+      '<strong>Centralized hub</strong> for HR policies, IT requests, benefits, and company news',
+      '<strong>Guided onboarding</strong> walks new hires from day one to full productivity',
+      '<strong>Social feeds</strong> and discussion forums that drive team engagement',
+      '<strong>Single sign-on</strong> - one login for Salesforce, portal, and connected apps',
+      '<strong>Embedded AI agents</strong> answer common HR, IT, and policy questions instantly',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: "Give every client a white-glove digital experience at scale",
     points: [
-      'Project dashboards with milestone tracking, deliverable status, and real-time progress updates',
-      'Invoice viewing, payment history, contract management, and secure document sharing',
-      'Direct messaging with your delivery team - conversations stay in context, not buried in email',
-      'Granular role-based access so each client, contact, and stakeholder sees only their own data',
-      'Fully branded to your business - your domain, your design system, your customer experience',
+      '<strong>Project dashboards</strong> with milestone tracking and real-time progress updates',
+      '<strong>Invoice viewing</strong>, payment history, contracts, and secure document sharing',
+      '<strong>Direct messaging</strong> with your delivery team - conversations stay in context',
+      '<strong>Granular role-based access</strong> so each client sees only their own data',
+      '<strong>Fully branded</strong> to your business - your domain and your design system',
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function ExperienceCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function ExperienceCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

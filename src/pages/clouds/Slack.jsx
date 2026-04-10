@@ -8,11 +8,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "Slack Channels keep every conversation, file, and decision in one searchable place - so your team moves faster with full context" },
-  { pain: "Your sales team wastes hours toggling between CRM, email, and chat to update deals", fix: "Slack Sales Elevate surfaces pipeline data and lets reps update opportunities without ever leaving the conversation" },
-  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "Slack AI instantly summarises channels, threads, and Canvas docs - giving anyone answers in seconds, not days" },
-  { pain: "Your team sits through 10+ meetings a week that could have been a message or a quick huddle", fix: "Huddles and Clips replace unnecessary meetings with async video and live audio - teams using Slack cut meetings by 29%" },
-  { pain: "Manual handoffs between teams cause delays, errors, and dropped tasks", fix: "Workflow Builder automates approvals, routing, and notifications - no code required, no tasks falling through the cracks" },
+  { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "<strong>Slack Channels</strong> keep every conversation and decision in one searchable place" },
+  { pain: "Your sales team wastes hours toggling between CRM, email, and chat to update deals", fix: "<strong>Sales Elevate</strong> surfaces pipeline data - reps update deals without leaving Slack" },
+  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "<strong>Slack AI</strong> summarises channels, threads, and Canvas docs - answers in seconds" },
+  { pain: "Your team sits through 10+ meetings a week that could have been a message or a quick huddle", fix: "<strong>Huddles and Clips</strong> replace meetings with async video and live audio" },
+  { pain: "Manual handoffs between teams cause delays, errors, and dropped tasks", fix: "<strong>Workflow Builder</strong> automates approvals, routing, and notifications - no code required" },
 ]
 
 const outcomes = [
@@ -31,11 +31,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Close deals faster without leaving the conversation.',
     points: [
-      "Slack Sales Elevate pulls live pipeline data into channels so reps manage deals, update stages, and log notes without switching to CRM",
-      "Account channels automatically surface deal alerts, renewal dates, and key contact activity from Salesforce in real time",
-      "Huddles let reps loop in solutions engineers, legal, or leadership for instant deal support - no meeting scheduling required",
-      "Slack AI summarises long deal threads so anyone joining mid-cycle gets full context in seconds, not hours of reading",
-      "Automated workflows route approvals for discounts, contracts, and proposals - cutting days of back-and-forth to minutes",
+      "<strong>Sales Elevate</strong> pulls pipeline data into channels - manage deals without switching to CRM",
+      "<strong>Account channels</strong> surface deal alerts, renewal dates, and contact activity from Salesforce",
+      "<strong>Huddles</strong> loop in solutions engineers, legal, or leadership instantly - no scheduling needed",
+      "<strong>Slack AI</strong> summarises deal threads so anyone joining mid-cycle gets full context in seconds",
+      "<strong>Automated workflows</strong> route discount and contract approvals - days of back-and-forth to minutes",
     ],
   },
   {
@@ -44,11 +44,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Automate handoffs. Eliminate busywork.',
     points: [
-      "Workflow Builder creates no-code automations for approvals, onboarding checklists, incident triage, and request routing",
-      "Integrates with 2,600+ apps - Salesforce, Jira, Google Workspace, ServiceNow - so every tool feeds into one place",
-      "Slack AI finds answers from across your connected tools and conversations, reducing time spent searching by hours each week",
-      "Canvas documents turn tribal knowledge into living, editable docs pinned right inside the channels where work happens",
-      "Automated incident response channels spin up instantly with the right people, runbooks, and status updates in one thread",
+      "<strong>Workflow Builder</strong> creates no-code automations for approvals, onboarding, and request routing",
+      "<strong>2,600+ app integrations</strong> - Salesforce, Jira, Google Workspace, ServiceNow - all in one place",
+      "<strong>Slack AI</strong> finds answers across connected tools and conversations, saving hours weekly",
+      "<strong>Canvas docs</strong> turn tribal knowledge into living documents pinned inside channels",
+      "<strong>Incident channels</strong> spin up instantly with the right people, runbooks, and status updates",
     ],
   },
   {
@@ -57,11 +57,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Retain more customers with faster, coordinated responses.',
     points: [
-      "Shared customer channels (Slack Connect) bring your team and your clients into one space for real-time support and collaboration",
-      "Account health alerts from Salesforce surface in dedicated channels so CSMs catch churn signals before it is too late",
-      "Slack AI summarises customer threads so handoffs between CSMs happen without losing a single detail or commitment",
-      "Workflow automations trigger QBR prep, renewal reminders, and escalation paths based on account data from your CRM",
-      "Huddles let your team swarm on urgent customer issues in seconds - no calendar invites, no waiting for the next standup",
+      "<strong>Slack Connect</strong> brings your team and clients into one space for real-time collaboration",
+      "<strong>Account health alerts</strong> from Salesforce surface in channels so CSMs catch churn signals early",
+      "<strong>Slack AI</strong> summarises customer threads so CSM handoffs lose no details or commitments",
+      "<strong>Workflow automations</strong> trigger QBR prep, renewal reminders, and escalation paths from CRM data",
+      "<strong>Huddles</strong> let your team swarm on urgent customer issues in seconds - no calendar invites",
     ],
   },
   {
@@ -70,11 +70,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Make faster decisions with complete visibility.',
     points: [
-      "Executive channels centralise updates from every department - no more chasing status reports across email and meetings",
-      "Slack AI generates daily digests and channel summaries so leaders stay informed without reading every message",
-      "Canvas docs serve as living strategy briefs, decision logs, and project trackers - always current, always accessible",
-      "Automated dashboards push KPI updates from Salesforce, Tableau, and other tools directly into leadership channels",
-      "Searchable conversation history creates an institutional memory - decisions, rationale, and outcomes are never lost",
+      "<strong>Executive channels</strong> centralise updates from every department - no chasing status reports",
+      "<strong>Slack AI</strong> generates daily digests and summaries so leaders stay informed effortlessly",
+      "<strong>Canvas docs</strong> serve as living strategy briefs, decision logs, and project trackers",
+      "<strong>Automated dashboards</strong> push KPI updates from Salesforce and Tableau into leadership channels",
+      "<strong>Searchable history</strong> creates institutional memory - decisions and outcomes are never lost",
     ],
   },
 ]
@@ -144,7 +144,7 @@ export default function SlackPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -225,7 +225,7 @@ export default function SlackPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Leaders wait days for reports while opportunities slip through the cracks", fix: "Real-time dashboards auto-refresh so decisions happen in minutes, not days" },
-  { pain: "Forecasts miss by double digits because reps rely on gut feel over data", fix: "Einstein AI scores every deal and flags pipeline risk before it impacts the quarter" },
-  { pain: "Critical data is trapped in silos across CRM, ERP, spreadsheets, and data warehouses", fix: "Data Cloud and Tableau unify every source into one governed, queryable layer" },
-  { pain: "You invested in analytics tools but fewer than 20% of your team actually use them", fix: "We embed insights directly into Salesforce workflows so adoption happens by default" },
-  { pain: "Finance and sales argue over different versions of the same numbers every month", fix: "A single source of truth eliminates reconciliation and gives everyone the same view" },
+  { pain: "Leaders wait days for reports while opportunities slip through the cracks", fix: "<strong>Real-time dashboards</strong> auto-refresh so decisions happen in minutes, not days" },
+  { pain: "Forecasts miss by double digits because reps rely on gut feel over data", fix: "<strong>Einstein AI</strong> scores every deal and flags pipeline risk before quarter impact" },
+  { pain: "Critical data is trapped in silos across CRM, ERP, spreadsheets, and data warehouses", fix: "<strong>Data Cloud and Tableau</strong> unify every source into one governed layer" },
+  { pain: "You invested in analytics tools but fewer than 20% of your team actually use them", fix: "<strong>Embedded insights</strong> inside Salesforce workflows so adoption happens by default" },
+  { pain: "Finance and sales argue over different versions of the same numbers every month", fix: "<strong>Single source of truth</strong> eliminates reconciliation and gives everyone one view" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Close more deals with pipeline intelligence',
     points: [
-      'Live pipeline dashboards with stage velocity, conversion rates, and weighted forecast',
-      'Einstein opportunity scoring that predicts win probability and flags at-risk deals',
-      'Rep performance scorecards with quota attainment, activity metrics, and coaching signals',
-      'Waterfall analysis showing pipeline movement week-over-week so nothing slips unnoticed',
-      'Multi-touch attribution connecting marketing spend to closed-won revenue by campaign',
+      '<strong>Pipeline dashboards</strong> with stage velocity, conversion rates, and weighted forecast',
+      '<strong>Einstein opportunity scoring</strong> predicts win probability and flags at-risk deals',
+      '<strong>Rep scorecards</strong> with quota attainment, activity metrics, and coaching signals',
+      '<strong>Waterfall analysis</strong> shows pipeline movement week-over-week at a glance',
+      '<strong>Multi-touch attribution</strong> connects marketing spend to closed-won revenue',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve faster and retain more customers',
     points: [
-      'Real-time service operations dashboards with queue health, SLA compliance, and backlog trends',
-      'CSAT and NPS trend analysis with drill-down by agent, region, product, or case category',
-      'Einstein churn prediction models that flag at-risk accounts 30-60 days before renewal',
-      'Agent utilisation and case resolution time benchmarking against team and industry averages',
-      'Customer health scores combining support volume, product usage, and billing data',
+      '<strong>Service dashboards</strong> with queue health, SLA compliance, and backlog trends',
+      '<strong>CSAT and NPS analysis</strong> with drill-down by agent, region, or case category',
+      '<strong>Einstein churn prediction</strong> flags at-risk accounts 30-60 days before renewal',
+      '<strong>Agent utilisation</strong> benchmarking against team and industry averages',
+      '<strong>Customer health scores</strong> combining support volume, usage, and billing data',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'One source of truth for the leadership team',
     points: [
-      'Tableau workbooks pulling live data from Salesforce, NetSuite, Snowflake, BigQuery, and more',
-      'Executive scorecards with KPIs, trend lines, and variance analysis in a single view',
-      'Cohort analysis and net revenue retention tracking across business lines and geographies',
-      'Automated board-ready reports delivered on schedule - no analyst assembly required',
-      'Role-based row-level security so every leader sees exactly what they are authorised to see',
+      '<strong>Tableau workbooks</strong> pulling live data from Salesforce, NetSuite, Snowflake, and more',
+      '<strong>Executive scorecards</strong> with KPIs, trend lines, and variance analysis in one view',
+      '<strong>Cohort analysis</strong> and net revenue retention across business lines and regions',
+      '<strong>Automated board reports</strong> delivered on schedule - no analyst assembly required',
+      '<strong>Row-level security</strong> so every leader sees exactly what they are authorised to see',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Prove ROI on every campaign dollar spent',
     points: [
-      'Full-funnel attribution dashboards connecting impressions to pipeline to closed revenue',
-      'Marketing Cloud engagement analytics with conversion rates at every funnel stage',
-      'Audience segmentation insights powered by Data Cloud identity resolution and unification',
-      'Campaign performance comparison with cost-per-lead, cost-per-opportunity, and CAC metrics',
-      'Predictive analytics for next-best-action recommendations and content personalisation',
+      '<strong>Full-funnel attribution</strong> connecting impressions to pipeline to closed revenue',
+      '<strong>Engagement analytics</strong> with conversion rates at every funnel stage',
+      '<strong>Segmentation insights</strong> powered by Data Cloud identity resolution',
+      '<strong>Campaign comparison</strong> with cost-per-lead, cost-per-opportunity, and CAC metrics',
+      '<strong>Predictive analytics</strong> for next-best-action and content personalisation',
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function AnalyticsPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function AnalyticsPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

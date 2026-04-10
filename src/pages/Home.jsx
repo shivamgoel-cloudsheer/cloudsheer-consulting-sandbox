@@ -228,24 +228,22 @@ function AgentVisual() {
   )
 }
 
-/* ─── Who We Help ──────────────────────────────────────────── */
-function WhoWeHelp() {
+/* ─── Trusted By ──────────────────────────────────────────── */
+function TrustedBy() {
+  const clients = ['Storehouse', 'Trexo Robotics', 'Sell That Florida House', 'Green Light Offer', 'Camp Quality', 'Mr-Manhole', 'Airius LLC', 'Beta Agency', 'Givergy', 'Hope-Bio']
   return (
     <section style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF' }}>
       <div className="section-wrap py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left">
-          <p className="text-sm font-medium leading-relaxed" style={{ color: '#475569' }}>
-            We work with <strong style={{ color: '#032D60' }}>mid-market and enterprise companies</strong> running Salesforce
-            who want to automate support, sales, or operations with AI agents.
-          </p>
-          <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7"
-            target="_blank" rel="noopener noreferrer"
-            className="shrink-0 flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
-            style={{ color: '#0176D3', backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)' }}
-            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0176D3'; e.currentTarget.style.color = 'white' }}
-            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'rgba(1,118,211,0.08)'; e.currentTarget.style.color = '#0176D3' }}>
-            <CheckCircle2 className="w-3.5 h-3.5" /> Verified Salesforce Partner
-          </a>
+        <div className="flex flex-col sm:flex-row items-center gap-8">
+          <p className="text-xs uppercase tracking-widest shrink-0 font-semibold" style={{ color: '#64748B' }}>Trusted by</p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
+            {clients.map((name, i) => (
+              <span key={name} className="font-bold text-sm tracking-wide animate-fade-up"
+                style={{ color: '#032D60', animationDelay: `${i * 60}ms` }}>
+                {name}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -686,7 +684,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhoWeHelp />
+      <TrustedBy />
       <WhyAgentforce />
       <AgentforceShowcase />
       <Stats />

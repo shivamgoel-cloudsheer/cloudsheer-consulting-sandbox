@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "A single unified console surfaces every channel, case history, and AI recommendation in one view - giving agents full context instantly" },
-  { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "Omni-channel routing delivers cases to the right agent with complete conversation history, eliminating transfers and repeat explanations" },
-  { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "Agentforce Service Agent resolves routine cases autonomously around the clock - freeing your team for complex, high-value work" },
-  { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "Entitlement tracking with milestone alerts flags at-risk cases in real time and auto-triggers escalation workflows before breaches occur" },
-  { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "Einstein Search surfaces the most relevant article based on case context, cutting average handle time and improving first-contact resolution" },
+  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "<strong>Unified console</strong> surfaces every channel, case history, and AI recommendation in one view" },
+  { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "<strong>Omni-channel routing</strong> delivers cases to the right agent with complete conversation history" },
+  { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "<strong>Agentforce Service Agent</strong> resolves routine cases autonomously around the clock" },
+  { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "<strong>Entitlement tracking</strong> flags at-risk cases in real time and auto-triggers escalation" },
+  { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "<strong>Einstein Search</strong> surfaces the most relevant article based on case context" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Every channel. One workspace. Zero context lost.',
     points: [
-      'Unify email, chat, phone, WhatsApp, social media, and SMS into a single agent console',
-      'Skills-based routing matches each case to the best-qualified available agent automatically',
-      'Full customer timeline - past purchases, open cases, sentiment score - visible before the agent responds',
-      'Seamless bot-to-human handoff preserves the entire conversation so customers never repeat themselves',
-      'Supervisor console with real-time queue health, agent utilisation, and live monitoring with whisper and barge-in',
+      '<strong>Unified console</strong> for email, chat, phone, WhatsApp, social, and SMS in one view',
+      '<strong>Skills-based routing</strong> matches each case to the best-qualified available agent',
+      '<strong>Customer timeline</strong> - purchases, open cases, and sentiment visible before responding',
+      '<strong>Bot-to-human handoff</strong> preserves the full conversation so customers never repeat themselves',
+      '<strong>Supervisor console</strong> with real-time queue health, utilisation, and live monitoring',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve cases before they ever reach your team.',
     points: [
-      'Agentforce Service Agent handles Tier-1 and Tier-2 queries autonomously - grounded in your trusted data',
-      'AI chatbots search your knowledge base, case history, and product docs to deliver precise answers in real time',
-      'Branded self-service portals let customers track orders, update accounts, and submit cases on their own',
-      'Einstein Article Recommendations surface the right help content to both agents and customers, reducing handle time',
-      'Automatic escalation to a human agent with full context when AI confidence drops below your defined threshold',
+      '<strong>Agentforce Service Agent</strong> handles Tier-1 and Tier-2 queries autonomously',
+      '<strong>AI chatbots</strong> search your knowledge base and case history for precise real-time answers',
+      '<strong>Self-service portals</strong> let customers track orders, update accounts, and submit cases',
+      '<strong>Einstein Article Recommendations</strong> surface the right content to agents and customers',
+      '<strong>Auto-escalation</strong> to a human agent with full context when AI confidence drops',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Dispatch the right technician. First time. Every time.',
     points: [
-      'AI-optimised scheduling and dispatch assigns the closest technician with the right skills and parts',
-      'Real-time GPS tracking and automated appointment reminders keep customers informed at every step',
-      'Mobile app gives field technicians offline access to case data, asset history, knowledge articles, and parts inventory',
-      'Work orders are created automatically from cases with pre-populated details, reducing admin time by up to 40%',
-      'First-time fix rates improve with AI-assisted diagnostics and remote visual support via video',
+      '<strong>AI-optimised dispatch</strong> assigns the closest technician with the right skills and parts',
+      '<strong>GPS tracking</strong> and automated reminders keep customers informed at every step',
+      '<strong>Mobile app</strong> gives technicians offline access to cases, assets, and parts inventory',
+      '<strong>Auto-created work orders</strong> from cases with pre-populated details - 40% less admin time',
+      '<strong>AI-assisted diagnostics</strong> and remote video support improve first-time fix rates',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'See everything. Fix problems before customers notice.',
     points: [
-      'Pre-built dashboards track CSAT, first-contact resolution, SLA compliance, cost-per-case, and agent performance',
-      'Entitlement and milestone tracking with automatic breach alerts ensures every commitment is met',
-      'Einstein AI flags at-risk cases, predicts escalations, and recommends next-best actions for agents',
-      'Custom reports across every channel help you identify bottlenecks, optimise staffing, and reduce cost-to-serve',
-      'CRM Analytics (Tableau) integration delivers executive-ready service insights with drill-down to individual cases',
+      '<strong>Pre-built dashboards</strong> track CSAT, SLA compliance, cost-per-case, and agent performance',
+      '<strong>Entitlement tracking</strong> with automatic breach alerts ensures every commitment is met',
+      '<strong>Einstein AI</strong> flags at-risk cases, predicts escalations, and recommends next actions',
+      '<strong>Custom reports</strong> across every channel to identify bottlenecks and reduce cost-to-serve',
+      '<strong>Tableau integration</strong> delivers executive-ready insights with drill-down to individual cases',
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function ServiceCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -225,7 +225,7 @@ export default function ServiceCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

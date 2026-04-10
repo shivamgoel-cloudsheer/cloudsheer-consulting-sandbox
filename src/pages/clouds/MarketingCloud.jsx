@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "Einstein AI personalises content, send times, and frequency for every subscriber - lifting open rates and inbox placement" },
-  { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "Multi-touch attribution ties every email, ad click, and journey step to closed-won revenue in Sales Cloud" },
-  { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "Journey Builder triggers multi-channel sequences from any CRM event - so no lead goes cold" },
-  { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "Data Cloud unifies every interaction into a single customer profile that powers real-time segmentation" },
-  { pain: "Your team wastes hours building emails and pulling lists manually", fix: "Drag-and-drop content builder, dynamic templates, and automated audience refresh cut campaign build time by 50%+" },
+  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "<strong>Einstein AI</strong> personalises content, send times, and frequency per subscriber" },
+  { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "<strong>Multi-touch attribution</strong> ties every campaign to pipeline and closed-won revenue" },
+  { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "<strong>Journey Builder</strong> triggers multi-channel sequences from any CRM event" },
+  { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "<strong>Data Cloud</strong> unifies every interaction into one real-time customer profile" },
+  { pain: "Your team wastes hours building emails and pulling lists manually", fix: "<strong>Drag-and-drop builder</strong> and dynamic templates cut campaign build time by 50%+" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Automated journeys that nurture, convert, and retain',
     points: [
-      'Journey Builder orchestrates multi-step, multi-channel flows triggered by CRM events, web behaviour, or purchase activity',
-      'Pre-built journey templates for welcome series, abandoned cart, win-back, post-purchase, and renewal reminders',
-      'Dynamic content blocks swap images, offers, and copy per subscriber - no duplicate emails needed',
-      'Einstein Send Time Optimisation delivers each email when a contact is most likely to engage',
-      'Built-in A/B and multivariate testing on subject lines, content, CTAs, and send times at scale',
+      '<strong>Journey Builder</strong> orchestrates multi-channel flows from CRM events and behaviour',
+      '<strong>Pre-built templates</strong> for welcome, abandoned cart, win-back, and renewal journeys',
+      '<strong>Dynamic content blocks</strong> swap images and offers per subscriber automatically',
+      '<strong>Einstein Send Time</strong> delivers each email when contacts are most likely to engage',
+      '<strong>A/B and multivariate testing</strong> on subject lines, content, and CTAs at scale',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'One unified profile. Limitless segmentation.',
     points: [
-      'Data Cloud ingests and unifies data from CRM, web, mobile, POS, and third-party sources into a single customer profile',
-      'Drag-and-drop segmentation using behavioural, transactional, demographic, and engagement-based filters',
-      'Real-time audience activation pushes segments to email, SMS, push, ads, and web personalisation simultaneously',
-      'Native sync to Google Ads, Meta, and LinkedIn lets you suppress existing customers and target lookalikes from CRM data',
-      'Calculated insights surface predictive metrics like likelihood to purchase, churn risk, and lifetime value',
+      '<strong>Data Cloud</strong> unifies CRM, web, mobile, and POS data into one customer profile',
+      '<strong>Drag-and-drop segmentation</strong> using behavioural, transactional, and engagement filters',
+      '<strong>Real-time activation</strong> pushes segments to email, SMS, ads, and web simultaneously',
+      '<strong>Native ad sync</strong> to Google, Meta, and LinkedIn for suppression and lookalikes',
+      '<strong>Calculated insights</strong> surface purchase likelihood, churn risk, and lifetime value',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Prove exactly which campaigns drive revenue',
     points: [
-      'Multi-touch attribution connects every marketing touchpoint to pipeline, opportunities, and closed-won revenue in Sales Cloud',
-      'Real-time dashboards track email deliverability, journey conversion rates, engagement trends, and ROI by campaign',
-      'Einstein Engagement Scoring predicts which contacts will open, click, or unsubscribe - so you act before they disengage',
-      'Campaign influence reporting shows exactly how marketing contributes to every deal in the pipeline',
-      'Path analysis visualises the customer journey from first touch to close, revealing which channels accelerate deals',
+      '<strong>Multi-touch attribution</strong> connects every touchpoint to pipeline and closed-won revenue',
+      '<strong>Real-time dashboards</strong> track deliverability, conversions, and ROI by campaign',
+      '<strong>Einstein Engagement Scoring</strong> predicts opens, clicks, and unsubscribes before they happen',
+      '<strong>Campaign influence</strong> shows how marketing contributes to every deal in pipeline',
+      '<strong>Path analysis</strong> reveals which channels accelerate deals from first touch to close',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Turn anonymous traffic into qualified pipeline',
     points: [
-      'Lead scoring and grading models automatically surface sales-ready prospects based on engagement and fit',
-      'Automated nurture programs advance MQLs through the funnel with personalised content at each stage',
-      'Bi-directional CRM sync ensures sales sees every email open, link click, form fill, and page visit in real time',
-      'Landing pages, forms, and gated content are built, tracked, and attributed in a single platform',
-      'Engagement Studio provides branching logic for complex B2B buying journeys with multiple decision-makers',
+      '<strong>Lead scoring</strong> automatically surfaces sales-ready prospects based on engagement and fit',
+      '<strong>Automated nurture</strong> advances MQLs through the funnel with personalised content',
+      '<strong>Bi-directional CRM sync</strong> shows sales every open, click, and form fill in real time',
+      '<strong>Landing pages and forms</strong> are built, tracked, and attributed in one platform',
+      '<strong>Engagement Studio</strong> handles branching logic for complex B2B buying journeys',
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function MarketingCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function MarketingCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

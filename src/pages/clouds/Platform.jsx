@@ -6,11 +6,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Custom app development takes 6-12 months and blows past budget before delivering value", fix: "Salesforce Platform cuts app delivery time by up to 70% with low-code tools, reusable components, and built-in mobile support" },
-  { pain: "Critical business processes still run on spreadsheets, email chains, and disconnected tools", fix: "Purpose-built Platform apps connect directly to your CRM data, enforce business rules automatically, and work on any device" },
-  { pain: "Every integration project turns into a custom-coded, fragile point-to-point connection", fix: "Platform APIs, MuleSoft connectors, and Platform Events deliver real-time, governed integrations that scale with your business" },
-  { pain: "Manual workflows consume thousands of hours per year across sales, service, and operations", fix: "Flow Builder automates multi-step processes with clicks - customers report eliminating up to 90% of manual data entry and routing tasks" },
-  { pain: "You buy AppExchange apps that overlap, conflict, or create ungoverned technical debt", fix: "We evaluate, implement, and govern AppExchange solutions so they deliver ROI without compromising your org's health" },
+  { pain: "Custom app development takes 6-12 months and blows past budget before delivering value", fix: "<strong>Low-code Platform</strong> cuts app delivery time by up to 70% with reusable components" },
+  { pain: "Critical business processes still run on spreadsheets, email chains, and disconnected tools", fix: "<strong>Purpose-built apps</strong> connect to CRM data, enforce rules, and work on any device" },
+  { pain: "Every integration project turns into a custom-coded, fragile point-to-point connection", fix: "<strong>Platform APIs and MuleSoft</strong> deliver real-time, governed integrations that scale" },
+  { pain: "Manual workflows consume thousands of hours per year across sales, service, and operations", fix: "<strong>Flow Builder</strong> automates multi-step processes with clicks - eliminating 90% of manual work" },
+  { pain: "You buy AppExchange apps that overlap, conflict, or create ungoverned technical debt", fix: "<strong>Expert governance</strong> ensures AppExchange apps deliver ROI without compromising org health" },
 ]
 
 const outcomes = [
@@ -29,11 +29,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Ship business apps in weeks, not quarters',
     points: [
-      'Build custom objects, page layouts, and validation rules without writing a single line of code',
-      'Create rich, responsive interfaces with Lightning Web Components that load 50% faster than Visualforce',
-      'Write Apex for complex server-side logic, batch processing, and advanced trigger orchestration',
-      'Deploy mobile-ready apps instantly - Salesforce Mobile gives every user offline-capable access',
-      'Manage deployments with Salesforce DX, scratch orgs, and CI/CD pipelines for enterprise-grade governance',
+      '<strong>Custom objects and layouts</strong> built without writing a single line of code',
+      '<strong>Lightning Web Components</strong> load 50% faster than Visualforce',
+      '<strong>Apex</strong> for complex server-side logic, batch processing, and trigger orchestration',
+      '<strong>Mobile-ready apps</strong> instantly - Salesforce Mobile gives offline-capable access',
+      '<strong>Salesforce DX</strong> with scratch orgs and CI/CD pipelines for enterprise governance',
     ],
   },
   {
@@ -42,11 +42,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Eliminate manual work across every department',
     points: [
-      'Replace time-consuming manual workflows with Flow Builder - no code required, deployable in hours',
-      'Trigger automations from record changes, schedules, platform events, or user actions in real time',
-      'Automate approvals, escalations, SLA enforcement, and cross-object data updates end-to-end',
-      'Orchestrate multi-step, multi-department processes with Flow Orchestrator for complex business logic',
-      'Retire legacy workflow rules, process builders, and Apex triggers - consolidate on one automation engine',
+      '<strong>Flow Builder</strong> replaces manual workflows - no code required, deployable in hours',
+      '<strong>Trigger automations</strong> from record changes, schedules, or platform events in real time',
+      '<strong>Automate approvals</strong>, escalations, SLA enforcement, and cross-object updates end-to-end',
+      '<strong>Flow Orchestrator</strong> handles multi-step, multi-department processes and complex logic',
+      '<strong>Consolidate</strong> legacy workflow rules, process builders, and triggers into one engine',
     ],
   },
   {
@@ -55,11 +55,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Connect every system in your tech stack',
     points: [
-      'REST and SOAP APIs handle over 7 billion daily transactions across the Salesforce ecosystem',
-      'Platform Events and Change Data Capture deliver real-time, event-driven sync with zero polling',
-      'MuleSoft Anypoint connectors provide pre-built links to 400+ enterprise systems including SAP, Oracle, and Workday',
-      'External Objects and Salesforce Connect surface external data without copying it into your org',
-      'Heroku and AWS integrations extend Platform for compute-heavy workloads and external-facing apps',
+      '<strong>REST and SOAP APIs</strong> handle over 7 billion daily transactions across Salesforce',
+      '<strong>Platform Events</strong> and Change Data Capture deliver real-time sync with zero polling',
+      '<strong>MuleSoft connectors</strong> provide pre-built links to 400+ systems including SAP and Oracle',
+      '<strong>External Objects</strong> surface external data without copying it into your org',
+      '<strong>Heroku and AWS</strong> extend Platform for compute-heavy and external-facing apps',
     ],
   },
   {
@@ -68,11 +68,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Extend your org with proven, vetted solutions',
     points: [
-      'Access 10,000+ pre-built apps, components, and industry solutions - most with free trials',
-      'Document generation, e-signatures, CPQ extensions, data enrichment, and compliance tools ready to install',
-      'Every listed app passes Salesforce security review - reducing your vendor evaluation burden',
-      'Cut months off project timelines by leveraging existing marketplace solutions instead of building from scratch',
-      'Expert evaluation ensures you pick the right tool for your org - not just the highest-rated one',
+      '<strong>10,000+ pre-built apps</strong> and components - most with free trials',
+      '<strong>Doc generation, e-signatures, CPQ</strong>, data enrichment, and compliance tools ready to install',
+      '<strong>Security reviewed</strong> - every listed app passes Salesforce security review',
+      '<strong>Faster timelines</strong> by leveraging marketplace solutions instead of building from scratch',
+      '<strong>Expert evaluation</strong> ensures you pick the right tool - not just the highest-rated',
     ],
   },
 ]
@@ -142,7 +142,7 @@ export default function PlatformPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function PlatformPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Low conversion rates are leaving millions in unrealised revenue on the table", fix: "Einstein AI personalisation delivers up to 29% higher conversion rates through predictive product recommendations and tailored shopping journeys" },
-  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "A single unified commerce platform serves both buyer segments from one codebase - cutting platform costs by up to 50%" },
-  { pain: "Cart abandonment above 70% means most of your traffic generates zero revenue", fix: "Optimised one-page checkout, persistent carts, and Einstein-driven recovery campaigns reduce abandonment by up to 32%" },
-  { pain: "Your storefront crashes during peak traffic and cannot support global expansion", fix: "Cloud-native elastic infrastructure handles 500M+ page views per day across 50+ countries with 99.99% uptime SLA" },
-  { pain: "Disconnected order, inventory, and customer data creates fulfilment errors and poor CX", fix: "Native integration with Sales Cloud, Service Cloud, and MuleSoft creates a single source of truth across every touchpoint" },
+  { pain: "Low conversion rates are leaving millions in unrealised revenue on the table", fix: "<strong>Einstein AI</strong> delivers up to 29% higher conversions via predictive recommendations" },
+  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "<strong>Unified commerce platform</strong> serves B2B and B2C from one codebase - cutting costs 50%" },
+  { pain: "Cart abandonment above 70% means most of your traffic generates zero revenue", fix: "<strong>Optimised checkout</strong> and Einstein recovery campaigns reduce abandonment by up to 32%" },
+  { pain: "Your storefront crashes during peak traffic and cannot support global expansion", fix: "<strong>Elastic infrastructure</strong> handles 500M+ page views daily across 50+ countries" },
+  { pain: "Disconnected order, inventory, and customer data creates fulfilment errors and poor CX", fix: "<strong>Native CRM integration</strong> creates a single source of truth across every touchpoint" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'High-converting storefronts built for speed',
     points: [
-      'Composable or SFRA storefronts with sub-second page loads and Core Web Vitals optimisation',
-      'Einstein AI recommendations that drive 7-15% of total site revenue through personalised product discovery',
-      'Mobile-first PWA experiences - 72% of Commerce Cloud traffic now comes from mobile devices',
-      'Built-in A/B testing, predictive sort, and conversion optimisation with no third-party tools required',
-      'SEO-ready architecture with structured data, dynamic sitemaps, and pre-rendered meta tags',
+      '<strong>Composable or SFRA storefronts</strong> with sub-second loads and Core Web Vitals optimisation',
+      '<strong>Einstein AI recommendations</strong> drive 7-15% of total site revenue',
+      '<strong>Mobile-first PWA</strong> experiences - 72% of traffic now comes from mobile',
+      '<strong>Built-in A/B testing</strong> and predictive sort with no third-party tools required',
+      '<strong>SEO-ready architecture</strong> with structured data, sitemaps, and pre-rendered meta tags',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Self-service portals that accelerate revenue',
     points: [
-      'Contract pricing, negotiated price books, and volume-tiered discounts per account hierarchy',
-      'Bulk ordering, reorder lists, CSV upload, and punchout catalogue integration for procurement teams',
-      'Role-based access with multi-level approval workflows and spending limits per buyer',
-      'Real-time inventory availability, ATP checks, and estimated delivery dates at checkout',
-      'Pre-built connectors for SAP, NetSuite, and major ERP/WMS systems via MuleSoft',
+      '<strong>Contract pricing</strong> with negotiated price books and volume-tiered discounts',
+      '<strong>Bulk ordering</strong> with reorder lists, CSV upload, and punchout catalogue support',
+      '<strong>Role-based access</strong> with approval workflows and spending limits per buyer',
+      '<strong>Real-time inventory</strong> with ATP checks and estimated delivery dates at checkout',
+      '<strong>Pre-built MuleSoft connectors</strong> for SAP, NetSuite, and major ERP/WMS systems',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Fulfil from anywhere, faster',
     points: [
-      'Unified order lifecycle spanning checkout, payment capture, fulfilment, and returns',
-      'Distributed order management that routes orders to the optimal location - warehouse, store, or 3PL',
-      'Ship-from-store, BOPIS, and curbside pickup orchestration that increases store revenue by up to 25%',
-      'Automated returns, exchanges, and instant refund processing with configurable business rules',
-      'Real-time order tracking and proactive notifications that reduce WISMO calls by up to 30%',
+      '<strong>Unified order lifecycle</strong> spanning checkout, payment, fulfilment, and returns',
+      '<strong>Distributed order management</strong> routes to the optimal warehouse, store, or 3PL',
+      '<strong>Ship-from-store and BOPIS</strong> orchestration increases store revenue by up to 25%',
+      '<strong>Automated returns</strong> and instant refund processing with configurable rules',
+      '<strong>Real-time order tracking</strong> and proactive notifications reduce WISMO calls by 30%',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Let AI maximise every transaction',
     points: [
-      'Einstein GPT-powered product recommendations on every page, email, and post-purchase touchpoint',
-      'Predictive sort that reorders category pages per shopper - increasing click-through by up to 9.6%',
-      'AI-powered search with natural language understanding, typo tolerance, and zero-result recovery',
-      'Automated merchandising rules that optimise for margin, sell-through velocity, and inventory levels',
-      'Commerce Insights dashboards with revenue attribution, funnel analysis, and basket trend detection',
+      '<strong>Einstein GPT recommendations</strong> on every page, email, and post-purchase touchpoint',
+      '<strong>Predictive sort</strong> reorders category pages per shopper - lifting CTR up to 9.6%',
+      '<strong>AI-powered search</strong> with natural language, typo tolerance, and zero-result recovery',
+      '<strong>Automated merchandising</strong> optimises for margin, sell-through, and inventory levels',
+      '<strong>Commerce Insights</strong> dashboards with revenue attribution and funnel analysis',
     ],
   },
 ]
@@ -143,7 +143,7 @@ export default function CommerceCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ export default function CommerceCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>

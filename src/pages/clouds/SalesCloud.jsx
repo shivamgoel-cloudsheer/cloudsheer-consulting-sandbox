@@ -7,12 +7,12 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Reps waste 72% of their week on non-selling activities", fix: "Einstein Activity Capture auto-logs calls, emails, and meetings - giving reps 10+ hours back every week to actually sell" },
-  { pain: "Forecast calls are guesswork and leadership loses trust in the pipeline", fix: "AI-powered forecasting delivers 42% more accurate predictions so you commit numbers with confidence" },
-  { pain: "Leads go cold because follow-up is slow or inconsistent", fix: "Automated sales cadences respond in minutes, not days - converting 38% more leads into qualified pipeline" },
-  { pain: "Stale deals clog the pipeline and mask the real revenue picture", fix: "Deal health signals and AI scoring flag at-risk opportunities early so reps fix or disqualify before quarter-end" },
-  { pain: "New hires take 6+ months to ramp and miss quota their first year", fix: "AI-guided selling playbooks and Einstein recommendations get new reps productive in weeks, not quarters" },
-  { pain: "Quoting bottlenecks stall momentum on deals that are ready to close", fix: "CPQ generates approved, branded proposals in minutes - cutting days out of the sales cycle" },
+  { pain: "Reps waste 72% of their week on non-selling activities", fix: "<strong>Einstein Activity Capture</strong> auto-logs calls, emails, and meetings - 10+ hours back weekly" },
+  { pain: "Forecast calls are guesswork and leadership loses trust in the pipeline", fix: "<strong>AI-powered forecasting</strong> delivers 42% more accurate predictions you can commit to" },
+  { pain: "Leads go cold because follow-up is slow or inconsistent", fix: "<strong>Automated cadences</strong> respond in minutes, converting 38% more leads into pipeline" },
+  { pain: "Stale deals clog the pipeline and mask the real revenue picture", fix: "<strong>Deal health signals</strong> and AI scoring flag at-risk opportunities early" },
+  { pain: "New hires take 6+ months to ramp and miss quota their first year", fix: "<strong>AI-guided playbooks</strong> get new reps productive in weeks, not quarters" },
+  { pain: "Quoting bottlenecks stall momentum on deals that are ready to close", fix: "<strong>CPQ</strong> generates approved, branded proposals in minutes - not days" },
 ]
 
 const outcomes = [
@@ -31,11 +31,11 @@ const capabilities = [
     color: '#0176D3',
     headline: 'Turn pipeline visibility into predictable revenue',
     points: [
-      'Custom sales stages and exit criteria built around your actual sales motion - not a generic template',
-      'Einstein Opportunity Scoring ranks every deal by likelihood to close so reps prioritize the right work',
-      'Deal Insights flag stalled opportunities, missing contacts, and competitive risk before it is too late',
-      'Complete activity timeline on every account - emails, calls, meetings, and engagement signals in one view',
-      'Kanban pipeline views with drag-and-drop stage progression for fast weekly pipeline reviews',
+      '<strong>Custom sales stages</strong> and exit criteria built around your actual sales motion',
+      '<strong>Einstein Opportunity Scoring</strong> ranks every deal by likelihood to close',
+      '<strong>Deal Insights</strong> flag stalled opportunities, missing contacts, and competitive risk',
+      '<strong>Activity timeline</strong> - emails, calls, meetings, and engagement signals in one view',
+      '<strong>Kanban pipeline</strong> with drag-and-drop stage progression for fast weekly reviews',
     ],
   },
   {
@@ -44,11 +44,11 @@ const capabilities = [
     color: '#10B981',
     headline: 'Automate the busywork - multiply rep selling time',
     points: [
-      'Einstein Activity Capture syncs every email and calendar event automatically - zero manual logging',
-      'Einstein Lead Scoring identifies which inbound leads are most likely to convert so reps call the right ones first',
-      'Sales Engagement cadences automate multi-step outreach sequences across email, phone, and LinkedIn',
-      'Agentforce AI agents qualify leads, book meetings, and draft follow-ups around the clock',
-      'AI-generated call summaries with automatic next-step creation so nothing falls through the cracks',
+      '<strong>Einstein Activity Capture</strong> syncs every email and calendar event - zero manual logging',
+      '<strong>Einstein Lead Scoring</strong> identifies which inbound leads are most likely to convert',
+      '<strong>Sales Engagement</strong> automates multi-step outreach across email, phone, and LinkedIn',
+      '<strong>Agentforce AI</strong> qualifies leads, books meetings, and drafts follow-ups around the clock',
+      '<strong>AI call summaries</strong> with automatic next-step creation so nothing falls through the cracks',
     ],
   },
   {
@@ -57,11 +57,11 @@ const capabilities = [
     color: '#F59E0B',
     headline: 'Commit your number with 42% more accuracy',
     points: [
-      'Einstein Forecasting combines historical patterns, pipeline signals, and deal activity into a single AI prediction',
-      'Revenue Intelligence dashboards show real-time pipeline velocity, conversion rates, and gap-to-quota by rep',
-      'Deal change tracking surfaces sandbagging, push-outs, and coverage gaps before your forecast call',
-      'Quota attainment tracking and coaching signals help managers focus 1:1 time where it moves the needle',
-      'Custom roll-up reports built for your leadership team - by territory, product line, or segment',
+      '<strong>Einstein Forecasting</strong> combines historical patterns and pipeline signals into one AI prediction',
+      '<strong>Revenue Intelligence</strong> dashboards show pipeline velocity, conversion rates, and gap-to-quota',
+      '<strong>Deal change tracking</strong> surfaces sandbagging, push-outs, and coverage gaps early',
+      '<strong>Quota attainment tracking</strong> and coaching signals focus manager time where it matters',
+      '<strong>Custom roll-up reports</strong> by territory, product line, or segment for leadership',
     ],
   },
   {
@@ -70,11 +70,11 @@ const capabilities = [
     color: '#6366F1',
     headline: 'Eliminate quote delays that kill deal momentum',
     points: [
-      'Generate accurate, branded quotes in minutes - cutting average quote turnaround from days to hours',
-      'Guided selling rules ensure reps always propose the right products, bundles, and pricing tiers',
-      'Automated discount approvals, pricing guardrails, and margin controls protect revenue without slowing deals',
-      'One-click quote-to-contract with integrated e-signature so closed-won happens the same day',
-      'Handles complex product catalogs, usage-based pricing, subscriptions, and multi-year renewals',
+      '<strong>Branded quotes in minutes</strong> - cutting average turnaround from days to hours',
+      '<strong>Guided selling rules</strong> ensure reps propose the right products, bundles, and pricing',
+      '<strong>Automated approvals</strong> and pricing guardrails protect revenue without slowing deals',
+      '<strong>One-click quote-to-contract</strong> with integrated e-signature for same-day close',
+      '<strong>Complex pricing support</strong> - product catalogs, usage-based, subscriptions, and renewals',
     ],
   },
 ]
@@ -149,7 +149,7 @@ export default function SalesCloudPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" style={{ color: '#0176D3' }} />
-                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{fix}</p>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }} dangerouslySetInnerHTML={{ __html: fix }} />
                 </div>
               </div>
             ))}
@@ -225,7 +225,7 @@ export default function SalesCloudPage() {
                   {points.map(p => (
                     <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      {p}
+                      <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
                   ))}
                 </ul>
