@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, Bot, Zap, ShieldCheck, BarChart3,
@@ -229,19 +229,47 @@ function AgentVisual() {
 /* ─── Trusted By ──────────────────────────────────────────── */
 function TrustedBy() {
   const clients = ['Storehouse', 'Trexo Robotics', 'Sell That Florida House', 'Green Light Offer', 'Camp Quality', 'Mr-Manhole', 'Airius LLC', 'Beta Agency', 'Givergy', 'Hope-Bio']
-  // Double the list for seamless loop
   const scrollItems = [...clients, ...clients]
+  const scrollRef = useRef(null)
+  const [paused, setPaused] = useState(false)
+
+  // Allow manual drag/touch scroll
+  const handlePointerDown = (e) => {
+    setPaused(true)
+    const el = scrollRef.current
+    const startX = e.clientX || e.touches?.[0]?.clientX
+    const scrollLeft = el.scrollLeft
+    const onMove = (ev) => {
+      const x = ev.clientX || ev.touches?.[0]?.clientX
+      el.scrollLeft = scrollLeft - (x - startX)
+    }
+    const onUp = () => {
+      document.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseup', onUp)
+      document.removeEventListener('touchmove', onMove)
+      document.removeEventListener('touchend', onUp)
+      setTimeout(() => setPaused(false), 2000)
+    }
+    document.addEventListener('mousemove', onMove)
+    document.addEventListener('mouseup', onUp)
+    document.addEventListener('touchmove', onMove)
+    document.addEventListener('touchend', onUp)
+  }
+
   return (
     <section style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF', overflow: 'hidden' }}>
       <div className="py-6 flex items-center gap-6">
         <p className="text-xs uppercase tracking-widest shrink-0 font-semibold pl-6 md:pl-12"
           style={{ color: '#64748B' }}>Trusted by</p>
-        <div className="relative flex-1 overflow-hidden"
-          style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}>
-          <div className="flex items-center gap-10 whitespace-nowrap"
-            style={{ animation: 'scroll-left 25s linear infinite' }}>
+        <div className="relative flex-1 overflow-hidden cursor-grab active:cursor-grabbing"
+          ref={scrollRef}
+          onMouseDown={handlePointerDown}
+          onTouchStart={handlePointerDown}
+          style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          <div className="flex items-center gap-10 whitespace-nowrap select-none"
+            style={{ animation: paused ? 'none' : 'scroll-left 25s linear infinite' }}>
             {scrollItems.map((name, i) => (
-              <span key={i} className="font-bold text-sm tracking-wide shrink-0"
+              <span key={i} className="font-bold text-sm tracking-wide shrink-0 pointer-events-none"
                 style={{ color: '#032D60' }}>
                 {name}
               </span>
@@ -254,6 +282,7 @@ function TrustedBy() {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
+        [ref]::-webkit-scrollbar { display: none; }
       `}</style>
     </section>
   )
