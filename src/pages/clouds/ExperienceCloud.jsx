@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Customers flood your support team with questions they could answer themselves", fix: "<strong>Self-service portals</strong> with AI-powered search deflect 40-60% of inbound tickets" },
-  { pain: "Partners operate blind - no deal visibility, no shared pipeline, no collaboration tools", fix: "<strong>Partner community</strong> with deal registration, lead distribution, and pipeline dashboards" },
-  { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "<strong>Guided digital onboarding</strong> cuts onboarding time by 50% and eliminates manual handoffs" },
-  { pain: "Your portal is disconnected from Salesforce - data is stale, syncs break, users lose trust", fix: "<strong>Native Salesforce integration</strong> - accounts, cases, and knowledge update in real time" },
-  { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "<strong>Pixel-perfect branded portals</strong> with your domain and responsive layouts on every device" },
+  { pain: "Customers flood your support team with questions they could answer themselves", fix: "<strong>Customer Service template</strong> with Salesforce CMS deflects 40-60% of tickets" },
+  { pain: "Partners operate blind - no deal visibility, no shared pipeline, no collaboration tools", fix: "<strong>Partner Central template</strong> with deal registration and pipeline dashboards" },
+  { pain: "Onboarding new customers or partners is manual, slow, and expensive", fix: "<strong>Experience Builder</strong> guided onboarding cuts time 50% with External User Licenses" },
+  { pain: "Your portal is disconnected from Salesforce - data is stale, syncs break, users lose trust", fix: "<strong>LWR sites with Sharing Sets</strong> keep accounts, cases, and knowledge in sync" },
+  { pain: "Your digital experience looks generic and doesn't reflect your brand", fix: "<strong>Build Your Own (LWR)</strong> delivers branded portals on every device" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: "Deflect tickets and delight customers at the same time",
     points: [
-      '<strong>Branded portals</strong> for accounts, orders, billing, subscriptions',
-      '<strong>Case creation</strong> and real-time status tracking online',
-      '<strong>AI-powered knowledge base</strong> surfaces answers proactively',
-      '<strong>Agentforce AI chat</strong> resolves requests without humans',
-      '<strong>Fully responsive</strong> across desktop, tablet, and mobile',
+      '<strong>Customer Service template</strong> for accounts and orders',
+      '<strong>Authenticated pages</strong> with real-time case tracking',
+      '<strong>Salesforce CMS</strong> knowledge base surfaces answers',
+      '<strong>Agentforce AI chat</strong> resolves requests instantly',
+      '<strong>LWR sites</strong> responsive on desktop and mobile',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: "Accelerate channel revenue with a portal partners actually use",
     points: [
-      '<strong>Deal registration</strong> with shared pipeline visibility',
-      '<strong>MDF claims</strong> and co-marketing assets in one place',
-      '<strong>Automated onboarding</strong> with guided learning paths',
-      '<strong>Role-based access</strong> by partner tier and level',
-      '<strong>Performance dashboards</strong> and partner leaderboards',
+      '<strong>Partner Central template</strong> with pipeline visibility',
+      '<strong>Sharing Sets</strong> govern MDF and co-marketing assets',
+      '<strong>Experience Builder</strong> guided learning paths',
+      '<strong>External User Licenses</strong> scoped by partner tier',
+      '<strong>CRM Analytics dashboards</strong> and partner leaderboards',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: "Replace your legacy intranet with a connected digital hub",
     points: [
-      '<strong>Centralized hub</strong> for HR, IT, benefits, news',
-      '<strong>Guided onboarding</strong> from day one to productivity',
-      '<strong>Social feeds</strong> and forums for team engagement',
-      '<strong>Single sign-on</strong> across Salesforce and portal apps',
-      '<strong>Embedded Agentforce</strong> answer HR and IT questions',
+      '<strong>Build Your Own (LWR)</strong> hub for HR and IT',
+      '<strong>Experience Builder</strong> onboarding from day one',
+      '<strong>Aura sites</strong> with social feeds and forums',
+      '<strong>Unauthenticated pages</strong> plus SSO for portal apps',
+      '<strong>Embedded Agentforce</strong> answers HR and IT questions',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: "Give every client a white-glove digital experience at scale",
     points: [
-      '<strong>Project dashboards</strong> with milestone and progress tracking',
-      '<strong>Invoice viewing</strong>, payments, contracts, and documents',
-      '<strong>Direct messaging</strong> with your delivery team in-context',
-      '<strong>Granular role-based access</strong> per client and user',
-      '<strong>Fully branded</strong> with your domain and design',
+      '<strong>Lightning Web Runtime</strong> dashboards with milestones',
+      '<strong>Authenticated pages</strong> for invoices and contracts',
+      '<strong>Salesforce CMS</strong> messaging with your delivery team',
+      '<strong>Sharing Sets</strong> with granular per-client access',
+      '<strong>Experience Builder</strong> branded with your domain',
     ],
   },
 ]

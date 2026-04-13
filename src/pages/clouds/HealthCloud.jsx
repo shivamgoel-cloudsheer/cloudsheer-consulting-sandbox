@@ -8,11 +8,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Care teams work from disconnected systems with no unified view of the patient or member", fix: "<strong>Patient/Member 360</strong> unifies clinical, claims, and engagement data in one profile" },
-  { pain: "Care coordination is manual, error-prone, and slows down treatment timelines", fix: "<strong>Automated care plans</strong> and real-time alerts cut coordination time by 40%" },
-  { pain: "Patients and members struggle to engage with their care outside of appointments", fix: "<strong>Self-service portals</strong> and secure messaging keep patients connected to their care plans" },
-  { pain: "EHR and claims data lives in silos that your CRM cannot access or act on", fix: "<strong>HL7 FHIR integrations</strong> bring clinical data directly into Salesforce - no middleware" },
-  { pain: "Prior authorizations and utilization reviews take days and frustrate providers and patients alike", fix: "<strong>Automated UM workflows</strong> cut prior auth turnaround from days to hours" },
+  { pain: "Care teams work from disconnected systems with no unified view of the patient or member", fix: "<strong>Patient 360</strong> unifies clinical, claims, and engagement in one profile" },
+  { pain: "Care coordination is manual, error-prone, and slows down treatment timelines", fix: "<strong>Care Plans and Care Programs</strong> with real-time alerts cut coordination 40%" },
+  { pain: "Patients and members struggle to engage with their care outside of appointments", fix: "<strong>Experience Cloud portals</strong> and secure messaging keep patients connected" },
+  { pain: "EHR and claims data lives in silos that your CRM cannot access or act on", fix: "<strong>HL7 FHIR</strong> and Clinical Data Model bring data into Salesforce directly" },
+  { pain: "Prior authorizations and utilization reviews take days and frustrate providers and patients alike", fix: "<strong>Prior Authorization</strong> and Utilization Management cut turnaround to hours" },
 ]
 
 const outcomes = [
@@ -31,11 +31,11 @@ const capabilities = [
     color: '#0176D3',
     headline: 'One view of every patient. Every interaction. Every outcome.',
     points: [
-      "<strong>Unified profile</strong> combining clinical, claims, and social data",
-      "<strong>Care gap alerts</strong> surface risks and outstanding referrals",
-      "<strong>Real-time visibility</strong> across the full care journey",
-      "<strong>HL7 FHIR APIs</strong> keep EHR data current in Salesforce",
-      "<strong>Provider and payer workflows</strong> to population health dashboards",
+      "<strong>Patient 360</strong> combining clinical, claims, and social data",
+      "<strong>Care Programs</strong> surface risks and outstanding referrals",
+      "<strong>Clinical Data Model</strong> visibility across the care journey",
+      "<strong>HL7 FHIR</strong> APIs keep EHR data current in Salesforce",
+      "<strong>Health Cloud for Payers</strong> population health dashboards",
     ],
   },
   {
@@ -44,11 +44,11 @@ const capabilities = [
     color: '#10B981',
     headline: 'Faster handoffs. Fewer gaps. Better outcomes.',
     points: [
-      "<strong>Care plan templates</strong> for chronic, post-discharge, wellness",
-      "<strong>Smart task routing</strong> by role, availability, and acuity",
-      "<strong>Milestone tracking</strong> escalates when patients fall behind",
-      "<strong>Cross-team collaboration</strong> across PCPs, specialists, social workers",
-      "<strong>Post-discharge workflows</strong> reduce readmission risk automatically",
+      "<strong>Care Plans</strong> for chronic, post-discharge, and wellness",
+      "<strong>Provider Search</strong> routes tasks by role and acuity",
+      "<strong>Care Programs</strong> escalate when patients fall behind",
+      "<strong>Health Cloud for Providers</strong> connects care teams",
+      "<strong>Intelligent Document Automation</strong> cuts readmission risk",
     ],
   },
   {
@@ -57,11 +57,11 @@ const capabilities = [
     color: '#F59E0B',
     headline: 'Keep patients connected between visits.',
     points: [
-      "<strong>Patient portals</strong> for care plans, messaging, appointments",
-      "<strong>Automated reminders</strong> for appointments and medications",
+      "<strong>Experience Cloud portals</strong> for care plans and messaging",
+      "<strong>Medication Management</strong> reminders and refill tracking",
       "<strong>Secure two-way messaging</strong> between patients and teams",
-      "<strong>Personalised content</strong> based on conditions and plans",
-      "<strong>Patient-reported outcomes</strong> drive continuous care improvement",
+      "<strong>Care Programs</strong> deliver personalised content by condition",
+      "<strong>Patient 360</strong> outcomes drive continuous care improvement",
     ],
   },
   {
@@ -70,11 +70,11 @@ const capabilities = [
     color: '#6366F1',
     headline: 'Cut prior auth from days to hours.',
     points: [
-      "<strong>Automated prior auth</strong> with rules-based routing and tracking",
-      "<strong>Single UM workspace</strong> for review and approval decisions",
-      "<strong>Real-time auth visibility</strong> with automated notifications",
-      "<strong>Smart case flagging</strong> routes outliers to clinical review",
-      "<strong>UM analytics</strong> for denial rates and turnaround times",
+      "<strong>Prior Authorization</strong> with rules-based routing and tracking",
+      "<strong>Utilization Management</strong> workspace for review decisions",
+      "<strong>Intelligent Document Automation</strong> with notifications",
+      "<strong>Health Cloud for Payers</strong> routes outliers to review",
+      "<strong>Care Programs</strong> analytics for denial and turnaround",
     ],
   },
 ]

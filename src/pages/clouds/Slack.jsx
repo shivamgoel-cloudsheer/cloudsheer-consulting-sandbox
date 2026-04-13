@@ -8,11 +8,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "<strong>Slack Channels</strong> keep every conversation and decision in one searchable place" },
-  { pain: "Your sales team wastes hours toggling between CRM, email, and chat to update deals", fix: "<strong>Sales Elevate</strong> surfaces pipeline data - reps update deals without leaving Slack" },
-  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "<strong>Slack AI</strong> summarises channels, threads, and Canvas docs - answers in seconds" },
+  { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "<strong>Channels</strong> keep every conversation and decision in one searchable place" },
+  { pain: "Your sales team wastes hours toggling between CRM, email, and chat to update deals", fix: "<strong>Slack Sales Elevate</strong> surfaces pipeline - reps update deals without leaving" },
+  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "<strong>Slack AI</strong> summarises Channels, threads, and Canvas - answers in seconds" },
   { pain: "Your team sits through 10+ meetings a week that could have been a message or a quick huddle", fix: "<strong>Huddles and Clips</strong> replace meetings with async video and live audio" },
-  { pain: "Manual handoffs between teams cause delays, errors, and dropped tasks", fix: "<strong>Workflow Builder</strong> automates approvals, routing, and notifications - no code required" },
+  { pain: "Manual handoffs between teams cause delays, errors, and dropped tasks", fix: "<strong>Workflow Builder</strong> automates approvals, routing, and notifications - no code" },
 ]
 
 const outcomes = [
@@ -31,11 +31,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Close deals faster without leaving the conversation.',
     points: [
-      "<strong>Sales Elevate</strong> surfaces pipeline data in channels",
-      "<strong>Account channels</strong> show deal alerts from Salesforce",
-      "<strong>Huddles</strong> loop in stakeholders instantly - no scheduling",
-      "<strong>Slack AI</strong> summarises deal threads for full context",
-      "<strong>Automated workflows</strong> route approvals in minutes",
+      "<strong>Slack Sales Elevate</strong> surfaces pipeline in Channels",
+      "<strong>Slack Connect</strong> shares deal alerts with partners",
+      "<strong>Huddles</strong> loop in stakeholders - no scheduling",
+      "<strong>Slack AI</strong> summarises deal threads for context",
+      "<strong>Workflow Builder</strong> routes approvals in minutes",
     ],
   },
   {
@@ -44,11 +44,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Automate handoffs. Eliminate busywork.',
     points: [
-      "<strong>Workflow Builder</strong> automates approvals and request routing",
-      "<strong>2,600+ app integrations</strong> all connected in one place",
-      "<strong>Slack AI</strong> finds answers across tools and conversations",
-      "<strong>Canvas docs</strong> capture tribal knowledge in channels",
-      "<strong>Incident channels</strong> spin up with right people instantly",
+      "<strong>Workflow Builder</strong> automates approvals and routing",
+      "<strong>App Directory</strong> connects 2,600+ integrations",
+      "<strong>Slack AI</strong> finds answers across all conversations",
+      "<strong>Canvas</strong> captures tribal knowledge in Channels",
+      "<strong>Slack Lists</strong> track incidents with the right people",
     ],
   },
   {
@@ -57,10 +57,10 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Retain more customers with faster, coordinated responses.',
     points: [
-      "<strong>Slack Connect</strong> unites your team and clients directly",
-      "<strong>Account health alerts</strong> surface churn signals for CSMs",
-      "<strong>Slack AI</strong> summarises threads for seamless CSM handoffs",
-      "<strong>Workflow automations</strong> trigger QBR prep and renewals",
+      "<strong>Slack Connect</strong> unites your team and clients",
+      "<strong>Channels</strong> surface churn signals for CSM action",
+      "<strong>Slack AI</strong> summarises threads for CSM handoffs",
+      "<strong>Workflow Builder</strong> triggers QBR prep and renewals",
       "<strong>Huddles</strong> swarm on urgent issues in seconds",
     ],
   },
@@ -70,11 +70,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Make faster decisions with complete visibility.',
     points: [
-      "<strong>Executive channels</strong> centralise updates from every department",
+      "<strong>Channels</strong> centralise updates from every department",
       "<strong>Slack AI</strong> generates daily digests for leaders",
-      "<strong>Canvas docs</strong> for strategy briefs and decision logs",
-      "<strong>Automated dashboards</strong> push KPIs into leadership channels",
-      "<strong>Searchable history</strong> preserves decisions and outcomes permanently",
+      "<strong>Canvas</strong> for strategy briefs and decision logs",
+      "<strong>Slack Lists</strong> push KPIs into leadership Channels",
+      "<strong>Searchable history</strong> preserves decisions permanently",
     ],
   },
 ]

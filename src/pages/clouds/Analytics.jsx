@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Leaders wait days for reports while opportunities slip through the cracks", fix: "<strong>Real-time dashboards</strong> auto-refresh so decisions happen in minutes, not days" },
-  { pain: "Forecasts miss by double digits because reps rely on gut feel over data", fix: "<strong>Einstein AI</strong> scores every deal and flags pipeline risk before quarter impact" },
+  { pain: "Leaders wait days for reports while opportunities slip through the cracks", fix: "<strong>Analytics Studio Dashboards</strong> auto-refresh so decisions happen in minutes" },
+  { pain: "Forecasts miss by double digits because reps rely on gut feel over data", fix: "<strong>Einstein Predictions</strong> scores every deal and flags pipeline risk early" },
   { pain: "Critical data is trapped in silos across CRM, ERP, spreadsheets, and data warehouses", fix: "<strong>Data Cloud and Tableau</strong> unify every source into one governed layer" },
-  { pain: "You invested in analytics tools but fewer than 20% of your team actually use them", fix: "<strong>Embedded insights</strong> inside Salesforce workflows so adoption happens by default" },
-  { pain: "Finance and sales argue over different versions of the same numbers every month", fix: "<strong>Single source of truth</strong> eliminates reconciliation and gives everyone one view" },
+  { pain: "You invested in analytics tools but fewer than 20% of your team actually use them", fix: "<strong>CRM Analytics Lenses</strong> embedded in Salesforce drive adoption by default" },
+  { pain: "Finance and sales argue over different versions of the same numbers every month", fix: "<strong>Dataflows and Recipes</strong> create one governed source of truth for all teams" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Close more deals with pipeline intelligence',
     points: [
-      '<strong>Pipeline dashboards</strong> with velocity, conversion, and forecast',
-      '<strong>Einstein opportunity scoring</strong> predicts win probability automatically',
-      '<strong>Rep scorecards</strong> for quota, activity, and coaching',
-      '<strong>Waterfall analysis</strong> shows weekly pipeline movement',
-      '<strong>Multi-touch attribution</strong> from spend to closed revenue',
+      '<strong>CRM Analytics Dashboards</strong> with velocity and forecast',
+      '<strong>Einstein Discovery</strong> predicts win probability automatically',
+      '<strong>Analytics Studio Lenses</strong> for quota and coaching',
+      '<strong>SAQL waterfall analysis</strong> shows pipeline movement',
+      '<strong>Tableau attribution</strong> from spend to closed revenue',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve faster and retain more customers',
     points: [
-      '<strong>Service dashboards</strong> for queue health, SLA, backlog',
-      '<strong>CSAT and NPS analysis</strong> with drill-down by agent',
-      '<strong>Einstein churn prediction</strong> flags at-risk accounts early',
-      '<strong>Agent utilisation</strong> benchmarked against team averages',
-      '<strong>Customer health scores</strong> from support, usage, billing',
+      '<strong>CRM Analytics Dashboards</strong> for SLA and backlog',
+      '<strong>Lenses</strong> for CSAT and NPS drill-down by agent',
+      '<strong>Einstein Predictions</strong> flags at-risk accounts early',
+      '<strong>Dataflows</strong> benchmark agent utilisation by team',
+      '<strong>Recipes</strong> build health scores from support and billing',
     ],
   },
   {
@@ -56,10 +56,10 @@ const useCases = [
     color: '#F59E0B',
     headline: 'One source of truth for the leadership team',
     points: [
-      '<strong>Tableau workbooks</strong> from Salesforce, NetSuite, Snowflake',
-      '<strong>Executive scorecards</strong> with KPIs and variance analysis',
-      '<strong>Cohort analysis</strong> and net revenue retention tracked',
-      '<strong>Automated board reports</strong> delivered on schedule',
+      '<strong>Tableau</strong> workbooks from Salesforce and Snowflake',
+      '<strong>Analytics Studio</strong> scorecards with KPI variance',
+      '<strong>Data Cloud</strong> cohort and revenue retention tracking',
+      '<strong>Dashboards</strong> automate board reports on schedule',
       '<strong>Row-level security</strong> for authorised data access only',
     ],
   },
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Prove ROI on every campaign dollar spent',
     points: [
-      '<strong>Full-funnel attribution</strong> from impressions to closed revenue',
-      '<strong>Engagement analytics</strong> with conversion rates per stage',
-      '<strong>Segmentation insights</strong> powered by Data Cloud',
-      '<strong>Campaign comparison</strong> with CPL, CPO, and CAC',
-      '<strong>Predictive analytics</strong> for next-best-action recommendations',
+      '<strong>Tableau</strong> full-funnel attribution to closed revenue',
+      '<strong>CRM Analytics Lenses</strong> with conversion per stage',
+      '<strong>Data Cloud</strong> segmentation insights for targeting',
+      '<strong>Dashboards</strong> compare CPL, CPO, and CAC by campaign',
+      '<strong>Einstein Discovery</strong> next-best-action recommendations',
     ],
   },
 ]

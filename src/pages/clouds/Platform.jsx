@@ -6,11 +6,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Custom app development takes 6-12 months and blows past budget before delivering value", fix: "<strong>Low-code Platform</strong> cuts app delivery time by up to 70% with reusable components" },
-  { pain: "Critical business processes still run on spreadsheets, email chains, and disconnected tools", fix: "<strong>Purpose-built apps</strong> connect to CRM data, enforce rules, and work on any device" },
-  { pain: "Every integration project turns into a custom-coded, fragile point-to-point connection", fix: "<strong>Platform APIs and MuleSoft</strong> deliver real-time, governed integrations that scale" },
-  { pain: "Manual workflows consume thousands of hours per year across sales, service, and operations", fix: "<strong>Flow Builder</strong> automates multi-step processes with clicks - eliminating 90% of manual work" },
-  { pain: "You buy AppExchange apps that overlap, conflict, or create ungoverned technical debt", fix: "<strong>Expert governance</strong> ensures AppExchange apps deliver ROI without compromising org health" },
+  { pain: "Custom app development takes 6-12 months and blows past budget before delivering value", fix: "<strong>Lightning Platform</strong> with LWC cuts delivery time by up to 70%" },
+  { pain: "Critical business processes still run on spreadsheets, email chains, and disconnected tools", fix: "<strong>Screen Flows and Dynamic Forms</strong> connect to CRM data on any device" },
+  { pain: "Every integration project turns into a custom-coded, fragile point-to-point connection", fix: "<strong>MuleSoft and Platform Events</strong> deliver governed integrations that scale" },
+  { pain: "Manual workflows consume thousands of hours per year across sales, service, and operations", fix: "<strong>Flow Builder</strong> with Record-Triggered Flows eliminates 90% of manual work" },
+  { pain: "You buy AppExchange apps that overlap, conflict, or create ungoverned technical debt", fix: "<strong>AppExchange governance</strong> with Custom Metadata Types ensures org health" },
 ]
 
 const outcomes = [
@@ -29,11 +29,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Ship business apps in weeks, not quarters',
     points: [
-      '<strong>Custom objects and layouts</strong> built without code',
-      '<strong>Lightning Web Components</strong> load 50% faster than Visualforce',
+      '<strong>Dynamic Forms</strong> and layouts built without code',
+      '<strong>Lightning Web Components (LWC)</strong> replace Visualforce',
       '<strong>Apex</strong> for server-side logic and batch processing',
-      '<strong>Mobile-ready apps</strong> with offline-capable access instantly',
-      '<strong>Salesforce DX</strong> with CI/CD for enterprise governance',
+      '<strong>Lightning Platform</strong> mobile-ready apps with offline',
+      '<strong>Change Data Capture</strong> with CI/CD governance',
     ],
   },
   {
@@ -43,10 +43,10 @@ const useCases = [
     headline: 'Eliminate manual work across every department',
     points: [
       '<strong>Flow Builder</strong> replaces manual workflows without code',
-      '<strong>Trigger automations</strong> from record changes or platform events',
-      '<strong>Automate approvals</strong>, escalations, and SLA enforcement',
-      '<strong>Flow Orchestrator</strong> for multi-step, multi-department processes',
-      '<strong>Consolidate</strong> legacy workflows and triggers into Flows',
+      '<strong>Record-Triggered Flows</strong> fire on record changes automatically',
+      '<strong>Screen Flows</strong> automate approvals and SLA enforcement',
+      '<strong>Flow Orchestrator</strong> for multi-department processes',
+      '<strong>Platform Events</strong> consolidate legacy triggers into Flows',
     ],
   },
   {
@@ -55,11 +55,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Connect every system in your tech stack',
     points: [
-      '<strong>REST and SOAP APIs</strong> handling billions of daily transactions',
+      '<strong>MuleSoft</strong> connectors for 400+ systems including SAP',
       '<strong>Platform Events</strong> deliver real-time sync without polling',
-      '<strong>MuleSoft connectors</strong> for 400+ systems including SAP',
-      '<strong>External Objects</strong> surface data without copying it',
-      '<strong>Heroku and AWS</strong> for compute-heavy external apps',
+      '<strong>Change Data Capture</strong> streams record changes externally',
+      '<strong>Big Objects</strong> store billions of rows at scale',
+      '<strong>Custom Metadata Types</strong> govern configuration as data',
     ],
   },
   {
@@ -68,11 +68,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Extend your org with proven, vetted solutions',
     points: [
-      '<strong>10,000+ pre-built apps</strong> with free trials available',
-      '<strong>Doc generation, e-signatures, CPQ</strong> ready to install',
+      '<strong>AppExchange</strong> with 10,000+ pre-built apps available',
+      '<strong>Lightning Web Components</strong> for CPQ and e-signatures',
       '<strong>Security reviewed</strong> - every app passes Salesforce review',
-      '<strong>Faster timelines</strong> via marketplace over custom builds',
-      '<strong>Expert evaluation</strong> to pick the right tool',
+      '<strong>AppExchange</strong> accelerates timelines over custom builds',
+      '<strong>Expert evaluation</strong> to pick the right solution',
     ],
   },
 ]

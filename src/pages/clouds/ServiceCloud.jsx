@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "<strong>Unified console</strong> surfaces every channel, case history, and AI recommendation in one view" },
-  { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "<strong>Omni-channel routing</strong> delivers cases to the right agent with complete conversation history" },
+  { pain: "Agents waste 25% of their day switching between disconnected tools to find customer context", fix: "<strong>Service Console</strong> surfaces channels, cases, and AI recommendations in one view" },
+  { pain: "Customers wait hours for responses and repeat themselves every time they are transferred", fix: "<strong>Omni-Channel Routing</strong> delivers cases to the right agent with full history" },
   { pain: "Tier-1 tickets consume 60% of agent capacity on password resets, order tracking, and FAQs", fix: "<strong>Agentforce Service Agent</strong> resolves routine cases autonomously around the clock" },
-  { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "<strong>Entitlement tracking</strong> flags at-risk cases in real time and auto-triggers escalation" },
-  { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "<strong>Einstein Search</strong> surfaces the most relevant article based on case context" },
+  { pain: "SLA breaches go undetected until an angry customer escalates to leadership", fix: "<strong>Entitlement Management</strong> flags at-risk cases and auto-triggers escalation" },
+  { pain: "Your knowledge base has thousands of articles but agents still cannot find the right answer quickly", fix: "<strong>Knowledge Base</strong> with Einstein surfaces the best article per case context" },
 ]
 
 const outcomes = [
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Every channel. One workspace. Zero context lost.',
     points: [
-      '<strong>Unified console</strong> for email, chat, phone, SMS',
-      '<strong>Skills-based routing</strong> to the best-qualified agent',
-      '<strong>Customer timeline</strong> - purchases, cases, sentiment visible',
-      '<strong>Bot-to-human handoff</strong> with full conversation preserved',
-      '<strong>Supervisor console</strong> with real-time queue monitoring',
+      '<strong>Service Console</strong> for email, chat, phone, SMS',
+      '<strong>Omni-Channel Routing</strong> to the best-qualified agent',
+      '<strong>Customer timeline</strong> with purchases, cases, sentiment',
+      '<strong>Swarming</strong> pulls in experts with full context preserved',
+      '<strong>Incident Management</strong> with real-time queue monitoring',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve cases before they ever reach your team.',
     points: [
-      '<strong>Agentforce Service Agent</strong> resolves Tier-1 and Tier-2 autonomously',
-      '<strong>AI chatbots</strong> search knowledge base for real-time answers',
-      '<strong>Self-service portals</strong> for orders, accounts, and cases',
-      '<strong>Einstein Article Recommendations</strong> surface relevant content automatically',
-      '<strong>Auto-escalation</strong> with full context when needed',
+      '<strong>Agentforce Service Agent</strong> resolves Tier-1 and Tier-2 cases',
+      '<strong>Einstein Reply Recommendations</strong> speed up agent responses',
+      '<strong>Knowledge Base</strong> powers self-service portals and bots',
+      '<strong>Einstein Case Classification</strong> routes and categorises automatically',
+      '<strong>Human-in-the-loop</strong> escalation with full context preserved',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Dispatch the right technician. First time. Every time.',
     points: [
-      '<strong>AI-optimised dispatch</strong> by proximity, skills, and parts',
-      '<strong>GPS tracking</strong> with automated customer reminders',
+      '<strong>Field Service Lightning</strong> dispatches by proximity and skills',
+      '<strong>Visual Remote Assistant</strong> enables remote video diagnostics',
       '<strong>Mobile app</strong> with offline access for technicians',
-      '<strong>Auto-created work orders</strong> from cases - less admin',
-      '<strong>AI-assisted diagnostics</strong> improve first-time fix rates',
+      '<strong>Auto-created work orders</strong> from cases directly',
+      '<strong>Inventory Management</strong> ensures parts availability on-site',
     ],
   },
   {
@@ -70,16 +70,16 @@ const useCases = [
     headline: 'See everything. Fix problems before customers notice.',
     points: [
       '<strong>Pre-built dashboards</strong> for CSAT, SLA, agent performance',
-      '<strong>Entitlement tracking</strong> with automatic breach alerts',
-      '<strong>Einstein AI</strong> flags at-risk cases and escalations',
-      '<strong>Custom reports</strong> to identify bottlenecks per channel',
+      '<strong>Entitlement Management</strong> with automatic breach alerts',
+      '<strong>Einstein Case Classification</strong> flags at-risk escalations',
+      '<strong>Omni-Channel Routing</strong> analytics per channel and queue',
       '<strong>Tableau integration</strong> for executive-ready service insights',
     ],
   },
 ]
 
 const whyUs = [
-  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud - from straightforward case management rollouts to complex omni-channel operations with Agentforce Agentforce, field service, and entitlements. We know this product inside out." },
+  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud - from straightforward case management rollouts to complex Omni-Channel Routing with Agentforce Service Agent, Field Service Lightning, and Entitlement Management." },
   { title: "Designed Around Your SLAs",      desc: "Every implementation maps to your specific support tiers, escalation rules, entitlements, and operating hours. No cookie-cutter templates - a system built around how your team actually delivers support." },
   { title: 'Fast Time to Value',            desc: "Most Service Cloud deployments go live within 6-8 weeks. We configure in sandbox, test with real-world scenarios, train your team, and get you to production without months of discovery workshops." },
   { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support operation, identify the highest-impact quick wins, and give you a clear deployment plan - completely free, zero obligation." },

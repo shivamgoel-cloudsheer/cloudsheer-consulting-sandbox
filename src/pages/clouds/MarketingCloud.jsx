@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "<strong>Einstein AI</strong> personalises content, send times, and frequency per subscriber" },
-  { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "<strong>Multi-touch attribution</strong> ties every campaign to pipeline and closed-won revenue" },
+  { pain: "Batch-and-blast emails are tanking your deliverability and engagement", fix: "<strong>Einstein Send Time Optimization</strong> personalises delivery per subscriber" },
+  { pain: "Marketing can't prove its impact on pipeline or revenue", fix: "<strong>Marketing Cloud Intelligence</strong> ties every campaign to pipeline and revenue" },
   { pain: "Leads sit untouched because nurture sequences are manual or missing", fix: "<strong>Journey Builder</strong> triggers multi-channel sequences from any CRM event" },
-  { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "<strong>Data Cloud</strong> unifies every interaction into one real-time customer profile" },
-  { pain: "Your team wastes hours building emails and pulling lists manually", fix: "<strong>Drag-and-drop builder</strong> and dynamic templates cut campaign build time by 50%+" },
+  { pain: "Customer data is siloed across email tools, CRM, and ad platforms", fix: "<strong>Data Cloud segments</strong> unify every interaction into one real-time profile" },
+  { pain: "Your team wastes hours building emails and pulling lists manually", fix: "<strong>Content Builder</strong> and Email Studio templates cut build time by 50%+" },
 ]
 
 const outcomes = [
@@ -31,10 +31,10 @@ const useCases = [
     headline: 'Automated journeys that nurture, convert, and retain',
     points: [
       '<strong>Journey Builder</strong> orchestrates multi-channel CRM-triggered flows',
-      '<strong>Pre-built templates</strong> for welcome, cart, win-back journeys',
-      '<strong>Dynamic content blocks</strong> swap per subscriber automatically',
-      '<strong>Einstein Send Time</strong> optimises delivery per contact',
-      '<strong>A/B and multivariate testing</strong> on content at scale',
+      '<strong>Email Studio</strong> templates for welcome, cart, win-back',
+      '<strong>Content Builder</strong> swaps dynamic blocks per subscriber',
+      '<strong>Einstein Send Time Optimization</strong> per contact delivery',
+      '<strong>Marketing Cloud Engagement</strong> testing at scale',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'One unified profile. Limitless segmentation.',
     points: [
-      '<strong>Data Cloud</strong> unifies all data into one profile',
-      '<strong>Drag-and-drop segmentation</strong> with behavioural and transactional filters',
+      '<strong>Data Cloud segments</strong> unify all data into one profile',
+      '<strong>Audience Studio</strong> with behavioural and transactional filters',
       '<strong>Real-time activation</strong> to email, SMS, ads, web',
       '<strong>Native ad sync</strong> to Google, Meta, LinkedIn',
-      '<strong>Calculated insights</strong> for churn risk and lifetime value',
+      '<strong>Einstein Engagement Scoring</strong> predicts churn and LTV',
     ],
   },
   {
@@ -56,7 +56,7 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Prove exactly which campaigns drive revenue',
     points: [
-      '<strong>Multi-touch attribution</strong> tied to pipeline and revenue',
+      '<strong>Marketing Cloud Intelligence</strong> ties campaigns to revenue',
       '<strong>Real-time dashboards</strong> for deliverability, conversions, ROI',
       '<strong>Einstein Engagement Scoring</strong> predicts opens and clicks',
       '<strong>Campaign influence</strong> on every pipeline deal shown',
@@ -69,7 +69,7 @@ const useCases = [
     color: '#6366F1',
     headline: 'Turn anonymous traffic into qualified pipeline',
     points: [
-      '<strong>Lead scoring</strong> surfaces sales-ready prospects automatically',
+      '<strong>Account Engagement (Pardot)</strong> scores sales-ready prospects',
       '<strong>Automated nurture</strong> advances MQLs with personalised content',
       '<strong>Bi-directional CRM sync</strong> for real-time engagement visibility',
       '<strong>Landing pages and forms</strong> built and attributed natively',

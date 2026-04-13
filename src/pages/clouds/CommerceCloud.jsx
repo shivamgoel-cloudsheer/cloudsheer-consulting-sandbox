@@ -7,16 +7,16 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Low conversion rates are leaving millions in unrealised revenue on the table", fix: "<strong>Einstein AI</strong> delivers up to 29% higher conversions via predictive recommendations" },
-  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "<strong>Unified commerce platform</strong> serves B2B and B2C from one codebase - cutting costs 50%" },
-  { pain: "Cart abandonment above 70% means most of your traffic generates zero revenue", fix: "<strong>Optimised checkout</strong> and Einstein recovery campaigns reduce abandonment by up to 32%" },
-  { pain: "Your storefront crashes during peak traffic and cannot support global expansion", fix: "<strong>Elastic infrastructure</strong> handles 500M+ page views daily across 50+ countries" },
-  { pain: "Disconnected order, inventory, and customer data creates fulfilment errors and poor CX", fix: "<strong>Native CRM integration</strong> creates a single source of truth across every touchpoint" },
+  { pain: "Low conversion rates are leaving millions in unrealised revenue on the table", fix: "<strong>Einstein Product Recommendations</strong> deliver up to 29% higher conversions" },
+  { pain: "Running separate B2B and B2C platforms doubles your total cost of ownership", fix: "<strong>B2C Commerce</strong> and <strong>B2B Commerce</strong> run from one platform" },
+  { pain: "Cart abandonment above 70% means most of your traffic generates zero revenue", fix: "<strong>Commerce Cloud Einstein</strong> recovery campaigns reduce abandonment by 32%" },
+  { pain: "Your storefront crashes during peak traffic and cannot support global expansion", fix: "<strong>Composable Storefront</strong> handles 500M+ page views across 50+ countries" },
+  { pain: "Disconnected order, inventory, and customer data creates fulfilment errors and poor CX", fix: "<strong>Order Management</strong> creates a single source of truth across touchpoints" },
 ]
 
 const outcomes = [
   { icon: TrendingUp,  value: '29%',     label: 'higher online conversion rates with AI-powered personalisation and predictive sort', color: '#0176D3' },
-  { icon: DollarSign,  value: '25%',     label: 'increase in average order value through Einstein product recommendations and dynamic bundling', color: '#10B981' },
+  { icon: DollarSign,  value: '25%',     label: 'increase in average order value through Einstein Product Recommendations and dynamic bundling', color: '#10B981' },
   { icon: ShoppingCart, value: '32%',     label: 'reduction in cart abandonment with optimised checkout and intelligent recovery workflows', color: '#F59E0B' },
   { icon: Clock,       value: '68%',     label: 'faster time-to-market for new storefronts compared to legacy commerce platforms', color: '#6366F1' },
   { icon: Globe,       value: '50+',     label: 'countries supported with multi-currency, multi-language, and localised tax compliance built in', color: '#06B6D4' },
@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'High-converting storefronts built for speed',
     points: [
-      '<strong>Composable or SFRA storefronts</strong> with sub-second loads',
-      '<strong>Einstein AI recommendations</strong> drive 7-15% of revenue',
-      '<strong>Mobile-first PWA</strong> for the majority of traffic',
-      '<strong>Built-in A/B testing</strong> with predictive sort included',
-      '<strong>SEO-ready architecture</strong> with structured data built in',
+      '<strong>Composable Storefront</strong> with sub-second page loads',
+      '<strong>Einstein Product Recommendations</strong> drive 7-15% of revenue',
+      '<strong>PWA Kit</strong> delivers mobile-first experiences',
+      '<strong>Page Designer</strong> with built-in A/B testing',
+      '<strong>Headless Commerce</strong> with SEO-ready architecture',
     ],
   },
   {
@@ -43,10 +43,10 @@ const useCases = [
     color: '#10B981',
     headline: 'Self-service portals that accelerate revenue',
     points: [
-      '<strong>Contract pricing</strong> with negotiated books and volume tiers',
+      '<strong>B2B Commerce</strong> with negotiated pricing and volume tiers',
       '<strong>Bulk ordering</strong> with reorder lists and CSV upload',
       '<strong>Role-based access</strong> with approval workflows per buyer',
-      '<strong>Real-time inventory</strong> with ATP and delivery estimates',
+      '<strong>Inventory Management</strong> with ATP and delivery estimates',
       '<strong>Pre-built MuleSoft connectors</strong> for major ERP systems',
     ],
   },
@@ -56,8 +56,8 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Fulfil from anywhere, faster',
     points: [
-      '<strong>Unified order lifecycle</strong> from checkout through returns',
-      '<strong>Distributed order management</strong> routes to optimal fulfilment',
+      '<strong>Order Management</strong> handles checkout through returns',
+      '<strong>Distributed routing</strong> sends orders to optimal fulfilment',
       '<strong>Ship-from-store and BOPIS</strong> orchestration built in',
       '<strong>Automated returns</strong> with configurable refund rules',
       '<strong>Real-time order tracking</strong> reduces WISMO calls 30%',
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Let AI maximise every transaction',
     points: [
-      '<strong>Einstein GPT recommendations</strong> across every touchpoint',
-      '<strong>Predictive sort</strong> reorders pages per shopper automatically',
+      '<strong>Commerce Cloud Einstein</strong> recommends across touchpoints',
+      '<strong>Einstein Product Recommendations</strong> reorder per shopper',
       '<strong>AI-powered search</strong> with natural language and typo tolerance',
-      '<strong>Automated merchandising</strong> optimised for margin and sell-through',
-      '<strong>Commerce Insights</strong> with revenue attribution and funnels',
+      '<strong>Page Designer</strong> merchandising optimised for margin',
+      '<strong>Headless Commerce</strong> with revenue attribution and funnels',
     ],
   },
 ]

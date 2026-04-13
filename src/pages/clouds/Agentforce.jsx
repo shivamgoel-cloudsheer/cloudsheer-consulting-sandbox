@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "<strong>Agentforce</strong> resolve routine cases autonomously - Wiley saw 40% more resolutions" },
-  { pain: "Leads slip through the cracks because response times are too slow", fix: "<strong>Agentforce</strong> engages every lead in under 60 seconds and books meetings 24/7" },
+  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "<strong>Agentforce Service Agent</strong> resolves routine cases autonomously around the clock" },
+  { pain: "Leads slip through the cracks because response times are too slow", fix: "<strong>Agentforce SDR Agent</strong> engages every lead in seconds and books meetings 24/7" },
   { pain: "Every customer interaction costs $11+ when a human handles it", fix: "<strong>Agentforce</strong> conversations cost around $2 each - 80%+ cost reduction" },
-  { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "<strong>Agentforce</strong> handles demand spikes instantly - no hiring or ramp-up needed" },
-  { pain: "Customers get inconsistent answers depending on who they reach", fix: "<strong>Agentforce</strong> deliver the same accurate, on-brand response every time" },
+  { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "<strong>Atlas Reasoning Engine</strong> handles demand spikes with no hiring needed" },
+  { pain: "Customers get inconsistent answers depending on who they reach", fix: "<strong>Einstein Trust Layer</strong> ensures accurate, grounded responses every time" },
 ]
 
 const outcomes = [
@@ -30,10 +30,10 @@ const useCases = [
     color: '#0176D3',
     headline: 'Resolve more cases. Hire fewer agents.',
     points: [
-      "<strong>Autonomous resolution</strong> for resets, orders, returns, FAQs",
-      "<strong>Real-time answers</strong> from knowledge base and CRM",
-      "<strong>Takes action</strong> - refunds, updates, closes tickets",
-      "<strong>Smart escalation</strong> with full conversation context",
+      "<strong>Agentforce Service Agent</strong> resolves resets, orders, FAQs",
+      "<strong>Grounding</strong> pulls answers from Knowledge Base and CRM",
+      "<strong>Actions</strong> process refunds, updates, and closures",
+      "<strong>Human-in-the-loop</strong> escalation with full context",
       "<strong>24/7 coverage</strong> across chat, email, SMS, WhatsApp",
     ],
   },
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Turn every lead into a qualified opportunity.',
     points: [
-      "<strong>Instant engagement</strong> - respond to leads in seconds",
-      "<strong>Intelligent qualification</strong> with ICP-based lead scoring",
-      "<strong>Calendar booking</strong> directly into rep calendars",
-      "<strong>Personalised follow-ups</strong> generated from CRM data",
-      "<strong>Auto-updated pipeline</strong> - records stay clean automatically",
+      "<strong>Agentforce SDR Agent</strong> responds to leads instantly",
+      "<strong>Topics and Instructions</strong> guide ICP-based qualification",
+      "<strong>Actions</strong> book meetings directly into rep calendars",
+      "<strong>Atlas Reasoning Engine</strong> personalises follow-ups from CRM",
+      "<strong>Auto-updated pipeline</strong> keeps records clean automatically",
     ],
   },
   {
@@ -56,10 +56,10 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Eliminate busywork. Accelerate execution.',
     points: [
-      "<strong>Multi-step automation</strong> for approvals, escalations, notifications",
-      "<strong>Scheduled reports</strong> generated without manual data pulls",
-      "<strong>SLA monitoring</strong> with proactive breach alerts",
-      "<strong>Data hygiene</strong> - deduplication and standardisation automatically",
+      "<strong>Agent Builder</strong> creates multi-step automation flows",
+      "<strong>Actions</strong> generate scheduled reports automatically",
+      "<strong>Topics</strong> monitor SLAs with proactive breach alerts",
+      "<strong>Instructions</strong> enforce data hygiene and deduplication",
       "<strong>System integration</strong> connects Salesforce to ERP, HRIS",
     ],
   },
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Personalise every buyer journey at scale.',
     points: [
-      "<strong>Conversational shopping</strong> with personalised recommendations",
-      "<strong>Pre-purchase answers</strong> reduce cart abandonment rates",
-      "<strong>Auto-triggered campaigns</strong> from real-time behaviour data",
-      "<strong>Lapsed customer re-engagement</strong> with tailored offers",
-      "<strong>On-brand messaging</strong> across web, mobile, social",
+      "<strong>Grounding</strong> powers personalised product recommendations",
+      "<strong>Agentforce Service Agent</strong> answers pre-purchase questions",
+      "<strong>Actions</strong> trigger campaigns from real-time behaviour",
+      "<strong>Einstein Trust Layer</strong> keeps re-engagement on-brand",
+      "<strong>Topics</strong> coordinate messaging across web, mobile, social",
     ],
   },
 ]
@@ -106,7 +106,7 @@ export default function AgentforcePage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Agentforce deploys Agentforce that handle customer service, sales, and operations autonomously - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
+              Agentforce deploys autonomous AI agents built with Agent Builder that handle customer service, sales, and operations - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -198,10 +198,10 @@ export default function AgentforcePage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Where It Delivers</div>
             <h2 className="section-title mb-4">
-              Agentforce That Drive Results <span className="gradient-text">Across Your Business</span>
+              Autonomous Agents That Drive Results <span className="gradient-text">Across Your Business</span>
             </h2>
             <p className="section-sub">
-              Agentforce does not replace your team - it handles the repetitive, time-consuming work so your people can focus on strategy, relationships, and revenue.
+              Agentforce does not replace your team - it uses Agent Builder, Topics, and Actions to handle repetitive work so your people focus on strategy and revenue.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">

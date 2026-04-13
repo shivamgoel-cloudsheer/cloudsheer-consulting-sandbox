@@ -7,12 +7,12 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Reps waste 72% of their week on non-selling activities", fix: "<strong>Einstein Activity Capture</strong> auto-logs calls, emails, and meetings - 10+ hours back weekly" },
-  { pain: "Forecast calls are guesswork and leadership loses trust in the pipeline", fix: "<strong>AI-powered forecasting</strong> delivers 42% more accurate predictions you can commit to" },
-  { pain: "Leads go cold because follow-up is slow or inconsistent", fix: "<strong>Automated cadences</strong> respond in minutes, converting 38% more leads into pipeline" },
-  { pain: "Stale deals clog the pipeline and mask the real revenue picture", fix: "<strong>Deal health signals</strong> and AI scoring flag at-risk opportunities early" },
-  { pain: "New hires take 6+ months to ramp and miss quota their first year", fix: "<strong>AI-guided playbooks</strong> get new reps productive in weeks, not quarters" },
-  { pain: "Quoting bottlenecks stall momentum on deals that are ready to close", fix: "<strong>CPQ</strong> generates approved, branded proposals in minutes - not days" },
+  { pain: "Reps waste 72% of their week on non-selling activities", fix: "<strong>Einstein Activity Capture</strong> auto-logs calls, emails, and meetings automatically" },
+  { pain: "Forecast calls are guesswork and leadership loses trust in the pipeline", fix: "<strong>Forecast Management</strong> delivers 42% more accurate pipeline predictions" },
+  { pain: "Leads go cold because follow-up is slow or inconsistent", fix: "<strong>Sales Engagement</strong> cadences respond in minutes, converting 38% more leads" },
+  { pain: "Stale deals clog the pipeline and mask the real revenue picture", fix: "<strong>Pipeline Inspection</strong> and Einstein Opportunity Scoring flag risks early" },
+  { pain: "New hires take 6+ months to ramp and miss quota their first year", fix: "<strong>Buyer Assistant</strong> guides new reps to productivity in weeks" },
+  { pain: "Quoting bottlenecks stall momentum on deals that are ready to close", fix: "<strong>CPQ (Configure Price Quote)</strong> generates approved proposals in minutes" },
 ]
 
 const outcomes = [
@@ -31,10 +31,10 @@ const capabilities = [
     color: '#0176D3',
     headline: 'Turn pipeline visibility into predictable revenue',
     points: [
-      '<strong>Custom sales stages</strong> built around your sales motion',
-      '<strong>Einstein Opportunity Scoring</strong> ranks deals by close likelihood',
-      '<strong>Deal Insights</strong> flag stalled opportunities and risks',
-      '<strong>Activity timeline</strong> - all engagement signals in one view',
+      '<strong>Pipeline Inspection</strong> surfaces deal health at a glance',
+      '<strong>Einstein Opportunity Scoring</strong> ranks deals by likelihood',
+      '<strong>Revenue Intelligence</strong> flags stalled opportunities and risks',
+      '<strong>Einstein Activity Capture</strong> shows all signals in one view',
       '<strong>Kanban pipeline</strong> with drag-and-drop stage progression',
     ],
   },
@@ -47,8 +47,8 @@ const capabilities = [
       '<strong>Einstein Activity Capture</strong> syncs emails and calendar automatically',
       '<strong>Einstein Lead Scoring</strong> identifies highest-converting leads',
       '<strong>Sales Engagement</strong> automates multi-step outreach sequences',
-      '<strong>Agentforce AI</strong> qualifies leads and books meetings 24/7',
-      '<strong>AI call summaries</strong> with automatic next-step creation',
+      '<strong>Agentforce SDR Agent</strong> qualifies leads and books meetings',
+      '<strong>Einstein Conversation Insights</strong> summarises calls automatically',
     ],
   },
   {
@@ -57,10 +57,10 @@ const capabilities = [
     color: '#F59E0B',
     headline: 'Commit your number with 42% more accuracy',
     points: [
-      '<strong>Einstein Forecasting</strong> with AI-powered pipeline predictions',
+      '<strong>Forecast Management</strong> with AI-powered pipeline predictions',
       '<strong>Revenue Intelligence</strong> dashboards for velocity and conversion',
-      '<strong>Deal change tracking</strong> surfaces sandbagging and coverage gaps',
-      '<strong>Quota attainment tracking</strong> with coaching signals for managers',
+      '<strong>Pipeline Inspection</strong> surfaces sandbagging and coverage gaps',
+      '<strong>Einstein Lead Scoring</strong> prioritises high-converting prospects',
       '<strong>Custom roll-up reports</strong> by territory, product, segment',
     ],
   },
@@ -70,8 +70,8 @@ const capabilities = [
     color: '#6366F1',
     headline: 'Eliminate quote delays that kill deal momentum',
     points: [
-      '<strong>Branded quotes in minutes</strong> - not days',
-      '<strong>Guided selling rules</strong> for correct products and pricing',
+      '<strong>CPQ</strong> generates branded quotes in minutes',
+      '<strong>Guided selling rules</strong> ensure correct product and pricing',
       '<strong>Automated approvals</strong> and pricing guardrails built in',
       '<strong>One-click quote-to-contract</strong> with e-signature integration',
       '<strong>Complex pricing support</strong> for subscriptions and renewals',
