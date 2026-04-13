@@ -35,19 +35,19 @@ function Hero() {
               Trusted by Businesses to Cut Costs & Scale with AI
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight animate-fade-up-1">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight animate-fade-up-1">
               <span className="text-white">Your Team Is</span><br />
               <span className="text-white">Drowning in</span><br />
               <span className="shimmer-text">Manual Work.</span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg animate-fade-up-2"
+            <p className="text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-lg animate-fade-up-2"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
               AI agents handle your support tickets, qualify your leads, and
               update your CRM - 24/7, inside Salesforce. Go live in 4 weeks.
             </p>
 
-            <div className="flex flex-wrap gap-4 mb-8 animate-fade-up-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-up-3">
               <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-7 py-3.5">
                 Book Free Discovery Call <ArrowRight className="w-5 h-5 animate-bounce-x" />
               </a>
@@ -63,14 +63,14 @@ function Hero() {
               30-min call with a Salesforce architect. No pitch - just a candid look at where AI agents fit.
             </p>
 
-            <div className="flex flex-wrap gap-8 animate-fade-up-4">
+            <div className="flex flex-wrap gap-5 sm:gap-8 animate-fade-up-4">
               {[
                 { val: '40%', label: 'Lower Support Costs' },
                 { val: '3×',  label: 'Faster Lead Response' },
                 { val: '24/7', label: 'Always-On Agents' },
               ].map(({ val, label }) => (
                 <div key={label} className="text-center">
-                  <p className="text-3xl font-black text-white">{val}</p>
+                  <p className="text-2xl sm:text-3xl font-black text-white">{val}</p>
                   <p className="text-sm" style={{ color: 'rgba(186,220,255,0.70)' }}>{label}</p>
                 </div>
               ))}
@@ -78,7 +78,7 @@ function Hero() {
           </div>
 
           {/* Right */}
-          <div className="relative flex justify-center animate-fade-in">
+          <div className="relative hidden md:flex justify-center animate-fade-in">
             <AgentVisual />
           </div>
         </div>
@@ -326,7 +326,7 @@ function AgentforceShowcase() {
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {agents.map(({ name, metric, desc, iconBg, iconColor  }, i) => (
-            <div key={name} className="glass-card p-7 flex flex-col animate-fade-up"
+            <div key={name} className="glass-card p-4 sm:p-7 flex flex-col animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}>
               <div className="flex items-start justify-between mb-4">
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300"
@@ -374,10 +374,10 @@ function Stats() {
         style={{ backgroundColor: 'rgba(255,255,255,0.08)' }} />
       <div className="section-wrap relative z-10">
         <p className="text-center text-xs mb-6" style={{ color: 'rgba(186,220,255,0.45)' }}>Source: Salesforce Customer Success Metrics & published case studies</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
           {items.map(({ val, label, sub }, i) => (
             <div key={label} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-              <p className="text-4xl font-black text-white mb-1">{val}</p>
+              <p className="text-2xl sm:text-4xl font-black text-white mb-1">{val}</p>
               <p className="text-sm font-semibold mb-0.5" style={{ color: 'rgba(186,220,255,0.9)' }}>{label}</p>
               <p className="text-xs" style={{ color: 'rgba(186,220,255,0.55)' }}>{sub}</p>
             </div>
@@ -465,7 +465,7 @@ function CaseStudies() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {cases.map(({ industry, size, challenge, result, metrics, color }, i) => (
-            <div key={industry} className="glass-card p-7 flex flex-col animate-fade-up"
+            <div key={industry} className="glass-card p-4 sm:p-7 flex flex-col animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
@@ -533,7 +533,7 @@ function CTA() {
           <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#F59E0B' }} />
           Get Started Today
         </div>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight animate-fade-up-1">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight animate-fade-up-1">
           Find Out What AI Agents<br />
           <span className="gradient-text-gold">Can Do for Your Business</span>
         </h2>
@@ -542,7 +542,7 @@ function CTA() {
           In 30 minutes, we will identify your highest-impact use case and show you
           exactly how much you can save - with a clear plan to get there.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center animate-fade-up-3">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-3">
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-8 py-4">
             Book Free Discovery Call <ArrowRight className="w-5 h-5 animate-bounce-x" />
           </a>
@@ -670,7 +670,7 @@ function WhyCloudsheer() {
         </div>
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {reasons.map(({ icon, title, problem, us }, i) => (
-            <div key={title} className="glass-card p-6 animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
+            <div key={title} className="glass-card p-4 sm:p-6 animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center"
                   style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}>

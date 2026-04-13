@@ -99,7 +99,7 @@ export default function PlatformPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Layers className="w-3.5 h-3.5" /> Salesforce Platform & AppExchange
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
               Deliver Apps 70% Faster, Cut Manual Work by 90%, and{' '}
               <span className="gradient-text-gold">Drive 478% ROI</span>
             </h1>
@@ -192,7 +192,7 @@ export default function PlatformPage() {
       </section>
 
       {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="section-wrap">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">What We Deliver</div>
@@ -269,7 +269,7 @@ export default function PlatformPage() {
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden"
+      <section className="py-14 sm:py-24 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="glow-dot w-[500px] h-[500px] top-[-100px] left-[50%] -translate-x-1/2"

@@ -41,7 +41,7 @@ export default function Footer() {
       <div style={{ borderBottom: '1px solid rgba(255,255,255,0.10)' }}>
         <div className="section-wrap py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-bold text-xl mb-1">
+            <p className="text-white font-bold text-lg sm:text-xl mb-1">
               Ready to build your first AI Agent?
             </p>
             <p className="text-sm" style={{ color: 'rgba(148,196,255,0.85)' }}>
@@ -56,7 +56,7 @@ export default function Footer() {
 
       {/* Main */}
       <div className="section-wrap py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mb-14">
           {/* Brand */}
           <div>
             <Link to="/" className="inline-flex mb-5 group">
@@ -146,7 +146,7 @@ export default function Footer() {
           <p style={{ color: 'rgba(148,196,255,0.55)' }}>
             © {new Date().getFullYear()} Cloudsheer Consulting. All rights reserved.
           </p>
-          <div className="flex items-center gap-4" style={{ color: 'rgba(148,196,255,0.55)' }}>
+          <div className="flex items-center flex-wrap gap-2 sm:gap-4" style={{ color: 'rgba(148,196,255,0.55)' }}>
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <span className="flex items-center gap-1.5">

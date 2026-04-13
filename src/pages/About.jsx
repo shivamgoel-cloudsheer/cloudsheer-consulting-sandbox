@@ -70,13 +70,13 @@ export default function About() {
             <MapPin className="w-3.5 h-3.5" />
             Global Presence
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-4">
             Connected Across the Globe
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
             {offices.map(({ city, flag }, i) => (
               <div key={city} className="flex items-center gap-2">
-                <span className="inline-flex items-center gap-2 text-white font-semibold text-lg">
+                <span className="inline-flex items-center gap-2 text-white font-semibold text-base sm:text-lg">
                   <span>{flag}</span> {city}
                 </span>
                 {i < offices.length - 1 && (
@@ -85,7 +85,7 @@ export default function About() {
               </div>
             ))}
           </div>
-          <p className="text-lg max-w-2xl mx-auto leading-relaxed"
+          <p className="text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed"
             style={{ color: 'rgba(148,196,255,0.85)' }}>
             Cloudsheer came together out of a shared belief that collaboration and team
             dynamics are the way to help our clients. Our globally distributed team means
@@ -110,7 +110,7 @@ export default function About() {
 
           <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-10">
             {capabilities.map(({ icon, title, desc }) => (
-              <div key={title} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300">
+              <div key={title} className="glass-card p-4 sm:p-6 group hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300"
                   style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}
                   onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0176D3'; e.currentTarget.style.color = 'white' }}
@@ -165,7 +165,7 @@ export default function About() {
                 { value: '250+',   label: 'Successful Projects',    color: '#F59E0B' },
               ].map(({ value, label, color }) => (
                 <div key={label} className="glass-card p-6 text-center">
-                  <p className="text-4xl font-black mb-2" style={{ color }}>{value}</p>
+                  <p className="text-2xl sm:text-4xl font-black mb-2" style={{ color }}>{value}</p>
                   <p className="text-sm font-medium" style={{ color: '#475569' }}>{label}</p>
                 </div>
               ))}
@@ -183,7 +183,7 @@ export default function About() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {values.map(({ icon, title, desc }) => (
-              <div key={title} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300">
+              <div key={title} className="glass-card p-4 sm:p-6 group hover:-translate-y-1 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300"
                   style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}
                   onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#0176D3'; e.currentTarget.style.color = 'white' }}
@@ -214,7 +214,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
             {team.map(({ id, name, role, photo, linkedin }) => (
               <div key={id}
                 className="glass-card p-4 flex flex-col items-center text-center group cursor-pointer"
@@ -265,7 +265,7 @@ export default function About() {
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: '#032D60' }}>
         <div className="section-wrap text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl font-extrabold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
             Ready to See What We Can <span className="gradient-text-gold">Build for You?</span>
           </h2>
           <p className="mb-8" style={{ color: 'rgba(148,196,255,0.80)' }}>

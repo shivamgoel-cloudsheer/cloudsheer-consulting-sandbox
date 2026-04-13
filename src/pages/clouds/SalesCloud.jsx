@@ -107,7 +107,7 @@ export default function SalesCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <TrendingUp className="w-3.5 h-3.5" /> Sales Cloud by Salesforce
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 animate-fade-up">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
             29% More Revenue.<br />
             <span className="gradient-text-gold">44% Higher Win Rates.</span>
           </h1>
@@ -197,7 +197,7 @@ export default function SalesCloudPage() {
       </section>
 
       {/* ── Capabilities ─────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="section-wrap">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">What You Get</div>
@@ -274,7 +274,7 @@ export default function SalesCloudPage() {
       </section>
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-14 sm:py-24 bg-white">
         <div className="section-wrap">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">
@@ -301,7 +301,7 @@ export default function SalesCloudPage() {
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden"
+      <section className="py-14 sm:py-24 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="glow-dot w-[500px] h-[500px] top-[-100px] left-[50%] -translate-x-1/2"
