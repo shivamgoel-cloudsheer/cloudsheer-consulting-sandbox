@@ -99,7 +99,6 @@ export default function SlackPage() {
 
         <div className="section-wrap relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <img loading="lazy" src={BASE + 'slack/slack-logo.webp'} alt="Slack" className="w-16 h-16 mx-auto mb-5 rounded-2xl" style={{ boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }} />
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Zap className="w-3.5 h-3.5" /> Slack from Salesforce
             </div>
