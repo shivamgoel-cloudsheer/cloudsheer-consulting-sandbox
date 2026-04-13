@@ -6,6 +6,7 @@ import {
 } from 'lucide-react'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
+const BASE = import.meta.env.BASE_URL
 
 const painPoints = [
   { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "<strong>Channels</strong> keep every conversation and decision in one searchable place" },
@@ -96,18 +97,19 @@ export default function SlackPage() {
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
           style={{ backgroundColor: '#E01E5A', opacity: 0.15 }} />
 
-        <div className="section-wrap relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="section-wrap relative z-10 text-center">
+          <div className="max-w-3xl mx-auto">
+            <img loading="lazy" src={BASE + 'slack/slack-logo.webp'} alt="Slack" className="w-16 h-16 mx-auto mb-5 rounded-2xl" style={{ boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }} />
             <div className="tag-white mx-auto mb-6 inline-flex">
-              <Zap className="w-3.5 h-3.5" /> Salesforce Slack
+              <Zap className="w-3.5 h-3.5" /> Slack from Salesforce
             </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
-              Cut meetings 29%. Kill email overload.{' '}
+              Cut meetings 29%. Kill email overload.
               <br /><span className="gradient-text-gold">Make every team 47% more productive.</span>
             </h1>
-            <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto mb-8 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Slack is the AI-powered work operating system that connects your people, tools, and Salesforce data in one place - so decisions happen faster, context is never lost, and your team spends time on work that matters.
+              Slack connects your people, tools, and Salesforce data in one place. Decisions happen faster, context is never lost.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -115,10 +117,13 @@ export default function SlackPage() {
                 See What Slack Can Do For Your Team <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-            <p className="text-sm mt-5 animate-fade-up-3"
-              style={{ color: 'rgba(148,196,255,0.60)' }}>
-              Free 30-min discovery call · No commitment · We come with a plan
-            </p>
+          </div>
+
+          {/* Slack desktop screenshot */}
+          <div className="mt-10 max-w-4xl mx-auto animate-fade-up-2">
+            <img loading="lazy" src={BASE + 'slack/slack-desktop.webp'} alt="Slack desktop interface"
+              className="w-full rounded-xl"
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
           </div>
         </div>
       </section>
