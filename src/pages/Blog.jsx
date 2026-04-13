@@ -97,9 +97,9 @@ function PostCard({ post, large }) {
 
   if (large) {
     return (
-      <Link to={`/blog/${slug}`} className="glass-card p-8 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="h-52 rounded-xl overflow-hidden">
+      <Link to={`/blog/${slug}`} className="glass-card p-5 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
+          <div className="h-44 rounded-xl overflow-hidden">
             <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
           </div>
           <div>
@@ -109,7 +109,7 @@ function PostCard({ post, large }) {
             <h3 className="text-cs-navy font-bold text-xl mb-3 group-hover:text-cs-blue transition-colors leading-snug">
               {title}
             </h3>
-            <p className="text-cs-muted text-sm leading-relaxed mb-5">{excerpt}</p>
+            <p className="text-cs-muted text-sm leading-relaxed mb-3">{excerpt}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className={`w-7 h-7 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-xs font-bold`}>
