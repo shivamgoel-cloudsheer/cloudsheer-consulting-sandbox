@@ -100,7 +100,7 @@ export default function ServiceCloudPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Headphones className="w-3.5 h-3.5" /> Salesforce Service Cloud
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
               Resolve Cases 30% Faster and{' '}
               <span className="gradient-text-gold">Cut Support Costs by 27%</span>
             </h1>
@@ -279,7 +279,7 @@ export default function ServiceCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <Headphones className="w-3.5 h-3.5" /> Free Scoping Call
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-5">
             Ready to Deliver Support That<br />
             <span className="gradient-text-gold">Drives Loyalty and Cuts Costs?</span>
           </h2>

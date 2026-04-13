@@ -101,7 +101,7 @@ export default function HealthCloudPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Heart className="w-3.5 h-3.5" /> Salesforce Health Cloud
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
               Transform Patient Outcomes.{' '}
               <span className="gradient-text-gold">Cut Admin Costs 25%. Coordinate Care 40% Faster.</span>
             </h1>
@@ -279,7 +279,7 @@ export default function HealthCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <Heart className="w-3.5 h-3.5" /> Free Discovery Call
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-5">
             Find Out Exactly What<br />
             <span className="gradient-text-gold">Health Cloud Can Deliver For You</span>
           </h2>

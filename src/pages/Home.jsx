@@ -35,35 +35,33 @@ function Hero() {
               Trusted by Businesses to Cut Costs & Scale with AI
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-6 tracking-tight animate-fade-up-1">
-              <span className="text-white">Your Team Is</span><br />
-              <span className="text-white">Drowning in</span><br />
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
+              <span className="text-white">Your Team Is Drowning in</span><br />
               <span className="shimmer-text">Manual Work.</span>
             </h1>
 
-            <p className="text-base md:text-xl leading-relaxed mb-6 md:mb-10 max-w-lg animate-fade-up-2"
+            <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              AI agents handle your support tickets, qualify your leads, and
-              update your CRM - 24/7, inside Salesforce. Go live in 4 weeks.
+              AI agents handle support, qualify leads, and update your CRM - 24/7, inside Salesforce.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-up-3">
-              <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5">
+            <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">
+              <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5 justify-center">
                 Book Free Discovery Call <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce-x" />
               </a>
               <Link to="/solutions/agentforce"
-                className="inline-flex items-center gap-2 font-medium px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl transition-all duration-200 text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 font-medium px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl transition-all duration-200 text-sm sm:text-base"
                 style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: 'white' }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)'}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
                 Explore Solutions
               </Link>
             </div>
-            <p className="text-xs mb-12 animate-fade-up-3" style={{ color: 'rgba(186,220,255,0.55)' }}>
-              30-min call with a Salesforce architect. No pitch - just a candid look at where AI agents fit.
+            <p className="text-xs mb-8 sm:mb-12 animate-fade-up-3 text-center md:text-left" style={{ color: 'rgba(186,220,255,0.55)' }}>
+              30-min call with a Salesforce architect. No pitch.
             </p>
 
-            <div className="flex flex-wrap gap-5 sm:gap-8 animate-fade-up-4">
+            <div className="flex flex-wrap justify-center md:justify-start gap-5 sm:gap-8 animate-fade-up-4">
               {[
                 { val: '40%', label: 'Lower Support Costs' },
                 { val: '3×',  label: 'Faster Lead Response' },

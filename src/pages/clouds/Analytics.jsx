@@ -100,7 +100,7 @@ export default function AnalyticsPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <BarChart2 className="w-3.5 h-3.5" /> CRM Analytics & Tableau
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
               Turn Raw Data Into{' '}
               <span className="gradient-text-gold">Revenue-Driving Decisions - In Real Time.</span>
             </h1>
@@ -278,7 +278,7 @@ export default function AnalyticsPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <Zap className="w-3.5 h-3.5" /> Free Analytics Scoping Call
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-5">
             Ready to Make Every Decision<br />
             <span className="gradient-text-gold">Backed by Real-Time Intelligence?</span>
           </h2>

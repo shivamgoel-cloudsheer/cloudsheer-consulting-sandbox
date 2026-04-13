@@ -100,7 +100,7 @@ export default function CommerceCloudPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <ShoppingCart className="w-3.5 h-3.5" /> Salesforce Commerce Cloud
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
               Convert More Buyers, Grow AOV, and{' '}
               <span className="gradient-text-gold">Scale Without Limits</span>
             </h1>
@@ -278,7 +278,7 @@ export default function CommerceCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <ShoppingCart className="w-3.5 h-3.5" /> Free Commerce Scoping Call
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-5">
             Ready to Launch or Scale Your<br />
             <span className="gradient-text-gold">Commerce Revenue Engine?</span>
           </h2>

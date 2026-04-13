@@ -107,7 +107,7 @@ export default function SalesCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <TrendingUp className="w-3.5 h-3.5" /> Sales Cloud by Salesforce
           </div>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 animate-fade-up">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
             29% More Revenue.<br />
             <span className="gradient-text-gold">44% Higher Win Rates.</span>
           </h1>
@@ -310,7 +310,7 @@ export default function SalesCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <TrendingUp className="w-3.5 h-3.5" /> Free Sales Cloud Scoping Call
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-5">
+          <h2 className="text-2xl md:text-4xl font-black text-white mb-5">
             Ready to Turn Your CRM Into a<br />
             <span className="gradient-text-gold">Revenue Growth Engine?</span>
           </h2>
