@@ -7,7 +7,7 @@ const articles = {
   'getting-started-agentforce-2026': {
     title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     category: 'Agentforce',
-    date: 'Mar 18, 2025',
+    date: 'Mar 18, 2026',
     readTime: '8 min',
     author: 'Rajat Sharma',
     initials: 'RS',
@@ -85,7 +85,7 @@ const articles = {
   'agentforce-vs-einstein-bots': {
     title: "Agentforce vs Einstein Bots: What's the Difference?",
     category: 'Agentforce',
-    date: 'Feb 28, 2025',
+    date: 'Feb 28, 2026',
     readTime: '5 min',
     author: 'Rajat Sharma',
     initials: 'RS',
@@ -167,7 +167,7 @@ const articles = {
   'salesforce-implementation-checklist': {
     title: '10-Point Checklist for a Successful Salesforce Implementation',
     category: 'Implementation',
-    date: 'Feb 10, 2025',
+    date: 'Feb 10, 2026',
     readTime: '6 min',
     author: 'Tushar Sharma',
     initials: 'TS',
@@ -246,7 +246,7 @@ const articles = {
   'roi-agentforce-service-cloud': {
     title: 'Measuring the ROI of Agentforce: What Our Clients Actually See',
     category: 'ROI & Results',
-    date: 'Jan 22, 2025',
+    date: 'Jan 22, 2026',
     readTime: '7 min',
     author: 'Tushar Sharma',
     initials: 'TS',
@@ -339,7 +339,7 @@ const articles = {
   'data-cloud-agentforce': {
     title: 'How Data Cloud Makes Your Agentforce Agents Smarter',
     category: 'Data Cloud',
-    date: 'Jan 8, 2025',
+    date: 'Jan 8, 2026',
     readTime: '7 min',
     author: 'Shubham Bansal',
     initials: 'SB',
@@ -408,7 +408,7 @@ const articles = {
   'crm-adoption-agentforce': {
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
     category: 'Strategy',
-    date: 'Dec 20, 2024',
+    date: 'Dec 20, 2025',
     readTime: '5 min',
     author: 'Shivam Goel',
     initials: 'SG',
@@ -470,7 +470,7 @@ const articles = {
   'spring-25-agentforce': {
     title: "Top Agentforce Features in the Salesforce Spring '25 Release",
     category: 'Salesforce News',
-    date: 'Dec 5, 2024',
+    date: 'Dec 5, 2025',
     readTime: '9 min',
     author: 'Tushar Sharma',
     initials: 'TS',
