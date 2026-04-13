@@ -32,7 +32,7 @@ function Hero() {
           <div>
             <div className="tag-white inline-flex mb-8 animate-fade-up">
               <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#F59E0B' }} />
-              Trusted by Businesses to Cut Costs & Scale with AI
+              Salesforce & Agentforce Implementation Partner
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
