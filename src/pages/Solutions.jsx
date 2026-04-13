@@ -157,12 +157,12 @@ function TrustLayer() {
 }
 
 const clouds = [
-  { icon: <ShoppingCart className="w-6 h-6" />, title: 'Sales Cloud + Agentforce',       desc: 'Close 29% more deals with AI-powered lead qualification, pipeline visibility, and automated follow-ups that never let a lead go cold.', tags: ['29% More Revenue', 'Faster Deals', 'AI Forecasting'] },
-  { icon: <Headphones className="w-6 h-6" />,   title: 'Service Cloud + Agentforce',     desc: 'Resolve 78% of support cases without a human. Cut costs by 40% while keeping CSAT above 4.8/5.',             tags: ['78% Deflection', '40% Cost Savings', 'Omni-Channel'] },
-  { icon: <Mail className="w-6 h-6" />,         title: 'Marketing Cloud',                desc: 'Increase marketing ROI by 28% with AI-personalised journeys, smart send times, and full attribution reporting.',                  tags: ['28% Higher ROI', '67% Conversion Lift', 'Einstein AI'] },
-  { icon: <Database className="w-6 h-6" />,     title: 'Data Cloud',                     desc: 'Unify every customer data source in real time - powering smarter agents, sharper segmentation, and better decisions.',       tags: ['Real-Time Data', 'Single Customer View', 'AI-Ready'] },
-  { icon: <BarChart3 className="w-6 h-6" />,    title: 'CRM Analytics',                  desc: 'Cut reporting time by 65% and improve forecast accuracy by 28% with dashboards embedded where your team already works.',      tags: ['65% Faster Reports', '28% Better Forecasts', 'Einstein AI'] },
-  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Builds',       desc: 'Got a unique process? We build custom Agentforce for HR, Finance, Operations - any function where automation drives ROI.',         tags: ['Custom Workflows', 'Any Department', 'Measurable ROI'] },
+  { icon: <ShoppingCart className="w-6 h-6" />, title: 'Sales Cloud + Agentforce',       desc: 'Einstein Lead Scoring, Pipeline Inspection, Revenue Intelligence, and Agentforce SDR Agent. Close 29% more deals with AI-guided selling.', tags: ['Einstein Lead Scoring', 'Pipeline Inspection', 'Revenue Intelligence'] },
+  { icon: <Headphones className="w-6 h-6" />,   title: 'Service Cloud + Agentforce',     desc: 'Agentforce Service Agent with Einstein Case Classification, Omni-Channel Routing, and Knowledge Base. 78% case deflection.', tags: ['Einstein Case Classification', 'Omni-Channel', 'Service Console'] },
+  { icon: <Mail className="w-6 h-6" />,         title: 'Marketing Cloud Engagement',     desc: 'Journey Builder, Einstein Send Time Optimization, Content Builder, and Account Engagement (Pardot). 28% higher marketing ROI.', tags: ['Journey Builder', 'Einstein STO', 'Account Engagement'] },
+  { icon: <Database className="w-6 h-6" />,     title: 'Data Cloud',                     desc: 'Unified customer profiles, identity resolution, calculated insights, and real-time segments. Power smarter agents and personalization.', tags: ['Unified Profiles', 'Identity Resolution', 'Real-Time Segments'] },
+  { icon: <BarChart3 className="w-6 h-6" />,    title: 'CRM Analytics + Tableau',        desc: 'Analytics Studio, Einstein Discovery, Einstein Predictions, and Tableau dashboards embedded inside Salesforce. 382% ROI.', tags: ['Einstein Discovery', 'Analytics Studio', 'Tableau'] },
+  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Agents',       desc: 'Built with Agent Builder using Topics, Actions, and Instructions. Custom agents for HR, Finance, Operations with Flow and Apex integration.', tags: ['Agent Builder', 'Flow Integration', 'Custom Topics'] },
 ]
 
 function SalesforceClouds() {

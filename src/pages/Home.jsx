@@ -291,12 +291,12 @@ function TrustedBy() {
 /* ─── Why Agentforce-first ──────────────────────────────────── */
 function WhyAgentforce() {
   const points = [
-    { icon: <Clock className="w-5 h-5" />,      title: 'Never Miss a Lead Again',     desc: 'Agentforce respond to every inbound lead in under 2 seconds - qualifying, nurturing, and booking meetings while your reps sleep.' },
-    { icon: <Zap className="w-5 h-5" />,         title: 'Cut Support Costs by 40%',    desc: 'Resolve 78% of Tier-1 and Tier-2 cases without human involvement. Your customers get instant answers, your team handles what matters.' },
-    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Trusted by Your Compliance Team', desc: "Every agent action is logged, auditable, and governed by Salesforce's Einstein Trust Layer. No rogue AI - just transparent automation." },
-    { icon: <BarChart3 className="w-5 h-5" />,   title: 'See ROI in 90 Days',          desc: 'Go live in 4-6 weeks and start measuring impact immediately - more deals closed, faster resolution times, lower operational costs.' },
-    { icon: <Users className="w-5 h-5" />,        title: 'Free Your Team for Growth',   desc: 'Stop wasting your best people on data entry, ticket routing, and follow-up emails. Let agents handle the repetitive so your team drives revenue.' },
-    { icon: <Settings className="w-5 h-5" />,    title: 'Built for Your Business',     desc: 'Every agent is designed around your exact processes, data, and Salesforce org. Not a generic template - a custom-built solution that fits.' },
+    { icon: <Clock className="w-5 h-5" />,      title: 'Agentforce SDR Agent',        desc: 'Responds to inbound leads in seconds using Atlas Reasoning Engine. Qualifies, nurtures, and books meetings 24/7 inside Sales Cloud.' },
+    { icon: <Zap className="w-5 h-5" />,         title: 'Agentforce Service Agent',    desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification. 78% deflection without human involvement.' },
+    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Einstein Trust Layer',        desc: 'Every agent action is grounded in your CRM data, logged, and auditable. Built-in guardrails prevent hallucination and unauthorized actions.' },
+    { icon: <BarChart3 className="w-5 h-5" />,   title: 'Agent Builder',               desc: 'Configure Topics, Actions, and Instructions in natural language. Go live in 4-6 weeks with pre-built templates or fully custom agents.' },
+    { icon: <Users className="w-5 h-5" />,        title: 'Human-in-the-Loop',           desc: 'Seamless handoff to Service Console with full conversation context. Agents escalate intelligently based on your business rules.' },
+    { icon: <Settings className="w-5 h-5" />,    title: 'Data Cloud Grounding',        desc: 'Agents access unified customer profiles from Data Cloud - CRM, ERP, and external data - for personalized, accurate responses every time.' },
   ]
 
   return (
@@ -338,9 +338,9 @@ function WhyAgentforce() {
 /* ─── Agentforce showcase ───────────────────────────────────── */
 function AgentforceShowcase() {
   const agents = [
-    { name: 'Service Agent',           metric: '40% lower costs', desc: 'Your customers get instant answers at 2am or 2pm. Cases are resolved, records updated, and SLAs met - without adding headcount to your support team.', iconBg: 'rgba(1,118,211,0.10)',   iconColor: '#0176D3' },
-    { name: 'Sales Development Agent', metric: '3× more meetings',  desc: 'Every inbound lead gets a response in seconds. Qualified prospects are booked into your calendar automatically - so your pipeline never goes cold.',                iconBg: 'rgba(245,158,11,0.10)',  iconColor: '#D97706' },
-    { name: 'Operations Agent',        metric: '12 hrs/week back',   desc: 'Stop losing your best people to data entry, report generation, and record updates. Automate the admin so your team can focus on revenue.',                     iconBg: 'rgba(99,102,241,0.10)', iconColor: '#6366F1' },
+    { name: 'Agentforce Service Agent', metric: '40% lower costs', desc: 'Uses Einstein Case Classification and Knowledge Base to resolve cases autonomously. Handles Omni-Channel queries across chat, email, SMS, and WhatsApp.', iconBg: 'rgba(1,118,211,0.10)',   iconColor: '#0176D3' },
+    { name: 'Agentforce SDR Agent',     metric: '3x more meetings',  desc: 'Powered by Atlas Reasoning Engine, qualifies leads using Einstein Lead Scoring and books meetings directly into Sales Engagement calendars.',                iconBg: 'rgba(245,158,11,0.10)',  iconColor: '#D97706' },
+    { name: 'Custom Agentforce Agent',   metric: '12 hrs/week back',   desc: 'Built with Agent Builder using Topics, Actions, and Flow triggers. Automates record updates, report generation, and cross-object workflows.',                     iconBg: 'rgba(99,102,241,0.10)', iconColor: '#6366F1' },
   ]
 
   return (
@@ -387,10 +387,10 @@ function AgentforceShowcase() {
 /* ─── Stats ─────────────────────────────────────────────────── */
 function Stats() {
   const items = [
-    { val: '40%',  label: 'Case Resolution Increase', sub: 'Wiley, Agentforce deployment' },
-    { val: '73%',  label: 'Queries Handled by AI',     sub: 'OpenTable, autonomous agents' },
-    { val: '<2s',  label: 'Lead Response Time',         sub: 'vs. 4+ hours industry avg' },
-    { val: '$2',   label: 'Cost Per Conversation',      sub: 'vs. $11+ human agent avg' },
+    { val: '40%',  label: 'Case Resolution Increase', sub: 'Wiley, Agentforce Service Agent' },
+    { val: '73%',  label: 'Autonomous Resolution',      sub: 'OpenTable, Agentforce deployment' },
+    { val: '<2s',  label: 'Agentforce SDR Response',    sub: 'vs. 4+ hours without agents' },
+    { val: '$2',   label: 'Cost Per Conversation',      sub: 'Agentforce vs. $11+ human agent' },
   ]
 
   return (
@@ -418,10 +418,10 @@ function Stats() {
 /* ─── Process ───────────────────────────────────────────────── */
 function Process() {
   const steps = [
-    { n: '01', title: 'Identify the Opportunity', desc: 'We pinpoint where Agentforce will have the biggest impact on your revenue, costs, and customer experience - based on your actual data.' },
-    { n: '02', title: 'Design Your Agent',         desc: 'Custom-built agents designed around your workflows, business rules, and Salesforce org - not a generic template.' },
-    { n: '03', title: 'Build & Validate',          desc: 'Rigorous sandbox testing ensures your agent works perfectly before it touches production or talks to a single customer.' },
-    { n: '04', title: 'Go Live & Measure',         desc: 'Launch with confidence. Track case deflection, lead response time, and cost savings from day one - with continuous optimisation.' },
+    { n: '01', title: 'Discovery & Org Audit',      desc: 'We audit your Salesforce org, map processes, and identify the highest-impact Agentforce use cases using your actual CRM data.' },
+    { n: '02', title: 'Agent Builder Design',      desc: 'Define Topics, Actions, and Instructions in Agent Builder. Configure Einstein Trust Layer guardrails and Data Cloud grounding.' },
+    { n: '03', title: 'Sandbox Build & Test',      desc: 'Build in sandbox with Flow Builder, Apex integrations, and Knowledge Base. Rigorous testing before production deployment.' },
+    { n: '04', title: 'Deploy & Optimise',         desc: 'Go live with Omni-Channel deployment. Monitor with CRM Analytics dashboards. Continuously optimise agent performance.' },
   ]
 
   return (
