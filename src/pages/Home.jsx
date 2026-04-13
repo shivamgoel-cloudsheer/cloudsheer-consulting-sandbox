@@ -678,7 +678,6 @@ function WhyCloudsheer() {
                 </div>
                 <h3 className="font-bold" style={{ color: '#032D60' }}>{title}</h3>
               </div>
-              <p className="text-xs mb-2 line-through" style={{ color: '#94A3B8' }}>{problem}</p>
               <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>{us}</p>
             </div>
           ))}
