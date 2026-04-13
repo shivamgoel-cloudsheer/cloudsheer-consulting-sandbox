@@ -44,7 +44,8 @@ const clouds = [
   {
     label: 'Analytics / Tableau',
     to: '/solutions/analytics',
-    icon: BarChart2,
+    icon: null,
+    image: 'slack/tableau-logo.webp',
     desc: 'Real-time intelligence and visual reporting',
   },
   {
