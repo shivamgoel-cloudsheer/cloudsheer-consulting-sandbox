@@ -43,7 +43,8 @@ const clouds = [
   {
     label: 'Experience Cloud',
     to: '/solutions/experience-cloud',
-    icon: Users,
+    icon: null,
+    image: 'icons/experience.svg',
     desc: 'Portals & communities for partners & customers',
   },
   {
@@ -69,7 +70,8 @@ const clouds = [
   {
     label: 'Health Cloud',
     to: '/solutions/health-cloud',
-    icon: HeartPulse,
+    icon: null,
+    image: 'icons/health.svg',
     desc: 'Patient 360 for healthcare & life sciences',
   },
 ]
