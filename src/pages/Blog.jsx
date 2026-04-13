@@ -97,19 +97,19 @@ function PostCard({ post, large }) {
 
   if (large) {
     return (
-      <Link to={`/blog/${slug}`} className="glass-card p-5 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
-        <div className="grid md:grid-cols-2 gap-6 items-center">
-          <div className="h-44 rounded-xl overflow-hidden">
+      <Link to={`/blog/${slug}`} className="glass-card p-4 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
+        <div className="grid md:grid-cols-2 gap-5 items-stretch">
+          <div className="rounded-xl overflow-hidden">
             <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
           </div>
-          <div>
-            <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border ${categoryColor} mb-4`}>
+          <div className="flex flex-col justify-center py-2">
+            <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start ${categoryColor} mb-2`}>
               {categoryIcon} {category}
             </span>
-            <h3 className="text-cs-navy font-bold text-xl mb-3 group-hover:text-cs-blue transition-colors leading-snug">
+            <h3 className="text-cs-navy font-bold text-lg mb-2 group-hover:text-cs-blue transition-colors leading-snug">
               {title}
             </h3>
-            <p className="text-cs-muted text-sm leading-relaxed mb-3">{excerpt}</p>
+            <p className="text-cs-muted text-xs leading-relaxed mb-3">{excerpt}</p>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <div className={`w-7 h-7 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-xs font-bold`}>
@@ -128,18 +128,18 @@ function PostCard({ post, large }) {
   }
 
   return (
-    <Link to={`/blog/${slug}`} className="glass-card p-6 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
-      <div className="h-40 rounded-xl overflow-hidden mb-5">
+    <Link to={`/blog/${slug}`} className="glass-card p-4 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
+      <div className="h-36 rounded-xl overflow-hidden mb-3">
         <img src={imgSrc} alt={title} className="w-full h-full object-cover" />
       </div>
-      <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start mb-3 ${categoryColor}`}>
+      <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start mb-2 ${categoryColor}`}>
         {categoryIcon} {category}
       </span>
-      <h3 className="text-cs-navy font-bold mb-2 flex-grow group-hover:text-cs-blue transition-colors leading-snug">
+      <h3 className="text-cs-navy font-bold text-sm mb-1.5 group-hover:text-cs-blue transition-colors leading-snug">
         {title}
       </h3>
-      <p className="text-cs-muted text-xs leading-relaxed mb-5 line-clamp-3">{excerpt}</p>
-      <div className="flex items-center justify-between pt-4 border-t border-cs-blue/8">
+      <p className="text-cs-muted text-xs leading-relaxed mb-3 line-clamp-2">{excerpt}</p>
+      <div className="flex items-center justify-between pt-3 border-t border-cs-blue/8 mt-auto">
         <div className="flex items-center gap-2">
           <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-[10px] font-bold`}>
             {initials}
