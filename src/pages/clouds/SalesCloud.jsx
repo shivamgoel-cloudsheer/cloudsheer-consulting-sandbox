@@ -121,10 +121,12 @@ export default function SalesCloudPage() {
               See What Sales Cloud Can Do for Your Revenue <ArrowRight className="w-5 h-5" />
             </a>
           </div>
-          <p className="text-sm mt-5 animate-fade-up-3"
-            style={{ color: 'rgba(148,196,255,0.60)' }}>
-            Free 30-min scoping call · No commitment · We come with a plan
-          </p>
+          {/* Sales Cloud dashboard screenshot */}
+          <div className="mt-10 max-w-4xl mx-auto animate-fade-up-3">
+            <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/sales-dashboard.webp'} alt="Sales Cloud Seller Home - Pipeline, Accounts, Leads, Einstein AI"
+              className="w-full rounded-xl"
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
+          </div>
         </div>
       </section>
 
