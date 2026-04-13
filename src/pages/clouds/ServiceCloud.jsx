@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Every channel. One workspace. Zero context lost.',
     points: [
-      '<strong>Unified console</strong> for email, chat, phone, WhatsApp, social, and SMS in one view',
-      '<strong>Skills-based routing</strong> matches each case to the best-qualified available agent',
-      '<strong>Customer timeline</strong> - purchases, open cases, and sentiment visible before responding',
-      '<strong>Bot-to-human handoff</strong> preserves the full conversation so customers never repeat themselves',
-      '<strong>Supervisor console</strong> with real-time queue health, utilisation, and live monitoring',
+      '<strong>Unified console</strong> for email, chat, phone, SMS',
+      '<strong>Skills-based routing</strong> to the best-qualified agent',
+      '<strong>Customer timeline</strong> - purchases, cases, sentiment visible',
+      '<strong>Bot-to-human handoff</strong> with full conversation preserved',
+      '<strong>Supervisor console</strong> with real-time queue monitoring',
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Resolve cases before they ever reach your team.',
     points: [
-      '<strong>Agentforce Service Agent</strong> handles Tier-1 and Tier-2 queries autonomously',
-      '<strong>AI chatbots</strong> search your knowledge base and case history for precise real-time answers',
-      '<strong>Self-service portals</strong> let customers track orders, update accounts, and submit cases',
-      '<strong>Einstein Article Recommendations</strong> surface the right content to agents and customers',
-      '<strong>Auto-escalation</strong> to a human agent with full context when AI confidence drops',
+      '<strong>Agentforce Service Agent</strong> resolves Tier-1 and Tier-2 autonomously',
+      '<strong>AI chatbots</strong> search knowledge base for real-time answers',
+      '<strong>Self-service portals</strong> for orders, accounts, and cases',
+      '<strong>Einstein Article Recommendations</strong> surface relevant content automatically',
+      '<strong>Auto-escalation</strong> with full context when needed',
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Dispatch the right technician. First time. Every time.',
     points: [
-      '<strong>AI-optimised dispatch</strong> assigns the closest technician with the right skills and parts',
-      '<strong>GPS tracking</strong> and automated reminders keep customers informed at every step',
-      '<strong>Mobile app</strong> gives technicians offline access to cases, assets, and parts inventory',
-      '<strong>Auto-created work orders</strong> from cases with pre-populated details - 40% less admin time',
-      '<strong>AI-assisted diagnostics</strong> and remote video support improve first-time fix rates',
+      '<strong>AI-optimised dispatch</strong> by proximity, skills, and parts',
+      '<strong>GPS tracking</strong> with automated customer reminders',
+      '<strong>Mobile app</strong> with offline access for technicians',
+      '<strong>Auto-created work orders</strong> from cases - less admin',
+      '<strong>AI-assisted diagnostics</strong> improve first-time fix rates',
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'See everything. Fix problems before customers notice.',
     points: [
-      '<strong>Pre-built dashboards</strong> track CSAT, SLA compliance, cost-per-case, and agent performance',
-      '<strong>Entitlement tracking</strong> with automatic breach alerts ensures every commitment is met',
-      '<strong>Einstein AI</strong> flags at-risk cases, predicts escalations, and recommends next actions',
-      '<strong>Custom reports</strong> across every channel to identify bottlenecks and reduce cost-to-serve',
-      '<strong>Tableau integration</strong> delivers executive-ready insights with drill-down to individual cases',
+      '<strong>Pre-built dashboards</strong> for CSAT, SLA, agent performance',
+      '<strong>Entitlement tracking</strong> with automatic breach alerts',
+      '<strong>Einstein AI</strong> flags at-risk cases and escalations',
+      '<strong>Custom reports</strong> to identify bottlenecks per channel',
+      '<strong>Tableau integration</strong> for executive-ready service insights',
     ],
   },
 ]
@@ -207,7 +207,7 @@ export default function ServiceCloudPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-7 group hover:-translate-y-1 transition-all duration-300">
+              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: `${color}15`, color }}>
@@ -221,9 +221,9 @@ export default function ServiceCloudPage() {
                     <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
                   </div>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2 flex-grow">
                   {points.map(p => (
-                    <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
+                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
                       <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>

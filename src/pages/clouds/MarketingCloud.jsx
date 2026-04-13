@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Automated journeys that nurture, convert, and retain',
     points: [
-      '<strong>Journey Builder</strong> orchestrates multi-channel flows from CRM events and behaviour',
-      '<strong>Pre-built templates</strong> for welcome, abandoned cart, win-back, and renewal journeys',
-      '<strong>Dynamic content blocks</strong> swap images and offers per subscriber automatically',
-      '<strong>Einstein Send Time</strong> delivers each email when contacts are most likely to engage',
-      '<strong>A/B and multivariate testing</strong> on subject lines, content, and CTAs at scale',
+      '<strong>Journey Builder</strong> orchestrates multi-channel CRM-triggered flows',
+      '<strong>Pre-built templates</strong> for welcome, cart, win-back journeys',
+      '<strong>Dynamic content blocks</strong> swap per subscriber automatically',
+      '<strong>Einstein Send Time</strong> optimises delivery per contact',
+      '<strong>A/B and multivariate testing</strong> on content at scale',
     ],
   },
   {
@@ -206,7 +206,7 @@ export default function MarketingCloudPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-7 group hover:-translate-y-1 transition-all duration-300">
+              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: `${color}15`, color }}>
@@ -220,9 +220,9 @@ export default function MarketingCloudPage() {
                     <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
                   </div>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2 flex-grow">
                   {points.map(p => (
-                    <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
+                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
                       <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>

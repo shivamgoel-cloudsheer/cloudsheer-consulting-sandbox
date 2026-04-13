@@ -206,7 +206,7 @@ export default function CommerceCloudPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-7 group hover:-translate-y-1 transition-all duration-300">
+              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: `${color}15`, color }}>
@@ -220,9 +220,9 @@ export default function CommerceCloudPage() {
                     <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
                   </div>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2 flex-grow">
                   {points.map(p => (
-                    <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
+                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
                       <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>

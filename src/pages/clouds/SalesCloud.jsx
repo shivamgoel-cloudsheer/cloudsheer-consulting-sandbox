@@ -31,11 +31,11 @@ const capabilities = [
     color: '#0176D3',
     headline: 'Turn pipeline visibility into predictable revenue',
     points: [
-      '<strong>Custom sales stages</strong> and exit criteria built around your actual sales motion',
-      '<strong>Einstein Opportunity Scoring</strong> ranks every deal by likelihood to close',
-      '<strong>Deal Insights</strong> flag stalled opportunities, missing contacts, and competitive risk',
-      '<strong>Activity timeline</strong> - emails, calls, meetings, and engagement signals in one view',
-      '<strong>Kanban pipeline</strong> with drag-and-drop stage progression for fast weekly reviews',
+      '<strong>Custom sales stages</strong> built around your sales motion',
+      '<strong>Einstein Opportunity Scoring</strong> ranks deals by close likelihood',
+      '<strong>Deal Insights</strong> flag stalled opportunities and risks',
+      '<strong>Activity timeline</strong> - all engagement signals in one view',
+      '<strong>Kanban pipeline</strong> with drag-and-drop stage progression',
     ],
   },
   {
@@ -44,11 +44,11 @@ const capabilities = [
     color: '#10B981',
     headline: 'Automate the busywork - multiply rep selling time',
     points: [
-      '<strong>Einstein Activity Capture</strong> syncs every email and calendar event - zero manual logging',
-      '<strong>Einstein Lead Scoring</strong> identifies which inbound leads are most likely to convert',
-      '<strong>Sales Engagement</strong> automates multi-step outreach across email, phone, and LinkedIn',
-      '<strong>Agentforce AI</strong> qualifies leads, books meetings, and drafts follow-ups around the clock',
-      '<strong>AI call summaries</strong> with automatic next-step creation so nothing falls through the cracks',
+      '<strong>Einstein Activity Capture</strong> syncs emails and calendar automatically',
+      '<strong>Einstein Lead Scoring</strong> identifies highest-converting leads',
+      '<strong>Sales Engagement</strong> automates multi-step outreach sequences',
+      '<strong>Agentforce AI</strong> qualifies leads and books meetings 24/7',
+      '<strong>AI call summaries</strong> with automatic next-step creation',
     ],
   },
   {
@@ -57,11 +57,11 @@ const capabilities = [
     color: '#F59E0B',
     headline: 'Commit your number with 42% more accuracy',
     points: [
-      '<strong>Einstein Forecasting</strong> combines historical patterns and pipeline signals into one AI prediction',
-      '<strong>Revenue Intelligence</strong> dashboards show pipeline velocity, conversion rates, and gap-to-quota',
-      '<strong>Deal change tracking</strong> surfaces sandbagging, push-outs, and coverage gaps early',
-      '<strong>Quota attainment tracking</strong> and coaching signals focus manager time where it matters',
-      '<strong>Custom roll-up reports</strong> by territory, product line, or segment for leadership',
+      '<strong>Einstein Forecasting</strong> with AI-powered pipeline predictions',
+      '<strong>Revenue Intelligence</strong> dashboards for velocity and conversion',
+      '<strong>Deal change tracking</strong> surfaces sandbagging and coverage gaps',
+      '<strong>Quota attainment tracking</strong> with coaching signals for managers',
+      '<strong>Custom roll-up reports</strong> by territory, product, segment',
     ],
   },
   {
@@ -70,11 +70,11 @@ const capabilities = [
     color: '#6366F1',
     headline: 'Eliminate quote delays that kill deal momentum',
     points: [
-      '<strong>Branded quotes in minutes</strong> - cutting average turnaround from days to hours',
-      '<strong>Guided selling rules</strong> ensure reps propose the right products, bundles, and pricing',
-      '<strong>Automated approvals</strong> and pricing guardrails protect revenue without slowing deals',
-      '<strong>One-click quote-to-contract</strong> with integrated e-signature for same-day close',
-      '<strong>Complex pricing support</strong> - product catalogs, usage-based, subscriptions, and renewals',
+      '<strong>Branded quotes in minutes</strong> - not days',
+      '<strong>Guided selling rules</strong> for correct products and pricing',
+      '<strong>Automated approvals</strong> and pricing guardrails built in',
+      '<strong>One-click quote-to-contract</strong> with e-signature integration',
+      '<strong>Complex pricing support</strong> for subscriptions and renewals',
     ],
   },
 ]
@@ -210,7 +210,7 @@ export default function SalesCloudPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {capabilities.map(({ area, icon: Icon, color, headline, points }) => (
-              <div key={area} className="glass-card p-7 group hover:-translate-y-1 transition-all duration-300">
+              <div key={area} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: `${color}15`, color }}>
@@ -221,9 +221,9 @@ export default function SalesCloudPage() {
                     <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
                   </div>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2 flex-grow">
                   {points.map(p => (
-                    <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
+                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
                       <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>

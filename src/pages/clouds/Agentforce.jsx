@@ -30,11 +30,11 @@ const useCases = [
     color: '#0176D3',
     headline: 'Resolve more cases. Hire fewer agents.',
     points: [
-      "<strong>Autonomous resolution</strong> of password resets, order status, returns, and FAQs",
-      "<strong>Real-time answers</strong> from your knowledge base, past cases, and CRM data",
-      "<strong>Takes action</strong> - processes refunds, updates accounts, and closes tickets end to end",
-      "<strong>Smart escalation</strong> to human agents with full conversation history and context",
-      "<strong>24/7 coverage</strong> across chat, email, SMS, WhatsApp, and self-service portals",
+      "<strong>Autonomous resolution</strong> for resets, orders, returns, FAQs",
+      "<strong>Real-time answers</strong> from knowledge base and CRM",
+      "<strong>Takes action</strong> - refunds, updates, closes tickets",
+      "<strong>Smart escalation</strong> with full conversation context",
+      "<strong>24/7 coverage</strong> across chat, email, SMS, WhatsApp",
     ],
   },
   {
@@ -43,11 +43,11 @@ const useCases = [
     color: '#10B981',
     headline: 'Turn every lead into a qualified opportunity.',
     points: [
-      "<strong>Instant engagement</strong> - contacts inbound leads within seconds, before they go cold",
-      "<strong>Intelligent qualification</strong> based on your ICP criteria with automatic lead scoring",
-      "<strong>Calendar booking</strong> schedules discovery calls directly into rep calendars",
-      "<strong>Personalised follow-ups</strong> generated from CRM data, interactions, and deal context",
-      "<strong>Auto-updated pipeline</strong> - leads, contacts, and opportunities stay clean after every interaction",
+      "<strong>Instant engagement</strong> - respond to leads in seconds",
+      "<strong>Intelligent qualification</strong> with ICP-based lead scoring",
+      "<strong>Calendar booking</strong> directly into rep calendars",
+      "<strong>Personalised follow-ups</strong> generated from CRM data",
+      "<strong>Auto-updated pipeline</strong> - records stay clean automatically",
     ],
   },
   {
@@ -56,11 +56,11 @@ const useCases = [
     color: '#F59E0B',
     headline: 'Eliminate busywork. Accelerate execution.',
     points: [
-      "<strong>Multi-step automation</strong> for approval routing, escalations, and cross-team notifications",
-      "<strong>Scheduled reports</strong> generated and distributed without manual data pulls",
-      "<strong>SLA monitoring</strong> with proactive alerts to stakeholders before breaches occur",
-      "<strong>Data hygiene</strong> - detects duplicates, fills gaps, and standardises records automatically",
-      "<strong>System integration</strong> connects Salesforce to ERP, HRIS, and other platforms",
+      "<strong>Multi-step automation</strong> for approvals, escalations, notifications",
+      "<strong>Scheduled reports</strong> generated without manual data pulls",
+      "<strong>SLA monitoring</strong> with proactive breach alerts",
+      "<strong>Data hygiene</strong> - deduplication and standardisation automatically",
+      "<strong>System integration</strong> connects Salesforce to ERP, HRIS",
     ],
   },
   {
@@ -69,11 +69,11 @@ const useCases = [
     color: '#6366F1',
     headline: 'Personalise every buyer journey at scale.',
     points: [
-      "<strong>Conversational shopping</strong> - personalised product recommendations like Saks Fifth Avenue",
-      "<strong>Pre-purchase answers</strong> on sizing, availability, and shipping reduce cart abandonment",
-      "<strong>Auto-triggered campaigns</strong> segment audiences based on real-time customer behaviour",
-      "<strong>Lapsed customer re-engagement</strong> with tailored offers from purchase and browsing data",
-      "<strong>On-brand messaging</strong> delivered consistently across web, mobile, social, and messaging",
+      "<strong>Conversational shopping</strong> with personalised recommendations",
+      "<strong>Pre-purchase answers</strong> reduce cart abandonment rates",
+      "<strong>Auto-triggered campaigns</strong> from real-time behaviour data",
+      "<strong>Lapsed customer re-engagement</strong> with tailored offers",
+      "<strong>On-brand messaging</strong> across web, mobile, social",
     ],
   },
 ]
@@ -206,7 +206,7 @@ export default function AgentforcePage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-7 group hover:-translate-y-1 transition-all duration-300">
+              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center"
                     style={{ backgroundColor: `${color}15`, color }}>
@@ -220,9 +220,9 @@ export default function AgentforcePage() {
                     <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
                   </div>
                 </div>
-                <ul className="space-y-2.5">
+                <ul className="space-y-2 flex-grow">
                   {points.map(p => (
-                    <li key={p} className="flex items-start gap-2.5 text-sm" style={{ color: '#475569' }}>
+                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
                       <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
                       <span dangerouslySetInnerHTML={{ __html: p }} />
                     </li>
