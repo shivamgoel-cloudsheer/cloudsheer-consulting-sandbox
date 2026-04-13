@@ -69,7 +69,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed mb-5"
               style={{ color: 'rgba(148,196,255,0.80)' }}>
               Helping businesses cut costs, close more deals, and scale operations
-              with AI agents built on Salesforce Agentforce.
+              with Agentforce built on Salesforce Agentforce.
             </p>
 
             {/* Contact micro */}

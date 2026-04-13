@@ -79,7 +79,7 @@ const useCases = [
 ]
 
 const whyUs = [
-  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud - from straightforward case management rollouts to complex omni-channel operations with Agentforce AI agents, field service, and entitlements. We know this product inside out." },
+  { title: 'Service Cloud Specialists',     desc: "We focus deeply on Service Cloud - from straightforward case management rollouts to complex omni-channel operations with Agentforce Agentforce, field service, and entitlements. We know this product inside out." },
   { title: "Designed Around Your SLAs",      desc: "Every implementation maps to your specific support tiers, escalation rules, entitlements, and operating hours. No cookie-cutter templates - a system built around how your team actually delivers support." },
   { title: 'Fast Time to Value',            desc: "Most Service Cloud deployments go live within 6-8 weeks. We configure in sandbox, test with real-world scenarios, train your team, and get you to production without months of discovery workshops." },
   { title: 'No Commitment to Start',        desc: "Book a free 30-minute scoping call. We will review your current support operation, identify the highest-impact quick wins, and give you a clear deployment plan - completely free, zero obligation." },

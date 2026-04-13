@@ -193,7 +193,7 @@ export default function Contact() {
             Start Your <span className="gradient-text">Agentforce Journey</span>
           </h1>
           <p className="section-sub">
-            Book a free 30-minute discovery call. We'll map out which AI agents
+            Book a free 30-minute discovery call. We'll map out which Agentforce
             will have the biggest impact on your business - and how fast we can deploy them.
           </p>
         </div>

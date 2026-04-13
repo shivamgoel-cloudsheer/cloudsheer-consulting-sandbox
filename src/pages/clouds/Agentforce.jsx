@@ -7,11 +7,11 @@ import {
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const painPoints = [
-  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "<strong>AI agents</strong> resolve routine cases autonomously - Wiley saw 40% more resolutions" },
+  { pain: "Your support team spends 60%+ of their day on repetitive, low-value tickets", fix: "<strong>Agentforce</strong> resolve routine cases autonomously - Wiley saw 40% more resolutions" },
   { pain: "Leads slip through the cracks because response times are too slow", fix: "<strong>Agentforce</strong> engages every lead in under 60 seconds and books meetings 24/7" },
   { pain: "Every customer interaction costs $11+ when a human handles it", fix: "<strong>Agentforce</strong> conversations cost around $2 each - 80%+ cost reduction" },
   { pain: "Scaling your team means scaling payroll, training, and management overhead", fix: "<strong>Agentforce</strong> handles demand spikes instantly - no hiring or ramp-up needed" },
-  { pain: "Customers get inconsistent answers depending on who they reach", fix: "<strong>AI agents</strong> deliver the same accurate, on-brand response every time" },
+  { pain: "Customers get inconsistent answers depending on who they reach", fix: "<strong>Agentforce</strong> deliver the same accurate, on-brand response every time" },
 ]
 
 const outcomes = [
@@ -106,7 +106,7 @@ export default function AgentforcePage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Agentforce deploys AI agents that handle customer service, sales, and operations autonomously - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
+              Agentforce deploys Agentforce that handle customer service, sales, and operations autonomously - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -198,7 +198,7 @@ export default function AgentforcePage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag mx-auto mb-5">Where It Delivers</div>
             <h2 className="section-title mb-4">
-              AI Agents That Drive Results <span className="gradient-text">Across Your Business</span>
+              Agentforce That Drive Results <span className="gradient-text">Across Your Business</span>
             </h2>
             <p className="section-sub">
               Agentforce does not replace your team - it handles the repetitive, time-consuming work so your people can focus on strategy, relationships, and revenue.

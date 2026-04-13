@@ -8,7 +8,7 @@ const clouds = [
     label: 'Agentforce',
     to: '/solutions/agentforce',
     icon: Zap,
-    desc: 'Autonomous AI agents for every team',
+    desc: 'Autonomous agents for every team',
     highlight: true,
   },
   {

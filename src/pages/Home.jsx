@@ -42,7 +42,7 @@ function Hero() {
 
             <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              AI agents handle support, qualify leads, and update your CRM - 24/7, inside Salesforce.
+              Agentforce handle support, qualify leads, and update your CRM - 24/7, inside Salesforce.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">
@@ -262,7 +262,7 @@ function TrustedBy() {
 /* ─── Why Agentforce-first ──────────────────────────────────── */
 function WhyAgentforce() {
   const points = [
-    { icon: <Clock className="w-5 h-5" />,      title: 'Never Miss a Lead Again',     desc: 'AI agents respond to every inbound lead in under 2 seconds - qualifying, nurturing, and booking meetings while your reps sleep.' },
+    { icon: <Clock className="w-5 h-5" />,      title: 'Never Miss a Lead Again',     desc: 'Agentforce respond to every inbound lead in under 2 seconds - qualifying, nurturing, and booking meetings while your reps sleep.' },
     { icon: <Zap className="w-5 h-5" />,         title: 'Cut Support Costs by 40%',    desc: 'Resolve 78% of Tier-1 and Tier-2 cases without human involvement. Your customers get instant answers, your team handles what matters.' },
     { icon: <ShieldCheck className="w-5 h-5" />, title: 'Trusted by Your Compliance Team', desc: "Every agent action is logged, auditable, and governed by Salesforce's Einstein Trust Layer. No rogue AI - just transparent automation." },
     { icon: <BarChart3 className="w-5 h-5" />,   title: 'See ROI in 90 Days',          desc: 'Go live in 4-6 weeks and start measuring impact immediately - more deals closed, faster resolution times, lower operational costs.' },
@@ -279,7 +279,7 @@ function WhyAgentforce() {
           <div className="tag mb-5 animate-fade-up"><Sparkles className="w-3.5 h-3.5" /> Business Impact</div>
           <h2 className="section-title mb-5 animate-fade-up-1">
             What Changes When You<br />
-            <span className="gradient-text">Add AI Agents</span>
+            <span className="gradient-text">Add Agentforce</span>
           </h2>
           <p className="section-sub animate-fade-up-2">
             Your competitors are already automating support, sales, and operations
@@ -319,7 +319,7 @@ function AgentforceShowcase() {
       <div className="section-wrap">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="tag mx-auto mb-5 animate-fade-up"><Bot className="w-3.5 h-3.5" /> What You Get</div>
-          <h2 className="section-title mb-4 animate-fade-up-1">AI Agents That Deliver<br /><span className="gradient-text">Measurable Results</span></h2>
+          <h2 className="section-title mb-4 animate-fade-up-1">Agentforce That Deliver<br /><span className="gradient-text">Measurable Results</span></h2>
           <p className="section-sub animate-fade-up-2">Every agent directly impacts your revenue, costs, or customer satisfaction - here is how.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-10">
@@ -389,7 +389,7 @@ function Stats() {
 /* ─── Process ───────────────────────────────────────────────── */
 function Process() {
   const steps = [
-    { n: '01', title: 'Identify the Opportunity', desc: 'We pinpoint where AI agents will have the biggest impact on your revenue, costs, and customer experience - based on your actual data.' },
+    { n: '01', title: 'Identify the Opportunity', desc: 'We pinpoint where Agentforce will have the biggest impact on your revenue, costs, and customer experience - based on your actual data.' },
     { n: '02', title: 'Design Your Agent',         desc: 'Custom-built agents designed around your workflows, business rules, and Salesforce org - not a generic template.' },
     { n: '03', title: 'Build & Validate',          desc: 'Rigorous sandbox testing ensures your agent works perfectly before it touches production or talks to a single customer.' },
     { n: '04', title: 'Go Live & Measure',         desc: 'Launch with confidence. Track case deflection, lead response time, and cost savings from day one - with continuous optimisation.' },
@@ -532,7 +532,7 @@ function CTA() {
           Get Started Today
         </div>
         <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight animate-fade-up-1">
-          Find Out What AI Agents<br />
+          Find Out What Agentforce<br />
           <span className="gradient-text-gold">Can Do for Your Business</span>
         </h2>
         <p className="text-lg md:text-xl mb-10 mx-auto animate-fade-up-2"

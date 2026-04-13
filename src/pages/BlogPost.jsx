@@ -16,7 +16,7 @@ const articles = {
       {
         heading: 'What Is Agentforce?',
         paragraphs: [
-          "Agentforce is Salesforce's platform for building and deploying autonomous AI agents that work directly inside your CRM. Unlike traditional chatbots that follow rigid scripts, Agentforce agents can reason, take actions, and make decisions based on your live Salesforce data.",
+          "Agentforce is Salesforce's platform for building and deploying autonomous Agentforce that work directly inside your CRM. Unlike traditional chatbots that follow rigid scripts, Agentforce agents can reason, take actions, and make decisions based on your live Salesforce data.",
           "Think of it this way: a chatbot answers questions. An Agentforce agent resolves cases, qualifies leads, updates records, and books meetings - all without human involvement. It is the difference between a FAQ page and a virtual employee.",
         ],
       },

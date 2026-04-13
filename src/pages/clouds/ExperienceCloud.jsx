@@ -60,7 +60,7 @@ const useCases = [
       '<strong>Guided onboarding</strong> from day one to productivity',
       '<strong>Social feeds</strong> and forums for team engagement',
       '<strong>Single sign-on</strong> across Salesforce and portal apps',
-      '<strong>Embedded AI agents</strong> answer HR and IT questions',
+      '<strong>Embedded Agentforce</strong> answer HR and IT questions',
     ],
   },
   {

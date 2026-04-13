@@ -1,14 +1,14 @@
 # Cloudsheer Consulting
 
-> Salesforce & Agentforce consulting partner helping mid-market and enterprise businesses cut costs, close more deals, and scale operations with AI agents.
+> Salesforce & Agentforce consulting partner helping mid-market and enterprise businesses cut costs, close more deals, and scale operations with Agentforce.
 
 ## About
-Cloudsheer Consulting is a certified Salesforce partner specializing in Agentforce (autonomous AI agents), Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics/Tableau, Platform, Slack, and Health Cloud. We have 40+ team members across Dallas, Delhi, London, and New York with 60+ Salesforce certifications.
+Cloudsheer Consulting is a certified Salesforce partner specializing in Agentforce (autonomous Agentforce), Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics/Tableau, Platform, Slack, and Health Cloud. We have 40+ team members across Dallas, Delhi, London, and New York with 60+ Salesforce certifications.
 
 ## Solutions
 
 ### Agentforce
-Autonomous AI agents that handle support, sales, and operations 24/7 inside Salesforce. Typical results: 40% case resolution increase, 73% queries handled autonomously, $2 cost per conversation vs $11+ human agent.
+Autonomous Agentforce that handle support, sales, and operations 24/7 inside Salesforce. Typical results: 40% case resolution increase, 73% queries handled autonomously, $2 cost per conversation vs $11+ human agent.
 URL: /solutions/agentforce
 
 ### Sales Cloud

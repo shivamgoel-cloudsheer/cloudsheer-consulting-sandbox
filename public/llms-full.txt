@@ -3,15 +3,15 @@
 > Certified Salesforce & Agentforce consulting partner. Mid-market and enterprise focus. 40+ team members, 60+ certifications, 4 global offices.
 
 ## Company Overview
-Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce AI agents. We are a certified Salesforce partner listed on AppExchange. Our team of 40+ spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
+Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce Agentforce. We are a certified Salesforce partner listed on AppExchange. Our team of 40+ spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
 
 ## What We Do
-We implement the full Salesforce suite with a specialty in Agentforce - autonomous AI agents that work 24/7 inside your CRM. We handle everything from discovery to deployment to ongoing optimization.
+We implement the full Salesforce suite with a specialty in Agentforce - autonomous Agentforce that work 24/7 inside your CRM. We handle everything from discovery to deployment to ongoing optimization.
 
 ## Solutions We Offer
 
-### Agentforce (AI Agents)
-Deploy autonomous AI agents for customer service, sales development, and operations. Agents resolve cases, qualify leads, update records, and book meetings without human involvement.
+### Agentforce (Agentforce)
+Deploy autonomous Agentforce for customer service, sales development, and operations. Agents resolve cases, qualify leads, update records, and book meetings without human involvement.
 - 40% increase in case resolution (Wiley case study)
 - 73% of queries handled autonomously (OpenTable)
 - $2 avg cost per conversation vs $11+ human agent
