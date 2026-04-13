@@ -569,8 +569,20 @@ export default function BlogPost() {
     )
   }
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": article.title,
+    "author": { "@type": "Person", "name": article.author },
+    "datePublished": article.date,
+    "publisher": { "@type": "Organization", "name": "Cloudsheer Consulting" },
+    "description": article.sections[0]?.paragraphs?.[0] || article.title,
+    "url": `https://cloudsheer-consulting.vercel.app/blog/${slug}`,
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
       <section className="relative pt-36 pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-grid" />

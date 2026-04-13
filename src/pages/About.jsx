@@ -10,7 +10,7 @@ const values = [
 ]
 
 const capabilities = [
-  { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce & Agentforce', desc: 'Deploy autonomous agents that handle support, sales, and operations 24/7 - so your team focuses on growth.' },
+  { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce Deployment', desc: 'Deploy autonomous agents that handle support, sales, and operations 24/7 - so your team focuses on growth.' },
   { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',   desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics - all connected.' },
   { icon: <Users className="w-5 h-5" />,    title: 'Strategy & Implementation', desc: 'From discovery to deployment in 4-6 weeks. We design, build, test, and launch - with measurable ROI from day one.' },
   { icon: <Heart className="w-5 h-5" />,    title: 'Ongoing Optimisation',    desc: 'Continuous monitoring, performance tuning, and new agent deployments as your business scales.' },
@@ -234,7 +234,7 @@ export default function About() {
                 <div className="w-16 h-16 rounded-2xl mb-3 overflow-hidden relative shrink-0"
                   style={{ backgroundColor: '#EFF6FF', border: '1px solid rgba(1,118,211,0.12)' }}>
                   {photo ? (
-                    <img src={photo} alt={name} className="w-full h-full object-cover" />
+                    <img loading="lazy" src={photo} alt={name} className="w-full h-full object-cover" />
                   ) : (
                     <svg viewBox="0 0 64 64" className="w-full h-full" fill="none">
                       <rect width="64" height="64" fill="#EFF6FF" />

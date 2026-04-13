@@ -42,7 +42,7 @@ function Hero() {
 
             <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              Agentforce handle support, qualify leads, and update your CRM - 24/7, inside Salesforce.
+              Cut support costs 40%. Respond to leads in 2 seconds. Deploy Agentforce agents that work 24/7 inside your Salesforce org.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">

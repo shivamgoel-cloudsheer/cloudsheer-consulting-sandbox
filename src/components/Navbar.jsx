@@ -255,7 +255,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile burger */}
-        <button className="md:hidden p-2 rounded-lg transition-colors hover:bg-gray-50"
+        <button className="md:hidden p-2 rounded-lg transition-colors hover:bg-gray-50" aria-label="Toggle menu"
           style={{ color: '#032D60' }}
           onClick={() => setOpen(!open)}>
           {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
