@@ -16,14 +16,14 @@ function Hero() {
       {/* Glow orbs */}
       <div className="glow-dot w-[700px] h-[700px] top-[-200px] left-[-100px]"
         style={{ backgroundColor: 'rgba(0,169,255,0.18)' }} />
-      <div className="glow-dot w-[500px] h-[500px] bottom-[-150px] right-[-50px]"
+      <div className="glow-dot w-[500px] h-[500px] bottom-[-150px] right-[-50px] hidden md:block"
         style={{ backgroundColor: 'rgba(99,102,241,0.15)' }} />
-      <div className="glow-dot w-[300px] h-[300px] top-[40%] right-[25%]"
+      <div className="glow-dot w-[300px] h-[300px] top-[40%] right-[25%] hidden md:block"
         style={{ backgroundColor: 'rgba(245,158,11,0.08)' }} />
 
-      {/* Decorative spinning ring */}
-      <div className="absolute top-20 right-[8%] w-72 h-72 rounded-full border border-white/5 animate-spin-slow" />
-      <div className="absolute top-32 right-[10%] w-48 h-48 rounded-full border border-white/8 animate-spin-slow"
+      {/* Decorative spinning ring - desktop only */}
+      <div className="absolute top-20 right-[8%] w-72 h-72 rounded-full border border-white/5 animate-spin-slow hidden md:block" />
+      <div className="absolute top-32 right-[10%] w-48 h-48 rounded-full border border-white/8 animate-spin-slow hidden md:block"
         style={{ animationDirection: 'reverse', animationDuration: '8s' }} />
 
       <div className="section-wrap relative z-10 pt-32 pb-24">
@@ -48,11 +48,11 @@ function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6 animate-fade-up-3">
-              <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-base px-7 py-3.5">
-                Book Free Discovery Call <ArrowRight className="w-5 h-5 animate-bounce-x" />
+              <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold text-sm sm:text-base px-5 py-2.5 sm:px-7 sm:py-3.5">
+                Book Free Discovery Call <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce-x" />
               </a>
               <Link to="/solutions/agentforce"
-                className="inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-xl transition-all duration-200"
+                className="inline-flex items-center gap-2 font-medium px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-xl transition-all duration-200 text-sm sm:text-base"
                 style={{ border: '1.5px solid rgba(255,255,255,0.25)', color: 'white' }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.10)'}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = 'transparent'}>
