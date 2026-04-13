@@ -101,9 +101,9 @@ export default function SlackPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Zap className="w-3.5 h-3.5" /> Salesforce Slack
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Cut meetings 29%. Kill email overload.{' '}
-              <span className="gradient-text-gold">Make every team 47% more productive.</span>
+              <br /><span className="gradient-text-gold">Make every team 47% more productive.</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>

@@ -100,9 +100,9 @@ export default function CommerceCloudPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <ShoppingCart className="w-3.5 h-3.5" /> Salesforce Commerce Cloud
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Convert More Buyers, Grow AOV, and{' '}
-              <span className="gradient-text-gold">Scale Without Limits</span>
+              <br /><span className="gradient-text-gold">Scale Without Limits</span>
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>

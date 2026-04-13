@@ -107,7 +107,7 @@ export default function SalesCloudPage() {
           <div className="tag-white mx-auto mb-6 inline-flex">
             <TrendingUp className="w-3.5 h-3.5" /> Sales Cloud by Salesforce
           </div>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center md:text-left">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
             29% More Revenue.<br />
             <span className="gradient-text-gold">44% Higher Win Rates.</span>
           </h1>
