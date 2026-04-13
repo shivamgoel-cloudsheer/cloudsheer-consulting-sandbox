@@ -68,7 +68,7 @@ export default function About() {
       <div className="pt-24" />
 
       {/* ── Connected Across the Globe ───────────────────────── */}
-      <section className="py-20 relative overflow-hidden"
+      <section className="py-12 sm:py-16 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 60%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="glow-dot w-[400px] h-[400px] top-[-100px] right-[-80px]"
@@ -102,9 +102,9 @@ export default function About() {
         </div>
       </section>
       {/* ── What We Do ─────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: '#EFF6FF' }}>
+      <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">What We Do</div>
             <h2 className="section-title mb-4">
               Your Salesforce Partner for<br />
@@ -140,7 +140,7 @@ export default function About() {
       </section>
 
       {/* ── Expertise Meets Knowledge ────────────────────────── */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 bg-white relative overflow-hidden">
         <div className="glow-dot w-[350px] h-[350px] bottom-0 right-0"
           style={{ backgroundColor: 'rgba(99,102,241,0.06)' }} />
         <div className="section-wrap relative z-10">
@@ -183,9 +183,9 @@ export default function About() {
       </section>
 
       {/* ── Values ───────────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#EFF6FF' }}>
+      <section className="py-10 sm:py-16 relative overflow-hidden" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap relative z-10">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">What Drives Us</div>
             <h2 className="section-title">Our Values</h2>
           </div>
@@ -208,9 +208,9 @@ export default function About() {
       </section>
 
       {/* ── Team Members ─────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="section-wrap">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">
               <Users className="w-3.5 h-3.5" />
               Our People
@@ -273,7 +273,7 @@ export default function About() {
       <FAQ title="About Cloudsheer" items={aboutFaqs} />
 
       {/* ── CTA ──────────────────────────────────────────────── */}
-      <section className="py-20" style={{ backgroundColor: '#032D60' }}>
+      <section className="py-12 sm:py-16" style={{ backgroundColor: '#032D60' }}>
         <div className="section-wrap text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-4">
             Ready to See What We Can <span className="gradient-text-gold">Build for You?</span>

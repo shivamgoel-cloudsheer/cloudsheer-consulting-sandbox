@@ -203,7 +203,7 @@ function NewsletterSection() {
   }
 
   return (
-    <section className="py-20 bg-white border-t border-cs-blue/8">
+    <section className="py-12 sm:py-16 bg-white border-t border-cs-blue/8">
       <div className="section-wrap max-w-xl mx-auto text-center">
         <div className="tag mx-auto mb-5"><Zap className="w-3.5 h-3.5" /> Stay Ahead</div>
         <h2 className="section-title text-2xl mb-3">Get Agentforce Insights Monthly</h2>
@@ -243,7 +243,7 @@ export default function Blog() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 bg-white overflow-hidden">
+      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-grid" />
         <div className="glow-dot w-[500px] h-[500px] bg-cs-blue/10 top-[-150px] left-[50%] -translate-x-1/2" />
         <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
@@ -258,7 +258,7 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-20 bg-cs-bgsub">
+      <section className="py-12 sm:py-16 bg-cs-bgsub">
         <div className="section-wrap">
           {/* Category filter */}
           <div className="flex flex-wrap gap-2 mb-12">

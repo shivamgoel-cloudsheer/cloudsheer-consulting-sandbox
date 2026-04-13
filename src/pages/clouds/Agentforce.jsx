@@ -89,7 +89,7 @@ export default function AgentforcePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 overflow-hidden"
+      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 55%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
@@ -123,9 +123,9 @@ export default function AgentforcePage() {
       </section>
 
       {/* ── Pain Points ──────────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">Sound Familiar?</div>
             <h2 className="section-title mb-4">
               The Costly Problems <span className="gradient-text">Agentforce Eliminates</span>
@@ -158,11 +158,11 @@ export default function AgentforcePage() {
       </section>
 
       {/* ── Proof / Results ──────────────────────────────────── */}
-      <section className="py-20 relative overflow-hidden"
+      <section className="py-12 sm:py-16 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60,#0A3F80)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="section-wrap relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag-white mx-auto mb-5">Proven Results</div>
             <h2 className="section-title-white mb-4">
               Real Businesses. Real Outcomes.
@@ -193,9 +193,9 @@ export default function AgentforcePage() {
       </section>
 
       {/* ── Use Cases by Department ──────────────────────────── */}
-      <section className="py-14 sm:py-24 bg-white">
+      <section className="py-14 sm:py-10 sm:py-16 bg-white">
         <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">Where It Delivers</div>
             <h2 className="section-title mb-4">
               Autonomous Agents That Drive Results <span className="gradient-text">Across Your Business</span>
@@ -242,9 +242,9 @@ export default function AgentforcePage() {
       </section>
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: '#EFF6FF' }}>
+      <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">
               <Star className="w-3.5 h-3.5" /> Why Cloudsheer
             </div>
@@ -269,7 +269,7 @@ export default function AgentforcePage() {
       </section>
 
       {/* ── Final CTA ────────────────────────────────────────── */}
-      <section className="py-14 sm:py-24 relative overflow-hidden"
+      <section className="py-14 sm:py-10 sm:py-16 relative overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-30" />
         <div className="glow-dot w-[500px] h-[500px] top-[-100px] left-[50%] -translate-x-1/2"

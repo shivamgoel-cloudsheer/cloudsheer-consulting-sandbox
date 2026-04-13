@@ -14,7 +14,7 @@ const solutionFaqs = [
 
 function PageHero() {
   return (
-    <section className="relative pt-36 pb-20 bg-white overflow-hidden">
+    <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white overflow-hidden">
       <div className="absolute inset-0 bg-grid" />
       <div className="glow-dot w-[600px] h-[600px] bg-cs-blue/10 top-[-200px] left-[50%] -translate-x-1/2" />
       <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
@@ -82,9 +82,9 @@ function AgentforceHero() {
   ]
 
   return (
-    <section className="py-24 bg-cs-bgsub">
+    <section className="py-10 sm:py-16 bg-cs-bgsub">
       <div className="section-wrap">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-10">
           <div className="tag mx-auto mb-5"><Bot className="w-3.5 h-3.5" /> Agentforce Agents</div>
           <h2 className="section-title mb-4">
             Agents That Drive <span className="gradient-text">Real Business Results</span>
@@ -129,7 +129,7 @@ function TrustLayer() {
   ]
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-10 sm:py-16 bg-white relative overflow-hidden">
       <div className="glow-dot w-[400px] h-[400px] bg-cs-blue/8 top-[-100px] right-[-100px]" />
       <div className="section-wrap relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -175,9 +175,9 @@ const clouds = [
 
 function SalesforceClouds() {
   return (
-    <section className="py-24 bg-cs-bgsub">
+    <section className="py-10 sm:py-16 bg-cs-bgsub">
       <div className="section-wrap">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="tag mx-auto mb-5">Full Salesforce Suite</div>
           <h2 className="section-title mb-4">One Platform. <span className="gradient-text">Every Business Outcome Covered.</span></h2>
           <p className="section-sub">Whether you need to sell more, support better, market smarter, or operate leaner - there is a Salesforce solution that delivers measurable results.</p>
@@ -207,7 +207,7 @@ function SalesforceClouds() {
 
 function CTA() {
   return (
-    <section className="py-24 bg-cs-navy relative overflow-hidden">
+    <section className="py-10 sm:py-16 bg-cs-navy relative overflow-hidden">
       <div className="glow-dot w-[600px] h-[600px] bg-cs-blue/30 top-[-200px] left-[50%] -translate-x-1/2" />
       <div className="section-wrap relative z-10 text-center max-w-2xl mx-auto">
         <h2 className="text-4xl font-black text-white mb-5">

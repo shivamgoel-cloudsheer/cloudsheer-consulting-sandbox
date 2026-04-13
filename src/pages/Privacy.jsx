@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Privacy() {
   return (
-    <section className="pt-36 pb-20">
+    <section className="pt-28 sm:pt-32 pb-12 sm:pb-16">
       <div className="section-wrap max-w-3xl mx-auto">
         <Link to="/" className="inline-flex items-center gap-1.5 text-sm font-medium mb-8 transition-colors"
           style={{ color: '#0176D3' }}>

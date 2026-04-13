@@ -77,7 +77,7 @@ function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center py-20 text-center">
+      <div className="flex flex-col items-center justify-center py-12 sm:py-16 text-center">
         <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center mb-5">
           <CheckCircle2 className="w-8 h-8 text-emerald-500" />
         </div>
@@ -192,7 +192,7 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 bg-white overflow-hidden">
+      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-grid" />
         <div className="glow-dot w-[500px] h-[500px] bg-cs-blue/10 top-[-150px] left-[50%] -translate-x-1/2" />
         <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
@@ -214,7 +214,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="section-wrap grid lg:grid-cols-5 gap-10">
           {/* Sidebar */}
           <div className="lg:col-span-2 space-y-5">

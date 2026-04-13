@@ -26,7 +26,7 @@ function Hero() {
       <div className="absolute top-32 right-[10%] w-48 h-48 rounded-full border border-white/8 animate-spin-slow hidden md:block"
         style={{ animationDirection: 'reverse', animationDuration: '8s' }} />
 
-      <div className="section-wrap relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-24">
+      <div className="section-wrap relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-12 sm:pb-16">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div>
@@ -300,11 +300,11 @@ function WhyAgentforce() {
   ]
 
   return (
-    <section className="py-28 relative overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="py-16 sm:py-16 relative overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="glow-dot w-[500px] h-[500px] top-0 left-[-100px]"
         style={{ backgroundColor: 'rgba(1,118,211,0.06)' }} />
       <div className="section-wrap relative z-10">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-10">
           <div className="tag mb-5 animate-fade-up"><Sparkles className="w-3.5 h-3.5" /> Business Impact</div>
           <h2 className="section-title mb-5 animate-fade-up-1">
             What Changes When You<br />
@@ -344,9 +344,9 @@ function AgentforceShowcase() {
   ]
 
   return (
-    <section className="py-28 relative" style={{ backgroundColor: '#EFF6FF' }}>
+    <section className="py-16 sm:py-16 relative" style={{ backgroundColor: '#EFF6FF' }}>
       <div className="section-wrap">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-10">
           <div className="tag mx-auto mb-5 animate-fade-up"><Bot className="w-3.5 h-3.5" /> What You Get</div>
           <h2 className="section-title mb-4 animate-fade-up-1">Agentforce That Deliver<br /><span className="gradient-text">Measurable Results</span></h2>
           <p className="section-sub animate-fade-up-2">Every agent directly impacts your revenue, costs, or customer satisfaction - here is how.</p>
@@ -394,7 +394,7 @@ function Stats() {
   ]
 
   return (
-    <section className="py-20 relative overflow-hidden"
+    <section className="py-12 sm:py-16 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #0176D3 0%, #032D60 100%)' }}>
       <div className="absolute inset-0 bg-grid-dark" />
       <div className="glow-dot w-[600px] h-[400px] top-[-100px] left-[50%] -translate-x-1/2"
@@ -425,9 +425,9 @@ function Process() {
   ]
 
   return (
-    <section className="py-28 relative" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="py-16 sm:py-16 relative" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="section-wrap">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-10">
           <div className="tag mx-auto mb-5 animate-fade-up">How It Works</div>
           <h2 className="section-title mb-4 animate-fade-up-1">From Problem to <span className="gradient-text">Results in 4 Weeks</span></h2>
           <p className="section-sub animate-fade-up-2">A clear, proven path from identifying your biggest cost or revenue gap to a working AI agent that closes it.</p>
@@ -483,9 +483,9 @@ function CaseStudies() {
   ]
 
   return (
-    <section className="py-28" style={{ backgroundColor: '#EFF6FF' }}>
+    <section className="py-16 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
       <div className="section-wrap">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-10">
           <div className="tag mx-auto mb-5 animate-fade-up">Real Results</div>
           <h2 className="section-title animate-fade-up-1">What Businesses Like Yours <span className="gradient-text">Actually Achieved</span></h2>
           <p className="section-sub mt-4 animate-fade-up-2">Anonymized results from recent Agentforce deployments across industries.</p>
@@ -531,7 +531,7 @@ function CaseStudies() {
 /* ─── CTA ───────────────────────────────────────────────────── */
 function CTA() {
   return (
-    <section className="py-20 relative overflow-hidden"
+    <section className="py-12 sm:py-16 relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 60%, #0176D3 100%)' }}>
       <div className="absolute inset-0 bg-grid-dark" />
 
@@ -629,9 +629,9 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState(null)
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-10 sm:py-16 bg-white">
       <div className="section-wrap max-w-3xl mx-auto">
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 sm:mb-12">
           <div className="tag mx-auto mb-5"><HelpCircle className="w-3.5 h-3.5" /> Common Questions</div>
           <h2 className="section-title">Questions We Hear <span className="gradient-text">Before Every Call</span></h2>
         </div>
@@ -688,9 +688,9 @@ function WhyCloudsheer() {
   ]
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-10 sm:py-16 bg-white">
       <div className="section-wrap">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="tag mx-auto mb-5"><Award className="w-3.5 h-3.5" /> Why Cloudsheer</div>
           <h2 className="section-title mb-4">Why Businesses Choose Us <span className="gradient-text">Over Larger Partners</span></h2>
           <p className="section-sub">You have options. Here is why mid-market and enterprise teams pick a specialist over a generalist.</p>

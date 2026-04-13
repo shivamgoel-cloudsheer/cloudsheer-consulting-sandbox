@@ -5,7 +5,7 @@ export default function FAQ({ title, subtitle, items }) {
   const [openIndex, setOpenIndex] = useState(null)
 
   return (
-    <section className="py-14 sm:py-24 bg-white">
+    <section className="py-14 sm:py-10 sm:py-16 bg-white">
       <div className="section-wrap max-w-3xl mx-auto">
         <div className="text-center mb-10">
           <div className="tag mx-auto mb-5"><HelpCircle className="w-3.5 h-3.5" /> FAQ</div>

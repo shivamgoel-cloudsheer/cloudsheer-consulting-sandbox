@@ -557,7 +557,7 @@ export default function BlogPost() {
 
   if (!article) {
     return (
-      <section className="pt-36 pb-20">
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16">
         <div className="section-wrap text-center">
           <h1 className="text-3xl font-bold mb-4" style={{ color: '#032D60' }}>Article Not Found</h1>
           <p className="mb-8" style={{ color: '#64748B' }}>The article you are looking for does not exist.</p>
@@ -584,7 +584,7 @@ export default function BlogPost() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
-      <section className="relative pt-36 pb-16 bg-white overflow-hidden">
+      <section className="relative pt-28 sm:pt-32 pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-grid" />
         <div className="section-wrap relative z-10 max-w-3xl mx-auto">
           <Link to="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium mb-8 transition-colors"
@@ -620,7 +620,7 @@ export default function BlogPost() {
       </section>
 
       {/* Article Content */}
-      <section className="pb-20" style={{ backgroundColor: '#FAFBFC' }}>
+      <section className="pb-12 sm:pb-16" style={{ backgroundColor: '#FAFBFC' }}>
         <div className="section-wrap max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl p-8 md:p-12" style={{ border: '1px solid rgba(1,118,211,0.08)', boxShadow: '0 4px 20px rgba(0,0,0,0.04)' }}>
             {article.sections.map((section, i) => (

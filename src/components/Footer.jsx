@@ -56,7 +56,7 @@ export default function Footer() {
 
       {/* Main */}
       <div className="section-wrap py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 mb-8 sm:mb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="inline-flex mb-5 group">

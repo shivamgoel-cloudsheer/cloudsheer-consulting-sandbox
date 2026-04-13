@@ -22,7 +22,7 @@ export default function CloudPage({ cloud }) {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section
-        className="relative pt-36 pb-24 overflow-hidden"
+        className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 60%,#0176D3 100%)' }}
       >
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
@@ -77,7 +77,7 @@ export default function CloudPage({ cloud }) {
       )}
 
       {/* ── Overview + Features ──────────────────────────────── */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-10 sm:py-16 bg-white relative overflow-hidden">
         <div className="glow-dot w-[400px] h-[400px] top-[-100px] right-[-80px]"
           style={{ backgroundColor: accentColor, opacity: 0.06 }} />
         <div className="section-wrap relative z-10">
@@ -111,9 +111,9 @@ export default function CloudPage({ cloud }) {
       </section>
 
       {/* ── Our Approach ─────────────────────────────────────── */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#EFF6FF' }}>
+      <section className="py-10 sm:py-16 relative overflow-hidden" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5" style={{ color: accentColor, backgroundColor: accentBg, borderColor: accentBorder }}>
               How We Deliver
             </div>
@@ -141,9 +141,9 @@ export default function CloudPage({ cloud }) {
 
       {/* ── Use Cases ────────────────────────────────────────── */}
       {useCases && (
-        <section className="py-24 bg-white">
+        <section className="py-10 sm:py-16 bg-white">
           <div className="section-wrap">
-            <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
               <div className="tag mx-auto mb-5" style={{ color: accentColor, backgroundColor: accentBg, borderColor: accentBorder }}>
                 Use Cases
               </div>
@@ -173,7 +173,7 @@ export default function CloudPage({ cloud }) {
 
       {/* ── Deliverables ─────────────────────────────────────── */}
       {deliverables && (
-        <section className="py-20 relative overflow-hidden"
+        <section className="py-12 sm:py-16 relative overflow-hidden"
           style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 100%)' }}>
           <div className="absolute inset-0 bg-grid-dark opacity-30" />
           <div className="section-wrap relative z-10">
@@ -203,7 +203,7 @@ export default function CloudPage({ cloud }) {
       )}
 
       {/* ── CTA ──────────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-10 sm:py-16 bg-white">
         <div className="section-wrap text-center max-w-2xl mx-auto">
           <div className="tag mx-auto mb-5" style={{ color: accentColor, backgroundColor: accentBg, borderColor: accentBorder }}>
             Get Started
