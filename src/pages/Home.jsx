@@ -26,7 +26,7 @@ function Hero() {
       <div className="absolute top-32 right-[10%] w-48 h-48 rounded-full border border-white/8 animate-spin-slow hidden md:block"
         style={{ animationDirection: 'reverse', animationDuration: '8s' }} />
 
-      <div className="section-wrap relative z-10 pt-32 pb-24">
+      <div className="section-wrap relative z-10 pt-24 pb-12 sm:pt-32 sm:pb-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
           <div>
