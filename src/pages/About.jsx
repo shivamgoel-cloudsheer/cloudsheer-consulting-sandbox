@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Award, Heart, Lightbulb, Users, Sparkles, MapPin, Star } from 'lucide-react'
+import FAQ from '../components/FAQ'
+
+const aboutFaqs = [
+  { q: 'How many Salesforce certifications does your team hold?', a: '60+ certifications across Sales Cloud, Service Cloud, Marketing Cloud, Platform Developer, Agentforce Specialist, and Data Cloud Consultant.' },
+  { q: 'What industries do you work with?', a: 'Financial services, retail/e-commerce, healthcare, B2B SaaS, manufacturing, and professional services.' },
+  { q: 'Where are your offices located?', a: 'Dallas (USA), Delhi/Noida (India), London (UK), and New York (USA). Our distributed team delivers round-the-clock coverage across 4 time zones.' },
+  { q: 'Can I speak to a specific team member before engaging?', a: 'Yes. Book a discovery call and we will match you with the architect most relevant to your project.' },
+]
 
 const values = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce-First Thinking', desc: 'Every engagement starts by asking: where can an AI agent create the most value? We are built around this question.' },
@@ -13,7 +21,7 @@ const capabilities = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce Deployment', desc: 'Deploy autonomous agents that handle support, sales, and operations 24/7 - so your team focuses on growth.' },
   { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',   desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics - all connected.' },
   { icon: <Users className="w-5 h-5" />,    title: 'Strategy & Implementation', desc: 'From discovery to deployment in 4-6 weeks. We design, build, test, and launch - with measurable ROI from day one.' },
-  { icon: <Heart className="w-5 h-5" />,    title: 'Ongoing Optimisation',    desc: 'Continuous monitoring, performance tuning, and new agent deployments as your business scales.' },
+  { icon: <Heart className="w-5 h-5" />,    title: 'Ongoing Optimization',    desc: 'Continuous monitoring, performance tuning, and new agent deployments as your business scales.' },
 ]
 
 const offices = [
@@ -104,7 +112,7 @@ export default function About() {
             </h2>
             <p className="section-sub">
               We help businesses cut costs, close more deals, and scale operations
-              with Salesforce and Agentforce - from strategy to deployment to ongoing optimisation.
+              with Salesforce and Agentforce - from strategy to deployment to ongoing optimization.
             </p>
           </div>
 
@@ -261,6 +269,8 @@ export default function About() {
           </p>
         </div>
       </section>
+
+      <FAQ title="About Cloudsheer" items={aboutFaqs} />
 
       {/* ── CTA ──────────────────────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: '#032D60' }}>

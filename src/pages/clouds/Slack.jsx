@@ -10,16 +10,16 @@ const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=tr
 const painPoints = [
   { pain: "Critical decisions stall because context is buried across email threads, docs, and meetings", fix: "<strong>Channels</strong> keep every conversation and decision in one searchable place" },
   { pain: "Your sales team wastes hours toggling between CRM, email, and chat to update deals", fix: "<strong>Slack Sales Elevate</strong> surfaces pipeline - reps update deals without leaving" },
-  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "<strong>Slack AI</strong> summarises Channels, threads, and Canvas - answers in seconds" },
+  { pain: "New hires take weeks to get up to speed because institutional knowledge lives in people's heads", fix: "<strong>Slack AI</strong> summarizes Channels, threads, and Canvas - answers in seconds" },
   { pain: "Your team sits through 10+ meetings a week that could have been a message or a quick huddle", fix: "<strong>Huddles and Clips</strong> replace meetings with async video and live audio" },
   { pain: "Manual handoffs between teams cause delays, errors, and dropped tasks", fix: "<strong>Workflow Builder</strong> automates approvals, routing, and notifications - no code" },
 ]
 
 const outcomes = [
-  { icon: TrendingUp,    value: '47%',  label: 'increase in productivity reported by organisations after deploying Slack as their work operating system', color: '#0176D3' },
+  { icon: TrendingUp,    value: '47%',  label: 'increase in productivity reported by organizations after deploying Slack as their work operating system', color: '#0176D3' },
   { icon: Clock,         value: '29%',  label: 'reduction in meetings - teams replace status updates and syncs with async channels and huddles', color: '#10B981' },
   { icon: MessageSquare, value: '32%',  label: 'fewer emails sent internally - conversations move to channels where everyone has context', color: '#F59E0B' },
-  { icon: Users,         value: '85%',  label: 'of Slack users say it improves communication and collaboration across their organisation', color: '#6366F1' },
+  { icon: Users,         value: '85%',  label: 'of Slack users say it improves communication and collaboration across their organization', color: '#6366F1' },
   { icon: DollarSign,    value: '3x',   label: 'faster cross-functional decision-making when teams centralise communication in Slack channels', color: '#06B6D4' },
   { icon: BarChart2,     value: '26%',  label: 'improvement in employee satisfaction scores after consolidating tools and reducing context-switching', color: '#0176D3' },
 ]
@@ -34,7 +34,7 @@ const useCases = [
       "<strong>Slack Sales Elevate</strong> surfaces pipeline in Channels",
       "<strong>Slack Connect</strong> shares deal alerts with partners",
       "<strong>Huddles</strong> loop in stakeholders - no scheduling",
-      "<strong>Slack AI</strong> summarises deal threads for context",
+      "<strong>Slack AI</strong> summarizes deal threads for context",
       "<strong>Workflow Builder</strong> routes approvals in minutes",
     ],
   },
@@ -59,7 +59,7 @@ const useCases = [
     points: [
       "<strong>Slack Connect</strong> unites your team and clients",
       "<strong>Channels</strong> surface churn signals for CSM action",
-      "<strong>Slack AI</strong> summarises threads for CSM handoffs",
+      "<strong>Slack AI</strong> summarizes threads for CSM handoffs",
       "<strong>Workflow Builder</strong> triggers QBR prep and renewals",
       "<strong>Huddles</strong> swarm on urgent issues in seconds",
     ],
@@ -169,7 +169,7 @@ export default function SlackPage() {
               Real Teams. Real Productivity Gains.
             </h2>
             <p className="section-sub-white">
-              These are verified results from organisations running Slack as their primary collaboration platform - not theoretical projections.
+              These are verified results from organizations running Slack as their primary collaboration platform - not theoretical projections.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

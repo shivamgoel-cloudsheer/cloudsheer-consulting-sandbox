@@ -27,7 +27,7 @@ const clouds = [
     label: 'Marketing Cloud',
     to: '/solutions/marketing-cloud',
     icon: Megaphone,
-    desc: 'Personalised journeys across every channel',
+    desc: 'Personalized journeys across every channel',
   },
   {
     label: 'Commerce Cloud',

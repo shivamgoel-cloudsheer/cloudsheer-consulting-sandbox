@@ -1,6 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2 } from 'lucide-react'
+import FAQ from '../components/FAQ'
+
+const blogFaqs = [
+  { q: 'Who writes these articles?', a: 'Our team of Salesforce architects and consultants - Rajat Sharma, Tushar Sharma, Shubham Bansal, and Shivam Goel. All content is based on real implementation experience.' },
+  { q: 'How often do you publish?', a: 'We aim for 2-3 articles per month covering Agentforce, Salesforce best practices, and implementation guides.' },
+  { q: 'Can I suggest a topic?', a: 'Yes! Email hello@cloudsheer.com with your topic idea. We prioritize content that helps Salesforce teams solve real problems.' },
+]
 
 const posts = [
   {
@@ -58,7 +65,7 @@ const posts = [
     categoryColor: 'text-cs-purple bg-cs-purple/10 border-cs-purple/20',
     title: 'How Data Cloud Makes Your Agentforce Agents Smarter',
     image: '/blog/data-cloud.svg',
-    excerpt: 'Agentforce agents are only as intelligent as the data they can access. We show you exactly how Data Cloud unification supercharges agent responses and personalisation.',
+    excerpt: 'Agentforce agents are only as intelligent as the data they can access. We show you exactly how Data Cloud unification supercharges agent responses and personalization.',
     date: 'Jan 8, 2026', readTime: '7 min',
     author: 'Shubham Bansal', initials: 'SB', avatarColor: 'from-orange-500 to-rose-500',
     featured: false,
@@ -70,7 +77,7 @@ const posts = [
     categoryColor: 'text-cs-teal bg-cs-teal/10 border-cs-teal/20',
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
     image: '/blog/crm-adoption.svg',
-    excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programmes never could.",
+    excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programs never could.",
     date: 'Dec 20, 2025', readTime: '5 min',
     author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
     featured: false,
@@ -278,6 +285,8 @@ export default function Blog() {
           </div>
         </div>
       </section>
+
+      <FAQ title="Blog FAQ" items={blogFaqs} />
 
       {/* Newsletter */}
       <NewsletterSection />

@@ -69,9 +69,9 @@ const useCases = [
     color: '#6366F1',
     headline: 'Personalise every buyer journey at scale.',
     points: [
-      "<strong>Grounding</strong> powers personalised product recommendations",
+      "<strong>Grounding</strong> powers personalized product recommendations",
       "<strong>Agentforce Service Agent</strong> answers pre-purchase questions",
-      "<strong>Actions</strong> trigger campaigns from real-time behaviour",
+      "<strong>Actions</strong> trigger campaigns from real-time behavior",
       "<strong>Einstein Trust Layer</strong> keeps re-engagement on-brand",
       "<strong>Topics</strong> coordinate messaging across web, mobile, social",
     ],
@@ -283,7 +283,7 @@ export default function AgentforcePage() {
             <span className="gradient-text-gold">Agentforce Can Deliver For You</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will analyse your business, identify the highest-ROI use case, and show you exactly what an Agentforce deployment would look like - with a timeline, cost estimate, and expected outcomes.
+            In 30 minutes we will analyze your business, identify the highest-ROI use case, and show you exactly what an Agentforce deployment would look like - with a timeline, cost estimate, and expected outcomes.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>

@@ -15,7 +15,7 @@ const painPoints = [
 ]
 
 const outcomes = [
-  { icon: TrendingUp,  value: '29%',     label: 'higher online conversion rates with AI-powered personalisation and predictive sort', color: '#0176D3' },
+  { icon: TrendingUp,  value: '29%',     label: 'higher online conversion rates with AI-powered personalization and predictive sort', color: '#0176D3' },
   { icon: DollarSign,  value: '25%',     label: 'increase in average order value through Einstein Product Recommendations and dynamic bundling', color: '#10B981' },
   { icon: ShoppingCart, value: '32%',     label: 'reduction in cart abandonment with optimised checkout and intelligent recovery workflows', color: '#F59E0B' },
   { icon: Clock,       value: '68%',     label: 'faster time-to-market for new storefronts compared to legacy commerce platforms', color: '#6366F1' },
@@ -106,7 +106,7 @@ export default function CommerceCloudPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce Commerce Cloud powers the world's leading B2B and B2C buying experiences - with AI-driven personalisation that lifts conversion rates by up to 29%, unified order management, and native CRM integration. Cloudsheer builds commerce experiences that generate revenue from day one.
+              Salesforce Commerce Cloud powers the world's leading B2B and B2C buying experiences - with AI-driven personalization that lifts conversion rates by up to 29%, unified order management, and native CRM integration. Cloudsheer builds commerce experiences that generate revenue from day one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"

@@ -606,7 +606,7 @@ function FAQ() {
     },
     {
       q: "What happens after go-live?",
-      a: "Every project includes 30 days of post-launch support. After that, we offer ongoing managed services - agent monitoring, performance optimisation, and new agent deployments as your needs grow. We don't disappear after launch.",
+      a: "Every project includes 30 days of post-launch support. After that, we offer ongoing managed services - agent monitoring, performance optimization, and new agent deployments as your needs grow. We don't disappear after launch.",
     },
     {
       q: "What if we don't see the ROI you promised?",
@@ -683,7 +683,7 @@ function WhyCloudsheer() {
       icon: <UserCheck className="w-5 h-5" />,
       title: "We Don't Disappear After Go-Live",
       problem: 'Many partners vanish once the SOW is signed off',
-      us: 'Every engagement includes 30 days post-launch support. We offer ongoing managed services for monitoring, optimisation, and new agent deployments as you scale.',
+      us: 'Every engagement includes 30 days post-launch support. We offer ongoing managed services for monitoring, optimization, and new agent deployments as you scale.',
     },
   ]
 

@@ -18,7 +18,7 @@ const outcomes = [
   { icon: BarChart2,   value: '382%',    label: 'three-year ROI from Tableau deployments, per Forrester Total Economic Impact study', color: '#0176D3' },
   { icon: TrendingUp,  value: '28%',     label: 'improvement in forecast accuracy when Einstein predictions replace manual methods', color: '#10B981' },
   { icon: Clock,       value: '65%',     label: 'faster report generation with CRM Analytics automation vs. spreadsheet workflows', color: '#F59E0B' },
-  { icon: DollarSign,  value: '<6 mo',   label: 'payback period - most organisations recoup their CRM Analytics investment in under six months', color: '#6366F1' },
+  { icon: DollarSign,  value: '<6 mo',   label: 'payback period - most organizations recoup their CRM Analytics investment in under six months', color: '#6366F1' },
   { icon: Eye,         value: '10M+',    label: 'Tableau users worldwide - the most widely adopted visual analytics platform on the market', color: '#06B6D4' },
   { icon: Database,    value: '3.5x',    label: 'more likely to exceed revenue targets when teams adopt analytics-driven decision making', color: '#0176D3' },
 ]
@@ -46,7 +46,7 @@ const useCases = [
       '<strong>CRM Analytics Dashboards</strong> for SLA and backlog',
       '<strong>Lenses</strong> for CSAT and NPS drill-down by agent',
       '<strong>Einstein Predictions</strong> flags at-risk accounts early',
-      '<strong>Dataflows</strong> benchmark agent utilisation by team',
+      '<strong>Dataflows</strong> benchmark agent utilization by team',
       '<strong>Recipes</strong> build health scores from support and billing',
     ],
   },
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Salesforce CRM Analytics and Tableau give your leadership team AI-powered forecasts, live dashboards, and unified data - so every decision is backed by evidence, not instinct. Forrester found organisations achieve 382% ROI and payback in under six months.
+              Salesforce CRM Analytics and Tableau give your leadership team AI-powered forecasts, live dashboards, and unified data - so every decision is backed by evidence, not instinct. Forrester found organizations achieve 382% ROI and payback in under six months.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -165,7 +165,7 @@ export default function AnalyticsPage() {
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="tag-white mx-auto mb-5">Proven Results</div>
             <h2 className="section-title-white mb-4">
-              The Numbers Behind Data-Driven Organisations
+              The Numbers Behind Data-Driven Organizations
             </h2>
             <p className="section-sub-white">
               These are the outcomes companies achieve when they replace spreadsheets and siloed tools with Salesforce CRM Analytics and Tableau.

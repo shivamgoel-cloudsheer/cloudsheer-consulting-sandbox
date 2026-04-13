@@ -77,7 +77,7 @@ export default function Privacy() {
 
           <div>
             <h2 className="text-lg font-bold mb-3" style={{ color: '#032D60' }}>8. Security</h2>
-            <p>We implement appropriate technical and organisational measures to protect your personal data, including encryption in transit (HTTPS), secure hosting on Vercel, and enterprise-grade security through Salesforce's platform.</p>
+            <p>We implement appropriate technical and organizational measures to protect your personal data, including encryption in transit (HTTPS), secure hosting on Vercel, and enterprise-grade security through Salesforce's platform.</p>
           </div>
 
           <div>

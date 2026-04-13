@@ -48,7 +48,7 @@ const capabilities = [
       '<strong>Einstein Lead Scoring</strong> identifies highest-converting leads',
       '<strong>Sales Engagement</strong> automates multi-step outreach sequences',
       '<strong>Agentforce SDR Agent</strong> qualifies leads and books meetings',
-      '<strong>Einstein Conversation Insights</strong> summarises calls automatically',
+      '<strong>Einstein Conversation Insights</strong> summarizes calls automatically',
     ],
   },
   {

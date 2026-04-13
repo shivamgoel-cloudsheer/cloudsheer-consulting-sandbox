@@ -3,6 +3,14 @@ import {
   ArrowRight, Bot, CheckCircle2, Sparkles, ChevronRight,
   ShoppingCart, Headphones, Mail, Database, BarChart3, Zap,
 } from 'lucide-react'
+import FAQ from '../components/FAQ'
+
+const solutionFaqs = [
+  { q: 'Which Salesforce cloud should I start with?', a: 'It depends on your biggest pain point. If support costs are high, start with Service Cloud + Agentforce. If leads are going cold, Sales Cloud + Agentforce SDR Agent. Book a discovery call and we will recommend based on your data.' },
+  { q: 'Can you implement multiple clouds at once?', a: 'Yes. We regularly deliver multi-cloud implementations (Sales + Service + Marketing). Our team of 40+ covers every major Salesforce cloud.' },
+  { q: 'How long does a typical implementation take?', a: 'Agentforce agents: 3-6 weeks. Single cloud implementation: 4-8 weeks. Multi-cloud: 8-16 weeks. Every project starts with a scoped timeline during the discovery call.' },
+  { q: 'Do you work with companies that already have Salesforce?', a: 'Absolutely. Most of our clients have existing Salesforce orgs. We audit your current setup, identify gaps, and optimize before adding new capabilities.' },
+]
 
 function PageHero() {
   return (
@@ -49,7 +57,7 @@ function AgentforceHero() {
       border: 'border-cs-electric/20 hover:border-cs-electric/40',
       features: [
         'Qualifies inbound leads instantly, 24/7',
-        'Sends personalised outreach sequences',
+        'Sends personalized outreach sequences',
         'Books discovery calls into rep calendars',
         'Updates lead & opportunity records',
         'Enriches contact data via connected sources',
@@ -223,6 +231,7 @@ export default function Solutions() {
       <AgentforceHero />
       <TrustLayer />
       <SalesforceClouds />
+      <FAQ title="Solutions FAQ" items={solutionFaqs} />
       <CTA />
     </>
   )

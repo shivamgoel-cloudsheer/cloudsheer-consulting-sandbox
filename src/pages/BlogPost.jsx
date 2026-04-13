@@ -62,7 +62,7 @@ const articles = {
       {
         heading: 'Best Practices from the Field',
         paragraphs: [
-          "After deploying Agentforce across dozens of organisations, here is what we have learned:",
+          "After deploying Agentforce across dozens of organizations, here is what we have learned:",
         ],
         bullets: [
           "Start small, prove value, then expand. The most successful deployments begin with a single agent handling one use case, then grow from there.",
@@ -75,7 +75,7 @@ const articles = {
       {
         heading: 'What Results Should You Expect?',
         paragraphs: [
-          "Based on real deployment data: most organisations see 30-50% case deflection within the first 90 days. Cost per interaction typically drops from $11+ (human agent) to under $2 (Agentforce). Customer satisfaction scores remain stable or improve because response times drop from hours to seconds.",
+          "Based on real deployment data: most organizations see 30-50% case deflection within the first 90 days. Cost per interaction typically drops from $11+ (human agent) to under $2 (Agentforce). Customer satisfaction scores remain stable or improve because response times drop from hours to seconds.",
           "The ROI case is straightforward: if you handle 10,000 support cases per month and deflect 40% with Agentforce, that's 4,000 cases resolved automatically. At $11 per case, that's $44,000 in monthly savings - from a single agent.",
         ],
       },
@@ -94,7 +94,7 @@ const articles = {
       {
         heading: 'The Question Every Salesforce Team Is Asking',
         paragraphs: [
-          "If your organisation already has Einstein Bots deployed, you are probably wondering: do we need Agentforce? Is it just a rebrand? The answer is no - Agentforce is a fundamentally different technology with different capabilities, and understanding the distinction matters for your automation strategy.",
+          "If your organization already has Einstein Bots deployed, you are probably wondering: do we need Agentforce? Is it just a rebrand? The answer is no - Agentforce is a fundamentally different technology with different capabilities, and understanding the distinction matters for your automation strategy.",
         ],
       },
       {
@@ -109,7 +109,7 @@ const articles = {
           "Your team has the bandwidth to manually script every conversation flow",
         ],
         paragraphs2: [
-          "Einstein Bots are essentially decision trees with NLP on top. They recognise intent, follow a pre-built flow, and return a response. If a customer asks something outside the flow, the bot escalates.",
+          "Einstein Bots are essentially decision trees with NLP on top. They recognize intent, follow a pre-built flow, and return a response. If a customer asks something outside the flow, the bot escalates.",
         ],
       },
       {
@@ -188,7 +188,7 @@ const articles = {
       {
         heading: '2. Map Your Processes Before Customising',
         paragraphs: [
-          "The biggest mistake organisations make is trying to replicate their existing broken processes in Salesforce. Instead, map your current processes, identify what's working and what isn't, and design your Salesforce org around how you want to work - not how you work today. This is the single highest-ROI activity in any implementation.",
+          "The biggest mistake organizations make is trying to replicate their existing broken processes in Salesforce. Instead, map your current processes, identify what's working and what isn't, and design your Salesforce org around how you want to work - not how you work today. This is the single highest-ROI activity in any implementation.",
         ],
       },
       {
@@ -234,9 +234,9 @@ const articles = {
         ],
       },
       {
-        heading: '10. Budget for Post-Launch Optimisation',
+        heading: '10. Budget for Post-Launch Optimization',
         paragraphs: [
-          "The implementation doesn't end at go-live. Budget 20-30% of your implementation cost for post-launch optimisation in the first 90 days. You will discover new requirements, fix adoption issues, and refine processes. Organisations that skip this step end up with an expensive system that nobody uses properly.",
+          "The implementation doesn't end at go-live. Budget 20-30% of your implementation cost for post-launch optimization in the first 90 days. You will discover new requirements, fix adoption issues, and refine processes. Organizations that skip this step end up with an expensive system that nobody uses properly.",
           "Follow this checklist and you dramatically increase your chances of a successful, on-time, on-budget Salesforce implementation.",
         ],
       },
@@ -269,13 +269,13 @@ const articles = {
           "Bottom performers (poor data quality): 15-20% deflection",
         ],
         paragraphs2: [
-          "The difference between top and bottom performers is almost always data quality. Organisations with comprehensive, well-structured Knowledge Articles see dramatically higher deflection rates. The technology works - but only if you feed it good data.",
+          "The difference between top and bottom performers is almost always data quality. Organizations with comprehensive, well-structured Knowledge Articles see dramatically higher deflection rates. The technology works - but only if you feed it good data.",
         ],
       },
       {
         heading: 'Cost Per Interaction: $11 vs $2',
         paragraphs: [
-          "The industry average cost for a human-handled support interaction is $11-15 (including salary, overhead, tools, and management). Agentforce conversations cost approximately $2 each. For an organisation handling 10,000 cases per month with a 42% deflection rate, the math looks like this:",
+          "The industry average cost for a human-handled support interaction is $11-15 (including salary, overhead, tools, and management). Agentforce conversations cost approximately $2 each. For an organization handling 10,000 cases per month with a 42% deflection rate, the math looks like this:",
         ],
         bullets: [
           "4,200 cases deflected per month",
@@ -297,7 +297,7 @@ const articles = {
           "Weekend/holiday coverage: from 0% to 100%",
         ],
         paragraphs2: [
-          "For many organisations, the response time improvement alone justifies the investment. Customers who get immediate answers are significantly more likely to remain satisfied - even if the answer isn't what they wanted to hear.",
+          "For many organizations, the response time improvement alone justifies the investment. Customers who get immediate answers are significantly more likely to remain satisfied - even if the answer isn't what they wanted to hear.",
         ],
       },
       {
@@ -312,7 +312,7 @@ const articles = {
           "Critical factor: seamless handoff to humans when the agent can't resolve the issue",
         ],
         paragraphs2: [
-          "The organisations that see CSAT drops are the ones that force customers through an AI agent with no easy path to a human. Always offer an escalation option - customers who choose the AI are happier because it was their choice.",
+          "The organizations that see CSAT drops are the ones that force customers through an AI agent with no easy path to a human. Always offer an escalation option - customers who choose the AI are happier because it was their choice.",
         ],
       },
       {
@@ -329,8 +329,8 @@ const articles = {
       {
         heading: 'How to Measure Your Own ROI',
         paragraphs: [
-          "Before deploying Agentforce, baseline these metrics: total case volume, cost per case, average first response time, average resolution time, CSAT score, and agent utilisation rate. After deployment, measure the same metrics monthly. The ROI calculation is straightforward: (cases deflected x cost per case) minus Agentforce costs.",
-          "If you want help building a business case specific to your organisation, book a free 30-minute discovery call. We will walk you through the numbers based on your actual case volume and support costs.",
+          "Before deploying Agentforce, baseline these metrics: total case volume, cost per case, average first response time, average resolution time, CSAT score, and agent utilization rate. After deployment, measure the same metrics monthly. The ROI calculation is straightforward: (cases deflected x cost per case) minus Agentforce costs.",
+          "If you want help building a business case specific to your organization, book a free 30-minute discovery call. We will walk you through the numbers based on your actual case volume and support costs.",
         ],
       },
     ],
@@ -370,7 +370,7 @@ const articles = {
         ],
         bullets: [
           "Their complete purchase history from your e-commerce platform",
-          "Their recent website browsing behaviour (they were looking at the cancellation page 10 minutes ago)",
+          "Their recent website browsing behavior (they were looking at the cancellation page 10 minutes ago)",
           "Their support interactions across all channels (chat, email, phone, social)",
           "Their calculated churn risk score (high - this customer needs extra attention)",
           "Their lifetime value ($50,000+ - this is a VIP who should be escalated to a senior agent)",
@@ -394,8 +394,8 @@ const articles = {
         ],
         bullets: [
           "Phase 1: Deploy Agentforce using only Salesforce CRM data. Prove the concept and establish baseline metrics.",
-          "Phase 2: Connect your highest-value external data source to Data Cloud. For most organisations, this is either their e-commerce platform or their ERP.",
-          "Phase 3: Add calculated insights (churn risk, LTV, engagement scores) and use them to personalise agent behaviour.",
+          "Phase 2: Connect your highest-value external data source to Data Cloud. For most organizations, this is either their e-commerce platform or their ERP.",
+          "Phase 3: Add calculated insights (churn risk, LTV, engagement scores) and use them to personalise agent behavior.",
           "Phase 4: Connect additional data sources and build more sophisticated agent instructions based on the unified data.",
         ],
         paragraphs2: [
@@ -417,7 +417,7 @@ const articles = {
       {
         heading: 'The Adoption Problem Nobody Talks About',
         paragraphs: [
-          "You invested six figures in Salesforce. Your admin spent months configuring it. You ran training sessions. And your sales reps still use spreadsheets. Sound familiar? Salesforce adoption has been the industry's biggest unsolved problem for years. Training programmes, gamification, and management mandates help - but they treat the symptom, not the cause.",
+          "You invested six figures in Salesforce. Your admin spent months configuring it. You ran training sessions. And your sales reps still use spreadsheets. Sound familiar? Salesforce adoption has been the industry's biggest unsolved problem for years. Training programs, gamification, and management mandates help - but they treat the symptom, not the cause.",
           "The cause is simple: Salesforce creates work for reps. Data entry, record updates, logging activities - it's all overhead that takes time away from selling or serving customers. Agentforce changes that equation by removing the overhead entirely.",
         ],
       },
@@ -436,7 +436,7 @@ const articles = {
       {
         heading: '3. Smart Follow-Up Reminders',
         paragraphs: [
-          "An Agentforce Sales Agent can analyse pipeline activity and proactively remind reps about deals that need attention: 'You haven't followed up with Acme Corp in 8 days. They're in the negotiation stage - want me to draft a follow-up email?' This makes Salesforce the place where deals move forward, not just where data lives.",
+          "An Agentforce Sales Agent can analyze pipeline activity and proactively remind reps about deals that need attention: 'You haven't followed up with Acme Corp in 8 days. They're in the negotiation stage - want me to draft a follow-up email?' This makes Salesforce the place where deals move forward, not just where data lives.",
         ],
       },
       {
@@ -446,7 +446,7 @@ const articles = {
         ],
       },
       {
-        heading: '5. Personalised Coaching in the Flow of Work',
+        heading: '5. Personalized Coaching in the Flow of Work',
         paragraphs: [
           "Agentforce agents can provide real-time coaching based on deal data: 'Deals this size typically close 30% faster when you involve a technical resource by this stage. Want me to loop in a solutions engineer?' This makes Salesforce the place where reps get better at their job - not just a reporting tool for management.",
         ],
@@ -454,13 +454,13 @@ const articles = {
       {
         heading: '6. One-Click Report Generation',
         paragraphs: [
-          "Managers can ask an Agentforce agent to generate pipeline reports, forecast summaries, or activity dashboards in natural language. No more hunting through the Reports tab or asking an admin to build custom reports. When leadership gets value directly from Salesforce, they champion adoption across the organisation.",
+          "Managers can ask an Agentforce agent to generate pipeline reports, forecast summaries, or activity dashboards in natural language. No more hunting through the Reports tab or asking an admin to build custom reports. When leadership gets value directly from Salesforce, they champion adoption across the organization.",
         ],
       },
       {
         heading: '7. New Hire Onboarding Acceleration',
         paragraphs: [
-          "New reps can ask Agentforce agents about processes, deal stages, pricing rules, and territory definitions. Instead of waiting for a colleague to answer their Slack message, they get instant, accurate answers grounded in your Salesforce data. Organisations using Agentforce for onboarding report new reps reaching full productivity 40% faster.",
+          "New reps can ask Agentforce agents about processes, deal stages, pricing rules, and territory definitions. Instead of waiting for a colleague to answer their Slack message, they get instant, accurate answers grounded in your Salesforce data. Organizations using Agentforce for onboarding report new reps reaching full productivity 40% faster.",
           "The common thread across all seven: Agentforce makes Salesforce give more than it takes. When the CRM actively helps people do their jobs instead of creating busywork, adoption stops being a problem and becomes a competitive advantage.",
         ],
       },
@@ -528,7 +528,7 @@ const articles = {
         ],
         bullets: [
           "Unified Profile Access: Agents can now access the full Data Cloud unified profile in real-time, including calculated insights like churn risk, LTV, and engagement scores.",
-          "Segment-Based Instructions: You can now configure different agent behaviour based on Data Cloud segments. VIP customers get a different experience than new customers - automatically.",
+          "Segment-Based Instructions: You can now configure different agent behavior based on Data Cloud segments. VIP customers get a different experience than new customers - automatically.",
           "Real-Time Event Triggers: Agents can be triggered by Data Cloud streaming events. For example, if a high-value customer visits your pricing page, an agent can proactively reach out via chat.",
         ],
       },

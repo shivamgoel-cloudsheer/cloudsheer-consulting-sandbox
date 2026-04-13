@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, Bot, Calendar } from 'lucide-react'
+import FAQ from '../components/FAQ'
+
+const contactFaqs = [
+  { q: 'What happens on the discovery call?', a: '30 minutes with a Salesforce architect (not a sales rep). We review your current setup, identify quick wins, and give you a clear plan with timeline and cost estimate.' },
+  { q: 'How quickly do you respond to form submissions?', a: 'Within 4 business hours. For urgent requests, book a call directly through our calendar.' },
+  { q: 'Is the discovery call really free?', a: 'Yes. No commitment, no contract, no pitch. You leave with a clear assessment of where Agentforce or Salesforce fits your business.' },
+  { q: 'Can I request a specific consultant?', a: 'Yes. Let us know in the message field and we will match you with the right architect for your project.' },
+]
 
 const contactInfo = [
   { icon: <Mail className="w-4 h-4" />,  label: 'Email',    value: 'hello@cloudsheer.com' },
   { icon: <MapPin className="w-4 h-4" />,label: 'Offices',  value: 'Dallas | Delhi | London | New York' },
-  { icon: <Clock className="w-4 h-4" />, label: 'Response', value: 'Within 1 business day' },
+  { icon: <Clock className="w-4 h-4" />, label: 'Response', value: 'Within 4 business hours' },
 ]
 
 const interests = [
@@ -270,6 +278,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <FAQ title="Contact FAQ" items={contactFaqs} />
     </>
   )
 }

@@ -17,9 +17,9 @@ const painPoints = [
 const outcomes = [
   { icon: DollarSign,        value: '$36:$1', label: 'average email marketing ROI - the highest of any digital channel (Litmus, 2024)', color: '#0176D3' },
   { icon: TrendingUp,        value: '25%',    label: 'average increase in marketing ROI reported by Marketing Cloud customers (Salesforce Customer Success Survey)', color: '#10B981' },
-  { icon: MousePointerClick, value: '41%',    label: 'higher click-through rates when using Einstein Send Time Optimisation vs. manual sends', color: '#F59E0B' },
-  { icon: Mail,              value: '26%',    label: 'lift in email revenue from dynamic, personalised content powered by CRM data (Salesforce State of Marketing)', color: '#6366F1' },
-  { icon: Users,             value: '23%',    label: "higher customer lifetime value for brands running personalised lifecycle journeys (McKinsey Next in Personalisation)", color: '#06B6D4' },
+  { icon: MousePointerClick, value: '41%',    label: 'higher click-through rates when using Einstein Send Time Optimization vs. manual sends', color: '#F59E0B' },
+  { icon: Mail,              value: '26%',    label: 'lift in email revenue from dynamic, personalized content powered by CRM data (Salesforce State of Marketing)', color: '#6366F1' },
+  { icon: Users,             value: '23%',    label: "higher customer lifetime value for brands running personalized lifecycle journeys (McKinsey Next in Personalization)", color: '#06B6D4' },
   { icon: Clock,             value: '50%',    label: 'reduction in campaign build time with Journey Builder templates and reusable content blocks', color: '#0176D3' },
 ]
 
@@ -44,7 +44,7 @@ const useCases = [
     headline: 'One unified profile. Limitless segmentation.',
     points: [
       '<strong>Data Cloud segments</strong> unify all data into one profile',
-      '<strong>Audience Studio</strong> with behavioural and transactional filters',
+      '<strong>Audience Studio</strong> with behavioral and transactional filters',
       '<strong>Real-time activation</strong> to email, SMS, ads, web',
       '<strong>Native ad sync</strong> to Google, Meta, LinkedIn',
       '<strong>Einstein Engagement Scoring</strong> predicts churn and LTV',
@@ -70,7 +70,7 @@ const useCases = [
     headline: 'Turn anonymous traffic into qualified pipeline',
     points: [
       '<strong>Account Engagement (Pardot)</strong> scores sales-ready prospects',
-      '<strong>Automated nurture</strong> advances MQLs with personalised content',
+      '<strong>Automated nurture</strong> advances MQLs with personalized content',
       '<strong>Bi-directional CRM sync</strong> for real-time engagement visibility',
       '<strong>Landing pages and forms</strong> built and attributed natively',
       '<strong>Engagement Studio</strong> for complex B2B buying journeys',
@@ -82,7 +82,7 @@ const whyUs = [
   { title: 'Deep Marketing Cloud Expertise',   desc: "We specialise in Marketing Cloud and Account Engagement - not everything Salesforce sells. That focus means faster implementations, fewer issues, and better results than a generalist partner." },
   { title: "Proven Across Industries",         desc: "Our team has delivered Marketing Cloud for B2B lead nurture, e-commerce lifecycle journeys, financial services onboarding, and nonprofit donor engagement - with measurable ROI in every case." },
   { title: 'Live in 6-8 Weeks, Not 6 Months',  desc: "We use a phased delivery model: core journeys and integrations go live fast, then we iterate. You start seeing value in weeks, not quarters." },
-  { title: 'Free Roadmap - No Strings',         desc: "Book a 30-minute scoping call and walk away with a personalisation roadmap, a gap analysis of your current stack, and a clear implementation plan - whether you hire us or not." },
+  { title: 'Free Roadmap - No Strings',         desc: "Book a 30-minute scoping call and walk away with a personalization roadmap, a gap analysis of your current stack, and a clear implementation plan - whether you hire us or not." },
 ]
 
 export default function MarketingCloudPage() {
@@ -106,7 +106,7 @@ export default function MarketingCloudPage() {
             </h1>
             <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Email delivers $36 for every $1 spent - but only when it is personalised, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
+              Email delivers $36 for every $1 spent - but only when it is personalized, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export default function MarketingCloudPage() {
             </div>
             <p className="text-sm mt-5 animate-fade-up-3"
               style={{ color: 'rgba(148,196,255,0.60)' }}>
-              Free 30-min scoping call · No commitment · Personalisation roadmap included
+              Free 30-min scoping call · No commitment · Personalization roadmap included
             </p>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function MarketingCloudPage() {
               Four Engines That <span className="gradient-text">Drive Marketing Revenue</span>
             </h2>
             <p className="section-sub">
-              Marketing Cloud connects your customer data, automates personalised journeys, and attributes every conversion back to the campaign that caused it.
+              Marketing Cloud connects your customer data, automates personalized journeys, and attributes every conversion back to the campaign that caused it.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
@@ -283,11 +283,11 @@ export default function MarketingCloudPage() {
             <span className="gradient-text-gold">Prove Its Revenue Impact?</span>
           </h2>
           <p className="text-lg mb-4" style={{ color: 'rgba(148,196,255,0.85)' }}>
-            In 30 minutes we will audit your current marketing stack, identify your highest-impact personalisation opportunities, and map out a phased Marketing Cloud roadmap - at no cost.
+            In 30 minutes we will audit your current marketing stack, identify your highest-impact personalization opportunities, and map out a phased Marketing Cloud roadmap - at no cost.
           </p>
           <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
             style={{ color: 'rgba(148,196,255,0.80)' }}>
-            {['Personalisation roadmap included', 'Revenue attribution plan', 'You leave with a clear next step'].map(i => (
+            {['Personalization roadmap included', 'Revenue attribution plan', 'You leave with a clear next step'].map(i => (
               <li key={i} className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" style={{ color: '#38BDF8' }} /> {i}
               </li>

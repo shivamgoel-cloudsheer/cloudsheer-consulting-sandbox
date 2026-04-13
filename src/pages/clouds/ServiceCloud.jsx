@@ -202,7 +202,7 @@ export default function ServiceCloudPage() {
               <span className="gradient-text">Built For Your Business</span>
             </h2>
             <p className="section-sub">
-              Service Cloud is not just a ticketing system. It is the AI-powered platform that the world's best support teams use to deliver fast, personalised, and cost-efficient service at scale.
+              Service Cloud is not just a ticketing system. It is the AI-powered platform that the world's best support teams use to deliver fast, personalized, and cost-efficient service at scale.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">

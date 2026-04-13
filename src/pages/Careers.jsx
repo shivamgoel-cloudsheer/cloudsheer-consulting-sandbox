@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import FAQ from '../components/FAQ'
 import {
   ArrowRight, MapPin, Clock, Briefcase, Users, Zap, Heart,
   TrendingUp, Globe, ChevronDown, ChevronUp, Send, CheckCircle2,
@@ -210,6 +211,13 @@ function RoleCard({ role }) {
   )
 }
 
+const careerFaqs = [
+  { q: 'What is the interview process?', a: '3 steps: 30-min intro call with our hiring lead, a technical/case assessment, and a final culture-fit conversation with leadership. Typically completed in 2 weeks.' },
+  { q: 'Is the role fully remote?', a: 'Our current openings are Work From Office in Noida, India. We offer flexibility within office hours and support async collaboration across time zones.' },
+  { q: 'Do you sponsor Salesforce certifications?', a: 'Yes. We cover exam fees and provide study time for all Salesforce certifications. We currently hold 60+ certs across the team.' },
+  { q: 'What if my role is not listed?', a: 'We are always open to exceptional Salesforce talent. Send your CV to hr@cloudsheer.com with a note about what you are looking for.' },
+]
+
 export default function Careers() {
   return (
     <>
@@ -377,6 +385,8 @@ export default function Careers() {
           </div>
         </div>
       </section>
+
+      <FAQ title="Careers FAQ" items={careerFaqs} />
     </>
   )
 }

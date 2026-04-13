@@ -60,7 +60,7 @@ const capabilities = [
       "<strong>Experience Cloud portals</strong> for care plans and messaging",
       "<strong>Medication Management</strong> reminders and refill tracking",
       "<strong>Secure two-way messaging</strong> between patients and teams",
-      "<strong>Care Programs</strong> deliver personalised content by condition",
+      "<strong>Care Programs</strong> deliver personalized content by condition",
       "<strong>Patient 360</strong> outcomes drive continuous care improvement",
     ],
   },
