@@ -119,7 +119,7 @@ export default function SlackPage() {
           </div>
 
           {/* Slack desktop screenshot */}
-          <div className="mt-6 max-w-4xl mx-auto hidden md:block animate-fade-up-2">
+          <div className="mt-4 max-w-2xl mx-auto hidden md:block animate-fade-up-2">
             <img loading="lazy" src={BASE + 'slack/slack-desktop.webp'} alt="Slack desktop interface"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />

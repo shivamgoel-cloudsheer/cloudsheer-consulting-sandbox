@@ -116,7 +116,7 @@ export default function MarketingCloudPage() {
             </div>
           </div>
 
-          <div className="mt-6 max-w-3xl mx-auto hidden md:block animate-fade-up-3">
+          <div className="mt-4 max-w-2xl mx-auto hidden md:block animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/marketing-dashboard.webp'} alt="Marketing Cloud - AI Campaign Builder with Einstein optimization"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
