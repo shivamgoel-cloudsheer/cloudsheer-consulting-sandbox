@@ -91,7 +91,7 @@ export default function SlackPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-10 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 55%,#4A154B 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
@@ -110,7 +110,7 @@ export default function SlackPage() {
               style={{ color: 'rgba(148,196,255,0.90)' }}>
               Slack connects your people, tools, and Salesforce data in one place. Decisions happen faster, context is never lost.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
                 className="btn-gold text-base px-8 py-4">
                 See What Slack Can Do For Your Team <ArrowRight className="w-5 h-5" />
@@ -119,7 +119,7 @@ export default function SlackPage() {
           </div>
 
           {/* Slack desktop screenshot */}
-          <div className="mt-10 max-w-4xl mx-auto animate-fade-up-2">
+          <div className="mt-6 max-w-4xl mx-auto animate-fade-up-2">
             <img loading="lazy" src={BASE + 'slack/slack-desktop.webp'} alt="Slack desktop interface"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />

@@ -89,7 +89,7 @@ export default function ExperienceCloudPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-10 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 55%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
@@ -104,11 +104,11 @@ export default function ExperienceCloudPage() {
               Turn Your Portal Into a{' '}
               <br /><span className="gradient-text-gold">Revenue and Retention Engine</span>
             </h1>
-            <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
+            <p className="text-base sm:text-lg leading-relaxed mb-6 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
               Companies using Salesforce Experience Cloud deflect up to 48% of support tickets, cut partner onboarding costs in half, and deliver digital experiences that drive loyalty. Cloudsheer builds the portals that make it happen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
                 className="btn-gold text-base px-8 py-4">
                 Get a Free Portal Strategy Call <ArrowRight className="w-5 h-5" />

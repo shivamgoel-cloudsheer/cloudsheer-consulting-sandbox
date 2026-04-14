@@ -89,7 +89,7 @@ export default function MarketingCloudPage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-10 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 55%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
@@ -104,11 +104,11 @@ export default function MarketingCloudPage() {
               Turn Every Customer Touchpoint Into{' '}
               <br /><span className="gradient-text-gold">Measurable Revenue.</span>
             </h1>
-            <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
+            <p className="text-base sm:text-lg leading-relaxed mb-6 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
               Email delivers $36 for every $1 spent - but only when it is personalized, automated, and connected to your CRM. We build Marketing Cloud engines that turn data into pipeline and customers into lifetime value.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
                 className="btn-gold text-base px-8 py-4">
                 Get a Free Marketing Cloud Roadmap <ArrowRight className="w-5 h-5" />
@@ -116,7 +116,7 @@ export default function MarketingCloudPage() {
             </div>
           </div>
 
-          <div className="mt-10 max-w-3xl mx-auto animate-fade-up-3">
+          <div className="mt-6 max-w-3xl mx-auto animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/marketing-dashboard.webp'} alt="Marketing Cloud - AI Campaign Builder with Einstein optimization"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />

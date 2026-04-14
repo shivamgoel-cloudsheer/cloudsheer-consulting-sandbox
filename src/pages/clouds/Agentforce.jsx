@@ -89,7 +89,7 @@ export default function AgentforcePage() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
-      <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 overflow-hidden"
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-10 overflow-hidden"
         style={{ background: 'linear-gradient(135deg,#032D60 0%,#0A3F80 55%,#0176D3 100%)' }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
@@ -104,11 +104,11 @@ export default function AgentforcePage() {
               Cut service costs 80%.{' '}
               <br /><span className="gradient-text-gold">Resolve 40% more cases. Run 24/7.</span>
             </h1>
-            <p className="text-xl leading-relaxed mb-10 animate-fade-up-1"
+            <p className="text-base sm:text-lg leading-relaxed mb-6 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
               Agentforce deploys autonomous AI agents built with Agent Builder that handle customer service, sales, and operations - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up-2">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
                 className="btn-gold text-base px-8 py-4">
                 See What Agentforce Can Do For You <ArrowRight className="w-5 h-5" />
@@ -117,7 +117,7 @@ export default function AgentforcePage() {
           </div>
 
           {/* Agentforce Builder screenshot */}
-          <div className="mt-10 max-w-4xl mx-auto animate-fade-up-3">
+          <div className="mt-6 max-w-4xl mx-auto animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/agentforce-builder.webp'} alt="Agentforce Builder - Agent templates and configuration"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
