@@ -111,8 +111,8 @@ export default function Navbar() {
     <header
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={scrolled
-        ? { backgroundColor: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(16px)', boxShadow: '0 1px 0 rgba(1,118,211,0.10)', padding: '12px 0' }
-        : { backgroundColor: 'rgba(255,255,255,0.80)', backdropFilter: 'blur(8px)', padding: '20px 0' }
+        ? { backgroundColor: 'rgba(255,255,255,0.97)', backdropFilter: 'blur(16px)', boxShadow: '0 1px 0 rgba(1,118,211,0.10)', padding: '6px 0' }
+        : { backgroundColor: 'rgba(255,255,255,0.80)', backdropFilter: 'blur(8px)', padding: '10px 0' }
       }
     >
       <div className="section-wrap flex items-center justify-between">
