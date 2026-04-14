@@ -117,7 +117,7 @@ export default function AgentforcePage() {
           </div>
 
           {/* Agentforce Builder screenshot */}
-          <div className="mt-6 max-w-4xl mx-auto animate-fade-up-3">
+          <div className="mt-6 max-w-4xl mx-auto hidden md:block animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/agentforce-builder.webp'} alt="Agentforce Builder - Agent templates and configuration"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
