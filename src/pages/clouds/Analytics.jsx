@@ -114,10 +114,12 @@ export default function AnalyticsPage() {
                 Get a Free Analytics Blueprint <ArrowRight className="w-5 h-5" />
               </a>
             </div>
-            <p className="text-sm mt-5 animate-fade-up-3"
-              style={{ color: 'rgba(148,196,255,0.60)' }}>
-              Free 30-min scoping call · No commitment · We map your top insight gaps
-            </p>
+          </div>
+
+          <div className="mt-4 max-w-2xl mx-auto hidden md:block animate-fade-up-3">
+            <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/analytics-dashboard.webp'} alt="Tableau CRM Analytics - Profit Analysis dashboard with data visualization"
+              className="w-full rounded-xl"
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
           </div>
         </div>
       </section>
