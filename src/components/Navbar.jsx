@@ -57,7 +57,8 @@ const clouds = [
   {
     label: 'Platform & AppExchange',
     to: '/solutions/platform',
-    icon: Package,
+    icon: null,
+    image: 'icons/platform.svg',
     desc: 'Custom apps built on the #1 CRM platform',
   },
   {
