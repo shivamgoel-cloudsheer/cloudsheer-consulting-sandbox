@@ -1,0 +1,332 @@
+================================================================================
+CLOUDSHEER CHATBOT - FAQ Q&A PAIRS
+Compiled: April 2026 | 85+ Q&A pairs organized by category
+================================================================================
+
+
+================================================================================
+CATEGORY: SALESFORCE GENERAL (12 Qs)
+================================================================================
+
+Q: What is Salesforce?
+A: Salesforce is the world's leading cloud-based CRM (Customer Relationship Management) platform. It helps businesses manage sales, customer service, marketing, commerce, and more from a single connected platform powered by AI.
+
+Q: What is a CRM?
+A: A CRM (Customer Relationship Management) system is software that helps businesses manage all interactions with customers and prospects. It centralizes contact info, tracks deals, automates workflows, and provides analytics to improve customer relationships and drive revenue.
+
+Q: Is Salesforce cloud-based?
+A: Yes, Salesforce is 100% cloud-based. There is no software to install or hardware to maintain - you access everything through a web browser or mobile app, and Salesforce handles all updates, security, and infrastructure.
+
+Q: How much does Salesforce cost?
+A: Salesforce pricing starts at $25/user/month for Starter Suite. Pro Suite is $100/user/month, Enterprise is $175/user/month, and Unlimited is $350/user/month. All prices are billed annually. Add-ons like Agentforce start at $2 per conversation or via Flex Credits.
+
+Q: What industries use Salesforce?
+A: Salesforce is used across virtually every industry including financial services, healthcare, retail and e-commerce, manufacturing, technology, education, nonprofits, government, media, and professional services. Salesforce also offers industry-specific clouds like Health Cloud and Financial Services Cloud.
+
+Q: What is Salesforce Customer 360?
+A: Salesforce Customer 360 is the complete suite of Salesforce products that gives every team - sales, service, marketing, commerce, and IT - a single, shared view of every customer. It connects all your data across departments so teams can collaborate and deliver seamless customer experiences.
+
+Q: Does Salesforce offer a free trial?
+A: Yes, Salesforce offers a free 30-day trial for most products including Sales Cloud and Service Cloud. No credit card is required, and setup is simple so you can start exploring key features right away.
+
+Q: What is Salesforce AppExchange?
+A: Salesforce AppExchange is the world's largest enterprise cloud marketplace with thousands of pre-built apps, components, and consulting partners. You can find solutions for everything from document generation to ERP integration, many of which are free to install.
+
+Q: What is Salesforce Lightning?
+A: Salesforce Lightning is the modern user interface and development framework for Salesforce. It provides a faster, more intuitive experience with drag-and-drop page building, reusable components, and built-in AI features compared to the older Classic interface.
+
+Q: What is Data Cloud?
+A: Salesforce Data Cloud is a hyperscale data platform that unifies all your customer data - from CRM, external systems, and real-time streams - into a single customer profile. It powers AI, segmentation, and personalization across every Salesforce cloud.
+
+Q: What are Salesforce editions?
+A: Salesforce offers four main editions: Starter Suite (basic CRM for small teams), Pro Suite (expanded automation and forecasting), Enterprise (full customization and API access), and Unlimited (premium support, advanced analytics, and AI). Each tier adds more features and capabilities.
+
+Q: How often does Salesforce release updates?
+A: Salesforce releases three major updates per year: Spring, Summer, and Winter releases. These updates are automatically applied to all customers at no extra cost and include new features, performance improvements, and security enhancements.
+
+
+================================================================================
+CATEGORY: AGENTFORCE (12 Qs)
+================================================================================
+
+Q: What is Agentforce?
+A: Agentforce is Salesforce's agentic AI platform that lets businesses deploy autonomous AI agents for service, sales, marketing, and commerce workflows. Unlike simple chatbots, Agentforce agents can reason, plan, and execute multi-step business processes autonomously while staying grounded in your CRM data.
+
+Q: How does Agentforce work?
+A: Agentforce agents use the Atlas Reasoning Engine to retrieve relevant data, build action plans, and execute tasks without human intervention. They read your Salesforce metadata to understand your business context and can take actions directly within CRM - like updating records, routing cases, or qualifying leads.
+
+Q: What is the Atlas Reasoning Engine?
+A: The Atlas Reasoning Engine is the AI brain behind Agentforce. It uses advanced techniques like ensemble Retrieval Augmented Generation (RAG) to find highly specific and accurate data from your Salesforce org, then reasons through complex tasks step by step to deliver reliable results.
+
+Q: What is the difference between Agentforce and Einstein Bots?
+A: Einstein Bots follow scripted, rule-based conversation flows and can only handle pre-programmed scenarios. Agentforce agents use advanced AI reasoning to autonomously handle multi-step tasks, make decisions, and take actions in Salesforce - they can adapt to situations they were not explicitly programmed for.
+
+Q: What is Agent Builder?
+A: Agent Builder is the low-code tool for creating and customizing Agentforce agents. You define the agent's job description, assign topics and actions, set guardrails, and configure escalation rules - all without writing code. You can use existing Salesforce Flows and Apex as agent actions.
+
+Q: How much does Agentforce cost?
+A: Agentforce pricing is consumption-based at $2 per conversation (any interaction within a 24-hour period). Alternatively, the Flex Credits model charges per action at approximately $0.10 per standard action. For employee-facing agents, add-ons start at $125/user/month on Enterprise edition or above.
+
+Q: What can Agentforce Service Agent do?
+A: The Agentforce Service Agent autonomously resolves Tier-1 and Tier-2 support cases by searching your knowledge base, updating case fields, and providing accurate answers across email, chat, and messaging channels. It seamlessly escalates to human agents with full context when needed.
+
+Q: What can Agentforce Sales Development Representative (SDR) do?
+A: The Agentforce SDR Agent autonomously engages inbound leads, answers product questions, handles objections, and books meetings for your sales team 24/7. It uses your CRM data and sales playbooks to have personalized, context-aware conversations with prospects.
+
+Q: What is Agentforce for employees?
+A: Agentforce for employees provides AI assistants that help internal teams work more efficiently. These agents can draft emails, summarize records, answer policy questions, generate reports, and automate routine tasks - all within the Salesforce interface or Slack.
+
+Q: What channels does Agentforce support?
+A: Agentforce agents can operate across web chat, email, SMS, WhatsApp, Facebook Messenger, Slack, and voice (via Agentforce Contact Center). They maintain consistent context and conversation history across all channels.
+
+Q: What is Agentforce 360?
+A: Agentforce 360 is the latest evolution of the Agentforce platform, introduced in late 2025. It embeds AI agents across the entire Salesforce ecosystem including Slack, and adds new capabilities for building, monitoring, and optimizing agents at scale.
+
+Q: What is Agentforce Contact Center?
+A: Agentforce Contact Center, launched in March 2026, is an AI-powered contact center solution that unifies voice, digital channels, CRM data, and AI agents into one platform. It enables seamless handoffs between AI agents and human agents across all communication channels.
+
+
+================================================================================
+CATEGORY: SALES CLOUD (7 Qs)
+================================================================================
+
+Q: What is Sales Cloud?
+A: Sales Cloud (now also called Agentforce Sales) is Salesforce's core sales automation platform. It helps sales teams manage leads, track opportunities, forecast revenue, and close deals faster with AI-powered insights, automation, and a complete view of every customer.
+
+Q: What is Pipeline Inspection in Sales Cloud?
+A: Pipeline Inspection gives sales managers an interactive, AI-powered view of their team's pipeline in a single screen. It highlights deals that have stalled, flags at-risk opportunities, and shows week-over-week pipeline changes so managers can coach reps and take action before deals slip.
+
+Q: What is Einstein Lead Scoring?
+A: Einstein Lead Scoring uses AI to automatically analyze your historical data and score every lead based on its likelihood to convert. Sales reps see a score from 1-100 on each lead along with the top factors driving that score, helping them prioritize the hottest leads first.
+
+Q: What is Revenue Intelligence?
+A: Revenue Intelligence combines AI analytics, pipeline insights, and forecasting into a unified workspace for sales leaders. It provides AI-driven forecast predictions, deal health scores, and trend analysis so teams can spot risks early and make data-driven decisions to hit their targets.
+
+Q: What is Configure, Price, Quote (CPQ) in Salesforce?
+A: Salesforce CPQ automates the quoting process by helping sales reps configure product bundles, apply the correct pricing rules and discounts, and generate professional quotes in minutes. It eliminates manual errors and ensures every quote follows your pricing and approval policies.
+
+Q: What is Sales Engagement in Sales Cloud?
+A: Sales Engagement (formerly High Velocity Sales) provides built-in tools for inside sales teams including automated email sequences, call queues, and work queues. Reps follow guided selling cadences while managers track activity metrics and optimize outreach strategies.
+
+Q: Does Sales Cloud integrate with email and calendar?
+A: Yes, Sales Cloud integrates natively with Gmail, Outlook, and Google/Microsoft calendars. Emails are automatically logged to the right Salesforce records, calendar events sync both ways, and reps can update Salesforce data without leaving their inbox.
+
+
+================================================================================
+CATEGORY: SERVICE CLOUD (7 Qs)
+================================================================================
+
+Q: What is Service Cloud?
+A: Service Cloud (now also called Agentforce Service) is Salesforce's customer service platform. It provides a unified agent console, case management, knowledge base, omni-channel routing, and AI-powered tools to help support teams resolve issues faster and deliver personalized service at scale.
+
+Q: What is Omni-Channel Routing in Service Cloud?
+A: Omni-Channel Routing automatically distributes incoming cases, chats, calls, and messages to the right agent based on skill set, availability, and workload. It ensures balanced workloads and faster response times across all support channels.
+
+Q: What is Einstein Case Classification?
+A: Einstein Case Classification uses AI to automatically predict and populate case fields like type, reason, and priority as soon as a case is created. This saves agents time on data entry and ensures consistent case categorization for faster routing and resolution.
+
+Q: What is the Service Cloud agent console?
+A: The Service Cloud agent console is a unified workspace that gives support agents everything they need on one screen - customer history, case details, knowledge articles, AI-suggested replies, and macros for common actions. It is designed to minimize clicks and maximize productivity.
+
+Q: What is Knowledge Management in Service Cloud?
+A: Knowledge Management lets you build a centralized knowledge base of articles, FAQs, and solutions that agents and customers can search. AI surfaces the most relevant articles automatically during case resolution, and Knowledge Maps group related articles for easier navigation.
+
+Q: What is Case Timeline in Service Cloud?
+A: Case Timeline, introduced in the Spring 2026 release, displays all key case events in a clear chronological view with milestone markers. It helps agents quickly understand the full history of a case without scrolling through multiple related lists.
+
+Q: What is Command Center for Service?
+A: Command Center for Service (formerly Omni-Channel Supervisor) is a real-time monitoring dashboard for support managers. It provides visibility into agent workloads, queue wait times, and channel performance so managers can make staffing adjustments and intervene on escalations quickly.
+
+
+================================================================================
+CATEGORY: MARKETING CLOUD (6 Qs)
+================================================================================
+
+Q: What is Marketing Cloud?
+A: Salesforce Marketing Cloud is a digital marketing platform for creating and managing personalized customer journeys across email, SMS, social media, advertising, and web. It uses AI to optimize send times, content, and audience segmentation to maximize engagement and ROI.
+
+Q: What is Journey Builder in Marketing Cloud?
+A: Journey Builder is a visual tool for designing automated, multi-step customer journeys across email, SMS, push notifications, and ads. You define triggers, decision splits, and wait periods to deliver the right message at the right time based on customer behavior and data.
+
+Q: What is Marketing Cloud Engagement?
+A: Marketing Cloud Engagement (formerly ExactTarget) is the B2C marketing automation engine within Marketing Cloud. It includes Email Studio for email campaigns, Mobile Studio for SMS and push, Advertising Studio for ad targeting, and Journey Builder for orchestrating multi-channel journeys.
+
+Q: What is Marketing Cloud Account Engagement?
+A: Marketing Cloud Account Engagement (formerly Pardot) is Salesforce's B2B marketing automation platform. It provides lead scoring, nurture campaigns, landing pages, ROI reporting, and deep Sales Cloud integration to help B2B teams generate and qualify leads.
+
+Q: What is Marketing Cloud Personalization?
+A: Marketing Cloud Personalization (formerly Interaction Studio) delivers real-time, 1-to-1 personalization across web, email, and app experiences. It uses AI to track customer behavior and dynamically adjust content, offers, and recommendations in the moment.
+
+Q: What is new in Marketing Cloud for 2026?
+A: Key 2026 updates include Business Unit support for enterprise partitioning, dedicated IP support for B2C operations, SMS and WhatsApp steps in Engagement Studio, Handlebars templating for advanced content personalization, and deeper Agentforce AI integration for campaign optimization.
+
+
+================================================================================
+CATEGORY: COMMERCE CLOUD (4 Qs)
+================================================================================
+
+Q: What is Commerce Cloud?
+A: Salesforce Commerce Cloud is a multi-tenant, cloud-based e-commerce platform for building unified shopping experiences across web, mobile, social, and in-store channels. It includes AI-powered merchandising, built-in scalability for traffic spikes, and tools for both B2C and B2B commerce.
+
+Q: What is the difference between B2C Commerce and B2B Commerce?
+A: B2C Commerce is designed for direct-to-consumer retail with features like product recommendations, promotions, and high-volume transaction handling. B2B Commerce is built for business buyers with features like account-based pricing, bulk ordering, contract pricing, and complex approval workflows.
+
+Q: What is Commerce Cloud Einstein?
+A: Commerce Cloud Einstein provides AI-powered product recommendations, predictive sorting, and search optimization for online storefronts. It automatically personalizes the shopping experience for each customer based on browsing behavior, purchase history, and real-time intent signals.
+
+Q: Does Commerce Cloud handle order management?
+A: Yes, Salesforce Order Management (part of the Commerce Cloud ecosystem) provides end-to-end order lifecycle management including order capture, payment processing, fulfillment routing, shipping, returns, and exchanges - with real-time inventory visibility across all locations.
+
+
+================================================================================
+CATEGORY: EXPERIENCE CLOUD (4 Qs)
+================================================================================
+
+Q: What is Experience Cloud?
+A: Salesforce Experience Cloud is a platform for building branded, secure digital portals and communities connected directly to your Salesforce CRM data. You can create customer self-service hubs, partner portals, employee intranets, and microsites with drag-and-drop tools and pre-built templates.
+
+Q: What types of portals can you build with Experience Cloud?
+A: You can build customer self-service portals (for case submission and knowledge search), partner portals (for deal registration and lead distribution), employee communities (for HR and collaboration), and public-facing websites - all connected to live Salesforce data with role-based access control.
+
+Q: Does Experience Cloud support single sign-on (SSO)?
+A: Yes, Experience Cloud supports SSO, social login (Google, Facebook, Apple), and custom authentication providers. You can control access with role-based permissions, ensuring users only see the data and content relevant to their profile.
+
+Q: Can Experience Cloud be customized without code?
+A: Yes, Experience Cloud includes Lightning Builder, a drag-and-drop design tool for creating pages and navigation without code. You can choose from pre-built templates, add standard or custom components, and preview layouts across devices. For advanced needs, custom Lightning Web Components can be added.
+
+
+================================================================================
+CATEGORY: ANALYTICS / TABLEAU (4 Qs)
+================================================================================
+
+Q: What is Tableau?
+A: Tableau is Salesforce's visual analytics platform that helps people see and understand their data. It connects to virtually any data source and lets users create interactive dashboards and visualizations through drag-and-drop - no coding required. Salesforce acquired Tableau in 2019.
+
+Q: What is CRM Analytics?
+A: CRM Analytics (formerly Einstein Analytics and Tableau CRM) is the native analytics engine built directly into Salesforce. It provides AI-powered dashboards, predictions, and recommendations in the flow of work - with the ability to take action like updating records or launching campaigns right from the insight.
+
+Q: How is CRM Analytics different from Tableau?
+A: CRM Analytics is natively embedded inside Salesforce and optimized for CRM use cases with pre-built dashboards and direct action-taking. Tableau is a standalone analytics platform that connects to any data source and is ideal for broader enterprise BI, data exploration, and advanced visualizations across the entire organization.
+
+Q: Can I use Tableau with Salesforce data?
+A: Yes, Tableau has a native Salesforce connector that pulls live or extracted CRM data into Tableau for analysis. You can also share Tableau insights directly in Slack, and the unified analytics portfolio now allows interoperability between CRM Analytics datasets and Tableau.
+
+
+================================================================================
+CATEGORY: SALESFORCE PLATFORM (4 Qs)
+================================================================================
+
+Q: What is the Salesforce Platform?
+A: The Salesforce Platform (formerly Force.com) is the underlying low-code/pro-code application development platform. It includes tools like Flow Builder for automation, App Builder for drag-and-drop app creation, and Apex/LWC for custom development - all with built-in security, scalability, and AI.
+
+Q: What is Salesforce Flow Builder?
+A: Flow Builder is Salesforce's point-and-click automation tool that lets admins build complex business processes without code. You can automate record updates, send emails, create approval processes, call external APIs, and trigger actions based on data changes or schedules. In 2026, AI can now generate and modify flows from natural language prompts.
+
+Q: What is Apex in Salesforce?
+A: Apex is Salesforce's proprietary programming language (similar to Java) used for custom business logic, integrations, and complex automation that goes beyond what declarative tools can handle. It runs on Salesforce servers and has direct access to your CRM data.
+
+Q: What are Lightning Web Components (LWC)?
+A: Lightning Web Components is Salesforce's modern UI development framework built on standard web technologies (HTML, JavaScript, CSS). Developers use LWC to build custom, reusable interface components that run natively on the Salesforce Platform with high performance.
+
+
+================================================================================
+CATEGORY: SLACK (4 Qs)
+================================================================================
+
+Q: What is Slack?
+A: Slack is a business communication platform owned by Salesforce that combines messaging, channels, file sharing, and integrations into a single workspace. Starting summer 2026, Slack will be automatically bundled with every new Salesforce customer account.
+
+Q: How does Slack integrate with Salesforce?
+A: Slack integrates natively with Salesforce, allowing teams to receive CRM alerts in channels, update Salesforce records from Slack, collaborate on deals and cases, and share CRM Analytics insights. Slackbot can also read channels and automatically update CRM records when deals or contacts are mentioned.
+
+Q: What is Slack AI?
+A: Slack AI provides built-in intelligence including conversation summaries, thread recaps, search answers, and channel digests. In March 2026, Salesforce added 30+ new AI features to Slackbot including meeting transcription, action item generation, and reusable AI skills that can pull data from connected apps.
+
+Q: Can Agentforce agents work in Slack?
+A: Yes, Agentforce agents are fully embedded in Slack as part of Agentforce 360. Teams can interact with AI agents directly in Slack channels and DMs to get CRM insights, run workflows, update records, and automate tasks without switching to the Salesforce interface.
+
+
+================================================================================
+CATEGORY: HEALTH CLOUD (4 Qs)
+================================================================================
+
+Q: What is Salesforce Health Cloud?
+A: Salesforce Health Cloud is an AI-powered platform purpose-built for healthcare organizations. It provides 360-degree patient views, care plan management, care team collaboration, referral management, and intelligent appointment scheduling - all built on healthcare-specific data models with HIPAA compliance.
+
+Q: Is Health Cloud HIPAA compliant?
+A: Yes, Health Cloud is built with healthcare compliance at its core. It supports HIPAA, HL7 FHIR interoperability, HITRUST, FedRAMP, and GDPR standards. Salesforce provides a Business Associate Agreement (BAA) and encrypts Protected Health Information (PHI) in transit and at rest.
+
+Q: What is the 360-degree patient view in Health Cloud?
+A: The 360-degree patient view is Health Cloud's standout feature - it shows a unified timeline of appointments, medications, lab results, insurance claims, and communication history on a single screen. Care teams get complete context to make better clinical decisions and deliver coordinated care.
+
+Q: Does Health Cloud support Agentforce?
+A: Yes, Agentforce for Healthcare provides pre-built AI skills for patient access, benefits verification, appointment scheduling, and disease surveillance. These agents automate administrative tasks so clinical staff can focus on patient care.
+
+
+================================================================================
+CATEGORY: SALESFORCE CERTIFICATIONS (4 Qs)
+================================================================================
+
+Q: What Salesforce certifications are available?
+A: Salesforce offers 48+ certifications across categories including Administrator, Developer, Consultant, Architect, Designer, Marketing Cloud, and Specialist tracks. There are also Foundation-level certifications for beginners with 0-6 months of experience.
+
+Q: How much do Salesforce certification exams cost?
+A: Foundation and Associate certifications cost $75 per exam. Standard certifications (Administrator, Developer, Consultant) are $200 each. Advanced Architect certifications range from $400 to $6,000. All exams are registered through Trailhead Academy.
+
+Q: What is the most popular Salesforce certification?
+A: The Salesforce Administrator certification is the most popular and widely recognized starting credential. It validates your ability to configure, manage, and maintain a Salesforce org, and is typically the recommended first certification for anyone entering the Salesforce ecosystem.
+
+Q: How do I prepare for Salesforce certifications?
+A: Salesforce provides free learning resources through Trailhead, their online learning platform with guided modules, projects, and superbadges. Supplementing Trailhead with hands-on practice in a free Developer Edition org and exam-prep resources from the community is the most effective approach.
+
+
+================================================================================
+CATEGORY: ABOUT CLOUDSHEER (14 Qs)
+================================================================================
+
+Q: Who is Cloudsheer?
+A: Cloudsheer is a trusted Salesforce consulting and implementation partner specializing in Agentforce, Sales Cloud, Service Cloud, Marketing Cloud, and custom Salesforce development. We help businesses cut costs, close more deals, and scale operations with AI-powered Salesforce solutions.
+
+Q: Where are Cloudsheer's offices located?
+A: Cloudsheer has offices in Dallas (USA), New York (USA), London (UK), and Delhi/Noida (India). Our globally distributed team delivers round-the-clock coverage across 4 time zones.
+
+Q: How many team members does Cloudsheer have?
+A: Cloudsheer has 40+ team members globally, including Salesforce consultants, developers, architects, business analysts, project managers, and QA specialists. Every project gets a senior architect - not a junior learning on your org.
+
+Q: What Salesforce certifications does Cloudsheer hold?
+A: Our team holds 60+ Salesforce certifications across Sales Cloud, Service Cloud, Marketing Cloud, Platform Developer, Agentforce Specialist, and Data Cloud Consultant. This ensures deep expertise across every major Salesforce product.
+
+Q: How long does a Salesforce implementation take with Cloudsheer?
+A: Timelines depend on scope. Agentforce agent deployments take 3-6 weeks, single cloud implementations take 4-8 weeks, and multi-cloud projects take 8-16 weeks. Every project starts with a scoped timeline during your free discovery call.
+
+Q: What industries does Cloudsheer work with?
+A: Cloudsheer serves clients across financial services, retail and e-commerce, healthcare, B2B SaaS, manufacturing, and professional services. Our cross-industry experience means we bring proven patterns to every project.
+
+Q: Does Cloudsheer offer ongoing support after implementation?
+A: Yes, we provide continuous monitoring, performance tuning, and new agent deployments as your business scales. Our ongoing optimization services ensure your Salesforce investment keeps delivering ROI long after go-live.
+
+Q: Can Cloudsheer work with my existing Salesforce org?
+A: Absolutely. Most of our clients have existing Salesforce orgs. We audit your current setup, identify gaps and quick wins, and optimize your configuration before adding new capabilities like Agentforce.
+
+Q: Which Salesforce cloud should I start with?
+A: It depends on your biggest pain point. If support costs are high, start with Service Cloud + Agentforce. If leads are going cold, Sales Cloud + Agentforce SDR Agent. Book a discovery call and we will recommend based on your data.
+
+Q: Can Cloudsheer implement multiple clouds at once?
+A: Yes, we regularly deliver multi-cloud implementations (e.g., Sales + Service + Marketing). Our team of 40+ covers every major Salesforce cloud, so you get integrated solutions without needing multiple vendors.
+
+Q: How do I get started with Cloudsheer?
+A: Book a free 30-minute discovery call with one of our Salesforce architects. We will assess your current setup, identify quick wins, and give you a clear plan with timeline and investment. Visit cloudsheer.com or email hello@cloudsheer.com.
+
+Q: What is Cloudsheer's approach to Agentforce?
+A: We take an Agentforce-first approach to every engagement, starting by asking where an AI agent can create the most value for your business. We design agents that empower your people rather than replace them, and we measure success by real business outcomes like deflection rates and pipeline generated.
+
+Q: How many projects has Cloudsheer completed?
+A: Cloudsheer has successfully completed 250+ projects with a 99% client satisfaction rate. Our experience spans Agentforce deployments, full Salesforce implementations, integrations, custom development, and optimization engagements.
+
+Q: Can I speak to a specific Cloudsheer team member before engaging?
+A: Yes, book a discovery call and we will match you with the architect most relevant to your project. We believe in transparent, personal relationships from day one.
+
+
+================================================================================
+TOTAL: 86 Q&A PAIRS
+================================================================================
