@@ -792,7 +792,10 @@ export default function Chatbot() {
 
             {/* Lead form */}
             {showLeadForm && !leadCaptured && (
-              <div className="rounded-2xl p-5 space-y-3" style={{ backgroundColor: 'white', border: '1px solid #E8ECF3', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+              <div className="rounded-2xl p-5 space-y-3 relative" style={{ backgroundColor: 'white', border: '1px solid #E8ECF3', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+                <button onClick={() => setShowLeadForm(false)} className="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center transition-colors hover:bg-gray-100" style={{ color: '#94A3B8' }} aria-label="Close form">
+                  <X className="w-3.5 h-3.5" />
+                </button>
                 <p className="text-sm font-bold" style={{ color: '#032D60' }}>Let's connect you with our team</p>
                 <p className="text-[11px]" style={{ color: '#94A3B8' }}>We'll get back to you within 4 hours</p>
                 <input type="text" placeholder="Your name"
