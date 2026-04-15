@@ -228,7 +228,19 @@ function AgentVisual() {
 
 /* ─── Trusted By ──────────────────────────────────────────── */
 function TrustedBy() {
-  const clients = ['Storehouse', 'Trexo Robotics', 'Sell That Florida House', 'Green Light Offer', 'Camp Quality', 'Mr-Manhole', 'Airius LLC', 'Beta Agency', 'Givergy', 'Hope-Bio']
+  const BASE = import.meta.env.BASE_URL
+  const clients = [
+    { name: 'Beta Agency', logo: BASE + 'clients/beta.svg' },
+    { name: 'Storehouse', logo: null },
+    { name: 'Trexo Robotics', logo: null },
+    { name: 'Sell That Florida House', logo: null },
+    { name: 'Green Light Offer', logo: null },
+    { name: 'Camp Quality', logo: null },
+    { name: 'Mr-Manhole', logo: null },
+    { name: 'Airius LLC', logo: null },
+    { name: 'Givergy', logo: null },
+    { name: 'Hope-Bio', logo: null },
+  ]
   const scrollItems = [...clients, ...clients]
   const scrollRef = useRef(null)
   const [paused, setPaused] = useState(false)
@@ -268,10 +280,13 @@ function TrustedBy() {
           style={{ maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           <div className="flex items-center gap-10 whitespace-nowrap select-none"
             style={{ animation: paused ? 'none' : 'scroll-left 25s linear infinite' }}>
-            {scrollItems.map((name, i) => (
-              <span key={i} className="font-bold text-sm tracking-wide shrink-0 pointer-events-none"
-                style={{ color: '#032D60' }}>
-                {name}
+            {scrollItems.map((client, i) => (
+              <span key={i} className="shrink-0 pointer-events-none flex items-center">
+                {client.logo ? (
+                  <img src={client.logo} alt={client.name} className="h-7 sm:h-9 w-auto" style={{ filter: 'grayscale(100%) opacity(0.7)' }} />
+                ) : (
+                  <span className="font-bold text-sm tracking-wide" style={{ color: '#032D60' }}>{client.name}</span>
+                )}
               </span>
             ))}
           </div>
