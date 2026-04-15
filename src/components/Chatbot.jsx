@@ -241,97 +241,118 @@ export default function Chatbot() {
     'What makes Cloudsheer different?',
   ]
 
+  const agentIcon = import.meta.env.BASE_URL + 'icons/agentforce.svg'
+
   return (
     <>
       {/* Toggle button */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
-          style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)' }}
+          className="fixed bottom-5 right-5 z-50 group"
           aria-label="Open chat"
         >
-          <MessageSquare className="w-6 h-6 text-white" />
-          <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-2 border-white animate-pulse" />
+          <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-2xl"
+            style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)', boxShadow: '0 8px 30px rgba(1,118,211,0.4)' }}>
+            <img src={agentIcon} alt="Chat" className="w-10 h-10" />
+          </div>
+          <span className="absolute top-0 right-0 w-4 h-4 rounded-full bg-green-500 border-2 border-white animate-pulse" />
+          <span className="absolute -top-8 right-0 bg-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity"
+            style={{ color: '#032D60' }}>
+            Ask me anything!
+          </span>
         </button>
       )}
 
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[360px] sm:w-[400px] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
-          style={{ height: '520px', border: '1px solid rgba(1,118,211,0.15)', backgroundColor: 'white' }}>
+        <div className="fixed bottom-5 right-5 z-50 w-[340px] sm:w-[380px] rounded-2xl overflow-hidden flex flex-col"
+          style={{ height: '500px', boxShadow: '0 20px 60px rgba(3,45,96,0.25)', border: '1px solid rgba(1,118,211,0.12)', backgroundColor: 'white' }}>
 
           {/* Header */}
           <div className="px-4 py-3 flex items-center justify-between shrink-0"
-            style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)' }}>
+            style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 60%, #0176D3 100%)' }}>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}>
-                <Bot className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 rounded-full flex items-center justify-center overflow-hidden"
+                style={{ backgroundColor: 'rgba(255,255,255,0.12)', border: '1.5px solid rgba(255,255,255,0.2)' }}>
+                <img src={agentIcon} alt="Agentforce" className="w-7 h-7" />
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">Cloudsheer Assistant</p>
-                <p className="text-[10px]" style={{ color: 'rgba(186,220,255,0.7)' }}>Salesforce & Agentforce Expert</p>
+                <p className="text-white text-sm font-bold">Cloudsheer AI</p>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                  <p className="text-[10px]" style={{ color: 'rgba(186,220,255,0.8)' }}>Powered by Agentforce</p>
+                </div>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} className="text-white/70 hover:text-white transition-colors" aria-label="Close chat">
-              <X className="w-5 h-5" />
+            <button onClick={() => setOpen(false)} className="w-7 h-7 rounded-full flex items-center justify-center transition-colors"
+              style={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
+              onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.1)'}
+              aria-label="Close chat">
+              <X className="w-4 h-4 text-white" />
             </button>
           </div>
 
           {/* Messages */}
-          <div ref={chatRef} className="flex-1 overflow-y-auto px-4 py-3 space-y-3" style={{ backgroundColor: '#F8FAFC' }}>
+          <div ref={chatRef} className="flex-1 overflow-y-auto px-3 py-3 space-y-3" style={{ backgroundColor: '#F0F4FA' }}>
             {messages.map((msg, i) => (
-              <div key={i} className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+              <div key={i} className={`flex gap-2 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
+                {msg.from === 'bot' && (
+                  <div className="w-6 h-6 rounded-full shrink-0 mt-1 flex items-center justify-center" style={{ backgroundColor: '#EFF6FF', border: '1px solid rgba(1,118,211,0.1)' }}>
+                    <img src={agentIcon} alt="" className="w-4 h-4" />
+                  </div>
+                )}
+                <div className={`max-w-[80%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-relaxed ${
                   msg.from === 'user'
                     ? 'text-white rounded-br-sm'
                     : 'rounded-bl-sm'
                 }`} style={msg.from === 'user'
-                  ? { backgroundColor: '#0176D3' }
-                  : { backgroundColor: 'white', color: '#334155', border: '1px solid #E2E8F0' }
+                  ? { background: 'linear-gradient(135deg, #0176D3, #0A3F80)' }
+                  : { backgroundColor: 'white', color: '#334155', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }
                 }>
                   {msg.text}
                 </div>
+                {msg.from === 'user' && (
+                  <div className="w-6 h-6 rounded-full shrink-0 mt-1 flex items-center justify-center" style={{ backgroundColor: '#0176D3' }}>
+                    <User className="w-3 h-3 text-white" />
+                  </div>
+                )}
               </div>
             ))}
 
-            {/* Lead capture form inline */}
+            {/* Lead capture form */}
             {showLeadForm && !leadCaptured && (
-              <div className="rounded-xl p-3 space-y-2" style={{ backgroundColor: 'white', border: '1px solid #E2E8F0' }}>
-                <input
-                  type="text" placeholder="Your name"
-                  value={leadData.name}
-                  onChange={e => setLeadData({ ...leadData, name: e.target.value })}
-                  className="w-full text-sm px-3 py-2 rounded-lg border border-gray-200 outline-none focus:border-blue-400"
-                />
-                <input
-                  type="email" placeholder="Work email *" required
-                  value={leadData.email}
-                  onChange={e => setLeadData({ ...leadData, email: e.target.value })}
-                  className="w-full text-sm px-3 py-2 rounded-lg border border-gray-200 outline-none focus:border-blue-400"
-                />
-                <input
-                  type="text" placeholder="Company"
-                  value={leadData.company}
-                  onChange={e => setLeadData({ ...leadData, company: e.target.value })}
-                  className="w-full text-sm px-3 py-2 rounded-lg border border-gray-200 outline-none focus:border-blue-400"
-                />
+              <div className="rounded-xl p-3.5 space-y-2.5" style={{ background: 'linear-gradient(135deg, #F0F7FF, #E8F0FE)', border: '1px solid rgba(1,118,211,0.12)' }}>
+                <p className="text-xs font-bold" style={{ color: '#032D60' }}>Connect with our team</p>
+                <input type="text" placeholder="Your name"
+                  value={leadData.name} onChange={e => setLeadData({ ...leadData, name: e.target.value })}
+                  className="w-full text-xs px-3 py-2 rounded-lg border outline-none focus:border-blue-400" style={{ borderColor: '#D4E2F5' }} />
+                <input type="email" placeholder="Work email *" required
+                  value={leadData.email} onChange={e => setLeadData({ ...leadData, email: e.target.value })}
+                  className="w-full text-xs px-3 py-2 rounded-lg border outline-none focus:border-blue-400" style={{ borderColor: '#D4E2F5' }} />
+                <input type="text" placeholder="Company"
+                  value={leadData.company} onChange={e => setLeadData({ ...leadData, company: e.target.value })}
+                  className="w-full text-xs px-3 py-2 rounded-lg border outline-none focus:border-blue-400" style={{ borderColor: '#D4E2F5' }} />
                 <button onClick={submitLead}
-                  className="w-full text-sm font-semibold py-2 rounded-lg text-white"
-                  style={{ backgroundColor: '#0176D3' }}>
+                  className="w-full text-xs font-bold py-2.5 rounded-lg text-white transition-opacity hover:opacity-90"
+                  style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)' }}>
                   Connect Me With Your Team
                 </button>
               </div>
             )}
 
-            {/* Quick questions (only at start) */}
+            {/* Quick questions */}
             {messages.length <= 2 && (
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="space-y-1.5 pt-1">
+                <p className="text-[10px] font-semibold uppercase tracking-wider" style={{ color: '#94A3B8' }}>Popular questions</p>
                 {quickQuestions.map(q => (
                   <button key={q}
                     onClick={() => { setInput(q); setTimeout(() => { setInput(''); setMessages(prev => [...prev, { from: 'user', text: q }]); setMsgCount(c => c + 1); setTimeout(() => { const a = findAnswer(q); if (a) setMessages(prev => [...prev, { from: 'bot', text: a }]); }, 600) }, 50) }}
-                    className="text-xs px-3 py-1.5 rounded-full border transition-colors hover:bg-blue-50"
-                    style={{ color: '#0176D3', borderColor: 'rgba(1,118,211,0.2)' }}>
+                    className="block w-full text-left text-xs px-3 py-2 rounded-lg border transition-all hover:shadow-sm"
+                    style={{ color: '#0176D3', borderColor: 'rgba(1,118,211,0.12)', backgroundColor: 'white' }}
+                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#F0F7FF'}
+                    onMouseLeave={e => e.currentTarget.style.backgroundColor = 'white'}>
                     {q}
                   </button>
                 ))}
@@ -341,28 +362,32 @@ export default function Chatbot() {
 
           {/* Book a call banner */}
           <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-            className="mx-3 mb-2 flex items-center justify-center gap-2 text-xs font-semibold py-2 rounded-lg transition-colors hover:opacity-90"
-            style={{ backgroundColor: '#F59E0B', color: 'white' }}>
+            className="mx-3 mb-2 flex items-center justify-center gap-1.5 text-[11px] font-bold py-2 rounded-lg transition-all hover:shadow-md"
+            style={{ background: 'linear-gradient(135deg, #F59E0B, #D97706)', color: 'white' }}>
             Book Free Discovery Call <ArrowRight className="w-3 h-3" />
           </a>
 
           {/* Input */}
           <div className="px-3 pb-3 shrink-0">
-            <div className="flex items-center gap-2 rounded-xl border px-3 py-2" style={{ borderColor: '#E2E8F0' }}>
+            <div className="flex items-center gap-2 rounded-xl px-3 py-2 transition-all"
+              style={{ backgroundColor: '#F0F4FA', border: '1.5px solid transparent' }}
+              onFocus={e => e.currentTarget.style.borderColor = '#0176D3'}
+              onBlur={e => e.currentTarget.style.borderColor = 'transparent'}>
               <input
                 type="text"
                 value={input}
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && sendMessage()}
-                placeholder="Ask about Salesforce or Agentforce..."
-                className="flex-1 text-sm outline-none bg-transparent"
+                placeholder="Ask about Salesforce..."
+                className="flex-1 text-xs outline-none bg-transparent"
                 style={{ color: '#334155' }}
               />
-              <button onClick={sendMessage} className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
-                style={{ backgroundColor: input.trim() ? '#0176D3' : '#E2E8F0' }}>
-                <Send className="w-4 h-4" style={{ color: input.trim() ? 'white' : '#94A3B8' }} />
+              <button onClick={sendMessage} className="shrink-0 w-7 h-7 rounded-lg flex items-center justify-center transition-all"
+                style={{ background: input.trim() ? 'linear-gradient(135deg, #0176D3, #032D60)' : '#D4E2F5' }}>
+                <Send className="w-3.5 h-3.5" style={{ color: input.trim() ? 'white' : '#94A3B8' }} />
               </button>
             </div>
+            <p className="text-center text-[9px] mt-1.5" style={{ color: '#C0C8D4' }}>Powered by Cloudsheer x Agentforce</p>
           </div>
         </div>
       )}
