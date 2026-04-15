@@ -228,18 +228,18 @@ function AgentVisual() {
 
 /* ─── Trusted By ──────────────────────────────────────────── */
 function TrustedBy() {
-  const BASE = import.meta.env.BASE_URL
+  const B = import.meta.env.BASE_URL
   const clients = [
-    { name: 'Beta Agency', logo: BASE + 'clients/beta.svg' },
+    { name: 'Beta Agency', logo: B + 'clients/beta.svg' },
+    { name: 'Trexo Robotics', logo: B + 'clients/trexo.webp' },
+    { name: 'Green Light Offer', logo: B + 'clients/greenlight.webp' },
+    { name: 'Camp Quality', logo: B + 'clients/camp-quality.svg' },
+    { name: 'Mr-Manhole', logo: B + 'clients/manhole.webp' },
+    { name: 'Airius LLC', logo: B + 'clients/airius.webp' },
+    { name: 'Givergy', logo: B + 'clients/givergy.webp' },
+    { name: 'Hope-Bio', logo: B + 'clients/hopebio.avif' },
     { name: 'Storehouse', logo: null },
-    { name: 'Trexo Robotics', logo: null },
     { name: 'Sell That Florida House', logo: null },
-    { name: 'Green Light Offer', logo: null },
-    { name: 'Camp Quality', logo: null },
-    { name: 'Mr-Manhole', logo: null },
-    { name: 'Airius LLC', logo: null },
-    { name: 'Givergy', logo: null },
-    { name: 'Hope-Bio', logo: null },
   ]
   const scrollItems = [...clients, ...clients]
   const scrollRef = useRef(null)
