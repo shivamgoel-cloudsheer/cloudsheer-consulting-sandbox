@@ -14,21 +14,7 @@ const solutionFaqs = [
 
 function PageHero() {
   return (
-    <section className="relative pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white overflow-hidden">
-      <div className="absolute inset-0 bg-grid" />
-      <div className="glow-dot w-[600px] h-[600px] bg-cs-blue/10 top-[-200px] left-[50%] -translate-x-1/2" />
-      <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
-        <div className="tag mx-auto mb-6"><Bot className="w-3.5 h-3.5" /> Solutions</div>
-        <h1 className="section-title mb-5">
-          Cut Costs. Close More Deals.{' '}
-          <span className="gradient-text">Scale Without Hiring.</span>
-        </h1>
-        <p className="section-sub">
-          Every solution we build is designed to deliver one thing: measurable business
-          outcomes - lower costs, faster revenue, and happier customers.
-        </p>
-      </div>
-    </section>
+    <div className="pt-16" />
   )
 }
 
