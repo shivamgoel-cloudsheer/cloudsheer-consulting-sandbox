@@ -269,7 +269,7 @@ function TrustedBy() {
   }
 
   return (
-    <section style={{ borderBottom: '1px solid rgba(1,118,211,0.12)', backgroundColor: '#E2ECF7', overflow: 'hidden' }}>
+    <section style={{ borderBottom: '1px solid rgba(1,118,211,0.15)', backgroundColor: '#D4E2F5', overflow: 'hidden' }}>
       <div className="py-6 flex items-center gap-6">
         <p className="text-xs uppercase tracking-widest shrink-0 font-semibold pl-6 md:pl-12"
           style={{ color: '#64748B' }}>Trusted by</p>
@@ -281,18 +281,11 @@ function TrustedBy() {
           <div className="flex items-center gap-10 whitespace-nowrap select-none"
             style={{ animation: paused ? 'none' : 'scroll-left 25s linear infinite' }}>
             {scrollItems.map((client, i) => (
-              <span key={i} className="shrink-0 flex items-center"
-                style={{ cursor: 'default' }}
-                onMouseEnter={e => { const img = e.currentTarget.querySelector('img'); if (img) img.style.filter = 'grayscale(0%) opacity(1)'; }}
-                onMouseLeave={e => { const img = e.currentTarget.querySelector('img'); if (img) img.style.filter = 'grayscale(100%) opacity(0.6)'; }}>
+              <span key={i} className="shrink-0 flex items-center">
                 {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="h-7 sm:h-9 w-auto transition-all duration-300" style={{ filter: 'grayscale(100%) opacity(0.6)' }} />
+                  <img src={client.logo} alt={client.name} className="h-7 sm:h-9 w-auto" />
                 ) : (
-                  <span className="font-bold text-sm tracking-wide transition-colors duration-300" style={{ color: '#032D60', opacity: 0.6 }}
-                    onMouseEnter={e => e.currentTarget.style.opacity = '1'}
-                    onMouseLeave={e => e.currentTarget.style.opacity = '0.6'}>
-                    {client.name}
-                  </span>
+                  <span className="font-bold text-sm tracking-wide" style={{ color: '#032D60' }}>{client.name}</span>
                 )}
               </span>
             ))}
