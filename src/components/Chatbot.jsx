@@ -537,170 +537,178 @@ export default function Chatbot() {
     }
   }
 
+  const handleQuickQ = async (q) => {
+    setMessages(prev => [...prev, { from: 'user', text: q }])
+    setMsgCount(c => c + 1)
+    setTyping(true)
+    const chatHistory = [{ role: 'user', content: q }]
+    try {
+      const res = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages: chatHistory }) })
+      if (!res.ok) throw new Error()
+      const data = await res.json()
+      setTyping(false)
+      setMessages(prev => [...prev, { from: 'bot', text: data.text }])
+    } catch {
+      setTyping(false)
+      const a = findAnswer(q)
+      if (a) setMessages(prev => [...prev, { from: 'bot', text: a }])
+    }
+  }
+
   return (
     <>
-      {/* Toggle button with bounce animation */}
+      {/* Floating toggle */}
       {!open && (
-        <div className="fixed bottom-5 right-5 z-50">
-          {/* Notification badge */}
-          <div className="absolute -top-2 -left-2 bg-red-500 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center animate-bounce"
-            style={{ animationDuration: '2s' }}>
-            1
-          </div>
-          <button onClick={() => setOpen(true)} className="group relative" aria-label="Open chat">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 group-hover:scale-110"
-              style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)', boxShadow: '0 8px 30px rgba(1,118,211,0.4)' }}>
-              <img src={agentIcon} alt="Chat" className="w-10 h-10" />
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+          {/* Teaser card */}
+          <div className="bg-white rounded-2xl shadow-xl px-5 py-4 w-64 cursor-pointer transition-all hover:shadow-2xl hover:-translate-y-0.5"
+            onClick={() => setOpen(true)}
+            style={{ border: '1px solid rgba(1,118,211,0.08)' }}>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)' }}>
+                <img src={agentIcon} alt="" className="w-7 h-7" />
+              </div>
+              <div>
+                <p className="text-sm font-bold" style={{ color: '#032D60' }}>Hey there!</p>
+                <div className="flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                  <p className="text-[10px]" style={{ color: '#64748B' }}>Online now</p>
+                </div>
+              </div>
             </div>
-            {/* Ripple effect */}
-            <span className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ backgroundColor: '#0176D3' }} />
-          </button>
-          {/* Teaser message */}
-          <div className="absolute bottom-full right-0 mb-3 bg-white rounded-xl shadow-lg px-4 py-2.5 w-56 animate-fade-up"
-            style={{ border: '1px solid rgba(1,118,211,0.1)' }}>
-            <p className="text-xs font-semibold" style={{ color: '#032D60' }}>Got a Salesforce question?</p>
-            <p className="text-[10px] mt-0.5" style={{ color: '#64748B' }}>Ask our AI - instant answers on every cloud</p>
-            <div className="absolute bottom-0 right-6 w-3 h-3 bg-white rotate-45 translate-y-1.5" style={{ borderRight: '1px solid rgba(1,118,211,0.1)', borderBottom: '1px solid rgba(1,118,211,0.1)' }} />
+            <p className="text-xs leading-relaxed" style={{ color: '#475569' }}>
+              Got questions about Salesforce or Agentforce? I can help you find the right solution.
+            </p>
+            <div className="mt-3 text-[11px] font-semibold py-1.5 text-center rounded-lg"
+              style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)', color: 'white' }}>
+              Chat with us
+            </div>
           </div>
         </div>
       )}
 
       {/* Chat window */}
       {open && (
-        <div className="fixed bottom-5 right-5 z-50 w-[340px] sm:w-[380px] rounded-2xl overflow-hidden flex flex-col"
-          style={{ height: '520px', boxShadow: '0 25px 80px rgba(3,45,96,0.3)', border: '1px solid rgba(1,118,211,0.08)', backgroundColor: 'white' }}>
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-32px)] sm:w-[400px] rounded-3xl overflow-hidden flex flex-col"
+          style={{ maxHeight: 'calc(100vh - 100px)', height: '560px', boxShadow: '0 25px 80px rgba(3,45,96,0.25)', border: '1px solid rgba(1,118,211,0.06)', backgroundColor: 'white' }}>
 
-          {/* Header with gradient */}
-          <div className="shrink-0 relative overflow-hidden"
-            style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 60%, #0176D3 100%)' }}>
-            {/* Animated dots in header */}
-            <div className="absolute top-2 right-12 w-1 h-1 rounded-full bg-white/20 animate-pulse" />
-            <div className="absolute top-4 right-20 w-1.5 h-1.5 rounded-full bg-white/10 animate-pulse" style={{ animationDelay: '1s' }} />
-            <div className="px-4 py-3 flex items-center justify-between relative z-10">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden"
-                  style={{ backgroundColor: 'rgba(255,255,255,0.12)', border: '1.5px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}>
-                  <img src={agentIcon} alt="Agentforce" className="w-8 h-8" />
+          {/* Header */}
+          <div className="shrink-0 px-5 py-4 flex items-center justify-between"
+            style={{ background: 'linear-gradient(135deg, #032D60 0%, #0176D3 100%)' }}>
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center"
+                  style={{ backgroundColor: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}>
+                  <img src={agentIcon} alt="Agentforce" className="w-9 h-9" />
                 </div>
-                <div>
-                  <p className="text-white text-sm font-bold tracking-tight">Cloudsheer AI</p>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                    <p className="text-[10px] font-medium" style={{ color: 'rgba(186,220,255,0.9)' }}>Online - Powered by Agentforce</p>
-                  </div>
-                </div>
+                <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2" style={{ borderColor: '#032D60' }} />
               </div>
-              <button onClick={() => setOpen(false)} className="w-8 h-8 rounded-lg flex items-center justify-center transition-all"
-                style={{ backgroundColor: 'rgba(255,255,255,0.08)' }}
-                onMouseEnter={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.18)'}
-                onMouseLeave={e => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
-                aria-label="Close chat">
-                <X className="w-4 h-4 text-white/80" />
-              </button>
+              <div>
+                <p className="text-white font-bold">Cloudsheer AI</p>
+                <p className="text-[11px]" style={{ color: 'rgba(186,220,255,0.8)' }}>Your Salesforce expert</p>
+              </div>
             </div>
+            <button onClick={() => setOpen(false)}
+              className="w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:bg-white/10"
+              aria-label="Close chat">
+              <X className="w-5 h-5 text-white/70" />
+            </button>
           </div>
 
-          {/* Messages area */}
-          <div ref={chatRef} className="flex-1 overflow-y-auto px-3 py-3 space-y-3" style={{ backgroundColor: '#F5F7FB' }}>
+          {/* Welcome banner (only shows at start) */}
+          {messages.length <= 1 && (
+            <div className="px-5 py-4 text-center" style={{ background: 'linear-gradient(180deg, #EFF6FF 0%, #F8FAFC 100%)' }}>
+              <p className="text-lg font-bold mb-1" style={{ color: '#032D60' }}>Welcome!</p>
+              <p className="text-xs" style={{ color: '#64748B' }}>Ask me anything about Salesforce, Agentforce, or how we can help your business.</p>
+            </div>
+          )}
+
+          {/* Messages */}
+          <div ref={chatRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-4" style={{ backgroundColor: '#FAFBFD' }}>
             {messages.map((msg, i) => (
-              <div key={i} className={`flex gap-2 ${msg.from === 'user' ? 'justify-end' : 'justify-start'} animate-fade-up`} style={{ animationDuration: '0.3s' }}>
+              <div key={i} className={`flex gap-2.5 ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
                 {msg.from === 'bot' && (
-                  <div className="w-7 h-7 rounded-lg shrink-0 mt-0.5 flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)', border: '1px solid rgba(1,118,211,0.08)' }}>
-                    <img src={agentIcon} alt="" className="w-5 h-5" />
+                  <div className="w-8 h-8 rounded-xl shrink-0 mt-0.5 flex items-center justify-center"
+                    style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)' }}>
+                    <img src={agentIcon} alt="" className="w-6 h-6" />
                   </div>
                 )}
-                <div className={`max-w-[80%] px-3.5 py-2.5 text-[13px] leading-relaxed ${
-                  msg.from === 'user' ? 'text-white rounded-2xl rounded-br-md' : 'rounded-2xl rounded-bl-md'
+                <div className={`max-w-[78%] px-4 py-3 text-[13px] leading-[1.6] ${
+                  msg.from === 'user' ? 'text-white rounded-2xl rounded-br-lg' : 'rounded-2xl rounded-bl-lg'
                 }`} style={msg.from === 'user'
-                  ? { background: 'linear-gradient(135deg, #0176D3, #032D60)', boxShadow: '0 2px 8px rgba(1,118,211,0.2)' }
-                  : { backgroundColor: 'white', color: '#334155', boxShadow: '0 1px 4px rgba(0,0,0,0.04)', border: '1px solid rgba(0,0,0,0.04)' }
+                  ? { background: 'linear-gradient(135deg, #0176D3, #032D60)' }
+                  : { backgroundColor: 'white', color: '#334155', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', border: '1px solid #F0F0F0' }
                 }>
                   {msg.text}
                 </div>
-                {msg.from === 'user' && (
-                  <div className="w-7 h-7 rounded-lg shrink-0 mt-0.5 flex items-center justify-center"
-                    style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)' }}>
-                    <User className="w-3.5 h-3.5 text-white" />
-                  </div>
-                )}
               </div>
             ))}
 
-            {/* Typing indicator */}
+            {/* Typing */}
             {typing && (
-              <div className="flex gap-2 items-start">
-                <div className="w-7 h-7 rounded-lg shrink-0 flex items-center justify-center"
-                  style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)', border: '1px solid rgba(1,118,211,0.08)' }}>
-                  <img src={agentIcon} alt="" className="w-5 h-5" />
+              <div className="flex gap-2.5 items-start">
+                <div className="w-8 h-8 rounded-xl shrink-0 flex items-center justify-center"
+                  style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)' }}>
+                  <img src={agentIcon} alt="" className="w-6 h-6" />
                 </div>
-                <div className="rounded-2xl rounded-bl-md px-4 py-3 flex gap-1.5"
-                  style={{ backgroundColor: 'white', boxShadow: '0 1px 4px rgba(0,0,0,0.04)' }}>
-                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#94A3B8', animationDelay: '0ms' }} />
-                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#94A3B8', animationDelay: '150ms' }} />
-                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#94A3B8', animationDelay: '300ms' }} />
+                <div className="rounded-2xl rounded-bl-lg px-5 py-3.5 flex gap-1.5 items-center"
+                  style={{ backgroundColor: 'white', boxShadow: '0 1px 6px rgba(0,0,0,0.04)', border: '1px solid #F0F0F0' }}>
+                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#0176D3', animationDelay: '0ms' }} />
+                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#0176D3', animationDelay: '150ms' }} />
+                  <span className="w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#0176D3', animationDelay: '300ms' }} />
                 </div>
               </div>
             )}
 
-            {/* Lead capture form */}
+            {/* Lead form */}
             {showLeadForm && !leadCaptured && (
-              <div className="rounded-xl p-4 space-y-2.5 animate-fade-up" style={{ background: 'linear-gradient(135deg, #F0F7FF, #E8F0FE)', border: '1px solid rgba(1,118,211,0.1)', boxShadow: '0 2px 8px rgba(1,118,211,0.06)' }}>
-                <div className="flex items-center gap-2 mb-1">
-                  <div className="w-5 h-5 rounded flex items-center justify-center" style={{ backgroundColor: '#0176D3' }}>
-                    <User className="w-3 h-3 text-white" />
-                  </div>
-                  <p className="text-xs font-bold" style={{ color: '#032D60' }}>Connect with our team</p>
-                </div>
+              <div className="rounded-2xl p-5 space-y-3" style={{ backgroundColor: 'white', border: '1px solid #E8ECF3', boxShadow: '0 2px 10px rgba(0,0,0,0.04)' }}>
+                <p className="text-sm font-bold" style={{ color: '#032D60' }}>Let's connect you with our team</p>
+                <p className="text-[11px]" style={{ color: '#94A3B8' }}>We'll get back to you within 4 hours</p>
                 <input type="text" placeholder="Your name"
                   value={leadData.name} onChange={e => setLeadData({ ...leadData, name: e.target.value })}
-                  className="w-full text-xs px-3 py-2.5 rounded-lg border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#D4E2F5', backgroundColor: 'white' }} />
-                <input type="email" placeholder="Work email *" required
+                  className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
+                <input type="email" placeholder="Work email *"
                   value={leadData.email} onChange={e => setLeadData({ ...leadData, email: e.target.value })}
-                  className="w-full text-xs px-3 py-2.5 rounded-lg border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#D4E2F5', backgroundColor: 'white' }} />
-                <input type="text" placeholder="Company (optional)"
+                  className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
+                <input type="text" placeholder="Company"
                   value={leadData.company} onChange={e => setLeadData({ ...leadData, company: e.target.value })}
-                  className="w-full text-xs px-3 py-2.5 rounded-lg border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#D4E2F5', backgroundColor: 'white' }} />
+                  className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
                 <button onClick={submitLead}
-                  className="w-full text-xs font-bold py-2.5 rounded-lg text-white transition-all hover:shadow-md active:scale-[0.98]"
+                  className="w-full text-sm font-bold py-3 rounded-xl text-white transition-all hover:opacity-90 active:scale-[0.98]"
                   style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)' }}>
                   Get Connected
                 </button>
-                <p className="text-center text-[9px]" style={{ color: '#94A3B8' }}>We respond within 4 hours</p>
               </div>
             )}
 
-            {/* Quick questions with icons */}
-            {messages.length <= 2 && (
-              <div className="space-y-2 pt-1">
-                <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#94A3B8' }}>Ask me about</p>
-                <div className="grid grid-cols-2 gap-1.5">
-                  {[
-                    { q: 'What is Agentforce?', icon: '🤖' },
-                    { q: 'How much does it cost?', icon: '💰' },
-                    { q: 'Implementation timeline?', icon: '⏱️' },
-                    { q: 'Who is Cloudsheer?', icon: '☁️' },
-                    { q: 'Sales Cloud features?', icon: '📈' },
-                    { q: 'Service Cloud features?', icon: '🎧' },
-                  ].map(({ q, icon }) => (
-                    <button key={q}
-                      onClick={() => { setMessages(prev => [...prev, { from: 'user', text: q }]); setMsgCount(c => c + 1); setTyping(true); setTimeout(() => { setTyping(false); const a = findAnswer(q); if (a) setMessages(prev => [...prev, { from: 'bot', text: a }]); }, 800 + Math.random() * 400) }}
-                      className="flex items-center gap-1.5 text-[11px] px-2.5 py-2 rounded-lg border transition-all hover:shadow-sm active:scale-[0.97]"
-                      style={{ color: '#334155', borderColor: 'rgba(1,118,211,0.1)', backgroundColor: 'white' }}
-                      onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#EFF6FF'; e.currentTarget.style.borderColor = '#0176D3' }}
-                      onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.borderColor = 'rgba(1,118,211,0.1)' }}>
-                      <span>{icon}</span> {q}
-                    </button>
-                  ))}
-                </div>
+            {/* Quick questions */}
+            {messages.length <= 2 && !typing && (
+              <div className="space-y-2">
+                <p className="text-[11px] font-semibold" style={{ color: '#94A3B8' }}>Quick questions</p>
+                {[
+                  { q: 'What is Agentforce and how can it help my business?', icon: '🤖' },
+                  { q: 'What does a Salesforce implementation cost?', icon: '💰' },
+                  { q: 'How long does it take to go live?', icon: '⏱️' },
+                  { q: 'Tell me about Cloudsheer Consulting', icon: '☁️' },
+                ].map(({ q, icon }) => (
+                  <button key={q} onClick={() => handleQuickQ(q)}
+                    className="flex items-center gap-2.5 w-full text-left text-[12px] px-4 py-3 rounded-xl transition-all hover:shadow-sm active:scale-[0.98]"
+                    style={{ backgroundColor: 'white', color: '#334155', border: '1px solid #E8ECF3' }}
+                    onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#F0F7FF'; e.currentTarget.style.borderColor = '#0176D3' }}
+                    onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'white'; e.currentTarget.style.borderColor = '#E8ECF3' }}>
+                    <span className="text-base">{icon}</span>
+                    <span>{q}</span>
+                  </button>
+                ))}
               </div>
             )}
           </div>
 
-          {/* Input area */}
-          <div className="px-3 pb-3 pt-2 shrink-0" style={{ borderTop: '1px solid rgba(0,0,0,0.04)' }}>
-            <div className="flex items-center gap-2 rounded-xl px-3 py-2.5 transition-all"
-              style={{ backgroundColor: '#F0F4FA', border: '1.5px solid transparent' }}>
+          {/* Input */}
+          <div className="px-4 pb-4 pt-3 shrink-0" style={{ backgroundColor: 'white', borderTop: '1px solid #F0F0F0' }}>
+            <div className="flex items-center gap-2 rounded-2xl px-4 py-3 transition-all"
+              style={{ backgroundColor: '#F5F7FB', border: '2px solid transparent' }}>
               <input
                 type="text"
                 value={input}
@@ -708,18 +716,15 @@ export default function Chatbot() {
                 onKeyDown={e => e.key === 'Enter' && originalSend()}
                 onFocus={e => e.currentTarget.parentElement.style.borderColor = '#0176D3'}
                 onBlur={e => e.currentTarget.parentElement.style.borderColor = 'transparent'}
-                placeholder="Ask anything about Salesforce..."
-                className="flex-1 text-xs outline-none bg-transparent"
+                placeholder="Type your question..."
+                className="flex-1 text-sm outline-none bg-transparent"
                 style={{ color: '#334155' }}
               />
-              <button onClick={originalSend} className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-all active:scale-90"
-                style={{ background: input.trim() ? 'linear-gradient(135deg, #0176D3, #032D60)' : '#D4E2F5' }}>
-                <Send className="w-3.5 h-3.5" style={{ color: input.trim() ? 'white' : '#94A3B8' }} />
+              <button onClick={originalSend}
+                className="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center transition-all active:scale-90"
+                style={{ background: input.trim() ? 'linear-gradient(135deg, #0176D3, #032D60)' : 'transparent' }}>
+                <Send className="w-4 h-4" style={{ color: input.trim() ? 'white' : '#94A3B8' }} />
               </button>
-            </div>
-            <div className="flex items-center justify-center gap-1 mt-1.5">
-              <img src={agentIcon} alt="" className="w-3 h-3 opacity-40" />
-              <p className="text-[9px]" style={{ color: '#B8C4D0' }}>Powered by Agentforce</p>
             </div>
           </div>
         </div>
