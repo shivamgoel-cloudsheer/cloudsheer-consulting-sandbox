@@ -117,7 +117,7 @@ export default function ServiceCloudPage() {
           </div>
 
           {/* Service Cloud dashboard screenshot */}
-          <div className="mt-4 max-w-2xl mx-auto hidden md:block animate-fade-up-3">
+          <div className="mt-4 max-w-xl mx-auto hidden md:block animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/service-dashboard.webp'} alt="Service Cloud Console - Case management, Knowledge Base, Service Rep Assistant"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
