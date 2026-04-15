@@ -557,34 +557,16 @@ export default function Chatbot() {
 
   return (
     <>
-      {/* Floating toggle */}
+      {/* Round floating button */}
       {!open && (
-        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-          {/* Teaser card */}
-          <div className="bg-white rounded-2xl shadow-xl px-5 py-4 w-64 cursor-pointer transition-all hover:shadow-2xl hover:-translate-y-0.5"
-            onClick={() => setOpen(true)}
-            style={{ border: '1px solid rgba(1,118,211,0.08)' }}>
-            <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #EFF6FF, #DBEAFE)' }}>
-                <img src={agentIcon} alt="" className="w-7 h-7" />
-              </div>
-              <div>
-                <p className="text-sm font-bold" style={{ color: '#032D60' }}>Hey there!</p>
-                <div className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                  <p className="text-[10px]" style={{ color: '#64748B' }}>Online now</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-xs leading-relaxed" style={{ color: '#475569' }}>
-              Got questions about Salesforce or Agentforce? I can help you find the right solution.
-            </p>
-            <div className="mt-3 text-[11px] font-semibold py-1.5 text-center rounded-lg"
-              style={{ background: 'linear-gradient(135deg, #0176D3, #032D60)', color: 'white' }}>
-              Chat with us
-            </div>
-          </div>
-        </div>
+        <button
+          onClick={() => setOpen(true)}
+          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+          style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)', boxShadow: '0 8px 30px rgba(1,118,211,0.35)' }}
+          aria-label="Open chat">
+          <img src={agentIcon} alt="Chat" className="w-9 h-9" />
+          <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-white" />
+        </button>
       )}
 
       {/* Chat window */}
