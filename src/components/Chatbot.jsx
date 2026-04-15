@@ -484,8 +484,8 @@ export default function Chatbot() {
   const agentIcon = import.meta.env.BASE_URL + 'icons/agentforce.svg'
   const [typing, setTyping] = useState(false)
 
-  // Wrap sendMessage to show typing indicator
-  const originalSend = () => {
+  // Send message via Claude API with local fallback
+  const originalSend = async () => {
     if (!input.trim()) return
     const userMsg = input.trim()
     setInput('')
@@ -493,28 +493,48 @@ export default function Chatbot() {
     setMsgCount(c => c + 1)
     setTyping(true)
 
-    setTimeout(() => {
+    // Build conversation history for Claude
+    const chatHistory = [...messages, { from: 'user', text: userMsg }]
+      .filter(m => m.text)
+      .slice(-10)
+      .map(m => ({ role: m.from === 'user' ? 'user' : 'assistant', content: m.text }))
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: chatHistory }),
+      })
+
+      if (!res.ok) throw new Error('API error')
+
+      const data = await res.json()
+      setTyping(false)
+      setMessages(prev => [...prev, { from: 'bot', text: data.text }])
+    } catch {
+      // Fallback to local knowledge base
       setTyping(false)
       const answer = findAnswer(userMsg)
       if (answer) {
         setMessages(prev => [...prev, { from: 'bot', text: answer }])
-        const buyingIntent = /pricing|cost|how much|timeline|how long|can you help|get started|hire|implement|quote|proposal|budget|ready to|need help|looking for/i.test(userMsg)
-        if (buyingIntent && !leadCaptured && !showLeadForm) {
-          setTimeout(() => {
-            setMessages(prev => [...prev, { from: 'bot', text: "Sounds like this could be a great fit for your team. I can connect you with one of our Salesforce architects for a detailed assessment. What's your name and email?" }])
-            setShowLeadForm(true)
-          }, 1200)
-        } else if (msgCount >= 3 && !leadCaptured && !showLeadForm) {
-          setTimeout(() => {
-            setMessages(prev => [...prev, { from: 'bot', text: "By the way, I can send you more detailed info on this. Want me to have our team send you a quick summary? Just drop your email below." }])
-            setShowLeadForm(true)
-          }, 2000)
-        }
       } else {
-        setMessages(prev => [...prev, { from: 'bot', text: "Great question! I don't have the specific details on that, but our Salesforce architects definitely can help. Want me to connect you?" }])
-        if (!leadCaptured && !showLeadForm) { setTimeout(() => setShowLeadForm(true), 800) }
+        setMessages(prev => [...prev, { from: 'bot', text: "I'm having a quick connection issue. You can ask me again, or book a free discovery call with our team for a detailed conversation." }])
       }
-    }, 800 + Math.random() * 600)
+    }
+
+    // Lead capture logic (runs after response)
+    const buyingIntent = /pricing|cost|how much|timeline|how long|can you help|get started|hire|implement|quote|proposal|budget|ready to|need help|looking for/i.test(userMsg)
+    if (buyingIntent && !leadCaptured && !showLeadForm) {
+      setTimeout(() => {
+        setMessages(prev => [...prev, { from: 'bot', text: "I can connect you with one of our Salesforce architects for a detailed assessment. Just share your details below." }])
+        setShowLeadForm(true)
+      }, 1500)
+    } else if (msgCount >= 3 && !leadCaptured && !showLeadForm) {
+      setTimeout(() => {
+        setMessages(prev => [...prev, { from: 'bot', text: "Want me to have our team send you more details? Drop your email below." }])
+        setShowLeadForm(true)
+      }, 2500)
+    }
   }
 
   return (
