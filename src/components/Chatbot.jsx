@@ -557,16 +557,23 @@ export default function Chatbot() {
 
   return (
     <>
-      {/* Round floating button */}
+      {/* Round floating button with label */}
       {!open && (
-        <button
-          onClick={() => setOpen(true)}
-          className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
-          style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)', boxShadow: '0 8px 30px rgba(1,118,211,0.35)' }}
-          aria-label="Open chat">
-          <img src={agentIcon} alt="Chat" className="w-9 h-9" />
-          <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-white" />
-        </button>
+        <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-2">
+          <div className="bg-white rounded-full shadow-lg px-3 py-1.5 flex items-center gap-1.5 cursor-pointer transition-all hover:shadow-xl"
+            onClick={() => setOpen(true)}
+            style={{ border: '1px solid rgba(1,118,211,0.1)' }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+            <span className="text-[11px] font-semibold" style={{ color: '#032D60' }}>Ask me anything</span>
+          </div>
+          <button
+            onClick={() => setOpen(true)}
+            className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+            style={{ background: 'linear-gradient(135deg, #032D60, #0176D3)', boxShadow: '0 8px 30px rgba(1,118,211,0.35)' }}
+            aria-label="Open chat">
+            <img src={agentIcon} alt="Chat" className="w-9 h-9" />
+          </button>
+        </div>
       )}
 
       {/* Chat window */}
