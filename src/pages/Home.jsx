@@ -238,8 +238,6 @@ function TrustedBy() {
     { name: 'Airius LLC', logo: B + 'clients/airius.webp' },
     { name: 'Givergy', logo: B + 'clients/givergy.webp' },
     { name: 'Hope-Bio', logo: B + 'clients/hopebio.avif' },
-    { name: 'Storehouse', logo: null },
-    { name: 'Sell That Florida House', logo: null },
   ]
   const scrollItems = [...clients, ...clients]
   const scrollRef = useRef(null)
