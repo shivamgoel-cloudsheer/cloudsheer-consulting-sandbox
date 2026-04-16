@@ -99,7 +99,7 @@ export default function PlatformPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Layers className="w-3.5 h-3.5" /> Salesforce Platform & AppExchange
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl 2xl:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Deliver Apps 70% Faster, Cut Manual Work by 90%, and{' '}
               <br /><span className="gradient-text-gold">Drive 478% ROI</span>
             </h1>

@@ -100,7 +100,7 @@ export default function AgentforcePage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Zap className="w-3.5 h-3.5" /> Agentforce by Salesforce
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl 2xl:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Cut service costs 80%.{' '}
               <br /><span className="gradient-text-gold">Resolve 40% more cases. Run 24/7.</span>
             </h1>
@@ -117,7 +117,7 @@ export default function AgentforcePage() {
           </div>
 
           {/* Agentforce Builder screenshot */}
-          <div className="mt-4 max-w-xl mx-auto hidden md:block animate-fade-up-3">
+          <div className="mt-4 max-w-xl 2xl:max-w-2xl mx-auto hidden md:block animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/agentforce-builder.webp'} alt="Agentforce Builder - Agent templates and configuration"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />

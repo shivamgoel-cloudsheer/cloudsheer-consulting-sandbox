@@ -116,7 +116,7 @@ export default function Navbar() {
         : { backgroundColor: 'rgba(255,255,255,0.80)', backdropFilter: 'blur(8px)', padding: '10px 0' }
       }
     >
-      <div className="section-wrap flex items-center justify-between">
+      <div className="section-wrap flex items-center justify-between 2xl:px-12">
 
         {/* Logo */}
         <Link to="/" className="flex items-center animate-fade-in group">

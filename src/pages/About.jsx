@@ -173,7 +173,7 @@ export default function About() {
                 { value: '250+',   label: 'Successful Projects',    color: '#F59E0B' },
               ].map(({ value, label, color }) => (
                 <div key={label} className="glass-card p-6 text-center">
-                  <p className="text-2xl sm:text-4xl font-black mb-2" style={{ color }}>{value}</p>
+                  <p className="text-2xl sm:text-4xl 2xl:text-5xl font-black mb-2" style={{ color }}>{value}</p>
                   <p className="text-sm font-medium" style={{ color: '#475569' }}>{label}</p>
                 </div>
               ))}
@@ -222,7 +222,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 2xl:grid-cols-9 gap-4">
             {team.map(({ id, name, role, photo, linkedin }) => (
               <div key={id}
                 className="glass-card p-4 flex flex-col items-center text-center group cursor-pointer"

@@ -100,7 +100,7 @@ export default function ServiceCloudPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Headphones className="w-3.5 h-3.5" /> Salesforce Service Cloud
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl 2xl:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Resolve Cases 30% Faster and{' '}
               <br /><span className="gradient-text-gold">Cut Support Costs by 27%</span>
             </h1>
@@ -117,7 +117,7 @@ export default function ServiceCloudPage() {
           </div>
 
           {/* Service Cloud dashboard screenshot */}
-          <div className="mt-4 max-w-xl mx-auto hidden md:block animate-fade-up-3">
+          <div className="mt-4 max-w-xl 2xl:max-w-2xl mx-auto hidden md:block animate-fade-up-3">
             <img loading="lazy" src={import.meta.env.BASE_URL + 'icons/service-dashboard.webp'} alt="Service Cloud Console - Case management, Knowledge Base, Service Rep Assistant"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />

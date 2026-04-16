@@ -35,7 +35,7 @@ function Hero() {
               Salesforce & Agentforce Implementation Partner
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
               <span className="text-white">Your Team Is Drowning in</span><br />
               <span className="shimmer-text">Manual Work.</span>
             </h1>
@@ -364,7 +364,7 @@ function AgentforceShowcase() {
           <h2 className="section-title mb-4 animate-fade-up-1">Agentforce That Deliver<br /><span className="gradient-text">Measurable Results</span></h2>
           <p className="section-sub animate-fade-up-2">Every agent directly impacts your revenue, costs, or customer satisfaction - here is how.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid md:grid-cols-3 2xl:gap-8 gap-6 mb-10">
           {agents.map(({ name, metric, desc, iconBg, iconColor  }, i) => (
             <div key={name} className="glass-card p-4 sm:p-7 flex flex-col animate-fade-up"
               style={{ animationDelay: `${i * 100}ms` }}>
@@ -417,7 +417,7 @@ function Stats() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
           {items.map(({ val, label, sub }, i) => (
             <div key={label} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-              <p className="text-2xl sm:text-4xl font-black text-white mb-1">{val}</p>
+              <p className="text-2xl sm:text-4xl 2xl:text-5xl font-black text-white mb-1">{val}</p>
               <p className="text-sm font-semibold mb-0.5" style={{ color: 'rgba(186,220,255,0.9)' }}>{label}</p>
               <p className="text-xs" style={{ color: 'rgba(186,220,255,0.55)' }}>{sub}</p>
             </div>

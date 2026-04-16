@@ -102,7 +102,7 @@ export default function SlackPage() {
             <div className="tag-white mx-auto mb-6 inline-flex">
               <Zap className="w-3.5 h-3.5" /> Slack from Salesforce
             </div>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl 2xl:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
               Cut meetings 29%. Kill email overload.
               <br /><span className="gradient-text-gold">Make every team 47% more productive.</span>
             </h1>
@@ -119,7 +119,7 @@ export default function SlackPage() {
           </div>
 
           {/* Slack desktop screenshot */}
-          <div className="mt-4 max-w-xl mx-auto hidden md:block animate-fade-up-2">
+          <div className="mt-4 max-w-xl 2xl:max-w-2xl mx-auto hidden md:block animate-fade-up-2">
             <img loading="lazy" src={BASE + 'slack/slack-desktop.webp'} alt="Slack desktop interface"
               className="w-full rounded-xl"
               style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.1)' }} />
