@@ -292,23 +292,17 @@ export default function Navbar() {
             </button>
 
             {mobileDropOpen && (
-              <div className="ml-4 flex flex-col gap-0.5 mb-1">
-                {clouds.map(({ label, to, icon: Icon, highlight }) => (
+              <div className="ml-2 flex flex-col gap-0.5 mb-1">
+                {clouds.map(({ label, to, icon: Icon, image, highlight }) => (
                   <Link
                     key={label}
                     to={to}
                     onClick={() => { setOpen(false); setMobileDropOpen(false) }}
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-lg text-sm transition-colors hover:bg-blue-50"
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors hover:bg-blue-50"
                     style={{ color: highlight ? '#0176D3' : '#475569' }}
                   >
-                    <Icon className="w-3.5 h-3.5 shrink-0" />
+                    {Icon ? <Icon className="w-4 h-4 shrink-0" /> : image ? <img src={import.meta.env.BASE_URL + image} alt="" className="w-5 h-5 shrink-0 rounded" /> : null}
                     {label}
-                    {highlight && (
-                      <span className="ml-auto text-[10px] font-bold px-1.5 py-0.5 rounded-full"
-                        style={{ background: 'rgba(1,118,211,0.10)', color: '#0176D3' }}>
-                        AI
-                      </span>
-                    )}
                   </Link>
                 ))}
               </div>
