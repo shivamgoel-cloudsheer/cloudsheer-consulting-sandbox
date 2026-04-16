@@ -248,27 +248,27 @@
 }
 
 /* ===== DARK MODE - FULL SITE OVERRIDE ===== */
+/* Color system: bg=#050505, surface=#0F0F0F, elevated=#1A1A1A, border=#222, accent=#7C3AED, gold=#F59E0B */
 
 /* Body */
 html.dark body {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
+  background-color: #050505 !important;
+  color: #EAEAEA !important;
+  font-weight: 350;
 }
 
-/* All sections: white/light -> black, keep gradients on hero/CTA sections */
-html.dark .bg-white { background-color: #000000 !important; }
+/* Section backgrounds: alternating for depth */
+html.dark .bg-white { background-color: #050505 !important; }
 html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
 
-/* Sections with inline bg that are NOT hero/gradient sections */
-html.dark section[style*="EFF6FF"],
-html.dark section[style*="F0F7FF"],
-html.dark section[style*="FFFFFF"] {
-  background-color: #0A0A0A !important;
-}
+html.dark section[style*="EFF6FF"] { background-color: #0A0A0A !important; }
+html.dark section[style*="F0F7FF"] { background-color: #080808 !important; }
+html.dark section[style*="FFFFFF"] { background-color: #050505 !important; }
 
-/* Trusted by strip */
+/* Trusted by strip - slightly elevated */
 html.dark section[style*="D4E2F5"] {
-  background-color: #111111 !important;
+  background-color: #0F0F0F !important;
+  border-bottom-color: #1A1A1A !important;
 }
 
 /* Hero wave SVG */
@@ -288,223 +288,192 @@ html.dark .glow-dot {
   opacity: 0.25 !important;
 }
 
-/* ---- TEXT ---- */
-html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+/* ---- TEXT: High contrast, no mid-greys ---- */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4 {
   color: #FFFFFF !important;
+  font-weight: 800 !important;
 }
-html.dark .section-title { color: #FFFFFF !important; }
-html.dark .section-sub { color: rgba(255,255,255,0.6) !important; }
-html.dark p { color: rgba(255,255,255,0.75); }
+html.dark h5, html.dark h6 { color: #EAEAEA !important; }
+html.dark .section-title { color: #FFFFFF !important; letter-spacing: -0.02em; }
+html.dark .section-sub { color: #B0B0B0 !important; }
+html.dark p { color: #D4D4D4 !important; }
+html.dark span { color: inherit; }
+html.dark strong { color: #FFFFFF !important; }
+html.dark li { color: #D4D4D4 !important; }
 
-/* ---- CARDS ---- */
+/* ---- CARDS: Elevated with depth ---- */
 html.dark .glass-card {
-  background-color: #111111 !important;
-  border-color: rgba(255,255,255,0.06) !important;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
+  background-color: #0F0F0F !important;
+  border: 1px solid #222222 !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.02) !important;
 }
 html.dark .glass-card:hover {
-  border-color: rgba(99,102,241,0.4) !important;
-  box-shadow: 0 10px 40px rgba(99,102,241,0.15) !important;
+  border-color: #7C3AED !important;
+  box-shadow: 0 8px 40px rgba(124,58,237,0.2), 0 0 0 1px rgba(124,58,237,0.15) !important;
+  transform: translateY(-3px) !important;
 }
 html.dark .glass-card p,
 html.dark .glass-card span {
-  color: rgba(255,255,255,0.7) !important;
+  color: #C0C0C0 !important;
 }
 html.dark .glass-card h3,
 html.dark .glass-card button span {
   color: #FFFFFF !important;
 }
 
-/* ---- TAGS ---- */
+/* ---- TAGS: Purple accent ---- */
 html.dark .tag {
   color: #A78BFA !important;
-  background-color: rgba(167,139,250,0.1) !important;
-  border-color: rgba(167,139,250,0.2) !important;
+  background-color: rgba(124,58,237,0.12) !important;
+  border-color: rgba(124,58,237,0.25) !important;
+}
+html.dark .tag-white {
+  background-color: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.12) !important;
 }
 
-/* ---- NAVBAR ---- */
+/* ---- NAVBAR: Glass on black ---- */
 html.dark header {
-  background-color: rgba(0,0,0,0.9) !important;
-  backdrop-filter: blur(20px) !important;
-  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  background-color: rgba(5,5,5,0.92) !important;
+  backdrop-filter: blur(20px) saturate(1.5) !important;
+  border-bottom: 1px solid #1A1A1A !important;
 }
 html.dark header button,
 html.dark header a,
 html.dark header nav a,
 html.dark header nav button {
-  color: rgba(255,255,255,0.8) !important;
+  color: #EAEAEA !important;
 }
 html.dark header nav a:hover,
 html.dark header nav button:hover {
-  background-color: rgba(255,255,255,0.05) !important;
+  background-color: rgba(124,58,237,0.08) !important;
   color: #FFFFFF !important;
 }
 
 /* Dropdown */
 html.dark .animate-scale-in {
-  background-color: #111111 !important;
-  border-color: rgba(255,255,255,0.06) !important;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+  background-color: #0F0F0F !important;
+  border: 1px solid #222 !important;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.8) !important;
 }
 html.dark .animate-scale-in div[style*="F0F7FF"] {
   background-color: #0A0A0A !important;
+  border-bottom-color: #1A1A1A !important;
 }
 
 /* Mobile menu */
 html.dark .md\\:hidden.border-t,
 html.dark div.border-t.bg-white {
-  background-color: #000000 !important;
+  background-color: #050505 !important;
+  border-color: #1A1A1A !important;
 }
 
-/* ---- BUTTONS ---- */
+/* ---- BUTTONS: Loud, glowing, unmissable ---- */
 html.dark .btn-primary {
-  background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
+  background: linear-gradient(135deg, #7C3AED, #9333EA) !important;
   color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.4) !important;
+  font-weight: 700 !important;
+}
+html.dark .btn-primary:hover {
+  box-shadow: 0 8px 35px rgba(124,58,237,0.6) !important;
+  transform: translateY(-2px) !important;
+}
+html.dark .btn-gold {
+  box-shadow: 0 4px 20px rgba(245,158,11,0.35) !important;
+}
+html.dark .btn-gold:hover {
+  box-shadow: 0 8px 35px rgba(245,158,11,0.5) !important;
+  transform: translateY(-2px) !important;
 }
 html.dark .btn-ghost {
-  border-color: rgba(255,255,255,0.15) !important;
-  color: rgba(255,255,255,0.8) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+  color: #EAEAEA !important;
+}
+html.dark .btn-ghost:hover {
+  background-color: rgba(255,255,255,0.08) !important;
+  border-color: rgba(255,255,255,0.35) !important;
 }
 
 /* ---- INPUTS ---- */
 html.dark input, html.dark textarea, html.dark select {
-  background-color: #111111 !important;
-  border-color: rgba(255,255,255,0.08) !important;
-  color: #FFFFFF !important;
+  background-color: #0F0F0F !important;
+  border: 1px solid #222 !important;
+  color: #EAEAEA !important;
 }
 html.dark input::placeholder, html.dark textarea::placeholder {
-  color: rgba(255,255,255,0.3) !important;
+  color: #666 !important;
 }
 html.dark input:focus, html.dark textarea:focus {
-  border-color: #6366F1 !important;
+  border-color: #7C3AED !important;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.15) !important;
 }
 
-/* ---- ACCENT COLORS in dark mode ---- */
-/* Use purple and gold as accent strip colors */
+/* ---- ACCENTS: Purple primary, Gold secondary ---- */
 html.dark .gradient-text {
-  background-image: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%) !important;
+  background-image: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%) !important;
 }
+html.dark .gradient-text-gold {
+  background-image: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+}
+/* Purple scrollbar */
+html.dark ::-webkit-scrollbar-track { background: #0A0A0A !important; }
+html.dark ::-webkit-scrollbar-thumb { background: #7C3AED !important; }
+/* Selection */
+html.dark ::selection { background: rgba(124,58,237,0.35) !important; color: #FFF !important; }
 
-/* ---- HERO & GRADIENT SECTIONS -> BLACK with vivid glows ---- */
+/* ---- HERO & GRADIENT SECTIONS ---- */
 html.dark section[style*="032D60"],
 html.dark section[style*="0176D3"],
 html.dark section[style*="0A3F80"] {
-  background: #000000 !important;
+  background: #050505 !important;
 }
 
-/* Make glow orbs vivid in dark hero */
-html.dark section[style*="032D60"] .glow-dot,
-html.dark section[style*="0176D3"] .glow-dot {
-  opacity: 0.35 !important;
-}
+/* Vivid glow orbs on black */
+html.dark .glow-dot { opacity: 0.4 !important; filter: blur(100px) !important; }
 
-/* Grid pattern more visible on black */
+/* Purple grid lines */
 html.dark .bg-grid-dark {
   background-image:
-    linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px) !important;
+    linear-gradient(rgba(124,58,237,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.08) 1px, transparent 1px) !important;
+}
+html.dark .bg-grid-light, html.dark .bg-grid {
+  background-image:
+    linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px) !important;
 }
 
-/* Spinning rings more visible */
+/* Spinning rings purple glow */
 html.dark [class*="animate-spin-slow"] {
-  border-color: rgba(99,102,241,0.12) !important;
+  border-color: rgba(124,58,237,0.15) !important;
 }
 
-/* Tag-white on dark hero */
-html.dark .tag-white {
-  background-color: rgba(255,255,255,0.06) !important;
-  border-color: rgba(255,255,255,0.1) !important;
-}
-
-/* Hero stats text stays white */
-html.dark section[style*="032D60"] p,
-html.dark section[style*="0176D3"] p {
-  color: rgba(255,255,255,0.8) !important;
-}
-html.dark section[style*="032D60"] h1,
-html.dark section[style*="032D60"] h2,
-html.dark section[style*="0176D3"] h1,
-html.dark section[style*="0176D3"] h2 {
-  color: #FFFFFF !important;
-}
-
-/* Dashboard images - add purple glow in dark mode */
+/* Dashboard images - purple glow */
 html.dark img[style*="boxShadow"] {
-  box-shadow: 0 20px 60px rgba(99,102,241,0.25) !important;
-  border-color: rgba(99,102,241,0.2) !important;
+  box-shadow: 0 20px 60px rgba(124,58,237,0.3) !important;
+  border-color: rgba(124,58,237,0.25) !important;
 }
 
-/* Chat visual in hero */
-html.dark [style*="backgroundColor: 'white'"],
-html.dark [style*="background-color: white"],
-html.dark div[style*="backgroundColor: '#F8FAFC'"] {
-  background-color: #111111 !important;
-}
-html.dark [style*="background: 'linear-gradient(135deg,#5B5FC7"],
-html.dark [style*="background: 'linear-gradient(135deg, #5B5FC7"] {
-  background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
-}
-
-/* Floating chips in hero */
-html.dark [style*="backgroundColor: 'white'"][class*="rounded-xl"],
-html.dark div[class*="animate-float"][style*="backgroundColor: 'white'"] {
-  background-color: #111111 !important;
-  border-color: rgba(99,102,241,0.15) !important;
-}
-
-/* Stats strip -> black with purple accent */
+/* Stats strip */
 html.dark section[style*="0176D3 0%"] {
-  background: linear-gradient(135deg, #000000, #1a1a2e) !important;
+  background: linear-gradient(135deg, #050505, #0F0A1A) !important;
 }
 
-/* CTA sections -> black with purple glows */
-html.dark .glow-dot[style*="rgba(0,169,255"] {
-  background-color: rgba(99,102,241,0.2) !important;
-}
-html.dark .glow-dot[style*="rgba(245,158,11"] {
-  background-color: rgba(245,158,11,0.15) !important;
-}
-html.dark .glow-dot[style*="rgba(99,102,241"] {
-  background-color: rgba(99,102,241,0.2) !important;
+/* Footer */
+html.dark footer, html.dark footer[style*="032D60"] {
+  background-color: #050505 !important;
 }
 
-/* Footer already dark - make it pure black */
-html.dark footer[style*="032D60"] {
-  background-color: #000000 !important;
-}
-html.dark footer .btn-gold {
-  box-shadow: 0 4px 20px rgba(245,158,11,0.3) !important;
-}
-
-/* About globe section -> black */
+/* About globe section */
 html.dark section[style*="linear-gradient(135deg,#032D60"] {
-  background: #000000 !important;
+  background: #050505 !important;
 }
-
-/* ---- FAQ ---- */
-html.dark .glass-card button span { color: #FFFFFF !important; }
-html.dark .glass-card > div > p { color: rgba(255,255,255,0.6) !important; }
 
 /* ---- BLOG ---- */
-html.dark article { background-color: #000000 !important; }
+html.dark article { background-color: #050505 !important; }
 html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
 
-/* ---- ABOUT page ---- */
-html.dark strong { color: #FFFFFF !important; }
-html.dark ul li { color: rgba(255,255,255,0.7) !important; }
-
-/* ---- SCROLLBAR ---- */
-html.dark ::-webkit-scrollbar-track { background: #111111 !important; }
-html.dark ::-webkit-scrollbar-thumb { background: #6366F1 !important; }
-
-/* ---- BORDERS ---- */
-html.dark [style*="borderTop: '1px solid"],
-html.dark [style*="borderBottom: '1px solid"] {
-  border-color: rgba(255,255,255,0.04) !important;
-}
-
-/* Selection */
-html.dark ::selection {
-  background: rgba(99,102,241,0.3) !important;
-  color: #FFFFFF !important;
-}
+/* ---- MICRO-INTERACTIONS ---- */
+html.dark a:hover { color: #A78BFA !important; }
+html.dark .glass-card { transition: all 0.3s cubic-bezier(0.4,0,0.2,1) !important; }
