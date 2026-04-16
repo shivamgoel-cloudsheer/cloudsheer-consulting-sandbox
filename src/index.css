@@ -11,11 +11,20 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark body,
+  html.dark body {
+    background-color: #0B1120;
+    color: #E2E8F0;
   }
 
   ::selection { background: rgba(1,118,211,0.18); color: #032D60; }
+  .dark ::selection { background: rgba(1,118,211,0.3); color: #E2E8F0; }
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: #f0f6ff; }
+  .dark ::-webkit-scrollbar-track { background: #1E293B; }
   ::-webkit-scrollbar-thumb { background: #0176D3; border-radius: 3px; }
 }
 
@@ -119,10 +128,19 @@
     border: 1px solid rgba(1,118,211,0.10);
     box-shadow: 0 2px 16px rgba(1,118,211,0.06);
   }
+  .dark .glass-card {
+    background-color: #1E293B;
+    border-color: rgba(148,196,255,0.08);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+  }
   .glass-card:hover {
     border-color: rgba(1,118,211,0.25);
     box-shadow: 0 10px 40px rgba(1,118,211,0.12);
     transform: translateY(-2px);
+  }
+  .dark .glass-card:hover {
+    border-color: rgba(1,118,211,0.4);
+    box-shadow: 0 10px 40px rgba(1,118,211,0.15);
   }
 
   /* Dark card (navy sections) */
@@ -147,6 +165,11 @@
     background-color: rgba(1,118,211,0.08);
     border: 1px solid rgba(1,118,211,0.20);
   }
+  .dark .tag {
+    color: #38BDF8;
+    background-color: rgba(56,189,248,0.1);
+    border-color: rgba(56,189,248,0.2);
+  }
   .tag-white {
     @apply inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full;
     color: rgba(255,255,255,0.9);
@@ -155,8 +178,10 @@
   }
 
   .section-title       { @apply text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold leading-tight; color: #032D60; }
+  .dark .section-title { color: #E2E8F0; }
   .section-title-white { @apply text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold leading-tight text-white; }
   .section-sub         { @apply text-lg 2xl:text-xl leading-relaxed; color: #64748B; }
+  .dark .section-sub   { color: #94A3B8; }
   .section-sub-white   { @apply text-lg 2xl:text-xl leading-relaxed; color: rgba(255,255,255,0.7); }
 
   /* Gradient text */
@@ -221,3 +246,30 @@
   .glass-card { padding: 1.75rem; }
   .section-sub { font-size: 1.25rem; }
 }
+
+/* Dark mode overrides */
+html.dark .bg-white { background-color: #0B1120 !important; }
+html.dark [style*="backgroundColor: '#FFFFFF'"],
+html.dark [style*="backgroundColor: '#EFF6FF'"],
+html.dark [style*="background-color: #EFF6FF"] { background-color: #111827 !important; }
+html.dark [style*="backgroundColor: '#F0F7FF'"],
+html.dark [style*="background-color: #F0F7FF"] { background-color: #0F172A !important; }
+html.dark [style*="color: '#032D60'"] { color: #E2E8F0 !important; }
+html.dark [style*="color: '#475569'"] { color: #94A3B8 !important; }
+html.dark [style*="color: '#64748B'"] { color: #94A3B8 !important; }
+html.dark [style*="color: '#334155'"] { color: #CBD5E1 !important; }
+html.dark [style*="color: '#1E293B'"] { color: #E2E8F0 !important; }
+
+/* Dark navbar */
+html.dark header[style*="backgroundColor: 'rgba(255,255,255"] {
+  background-color: rgba(11,17,32,0.95) !important;
+  border-bottom: 1px solid rgba(148,196,255,0.06);
+}
+
+/* Dark footer - already dark, no changes needed */
+
+/* Dark FAQ cards */
+html.dark .space-y-3 > .glass-card button { color: #E2E8F0; }
+
+/* Dark blog cards */
+html.dark .bg-cs-bgsub { background-color: #111827 !important; }
