@@ -4,6 +4,90 @@ import { ArrowLeft, ArrowRight, Clock, Bot } from 'lucide-react'
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const articles = {
+  'salesforce-headless-360-tdx-2026': {
+    title: 'Salesforce Headless 360: Everything You Need to Know from TDX 2026',
+    category: 'Salesforce News',
+    date: 'Apr 16, 2026',
+    readTime: '7 min',
+    author: 'Shivam Goel',
+    initials: 'SG',
+    avatarColor: 'from-purple-500 to-indigo-600',
+    sections: [
+      {
+        heading: 'Salesforce Just Changed the Game at TDX 2026',
+        paragraphs: [
+          "Salesforce dropped a major announcement at TDX 2026 (April 15, San Francisco) that fundamentally changes how developers and businesses interact with the platform. It is called Headless 360 - and it makes the entire Salesforce platform programmable via APIs, MCP servers, and CLI commands.",
+          "The core idea is simple but powerful: instead of burying capabilities behind a UI, expose everything so the platform is accessible from anywhere - including AI coding agents like Claude Code, Cursor, Codex, and Windsurf.",
+        ],
+      },
+      {
+        heading: 'What Is Headless 360?',
+        paragraphs: [
+          "Headless 360 is Salesforce's new architecture that turns every platform capability into an API endpoint, MCP (Model Context Protocol) tool, or CLI command. This means AI agents and developers can access and build on Salesforce without needing to click through the UI.",
+          "Think of it this way: traditionally, you had to log into Salesforce, navigate menus, and configure things through screens. With Headless 360, an AI coding agent can do all of that programmatically. Your developer describes what they want in natural language, and the agent builds it directly on the platform.",
+        ],
+      },
+      {
+        heading: 'Three Big Innovations',
+        paragraphs: [
+          "Headless 360 delivers three core innovations:",
+        ],
+        bullets: [
+          "60+ new MCP tools and 30 preconfigured coding skills that give AI coding agents full access to your Salesforce org - metadata, data, deployments, and configuration",
+          "A new Experience Layer that renders rich, native interactions across every surface - Slack, WhatsApp, Teams, ChatGPT, Claude, Gemini, and any MCP-compatible client. Build once, render everywhere.",
+          "Agent Lifecycle Tools including Testing Center, Custom Scoring Evals, Agent Script, A/B Testing, and Session Tracing - giving you full control over how agents behave before and after launch",
+        ],
+      },
+      {
+        heading: 'Agentforce Vibes 2.0',
+        paragraphs: [
+          "Alongside Headless 360, Salesforce launched Agentforce Vibes 2.0 - an enhanced vibe-coding tool that acts as an AI development partner. Key features include multi-model support (Claude Sonnet and GPT-5), deep understanding of your business context, and workflow acceleration that reduces development cycle times by as much as 40%.",
+          "Every Developer Edition org now includes Agentforce Vibes IDE (a browser-based, cloud-hosted VS Code environment) with Claude Sonnet 4.5 as the default coding model, plus Salesforce Hosted MCP Servers - all at no cost.",
+        ],
+      },
+      {
+        heading: 'The New Experience Layer',
+        paragraphs: [
+          "One of the most exciting parts of Headless 360 is the new Experience Layer. It separates agent behavior from how it appears to users. This means you can build an Agentforce agent once and it renders natively across Slack, mobile apps, WhatsApp, Microsoft Teams, ChatGPT, Claude, Gemini, and any MCP-compatible client.",
+          "For businesses, this is huge. Your customers and employees interact with Agentforce wherever they already work - no separate app, no portal login, no friction.",
+        ],
+      },
+      {
+        heading: 'Agent Lifecycle Management',
+        paragraphs: [
+          "Salesforce also introduced comprehensive tools for managing agents in production:",
+        ],
+        bullets: [
+          "Testing Center identifies logic gaps and policy violations before you deploy",
+          "Custom Scoring Evals let you evaluate agent decisions against your business standards",
+          "Agent Script controls behavior logic so you can define guardrails before testing",
+          "Observability and Session Tracing give you post-launch monitoring and debugging",
+          "A/B Testing lets you compare agent versions side by side to optimize performance",
+          "Agent Fabric provides governance across multi-vendor AI platforms",
+        ],
+      },
+      {
+        heading: 'What This Means for Your Business',
+        paragraphs: [
+          "Headless 360 is not just a developer tool - it changes how businesses build and deploy on Salesforce. Here is what matters:",
+        ],
+        bullets: [
+          "Faster development: AI coding agents can build Salesforce apps in hours, not weeks. The 40% cycle time reduction is just the beginning.",
+          "Lower costs: Less manual development means lower implementation costs. Vibe coding with Agentforce Vibes IDE is free for every Developer Edition org.",
+          "Omnichannel by default: Build an agent once and deploy it across every channel your customers use - no separate builds for each platform.",
+          "Better governance: Testing Center, A/B Testing, and Session Tracing mean you can deploy agents with confidence and optimize them continuously.",
+        ],
+      },
+      {
+        heading: 'How Cloudsheer Can Help',
+        paragraphs: [
+          "At Cloudsheer, we are already working with Headless 360 and Agentforce Vibes 2.0 to accelerate implementations for our clients. Whether you want to build your first Agentforce agent, migrate to the new Experience Layer, or set up Agent Lifecycle Management - our team of 40+ certified architects has you covered.",
+          "Every implementation is different, so we start with a free 30-minute discovery call to understand your specific needs and give you a clear plan. Book yours at cal.com/cloudsheer-consulting/30min.",
+        ],
+      },
+    ],
+  },
+
   'getting-started-agentforce-2026': {
     title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     category: 'Agentforce',

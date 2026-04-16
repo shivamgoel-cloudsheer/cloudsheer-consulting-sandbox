@@ -11,6 +11,18 @@ const blogFaqs = [
 
 const posts = [
   {
+    slug: 'salesforce-headless-360-tdx-2026',
+    category: 'Salesforce News',
+    categoryIcon: <Zap className="w-3 h-3" />,
+    categoryColor: 'text-rose-500 bg-rose-50 border-rose-200',
+    title: 'Salesforce Headless 360: Everything You Need to Know from TDX 2026',
+    excerpt: 'Salesforce just announced Headless 360 at TDX 2026 - making the entire platform programmable via APIs, MCP servers, and CLI commands. Here is what it means for your business.',
+    image: '/blog/spring-25.svg',
+    date: 'Apr 16, 2026', readTime: '7 min',
+    author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
+    featured: true,
+  },
+  {
     slug: 'getting-started-agentforce-2026',
     category: 'Agentforce',
     categoryIcon: <Bot className="w-3 h-3" />,
@@ -20,7 +32,7 @@ const posts = [
     image: '/blog/agentforce-guide.svg',
     date: 'Mar 18, 2026', readTime: '8 min',
     author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'agentforce-vs-einstein-bots',
