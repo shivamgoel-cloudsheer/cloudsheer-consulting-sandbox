@@ -385,12 +385,100 @@ html.dark .gradient-text {
   background-image: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%) !important;
 }
 
-/* Stats strip sections keep their gradients - just ensure text is bright */
-html.dark section[style*="0176D3"] h2,
-html.dark section[style*="0176D3"] p,
+/* ---- HERO & GRADIENT SECTIONS -> BLACK with vivid glows ---- */
+html.dark section[style*="032D60"],
+html.dark section[style*="0176D3"],
+html.dark section[style*="0A3F80"] {
+  background: #000000 !important;
+}
+
+/* Make glow orbs vivid in dark hero */
+html.dark section[style*="032D60"] .glow-dot,
+html.dark section[style*="0176D3"] .glow-dot {
+  opacity: 0.35 !important;
+}
+
+/* Grid pattern more visible on black */
+html.dark .bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px) !important;
+}
+
+/* Spinning rings more visible */
+html.dark [class*="animate-spin-slow"] {
+  border-color: rgba(99,102,241,0.12) !important;
+}
+
+/* Tag-white on dark hero */
+html.dark .tag-white {
+  background-color: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Hero stats text stays white */
+html.dark section[style*="032D60"] p,
+html.dark section[style*="0176D3"] p {
+  color: rgba(255,255,255,0.8) !important;
+}
+html.dark section[style*="032D60"] h1,
 html.dark section[style*="032D60"] h2,
-html.dark section[style*="032D60"] p {
+html.dark section[style*="0176D3"] h1,
+html.dark section[style*="0176D3"] h2 {
   color: #FFFFFF !important;
+}
+
+/* Dashboard images - add purple glow in dark mode */
+html.dark img[style*="boxShadow"] {
+  box-shadow: 0 20px 60px rgba(99,102,241,0.25) !important;
+  border-color: rgba(99,102,241,0.2) !important;
+}
+
+/* Chat visual in hero */
+html.dark [style*="backgroundColor: 'white'"],
+html.dark [style*="background-color: white"],
+html.dark div[style*="backgroundColor: '#F8FAFC'"] {
+  background-color: #111111 !important;
+}
+html.dark [style*="background: 'linear-gradient(135deg,#5B5FC7"],
+html.dark [style*="background: 'linear-gradient(135deg, #5B5FC7"] {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
+}
+
+/* Floating chips in hero */
+html.dark [style*="backgroundColor: 'white'"][class*="rounded-xl"],
+html.dark div[class*="animate-float"][style*="backgroundColor: 'white'"] {
+  background-color: #111111 !important;
+  border-color: rgba(99,102,241,0.15) !important;
+}
+
+/* Stats strip -> black with purple accent */
+html.dark section[style*="0176D3 0%"] {
+  background: linear-gradient(135deg, #000000, #1a1a2e) !important;
+}
+
+/* CTA sections -> black with purple glows */
+html.dark .glow-dot[style*="rgba(0,169,255"] {
+  background-color: rgba(99,102,241,0.2) !important;
+}
+html.dark .glow-dot[style*="rgba(245,158,11"] {
+  background-color: rgba(245,158,11,0.15) !important;
+}
+html.dark .glow-dot[style*="rgba(99,102,241"] {
+  background-color: rgba(99,102,241,0.2) !important;
+}
+
+/* Footer already dark - make it pure black */
+html.dark footer[style*="032D60"] {
+  background-color: #000000 !important;
+}
+html.dark footer .btn-gold {
+  box-shadow: 0 4px 20px rgba(245,158,11,0.3) !important;
+}
+
+/* About globe section -> black */
+html.dark section[style*="linear-gradient(135deg,#032D60"] {
+  background: #000000 !important;
 }
 
 /* ---- FAQ ---- */
