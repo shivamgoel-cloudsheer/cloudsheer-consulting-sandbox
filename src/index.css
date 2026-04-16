@@ -151,10 +151,6 @@
     background-color: rgba(1,118,211,0.08);
     border: 1px solid rgba(1,118,211,0.20);
   }
-    color: #38BDF8;
-    background-color: rgba(56,189,248,0.1);
-    border-color: rgba(56,189,248,0.2);
-  }
   .tag-white {
     @apply inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full;
     color: rgba(255,255,255,0.9);
