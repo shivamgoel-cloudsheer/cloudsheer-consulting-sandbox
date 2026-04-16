@@ -249,147 +249,174 @@
 
 /* ===== DARK MODE - FULL SITE OVERRIDE ===== */
 
-/* Global: force all backgrounds dark, all text light */
-html.dark * {
-  border-color: rgba(148,196,255,0.08) !important;
-}
-
+/* Body */
 html.dark body {
-  background-color: #0B1120 !important;
-  color: #CBD5E1 !important;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
 }
 
-/* All white/light backgrounds -> dark */
-html.dark section,
-html.dark div,
-html.dark header,
-html.dark footer,
-html.dark main,
-html.dark article,
-html.dark nav {
-  background-color: inherit;
+/* All sections: white/light -> black, keep gradients on hero/CTA sections */
+html.dark .bg-white { background-color: #000000 !important; }
+html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
+
+/* Sections with inline bg that are NOT hero/gradient sections */
+html.dark section[style*="EFF6FF"],
+html.dark section[style*="F0F7FF"],
+html.dark section[style*="FFFFFF"] {
+  background-color: #0A0A0A !important;
 }
 
-html.dark .bg-white,
-html.dark section[style] {
-  background-color: #0B1120 !important;
+/* Trusted by strip */
+html.dark section[style*="D4E2F5"] {
+  background-color: #111111 !important;
 }
 
-/* Override ALL inline background colors */
-html.dark section,
-html.dark div.section-wrap,
-html.dark [class*="bg-cs-bgsub"],
-html.dark [class*="bg-white"] {
-  background-color: #0B1120 !important;
+/* Hero wave SVG */
+html.dark svg path[fill="white"] {
+  fill: #000000 !important;
 }
 
-/* Light-colored section backgrounds -> dark variants */
-html.dark section {
-  background-color: #0B1120 !important;
+/* Grid backgrounds - keep them visible in dark mode */
+html.dark .bg-grid-light {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px) !important;
 }
 
-/* Cards */
+/* Glow dots - make them MORE visible in dark mode */
+html.dark .glow-dot {
+  opacity: 0.25 !important;
+}
+
+/* ---- TEXT ---- */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: #FFFFFF !important;
+}
+html.dark .section-title { color: #FFFFFF !important; }
+html.dark .section-sub { color: rgba(255,255,255,0.6) !important; }
+html.dark p { color: rgba(255,255,255,0.75); }
+
+/* ---- CARDS ---- */
 html.dark .glass-card {
-  background-color: #1A2332 !important;
-  border-color: rgba(148,196,255,0.06) !important;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.3) !important;
+  background-color: #111111 !important;
+  border-color: rgba(255,255,255,0.06) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.5) !important;
 }
 html.dark .glass-card:hover {
-  border-color: rgba(1,118,211,0.3) !important;
-  box-shadow: 0 10px 40px rgba(1,118,211,0.1) !important;
+  border-color: rgba(99,102,241,0.4) !important;
+  box-shadow: 0 10px 40px rgba(99,102,241,0.15) !important;
+}
+html.dark .glass-card p,
+html.dark .glass-card span {
+  color: rgba(255,255,255,0.7) !important;
+}
+html.dark .glass-card h3,
+html.dark .glass-card button span {
+  color: #FFFFFF !important;
 }
 
-/* ALL text colors -> light */
-html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
-  color: #F1F5F9 !important;
+/* ---- TAGS ---- */
+html.dark .tag {
+  color: #A78BFA !important;
+  background-color: rgba(167,139,250,0.1) !important;
+  border-color: rgba(167,139,250,0.2) !important;
 }
-html.dark p, html.dark span, html.dark li, html.dark label, html.dark a {
-  color: inherit;
-}
-html.dark .section-title { color: #F1F5F9 !important; }
-html.dark .section-sub { color: #94A3B8 !important; }
 
-/* Navbar */
+/* ---- NAVBAR ---- */
 html.dark header {
-  background-color: rgba(11,17,32,0.97) !important;
-  backdrop-filter: blur(16px) !important;
+  background-color: rgba(0,0,0,0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
 }
 html.dark header button,
 html.dark header a,
 html.dark header nav a,
 html.dark header nav button {
-  color: #CBD5E1 !important;
+  color: rgba(255,255,255,0.8) !important;
 }
 html.dark header nav a:hover,
 html.dark header nav button:hover {
   background-color: rgba(255,255,255,0.05) !important;
+  color: #FFFFFF !important;
 }
 
 /* Dropdown */
-html.dark .animate-scale-in,
-html.dark [class*="rounded-2xl"][class*="overflow-hidden"][class*="absolute"] {
-  background-color: #1A2332 !important;
-  border-color: rgba(148,196,255,0.08) !important;
+html.dark .animate-scale-in {
+  background-color: #111111 !important;
+  border-color: rgba(255,255,255,0.06) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6) !important;
+}
+html.dark .animate-scale-in div[style*="F0F7FF"] {
+  background-color: #0A0A0A !important;
 }
 
 /* Mobile menu */
-html.dark .md\\:hidden.border-t {
-  background-color: #0B1120 !important;
+html.dark .md\\:hidden.border-t,
+html.dark div.border-t.bg-white {
+  background-color: #000000 !important;
 }
 
-/* Tags */
-html.dark .tag {
-  color: #38BDF8 !important;
-  background-color: rgba(56,189,248,0.1) !important;
-  border-color: rgba(56,189,248,0.15) !important;
+/* ---- BUTTONS ---- */
+html.dark .btn-primary {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6) !important;
+  color: #FFFFFF !important;
+}
+html.dark .btn-ghost {
+  border-color: rgba(255,255,255,0.15) !important;
+  color: rgba(255,255,255,0.8) !important;
 }
 
-/* Inputs */
+/* ---- INPUTS ---- */
 html.dark input, html.dark textarea, html.dark select {
-  background-color: #1A2332 !important;
-  border-color: rgba(148,196,255,0.1) !important;
-  color: #E2E8F0 !important;
+  background-color: #111111 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: #FFFFFF !important;
 }
 html.dark input::placeholder, html.dark textarea::placeholder {
-  color: #64748B !important;
+  color: rgba(255,255,255,0.3) !important;
+}
+html.dark input:focus, html.dark textarea:focus {
+  border-color: #6366F1 !important;
 }
 
-/* Trusted by strip */
-html.dark section[style*="D4E2F5"],
-html.dark section[style*="F0F7FF"] {
-  background-color: #111827 !important;
+/* ---- ACCENT COLORS in dark mode ---- */
+/* Use purple and gold as accent strip colors */
+html.dark .gradient-text {
+  background-image: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%) !important;
 }
 
-/* Blog cards */
-html.dark .bg-cs-bgsub {
-  background-color: #111827 !important;
+/* Stats strip sections keep their gradients - just ensure text is bright */
+html.dark section[style*="0176D3"] h2,
+html.dark section[style*="0176D3"] p,
+html.dark section[style*="032D60"] h2,
+html.dark section[style*="032D60"] p {
+  color: #FFFFFF !important;
 }
 
-/* Team member cards */
-html.dark .team-card,
-html.dark [class*="glass-card"] p,
-html.dark [class*="glass-card"] span {
-  color: #CBD5E1 !important;
+/* ---- FAQ ---- */
+html.dark .glass-card button span { color: #FFFFFF !important; }
+html.dark .glass-card > div > p { color: rgba(255,255,255,0.6) !important; }
+
+/* ---- BLOG ---- */
+html.dark article { background-color: #000000 !important; }
+html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
+
+/* ---- ABOUT page ---- */
+html.dark strong { color: #FFFFFF !important; }
+html.dark ul li { color: rgba(255,255,255,0.7) !important; }
+
+/* ---- SCROLLBAR ---- */
+html.dark ::-webkit-scrollbar-track { background: #111111 !important; }
+html.dark ::-webkit-scrollbar-thumb { background: #6366F1 !important; }
+
+/* ---- BORDERS ---- */
+html.dark [style*="borderTop: '1px solid"],
+html.dark [style*="borderBottom: '1px solid"] {
+  border-color: rgba(255,255,255,0.04) !important;
 }
 
-/* Wave SVG in hero */
-html.dark svg path[fill="white"] {
-  fill: #0B1120 !important;
+/* Selection */
+html.dark ::selection {
+  background: rgba(99,102,241,0.3) !important;
+  color: #FFFFFF !important;
 }
-
-/* Privacy/Terms pages */
-html.dark strong { color: #E2E8F0 !important; }
-html.dark ul li { color: #94A3B8 !important; }
-
-/* FAQ accordion */
-html.dark .glass-card button span { color: #E2E8F0 !important; }
-html.dark .glass-card div p { color: #94A3B8 !important; }
-
-/* Blog post article */
-html.dark article, html.dark [class*="bg-white"] { background-color: #0B1120 !important; }
-
-/* Chatbot - keep its own colors */
-html.dark .fixed.bottom-6.right-6 { color: initial; }
-
-/* Scrollbar */
-html.dark ::-webkit-scrollbar-track { background: #1A2332 !important; }
