@@ -11,11 +11,6 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
-  }
-
-    background-color: #0B1120;
-    color: #E2E8F0;
   }
 
   ::selection { background: rgba(1,118,211,0.18); color: #032D60; }
