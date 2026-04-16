@@ -128,9 +128,6 @@
     box-shadow: 0 10px 40px rgba(1,118,211,0.12);
     transform: translateY(-2px);
   }
-    border-color: rgba(1,118,211,0.4);
-    box-shadow: 0 10px 40px rgba(1,118,211,0.15);
-  }
 
   /* Dark card (navy sections) */
   .dark-card {
