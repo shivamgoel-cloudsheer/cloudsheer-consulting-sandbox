@@ -247,29 +247,149 @@
   .section-sub { font-size: 1.25rem; }
 }
 
-/* Dark mode overrides */
-html.dark .bg-white { background-color: #0B1120 !important; }
-html.dark [style*="backgroundColor: '#FFFFFF'"],
-html.dark [style*="backgroundColor: '#EFF6FF'"],
-html.dark [style*="background-color: #EFF6FF"] { background-color: #111827 !important; }
-html.dark [style*="backgroundColor: '#F0F7FF'"],
-html.dark [style*="background-color: #F0F7FF"] { background-color: #0F172A !important; }
-html.dark [style*="color: '#032D60'"] { color: #E2E8F0 !important; }
-html.dark [style*="color: '#475569'"] { color: #94A3B8 !important; }
-html.dark [style*="color: '#64748B'"] { color: #94A3B8 !important; }
-html.dark [style*="color: '#334155'"] { color: #CBD5E1 !important; }
-html.dark [style*="color: '#1E293B'"] { color: #E2E8F0 !important; }
+/* ===== DARK MODE - FULL SITE OVERRIDE ===== */
 
-/* Dark navbar */
-html.dark header[style*="backgroundColor: 'rgba(255,255,255"] {
-  background-color: rgba(11,17,32,0.95) !important;
-  border-bottom: 1px solid rgba(148,196,255,0.06);
+/* Global: force all backgrounds dark, all text light */
+html.dark * {
+  border-color: rgba(148,196,255,0.08) !important;
 }
 
-/* Dark footer - already dark, no changes needed */
+html.dark body {
+  background-color: #0B1120 !important;
+  color: #CBD5E1 !important;
+}
 
-/* Dark FAQ cards */
-html.dark .space-y-3 > .glass-card button { color: #E2E8F0; }
+/* All white/light backgrounds -> dark */
+html.dark section,
+html.dark div,
+html.dark header,
+html.dark footer,
+html.dark main,
+html.dark article,
+html.dark nav {
+  background-color: inherit;
+}
 
-/* Dark blog cards */
-html.dark .bg-cs-bgsub { background-color: #111827 !important; }
+html.dark .bg-white,
+html.dark section[style] {
+  background-color: #0B1120 !important;
+}
+
+/* Override ALL inline background colors */
+html.dark section,
+html.dark div.section-wrap,
+html.dark [class*="bg-cs-bgsub"],
+html.dark [class*="bg-white"] {
+  background-color: #0B1120 !important;
+}
+
+/* Light-colored section backgrounds -> dark variants */
+html.dark section {
+  background-color: #0B1120 !important;
+}
+
+/* Cards */
+html.dark .glass-card {
+  background-color: #1A2332 !important;
+  border-color: rgba(148,196,255,0.06) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3) !important;
+}
+html.dark .glass-card:hover {
+  border-color: rgba(1,118,211,0.3) !important;
+  box-shadow: 0 10px 40px rgba(1,118,211,0.1) !important;
+}
+
+/* ALL text colors -> light */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: #F1F5F9 !important;
+}
+html.dark p, html.dark span, html.dark li, html.dark label, html.dark a {
+  color: inherit;
+}
+html.dark .section-title { color: #F1F5F9 !important; }
+html.dark .section-sub { color: #94A3B8 !important; }
+
+/* Navbar */
+html.dark header {
+  background-color: rgba(11,17,32,0.97) !important;
+  backdrop-filter: blur(16px) !important;
+}
+html.dark header button,
+html.dark header a,
+html.dark header nav a,
+html.dark header nav button {
+  color: #CBD5E1 !important;
+}
+html.dark header nav a:hover,
+html.dark header nav button:hover {
+  background-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Dropdown */
+html.dark .animate-scale-in,
+html.dark [class*="rounded-2xl"][class*="overflow-hidden"][class*="absolute"] {
+  background-color: #1A2332 !important;
+  border-color: rgba(148,196,255,0.08) !important;
+}
+
+/* Mobile menu */
+html.dark .md\\:hidden.border-t {
+  background-color: #0B1120 !important;
+}
+
+/* Tags */
+html.dark .tag {
+  color: #38BDF8 !important;
+  background-color: rgba(56,189,248,0.1) !important;
+  border-color: rgba(56,189,248,0.15) !important;
+}
+
+/* Inputs */
+html.dark input, html.dark textarea, html.dark select {
+  background-color: #1A2332 !important;
+  border-color: rgba(148,196,255,0.1) !important;
+  color: #E2E8F0 !important;
+}
+html.dark input::placeholder, html.dark textarea::placeholder {
+  color: #64748B !important;
+}
+
+/* Trusted by strip */
+html.dark section[style*="D4E2F5"],
+html.dark section[style*="F0F7FF"] {
+  background-color: #111827 !important;
+}
+
+/* Blog cards */
+html.dark .bg-cs-bgsub {
+  background-color: #111827 !important;
+}
+
+/* Team member cards */
+html.dark .team-card,
+html.dark [class*="glass-card"] p,
+html.dark [class*="glass-card"] span {
+  color: #CBD5E1 !important;
+}
+
+/* Wave SVG in hero */
+html.dark svg path[fill="white"] {
+  fill: #0B1120 !important;
+}
+
+/* Privacy/Terms pages */
+html.dark strong { color: #E2E8F0 !important; }
+html.dark ul li { color: #94A3B8 !important; }
+
+/* FAQ accordion */
+html.dark .glass-card button span { color: #E2E8F0 !important; }
+html.dark .glass-card div p { color: #94A3B8 !important; }
+
+/* Blog post article */
+html.dark article, html.dark [class*="bg-white"] { background-color: #0B1120 !important; }
+
+/* Chatbot - keep its own colors */
+html.dark .fixed.bottom-6.right-6 { color: initial; }
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar-track { background: #1A2332 !important; }
