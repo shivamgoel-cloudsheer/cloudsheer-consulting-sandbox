@@ -11,20 +11,16 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition: background-color 0.3s, color 0.3s;
+    
   }
 
-  .dark body,
-  html.dark body {
     background-color: #0B1120;
     color: #E2E8F0;
   }
 
   ::selection { background: rgba(1,118,211,0.18); color: #032D60; }
-  .dark ::selection { background: rgba(1,118,211,0.3); color: #E2E8F0; }
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-track { background: #f0f6ff; }
-  .dark ::-webkit-scrollbar-track { background: #1E293B; }
   ::-webkit-scrollbar-thumb { background: #0176D3; border-radius: 3px; }
 }
 
@@ -128,7 +124,6 @@
     border: 1px solid rgba(1,118,211,0.10);
     box-shadow: 0 2px 16px rgba(1,118,211,0.06);
   }
-  .dark .glass-card {
     background-color: #1E293B;
     border-color: rgba(148,196,255,0.08);
     box-shadow: 0 2px 16px rgba(0,0,0,0.2);
@@ -138,7 +133,6 @@
     box-shadow: 0 10px 40px rgba(1,118,211,0.12);
     transform: translateY(-2px);
   }
-  .dark .glass-card:hover {
     border-color: rgba(1,118,211,0.4);
     box-shadow: 0 10px 40px rgba(1,118,211,0.15);
   }
@@ -165,7 +159,6 @@
     background-color: rgba(1,118,211,0.08);
     border: 1px solid rgba(1,118,211,0.20);
   }
-  .dark .tag {
     color: #38BDF8;
     background-color: rgba(56,189,248,0.1);
     border-color: rgba(56,189,248,0.2);
@@ -178,10 +171,8 @@
   }
 
   .section-title       { @apply text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold leading-tight; color: #032D60; }
-  .dark .section-title { color: #E2E8F0; }
   .section-title-white { @apply text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold leading-tight text-white; }
   .section-sub         { @apply text-lg 2xl:text-xl leading-relaxed; color: #64748B; }
-  .dark .section-sub   { color: #94A3B8; }
   .section-sub-white   { @apply text-lg 2xl:text-xl leading-relaxed; color: rgba(255,255,255,0.7); }
 
   /* Gradient text */
@@ -247,233 +238,3 @@
   .section-sub { font-size: 1.25rem; }
 }
 
-/* ===== DARK MODE - FULL SITE OVERRIDE ===== */
-/* Color system: bg=#050505, surface=#0F0F0F, elevated=#1A1A1A, border=#222, accent=#7C3AED, gold=#F59E0B */
-
-/* Body */
-html.dark body {
-  background-color: #050505 !important;
-  color: #EAEAEA !important;
-  font-weight: 350;
-}
-
-/* Section backgrounds: alternating for depth */
-html.dark .bg-white { background-color: #050505 !important; }
-html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
-
-html.dark section[style*="EFF6FF"] { background-color: #0A0A0A !important; }
-html.dark section[style*="F0F7FF"] { background-color: #080808 !important; }
-html.dark section[style*="FFFFFF"] { background-color: #050505 !important; }
-
-/* Trusted by strip - slightly elevated */
-html.dark section[style*="D4E2F5"] {
-  background-color: #0F0F0F !important;
-  border-bottom-color: #1A1A1A !important;
-}
-
-/* Hero wave SVG */
-html.dark svg path[fill="white"] {
-  fill: #000000 !important;
-}
-
-/* Grid backgrounds - keep them visible in dark mode */
-html.dark .bg-grid-light {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px) !important;
-}
-
-/* Glow dots - make them MORE visible in dark mode */
-html.dark .glow-dot {
-  opacity: 0.25 !important;
-}
-
-/* ---- TEXT: High contrast, no mid-greys ---- */
-html.dark h1, html.dark h2, html.dark h3, html.dark h4 {
-  color: #FFFFFF !important;
-  font-weight: 800 !important;
-}
-html.dark h5, html.dark h6 { color: #EAEAEA !important; }
-html.dark .section-title { color: #FFFFFF !important; letter-spacing: -0.02em; }
-html.dark .section-sub { color: #B0B0B0 !important; }
-html.dark p { color: #D4D4D4 !important; }
-html.dark span { color: inherit; }
-html.dark strong { color: #FFFFFF !important; }
-html.dark li { color: #D4D4D4 !important; }
-
-/* ---- CARDS: Elevated with depth ---- */
-html.dark .glass-card {
-  background-color: #0F0F0F !important;
-  border: 1px solid #222222 !important;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.02) !important;
-}
-html.dark .glass-card:hover {
-  border-color: #7C3AED !important;
-  box-shadow: 0 8px 40px rgba(124,58,237,0.2), 0 0 0 1px rgba(124,58,237,0.15) !important;
-  transform: translateY(-3px) !important;
-}
-html.dark .glass-card p,
-html.dark .glass-card span {
-  color: #C0C0C0 !important;
-}
-html.dark .glass-card h3,
-html.dark .glass-card button span {
-  color: #FFFFFF !important;
-}
-
-/* ---- TAGS: Purple accent ---- */
-html.dark .tag {
-  color: #A78BFA !important;
-  background-color: rgba(124,58,237,0.12) !important;
-  border-color: rgba(124,58,237,0.25) !important;
-}
-html.dark .tag-white {
-  background-color: rgba(255,255,255,0.06) !important;
-  border-color: rgba(255,255,255,0.12) !important;
-}
-
-/* ---- NAVBAR: Glass on black ---- */
-html.dark header {
-  background-color: rgba(5,5,5,0.92) !important;
-  backdrop-filter: blur(20px) saturate(1.5) !important;
-  border-bottom: 1px solid #1A1A1A !important;
-}
-html.dark header button,
-html.dark header a,
-html.dark header nav a,
-html.dark header nav button {
-  color: #EAEAEA !important;
-}
-html.dark header nav a:hover,
-html.dark header nav button:hover {
-  background-color: rgba(124,58,237,0.08) !important;
-  color: #FFFFFF !important;
-}
-
-/* Dropdown */
-html.dark .animate-scale-in {
-  background-color: #0F0F0F !important;
-  border: 1px solid #222 !important;
-  box-shadow: 0 25px 80px rgba(0,0,0,0.8) !important;
-}
-html.dark .animate-scale-in div[style*="F0F7FF"] {
-  background-color: #0A0A0A !important;
-  border-bottom-color: #1A1A1A !important;
-}
-
-/* Mobile menu */
-html.dark .md\\:hidden.border-t,
-html.dark div.border-t.bg-white {
-  background-color: #050505 !important;
-  border-color: #1A1A1A !important;
-}
-
-/* ---- BUTTONS: Loud, glowing, unmissable ---- */
-html.dark .btn-primary {
-  background: linear-gradient(135deg, #7C3AED, #9333EA) !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 4px 20px rgba(124,58,237,0.4) !important;
-  font-weight: 700 !important;
-}
-html.dark .btn-primary:hover {
-  box-shadow: 0 8px 35px rgba(124,58,237,0.6) !important;
-  transform: translateY(-2px) !important;
-}
-html.dark .btn-gold {
-  box-shadow: 0 4px 20px rgba(245,158,11,0.35) !important;
-}
-html.dark .btn-gold:hover {
-  box-shadow: 0 8px 35px rgba(245,158,11,0.5) !important;
-  transform: translateY(-2px) !important;
-}
-html.dark .btn-ghost {
-  border-color: rgba(255,255,255,0.2) !important;
-  color: #EAEAEA !important;
-}
-html.dark .btn-ghost:hover {
-  background-color: rgba(255,255,255,0.08) !important;
-  border-color: rgba(255,255,255,0.35) !important;
-}
-
-/* ---- INPUTS ---- */
-html.dark input, html.dark textarea, html.dark select {
-  background-color: #0F0F0F !important;
-  border: 1px solid #222 !important;
-  color: #EAEAEA !important;
-}
-html.dark input::placeholder, html.dark textarea::placeholder {
-  color: #666 !important;
-}
-html.dark input:focus, html.dark textarea:focus {
-  border-color: #7C3AED !important;
-  box-shadow: 0 0 0 3px rgba(124,58,237,0.15) !important;
-}
-
-/* ---- ACCENTS: Purple primary, Gold secondary ---- */
-html.dark .gradient-text {
-  background-image: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%) !important;
-}
-html.dark .gradient-text-gold {
-  background-image: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
-}
-/* Purple scrollbar */
-html.dark ::-webkit-scrollbar-track { background: #0A0A0A !important; }
-html.dark ::-webkit-scrollbar-thumb { background: #7C3AED !important; }
-/* Selection */
-html.dark ::selection { background: rgba(124,58,237,0.35) !important; color: #FFF !important; }
-
-/* ---- HERO & GRADIENT SECTIONS ---- */
-html.dark section[style*="032D60"],
-html.dark section[style*="0176D3"],
-html.dark section[style*="0A3F80"] {
-  background: #050505 !important;
-}
-
-/* Vivid glow orbs on black */
-html.dark .glow-dot { opacity: 0.4 !important; filter: blur(100px) !important; }
-
-/* Purple grid lines */
-html.dark .bg-grid-dark {
-  background-image:
-    linear-gradient(rgba(124,58,237,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.08) 1px, transparent 1px) !important;
-}
-html.dark .bg-grid-light, html.dark .bg-grid {
-  background-image:
-    linear-gradient(rgba(124,58,237,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.04) 1px, transparent 1px) !important;
-}
-
-/* Spinning rings purple glow */
-html.dark [class*="animate-spin-slow"] {
-  border-color: rgba(124,58,237,0.15) !important;
-}
-
-/* Dashboard images - purple glow */
-html.dark img[style*="boxShadow"] {
-  box-shadow: 0 20px 60px rgba(124,58,237,0.3) !important;
-  border-color: rgba(124,58,237,0.25) !important;
-}
-
-/* Stats strip */
-html.dark section[style*="0176D3 0%"] {
-  background: linear-gradient(135deg, #050505, #0F0A1A) !important;
-}
-
-/* Footer */
-html.dark footer, html.dark footer[style*="032D60"] {
-  background-color: #050505 !important;
-}
-
-/* About globe section */
-html.dark section[style*="linear-gradient(135deg,#032D60"] {
-  background: #050505 !important;
-}
-
-/* ---- BLOG ---- */
-html.dark article { background-color: #050505 !important; }
-html.dark .bg-cs-bgsub { background-color: #0A0A0A !important; }
-
-/* ---- MICRO-INTERACTIONS ---- */
-html.dark a:hover { color: #A78BFA !important; }
-html.dark .glass-card { transition: all 0.3s cubic-bezier(0.4,0,0.2,1) !important; }

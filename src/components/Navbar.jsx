@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
          ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
 
 const clouds = [
   {
@@ -254,7 +253,6 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3 animate-fade-in">
-          <ThemeToggle />
           <a href="https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7" target="_blank" rel="noopener noreferrer">
             <img
               src={import.meta.env.BASE_URL + "salesforce-partner-badge.png"}
@@ -321,7 +319,6 @@ export default function Navbar() {
             ))}
 
             <div className="pt-3 mt-2 flex items-center gap-3" style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-              <ThemeToggle />
               <Link to="/contact" onClick={() => setOpen(false)}
                 className="btn-primary flex-1 justify-center text-sm">
                 Free Consultation
