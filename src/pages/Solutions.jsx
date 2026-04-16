@@ -14,7 +14,7 @@ const solutionFaqs = [
 
 function PageHero() {
   return (
-    <div className="pt-16" />
+    <div className="pt-16"></div>
   )
 }
 
