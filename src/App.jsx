@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Chatbot from './components/Chatbot'
@@ -12,6 +13,7 @@ import BlogPost from './pages/BlogPost'
 import Careers from './pages/Careers'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
+import Services from './pages/Services'
 import AgentforcePage    from './pages/clouds/Agentforce'
 import SalesCloudPage    from './pages/clouds/SalesCloud'
 import ServiceCloudPage  from './pages/clouds/ServiceCloud'
@@ -48,6 +50,7 @@ export default function App() {
           <Route path="/solutions/platform"         element={<PlatformPage />} />
           <Route path="/solutions/slack"            element={<SlackPage />} />
           <Route path="/solutions/health-cloud"     element={<HealthCloudPage />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
@@ -59,6 +62,7 @@ export default function App() {
       </main>
       <Footer />
       <Chatbot />
+      <Analytics />
     </div>
   )
 }

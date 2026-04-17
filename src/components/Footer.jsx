@@ -25,6 +25,7 @@ const cols = [
   {
     heading: 'Company',
     links: [
+      { label: 'Services',           to: '/services' },
       { label: 'About Us',          to: '/about' },
       { label: 'Blog & Insights',   to: '/blog' },
       { label: 'Careers',           to: '/careers' },

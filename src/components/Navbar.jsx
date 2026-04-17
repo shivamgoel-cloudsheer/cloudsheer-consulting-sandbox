@@ -78,6 +78,7 @@ const clouds = [
 ]
 
 const navLinks = [
+  { label: 'Services', to: '/services' },
   { label: 'About',   to: '/about' },
   { label: 'Blog',    to: '/blog' },
   { label: 'Careers', to: '/careers' },
