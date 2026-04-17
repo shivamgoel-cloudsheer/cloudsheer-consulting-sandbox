@@ -508,13 +508,31 @@ function findAnswer(input) {
 export default function Chatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Hi! I\'m the Cloudsheer assistant. Ask me anything about Salesforce, Agentforce, or our services. How can I help?' }
+    { from: 'bot', text: 'Hi! I\'m CAI, your Salesforce assistant. Ask me anything about Salesforce, Agentforce, or our services. How can I help?' }
   ])
   const [input, setInput] = useState('')
   const [leadCaptured, setLeadCaptured] = useState(false)
   const [showLeadForm, setShowLeadForm] = useState(false)
   const [leadData, setLeadData] = useState({ name: '', email: '', company: '' })
   const [msgCount, setMsgCount] = useState(0)
+  const [sessionId] = useState(() => 'ses_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8))
+
+  // Save session to Upstash Redis after every message
+  const saveSession = (msgs, captured, ld) => {
+    try {
+      fetch('/api/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId,
+          messages: msgs.map(m => ({ from: m.from, text: m.text?.substring(0, 500) })),
+          page: window.location.pathname,
+          leadCaptured: captured,
+          leadData: ld,
+        }),
+      }).catch(() => {})
+    } catch {}
+  }
   const chatRef = useRef(null)
 
   useEffect(() => {
@@ -609,10 +627,9 @@ export default function Chatbot() {
 
     setLeadCaptured(true)
     setShowLeadForm(false)
-    setMessages(prev => [...prev, {
-      from: 'bot',
-      text: 'Thanks ' + (leadData.name.split(' ')[0] || '') + '! Our team will reach out within 4 hours. In the meantime, feel free to keep asking questions!'
-    }])
+    const thankMsg = 'Thanks ' + (leadData.name.split(' ')[0] || '') + '! Our team will reach out within 4 hours. In the meantime, feel free to keep asking questions!'
+    setMessages(prev => [...prev, { from: 'bot', text: thankMsg }])
+    saveSession([...messages, { from: 'bot', text: thankMsg }], true, leadData)
   }
 
   const quickQuestions = [
@@ -651,13 +668,17 @@ export default function Chatbot() {
 
       const data = await res.json()
       setTyping(false)
+      const newMsgs = [...messages, { from: 'user', text: userMsg }, { from: 'bot', text: data.text }]
       setMessages(prev => [...prev, { from: 'bot', text: data.text }])
+      saveSession(newMsgs, leadCaptured, leadData)
     } catch {
       // Fallback to local knowledge base
       setTyping(false)
       const answer = findAnswer(userMsg)
       if (answer) {
+        const newMsgs = [...messages, { from: 'user', text: userMsg }, { from: 'bot', text: answer }]
         setMessages(prev => [...prev, { from: 'bot', text: answer }])
+        saveSession(newMsgs, leadCaptured, leadData)
       } else {
         setMessages(prev => [...prev, { from: 'bot', text: "I'm having a quick connection issue. You can ask me again, or book a free discovery call with our team for a detailed conversation." }])
       }
