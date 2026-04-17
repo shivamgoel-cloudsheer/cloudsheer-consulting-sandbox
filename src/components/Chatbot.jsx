@@ -734,7 +734,7 @@ export default function Chatbot() {
                 <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2" style={{ borderColor: '#032D60' }} />
               </div>
               <div>
-                <p className="text-white font-bold">Cloudsheer AI</p>
+                <p className="text-white font-bold">CAI</p>
                 <p className="text-[11px]" style={{ color: 'rgba(186,220,255,0.8)' }}>Your Salesforce expert</p>
               </div>
             </div>
