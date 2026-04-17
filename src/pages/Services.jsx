@@ -508,9 +508,6 @@ function HowWeWork() {
         </div>
 
         <div className="grid md:grid-cols-4 gap-5 relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-16 left-[12.5%] right-[12.5%] h-0.5 z-0"
-            style={{ background: 'linear-gradient(90deg, rgba(255,255,255,0.15), rgba(245,158,11,0.4), rgba(255,255,255,0.15))' }} />
 
           {steps.map(({ n, title, desc, icon }, i) => (
             <div key={n} className="relative z-10 text-center animate-fade-up" style={{ animationDelay: `${i * 100}ms` }}>
