@@ -508,7 +508,7 @@ function findAnswer(input) {
 export default function Chatbot() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([
-    { from: 'bot', text: 'Hi! I\'m CAI, your Salesforce assistant. Ask me anything about Salesforce, Agentforce, or our services. How can I help?' }
+    { from: 'bot', text: 'Hi! I\'m Marc, your Salesforce assistant. Ask me anything about Salesforce, Agentforce, or our services. How can I help?' }
   ])
   const [input, setInput] = useState('')
   const [leadCaptured, setLeadCaptured] = useState(false)
@@ -755,7 +755,7 @@ export default function Chatbot() {
                 <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-green-400 border-2" style={{ borderColor: '#032D60' }} />
               </div>
               <div>
-                <p className="text-white font-bold">CAI</p>
+                <p className="text-white font-bold">Marc</p>
                 <p className="text-[11px]" style={{ color: 'rgba(186,220,255,0.8)' }}>Your Salesforce expert</p>
               </div>
             </div>
