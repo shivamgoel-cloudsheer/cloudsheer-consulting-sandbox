@@ -281,7 +281,7 @@ function TrustedBy() {
             {scrollItems.map((client, i) => (
               <span key={i} className="shrink-0 flex items-center">
                 {client.logo ? (
-                  <img src={client.logo} alt={client.name} className="h-7 sm:h-9 w-auto" />
+                  <img src={client.logo} alt={client.name} className="h-7 sm:h-9 w-auto pointer-events-none" draggable="false" />
                 ) : (
                   <span className="font-bold text-sm tracking-wide" style={{ color: '#032D60' }}>{client.name}</span>
                 )}
