@@ -5,7 +5,7 @@ import {
   Cable, ChevronRight, Rocket, Wrench, Shield,
   TrendingUp, Clock, Users, Zap, Target, GitMerge,
   RefreshCw, Database, Lock, BarChart3, Workflow,
-  ArrowUpRight, Circle,
+  ArrowUpRight,
 } from 'lucide-react'
 import FAQ from '../components/FAQ'
 
@@ -121,10 +121,17 @@ const serviceFaqs = [
   { q: 'Do you offer fixed-price or time-and-materials?', a: 'Both. Greenfield and brownfield implementations are typically fixed-price after scoping. Integration projects can be either. Managed services are a monthly retainer based on hours and scope.' },
 ]
 
-/* ─── Hero ──────────────────────────────────────────────────── */
+/* ─── Hero + Stats (unified) ────────────────────────────────── */
 function Hero() {
+  const stats = [
+    { val: '250+', label: 'Projects Delivered' },
+    { val: '60+', label: 'Salesforce Certifications' },
+    { val: '40+', label: 'Team Members' },
+    { val: '100%', label: 'Project Success Rate' },
+  ]
+
   return (
-    <section className="relative min-h-[70vh] flex items-center overflow-hidden"
+    <section className="relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 50%, #0176D3 100%)' }}>
       <div className="absolute inset-0 bg-grid-dark" />
 
@@ -136,17 +143,12 @@ function Hero() {
       <div className="glow-dot w-[300px] h-[300px] top-[30%] left-[60%] hidden md:block"
         style={{ backgroundColor: 'rgba(245,158,11,0.08)' }} />
 
-      {/* Spinning rings */}
-      <div className="absolute top-16 right-[8%] w-72 h-72 rounded-full border border-white/5 animate-spin-slow hidden lg:block" />
-      <div className="absolute bottom-20 left-[5%] w-48 h-48 rounded-full border border-white/8 animate-spin-slow hidden lg:block"
-        style={{ animationDirection: 'reverse', animationDuration: '8s' }} />
-
       {/* Floating particles */}
       <div className="absolute top-[25%] left-[15%] w-2 h-2 rounded-full animate-pulse-slow hidden md:block" style={{ backgroundColor: 'rgba(56,189,248,0.5)' }} />
       <div className="absolute top-[65%] left-[80%] w-1.5 h-1.5 rounded-full animate-pulse-slow hidden md:block" style={{ backgroundColor: 'rgba(245,158,11,0.5)', animationDelay: '1s' }} />
       <div className="absolute top-[45%] left-[90%] w-2 h-2 rounded-full animate-pulse-slow hidden md:block" style={{ backgroundColor: 'rgba(99,102,241,0.5)', animationDelay: '2s' }} />
 
-      <div className="section-wrap relative z-10 pt-28 pb-20 sm:pt-32 sm:pb-24">
+      <div className="section-wrap relative z-10 pt-28 pb-10 sm:pt-32 sm:pb-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left */}
           <div>
@@ -195,39 +197,25 @@ function Hero() {
             ))}
           </div>
         </div>
+
+        {/* Stats - integrated into hero */}
+        <div className="mt-14 sm:mt-16 pt-8 sm:pt-10 animate-fade-up-4"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map(({ val, label }, i) => (
+              <div key={label}>
+                <p className="text-2xl sm:text-4xl font-black text-white mb-1">{val}</p>
+                <p className="text-sm font-medium" style={{ color: 'rgba(186,220,255,0.7)' }}>{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="absolute bottom-0 inset-x-0">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 60L1440 60L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 60Z" fill="white" />
         </svg>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Stats bar ─────────────────────────────────────────────── */
-function StatsBar() {
-  const stats = [
-    { val: '250+', label: 'Projects Delivered' },
-    { val: '60+', label: 'Salesforce Certifications' },
-    { val: '40+', label: 'Team Members' },
-    { val: '100%', label: 'Project Success Rate' },
-  ]
-
-  return (
-    <section className="py-10 sm:py-12 relative overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #0176D3 0%, #032D60 100%)' }}>
-      <div className="absolute inset-0 bg-grid-dark" />
-      <div className="section-wrap relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {stats.map(({ val, label }, i) => (
-            <div key={label} className="animate-fade-up" style={{ animationDelay: `${i * 80}ms` }}>
-              <p className="text-3xl sm:text-4xl font-black text-white mb-1">{val}</p>
-              <p className="text-sm font-medium" style={{ color: 'rgba(186,220,255,0.7)' }}>{label}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   )
@@ -581,7 +569,6 @@ export default function Services() {
   return (
     <>
       <Hero />
-      <StatsBar />
       <ServiceSections />
       <Comparison />
       <HowWeWork />
