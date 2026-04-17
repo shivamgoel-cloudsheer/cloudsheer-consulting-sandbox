@@ -36,6 +36,7 @@ const team = [
   { id: 1,  name: 'Tushar Sharma',        role: 'CEO',                              photo: BASE + 'team-opt/Tushar Sharma.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 2,  name: 'Rajat Sharma',         role: 'Technical Delivery Head',          photo: BASE + 'team-opt/Rajat Sharma.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 3,  name: 'Shubham Bansal',       role: 'Growth & Marketing - Head',        photo: BASE + 'team-opt/Shubham Bansal.webp',       linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
+  { id: 4,  name: 'Bharat Sharma',       role: 'Head of Operations',               photo: BASE + 'team-opt/Bharat Sharma.webp',       linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 4,  name: 'Ankur Trivedi',        role: 'Salesforce Developer',             photo: BASE + 'team-opt/Ankur Trivedi.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 5,  name: 'Shainkey Pawaiya',     role: 'Project Manager',                  photo: BASE + 'team-opt/Shainkey Pawaiya.webp',     linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 6,  name: 'Pranay Pandey',        role: 'Team Lead - QA',                   photo: BASE + 'team-opt/Pranay Pandey.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
