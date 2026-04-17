@@ -389,15 +389,16 @@ function ServiceSections() {
 
 /* ─── Quick comparison ──────────────────────────────────────── */
 function Comparison() {
+  const cols = services.map(s => ({ id: s.id, title: s.title.split(' ')[0], color: s.color, gradient: s.gradient, icon: s.icon }))
   const rows = [
-    { label: 'Best for', greenfield: 'New to Salesforce', brownfield: 'Existing Salesforce org', integration: 'Multi-system environments', managed: 'Post go-live support' },
-    { label: 'Timeline', greenfield: '4-8 weeks', brownfield: '3-6 weeks', integration: '2-8 weeks', managed: 'Ongoing' },
-    { label: 'Engagement', greenfield: 'Fixed price', brownfield: 'Fixed price', integration: 'Fixed or T&M', managed: 'Monthly retainer' },
-    { label: 'Agentforce', greenfield: 'Built-in', brownfield: 'Added on', integration: 'Connected', managed: 'Monitored & tuned' },
+    { label: 'Best for', icon: <Target className="w-4 h-4" />, values: ['New to Salesforce', 'Existing Salesforce org', 'Multi-system environments', 'Post go-live support'] },
+    { label: 'Timeline', icon: <Clock className="w-4 h-4" />, values: ['4-8 weeks', '3-6 weeks', '2-8 weeks', 'Ongoing'] },
+    { label: 'Engagement', icon: <Layers className="w-4 h-4" />, values: ['Fixed price', 'Fixed price', 'Fixed or T&M', 'Monthly retainer'] },
+    { label: 'Agentforce', icon: <Zap className="w-4 h-4" />, values: ['Built-in', 'Added on', 'Connected', 'Monitored & tuned'] },
   ]
 
   return (
-    <section className="py-10 sm:py-16 bg-white">
+    <section className="py-10 sm:py-16 bg-cs-bgsub">
       <div className="section-wrap">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="tag mx-auto mb-5"><Layers className="w-3.5 h-3.5" /> Compare Services</div>
@@ -406,62 +407,72 @@ function Comparison() {
         </div>
 
         {/* Desktop table */}
-        <div className="hidden md:block overflow-hidden rounded-2xl"
-          style={{ border: '1px solid rgba(1,118,211,0.12)' }}>
-          {/* Header */}
-          <div className="grid grid-cols-5 gap-0"
-            style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 100%)' }}>
-            <div className="p-5">
-              <p className="text-white/60 text-xs font-semibold uppercase tracking-wider">Feature</p>
-            </div>
-            {services.map(({ title, color, gradient, icon }) => (
-              <div key={title} className="p-5 text-center" style={{ borderLeft: '1px solid rgba(255,255,255,0.08)' }}>
-                <div className="w-9 h-9 rounded-xl mx-auto mb-2 flex items-center justify-center text-white"
-                  style={{ background: gradient }}>
-                  {icon}
+        <div className="hidden md:block max-w-5xl mx-auto">
+          {/* Column headers */}
+          <div className="grid grid-cols-5 gap-4 mb-4 px-2">
+            <div />
+            {cols.map(({ title, color, gradient, icon }) => (
+              <div key={title} className="text-center">
+                <div className="rounded-2xl p-5 transition-all duration-300"
+                  style={{ background: gradient, boxShadow: `0 8px 30px ${color}25` }}>
+                  <div className="w-12 h-12 rounded-2xl mx-auto mb-3 flex items-center justify-center"
+                    style={{ backgroundColor: 'rgba(255,255,255,0.20)', backdropFilter: 'blur(8px)' }}>
+                    <span className="text-white">{icon}</span>
+                  </div>
+                  <p className="text-white font-bold text-sm">{title}</p>
                 </div>
-                <p className="text-white text-xs font-bold">{title.split(' ')[0]}</p>
               </div>
             ))}
           </div>
-          {/* Rows */}
-          {rows.map(({ label, greenfield, brownfield, integration, managed }, ri) => (
-            <div key={label} className="grid grid-cols-5 gap-0"
-              style={{ backgroundColor: ri % 2 === 0 ? '#FAFCFF' : 'white', borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-              <div className="p-4 flex items-center">
-                <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
+
+          {/* Data rows */}
+          <div className="rounded-2xl overflow-hidden"
+            style={{ backgroundColor: 'white', border: '1px solid rgba(1,118,211,0.10)', boxShadow: '0 4px 24px rgba(1,118,211,0.06)' }}>
+            {rows.map(({ label, icon, values }, ri) => (
+              <div key={label} className="grid grid-cols-5 gap-0 group transition-colors duration-200 hover:bg-blue-50/50"
+                style={{ borderTop: ri > 0 ? '1px solid rgba(1,118,211,0.06)' : 'none' }}>
+                <div className="p-5 flex items-center gap-2.5">
+                  <span style={{ color: '#0176D3' }}>{icon}</span>
+                  <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
+                </div>
+                {values.map((val, ci) => (
+                  <div key={ci} className="p-5 flex items-center justify-center">
+                    <span className="text-sm font-medium px-3 py-1.5 rounded-lg"
+                      style={{ backgroundColor: `${cols[ci].color}08`, color: cols[ci].color }}>
+                      {val}
+                    </span>
+                  </div>
+                ))}
               </div>
-              {[greenfield, brownfield, integration, managed].map((val, ci) => (
-                <div key={ci} className="p-4 text-center flex items-center justify-center"
-                  style={{ borderLeft: '1px solid rgba(1,118,211,0.06)' }}>
-                  <span className="text-sm" style={{ color: '#475569' }}>{val}</span>
+            ))}
+
+            {/* CTA row */}
+            <div className="grid grid-cols-5 gap-0"
+              style={{ borderTop: '1px solid rgba(1,118,211,0.06)', backgroundColor: '#FAFCFF' }}>
+              <div className="p-4" />
+              {cols.map(({ id, color, gradient }) => (
+                <div key={id} className="p-4 flex items-center justify-center">
+                  <a href={`#${id}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105"
+                    style={{ background: gradient, boxShadow: `0 4px 12px ${color}25` }}>
+                    Learn more <ArrowUpRight className="w-3 h-3" />
+                  </a>
                 </div>
               ))}
             </div>
-          ))}
-          {/* CTA row */}
-          <div className="grid grid-cols-5 gap-0" style={{ borderTop: '1px solid rgba(1,118,211,0.08)', backgroundColor: '#F0F7FF' }}>
-            <div className="p-4" />
-            {services.map(({ id, color }) => (
-              <div key={id} className="p-4 text-center" style={{ borderLeft: '1px solid rgba(1,118,211,0.06)' }}>
-                <a href={`#${id}`} className="text-xs font-bold hover:underline" style={{ color }}>
-                  Learn more <ArrowUpRight className="w-3 h-3 inline" />
-                </a>
-              </div>
-            ))}
           </div>
         </div>
 
         {/* Mobile cards */}
         <div className="md:hidden grid grid-cols-2 gap-3">
           {services.map(({ id, title, color, gradient, icon, stat, statLabel }) => (
-            <a href={`#${id}`} key={id} className="glass-card p-4 text-center">
-              <div className="w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center text-white"
-                style={{ background: gradient }}>
+            <a href={`#${id}`} key={id} className="glass-card p-5 text-center group hover:scale-[1.02] transition-transform">
+              <div className="w-12 h-12 rounded-2xl mx-auto mb-3 flex items-center justify-center text-white"
+                style={{ background: gradient, boxShadow: `0 6px 20px ${color}25` }}>
                 {icon}
               </div>
               <p className="text-sm font-bold mb-1" style={{ color: '#032D60' }}>{title.split(' ')[0]}</p>
-              <p className="text-lg font-black" style={{ color }}>{stat}</p>
+              <p className="text-xl font-black" style={{ color }}>{stat}</p>
               <p className="text-[10px] uppercase tracking-wider" style={{ color: '#94A3B8' }}>{statLabel}</p>
             </a>
           ))}
