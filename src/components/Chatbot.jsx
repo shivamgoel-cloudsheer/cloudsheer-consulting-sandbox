@@ -564,7 +564,7 @@ export default function Chatbot() {
           }, 1200)
         }
         // Progressive capture - after 3 messages, naturally ask
-        else if (msgCount >= 3 && !leadCaptured && !showLeadForm) {
+        else if (msgCount >= 2 && !leadCaptured && !showLeadForm) {
           setTimeout(() => {
             setMessages(prev => [...prev, {
               from: 'bot',
@@ -691,7 +691,7 @@ export default function Chatbot() {
         setMessages(prev => [...prev, { from: 'bot', text: "I can connect you with one of our Salesforce architects for a detailed assessment. Just share your details below." }])
         setShowLeadForm(true)
       }, 1500)
-    } else if (msgCount >= 3 && !leadCaptured && !showLeadForm) {
+    } else if (msgCount >= 2 && !leadCaptured && !showLeadForm) {
       setTimeout(() => {
         setMessages(prev => [...prev, { from: 'bot', text: "Want me to have our team send you more details? Drop your email below." }])
         setShowLeadForm(true)

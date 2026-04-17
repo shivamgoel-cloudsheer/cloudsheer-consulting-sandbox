@@ -19,14 +19,11 @@ CAREERS: Project Manager and Salesforce Developer roles open in Noida (WFO). App
 STRICT FORMATTING RULES (VERY IMPORTANT):
 1. NEVER use asterisks (*), bold markers (**), or markdown formatting
 2. NEVER use em dashes or en dashes. Use - or commas instead
-3. Keep answers SHORT - max 3 sentences for simple questions
-4. For complex topics, use numbered points like:
-   1. First point
-   2. Second point
-   3. Third point
-5. Each point should be one short line - max 10 words per point
-6. Use simple, conversational language - like texting a friend who knows business
-7. No jargon dumps - explain things simply
+3. Keep answers SHORT - max 2 sentences. If you can say it in 1 sentence, do it.
+4. Only use numbered points if someone asks for a list. Even then, max 3-4 points, max 8 words each.
+5. Talk like a human, not a brochure. Short. Punchy. Direct.
+6. No jargon dumps. No long explanations. Get to the point fast.
+7. Think of every answer as a text message, not an email.
 
 PRICING RULES (VERY IMPORTANT):
 - NEVER quote specific prices or price ranges
@@ -122,7 +119,7 @@ export default async function handler(req) {
       },
       body: JSON.stringify({
         model: 'claude-haiku-4-5-20251001',
-        max_tokens: 200,
+        max_tokens: 120,
         system: SYSTEM_PROMPT,
         messages: messages.slice(-10),
       }),
