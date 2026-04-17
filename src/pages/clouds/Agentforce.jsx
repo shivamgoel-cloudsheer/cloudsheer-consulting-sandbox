@@ -101,12 +101,12 @@ export default function AgentforcePage() {
               <Zap className="w-3.5 h-3.5" /> Agentforce by Salesforce
             </div>
             <h1 className="text-2xl sm:text-4xl md:text-5xl 2xl:text-6xl font-black text-white leading-tight mb-4 sm:mb-6 animate-fade-up text-center">
-              Cut service costs 80%.{' '}
-              <br /><span className="gradient-text-gold">Resolve 40% more cases. Run 24/7.</span>
+              Build Once. Deploy Everywhere.
+              <br /><span className="gradient-text-gold">Agentforce + Headless 360.</span>
             </h1>
             <p className="text-base sm:text-lg leading-relaxed mb-6 animate-fade-up-1"
               style={{ color: 'rgba(148,196,255,0.90)' }}>
-              Agentforce deploys autonomous AI agents built with Agent Builder that handle customer service, sales, and operations - delivering measurable ROI from week one while your team focuses on the work that actually grows revenue.
+              Autonomous agents powered by Atlas Reasoning Engine, built with Agent Builder and 60+ MCP tools, deployed across every channel via Experience Layer - Slack, WhatsApp, voice, web, and mobile.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
               <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"

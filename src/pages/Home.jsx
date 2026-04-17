@@ -36,13 +36,13 @@ function Hero() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
-              <span className="text-white">Your Team Is Drowning in</span><br />
-              <span className="shimmer-text">Manual Work.</span>
+              <span className="text-white">Build Once.</span><br />
+              <span className="shimmer-text">Deploy Everywhere.</span>
             </h1>
 
             <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              Cut support costs 40%. Respond to leads in 2 seconds. Deploy Agentforce agents that work 24/7 inside your Salesforce org.
+              Agentforce agents that work 24/7 across Slack, WhatsApp, voice, and every channel. Powered by Headless 360 and the Atlas Reasoning Engine.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">
@@ -304,12 +304,12 @@ function TrustedBy() {
 /* ─── Why Agentforce-first ──────────────────────────────────── */
 function WhyAgentforce() {
   const points = [
-    { icon: <Clock className="w-5 h-5" />,      title: 'Agentforce SDR Agent',        desc: 'Responds to inbound leads in seconds using Atlas Reasoning Engine. Qualifies, nurtures, and books meetings 24/7 inside Sales Cloud.' },
-    { icon: <Zap className="w-5 h-5" />,         title: 'Agentforce Service Agent',    desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification. 78% deflection without human involvement.' },
+    { icon: <Clock className="w-5 h-5" />,      title: 'Headless 360',                desc: 'Every Salesforce capability is now an API, MCP tool, or CLI command. Build agents that work across Slack, WhatsApp, voice, and any channel.' },
+    { icon: <Zap className="w-5 h-5" />,         title: 'Agentforce Service Agent',    desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification. 78% deflection across every channel.' },
     { icon: <ShieldCheck className="w-5 h-5" />, title: 'Einstein Trust Layer',        desc: 'Every agent action is grounded in your CRM data, logged, and auditable. Built-in guardrails prevent hallucination and unauthorized actions.' },
-    { icon: <BarChart3 className="w-5 h-5" />,   title: 'Agent Builder',               desc: 'Configure Topics, Actions, and Instructions in natural language. Go live in 4-6 weeks with pre-built templates or fully custom agents.' },
-    { icon: <Users className="w-5 h-5" />,        title: 'Human-in-the-Loop',           desc: 'Seamless handoff to Service Console with full conversation context. Agents escalate intelligently based on your business rules.' },
-    { icon: <Settings className="w-5 h-5" />,    title: 'Data Cloud Grounding',        desc: 'Agents access unified customer profiles from Data Cloud - CRM, ERP, and external data - for personalized, accurate responses every time.' },
+    { icon: <BarChart3 className="w-5 h-5" />,   title: 'Agent Builder + Vibes 2.0',   desc: 'Configure Topics, Actions, and Instructions with natural language. Vibe-code with Claude Sonnet 4.5 and 60+ MCP tools.' },
+    { icon: <Users className="w-5 h-5" />,        title: 'Experience Layer',            desc: 'Build once, render everywhere. Same agent logic works natively across Slack, mobile, web, Teams, ChatGPT, and voice.' },
+    { icon: <Settings className="w-5 h-5" />,    title: 'Data Cloud Grounding',        desc: 'Agents access unified customer profiles from Data Cloud - real-time ingestion, identity resolution, and calculated insights.' },
   ]
 
   return (
@@ -431,10 +431,10 @@ function Stats() {
 /* ─── Process ───────────────────────────────────────────────── */
 function Process() {
   const steps = [
-    { n: '01', title: 'Discovery & Org Audit',      desc: 'We audit your Salesforce org, map processes, and identify the highest-impact Agentforce use cases using your actual CRM data.' },
-    { n: '02', title: 'Agent Builder Design',      desc: 'Define Topics, Actions, and Instructions in Agent Builder. Configure Einstein Trust Layer guardrails and Data Cloud grounding.' },
-    { n: '03', title: 'Sandbox Build & Test',      desc: 'Build in sandbox with Flow Builder, Apex integrations, and Knowledge Base. Rigorous testing before production deployment.' },
-    { n: '04', title: 'Deploy & Optimise',         desc: 'Go live with Omni-Channel deployment. Monitor with CRM Analytics dashboards. Continuously optimise agent performance.' },
+    { n: '01', title: 'Discovery & Org Audit',      desc: 'Audit your Salesforce org, map processes, identify highest-impact Agentforce use cases using your CRM data and Headless 360 capabilities.' },
+    { n: '02', title: 'Agent Builder + Vibes',     desc: 'Define Topics, Actions, and Instructions. Leverage Agentforce Vibes 2.0 with 60+ MCP tools for rapid development.' },
+    { n: '03', title: 'Testing Center & Evals',    desc: 'Use Testing Center, Custom Scoring Evals, and Agent Script to validate agent behavior. A/B test before production.' },
+    { n: '04', title: 'Deploy Everywhere',         desc: 'Go live across every channel via Experience Layer - Slack, WhatsApp, mobile, web, voice. Monitor with Session Tracing.' },
   ]
 
   return (

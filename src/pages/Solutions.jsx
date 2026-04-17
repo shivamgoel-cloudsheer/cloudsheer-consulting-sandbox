@@ -156,7 +156,7 @@ const clouds = [
   { icon: <Mail className="w-6 h-6" />,         title: 'Marketing Cloud Engagement',     desc: 'Journey Builder, Einstein Send Time Optimization, Content Builder, and Account Engagement (Pardot). 28% higher marketing ROI.', tags: ['Journey Builder', 'Einstein STO', 'Account Engagement'] },
   { icon: <Database className="w-6 h-6" />,     title: 'Data Cloud',                     desc: 'Unified customer profiles, identity resolution, calculated insights, and real-time segments. Power smarter agents and personalization.', tags: ['Unified Profiles', 'Identity Resolution', 'Real-Time Segments'] },
   { icon: <BarChart3 className="w-6 h-6" />,    title: 'CRM Analytics + Tableau',        desc: 'Analytics Studio, Einstein Discovery, Einstein Predictions, and Tableau dashboards embedded inside Salesforce. 382% ROI.', tags: ['Einstein Discovery', 'Analytics Studio', 'Tableau'] },
-  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Agents',       desc: 'Built with Agent Builder using Topics, Actions, and Instructions. Custom agents for HR, Finance, Operations with Flow and Apex integration.', tags: ['Agent Builder', 'Flow Integration', 'Custom Topics'] },
+  { icon: <Bot className="w-6 h-6" />,          title: 'Custom Agentforce Agents',       desc: 'Built with Agent Builder + Vibes 2.0, 60+ MCP tools, and Headless 360. Deploy across every channel via Experience Layer.', tags: ['Headless 360', 'Vibes 2.0', 'MCP Tools'] },
 ]
 
 function SalesforceClouds() {
