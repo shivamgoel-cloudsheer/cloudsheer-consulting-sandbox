@@ -513,7 +513,7 @@ export default function Chatbot() {
   const [input, setInput] = useState('')
   const [leadCaptured, setLeadCaptured] = useState(false)
   const [showLeadForm, setShowLeadForm] = useState(false)
-  const [leadData, setLeadData] = useState({ name: '', email: '', company: '' })
+  const [leadData, setLeadData] = useState({ first_name: '', last_name: '', email: '', company: '' })
   const [msgCount, setMsgCount] = useState(0)
   const [sessionId] = useState(() => 'ses_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8))
 
@@ -588,7 +588,7 @@ export default function Chatbot() {
   }
 
   const submitLead = () => {
-    if (!leadData.email) return
+    if (!leadData.email || !leadData.first_name) return
 
     // Send to Salesforce Web-to-Lead
     const iframe = document.createElement('iframe')
@@ -603,9 +603,9 @@ export default function Chatbot() {
 
     const fields = {
       oid: SF_ORG,
-      retURL: window.location.href,
-      first_name: leadData.name.split(' ')[0] || '',
-      last_name: leadData.name.split(' ').slice(1).join(' ') || leadData.name,
+      retURL: 'http://cloudsheer.com',
+      first_name: leadData.first_name,
+      last_name: leadData.last_name || leadData.first_name,
       email: leadData.email,
       company: leadData.company || 'Not provided',
       lead_source: 'Website Chatbot',
@@ -627,7 +627,7 @@ export default function Chatbot() {
 
     setLeadCaptured(true)
     setShowLeadForm(false)
-    const thankMsg = 'Thanks ' + (leadData.name.split(' ')[0] || '') + '! Our team will reach out within 4 hours. In the meantime, feel free to keep asking questions!'
+    const thankMsg = 'Thanks ' + (leadData.first_name || '') + '! Our team will reach out within 4 hours. In the meantime, feel free to keep asking questions!'
     setMessages(prev => [...prev, { from: 'bot', text: thankMsg }])
     saveSession([...messages, { from: 'bot', text: thankMsg }], true, leadData)
   }
@@ -819,13 +819,18 @@ export default function Chatbot() {
                 </button>
                 <p className="text-sm font-bold" style={{ color: '#032D60' }}>Let's connect you with our team</p>
                 <p className="text-[11px]" style={{ color: '#94A3B8' }}>We'll get back to you within 4 hours</p>
-                <input type="text" placeholder="Your name"
-                  value={leadData.name} onChange={e => setLeadData({ ...leadData, name: e.target.value })}
-                  className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
-                <input type="email" placeholder="Work email *"
+                <div className="grid grid-cols-2 gap-2">
+                  <input type="text" placeholder="First name *" maxLength={40}
+                    value={leadData.first_name} onChange={e => setLeadData({ ...leadData, first_name: e.target.value })}
+                    className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
+                  <input type="text" placeholder="Last name *" maxLength={80}
+                    value={leadData.last_name} onChange={e => setLeadData({ ...leadData, last_name: e.target.value })}
+                    className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
+                </div>
+                <input type="email" placeholder="Work email *" maxLength={80}
                   value={leadData.email} onChange={e => setLeadData({ ...leadData, email: e.target.value })}
                   className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
-                <input type="text" placeholder="Company"
+                <input type="text" placeholder="Company" maxLength={40}
                   value={leadData.company} onChange={e => setLeadData({ ...leadData, company: e.target.value })}
                   className="w-full text-sm px-4 py-2.5 rounded-xl border outline-none focus:border-blue-400 transition-colors" style={{ borderColor: '#E8ECF3' }} />
                 <button onClick={submitLead}
