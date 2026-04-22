@@ -42,7 +42,7 @@ const team = [
   { id: 6,  name: 'Pranay Pandey',        role: 'Team Lead - QA',                   photo: BASE + 'team-opt/Pranay Pandey.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 7,  name: 'Arihanta Jain',        role: 'Assistant Manager HR',             photo: BASE + 'team-opt/Arihanta Jain.webp',        linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 9,  name: 'Shivam Goel',          role: 'Strategy & Growth - Associate',    photo: BASE + 'team-opt/Shivam Goel.webp',          linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
-  { id: 10, name: 'Prateek Jain',         role: 'Growth & Marketing - Associate',   photo: BASE + 'team-opt/Prateek Jain.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
+  { id: 10, name: 'Prateek Jain',         role: 'Strategy & Growth - Associate',    photo: BASE + 'team-opt/Prateek Jain.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 11, name: 'Tammana Gautam',       role: 'BA - Salesforce',                  photo: BASE + 'team-opt/Tammana Gautam.webp',       linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 12, name: 'Vishal Yadav',         role: 'BA - Salesforce',                  photo: BASE + 'team-opt/Vishal Yadav.webp',         linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
   { id: 13, name: 'Abhishek Kaplesh',     role: 'Salesforce Developer',             photo: BASE + 'team-opt/Abhishek Kaplesh.webp',     linkedin: 'https://www.linkedin.com/company/cloud-sheer/' },
