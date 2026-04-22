@@ -1,21 +1,75 @@
 # Cloudsheer Consulting - Full Context
 
-> Certified Salesforce & Agentforce consulting partner. Mid-market and enterprise focus. 40+ team members, 60+ certifications, 4 global offices.
+> Certified Salesforce & Agentforce consulting partner. Mid-market and enterprise focus. 40+ team members, 60+ certifications, 4 global offices, 100% project success rate across 250+ engagements.
+
+## Canonical URL
+https://www.cloudsheer.com
 
 ## Company Overview
-Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce Agentforce. We are a certified Salesforce partner listed on AppExchange. Our team of 40+ spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
+Cloudsheer Consulting helps businesses automate support, sales, and operations using Salesforce and Agentforce (autonomous AI agents). We are a certified Salesforce partner listed on AppExchange. Our team of 40+ spans Dallas (USA), Delhi (India), London (UK), and New York (USA).
 
 ## What We Do
-We implement the full Salesforce suite with a specialty in Agentforce - autonomous Agentforce that work 24/7 inside your CRM. We handle everything from discovery to deployment to ongoing optimization.
+We implement the full Salesforce suite with a specialty in Agentforce - autonomous AI agents that work 24/7 inside your CRM. We handle everything from discovery to deployment to ongoing optimization, supported by four distinct service lines.
+
+## Services We Offer
+
+### Greenfield Implementation
+New Salesforce deployments from scratch. We design and build your CRM end-to-end - data model, objects, automation, integrations, and Agentforce agents - so you launch with a system that scales from day one.
+- Full org design including objects, fields, page layouts, and security model
+- Sales, Service, or Marketing Cloud configured to your processes
+- Data migration from spreadsheets, legacy CRMs, or ERPs
+- Agentforce agents built and deployed from the start
+- User training and adoption playbooks
+- Go live in 4-8 weeks with post-launch support
+- Fixed price engagements
+- Ideal for companies new to Salesforce
+URL: https://www.cloudsheer.com/services#greenfield
+
+### Brownfield Implementation
+Optimization, cleanup, and enhancement of existing Salesforce orgs. We audit your current setup, remove technical debt, re-engineer processes, and layer on Agentforce.
+- Full org health check including automation audit, data quality, and security review
+- Technical debt cleanup - redundant flows, unused fields, broken automations
+- Process re-engineering aligned to current business needs
+- Agentforce agents layered onto existing data and processes
+- Performance optimization for Large Data Volumes (LDV)
+- Zero disruption - phased rollout with parallel testing
+- Fixed price engagements, typical delivery in 3-6 weeks
+- Ideal for companies with existing Salesforce orgs needing optimization
+URL: https://www.cloudsheer.com/services#brownfield
+
+### Integration Services
+Reliable, scalable integrations between Salesforce and your other business systems.
+- API-led connectivity using MuleSoft or native Salesforce APIs
+- ERP integrations including SAP, NetSuite, Microsoft Dynamics, QuickBooks
+- Marketing platform sync including HubSpot, Marketo, Mailchimp, Account Engagement
+- Data Cloud ingestion from any source - batch or real-time streaming
+- Custom middleware and webhook-based integrations
+- SSO and identity management via SAML 2.0 or OpenID Connect
+- Fixed price or time-and-materials, 2-8 weeks typical delivery
+- Ideal for businesses running multiple systems needing unified customer view
+URL: https://www.cloudsheer.com/services#integration
+
+### Managed Services
+Ongoing Salesforce and Agentforce support on a monthly retainer.
+- Dedicated Salesforce admin and developer support
+- Agentforce agent monitoring, tuning, and performance optimization
+- Salesforce release management - seasonal updates, sandbox testing
+- New feature development and enhancement requests
+- User training, onboarding, and adoption tracking
+- Monthly health reports with actionable recommendations
+- 24/7 support coverage available
+- Ideal for companies that want expert support without hiring full-time staff
+URL: https://www.cloudsheer.com/services#managed
 
 ## Solutions We Offer
 
-### Agentforce (Agentforce)
-Deploy autonomous Agentforce for customer service, sales development, and operations. Agents resolve cases, qualify leads, update records, and book meetings without human involvement.
+### Agentforce
+Deploy autonomous AI agents for customer service, sales development, and operations. Agents resolve cases, qualify leads, update records, and book meetings without human involvement.
 - 40% increase in case resolution (Wiley case study)
 - 73% of queries handled autonomously (OpenTable)
 - $2 avg cost per conversation vs $11+ human agent
 - Go live in 4-6 weeks
+URL: https://www.cloudsheer.com/solutions/agentforce
 
 ### Sales Cloud
 Close more deals with AI-powered pipeline management, lead scoring, forecasting, and CPQ.
@@ -23,6 +77,7 @@ Close more deals with AI-powered pipeline management, lead scoring, forecasting,
 - 44% higher win rates with AI-guided selling
 - 42% improvement in forecast accuracy
 - 5x ROI over 3 years (Forrester TEI)
+URL: https://www.cloudsheer.com/solutions/sales-cloud
 
 ### Service Cloud
 World-class customer support with omni-channel routing, AI self-service, field service, and SLA management.
@@ -30,6 +85,7 @@ World-class customer support with omni-channel routing, AI self-service, field s
 - 27% reduction in support costs
 - 32% increase in first-contact resolution
 - #1 CRM for service - 18 years running (Gartner)
+URL: https://www.cloudsheer.com/solutions/service-cloud
 
 ### Marketing Cloud
 Personalized customer journeys across email, SMS, social, and advertising with Einstein AI optimization.
@@ -37,6 +93,7 @@ Personalized customer journeys across email, SMS, social, and advertising with E
 - 25% marketing ROI increase
 - 41% higher CTR with Einstein Send Time Optimization
 - 50% reduction in campaign build time
+URL: https://www.cloudsheer.com/solutions/marketing-cloud
 
 ### Commerce Cloud
 Unified B2B and B2C digital commerce with AI-powered personalization, order management, and global scaling.
@@ -44,6 +101,7 @@ Unified B2B and B2C digital commerce with AI-powered personalization, order mana
 - 25% AOV increase with Einstein recommendations
 - 32% cart abandonment reduction
 - 68% faster time-to-market
+URL: https://www.cloudsheer.com/solutions/commerce-cloud
 
 ### Experience Cloud
 Branded customer portals, partner communities, and self-service sites connected natively to Salesforce CRM.
@@ -51,6 +109,7 @@ Branded customer portals, partner communities, and self-service sites connected 
 - 3.4x ROI (Forrester TEI)
 - 40% faster case resolution with portal tracking
 - 50% partner onboarding cost reduction
+URL: https://www.cloudsheer.com/solutions/experience-cloud
 
 ### Analytics / CRM Analytics / Tableau
 Real-time dashboards, AI predictions, and visual analytics embedded where your team works.
@@ -58,6 +117,7 @@ Real-time dashboards, AI predictions, and visual analytics embedded where your t
 - 28% improvement in forecast accuracy
 - 65% faster report generation
 - 10M+ Tableau users worldwide
+URL: https://www.cloudsheer.com/solutions/analytics
 
 ### Salesforce Platform & AppExchange
 Custom app development with low-code tools, Flow Builder automation, API integrations, and AppExchange solutions.
@@ -65,6 +125,7 @@ Custom app development with low-code tools, Flow Builder automation, API integra
 - 70% faster app delivery
 - 80% less custom code with Flow Builder
 - 10,000+ AppExchange apps available
+URL: https://www.cloudsheer.com/solutions/platform
 
 ### Slack
 AI-powered collaboration platform integrated with Salesforce CRM for sales, service, and operations teams.
@@ -72,6 +133,7 @@ AI-powered collaboration platform integrated with Salesforce CRM for sales, serv
 - 29% fewer meetings
 - 32% fewer internal emails
 - Slack Sales Elevate for pipeline management inside Slack
+URL: https://www.cloudsheer.com/solutions/slack
 
 ### Health Cloud
 Patient/member 360, care coordination, engagement portals, and health data integration for healthcare and life sciences. HIPAA compliant.
@@ -79,6 +141,7 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 - 25% administrative cost reduction
 - 40% faster care coordination
 - HL7 FHIR and EHR integration support
+URL: https://www.cloudsheer.com/solutions/health-cloud
 
 ## Our Process (The Cloudsheer Method)
 1. **Discovery** - Audit your Salesforce org, map processes, identify highest-impact use cases
@@ -86,10 +149,13 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 3. **Build & Validate** - Rigorous sandbox testing before production deployment
 4. **Go Live & Measure** - Launch with KPI tracking, 30 days post-launch support included
 
-## Typical Engagement Timeline
-- Standard Salesforce implementation: 4-8 weeks
+## Typical Engagement Timelines
+- Greenfield Salesforce implementation: 4-8 weeks
+- Brownfield optimization: 3-6 weeks
+- Integration projects: 2-8 weeks
 - Agentforce agent deployment: 3-6 weeks
 - Multi-cloud implementation: 8-16 weeks
+- Managed Services: ongoing monthly retainer
 
 ## Team
 40+ members across 4 offices with 60+ Salesforce certifications covering:
@@ -101,6 +167,7 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 - Agentforce Specialist
 - Data Cloud Consultant
 - Tableau CRM Analytics
+- Application Architect / System Architect
 
 ## Industries Served
 - Financial Services
@@ -110,11 +177,19 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 - Manufacturing
 - Professional Services
 
+## Careers
+Currently hiring 3 Work From Office roles in Noida, India:
+- Tech Lead - Salesforce (5+ years experience, Engineering)
+- Project Manager (Delivery)
+- Salesforce Developer (Engineering)
+Apply: hr@cloudsheer.com
+URL: https://www.cloudsheer.com/careers
+
 ## Contact Information
 - **Email**: hello@cloudsheer.com
-- **Careers**: careers@cloudsheer.com
+- **Careers / HR**: hr@cloudsheer.com
 - **Book a call**: https://cal.com/cloudsheer-consulting/30min
-- **Website**: https://cloudsheer-consulting.vercel.app
+- **Website**: https://www.cloudsheer.com
 - **LinkedIn**: https://www.linkedin.com/company/cloud-sheer/
 - **AppExchange**: https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7
 
@@ -125,5 +200,5 @@ Patient/member 360, care coordination, engagement portals, and health data integ
 - New York, New York, USA
 
 ## Blog Topics
-We publish insights on Agentforce deployment, Salesforce implementation best practices, ROI measurement, Data Cloud integration, CRM adoption strategies, and Salesforce release features.
-Blog URL: /blog
+We publish insights on Agentforce deployment, Salesforce implementation best practices, ROI measurement, Data Cloud integration, CRM adoption strategies, and Salesforce release features (including coverage of TDX 2026 and Salesforce Headless 360).
+Blog URL: https://www.cloudsheer.com/blog

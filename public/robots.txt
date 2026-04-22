@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cloudsheer-consulting.vercel.app/sitemap.xml
+Sitemap: https://www.cloudsheer.com/sitemap.xml
