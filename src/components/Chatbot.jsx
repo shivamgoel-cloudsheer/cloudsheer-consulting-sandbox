@@ -315,7 +315,7 @@ const knowledge = {
   "what happens after submitting the contact form": "After submitting, your details are sent to the Cloudsheer team via Salesforce Web-to-Lead. They typically respond within 4 business hours. You can also book a call directly if the request is urgent.",
   "what is cloudsheer linkedin": "The Cloudsheer LinkedIn page is at https://www.linkedin.com/company/cloud-sheer/.",
   "can i speak to a specific team member": "Yes. Book a discovery call and Cloudsheer will match you with the architect most relevant to your project. You can also reach out to hello@cloudsheer.com to connect with a specific team member.",
-  "what is the cloudsheer website url": "The Cloudsheer website is hosted at cloudsheer-consulting.vercel.app.",
+  "what is the cloudsheer website url": "The Cloudsheer website is hosted at www.cloudsheer.com.",
   "what faq questions are on the home page": "The home page FAQs cover: What if we're not ready for Agentforce, How is Cloudsheer different from large SIs, What does pricing look like, What happens after go-live, What if we don't see ROI, What does the discovery call look like, Can you handle large/multi-cloud projects, and How do you handle data security and compliance.",
   "what faq questions are on the about page": "About page FAQs: How many Salesforce certifications does your team hold (60+), What industries do you work with, Where are your offices located, Can I speak to a specific team member before engaging.",
   "what faq questions are on the contact page": "Contact page FAQs: What happens on the discovery call, How quickly do you respond to form submissions (within 4 business hours), Is the discovery call really free (yes), Can I request a specific consultant (yes).",

@@ -16,7 +16,7 @@ export default function Terms() {
         <div className="space-y-8 text-sm leading-relaxed" style={{ color: '#475569' }}>
           <div>
             <h2 className="text-lg font-bold mb-3" style={{ color: '#032D60' }}>1. Agreement to Terms</h2>
-            <p>By accessing and using the Cloudsheer Consulting website (cloudsheer-consulting.vercel.app), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our website.</p>
+            <p>By accessing and using the Cloudsheer Consulting website (www.cloudsheer.com), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should not use our website.</p>
           </div>
 
           <div>

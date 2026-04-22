@@ -16,7 +16,7 @@ export default function Privacy() {
         <div className="space-y-8 text-sm leading-relaxed" style={{ color: '#475569' }}>
           <div>
             <h2 className="text-lg font-bold mb-3" style={{ color: '#032D60' }}>1. Introduction</h2>
-            <p>Cloudsheer Consulting ("we", "us", "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website (cloudsheer-consulting.vercel.app) or engage with our services.</p>
+            <p>Cloudsheer Consulting ("we", "us", "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website (www.cloudsheer.com) or engage with our services.</p>
           </div>
 
           <div>

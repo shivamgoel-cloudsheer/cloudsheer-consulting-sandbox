@@ -661,7 +661,7 @@ export default function BlogPost() {
     "datePublished": article.date,
     "publisher": { "@type": "Organization", "name": "Cloudsheer Consulting" },
     "description": article.sections[0]?.paragraphs?.[0] || article.title,
-    "url": `https://cloudsheer-consulting.vercel.app/blog/${slug}`,
+    "url": `https://www.cloudsheer.com/blog/${slug}`,
   }
 
   return (

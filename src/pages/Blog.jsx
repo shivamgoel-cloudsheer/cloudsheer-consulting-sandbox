@@ -193,7 +193,7 @@ function NewsletterSection() {
 
     const fields = {
       oid: '00D5i00000Cvxdu',
-      retURL: 'https://cloudsheer-consulting.vercel.app/blog',
+      retURL: 'https://www.cloudsheer.com/blog',
       email: email,
       lead_source: 'Website Newsletter',
     }
