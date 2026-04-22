@@ -44,6 +44,47 @@ const openRoles = [
     ],
   },
   {
+    id: 'techlead',
+    title: 'Tech Lead - Salesforce',
+    type: 'Full-Time',
+    location: 'Noida, India (Work From Office)',
+    department: 'Engineering',
+    badge: 'Hiring Now',
+    badgeColor: '#10B981',
+    summary:
+      "We're looking for a hands-on Tech Lead to own technical delivery across our most complex Salesforce and Agentforce engagements. You'll set the architectural direction, lead a small pod of developers, write code yourself, and serve as the technical voice in client conversations.",
+    responsibilities: [
+      'Own end-to-end technical architecture for multi-cloud Salesforce and Agentforce implementations',
+      'Lead a pod of 3-6 developers - assign work, run code reviews, and unblock the team daily',
+      'Stay hands-on - write Apex, LWC, and Flow when complex problems need a senior touch',
+      'Design Agentforce solutions - Topics, Actions, Trust Layer setup, and Agent Builder configurations',
+      'Define integration architecture across Salesforce, MuleSoft, Data Cloud, and external systems',
+      'Run technical discovery workshops and translate business goals into solution designs',
+      'Establish coding standards, deployment patterns, and CI/CD practices across the engineering team',
+      'Mentor junior and mid-level developers - grow the bench through pairing and structured feedback',
+      'Partner with Project Managers on scoping, estimation, and risk management',
+      'Be the technical face of Cloudsheer in client steering committees and architecture reviews',
+    ],
+    requirements: [
+      '5+ years of hands-on Salesforce development with at least 2 years in a lead or architect role',
+      'Deep expertise in Apex, LWC, SOQL, Flow, and Salesforce platform best practices',
+      'Strong understanding of Salesforce architecture - sharing model, governor limits, LDV strategies',
+      'Proven experience designing and building integrations (REST/SOAP, MuleSoft, middleware patterns)',
+      'Track record of leading technical teams on enterprise Salesforce projects end-to-end',
+      'Salesforce Platform Developer II certification (or equivalent senior cert) required',
+      'Application Architect or System Architect certification strongly preferred',
+      'Excellent communication skills with the ability to present to technical and business audiences',
+      'Comfortable working across Dallas, Delhi, London, and New York time zones',
+    ],
+    niceToHave: [
+      'Hands-on Agentforce experience - Agent Builder, Topics, Actions, Atlas Reasoning Engine',
+      'Salesforce Technical Architect (CTA) credential or actively working toward it',
+      'Experience with Data Cloud, Marketing Cloud, or Commerce Cloud',
+      'MuleSoft certifications or significant integration platform experience',
+      'Prior consulting background at a Salesforce SI or ISV partner',
+    ],
+  },
+  {
     id: 'sfdev',
     title: 'Salesforce Developer',
     type: 'Full-Time',
@@ -269,7 +310,7 @@ export default function Careers() {
               { value: '40+',   label: 'Team Members Globally' },
               { value: '4',     label: 'Office Locations' },
               { value: '60+',   label: 'Salesforce Certifications' },
-              { value: '2',     label: 'Roles Open Now' },
+              { value: '3',     label: 'Roles Open Now' },
             ].map(({ value, label }) => (
               <div key={label}>
                 <p className="text-3xl font-black text-white">{value}</p>
@@ -355,7 +396,7 @@ export default function Careers() {
               We Are <span className="gradient-text">Currently Hiring</span>
             </h2>
             <p className="section-sub">
-              Two roles open right now. Click any role to see the full job description and apply directly.
+              Three roles open right now. Click any role to see the full job description and apply directly.
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-5">
