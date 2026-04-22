@@ -16,6 +16,14 @@
   <url><loc>https://www.cloudsheer.com/about</loc><priority>0.8</priority></url>
   <url><loc>https://www.cloudsheer.com/contact</loc><priority>0.9</priority></url>
   <url><loc>https://www.cloudsheer.com/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/salesforce-headless-360-tdx-2026</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/getting-started-agentforce-2026</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/agentforce-vs-einstein-bots</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/salesforce-implementation-checklist</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/roi-agentforce-service-cloud</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/data-cloud-agentforce</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/crm-adoption-agentforce</loc><priority>0.6</priority></url>
+  <url><loc>https://www.cloudsheer.com/blog/spring-25-agentforce</loc><priority>0.6</priority></url>
   <url><loc>https://www.cloudsheer.com/careers</loc><priority>0.6</priority></url>
   <url><loc>https://www.cloudsheer.com/privacy</loc><priority>0.3</priority></url>
   <url><loc>https://www.cloudsheer.com/terms</loc><priority>0.3</priority></url>
