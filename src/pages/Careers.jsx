@@ -137,10 +137,9 @@ function RoleCard({ role }) {
   const [copied, setCopied] = useState(false)
 
   const subject = `Application: ${role.title}`
-  const body = `Hi Cloudsheer team,\n\nI would like to apply for the ${role.title} role.\n\nPlease find my CV attached.\n\nThanks,\n`
-  const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hr@cloudsheer.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  const gmailAppUrl = `googlegmail://co?to=hr@cloudsheer.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  const mailtoUrl = `mailto:hr@cloudsheer.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hr@cloudsheer.com&su=${encodeURIComponent(subject)}`
+  const gmailAppUrl = `googlegmail://co?to=hr@cloudsheer.com&subject=${encodeURIComponent(subject)}`
+  const mailtoUrl = `mailto:hr@cloudsheer.com?subject=${encodeURIComponent(subject)}`
 
   const copyEmail = () => {
     navigator.clipboard?.writeText('hr@cloudsheer.com').then(() => {
