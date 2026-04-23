@@ -138,7 +138,8 @@ function RoleCard({ role }) {
 
   const subject = `Application: ${role.title}`
   const body = `Hi Cloudsheer team,\n\nI would like to apply for the ${role.title} role.\n\nPlease find my CV attached.\n\nThanks,\n`
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hr@cloudsheer.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hr@cloudsheer.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  const gmailAppUrl = `googlegmail://co?to=hr@cloudsheer.com&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   const mailtoUrl = `mailto:hr@cloudsheer.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
   const copyEmail = () => {
@@ -146,6 +147,21 @@ function RoleCard({ role }) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }).catch(() => {})
+  }
+
+  const handleGmailClick = (e) => {
+    const ua = navigator.userAgent
+    const isIOS = /iPhone|iPad|iPod/i.test(ua)
+    const isAndroid = /Android/i.test(ua)
+
+    if (isIOS) {
+      e.preventDefault()
+      window.location.href = gmailAppUrl
+      setTimeout(() => { window.location.href = mailtoUrl }, 1500)
+    } else if (isAndroid) {
+      e.preventDefault()
+      window.location.href = mailtoUrl
+    }
   }
 
   return (
@@ -270,7 +286,8 @@ function RoleCard({ role }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href={gmailUrl} target="_blank" rel="noopener noreferrer" className="btn-primary gap-2 justify-center">
+              <a href={gmailWebUrl} target="_blank" rel="noopener noreferrer" onClick={handleGmailClick}
+                className="btn-primary gap-2 justify-center">
                 <Send className="w-4 h-4" />
                 Apply via Gmail
               </a>
