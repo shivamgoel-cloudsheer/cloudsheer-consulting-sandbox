@@ -4,6 +4,7 @@ import FAQ from '../components/FAQ'
 import {
   ArrowRight, MapPin, Clock, Briefcase, Users, Zap, Heart,
   TrendingUp, Globe, ChevronDown, ChevronUp, Send, CheckCircle2,
+  Mail, Copy, Check,
 } from 'lucide-react'
 
 const openRoles = [
@@ -133,6 +134,19 @@ const perks = [
 
 function RoleCard({ role }) {
   const [open, setOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const subject = `Application: ${role.title}`
+  const body = `Hi Cloudsheer team,\n\nI would like to apply for the ${role.title} role.\n\nPlease find my CV attached.\n\nThanks,\n`
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=hr@cloudsheer.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  const mailtoUrl = `mailto:hr@cloudsheer.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+  const copyEmail = () => {
+    navigator.clipboard?.writeText('hr@cloudsheer.com').then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }).catch(() => {})
+  }
 
   return (
     <div
@@ -236,15 +250,38 @@ function RoleCard({ role }) {
           </div>
 
           {/* Apply CTA */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-6"
-            style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-            <a
-              href={`mailto:hr@cloudsheer.com?subject=Application: ${role.title}`}
-              className="btn-primary gap-2"
-            >
-              <Send className="w-4 h-4" />
-              Apply for this Role
-            </a>
+          <div className="pt-6" style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
+            <p className="text-sm font-bold mb-3" style={{ color: '#032D60' }}>
+              Send your CV to apply
+            </p>
+
+            {/* Email address with copy button */}
+            <div className="flex items-center gap-2 mb-4 p-3 rounded-xl"
+              style={{ backgroundColor: 'rgba(1,118,211,0.05)', border: '1px solid rgba(1,118,211,0.12)' }}>
+              <Mail className="w-4 h-4 shrink-0" style={{ color: '#0176D3' }} />
+              <span className="text-sm font-semibold flex-1 break-all" style={{ color: '#032D60' }}>
+                hr@cloudsheer.com
+              </span>
+              <button onClick={copyEmail}
+                className="shrink-0 flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-all"
+                style={{ backgroundColor: copied ? '#10B981' : 'white', color: copied ? 'white' : '#0176D3', border: '1px solid ' + (copied ? '#10B981' : 'rgba(1,118,211,0.20)') }}>
+                {copied ? <><Check className="w-3.5 h-3.5" /> Copied</> : <><Copy className="w-3.5 h-3.5" /> Copy</>}
+              </button>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href={gmailUrl} target="_blank" rel="noopener noreferrer" className="btn-primary gap-2 justify-center">
+                <Send className="w-4 h-4" />
+                Apply via Gmail
+              </a>
+              <a href={mailtoUrl} className="btn-ghost gap-2 justify-center">
+                <Mail className="w-4 h-4" />
+                Open in Mail App
+              </a>
+            </div>
+            <p className="text-xs mt-3" style={{ color: '#94A3B8' }}>
+              Attach your CV in the email. We reply to every application within 48 hours.
+            </p>
           </div>
         </div>
       )}
