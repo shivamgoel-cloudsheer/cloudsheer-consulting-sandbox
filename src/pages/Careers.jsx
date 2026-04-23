@@ -374,38 +374,6 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* ── Why Cloudsheer ───────────────────────────────────── */}
-      <section className="py-10 sm:py-16 bg-white relative overflow-hidden">
-        <div className="glow-dot w-[350px] h-[350px] top-[-80px] right-[-60px]"
-          style={{ backgroundColor: 'rgba(1,118,211,0.06)' }} />
-        <div className="section-wrap relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">
-              <Heart className="w-3.5 h-3.5" /> Why Join Us
-            </div>
-            <h2 className="section-title mb-4">
-              A Place to Do Your <span className="gradient-text">Best Work</span>
-            </h2>
-            <p className="section-sub">
-              We are small enough that your work has a visible impact, and experienced
-              enough to give you the mentorship and structure to grow fast.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {perks.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
-                  style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}>
-                  <Icon className="w-5 h-5" />
-                </div>
-                <h3 className="font-bold mb-2" style={{ color: '#032D60' }}>{title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Our Hiring Process ───────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">

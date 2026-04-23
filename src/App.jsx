@@ -32,10 +32,25 @@ function ScrollToTop() {
   return null
 }
 
+function GoogleAnalyticsTracker() {
+  const { pathname, search } = useLocation()
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: pathname + search,
+        page_location: window.location.href,
+        page_title: document.title,
+      })
+    }
+  }, [pathname, search])
+  return null
+}
+
 export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
+      <GoogleAnalyticsTracker />
       <Navbar />
       <main className="flex-grow">
         <Routes>
