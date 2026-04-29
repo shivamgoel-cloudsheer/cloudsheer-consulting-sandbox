@@ -1,4 +1,24 @@
 {
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "cloudsheer.com" }],
+      "destination": "https://www.cloudsheer.com/:path*",
+      "permanent": true
+    },
+    { "source": "/cart", "destination": "/", "permanent": true },
+    { "source": "/cart/:path*", "destination": "/", "permanent": true },
+    { "source": "/checkout", "destination": "/", "permanent": true },
+    { "source": "/checkout/:path*", "destination": "/", "permanent": true },
+    { "source": "/post", "destination": "/blog", "permanent": true },
+    { "source": "/post/:path*", "destination": "/blog", "permanent": true },
+    { "source": "/thankyou", "destination": "/contact", "permanent": true },
+    { "source": "/blank-7-1", "destination": "/", "permanent": true },
+    { "source": "/salesforcerealesatecrm", "destination": "/solutions/sales-cloud", "permanent": true },
+    { "source": "/popup-jotcs", "destination": "/", "permanent": true },
+    { "source": "/popup-jotcs/:path*", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
