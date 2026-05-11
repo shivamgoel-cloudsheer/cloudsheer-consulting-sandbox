@@ -53,6 +53,10 @@ export const ROUTE_META = {
     title: 'Salesforce Health Cloud Consulting | Cloudsheer',
     description: 'Health Cloud implementation for providers, payers, and life sciences. HIPAA-aligned care management workflows with Agentforce.',
   },
+  '/case-studies/agentforce-manufacturing': {
+    title: 'Case Study: 92% Autonomous Cases with Agentforce | Cloudsheer',
+    description: 'How Cloudsheer built the multi-agent Agentforce architecture Salesforce said was not possible. Shipped in 11 weeks, 12K+ cases/month, $340K saved annually.',
+  },
   '/about': {
     title: 'About Cloudsheer | Salesforce & Agentforce Specialists',
     description: 'Cloudsheer is a 40+ person certified Salesforce and Agentforce consulting firm with offices in Dallas, New York, Delhi, and London.',

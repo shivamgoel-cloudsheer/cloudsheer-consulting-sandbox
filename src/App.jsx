@@ -25,10 +25,22 @@ import AnalyticsPage     from './pages/clouds/Analytics'
 import PlatformPage      from './pages/clouds/Platform'
 import SlackPage         from './pages/clouds/Slack'
 import HealthCloudPage   from './pages/clouds/HealthCloud'
+import AgentforceManufacturingCase from './pages/case-studies/AgentforceManufacturing'
+import { ROUTE_META, applySEO } from './seoConfig'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
+
+function SEO() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    if (pathname.startsWith('/blog/') && pathname !== '/blog') return
+    const meta = ROUTE_META[pathname] || ROUTE_META['/']
+    applySEO({ title: meta.title, description: meta.description, pathname })
+  }, [pathname])
   return null
 }
 
@@ -51,6 +63,7 @@ export default function App() {
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
       <GoogleAnalyticsTracker />
+      <SEO />
       <Navbar />
       <main className="flex-grow">
         <Routes>
@@ -67,6 +80,7 @@ export default function App() {
           <Route path="/solutions/slack"            element={<SlackPage />} />
           <Route path="/solutions/health-cloud"     element={<HealthCloudPage />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/case-studies/agentforce-manufacturing" element={<AgentforceManufacturingCase />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />

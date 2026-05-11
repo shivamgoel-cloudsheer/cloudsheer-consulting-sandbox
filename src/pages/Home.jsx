@@ -531,9 +531,12 @@ function CaseStudies() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
-          <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            See If This Works for Your Business <ArrowRight className="w-4 h-4" />
+        <div className="text-center mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+          <Link to="/case-studies/agentforce-manufacturing" className="btn-primary">
+            Read the Featured Case Study <ArrowRight className="w-4 h-4" />
+          </Link>
+          <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-ghost">
+            See If This Works for Your Business
           </a>
         </div>
       </div>
