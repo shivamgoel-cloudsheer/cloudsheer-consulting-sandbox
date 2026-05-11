@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2, Award, Quote } from 'lucide-react'
 import FAQ from '../components/FAQ'
 
 const blogFaqs = [
@@ -267,6 +267,57 @@ export default function Blog() {
             Practical guides, real client results, and deep dives into
             Salesforce Agentforce - from the team that deploys it every day.
           </p>
+        </div>
+      </section>
+
+      {/* Featured Case Study banner */}
+      <section className="pb-2 pt-6 sm:pt-10 bg-white">
+        <div className="section-wrap">
+          <Link to="/case-studies/agentforce-manufacturing"
+            className="block relative rounded-3xl overflow-hidden group no-underline"
+            style={{ background: 'linear-gradient(135deg, #032D60 0%, #0A3F80 50%, #0176D3 100%)' }}>
+            <div className="absolute inset-0 bg-grid-dark opacity-60" />
+            <div className="glow-dot w-[500px] h-[500px] top-[-200px] right-[-100px]"
+              style={{ backgroundColor: 'rgba(245,158,11,0.18)' }} />
+            <div className="glow-dot w-[400px] h-[400px] bottom-[-180px] left-[-80px]"
+              style={{ backgroundColor: 'rgba(99,102,241,0.18)' }} />
+
+            <div className="relative z-10 p-6 sm:p-10 lg:p-12 grid lg:grid-cols-5 gap-8 items-center">
+              {/* Left: content */}
+              <div className="lg:col-span-3">
+                <div className="tag-white inline-flex mb-5">
+                  <Award className="w-3.5 h-3.5" /> Featured Case Study
+                </div>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
+                  The Agentforce Architecture<br />
+                  <span className="gradient-text-gold">Salesforce Said Couldn't Be Built</span>
+                </h2>
+                <p className="text-sm sm:text-base mb-6 max-w-xl" style={{ color: 'rgba(186,220,255,0.85)' }}>
+                  How Cloudsheer shipped a multi-agent Service Cloud architecture in 11 weeks that now resolves 92% of warranty cases autonomously — handling 12,000+ emails per month.
+                </p>
+                <span className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-xl transition-all group-hover:gap-3"
+                  style={{ backgroundColor: '#F59E0B', color: '#032D60' }}>
+                  Read the Case Study <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+
+              {/* Right: metric pills */}
+              <div className="lg:col-span-2 grid grid-cols-2 gap-3">
+                {[
+                  { val: '92%',   label: 'Autonomous resolution', color: '#F59E0B' },
+                  { val: '11 wks', label: 'To production', color: '#38BDF8' },
+                  { val: '12K+',  label: 'Cases / month', color: '#A78BFA' },
+                  { val: '$340K', label: 'Annual cost saved', color: '#34D399' },
+                ].map(({ val, label, color }) => (
+                  <div key={label} className="rounded-2xl p-4 text-center"
+                    style={{ backgroundColor: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    <p className="text-2xl sm:text-3xl font-black mb-1" style={{ color }}>{val}</p>
+                    <p className="text-[11px]" style={{ color: 'rgba(186,220,255,0.75)' }}>{label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Link>
         </div>
       </section>
 
