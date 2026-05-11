@@ -291,9 +291,12 @@ export default function Blog() {
 
           {/* Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featured && activeCategory === 'All' && <PostCard post={featured} large />}
-            {rest.map((post) => <PostCard key={post.slug} post={post} large={false} />)}
-            {!featured && filtered.map((post) => <PostCard key={post.slug} post={post} large={false} />)}
+            {activeCategory === 'All' && featured && (
+              <PostCard key={featured.slug} post={featured} large />
+            )}
+            {(activeCategory === 'All' ? rest : filtered).map((post) => (
+              <PostCard key={post.slug} post={post} large={false} />
+            ))}
           </div>
         </div>
       </section>
