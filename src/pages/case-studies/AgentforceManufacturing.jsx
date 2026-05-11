@@ -1,500 +1,498 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {
-  ArrowRight, Quote, Calendar, Clock, User, Building2, Layers,
-  TrendingUp, CheckCircle2, ArrowDown,
-} from 'lucide-react'
 import { applySEO } from '../../seoConfig'
 
-/* ─── Header ───────────────────────────────────────────────── */
-function Header() {
-  return (
-    <section className="pt-28 pb-8 sm:pt-32 sm:pb-12 bg-white">
-      <div className="section-wrap max-w-4xl">
-        <Link to="/blog" className="text-xs font-semibold uppercase tracking-widest inline-flex items-center gap-1.5 mb-6 transition-colors hover:opacity-70"
-          style={{ color: '#0176D3' }}>
-          <span style={{ transform: 'rotate(180deg)', display: 'inline-block' }}>→</span> Back
-        </Link>
-
-        <div className="flex items-center gap-3 mb-5">
-          <span className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
-            style={{ backgroundColor: 'rgba(1,118,211,0.08)', color: '#0176D3', border: '1px solid rgba(1,118,211,0.18)' }}>
-            Case Study
-          </span>
-          <span className="text-[11px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
-            style={{ backgroundColor: 'rgba(99,102,241,0.08)', color: '#6366F1', border: '1px solid rgba(99,102,241,0.18)' }}>
-            Manufacturing
-          </span>
-        </div>
-
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black leading-[1.1] mb-6" style={{ color: '#032D60' }}>
-          The Agentforce architecture<br />
-          <span className="gradient-text">Salesforce said couldn't be built.</span>
-        </h1>
-
-        <p className="text-base sm:text-xl leading-relaxed mb-10 max-w-3xl" style={{ color: '#475569' }}>
-          A leading outdoor products manufacturer needed to automate 12,000 warranty emails per
-          month. Salesforce Support said the architecture wasn't possible. We shipped it to
-          production in 11 weeks. It now resolves 92% of cases without human touch.
-        </p>
-
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pb-8 mb-2 text-sm" style={{ borderBottom: '1px solid rgba(1,118,211,0.10)', color: '#64748B' }}>
-          <span className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold"
-              style={{ background: 'linear-gradient(135deg, #0176D3, #6366F1)' }}>
-              CS
-            </div>
-            Cloudsheer Engineering Team
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Calendar className="w-4 h-4" /> Published April 2026
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4" /> 9 min read
-          </span>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Body: 2-column layout ────────────────────────────────── */
-function Body() {
-  return (
-    <section className="pb-16 sm:pb-24 bg-white">
-      <div className="section-wrap max-w-6xl">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
-
-          {/* Sticky sidebar */}
-          <aside className="lg:col-span-3 order-2 lg:order-1">
-            <div className="lg:sticky lg:top-28 space-y-6">
-              <SidebarBlock label="Client" value="Outdoor & lifestyle products manufacturer" sublabel="Name withheld under NDA" />
-              <SidebarBlock label="Industry" value="Manufacturing / Consumer Goods" />
-              <SidebarBlock label="Platform" value="Salesforce Service Cloud + Agentforce" />
-              <SidebarBlock label="Timeline" value="11 weeks" sublabel="Discovery to production" />
-              <SidebarBlock label="Engagement" value="Multi-agent architecture, ConnectApi Foundation Layer, Apex, Flow Orchestration, Prompt Engineering" />
-
-              <div className="pt-6" style={{ borderTop: '1px solid rgba(1,118,211,0.10)' }}>
-                <p className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: '#94A3B8' }}>Headline Outcomes</p>
-                <ul className="space-y-2.5">
-                  {[
-                    { metric: '92%', label: 'autonomous resolution' },
-                    { metric: '12K+', label: 'cases / month' },
-                    { metric: '~$340K', label: 'annual cost avoided' },
-                    { metric: '0', label: 'user-facing errors since launch' },
-                  ].map(({ metric, label }) => (
-                    <li key={label} className="flex items-baseline gap-2">
-                      <span className="text-base font-black" style={{ color: '#0176D3' }}>{metric}</span>
-                      <span className="text-xs" style={{ color: '#64748B' }}>{label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </aside>
-
-          {/* Article body */}
-          <article className="lg:col-span-9 order-1 lg:order-2 prose-cs">
-            <ProseSection>
-              <PullQuote>
-                Salesforce Support told our client this architecture wasn't possible on Agentforce.
-                We shipped it to production in 11 weeks and it now resolves 92% of inbound warranty
-                cases without human touch.
-              </PullQuote>
-            </ProseSection>
-
-            <Heading>The verdict from Salesforce: "not possible"</Heading>
-            <p>
-              When the client first scoped this build with Salesforce Support and Solution
-              Engineering, the response was direct. <Strong>The architecture wasn't supported. It
-              wasn't recommended. It shouldn't be attempted on Agentforce.</Strong>
-            </p>
-            <p>The objections were structural. Salesforce believed these patterns would fail:</p>
-            <BulletList items={[
-              'A coordinated three-agent topology (Dispatcher + B2B Specialist + B2C Specialist) with programmatic dispatch between agents',
-              'A custom Foundation Layer using direct ConnectApi.EinsteinLlm execution outside standard declarative Agentforce patterns',
-              'Grounding an LLM against an unstructured Excel ContentDocument for live warranty validation',
-              'Operator-controlled "Trap Doors" that let humans bypass AI execution on demand',
-              'Stable recovery from nested call chains — Dispatcher → Apex → Specialist → Dispatcher',
-            ]} />
-            <p>
-              The client brought the problem to Cloudsheer. We built every piece Salesforce said
-              couldn't be built natively, on-platform, while keeping the Einstein Trust Layer fully
-              intact. And we shipped it in 11 weeks.
-            </p>
-
-            <Heading>The business problem</Heading>
-            <p>
-              The client operates in a B2B2C support model. Customers don't contact the manufacturer
-              directly. A product fails, the customer contacts the retailer, the retailer emails
-              the manufacturer's support team with receipts, photos, and warranty details.
-            </p>
-            <p>
-              Before Cloudsheer, the workflow was entirely manual. Roughly 12,000 inbound emails per
-              month, 100% manually triaged. Every case required manual data entry. Warranty
-              validation depended on human lookup. Customers waited around 14 hours for a first
-              response.
-            </p>
-            <InlineStats stats={[
-              { val: '~8 min', label: 'avg. triage per email' },
-              { val: '~6 min', label: 'manual warranty validation' },
-              { val: '~14 hrs', label: 'time to first response' },
-            ]} />
-            <p>
-              Meanwhile, the support team faced two completely different interaction patterns on
-              the same channel. Vendors sent structured submissions — receipts, invoices, customer
-              details, photos. The system needed structured extraction. End customers sent
-              incomplete conversations — missing order numbers, missing product details, partial
-              warranty data. The system needed conversational slot-filling.
-            </p>
-            <p>
-              One monolithic agent couldn't do both well. A specialized pair of agents coordinated
-              by a dispatcher could. That dispatcher architecture is exactly what Salesforce said
-              couldn't be built reliably.
-            </p>
-
-            <Heading>Architecture at a glance</Heading>
-            <p>
-              We designed the platform as four cooperating layers. Each layer represented a piece
-              of the "not possible" answer. Together, they now autonomously process 12,000+
-              inbound cases per month.
-            </p>
-            <ArchitectureLayers />
-
-            <Heading>The Foundation Layer</Heading>
-            <p>
-              This was the layer Salesforce Solution Engineers were most skeptical about. Instead
-              of relying only on declarative Prompt Templates, we built a dedicated Foundation
-              Layer that directly communicates with the Einstein LLM.
-            </p>
-            <p>
-              <Strong>ConnectApiWrapper</Strong> owns all live LLM execution — a centralized,
-              fully audited execution path. <Strong>PromptService</Strong> standardizes payload
-              structure and ensures consistency across all AI interactions. Every AI request flows
-              through this layer: intent classification, summarization, warranty validation, email
-              drafting.
-            </p>
-            <Callout color="#F59E0B">
-              <Strong>Production result:</Strong> mean LLM latency under 1.4 seconds. Fast enough
-              to keep customer interactions feeling instant.
-            </Callout>
-
-            <Heading>The three agents</Heading>
-            <p>
-              <Strong>The Dispatcher</Strong> is the entry point for every interaction. It handles
-              conversation routing, escalation orchestration, vendor/customer classification, and
-              safety validation before delegation. A custom metadata-driven lookup identifies
-              vendors, customers, and registered domains. The result: 100+ vendor domains
-              classified with 100% deterministic accuracy. No model guessing required.
-            </p>
-            <p>
-              <Strong>The B2B Specialist</Strong> is purpose-built for structured ingestion. Case
-              operations scoped to vendor portfolios, OCR + LLM receipt extraction, attachment
-              parsing, and predictable JSON normalization. Vendor receipt processing runs end-to-end
-              in under four seconds.
-            </p>
-            <p>
-              <Strong>The B2C Specialist</Strong> is purpose-built for conversational support and
-              slot-filling. Warranty validation, product Q&A, manual retrieval, and case history
-              retrieval. 78% of customer interactions now resolve in a single contact — without
-              human involvement.
-            </p>
-
-            <Heading>Grounding against an Excel ContentDocument</Heading>
-            <p>
-              The client's warranty master existed entirely inside an Excel file. Not a custom
-              object. Not a database table. <Strong>An Excel document.</Strong>
-            </p>
-            <p>
-              We intentionally avoided forcing unnecessary migration work onto the business. Instead,
-              the system loads the ContentDocument directly and grounds the LLM against it in real
-              time. The AI returns a deterministic result — covered or expired.
-            </p>
-            <p>Salesforce said this couldn't be grounded reliably against free-form Excel data. In production, it works at scale.</p>
-            <BeforeAfter
-              before={{ val: '~6 min', label: 'Manual lookup' }}
-              after={{ val: '~3 sec', label: 'Autonomous validation' }}
-              accent={{ val: '99.4%', label: 'match rate against source-of-truth catalog' }}
-            />
-
-            <Heading>The Apex Core</Heading>
-            <p>
-              A major part of the engagement involved decomposing monolithic Apex into focused
-              services. Each service does one job, uses one prompt, follows one execution path:
-            </p>
-            <BulletList items={[
-              'IntentDetectionService — backed by Intent_Classifier',
-              'CaseDataExtractionService — backed by Generate_Case_Summary',
-              'EmailCommunicationService — backed by Draft_Email_to_customer',
-              'CustomerRecordService — customer matching and record creation',
-              'PromptService — centralized prompt execution',
-            ]} mono />
-            <p>The result: roughly 1,800 lines of brittle Apex retired.</p>
-
-            <Heading>The Trap Door pattern</Heading>
-            <p>
-              Most AI guardrails rely entirely on automated fallbacks. We added something
-              different: <Strong>manual operator kill switches.</Strong> Two critical invocables —
-              ThreadAnalyzerAction and ParsePromptResponse — include admin-controlled Trap Doors.
-            </p>
-            <p>
-              If automation becomes unsafe, the AI step is bypassed, the case routes directly to a
-              human, and routing completes in under five seconds. This wasn't exception handling.
-              It was intentional operator control by design.
-            </p>
-
-            <Heading>The guardrails Salesforce said would break the system</Heading>
-            <p>
-              Salesforce specifically flagged the nested orchestration chain as unstable. We
-              hardened the system across four layers:
-            </p>
-            <BulletList items={[
-              'Pre-delegation safety validation on every agent handoff',
-              'UUID crash protection inside ApexAgentUtils.cls',
-              'Einstein Trust Layer enforcement on all grounding and policy checks',
-              'Operator Trap Doors on every critical invocable',
-            ]} />
-            <Callout color="#10B981">
-              <Strong>Production outcome:</Strong> zero user-facing system errors since launch.
-            </Callout>
-
-            <Heading>Testing infrastructure</Heading>
-            <p>
-              Production-grade agent systems require real testing infrastructure. Most Agentforce
-              implementations skip this entirely. We shipped IntentWrapperMock, reusable mock
-              frameworks, universal Apex harness coverage, and regression coverage across every
-              named agent path. The result: 94% Apex test coverage at deployment.
-            </p>
-
-            <Heading>The business impact</Heading>
-            <p>
-              The architecture wasn't just technically novel. It materially changed operational
-              performance.
-            </p>
-            <ImpactGrid />
-
-            <Heading>The takeaway</Heading>
-            <p>
-              Salesforce Support told the client this architecture wasn't possible on Agentforce.
-              Cloudsheer built it anyway. The platform now handles 12,000+ cases per month,
-              resolves 92% autonomously, operates with operator-grade controls, and runs fully
-              inside Salesforce — all delivered in 11 weeks.
-            </p>
-            <PullQuote>
-              If your Agentforce roadmap is stuck behind a "not possible" answer, that's usually
-              where Cloudsheer starts.
-            </PullQuote>
-          </article>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Sidebar block ────────────────────────────────────────── */
-function SidebarBlock({ label, value, sublabel }) {
-  return (
-    <div>
-      <p className="text-[10px] font-bold uppercase tracking-widest mb-1.5" style={{ color: '#94A3B8' }}>{label}</p>
-      <p className="text-sm font-semibold leading-snug" style={{ color: '#032D60' }}>{value}</p>
-      {sublabel && <p className="text-xs mt-1" style={{ color: '#94A3B8' }}>{sublabel}</p>}
-    </div>
-  )
-}
-
-/* ─── Prose primitives ────────────────────────────────────── */
-function ProseSection({ children }) {
-  return <div className="mb-6">{children}</div>
-}
-
-function Heading({ children }) {
-  return (
-    <h2 className="text-xl sm:text-2xl font-black mt-12 mb-5" style={{ color: '#032D60' }}>
-      {children}
-    </h2>
-  )
-}
-
-function Strong({ children }) {
-  return <strong style={{ color: '#032D60', fontWeight: 700 }}>{children}</strong>
-}
-
-function PullQuote({ children }) {
-  return (
-    <blockquote className="relative my-10 py-6 px-6 sm:px-8 rounded-2xl"
-      style={{ background: 'linear-gradient(135deg, rgba(1,118,211,0.04), rgba(99,102,241,0.04))', borderLeft: '4px solid #0176D3' }}>
-      <Quote className="absolute -top-3 -left-3 w-8 h-8" style={{ color: '#0176D3' }} />
-      <p className="text-base sm:text-lg italic leading-relaxed" style={{ color: '#1E293B' }}>
-        {children}
-      </p>
-    </blockquote>
-  )
-}
-
-function BulletList({ items, mono }) {
-  return (
-    <ul className="space-y-3 mb-6 pl-1">
-      {items.map((item) => (
-        <li key={item} className="flex items-start gap-3">
-          <CheckCircle2 className="w-4 h-4 shrink-0 mt-1" style={{ color: '#0176D3' }} />
-          <span className={mono ? 'font-mono text-sm leading-relaxed' : 'leading-relaxed'} style={{ color: '#334155' }}>
-            {item}
-          </span>
-        </li>
-      ))}
-    </ul>
-  )
-}
-
-function InlineStats({ stats }) {
-  return (
-    <div className="grid sm:grid-cols-3 gap-3 my-8">
-      {stats.map(({ val, label }) => (
-        <div key={label} className="rounded-xl p-4 text-center"
-          style={{ backgroundColor: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.12)' }}>
-          <p className="text-2xl font-black mb-1" style={{ color: '#DC2626' }}>{val}</p>
-          <p className="text-xs" style={{ color: '#64748B' }}>{label}</p>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function Callout({ children, color }) {
-  return (
-    <div className="my-8 rounded-2xl p-5"
-      style={{ backgroundColor: `${color}08`, border: `1px solid ${color}30`, borderLeft: `4px solid ${color}` }}>
-      <p className="text-sm leading-relaxed" style={{ color: '#334155' }}>{children}</p>
-    </div>
-  )
-}
-
-function ArchitectureLayers() {
-  const layers = [
-    { num: '01', title: 'Multi-Agent Routing', desc: 'Dispatcher → B2B Specialist / B2C Specialist' },
-    { num: '02', title: 'Apex Invocables',    desc: 'ThreadAnalyzerAction, ParsePromptResponse' },
-    { num: '03', title: 'Apex Core',          desc: 'IntentDetectionService, CaseDataExtractionService, EmailCommunicationService, CustomerRecordService, PromptService' },
-    { num: '04', title: 'Foundation Layer',   desc: 'ConnectApiWrapper → ConnectApi.EinsteinLlm' },
-  ]
-  return (
-    <div className="my-8 rounded-2xl overflow-hidden"
-      style={{ border: '1px solid rgba(1,118,211,0.12)' }}>
-      {layers.map(({ num, title, desc }, i) => (
-        <div key={num} className="flex items-start gap-4 p-5"
-          style={{ borderTop: i > 0 ? '1px solid rgba(1,118,211,0.08)' : 'none', backgroundColor: i % 2 === 0 ? '#FAFCFF' : 'white' }}>
-          <span className="text-xs font-black shrink-0 mt-0.5 w-6" style={{ color: '#0176D3' }}>{num}</span>
-          <div>
-            <p className="font-bold text-sm" style={{ color: '#032D60' }}>{title}</p>
-            <p className="text-xs mt-0.5 leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-function BeforeAfter({ before, after, accent }) {
-  return (
-    <div className="my-8 rounded-2xl overflow-hidden"
-      style={{ border: '1px solid rgba(1,118,211,0.10)' }}>
-      <div className="grid sm:grid-cols-2">
-        <div className="p-5 text-center" style={{ backgroundColor: 'rgba(239,68,68,0.04)' }}>
-          <p className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#DC2626' }}>Before</p>
-          <p className="text-2xl font-black mb-1" style={{ color: '#DC2626' }}>{before.val}</p>
-          <p className="text-xs" style={{ color: '#64748B' }}>{before.label}</p>
-        </div>
-        <div className="p-5 text-center" style={{ backgroundColor: 'rgba(16,185,129,0.04)' }}>
-          <p className="text-[10px] font-bold uppercase tracking-widest mb-2" style={{ color: '#059669' }}>After</p>
-          <p className="text-2xl font-black mb-1" style={{ color: '#059669' }}>{after.val}</p>
-          <p className="text-xs" style={{ color: '#64748B' }}>{after.label}</p>
-        </div>
-      </div>
-      <div className="p-4 text-center" style={{ borderTop: '1px solid rgba(1,118,211,0.06)', backgroundColor: '#F8FAFC' }}>
-        <span className="text-sm font-bold" style={{ color: '#0176D3' }}>{accent.val}</span>
-        <span className="text-xs ml-2" style={{ color: '#64748B' }}>{accent.label}</span>
-      </div>
-    </div>
-  )
-}
-
-function ImpactGrid() {
-  const rows = [
-    { metric: 'Autonomous case resolution',  before: '0%',          after: '92%' },
-    { metric: 'Avg. triage time per email',   before: '~8 min',      after: '~14 sec' },
-    { metric: 'Time-to-first-response',       before: '~14 hrs',     after: '<90 sec' },
-    { metric: 'First-contact resolution',     before: '31%',         after: '78%' },
-    { metric: 'Manual escalation rate',       before: '100%',        after: '17%' },
-    { metric: 'Warranty validation time',     before: '~6 min',      after: '~3 sec' },
-    { metric: 'CSAT (rolling 90-day)',        before: '64',          after: '86' },
-    { metric: 'Emails handled / month',       before: 'Manual',      after: '12,000+' },
-    { metric: 'FTEs redeployed',              before: '—',           after: '4' },
-    { metric: 'Annual labor cost avoided',    before: '—',           after: '~$340K' },
-    { metric: 'User-facing system errors',    before: '—',           after: '0' },
-  ]
-  return (
-    <div className="my-8 rounded-2xl overflow-hidden"
-      style={{ border: '1px solid rgba(1,118,211,0.10)' }}>
-      <div className="hidden sm:grid grid-cols-12 gap-2 px-5 py-3"
-        style={{ background: '#032D60' }}>
-        <p className="col-span-6 text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(186,220,255,0.8)' }}>Metric</p>
-        <p className="col-span-3 text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(186,220,255,0.8)' }}>Before</p>
-        <p className="col-span-3 text-[10px] font-bold uppercase tracking-wider" style={{ color: 'rgba(186,220,255,0.8)' }}>After</p>
-      </div>
-      {rows.map(({ metric, before, after }, i) => (
-        <div key={metric} className="grid grid-cols-2 sm:grid-cols-12 gap-2 px-5 py-3"
-          style={{ borderTop: i > 0 ? '1px solid rgba(1,118,211,0.06)' : 'none', backgroundColor: i % 2 === 0 ? '#FAFCFF' : 'white' }}>
-          <p className="col-span-2 sm:col-span-6 text-sm" style={{ color: '#334155' }}>{metric}</p>
-          <p className="text-xs sm:col-span-3" style={{ color: '#DC2626' }}>
-            <span className="sm:hidden font-bold mr-1" style={{ color: '#94A3B8' }}>Before:</span>
-            {before}
-          </p>
-          <p className="text-xs sm:col-span-3 font-bold" style={{ color: '#059669' }}>
-            <span className="sm:hidden font-bold mr-1" style={{ color: '#94A3B8' }}>After:</span>
-            {after}
-          </p>
-        </div>
-      ))}
-    </div>
-  )
-}
-
-/* ─── Footer CTA ──────────────────────────────────────────── */
-function FooterCTA() {
-  return (
-    <section className="py-12 sm:py-20" style={{ backgroundColor: '#F8FAFC', borderTop: '1px solid rgba(1,118,211,0.08)' }}>
-      <div className="section-wrap max-w-3xl text-center">
-        <p className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: '#0176D3' }}>Need a build like this?</p>
-        <h2 className="text-2xl sm:text-3xl font-black mb-4" style={{ color: '#032D60' }}>
-          Talk to the team that ships<br />
-          <span className="gradient-text">"not possible"</span> architectures.
-        </h2>
-        <p className="text-sm sm:text-base mb-8" style={{ color: '#64748B' }}>
-          30 minutes with a Salesforce architect. No pitch. Just a clear assessment of what's
-          buildable on Agentforce for your business.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Book a 30-min Architecture Call <ArrowRight className="w-4 h-4" />
-          </a>
-          <Link to="/blog" className="btn-ghost">
-            Back to all stories
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/* ─── Article body wrapper ────────────────────────────────── */
+/* ─── Styles (article typography) ─────────────────────────── */
 function ArticleStyles() {
   return (
     <style>{`
-      .prose-cs { color: #334155; font-size: 1rem; line-height: 1.75; }
-      .prose-cs p { margin-bottom: 1.25rem; }
-      @media (min-width: 640px) {
-        .prose-cs { font-size: 1.0625rem; line-height: 1.8; }
+      .case-study {
+        background: #FAFAF7;
+        color: #1A1A1A;
+        font-family: 'Charter', 'Georgia', 'Times New Roman', serif;
       }
+      .cs-wrap { max-width: 720px; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+      @media (min-width: 1024px) {
+        .cs-wrap { max-width: 1100px; }
+      }
+      .cs-eyebrow {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6B6B6B;
+      }
+      .cs-h1 {
+        font-family: 'Charter', 'Georgia', serif;
+        font-size: 2.25rem;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #0A0A0A;
+      }
+      @media (min-width: 640px) {
+        .cs-h1 { font-size: 3rem; }
+      }
+      @media (min-width: 1024px) {
+        .cs-h1 { font-size: 3.5rem; }
+      }
+      .cs-dek {
+        font-family: 'Charter', 'Georgia', serif;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: #3A3A3A;
+        font-style: italic;
+      }
+      @media (min-width: 640px) {
+        .cs-dek { font-size: 1.3125rem; }
+      }
+      .cs-body {
+        font-family: 'Charter', 'Georgia', serif;
+        font-size: 1.0625rem;
+        line-height: 1.75;
+        color: #2A2A2A;
+      }
+      @media (min-width: 640px) {
+        .cs-body { font-size: 1.1875rem; line-height: 1.8; }
+      }
+      .cs-body p { margin-bottom: 1.4em; }
+      .cs-body strong { font-weight: 700; color: #0A0A0A; }
+      .cs-body a { color: #0A0A0A; text-decoration: underline; text-underline-offset: 3px; }
+      .cs-h2 {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.6875rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #6B6B6B;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #D9D6CE;
+      }
+      .cs-pullquote {
+        font-family: 'Charter', 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        color: #0A0A0A;
+        margin: 3rem 0;
+        padding-left: 1.5rem;
+        border-left: 2px solid #0A0A0A;
+      }
+      @media (min-width: 640px) {
+        .cs-pullquote { font-size: 1.875rem; }
+      }
+      .cs-pullquote-attr {
+        display: block;
+        margin-top: 1rem;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.75rem;
+        font-style: normal;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #6B6B6B;
+      }
+      .cs-list { margin: 0 0 1.4em 0; padding: 0; list-style: none; }
+      .cs-list li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.875rem;
+        font-family: 'Charter', 'Georgia', serif;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: #2A2A2A;
+      }
+      @media (min-width: 640px) {
+        .cs-list li { font-size: 1.1875rem; }
+      }
+      .cs-list li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: #9A9A9A;
+      }
+      .cs-mono li { font-family: 'JetBrains Mono', 'Menlo', monospace; font-size: 0.9rem; }
+      @media (min-width: 640px) {
+        .cs-mono li { font-size: 0.95rem; }
+      }
+      .cs-rule { height: 1px; background: #D9D6CE; border: 0; margin: 5rem 0; }
+      .cs-meta {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.8125rem;
+        color: #6B6B6B;
+      }
+      .cs-meta strong { color: #0A0A0A; font-weight: 600; }
+      .cs-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 2.5rem 0;
+      }
+      .cs-table th {
+        font-size: 0.6875rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        text-align: left;
+        font-weight: 600;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #0A0A0A;
+      }
+      .cs-table td {
+        padding: 0.9rem 0;
+        font-size: 0.9375rem;
+        border-bottom: 1px solid #E8E5DC;
+        color: #2A2A2A;
+        vertical-align: top;
+      }
+      .cs-table td.tnum { font-variant-numeric: tabular-nums; }
+      .cs-table td.after { font-weight: 600; color: #0A0A0A; }
+      .cs-aside {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: #4A4A4A;
+        padding: 1.25rem 0 1.25rem 1.5rem;
+        border-left: 2px solid #D9D6CE;
+        margin: 2rem 0;
+      }
+      .cs-aside-label {
+        display: block;
+        font-size: 0.6875rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .cs-sidenote { color: #6B6B6B; font-size: 0.95rem; }
+      .cs-byline {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.8125rem;
+        color: #6B6B6B;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        padding: 1.25rem 0;
+        border-top: 1px solid #D9D6CE;
+        border-bottom: 1px solid #D9D6CE;
+      }
+      .cs-byline-row { display: flex; gap: 0.5rem; }
+      .cs-byline-label { color: #9A9A9A; }
+      .cs-back {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #6B6B6B;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.15s ease;
+      }
+      .cs-back:hover { color: #0A0A0A; }
     `}</style>
+  )
+}
+
+/* ─── Article ─────────────────────────────────────────────── */
+function Article() {
+  return (
+    <article className="case-study">
+      <div className="cs-wrap" style={{ paddingTop: '7rem', paddingBottom: '5rem' }}>
+
+        {/* Back link */}
+        <Link to="/blog" className="cs-back">← Back to stories</Link>
+
+        {/* Title block */}
+        <header style={{ marginTop: '3rem', marginBottom: '3rem', maxWidth: '900px' }}>
+          <p className="cs-eyebrow" style={{ marginBottom: '1.5rem' }}>
+            Case Study · Manufacturing · April 2026
+          </p>
+          <h1 className="cs-h1" style={{ marginBottom: '1.75rem' }}>
+            The Agentforce architecture Salesforce said couldn't be built.
+          </h1>
+          <p className="cs-dek">
+            A leading outdoor products manufacturer needed to automate twelve thousand
+            warranty emails per month. Salesforce Support said the architecture wasn't
+            possible. Cloudsheer shipped it in eleven weeks. It now resolves 92% of cases
+            without human touch.
+          </p>
+        </header>
+
+        {/* Byline / metadata */}
+        <div className="cs-byline" style={{ marginBottom: '4rem', maxWidth: '900px' }}>
+          <div className="cs-byline-row"><span className="cs-byline-label">By</span> <strong>Cloudsheer Engineering</strong></div>
+          <div className="cs-byline-row"><span className="cs-byline-label">Published</span> April 23, 2026</div>
+          <div className="cs-byline-row"><span className="cs-byline-label">Read</span> 9 minutes</div>
+        </div>
+
+        {/* Body */}
+        <div className="cs-body" style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+          {/* Engagement summary - inline */}
+          <p className="cs-meta" style={{ marginBottom: '3rem', maxWidth: '600px' }}>
+            <strong>Client:</strong> Outdoor & lifestyle products manufacturer, name withheld
+            under NDA. <strong>Industry:</strong> Manufacturing and consumer goods.{' '}
+            <strong>Platform:</strong> Salesforce Service Cloud with Agentforce.{' '}
+            <strong>Engagement:</strong> Multi-agent architecture, ConnectApi Foundation
+            Layer, custom Apex, Flow orchestration, prompt engineering.
+          </p>
+
+          <p>
+            When the client first scoped this build with Salesforce Support and Solution
+            Engineering, the response was direct. <strong>The architecture wasn't
+            supported. It wasn't recommended. It shouldn't be attempted on Agentforce.</strong>
+          </p>
+
+          <p>The objections were structural. Salesforce believed these patterns would fail:</p>
+
+          <ul className="cs-list">
+            <li>A coordinated three-agent topology with programmatic dispatch between agents.</li>
+            <li>A custom Foundation Layer using direct ConnectApi.EinsteinLlm execution outside standard declarative Agentforce patterns.</li>
+            <li>Grounding an LLM against an unstructured Excel ContentDocument for live warranty validation.</li>
+            <li>Operator-controlled "Trap Doors" that let humans bypass AI execution on demand.</li>
+            <li>Stable recovery from nested call chains — Dispatcher to Apex to Specialist back to Dispatcher.</li>
+          </ul>
+
+          <p>
+            The client brought the problem to Cloudsheer. We built every piece Salesforce
+            said couldn't be built natively, on-platform, while keeping the Einstein Trust
+            Layer fully intact. And we shipped it in eleven weeks.
+          </p>
+
+          {/* The business problem */}
+          <h2 className="cs-h2">The business problem</h2>
+
+          <p>
+            The client operates in a B2B2C support model. Customers don't contact the
+            manufacturer directly. A product fails, the customer contacts the retailer, the
+            retailer emails the manufacturer's support team with receipts, photos, and
+            warranty details.
+          </p>
+
+          <p>
+            Before Cloudsheer, the workflow was entirely manual. Roughly twelve thousand
+            inbound emails per month, all manually triaged. Every case required manual data
+            entry. Warranty validation depended on human lookup. Customers waited around
+            fourteen hours for a first response. Average handling effort before a case
+            even existed was eight minutes per email. Warranty validation took six minutes
+            of manual lookup on top of that.
+          </p>
+
+          <p>
+            The support team faced two completely different interaction patterns on the
+            same channel. Vendors sent structured submissions — receipts, invoices,
+            customer details, photos. That work needed structured extraction. End
+            customers sent incomplete conversations with missing order numbers, missing
+            product details, and partial warranty data. That work needed conversational
+            slot-filling.
+          </p>
+
+          <p>
+            <strong>One monolithic agent couldn't do both well.</strong> A specialized pair
+            of agents coordinated by a dispatcher could. That dispatcher architecture is
+            exactly what Salesforce said couldn't be built reliably.
+          </p>
+
+          {/* Architecture */}
+          <h2 className="cs-h2">Architecture</h2>
+
+          <p>
+            We designed the platform as four cooperating layers. Each layer represented a
+            piece of the "not possible" answer.
+          </p>
+
+          <ol className="cs-list" style={{ counterReset: 'arch' }}>
+            <li><strong>Multi-Agent Routing.</strong> Dispatcher routing to a B2B Specialist or B2C Specialist.</li>
+            <li><strong>Apex Invocables.</strong> ThreadAnalyzerAction and ParsePromptResponse.</li>
+            <li><strong>Apex Core.</strong> IntentDetectionService, CaseDataExtractionService, EmailCommunicationService, CustomerRecordService, and PromptService.</li>
+            <li><strong>Foundation Layer.</strong> ConnectApiWrapper executing live against ConnectApi.EinsteinLlm.</li>
+          </ol>
+
+          {/* Foundation Layer */}
+          <h2 className="cs-h2">The Foundation Layer</h2>
+
+          <p>
+            This was the layer Salesforce Solution Engineers were most skeptical about.
+            Instead of relying only on declarative Prompt Templates, we built a dedicated
+            Foundation Layer that directly communicates with the Einstein LLM.
+          </p>
+
+          <p>
+            <strong>ConnectApiWrapper</strong> owns all live LLM execution — a centralized,
+            fully audited execution path. <strong>PromptService</strong> standardizes
+            payload structure and ensures consistency across every AI interaction. Every
+            request flows through this layer: intent classification, summarization,
+            warranty validation, email drafting.
+          </p>
+
+          <p>In production, mean LLM latency runs under <strong>1.4 seconds</strong>. Fast enough that customer interactions feel instant.</p>
+
+          {/* Three Agents */}
+          <h2 className="cs-h2">The three agents</h2>
+
+          <p>
+            <strong>The Dispatcher</strong> is the entry point for every interaction. It
+            handles conversation routing, escalation orchestration, vendor and customer
+            classification, and safety validation before delegation. A custom
+            metadata-driven lookup identifies vendors, customers, and registered domains.
+            More than one hundred vendor domains are now classified with 100% deterministic
+            accuracy — no model guessing required.
+          </p>
+
+          <p>
+            <strong>The B2B Specialist</strong> is purpose-built for structured ingestion.
+            Case operations scoped to vendor portfolios, OCR and LLM receipt extraction,
+            attachment parsing, predictable JSON normalization. Vendor receipt processing
+            runs end-to-end in under four seconds.
+          </p>
+
+          <p>
+            <strong>The B2C Specialist</strong> is purpose-built for conversational support
+            and slot-filling. Warranty validation, product Q&A, manual retrieval, case
+            history retrieval. Seventy-eight percent of customer interactions now resolve in
+            a single contact without human involvement.
+          </p>
+
+          {/* Warranty validation */}
+          <h2 className="cs-h2">Grounding against an Excel document</h2>
+
+          <p>
+            The client's warranty master existed entirely inside an Excel file. Not a
+            custom object. Not a database table. <strong>An Excel document.</strong>
+          </p>
+
+          <p>
+            We intentionally avoided forcing unnecessary migration work onto the business.
+            Instead, the system loads the ContentDocument directly and grounds the LLM
+            against it in real time. The AI returns a deterministic result — covered or
+            expired. Manual lookup used to take six minutes per case. Autonomous validation
+            now runs in three seconds with a 99.4% match rate against the source-of-truth
+            catalog.
+          </p>
+
+          <p>Salesforce said this couldn't be grounded reliably against free-form Excel data. In production, it works at scale.</p>
+
+          {/* Apex Core */}
+          <h2 className="cs-h2">The Apex Core</h2>
+
+          <p>
+            A major part of the engagement involved decomposing monolithic Apex into
+            focused services. Each service does one job, uses one prompt, follows one
+            execution path:
+          </p>
+
+          <ul className="cs-list cs-mono">
+            <li>IntentDetectionService — backed by Intent_Classifier</li>
+            <li>CaseDataExtractionService — backed by Generate_Case_Summary</li>
+            <li>EmailCommunicationService — backed by Draft_Email_to_customer</li>
+            <li>CustomerRecordService — customer matching and record creation</li>
+            <li>PromptService — centralized prompt execution</li>
+          </ul>
+
+          <p>The result: roughly <strong>1,800 lines of brittle Apex retired.</strong></p>
+
+          {/* Trap Door */}
+          <h2 className="cs-h2">The Trap Door pattern</h2>
+
+          <p>
+            Most AI guardrails rely entirely on automated fallbacks. We added something
+            different: <strong>manual operator kill switches.</strong> Two critical
+            invocables — ThreadAnalyzerAction and ParsePromptResponse — include
+            admin-controlled Trap Doors.
+          </p>
+
+          <p>
+            If automation becomes unsafe, the AI step is bypassed, the case routes directly
+            to a human, and routing completes in under five seconds. This wasn't exception
+            handling. It was intentional operator control by design.
+          </p>
+
+          {/* Guardrails */}
+          <h2 className="cs-h2">Guardrails</h2>
+
+          <p>
+            Salesforce specifically flagged the nested orchestration chain as unstable. We
+            hardened the system across four layers: pre-delegation safety validation on
+            every agent handoff; UUID crash protection inside ApexAgentUtils.cls; Einstein
+            Trust Layer enforcement on all grounding and policy checks; and Operator Trap
+            Doors on every critical invocable.
+          </p>
+
+          <p>Since launch, the system has logged <strong>zero user-facing errors.</strong></p>
+
+          {/* Testing */}
+          <h2 className="cs-h2">Testing</h2>
+
+          <p>
+            Production-grade agent systems require real testing infrastructure. Most
+            Agentforce implementations skip this entirely. We shipped IntentWrapperMock,
+            reusable mock frameworks, universal Apex harness coverage, and regression
+            coverage across every named agent path. The result was <strong>94% Apex test
+            coverage at deployment.</strong>
+          </p>
+
+          {/* Impact table */}
+          <h2 className="cs-h2">The impact</h2>
+
+          <table className="cs-table">
+            <thead>
+              <tr>
+                <th style={{ width: '50%' }}>Metric</th>
+                <th>Before</th>
+                <th>After</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Autonomous case resolution</td><td className="tnum">0%</td><td className="after tnum">92%</td></tr>
+              <tr><td>Triage time per email</td><td className="tnum">~8 min</td><td className="after tnum">~14 sec</td></tr>
+              <tr><td>Time to first response</td><td className="tnum">~14 hrs</td><td className="after tnum">&lt;90 sec</td></tr>
+              <tr><td>First-contact resolution</td><td className="tnum">31%</td><td className="after tnum">78%</td></tr>
+              <tr><td>Manual escalation rate</td><td className="tnum">100%</td><td className="after tnum">17%</td></tr>
+              <tr><td>Warranty validation</td><td className="tnum">~6 min</td><td className="after tnum">~3 sec</td></tr>
+              <tr><td>CSAT (rolling 90-day)</td><td className="tnum">64</td><td className="after tnum">86</td></tr>
+              <tr><td>Emails handled per month</td><td>Manual</td><td className="after tnum">12,000+</td></tr>
+              <tr><td>FTEs redeployed</td><td>—</td><td className="after">4</td></tr>
+              <tr><td>Annual labor cost avoided</td><td>—</td><td className="after tnum">~$340K</td></tr>
+              <tr><td>User-facing errors since launch</td><td>—</td><td className="after">0</td></tr>
+              <tr><td>Time to production</td><td>—</td><td className="after">11 weeks</td></tr>
+            </tbody>
+          </table>
+
+          {/* Takeaway */}
+          <h2 className="cs-h2">The takeaway</h2>
+
+          <p>
+            Salesforce Support told the client this architecture wasn't possible on
+            Agentforce. Cloudsheer built it anyway. The platform now handles twelve
+            thousand cases per month, resolves 92% autonomously, operates with
+            operator-grade controls, and runs fully inside Salesforce — all delivered in
+            eleven weeks.
+          </p>
+
+          <blockquote className="cs-pullquote">
+            If your Agentforce roadmap is stuck behind a "not possible" answer, that's
+            usually where Cloudsheer starts.
+            <span className="cs-pullquote-attr">— Cloudsheer Engineering</span>
+          </blockquote>
+
+          <hr className="cs-rule" />
+
+          {/* Footer */}
+          <p className="cs-sidenote">
+            Want a build like this? <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">Book a 30-minute architecture call →</a>
+          </p>
+          <p className="cs-sidenote" style={{ marginTop: '0.75rem' }}>
+            <Link to="/blog">Read more stories from the team →</Link>
+          </p>
+        </div>
+      </div>
+    </article>
   )
 }
 
@@ -511,9 +509,7 @@ export default function AgentforceManufacturing() {
   return (
     <>
       <ArticleStyles />
-      <Header />
-      <Body />
-      <FooterCTA />
+      <Article />
     </>
   )
 }
