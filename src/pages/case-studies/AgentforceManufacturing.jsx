@@ -296,7 +296,7 @@ function Article() {
 
         {/* Byline / metadata */}
         <div className="cs-byline" style={{ marginBottom: '4rem' }}>
-          <div className="cs-byline-row"><span className="cs-byline-label">By</span> <strong>Cloudsheer Engineering</strong></div>
+          <div className="cs-byline-row"><span className="cs-byline-label">By</span> <strong>Cloudsheer Consulting</strong></div>
           <div className="cs-byline-row"><span className="cs-byline-label">Published</span> April 23, 2026</div>
           <div className="cs-byline-row"><span className="cs-byline-label">Read</span> 9 minutes</div>
         </div>
@@ -604,7 +604,7 @@ function Article() {
           <blockquote className="cs-pullquote">
             If your Agentforce roadmap is stuck behind a "not possible" answer, that's
             usually where Cloudsheer starts.
-            <span className="cs-pullquote-attr">Cloudsheer Engineering</span>
+            <span className="cs-pullquote-attr">Cloudsheer Consulting</span>
           </blockquote>
 
           <hr className="cs-rule" />
