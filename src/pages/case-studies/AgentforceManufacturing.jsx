@@ -150,6 +150,44 @@ function ArticleStyles() {
 
       .cs-sidenote { color: #6B6B6B; font-size: 0.95rem; }
 
+      .cs-factsheet {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.75rem 2rem;
+        margin: 0 0 3.5rem 0;
+        padding: 1.75rem 0;
+        border-top: 1px solid #0A0A0A;
+        border-bottom: 1px solid #D9D6CE;
+      }
+      @media (min-width: 640px) {
+        .cs-factsheet { grid-template-columns: 1fr 1fr; }
+      }
+      .cs-factsheet-item { display: flex; flex-direction: column; gap: 0.4rem; }
+      .cs-factsheet-full { grid-column: 1 / -1; }
+      .cs-factsheet-label {
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        margin: 0;
+      }
+      .cs-factsheet-value {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.45;
+        color: #0A0A0A;
+        margin: 0;
+      }
+      @media (min-width: 640px) {
+        .cs-factsheet-value { font-size: 1.0625rem; }
+      }
+      .cs-factsheet-note {
+        font-weight: 400;
+        color: #6B6B6B;
+        font-size: 0.9rem;
+      }
+
       .cs-byline {
         font-size: 0.8125rem;
         color: #6B6B6B;
@@ -214,14 +252,28 @@ function Article() {
         {/* Body */}
         <div className="cs-body">
 
-          <p style={{ marginBottom: '3rem' }}>
-            <strong>Client:</strong> Outdoor and lifestyle products manufacturer, name withheld
-            under NDA.<br />
-            <strong>Industry:</strong> Manufacturing and consumer goods.<br />
-            <strong>Platform:</strong> Salesforce Service Cloud with Agentforce.<br />
-            <strong>Engagement:</strong> Multi-agent architecture, ConnectApi Foundation
-            Layer, custom Apex, Flow orchestration, prompt engineering.
-          </p>
+          <div className="cs-factsheet">
+            <div className="cs-factsheet-item">
+              <p className="cs-factsheet-label">Client</p>
+              <p className="cs-factsheet-value">Outdoor and lifestyle products manufacturer <span className="cs-factsheet-note">(name withheld under NDA)</span></p>
+            </div>
+            <div className="cs-factsheet-item">
+              <p className="cs-factsheet-label">Industry</p>
+              <p className="cs-factsheet-value">Manufacturing &amp; consumer goods</p>
+            </div>
+            <div className="cs-factsheet-item">
+              <p className="cs-factsheet-label">Platform</p>
+              <p className="cs-factsheet-value">Salesforce Service Cloud + Agentforce</p>
+            </div>
+            <div className="cs-factsheet-item">
+              <p className="cs-factsheet-label">Timeline</p>
+              <p className="cs-factsheet-value">11 weeks to production</p>
+            </div>
+            <div className="cs-factsheet-item cs-factsheet-full">
+              <p className="cs-factsheet-label">Engagement</p>
+              <p className="cs-factsheet-value">Multi-agent architecture, ConnectApi Foundation Layer, custom Apex, Flow orchestration, prompt engineering</p>
+            </div>
+          </div>
 
           <p>
             When the client first scoped this build with Salesforce Support and Solution
