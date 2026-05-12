@@ -214,7 +214,7 @@ function Article() {
         {/* Body */}
         <div className="cs-body">
 
-          <p className="cs-meta" style={{ marginBottom: '3rem' }}>
+          <p style={{ marginBottom: '3rem' }}>
             <strong>Client:</strong> Outdoor and lifestyle products manufacturer, name withheld
             under NDA.<br />
             <strong>Industry:</strong> Manufacturing and consumer goods.<br />
