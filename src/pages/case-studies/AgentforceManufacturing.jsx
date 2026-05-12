@@ -151,19 +151,36 @@ function ArticleStyles() {
       .cs-sidenote { color: #6B6B6B; font-size: 0.95rem; }
 
       .cs-factsheet {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.75rem 2rem;
         margin: 0 0 3.5rem 0;
-        padding: 1.75rem 0;
-        border-top: 1px solid #0A0A0A;
+        padding: 1.5rem 0 0 0;
+        border-top: 2px solid #0A0A0A;
+      }
+      .cs-factsheet-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 0;
+        padding-bottom: 1.5rem;
         border-bottom: 1px solid #D9D6CE;
       }
-      @media (min-width: 640px) {
-        .cs-factsheet { grid-template-columns: 1fr 1fr; }
+      @media (min-width: 768px) {
+        .cs-factsheet-row {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0;
+        }
       }
-      .cs-factsheet-item { display: flex; flex-direction: column; gap: 0.4rem; }
-      .cs-factsheet-full { grid-column: 1 / -1; }
+      .cs-factsheet-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 1rem;
+      }
+      .cs-factsheet-item:first-child { padding-left: 0; }
+      .cs-factsheet-item:last-child { padding-right: 0; }
+      @media (min-width: 768px) {
+        .cs-factsheet-item + .cs-factsheet-item {
+          border-left: 1px solid #D9D6CE;
+        }
+      }
       .cs-factsheet-label {
         font-size: 0.6875rem;
         font-weight: 700;
@@ -175,17 +192,28 @@ function ArticleStyles() {
       .cs-factsheet-value {
         font-size: 1rem;
         font-weight: 600;
-        line-height: 1.45;
+        line-height: 1.4;
         color: #0A0A0A;
         margin: 0;
       }
-      @media (min-width: 640px) {
-        .cs-factsheet-value { font-size: 1.0625rem; }
+      .cs-factsheet-engagement {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        padding-top: 1.25rem;
       }
-      .cs-factsheet-note {
+      @media (max-width: 639px) {
+        .cs-factsheet-engagement {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+      .cs-factsheet-engagement .cs-factsheet-label { flex-shrink: 0; }
+      .cs-factsheet-engagement .cs-factsheet-value {
         font-weight: 400;
-        color: #6B6B6B;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #2A2A2A;
       }
 
       .cs-byline {
@@ -253,23 +281,25 @@ function Article() {
         <div className="cs-body">
 
           <div className="cs-factsheet">
-            <div className="cs-factsheet-item">
-              <p className="cs-factsheet-label">Industry</p>
-              <p className="cs-factsheet-value">Manufacturing &amp; consumer goods</p>
+            <div className="cs-factsheet-row">
+              <div className="cs-factsheet-item">
+                <p className="cs-factsheet-label">Industry</p>
+                <p className="cs-factsheet-value">Manufacturing &amp; consumer goods</p>
+              </div>
+              <div className="cs-factsheet-item">
+                <p className="cs-factsheet-label">Platform</p>
+                <p className="cs-factsheet-value">Service Cloud + Agentforce</p>
+              </div>
+              <div className="cs-factsheet-item">
+                <p className="cs-factsheet-label">Timeline</p>
+                <p className="cs-factsheet-value">11 weeks to production</p>
+              </div>
+              <div className="cs-factsheet-item">
+                <p className="cs-factsheet-label">Outcome</p>
+                <p className="cs-factsheet-value">92% autonomous resolution</p>
+              </div>
             </div>
-            <div className="cs-factsheet-item">
-              <p className="cs-factsheet-label">Platform</p>
-              <p className="cs-factsheet-value">Salesforce Service Cloud + Agentforce</p>
-            </div>
-            <div className="cs-factsheet-item">
-              <p className="cs-factsheet-label">Timeline</p>
-              <p className="cs-factsheet-value">11 weeks to production</p>
-            </div>
-            <div className="cs-factsheet-item">
-              <p className="cs-factsheet-label">Outcome</p>
-              <p className="cs-factsheet-value">92% autonomous case resolution</p>
-            </div>
-            <div className="cs-factsheet-item cs-factsheet-full">
+            <div className="cs-factsheet-engagement">
               <p className="cs-factsheet-label">Engagement</p>
               <p className="cs-factsheet-value">Multi-agent architecture, ConnectApi Foundation Layer, custom Apex, Flow orchestration, prompt engineering</p>
             </div>
