@@ -275,28 +275,6 @@ function Article() {
             </div>
           </div>
 
-          <p>
-            When the client first scoped this build with Salesforce Support and Solution
-            Engineering, the response was direct. <strong>The architecture wasn't
-            supported. It wasn't recommended. It shouldn't be attempted on Agentforce.</strong>
-          </p>
-
-          <p>The objections were structural. Salesforce believed these patterns would fail:</p>
-
-          <ul className="cs-list">
-            <li>A coordinated three-agent topology with programmatic dispatch between agents.</li>
-            <li>A custom Foundation Layer using direct ConnectApi.EinsteinLlm execution outside standard declarative Agentforce patterns.</li>
-            <li>Grounding an LLM against an unstructured Excel ContentDocument for live warranty validation.</li>
-            <li>Operator-controlled "Trap Doors" that let humans bypass AI execution on demand.</li>
-            <li>Stable recovery from nested call chains: Dispatcher to Apex to Specialist back to Dispatcher.</li>
-          </ul>
-
-          <p>
-            The client brought the problem to Cloudsheer. We built every piece Salesforce
-            said couldn't be built natively, on-platform, while keeping the Einstein Trust
-            Layer fully intact. And we shipped it in eleven weeks.
-          </p>
-
           <h2 className="cs-h2">The Business Problem</h2>
 
           <p>
@@ -329,6 +307,30 @@ function Article() {
             <strong>One monolithic agent couldn't do both well.</strong> A specialized pair
             of agents coordinated by a dispatcher could. That dispatcher architecture is
             exactly what Salesforce said couldn't be built reliably.
+          </p>
+
+          <h2 className="cs-h2">What Salesforce Said</h2>
+
+          <p>
+            When the client first scoped this build with Salesforce Support and Solution
+            Engineering, the response was direct. <strong>The architecture wasn't
+            supported. It wasn't recommended. It shouldn't be attempted on Agentforce.</strong>
+          </p>
+
+          <p>The objections were structural. Salesforce believed these patterns would fail:</p>
+
+          <ul className="cs-list">
+            <li>A coordinated three-agent topology with programmatic dispatch between agents.</li>
+            <li>A custom Foundation Layer using direct ConnectApi.EinsteinLlm execution outside standard declarative Agentforce patterns.</li>
+            <li>Grounding an LLM against an unstructured Excel ContentDocument for live warranty validation.</li>
+            <li>Operator-controlled "Trap Doors" that let humans bypass AI execution on demand.</li>
+            <li>Stable recovery from nested call chains: Dispatcher to Apex to Specialist back to Dispatcher.</li>
+          </ul>
+
+          <p>
+            The client brought the problem to Cloudsheer. We built every piece Salesforce
+            said couldn't be built natively, on-platform, while keeping the Einstein Trust
+            Layer fully intact. And we shipped it in eleven weeks.
           </p>
 
           <h2 className="cs-h2">Architecture</h2>
