@@ -150,6 +150,30 @@ function ArticleStyles() {
 
       .cs-sidenote { color: #6B6B6B; font-size: 0.95rem; }
 
+      .cs-figure {
+        margin: 3rem -1rem;
+      }
+      @media (min-width: 1024px) {
+        .cs-figure { margin: 3.5rem -4rem; }
+      }
+      .cs-figure-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        border: 1px solid #E8E5DC;
+        background: white;
+      }
+      .cs-figcaption {
+        margin-top: 0.875rem;
+        padding: 0 1rem;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        color: #6B6B6B;
+        text-align: center;
+        font-style: italic;
+      }
+
       .cs-factsheet {
         margin: 0 0 3.5rem 0;
         padding: 1.5rem 0 0 0;
@@ -376,6 +400,18 @@ function Article() {
             <li><strong>Apex Core.</strong> IntentDetectionService, CaseDataExtractionService, EmailCommunicationService, CustomerRecordService, and PromptService.</li>
             <li><strong>Foundation Layer.</strong> ConnectApiWrapper executing live against ConnectApi.EinsteinLlm.</li>
           </ol>
+
+          <figure className="cs-figure">
+            <img
+              src={import.meta.env.BASE_URL + 'case-studies/agentforce-architecture.webp'}
+              alt="Agentforce architecture diagram showing Platform Layer (Agentforce Orchestrator, Service Cloud), Automation Layer (Flow Automation, Apex Services), Intelligence Layer (Service Agents, Prompt Templates, LLM Services, Einstein Trust Layer), and Data Layer (Case state, EmailMessage, Warranty Catalog, Vendor Metadata)"
+              loading="lazy"
+              className="cs-figure-img"
+            />
+            <figcaption className="cs-figcaption">
+              The full architecture: four cooperating layers from inbound service request down to data foundation.
+            </figcaption>
+          </figure>
 
           <h2 className="cs-h2">The Foundation Layer</h2>
 
