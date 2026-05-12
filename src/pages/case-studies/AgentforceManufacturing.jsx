@@ -254,10 +254,6 @@ function Article() {
 
           <div className="cs-factsheet">
             <div className="cs-factsheet-item">
-              <p className="cs-factsheet-label">Client</p>
-              <p className="cs-factsheet-value">Outdoor and lifestyle products manufacturer <span className="cs-factsheet-note">(name withheld under NDA)</span></p>
-            </div>
-            <div className="cs-factsheet-item">
               <p className="cs-factsheet-label">Industry</p>
               <p className="cs-factsheet-value">Manufacturing &amp; consumer goods</p>
             </div>
@@ -268,6 +264,10 @@ function Article() {
             <div className="cs-factsheet-item">
               <p className="cs-factsheet-label">Timeline</p>
               <p className="cs-factsheet-value">11 weeks to production</p>
+            </div>
+            <div className="cs-factsheet-item">
+              <p className="cs-factsheet-label">Outcome</p>
+              <p className="cs-factsheet-value">92% autonomous case resolution</p>
             </div>
             <div className="cs-factsheet-item cs-factsheet-full">
               <p className="cs-factsheet-label">Engagement</p>
