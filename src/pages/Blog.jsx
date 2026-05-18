@@ -11,6 +11,18 @@ const blogFaqs = [
 
 const posts = [
   {
+    slug: 'what-is-headless-360-complete-guide',
+    category: 'Agentforce',
+    categoryIcon: <Bot className="w-3 h-3" />,
+    categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
+    title: 'What is Headless 360? A Complete Guide',
+    excerpt: 'Salesforce Headless 360 makes the entire platform programmable via APIs, MCP tools, and CLI commands. This complete guide breaks down what it is, how it works, and what it means for your business.',
+    image: '/blog/spring-25.svg',
+    date: 'May 12, 2026', readTime: '9 min',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
+    featured: true,
+  },
+  {
     slug: 'salesforce-headless-360-tdx-2026',
     category: 'Salesforce News',
     categoryIcon: <Zap className="w-3 h-3" />,
@@ -20,7 +32,7 @@ const posts = [
     image: '/blog/spring-25.svg',
     date: 'Apr 16, 2026', readTime: '7 min',
     author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'getting-started-agentforce-2026',

@@ -1,9 +1,154 @@
 import { useParams, Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import { ArrowLeft, ArrowRight, Clock, Bot } from 'lucide-react'
+import { applySEO } from '../seoConfig'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
 const articles = {
+  'what-is-headless-360-complete-guide': {
+    title: 'What is Headless 360? A Complete Guide',
+    category: 'Agentforce',
+    date: 'May 12, 2026',
+    readTime: '9 min',
+    author: 'Tushar Sharma',
+    initials: 'TS',
+    avatarColor: 'from-cs-blue to-cs-electric',
+    sections: [
+      {
+        heading: 'The Short Answer',
+        paragraphs: [
+          "Headless 360 is Salesforce's new platform architecture that removes the requirement to use a browser UI to do work on Salesforce. Every capability — data, business logic, workflows, deployments, configuration — is now exposed as an API, MCP (Model Context Protocol) tool, or CLI command.",
+          "In plain terms: AI agents, external developer tools, and automated systems can now use Salesforce directly without anyone logging in and clicking through screens. It was announced at TrailblazerDX 2026 on April 15 and Salesforce called it one of the biggest platform changes in 25 years.",
+        ],
+      },
+      {
+        heading: 'Why the Name "Headless"',
+        paragraphs: [
+          "In web architecture, the user interface is called the \"head.\" A headless system is one where the head is removed and the underlying capabilities are exposed directly to whatever wants to use them — typically through APIs.",
+          "Salesforce has always had APIs, but most workflows historically went through the UI. Page layouts, Lightning components, Setup screens, list views — these were the primary surface for doing work. Headless 360 inverts that model. The UI is now optional. The platform itself is the product.",
+        ],
+      },
+      {
+        heading: 'The Three Ways You Now Access Salesforce',
+      },
+      {
+        heading: '1. APIs',
+        paragraphs: [
+          "Every platform capability is now callable through a standardized API request. An agent can retrieve a customer record, update a case status, trigger an approval, or query an opportunity without ever rendering a browser page. Salesforce has expanded its API coverage significantly to ensure parity between what the UI can do and what an API can do.",
+        ],
+      },
+      {
+        heading: '2. MCP Tools (Model Context Protocol)',
+        paragraphs: [
+          "MCP is the open standard that lets AI agents discover and invoke capabilities by name. Salesforce shipped 60+ MCP tools at TDX 2026, covering metadata management, data access, deployments, and configuration. An AI agent like Claude Code can connect to your Salesforce org and pull schemas, push changes, run tests, or generate code on demand.",
+        ],
+      },
+      {
+        heading: '3. CLI Commands',
+        paragraphs: [
+          "The Salesforce CLI now exposes terminal-level access to pull metadata (custom objects, fields, page layouts, permission sets) and push changes back. Developers can script their entire org against their local environment, integrate with CI/CD pipelines, and version control everything.",
+        ],
+      },
+      {
+        heading: 'The Key Components',
+        paragraphs: [
+          "Headless 360 is not one product. It is a stack of interlocking pieces. Here are the ones that matter most:",
+        ],
+        bullets: [
+          "Data 360 exposes your trusted business data as APIs, MCP tools, and CLI commands so agents can access the right information without bypassing security.",
+          "Agentforce is the platform for building, managing, and deploying autonomous AI agents at scale.",
+          "Agentforce Vibes 2.0 is the AI-native development environment with multi-model support (Claude Sonnet 4.5, GPT-5) that understands your org's metadata.",
+          "Agentforce Experience Layer separates agent logic from presentation, so the same workflow renders correctly on Slack, WhatsApp, voice, Teams, ChatGPT, mobile, and web.",
+          "DevOps Center MCP plugs Salesforce directly into CI/CD pipelines for automated validation and deployment.",
+          "Agent Script defines agent behavior, including which actions are rule-based versus autonomous.",
+          "Session Tracing and Observability give you full visibility into what an agent decided and why.",
+          "AgentExchange is the unified marketplace combining 10,000+ AppExchange apps, 2,600+ Slack apps, and 1,000+ Agentforce agents and tools.",
+          "Agent Fabric is the governance layer providing visibility, audit, and control across every agent, tool, and language model running in your org.",
+        ],
+      },
+      {
+        heading: 'How Headless 360 Differs From Traditional Salesforce',
+        paragraphs: [
+          "The change is structural, not cosmetic. Here is the side-by-side:",
+        ],
+        bullets: [
+          "Access: traditional Salesforce was browser-first. Headless 360 is API-first, MCP-first, CLI-first. The UI is one of many surfaces, not the only one.",
+          "Developer environment: traditional Salesforce locked you into Setup screens and the Developer Console. Headless 360 lets you work in Claude Code, Cursor, Windsurf, or any external IDE that supports MCP.",
+          "Workflow triggers: traditional Salesforce required a human to log in and trigger an action. Headless 360 lets agents execute autonomously around the clock.",
+          "Channel integration: traditional Salesforce required custom middleware for each channel. The Experience Layer renders one workflow across every channel natively.",
+          "Governance: traditional Salesforce required you to rebuild security boundaries for each new agent or app. Headless 360 inherits the existing platform guardrails automatically.",
+        ],
+      },
+      {
+        heading: 'Real-World Use Cases',
+        paragraphs: [
+          "The use cases are easier to grasp once you see them in context.",
+        ],
+        bullets: [
+          "Omnichannel order status: a single workflow renders as a WhatsApp chat for some customers, a voice response for others, and a mobile app card for the rest. No duplicate development.",
+          "Autonomous pipeline management: an SDR agent monitors opportunities, identifies stalled deals, sends follow-ups, and reassigns ownership without manager review.",
+          "Voice case resolution: a service agent pulls customer records, reads open cases, checks SLA status, and resolves issues over a phone call without any custom middleware.",
+          "Self-deploying changes: a developer describes a new approval flow to Claude Code, the agent generates the metadata, runs the tests, and pushes to the sandbox automatically.",
+          "Cross-system orchestration: an agent reads from your ERP, updates the Salesforce opportunity, drafts the proposal, and notifies the sales rep in Slack — one workflow, three systems.",
+        ],
+      },
+      {
+        heading: 'Who Headless 360 Is For',
+        paragraphs: [
+          "Different roles get different value from this shift:",
+        ],
+        bullets: [
+          "Salesforce developers can now work in their preferred external IDE and let AI coding agents handle metadata pulls, tests, and deployments.",
+          "Admins and architects inherit existing business logic instead of rebuilding it. The same flows, validations, and permissions apply automatically.",
+          "Business and operations teams get autonomous agents that handle repetitive, rule-based tasks without waiting for engineering capacity.",
+          "IT and security teams get a single governance plane (Agent Fabric) that applies existing guardrails to every new agent.",
+          "ISVs and partners get standardized protocols (MCP, APIs) to build on top of Salesforce without proprietary integration code.",
+        ],
+      },
+      {
+        heading: 'The Business Benefits',
+        paragraphs: [
+          "Headless 360 is a developer announcement on paper, but its impact reaches the bottom line:",
+        ],
+        bullets: [
+          "Faster development. AI coding agents using Vibes 2.0 can deliver Salesforce work in hours, not weeks. Salesforce reports up to 40% cycle time reduction.",
+          "Lower implementation costs. Less manual development means lower cost per change. Vibes IDE is free for every Developer Edition org.",
+          "Truly omnichannel customer experience. Customers reach you wherever they already work without your team building five separate integrations.",
+          "Always-on operations. Agents work 24/7 without waiting for a human to log in and approve every step.",
+          "Better governance with less effort. Agent Fabric audits every agent action without manual policy enforcement.",
+        ],
+      },
+      {
+        heading: 'What This Means for Existing Salesforce Customers',
+        paragraphs: [
+          "If you are already on Salesforce, Headless 360 does not require a migration. Your existing org, your existing flows, your existing data model, and your existing permissions are all preserved. What changes is what you can do with them.",
+          "Your sharing rules, profiles, and field-level security carry over to every agent automatically. Your validation rules still fire. Your flows still run. Headless 360 simply adds new ways to invoke and orchestrate what is already there. Most of the value comes from layering Agentforce, MCP tools, and the Experience Layer on top of your current setup, not from rebuilding it.",
+        ],
+      },
+      {
+        heading: 'Getting Started',
+        paragraphs: [
+          "If you want to evaluate Headless 360 for your business, here is the practical sequence we recommend:",
+        ],
+        bullets: [
+          "Audit your current Salesforce org for processes that are heavily manual or require a human to trigger them. These are your highest-ROI candidates for agent automation.",
+          "Sign up for a Developer Edition org if you do not already have one. Agentforce Vibes IDE and Salesforce Hosted MCP Servers are included at no cost.",
+          "Connect your favorite AI coding agent (Claude Code, Cursor, Windsurf) to the org via MCP and try generating a small piece of metadata.",
+          "Identify one customer-facing workflow you would benefit from running across multiple channels (chat, voice, mobile). Pilot the Experience Layer there first.",
+          "Plan your governance with Agent Fabric before you scale. Defining policies up front is faster than retrofitting them later.",
+        ],
+      },
+      {
+        heading: 'How Cloudsheer Can Help',
+        paragraphs: [
+          "We have been shipping Agentforce builds since launch and have deep hands-on experience with the new Headless 360 stack. Our team can audit your org for the highest-impact use cases, deploy your first Agentforce agents, set up the Experience Layer across your channels, and stand up governance with Agent Fabric.",
+          "Every engagement starts with a free 30-minute discovery call with a Salesforce architect — no sales pitch, just a clear assessment of what is buildable on Headless 360 for your business. Book yours at cal.com/cloudsheer-consulting/30min.",
+        ],
+      },
+    ],
+  },
+
   'salesforce-headless-360-tdx-2026': {
     title: 'Salesforce Headless 360: Everything You Need to Know from TDX 2026',
     category: 'Salesforce News',
@@ -638,6 +783,27 @@ const articles = {
 export default function BlogPost() {
   const { slug } = useParams()
   const article = articles[slug]
+
+  useEffect(() => {
+    if (!article) {
+      applySEO({
+        title: 'Article Not Found | Cloudsheer Blog',
+        description: 'The article you are looking for does not exist.',
+        pathname: `/blog/${slug || ''}`,
+      })
+      return
+    }
+    const firstParagraph = article.sections?.[0]?.paragraphs?.[0] || ''
+    const description = firstParagraph
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, 155)
+    applySEO({
+      title: `${article.title} | Cloudsheer Blog`,
+      description: description || article.title,
+      pathname: `/blog/${slug}`,
+    })
+  }, [slug, article])
 
   if (!article) {
     return (
