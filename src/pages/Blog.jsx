@@ -122,35 +122,87 @@ const posts = [
 
 const categories = ['All', 'Agentforce', 'Implementation', 'ROI & Results', 'Data Cloud', 'Strategy', 'Salesforce News']
 
+/* ─── Cover art per category ──────────────────────────────── */
+const CATEGORY_GRADIENTS = {
+  'Agentforce':       'linear-gradient(135deg, #0176D3 0%, #38BDF8 100%)',
+  'Implementation':   'linear-gradient(135deg, #D97706 0%, #FBBF24 100%)',
+  'ROI & Results':    'linear-gradient(135deg, #059669 0%, #34D399 100%)',
+  'Data Cloud':       'linear-gradient(135deg, #6366F1 0%, #A78BFA 100%)',
+  'Strategy':         'linear-gradient(135deg, #0EA5A4 0%, #5EEAD4 100%)',
+  'Salesforce News':  'linear-gradient(135deg, #DC2626 0%, #FB7185 100%)',
+}
+
+function CoverArt({ category, icon, large }) {
+  const gradient = CATEGORY_GRADIENTS[category] || CATEGORY_GRADIENTS['Agentforce']
+  const size = large ? 'h-full min-h-[260px]' : 'h-44'
+  return (
+    <div className={`relative rounded-2xl overflow-hidden ${size}`} style={{ background: gradient }}>
+      {/* Decorative dot grid */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)',
+        backgroundSize: '20px 20px',
+      }} />
+      {/* Glow accent */}
+      <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full opacity-30" style={{ backgroundColor: 'rgba(255,255,255,0.4)', filter: 'blur(48px)' }} />
+      <div className="absolute -bottom-16 -left-16 w-56 h-56 rounded-full opacity-25" style={{ backgroundColor: 'rgba(0,0,0,0.3)', filter: 'blur(60px)' }} />
+
+      {/* Centered icon */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className={`${large ? 'w-24 h-24' : 'w-16 h-16'} rounded-2xl flex items-center justify-center backdrop-blur-md`}
+          style={{ backgroundColor: 'rgba(255,255,255,0.18)', border: '1px solid rgba(255,255,255,0.30)' }}>
+          <div className={large ? 'scale-[2.5]' : 'scale-[1.75]'} style={{ color: 'white' }}>
+            {icon}
+          </div>
+        </div>
+      </div>
+
+      {/* Category chip pinned to bottom-left */}
+      <div className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1.5 rounded-full"
+        style={{ backgroundColor: 'rgba(255,255,255,0.95)', color: '#0A0A0A' }}>
+        {category}
+      </div>
+    </div>
+  )
+}
+
 function PostCard({ post, large }) {
-  const { slug, category, categoryIcon, categoryColor, title, excerpt, image, date, readTime, author, initials, avatarColor } = post
-  const imgSrc = import.meta.env.BASE_URL + (image || '').replace(/^\//, '')
+  const { slug, category, categoryIcon, title, excerpt, date, readTime, author, initials, avatarColor } = post
 
   if (large) {
     return (
-      <Link to={`/blog/${slug}`} className="glass-card p-4 group cursor-pointer hover:-translate-y-1 transition-all duration-300 md:col-span-2 block no-underline">
-        <div className="grid md:grid-cols-2 gap-5 items-stretch">
-          <div className="rounded-xl overflow-hidden">
-            <img loading="lazy" src={imgSrc} alt={title} className="w-full h-full object-cover" />
+      <Link to={`/blog/${slug}`}
+        className="md:col-span-2 lg:col-span-3 block no-underline group transition-all duration-300"
+        style={{
+          backgroundColor: 'white',
+          borderRadius: '24px',
+          border: '1px solid rgba(1,118,211,0.10)',
+          overflow: 'hidden',
+        }}>
+        <div className="grid md:grid-cols-2 gap-0 items-stretch">
+          <div className="p-4 md:p-6 md:pr-3">
+            <CoverArt category={category} icon={categoryIcon} large />
           </div>
-          <div className="flex flex-col justify-center py-2">
-            <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start ${categoryColor} mb-2`}>
-              {categoryIcon} {category}
-            </span>
-            <h3 className="text-cs-navy font-bold text-lg mb-2 group-hover:text-cs-blue transition-colors leading-snug">
+          <div className="flex flex-col justify-center p-6 md:py-10 md:pr-10 md:pl-3">
+            <p className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: '#6B6B6B' }}>
+              Featured · {date}
+            </p>
+            <h3 className="font-black text-2xl sm:text-3xl mb-4 group-hover:underline transition-all leading-[1.15]"
+              style={{ color: '#0A0A0A', letterSpacing: '-0.01em' }}>
               {title}
             </h3>
-            <p className="text-cs-muted text-xs leading-relaxed mb-3">{excerpt}</p>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
-                <div className={`w-7 h-7 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-xs font-bold`}>
-                  {initials}
-                </div>
-                <span className="text-cs-navy text-sm font-medium">{author}</span>
+            <p className="text-base leading-relaxed mb-6" style={{ color: '#475569' }}>
+              {excerpt}
+            </p>
+            <div className="flex items-center gap-3">
+              <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-xs font-bold`}>
+                {initials}
               </div>
-              <span className="text-cs-muted text-xs flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> {readTime} · {date}
-              </span>
+              <div>
+                <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{author}</p>
+                <p className="text-xs flex items-center gap-1" style={{ color: '#94A3B8' }}>
+                  <Clock className="w-3 h-3" /> {readTime} read
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -159,27 +211,37 @@ function PostCard({ post, large }) {
   }
 
   return (
-    <Link to={`/blog/${slug}`} className="glass-card p-4 flex flex-col group cursor-pointer hover:-translate-y-1 transition-all duration-300 no-underline">
-      <div className="h-36 rounded-xl overflow-hidden mb-3">
-        <img loading="lazy" src={imgSrc} alt={title} className="w-full h-full object-cover" />
-      </div>
-      <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full border self-start mb-2 ${categoryColor}`}>
-        {categoryIcon} {category}
-      </span>
-      <h3 className="text-cs-navy font-bold text-sm mb-1.5 group-hover:text-cs-blue transition-colors leading-snug">
-        {title}
-      </h3>
-      <p className="text-cs-muted text-xs leading-relaxed mb-3 line-clamp-2">{excerpt}</p>
-      <div className="flex items-center justify-between pt-3 border-t border-cs-blue/8 mt-auto">
-        <div className="flex items-center gap-2">
-          <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-[10px] font-bold`}>
-            {initials}
+    <Link to={`/blog/${slug}`}
+      className="flex flex-col group no-underline transition-all duration-300 hover:-translate-y-1"
+      style={{
+        backgroundColor: 'white',
+        borderRadius: '20px',
+        border: '1px solid rgba(1,118,211,0.10)',
+        padding: '1rem',
+      }}>
+      <CoverArt category={category} icon={categoryIcon} />
+
+      <div className="flex flex-col flex-grow pt-5 pb-2 px-1">
+        <h3 className="font-bold text-base mb-2.5 group-hover:underline transition-all leading-snug"
+          style={{ color: '#0A0A0A', letterSpacing: '-0.005em' }}>
+          {title}
+        </h3>
+        <p className="text-sm leading-relaxed mb-4 line-clamp-3" style={{ color: '#64748B' }}>
+          {excerpt}
+        </p>
+
+        <div className="flex items-center justify-between pt-4 mt-auto"
+          style={{ borderTop: '1px solid rgba(1,118,211,0.08)' }}>
+          <div className="flex items-center gap-2">
+            <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${avatarColor} flex items-center justify-center text-white text-[10px] font-bold`}>
+              {initials}
+            </div>
+            <span className="text-xs font-medium" style={{ color: '#475569' }}>{author}</span>
           </div>
-          <span className="text-cs-muted text-xs">{author}</span>
+          <span className="text-xs flex items-center gap-1.5" style={{ color: '#94A3B8' }}>
+            <Clock className="w-3 h-3" /> {readTime}
+          </span>
         </div>
-        <span className="text-cs-muted text-xs flex items-center gap-1">
-          <Clock className="w-3 h-3" /> {readTime}
-        </span>
       </div>
     </Link>
   )
@@ -353,7 +415,7 @@ export default function Blog() {
           </div>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activeCategory === 'All' && featured && (
               <PostCard key={featured.slug} post={featured} large />
             )}
