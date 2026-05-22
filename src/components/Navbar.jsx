@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
          ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse,
@@ -124,6 +125,7 @@ export default function Navbar() {
   const [mobileDropOpen, setMobileDropOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const dropRef  = useRef(null)
+  const panelRef = useRef(null)
 
 
   useEffect(() => {
@@ -132,10 +134,12 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  // close dropdown on outside click
+  // close dropdown on outside click (covers button and portaled panel)
   useEffect(() => {
     const handler = (e) => {
-      if (dropRef.current && !dropRef.current.contains(e.target)) {
+      const inButton = dropRef.current && dropRef.current.contains(e.target)
+      const inPanel  = panelRef.current && panelRef.current.contains(e.target)
+      if (!inButton && !inPanel) {
         setDropOpen(false)
       }
     }
@@ -180,7 +184,7 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown panel - 4-column mega menu */}
+            {/* Dropdown panel - 4-column mega menu (portaled to body) */}
             {dropOpen && (() => {
               const isCore = c => ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)
               const isAI   = c => ['Agentforce', 'Slack'].includes(c.label)
@@ -191,8 +195,9 @@ export default function Navbar() {
                 { label: 'Extend & Analyse',items: clouds.filter(isExtend) },
                 { label: 'Industry Clouds', items: clouds.filter(c => c.industry) },
               ]
-              return (
+              return createPortal((
                 <div
+                  ref={panelRef}
                   onMouseLeave={() => setDropOpen(false)}
                   className="rounded-2xl overflow-hidden animate-scale-in"
                   style={{
@@ -204,7 +209,7 @@ export default function Navbar() {
                     background: '#ffffff',
                     border: '1px solid rgba(1,118,211,0.12)',
                     boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
-                    zIndex: 60,
+                    zIndex: 100,
                   }}
                 >
                   {/* Header bar */}
@@ -254,7 +259,7 @@ export default function Navbar() {
                     ))}
                   </div>
                 </div>
-              )
+              ), document.body)
             })()}
           </div>
 
