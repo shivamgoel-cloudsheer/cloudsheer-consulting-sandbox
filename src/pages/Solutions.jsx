@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import {
   ArrowRight, Bot, CheckCircle2, Sparkles, ChevronRight,
   ShoppingCart, Headphones, Mail, Database, BarChart3, Zap,
+  Heart, Briefcase, FlaskConical, GraduationCap, HandHeart,
 } from 'lucide-react'
 import FAQ from '../components/FAQ'
 
@@ -191,6 +192,48 @@ function SalesforceClouds() {
   )
 }
 
+const industryClouds = [
+  { icon: <Heart className="w-6 h-6" />,          to: '/solutions/health-cloud',              title: 'Health Cloud',              desc: 'Patient 360, care coordination, HL7 FHIR integrations, and HIPAA compliance for payers, providers, and health systems.',                tags: ['Patient 360', 'Care Plans', 'HIPAA'] },
+  { icon: <Briefcase className="w-6 h-6" />,      to: '/solutions/financial-services-cloud',  title: 'Financial Services Cloud',  desc: 'Client 360, Action Plans, and compliant workflows for banks, wealth firms, lenders, and insurers. Lift cross-sell 33%.',              tags: ['Client 360', 'Action Plans', 'Compliance'] },
+  { icon: <FlaskConical className="w-6 h-6" />,   to: '/solutions/life-sciences-cloud',       title: 'Life Sciences Cloud',       desc: 'Clinical trials, HCP 360, medical affairs, and patient services for pharma, biotech, and medical device. GxP-ready.',                 tags: ['Clinical Trials', 'HCP 360', 'GxP'] },
+  { icon: <GraduationCap className="w-6 h-6" />,  to: '/solutions/education-cloud',           title: 'Education Cloud',           desc: 'Recruitment, admissions, student success, and advancement for universities, K-12, and continuing education. FERPA-aware.',            tags: ['Student 360', 'Success Plans', 'FERPA'] },
+  { icon: <HandHeart className="w-6 h-6" />,      to: '/solutions/nonprofit-cloud',           title: 'Nonprofit Cloud',           desc: 'Fundraising, programs, volunteers, and grants for mission-driven organizations. Power of Us program eligible.',                       tags: ['Constituent 360', 'Program Mgmt', 'Power of Us'] },
+]
+
+function IndustryClouds() {
+  return (
+    <section className="py-10 sm:py-16 bg-white">
+      <div className="section-wrap">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <div className="tag mx-auto mb-5"><Sparkles className="w-3.5 h-3.5" /> Industry Clouds</div>
+          <h2 className="section-title mb-4">Built for <span className="gradient-text">Your Sector</span></h2>
+          <p className="section-sub">Salesforce industry clouds bring purpose-built data models, workflows, and compliance into one platform - so you can ship in weeks instead of building from scratch.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {industryClouds.map(({ icon, to, title, desc, tags }) => (
+            <Link key={title} to={to} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300 no-underline block">
+              <div className="w-11 h-11 rounded-xl bg-cs-blue/8 border border-cs-blue/15 flex items-center justify-center text-cs-blue mb-4 group-hover:bg-cs-blue group-hover:text-white transition-all">
+                {icon}
+              </div>
+              <h3 className="text-cs-navy font-bold mb-2 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                {title} <ChevronRight className="w-4 h-4 text-cs-blue" />
+              </h3>
+              <p className="text-cs-muted text-sm leading-relaxed mb-4">{desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {tags.map((t) => (
+                  <span key={t} className="text-[11px] text-cs-muted bg-cs-bgsub border border-cs-blue/10 px-2.5 py-1 rounded-full">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function CTA() {
   return (
     <section className="py-10 sm:py-16 bg-cs-navy relative overflow-hidden">
@@ -217,6 +260,7 @@ export default function Solutions() {
       <AgentforceHero />
       <TrustLayer />
       <SalesforceClouds />
+      <IndustryClouds />
       <FAQ title="Solutions FAQ" items={solutionFaqs} />
       <CTA />
     </>

@@ -53,6 +53,22 @@ export const ROUTE_META = {
     title: 'Salesforce Health Cloud Consulting | Cloudsheer',
     description: 'Health Cloud implementation for providers, payers, and life sciences. HIPAA-aligned care management workflows with Agentforce.',
   },
+  '/solutions/financial-services-cloud': {
+    title: 'Salesforce Financial Services Cloud Consulting | Cloudsheer',
+    description: 'Financial Services Cloud implementation for banks, wealth firms, lenders, and insurers. Client 360, automated onboarding, and built-in compliance.',
+  },
+  '/solutions/life-sciences-cloud': {
+    title: 'Salesforce Life Sciences Cloud Consulting | Cloudsheer',
+    description: 'Life Sciences Cloud for pharma, biotech, and medical device. Clinical trials, HCP 360, medical affairs, commercial, and patient services - GxP-ready.',
+  },
+  '/solutions/education-cloud': {
+    title: 'Salesforce Education Cloud Consulting | Cloudsheer',
+    description: 'Education Cloud for universities, K-12, and continuing education. Recruitment, admissions, student success, advancement, and FERPA-aware workflows.',
+  },
+  '/solutions/nonprofit-cloud': {
+    title: 'Salesforce Nonprofit Cloud Consulting | Cloudsheer',
+    description: 'Nonprofit Cloud for foundations, social services, advocacy, and faith organizations. Fundraising, programs, volunteers, and grants on one platform.',
+  },
   '/case-studies/agentforce-manufacturing': {
     title: 'Case Study: 92% Autonomous Cases with Agentforce | Cloudsheer',
     description: 'How Cloudsheer built the multi-agent Agentforce architecture Salesforce said was not possible. Shipped in 11 weeks, 12K+ cases/month, $340K saved annually.',

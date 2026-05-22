@@ -25,6 +25,10 @@ import AnalyticsPage     from './pages/clouds/Analytics'
 import PlatformPage      from './pages/clouds/Platform'
 import SlackPage         from './pages/clouds/Slack'
 import HealthCloudPage   from './pages/clouds/HealthCloud'
+import FinancialServicesCloudPage from './pages/clouds/FinancialServicesCloud'
+import LifeSciencesCloudPage from './pages/clouds/LifeSciencesCloud'
+import EducationCloudPage from './pages/clouds/EducationCloud'
+import NonprofitCloudPage from './pages/clouds/NonprofitCloud'
 import AgentforceManufacturingCase from './pages/case-studies/AgentforceManufacturing'
 import { ROUTE_META, applySEO } from './seoConfig'
 
@@ -79,6 +83,10 @@ export default function App() {
           <Route path="/solutions/platform"         element={<PlatformPage />} />
           <Route path="/solutions/slack"            element={<SlackPage />} />
           <Route path="/solutions/health-cloud"     element={<HealthCloudPage />} />
+          <Route path="/solutions/financial-services-cloud" element={<FinancialServicesCloudPage />} />
+          <Route path="/solutions/life-sciences-cloud"      element={<LifeSciencesCloudPage />} />
+          <Route path="/solutions/education-cloud"          element={<EducationCloudPage />} />
+          <Route path="/solutions/nonprofit-cloud"          element={<NonprofitCloudPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies/agentforce-manufacturing" element={<AgentforceManufacturingCase />} />
           <Route path="/about" element={<About />} />

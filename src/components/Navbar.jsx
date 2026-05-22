@@ -74,6 +74,39 @@ const clouds = [
     icon: null,
     image: 'icons/health.svg',
     desc: 'Patient 360 for healthcare & life sciences',
+    industry: true,
+  },
+  {
+    label: 'Financial Services Cloud',
+    to: '/solutions/financial-services-cloud',
+    icon: null,
+    image: 'icons/health.svg',
+    desc: 'Banking, wealth, lending, insurance',
+    industry: true,
+  },
+  {
+    label: 'Life Sciences Cloud',
+    to: '/solutions/life-sciences-cloud',
+    icon: null,
+    image: 'icons/health.svg',
+    desc: 'Clinical, medical, commercial, patient services',
+    industry: true,
+  },
+  {
+    label: 'Education Cloud',
+    to: '/solutions/education-cloud',
+    icon: null,
+    image: 'icons/health.svg',
+    desc: 'Recruitment, success, advancement',
+    industry: true,
+  },
+  {
+    label: 'Nonprofit Cloud',
+    to: '/solutions/nonprofit-cloud',
+    icon: null,
+    image: 'icons/health.svg',
+    desc: 'Fundraising, programs, volunteers',
+    industry: true,
   },
 ]
 
@@ -217,7 +250,27 @@ export default function Navbar() {
                   </div>
                   <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#94A3B8' }}>Extend & Analyse</p>
                   <div className="grid grid-cols-2 gap-0">
-                    {clouds.filter(c => !['Agentforce', 'Slack', 'Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)).map(({ label, to, icon: Icon, image, desc, highlight }) => (
+                    {clouds.filter(c => !c.industry && !['Agentforce', 'Slack', 'Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)).map(({ label, to, icon: Icon, image, desc, highlight }) => (
+                      <Link key={label} to={to} onClick={() => setDropOpen(false)}
+                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
+                        style={{ textDecoration: 'none' }}
+                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.04)' }}
+                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
+                          style={{ backgroundColor: 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
+                          {Icon ? <Icon className="w-4 h-4" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-5 h-5 rounded" />}
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
+                          <p className="text-xs" style={{ color: '#94A3B8' }}>{desc}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#94A3B8' }}>Industry Clouds</p>
+                  <div className="grid grid-cols-2 gap-0">
+                    {clouds.filter(c => c.industry).map(({ label, to, icon: Icon, image, desc }) => (
                       <Link key={label} to={to} onClick={() => setDropOpen(false)}
                         className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
                         style={{ textDecoration: 'none' }}
