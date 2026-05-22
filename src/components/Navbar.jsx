@@ -199,17 +199,24 @@ export default function Navbar() {
                 <div
                   ref={panelRef}
                   onMouseLeave={() => setDropOpen(false)}
-                  className="rounded-2xl overflow-hidden animate-scale-in"
                   style={{
                     position: 'fixed',
                     top: scrolled ? '60px' : '72px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
+                    left: 0,
+                    right: 0,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    pointerEvents: 'none',
+                    zIndex: 100,
+                  }}>
+                <div
+                  className="rounded-2xl overflow-hidden animate-scale-in"
+                  style={{
+                    pointerEvents: 'auto',
                     width: 'min(960px, calc(100vw - 32px))',
                     background: '#ffffff',
                     border: '1px solid rgba(1,118,211,0.12)',
                     boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
-                    zIndex: 100,
                   }}
                 >
                   {/* Header bar */}
@@ -258,6 +265,7 @@ export default function Navbar() {
                       </div>
                     ))}
                   </div>
+                </div>
                 </div>
               ), document.body)
             })()}
