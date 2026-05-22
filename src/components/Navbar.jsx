@@ -179,117 +179,75 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown panel */}
-            {dropOpen && (
-              <div
-                onMouseLeave={() => setDropOpen(false)}
-                className="absolute left-1/2 mt-2 w-[600px] rounded-2xl overflow-hidden animate-scale-in"
-                style={{
-                  transform: 'translateX(-50%)',
-                  background: '#ffffff',
-                  border: '1px solid rgba(1,118,211,0.12)',
-                  boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
-                }}
-              >
-                {/* Header bar */}
-                <div className="px-5 py-3 flex items-center justify-between"
-                  style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', background: '#F0F7FF' }}>
-                  <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#0176D3' }}>
-                    Salesforce Clouds &amp; Products
-                  </span>
-                  <Link
-                    to="/solutions"
-                    onClick={() => setDropOpen(false)}
-                    className="text-xs font-semibold flex items-center gap-1 transition-colors"
-                    style={{ color: '#0176D3' }}
-                  >
-                    View all solutions →
-                  </Link>
-                </div>
-
-                {/* Grid - tiered */}
-                <div className="p-3">
-                  {/* Featured */}
-                  <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-1 pb-1" style={{ color: '#94A3B8' }}>AI & Automation</p>
-                  <div className="grid grid-cols-2 gap-0">
-                    {clouds.filter(c => ['Agentforce', 'Slack'].includes(c.label)).map(({ label, to, icon: Icon, image, desc, highlight }) => (
-                      <Link key={label} to={to} onClick={() => setDropOpen(false)}
-                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
-                        style={{ textDecoration: 'none' }}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.06)' }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ backgroundColor: highlight ? 'rgba(1,118,211,0.10)' : 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
-                          {Icon ? <Icon className="w-4 h-4" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-5 h-5 rounded" />}
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
-                          <p className="text-xs" style={{ color: '#94A3B8' }}>{desc}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#94A3B8' }}>Core Clouds</p>
-                  <div className="grid grid-cols-2 gap-0">
-                    {clouds.filter(c => ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)).map(({ label, to, icon: Icon, image, desc, highlight }) => (
-                      <Link key={label} to={to} onClick={() => setDropOpen(false)}
-                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
-                        style={{ textDecoration: 'none' }}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.04)' }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ backgroundColor: 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
-                          {Icon ? <Icon className="w-4 h-4" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-5 h-5 rounded" />}
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
-                          <p className="text-xs" style={{ color: '#94A3B8' }}>{desc}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#94A3B8' }}>Extend & Analyse</p>
-                  <div className="grid grid-cols-2 gap-0">
-                    {clouds.filter(c => !c.industry && !['Agentforce', 'Slack', 'Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)).map(({ label, to, icon: Icon, image, desc, highlight }) => (
-                      <Link key={label} to={to} onClick={() => setDropOpen(false)}
-                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
-                        style={{ textDecoration: 'none' }}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.04)' }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ backgroundColor: 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
-                          {Icon ? <Icon className="w-4 h-4" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-5 h-5 rounded" />}
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
-                          <p className="text-xs" style={{ color: '#94A3B8' }}>{desc}</p>
-                        </div>
-                      </Link>
-                    ))}
+            {/* Dropdown panel - 4-column mega menu */}
+            {dropOpen && (() => {
+              const isCore = c => ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)
+              const isAI   = c => ['Agentforce', 'Slack'].includes(c.label)
+              const isExtend = c => !c.industry && !isCore(c) && !isAI(c)
+              const tiers = [
+                { label: 'AI & Automation', items: clouds.filter(isAI) },
+                { label: 'Core Clouds',     items: clouds.filter(isCore) },
+                { label: 'Extend & Analyse',items: clouds.filter(isExtend) },
+                { label: 'Industry Clouds', items: clouds.filter(c => c.industry) },
+              ]
+              return (
+                <div
+                  onMouseLeave={() => setDropOpen(false)}
+                  className="absolute left-1/2 mt-2 rounded-2xl overflow-hidden animate-scale-in"
+                  style={{
+                    transform: 'translateX(-50%)',
+                    width: 'min(960px, calc(100vw - 32px))',
+                    background: '#ffffff',
+                    border: '1px solid rgba(1,118,211,0.12)',
+                    boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
+                  }}
+                >
+                  {/* Header bar */}
+                  <div className="px-5 py-3 flex items-center justify-between"
+                    style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', background: '#F0F7FF' }}>
+                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#0176D3' }}>
+                      Salesforce Clouds &amp; Products
+                    </span>
+                    <Link
+                      to="/solutions"
+                      onClick={() => setDropOpen(false)}
+                      className="text-xs font-semibold flex items-center gap-1 transition-colors"
+                      style={{ color: '#0176D3' }}
+                    >
+                      View all solutions →
+                    </Link>
                   </div>
 
-                  <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#94A3B8' }}>Industry Clouds</p>
-                  <div className="grid grid-cols-2 gap-0">
-                    {clouds.filter(c => c.industry).map(({ label, to, icon: Icon, image, desc }) => (
-                      <Link key={label} to={to} onClick={() => setDropOpen(false)}
-                        className="flex items-start gap-3 px-3 py-2.5 rounded-xl transition-all duration-150"
-                        style={{ textDecoration: 'none' }}
-                        onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.04)' }}
-                        onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5"
-                          style={{ backgroundColor: 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
-                          {Icon ? <Icon className="w-4 h-4" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-5 h-5 rounded" />}
+                  {/* 4-column grid */}
+                  <div className="grid grid-cols-4 gap-0 p-3">
+                    {tiers.map(({ label: tierLabel, items }, tIdx) => (
+                      <div key={tierLabel}
+                        className="px-2"
+                        style={{ borderLeft: tIdx > 0 ? '1px solid rgba(1,118,211,0.06)' : 'none' }}>
+                        <p className="text-[10px] font-bold uppercase tracking-widest px-2 pt-1 pb-2" style={{ color: '#94A3B8' }}>
+                          {tierLabel}
+                        </p>
+                        <div className="flex flex-col gap-0.5">
+                          {items.map(({ label, to, icon: Icon, image, highlight }) => (
+                            <Link key={label} to={to} onClick={() => setDropOpen(false)}
+                              className="flex items-center gap-2.5 px-2 py-2 rounded-lg transition-all duration-150"
+                              style={{ textDecoration: 'none' }}
+                              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.06)' }}
+                              onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
+                              <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0"
+                                style={{ backgroundColor: highlight ? 'rgba(1,118,211,0.10)' : 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
+                                {Icon ? <Icon className="w-3.5 h-3.5" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-4 h-4 rounded" />}
+                              </div>
+                              <span className="text-[13px] font-semibold leading-tight" style={{ color: '#032D60' }}>{label}</span>
+                            </Link>
+                          ))}
                         </div>
-                        <div>
-                          <p className="text-sm font-semibold" style={{ color: '#032D60' }}>{label}</p>
-                          <p className="text-xs" style={{ color: '#94A3B8' }}>{desc}</p>
-                        </div>
-                      </Link>
+                      </div>
                     ))}
                   </div>
                 </div>
-              </div>
-            )}
+              )
+            })()}
           </div>
 
           {/* Other links */}
