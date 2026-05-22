@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
-         ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse } from 'lucide-react'
+         ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse,
+         Heart, Landmark, FlaskConical, GraduationCap, HandHeart } from 'lucide-react'
 
 const clouds = [
   {
@@ -71,42 +72,42 @@ const clouds = [
   {
     label: 'Health Cloud',
     to: '/solutions/health-cloud',
-    icon: null,
-    image: 'icons/health.svg',
+    icon: Heart,
     desc: 'Patient 360 for healthcare & life sciences',
     industry: true,
+    iconColor: '#EF4444',
   },
   {
     label: 'Financial Services Cloud',
     to: '/solutions/financial-services-cloud',
-    icon: null,
-    image: 'icons/health.svg',
+    icon: Landmark,
     desc: 'Banking, wealth, lending, insurance',
     industry: true,
+    iconColor: '#0176D3',
   },
   {
     label: 'Life Sciences Cloud',
     to: '/solutions/life-sciences-cloud',
-    icon: null,
-    image: 'icons/health.svg',
+    icon: FlaskConical,
     desc: 'Clinical, medical, commercial, patient services',
     industry: true,
+    iconColor: '#06B6D4',
   },
   {
     label: 'Education Cloud',
     to: '/solutions/education-cloud',
-    icon: null,
-    image: 'icons/health.svg',
+    icon: GraduationCap,
     desc: 'Recruitment, success, advancement',
     industry: true,
+    iconColor: '#A855F7',
   },
   {
     label: 'Nonprofit Cloud',
     to: '/solutions/nonprofit-cloud',
-    icon: null,
-    image: 'icons/health.svg',
+    icon: HandHeart,
     desc: 'Fundraising, programs, volunteers',
     industry: true,
+    iconColor: '#F59E0B',
   },
 ]
 
@@ -193,13 +194,17 @@ export default function Navbar() {
               return (
                 <div
                   onMouseLeave={() => setDropOpen(false)}
-                  className="absolute left-1/2 mt-2 rounded-2xl overflow-hidden animate-scale-in"
+                  className="rounded-2xl overflow-hidden animate-scale-in"
                   style={{
+                    position: 'fixed',
+                    top: scrolled ? '60px' : '72px',
+                    left: '50%',
                     transform: 'translateX(-50%)',
                     width: 'min(960px, calc(100vw - 32px))',
                     background: '#ffffff',
                     border: '1px solid rgba(1,118,211,0.12)',
                     boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
+                    zIndex: 60,
                   }}
                 >
                   {/* Header bar */}
@@ -228,19 +233,22 @@ export default function Navbar() {
                           {tierLabel}
                         </p>
                         <div className="flex flex-col gap-0.5">
-                          {items.map(({ label, to, icon: Icon, image, highlight }) => (
-                            <Link key={label} to={to} onClick={() => setDropOpen(false)}
-                              className="flex items-center gap-2.5 px-2 py-2 rounded-lg transition-all duration-150"
-                              style={{ textDecoration: 'none' }}
-                              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.06)' }}
-                              onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                              <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0"
-                                style={{ backgroundColor: highlight ? 'rgba(1,118,211,0.10)' : 'rgba(1,118,211,0.06)', color: '#0176D3' }}>
-                                {Icon ? <Icon className="w-3.5 h-3.5" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-4 h-4 rounded" />}
-                              </div>
-                              <span className="text-[13px] font-semibold leading-tight" style={{ color: '#032D60' }}>{label}</span>
-                            </Link>
-                          ))}
+                          {items.map(({ label, to, icon: Icon, image, highlight, iconColor }) => {
+                            const color = iconColor || '#0176D3'
+                            return (
+                              <Link key={label} to={to} onClick={() => setDropOpen(false)}
+                                className="flex items-center gap-2.5 px-2 py-2 rounded-lg transition-all duration-150"
+                                style={{ textDecoration: 'none' }}
+                                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.06)' }}
+                                onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
+                                <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0"
+                                  style={{ backgroundColor: `${color}14`, color }}>
+                                  {Icon ? <Icon className="w-3.5 h-3.5" /> : image && <img src={import.meta.env.BASE_URL + image} alt={label} className="w-4 h-4 rounded" />}
+                                </div>
+                                <span className="text-[13px] font-semibold leading-tight" style={{ color: '#032D60' }}>{label}</span>
+                              </Link>
+                            )
+                          })}
                         </div>
                       </div>
                     ))}
