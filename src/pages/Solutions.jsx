@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import {
   ArrowRight, Bot, CheckCircle2, Sparkles, ChevronRight,
   ShoppingCart, Headphones, Mail, Database, BarChart3, Zap,
   Heart, Briefcase, FlaskConical, GraduationCap, HandHeart,
 } from 'lucide-react'
 import FAQ from '../components/FAQ'
+import { addPageSchema, faqPageSchema } from '../seoConfig'
 
 const solutionFaqs = [
   { q: 'Which Salesforce cloud should I start with?', a: 'It depends on your biggest pain point. If support costs are high, start with Service Cloud + Agentforce. If leads are going cold, Sales Cloud + Agentforce SDR Agent. Book a discovery call and we will recommend based on your data.' },
@@ -72,10 +74,10 @@ function AgentforceHero() {
     <section className="py-10 sm:py-16 bg-cs-bgsub">
       <div className="section-wrap">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-10">
-          <div className="tag mx-auto mb-5"><Bot className="w-3.5 h-3.5" /> Agentforce Agents</div>
-          <h2 className="section-title mb-4">
-            Agents That Drive <span className="gradient-text">Real Business Results</span>
-          </h2>
+          <div className="tag mx-auto mb-5"><Bot className="w-3.5 h-3.5" /> Salesforce Solutions</div>
+          <h1 className="section-title mb-4">
+            Salesforce Solutions for <span className="gradient-text">Every Cloud</span>
+          </h1>
           <p className="section-sub">Each agent is built to solve a specific business problem - reducing costs, accelerating revenue, or improving customer experience.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -254,6 +256,10 @@ function CTA() {
 }
 
 export default function Solutions() {
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(solutionFaqs))
+    return () => addPageSchema('faq', null)
+  }, [])
   return (
     <>
       <PageHero />

@@ -10,21 +10,10 @@
       gtag('config', 'G-E49FD06T7T', { send_page_view: false });
     </script>
     <meta charset="UTF-8" />
-    <script>
-      // Handle SPA redirect from 404.html
-      (function() {
-        var redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-          sessionStorage.removeItem('redirect');
-          if (redirect !== '/') {
-            window.history.replaceState(null, null, '/cloudsheer-consulting' + redirect);
-          }
-        }
-      })();
-    </script>
     <link rel="icon" type="image/png" href="/favicon-64.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cloudsheer Consulting — Certified Salesforce Partner specializing in Salesforce implementation and Agentforce AI solutions." />
+    <link rel="canonical" href="https://www.cloudsheer.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -36,13 +25,19 @@
     <meta property="og:description" content="Cut support costs by 40%. Respond to leads in under 2 seconds. Agentforce agents that run 24/7 inside your Salesforce org." />
     <meta property="og:url" content="https://www.cloudsheer.com" />
     <meta property="og:site_name" content="Cloudsheer Consulting" />
+    <meta property="og:image" content="https://www.cloudsheer.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cloudsheer Consulting — Build Once. Deploy Everywhere." />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Cloudsheer Consulting | Salesforce & Agentforce Partner" />
     <meta name="twitter:description" content="Cut support costs by 40%. Respond to leads in under 2 seconds. Agentforce agents that run 24/7 inside your Salesforce org." />
+    <meta name="twitter:image" content="https://www.cloudsheer.com/og-image.png" />
+    <meta name="twitter:image:alt" content="Cloudsheer Consulting — Build Once. Deploy Everywhere." />
 
-    <!-- Schema: Organization -->
+    <!-- Schema: Organization (site-wide entity) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -57,44 +52,24 @@
         "https://appexchange.salesforce.com/appxConsultingListingDetail?listingId=78cae982-5a1e-4fb2-a8c9-b52a994f69d7"
       ],
       "address": [
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "Dallas",
-          "addressRegion": "TX",
-          "addressCountry": "US"
-        },
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "Delhi",
-          "addressCountry": "IN"
-        },
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "London",
-          "addressCountry": "GB"
-        },
-        {
-          "@type": "PostalAddress",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "addressCountry": "US"
-        }
+        { "@type": "PostalAddress", "addressLocality": "Dallas",   "addressRegion": "TX", "addressCountry": "US" },
+        { "@type": "PostalAddress", "addressLocality": "Delhi",                              "addressCountry": "IN" },
+        { "@type": "PostalAddress", "addressLocality": "London",                             "addressCountry": "GB" },
+        { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "addressCountry": "US" }
       ],
-      "numberOfEmployees": {
-        "@type": "QuantitativeValue",
-        "value": 40
-      },
-      "foundingDate": "2012",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": 40 },
+      "foundingDate": "2022",
       "knowsAbout": [
         "Salesforce", "Agentforce", "Sales Cloud", "Service Cloud",
         "Marketing Cloud", "Commerce Cloud", "Experience Cloud",
         "Tableau", "CRM Analytics", "Salesforce Platform", "Slack", "Health Cloud",
+        "Financial Services Cloud", "Life Sciences Cloud", "Education Cloud", "Nonprofit Cloud",
         "CRM Implementation", "Salesforce Consulting"
       ]
     }
     </script>
 
-    <!-- Schema: WebSite with SearchAction -->
+    <!-- Schema: WebSite (site-wide) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -104,137 +79,7 @@
       "description": "Salesforce & Agentforce consulting partner"
     }
     </script>
-
-    <!-- Schema: ProfessionalService -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Cloudsheer Consulting",
-      "url": "https://www.cloudsheer.com",
-      "image": "https://www.cloudsheer.com/cloudsheer-logo.png",
-      "description": "Certified Salesforce & Agentforce consulting partner. We help mid-market and enterprise businesses cut costs, close more deals, and scale operations with Agentforce agents.",
-      "email": "hello@cloudsheer.com",
-      "priceRange": "$$$",
-      "areaServed": ["US", "IN", "GB"],
-      "serviceType": [
-        "Salesforce Implementation",
-        "Agentforce AI Agent Deployment",
-        "Sales Cloud Consulting",
-        "Service Cloud Consulting",
-        "Marketing Cloud Consulting",
-        "Commerce Cloud Consulting",
-        "Salesforce Health Cloud",
-        "CRM Analytics & Tableau",
-        "Salesforce Platform Development",
-        "Slack Integration"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Salesforce Solutions",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Agentforce AI Agent Deployment",
-              "description": "Deploy autonomous Agentforce agents that handle support, sales, and operations 24/7 inside Salesforce."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Salesforce Implementation",
-              "description": "Full Salesforce cloud implementation including Sales, Service, Marketing, Commerce, and Experience Cloud."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "CRM Analytics & Tableau",
-              "description": "Real-time dashboards, AI predictions, and visual analytics embedded in Salesforce."
-            }
-          }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What if we're not ready for Agentforce?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We assess your Salesforce org, data quality, and processes to determine readiness. Many clients start with a standard Salesforce implementation and add Agentforce later."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is Cloudsheer different from a large SI like Deloitte or Accenture?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We are a specialist Salesforce firm. Every consultant works with Salesforce and Agentforce daily. You get senior architects on your project, direct access to leadership, and lower overhead."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does pricing look like?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Fixed-price packages starting at $2,999 for standard Salesforce implementations. Agentforce deployments typically range from $9,999 to $50,000+. Every engagement starts with a free discovery call with a detailed estimate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens after go-live?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every project includes 30 days of post-launch support. We offer ongoing managed services for agent monitoring, performance optimization, and new agent deployments."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you handle large or multi-cloud projects?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale with certified specialists from our extended network."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do you handle data security and compliance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "All work is done within Salesforce's enterprise security framework (SOC 2 Type II, HIPAA-eligible, GDPR compliant). We follow Salesforce Well-Architected principles for data access, sharing rules, and encryption."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Schema: BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cloudsheer.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://www.cloudsheer.com/solutions" },
-        { "@type": "ListItem", "position": 3, "name": "About", "item": "https://www.cloudsheer.com/about" },
-        { "@type": "ListItem", "position": 4, "name": "Blog", "item": "https://www.cloudsheer.com/blog" },
-        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.cloudsheer.com/contact" },
-        { "@type": "ListItem", "position": 6, "name": "Careers", "item": "https://www.cloudsheer.com/careers" }
-      ]
-    }
-    </script>
+    <!-- Per-page schemas (BreadcrumbList, FAQPage, Article, ProfessionalService, etc.) are emitted dynamically by React per route. See src/seoConfig.js and src/components/PageSchema.jsx. -->
   </head>
   <body>
     <div id="root"></div>

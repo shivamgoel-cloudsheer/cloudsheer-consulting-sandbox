@@ -30,7 +30,8 @@ import LifeSciencesCloudPage from './pages/clouds/LifeSciencesCloud'
 import EducationCloudPage from './pages/clouds/EducationCloud'
 import NonprofitCloudPage from './pages/clouds/NonprofitCloud'
 import AgentforceManufacturingCase from './pages/case-studies/AgentforceManufacturing'
-import { ROUTE_META, applySEO } from './seoConfig'
+import { ROUTE_META, applySEO, setPageSchemas, breadcrumbSchema, breadcrumbsFromPath,
+         faqPageSchema, professionalServiceSchema, HOMEPAGE_FAQS } from './seoConfig'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -41,9 +42,23 @@ function ScrollToTop() {
 function SEO() {
   const { pathname } = useLocation()
   useEffect(() => {
+    // Blog post pages and the case study page set their own SEO + schemas
     if (pathname.startsWith('/blog/') && pathname !== '/blog') return
+    if (pathname.startsWith('/case-studies/')) return
+
     const meta = ROUTE_META[pathname] || ROUTE_META['/']
     applySEO({ title: meta.title, description: meta.description, pathname })
+
+    // Per-route structured data: always emit a Breadcrumb. Homepage gets
+    // ProfessionalService + FAQPage on top. Pages with their own FAQs
+    // attach FAQPage from within the page component using setPageSchemas.
+    const schemas = []
+    schemas.push(breadcrumbSchema(breadcrumbsFromPath(pathname)))
+    if (pathname === '/') {
+      schemas.push(professionalServiceSchema())
+      schemas.push(faqPageSchema(HOMEPAGE_FAQS))
+    }
+    setPageSchemas(schemas)
   }, [pathname])
   return null
 }

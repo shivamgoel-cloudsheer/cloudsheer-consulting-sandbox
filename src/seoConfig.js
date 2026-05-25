@@ -1,4 +1,64 @@
 export const SITE_URL = 'https://www.cloudsheer.com'
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
+
+export const HOMEPAGE_FAQS = [
+  { q: "What if we're not ready for Agentforce?",
+    a: "We assess your Salesforce org, data quality, and processes to determine readiness. Many clients start with a standard Salesforce implementation and add Agentforce later." },
+  { q: "How is Cloudsheer different from a large SI like Deloitte or Accenture?",
+    a: "We are a specialist Salesforce firm. Every consultant works with Salesforce and Agentforce daily. You get senior architects on your project, direct access to leadership, and lower overhead." },
+  { q: "What does pricing look like?",
+    a: "Fixed-price packages starting at $2,999 for standard Salesforce implementations. Agentforce deployments typically range from $9,999 to $50,000+. Every engagement starts with a free discovery call with a detailed estimate." },
+  { q: "What happens after go-live?",
+    a: "Every project includes 30 days of post-launch support. We offer ongoing managed services for agent monitoring, performance optimization, and new agent deployments." },
+  { q: "Can you handle large or multi-cloud projects?",
+    a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale with certified specialists from our extended network." },
+  { q: "How do you handle data security and compliance?",
+    a: "All work is done within Salesforce's enterprise security framework (SOC 2 Type II, HIPAA-eligible, GDPR compliant). We follow Salesforce Well-Architected principles for data access, sharing rules, and encryption." },
+]
+
+const SEGMENT_NAMES = {
+  '': 'Home',
+  'solutions': 'Solutions',
+  'services': 'Services',
+  'about': 'About',
+  'contact': 'Contact',
+  'blog': 'Blog',
+  'careers': 'Careers',
+  'privacy': 'Privacy Policy',
+  'terms': 'Terms & Conditions',
+  'case-studies': 'Case Studies',
+  'agentforce': 'Agentforce',
+  'sales-cloud': 'Sales Cloud',
+  'service-cloud': 'Service Cloud',
+  'marketing-cloud': 'Marketing Cloud',
+  'commerce-cloud': 'Commerce Cloud',
+  'experience-cloud': 'Experience Cloud',
+  'analytics': 'Analytics & Tableau',
+  'platform': 'Platform & AppExchange',
+  'slack': 'Slack',
+  'health-cloud': 'Health Cloud',
+  'financial-services-cloud': 'Financial Services Cloud',
+  'life-sciences-cloud': 'Life Sciences Cloud',
+  'education-cloud': 'Education Cloud',
+  'nonprofit-cloud': 'Nonprofit Cloud',
+  'agentforce-manufacturing': 'Agentforce Manufacturing',
+}
+
+function humanize(slug) {
+  return SEGMENT_NAMES[slug] || slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+}
+
+export function breadcrumbsFromPath(pathname) {
+  if (!pathname || pathname === '/') return [{ name: 'Home', url: '/' }]
+  const parts = pathname.split('/').filter(Boolean)
+  const crumbs = [{ name: 'Home', url: '/' }]
+  let acc = ''
+  for (const p of parts) {
+    acc += `/${p}`
+    crumbs.push({ name: humanize(p), url: acc })
+  }
+  return crumbs
+}
 
 export const ROUTE_META = {
   '/': {
@@ -99,6 +159,8 @@ export const ROUTE_META = {
   },
 }
 
+/* ─── DOM helpers ───────────────────────────────────────────── */
+
 function setMeta(attrName, attrValue, content) {
   let el = document.head.querySelector(`meta[${attrName}="${attrValue}"]`)
   if (!el) {
@@ -119,16 +181,190 @@ function setLink(rel, href) {
   el.setAttribute('href', href)
 }
 
-export function applySEO({ title, description, pathname }) {
+/* ─── Per-page meta + canonical + OG/Twitter ────────────────── */
+
+export function applySEO({ title, description, pathname, image }) {
   const path = pathname === '/' ? '/' : pathname.replace(/\/$/, '')
   const url = `${SITE_URL}${path}`
+  const imageUrl = image || DEFAULT_OG_IMAGE
 
   if (title) document.title = title
   if (description) setMeta('name', 'description', description)
   if (title) setMeta('property', 'og:title', title)
   if (description) setMeta('property', 'og:description', description)
   setMeta('property', 'og:url', url)
+  setMeta('property', 'og:image', imageUrl)
   if (title) setMeta('name', 'twitter:title', title)
   if (description) setMeta('name', 'twitter:description', description)
+  setMeta('name', 'twitter:image', imageUrl)
   setLink('canonical', url)
+}
+
+/* ─── JSON-LD schema injection (per-route, replaces on navigation) */
+
+const SCHEMA_ATTR = 'data-page-schema'
+
+export function setPageSchemas(schemas) {
+  // Remove any previously injected per-page schemas
+  document.head.querySelectorAll(`script[${SCHEMA_ATTR}]`).forEach(el => el.remove())
+  // Inject the new ones (caller passes an array of objects)
+  const list = Array.isArray(schemas) ? schemas : [schemas]
+  list.filter(Boolean).forEach((schema) => {
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.setAttribute(SCHEMA_ATTR, 'true')
+    script.text = JSON.stringify(schema)
+    document.head.appendChild(script)
+  })
+}
+
+// Adds (or replaces by key) a single per-page schema without wiping others.
+// Pages call this from their useEffect to layer onto the breadcrumb that
+// App.jsx already emitted for the route.
+export function addPageSchema(key, schema) {
+  document.head.querySelectorAll(`script[data-schema-key="${key}"]`).forEach(el => el.remove())
+  if (!schema) return
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.setAttribute(SCHEMA_ATTR, 'true')
+  script.setAttribute('data-schema-key', key)
+  script.text = JSON.stringify(schema)
+  document.head.appendChild(script)
+}
+
+/* ─── Schema generators ─────────────────────────────────────── */
+
+const ORG_REF = {
+  '@type': 'Organization',
+  name: 'Cloudsheer Consulting',
+  url: SITE_URL,
+  logo: `${SITE_URL}/cloudsheer-logo.png`,
+}
+
+export function breadcrumbSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      item: it.url.startsWith('http') ? it.url : `${SITE_URL}${it.url}`,
+    })),
+  }
+}
+
+export function faqPageSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  }
+}
+
+export function articleSchema({ headline, description, image, datePublished, dateModified, author, slug, articleType = 'Article' }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': articleType,
+    headline,
+    description,
+    image: image || DEFAULT_OG_IMAGE,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: { '@type': 'Person', name: author },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cloudsheer Consulting',
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/cloudsheer-logo.png` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${slug}` },
+  }
+}
+
+export function howToSchema({ name, description, steps, totalTime, image }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    image: image || DEFAULT_OG_IMAGE,
+    ...(totalTime ? { totalTime } : {}),
+    step: steps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
+  }
+}
+
+export function professionalServiceSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Cloudsheer Consulting',
+    url: SITE_URL,
+    image: `${SITE_URL}/cloudsheer-logo.png`,
+    description: 'Certified Salesforce & Agentforce consulting partner. We help mid-market and enterprise businesses cut costs, close more deals, and scale operations with Agentforce agents.',
+    email: 'hello@cloudsheer.com',
+    priceRange: '$$$',
+    areaServed: ['US', 'IN', 'GB'],
+    serviceType: [
+      'Salesforce Implementation',
+      'Agentforce AI Agent Deployment',
+      'Sales Cloud Consulting',
+      'Service Cloud Consulting',
+      'Marketing Cloud Consulting',
+      'Commerce Cloud Consulting',
+      'Salesforce Health Cloud',
+      'Financial Services Cloud',
+      'Life Sciences Cloud',
+      'Education Cloud',
+      'Nonprofit Cloud',
+      'CRM Analytics & Tableau',
+      'Salesforce Platform Development',
+      'Slack Integration',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Salesforce Solutions',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Agentforce AI Agent Deployment',
+          description: 'Deploy autonomous Agentforce agents that handle support, sales, and operations 24/7 inside Salesforce.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Salesforce Implementation',
+          description: 'Full Salesforce cloud implementation including Sales, Service, Marketing, Commerce, and Experience Cloud.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CRM Analytics & Tableau',
+          description: 'Real-time dashboards, AI predictions, and visual analytics embedded in Salesforce.' } },
+      ],
+    },
+  }
+}
+
+export function localBusinessSchemas() {
+  const offices = [
+    { id: '#dallas',   name: 'Cloudsheer Consulting — Dallas',   addressLocality: 'Dallas',   addressRegion: 'TX', addressCountry: 'US' },
+    { id: '#delhi',    name: 'Cloudsheer Consulting — Delhi',    addressLocality: 'Delhi',                          addressCountry: 'IN' },
+    { id: '#london',   name: 'Cloudsheer Consulting — London',   addressLocality: 'London',                         addressCountry: 'GB' },
+    { id: '#new-york', name: 'Cloudsheer Consulting — New York', addressLocality: 'New York', addressRegion: 'NY', addressCountry: 'US' },
+  ]
+  return offices.map(o => ({
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${SITE_URL}/about${o.id}`,
+    name: o.name,
+    url: `${SITE_URL}/about`,
+    image: `${SITE_URL}/cloudsheer-logo.png`,
+    email: 'hello@cloudsheer.com',
+    parentOrganization: ORG_REF,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: o.addressLocality,
+      ...(o.addressRegion ? { addressRegion: o.addressRegion } : {}),
+      addressCountry: o.addressCountry,
+    },
+  }))
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { addPageSchema, faqPageSchema } from '../seoConfig'
 import {
   ArrowRight, CheckCircle2, Sparkles, Layers,
   Cable, ChevronRight, Rocket, Wrench, Shield,
@@ -569,6 +570,10 @@ function CTA() {
 
 /* ─── Page ──────────────────────────────────────────────────── */
 export default function Services() {
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(serviceFaqs))
+    return () => addPageSchema('faq', null)
+  }, [])
   return (
     <>
       <Hero />

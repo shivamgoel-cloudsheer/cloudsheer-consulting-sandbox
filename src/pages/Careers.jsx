@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FAQ from '../components/FAQ'
+import { addPageSchema, faqPageSchema } from '../seoConfig'
 import {
   ArrowRight, MapPin, Clock, Briefcase, Users, Zap, Heart,
   TrendingUp, Globe, ChevronDown, ChevronUp, Send, CheckCircle2,
@@ -313,6 +314,10 @@ const careerFaqs = [
 ]
 
 export default function Careers() {
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(careerFaqs))
+    return () => addPageSchema('faq', null)
+  }, [])
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}

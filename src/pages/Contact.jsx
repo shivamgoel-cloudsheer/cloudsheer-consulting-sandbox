@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, Bot, Calendar } from 'lucide-react'
 import FAQ from '../components/FAQ'
+import { addPageSchema, faqPageSchema } from '../seoConfig'
 
 const contactFaqs = [
   { q: 'What happens on the discovery call?', a: '30 minutes with a Salesforce architect (not a sales rep). We review your current setup, identify quick wins, and give you a clear plan with timeline and cost estimate.' },
@@ -189,6 +190,10 @@ function CalEmbed() {
 }
 
 export default function Contact() {
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(contactFaqs))
+    return () => addPageSchema('faq', null)
+  }, [])
   return (
     <>
       {/* Hero */}

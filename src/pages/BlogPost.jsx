@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { ArrowLeft, ArrowRight, Clock, Bot } from 'lucide-react'
-import { applySEO } from '../seoConfig'
+import { applySEO, setPageSchemas, articleSchema, breadcrumbSchema, howToSchema, SITE_URL } from '../seoConfig'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -780,6 +780,13 @@ const articles = {
   },
 }
 
+function toISODate(human) {
+  if (!human) return ''
+  const d = new Date(human)
+  if (isNaN(d)) return ''
+  return d.toISOString().slice(0, 10)
+}
+
 export default function BlogPost() {
   const { slug } = useParams()
   const article = articles[slug]
@@ -791,6 +798,7 @@ export default function BlogPost() {
         description: 'The article you are looking for does not exist.',
         pathname: `/blog/${slug || ''}`,
       })
+      setPageSchemas([])
       return
     }
     const firstParagraph = article.sections?.[0]?.paragraphs?.[0] || ''
@@ -803,6 +811,44 @@ export default function BlogPost() {
       description: description || article.title,
       pathname: `/blog/${slug}`,
     })
+
+    // Inject Article + Breadcrumb (+ HowTo if applicable) schemas
+    const isoDate = toISODate(article.date)
+    const blogSlug = `/blog/${slug}`
+    const schemas = [
+      breadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Blog', url: '/blog' },
+        { name: article.title, url: blogSlug },
+      ]),
+      articleSchema({
+        headline: article.title,
+        description: description || article.title,
+        datePublished: isoDate,
+        dateModified: isoDate,
+        author: article.author,
+        slug: blogSlug,
+      }),
+    ]
+
+    // HowTo schema for guide-style posts
+    if (slug === 'getting-started-agentforce-2026' || slug === 'salesforce-implementation-checklist') {
+      const steps = (article.sections || [])
+        .filter(s => s.heading && /^\d+\.|step|getting started|set up|build|deploy|checklist/i.test(s.heading))
+        .map(s => ({
+          name: s.heading.replace(/^\d+\.\s*/, ''),
+          text: (s.paragraphs?.[0] || s.bullets?.[0] || '').slice(0, 280),
+        }))
+      if (steps.length >= 3) {
+        schemas.push(howToSchema({
+          name: article.title,
+          description: description || article.title,
+          steps,
+        }))
+      }
+    }
+
+    setPageSchemas(schemas)
   }, [slug, article])
 
   if (!article) {
@@ -819,20 +865,8 @@ export default function BlogPost() {
     )
   }
 
-  const blogSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": article.title,
-    "author": { "@type": "Person", "name": article.author },
-    "datePublished": article.date,
-    "publisher": { "@type": "Organization", "name": "Cloudsheer Consulting" },
-    "description": article.sections[0]?.paragraphs?.[0] || article.title,
-    "url": `https://www.cloudsheer.com/blog/${slug}`,
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
       <section className="relative pt-28 sm:pt-32 pb-16 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-grid" />

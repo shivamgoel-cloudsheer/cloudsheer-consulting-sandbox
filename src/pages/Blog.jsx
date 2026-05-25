@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2, Award, Quote } from 'lucide-react'
 import FAQ from '../components/FAQ'
+import { addPageSchema, faqPageSchema } from '../seoConfig'
 
 const blogFaqs = [
   { q: 'Who writes these articles?', a: 'Our team of Salesforce architects and consultants - Rajat Sharma, Tushar Sharma, Shubham Bansal, and Shivam Goel. All content is based on real implementation experience.' },
@@ -321,6 +322,11 @@ function NewsletterSection() {
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All')
+
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(blogFaqs))
+    return () => addPageSchema('faq', null)
+  }, [])
 
   const filtered = activeCategory === 'All' ? posts : posts.filter(p => p.category === activeCategory)
   const featured = filtered.find(p => p.featured)

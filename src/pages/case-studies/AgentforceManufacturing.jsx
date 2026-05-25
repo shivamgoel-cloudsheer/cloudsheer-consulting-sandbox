@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { applySEO } from '../../seoConfig'
+import { applySEO, setPageSchemas, articleSchema, breadcrumbSchema, SITE_URL } from '../../seoConfig'
 
 /* ─── Styles (article typography) ─────────────────────────── */
 function ArticleStyles() {
@@ -624,11 +624,28 @@ function Article() {
 /* ─── Page ─────────────────────────────────────────────────── */
 export default function AgentforceManufacturing() {
   useEffect(() => {
-    applySEO({
-      title: 'Case Study: 92% Autonomous Case Resolution with Agentforce | Cloudsheer',
-      description: 'How Cloudsheer built the multi-agent Salesforce Agentforce architecture Salesforce Support said couldn\'t be done. Shipped in 11 weeks, 12K+ cases/month, $340K saved.',
-      pathname: '/case-studies/agentforce-manufacturing',
-    })
+    const slug = '/case-studies/agentforce-manufacturing'
+    const title = 'Case Study: 92% Autonomous Case Resolution with Agentforce | Cloudsheer'
+    const description = "How Cloudsheer built the multi-agent Salesforce Agentforce architecture Salesforce Support said couldn't be done. Shipped in 11 weeks, 12K+ cases/month, $340K saved."
+
+    applySEO({ title, description, pathname: slug })
+
+    setPageSchemas([
+      breadcrumbSchema([
+        { name: 'Home', url: '/' },
+        { name: 'Case Studies', url: '/case-studies/agentforce-manufacturing' },
+        { name: 'Agentforce Manufacturing', url: slug },
+      ]),
+      articleSchema({
+        articleType: 'Article',
+        headline: "The Agentforce Architecture Salesforce Said Couldn't Be Built",
+        description,
+        datePublished: '2026-04-23',
+        dateModified: '2026-04-23',
+        author: 'Cloudsheer Consulting',
+        slug,
+      }),
+    ])
   }, [])
 
   return (

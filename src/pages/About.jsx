@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import { ArrowRight, Award, Heart, Lightbulb, Users, Sparkles, MapPin, Star } from 'lucide-react'
 import FAQ from '../components/FAQ'
+import { addPageSchema, faqPageSchema, localBusinessSchemas } from '../seoConfig'
 
 const aboutFaqs = [
   { q: 'How many Salesforce certifications does your team hold?', a: '60+ certifications across Sales Cloud, Service Cloud, Marketing Cloud, Platform Developer, Agentforce Specialist, and Data Cloud Consultant.' },
@@ -63,6 +65,14 @@ const team = [
 ]
 
 export default function About() {
+  useEffect(() => {
+    addPageSchema('faq', faqPageSchema(aboutFaqs))
+    addPageSchema('local', { '@context': 'https://schema.org', '@graph': localBusinessSchemas() })
+    return () => {
+      addPageSchema('faq', null)
+      addPageSchema('local', null)
+    }
+  }, [])
   return (
     <>
       {/* spacer for navbar */}
@@ -79,9 +89,10 @@ export default function About() {
             <MapPin className="w-3.5 h-3.5" />
             Global Presence
           </div>
-          <h2 className="text-2xl md:text-4xl font-black text-white mb-4">
-            Connected Across the Globe
-          </h2>
+          <h1 className="text-2xl md:text-4xl font-black text-white mb-4">
+            About Cloudsheer Consulting
+          </h1>
+          <p className="text-base sm:text-lg text-white mb-4">Connected across the globe.</p>
           <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
             {offices.map(({ city, flag }, i) => (
               <div key={city} className="flex items-center gap-2">
