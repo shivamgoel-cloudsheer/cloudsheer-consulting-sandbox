@@ -3,8 +3,10 @@ import { useEffect } from 'react'
 import {
   ArrowRight, ChevronRight, CheckCircle2, Megaphone, TrendingUp,
   Headphones, FileText, Workflow, Sparkles, Star, RefreshCw, Globe,
+  Bot,
 } from 'lucide-react'
 import { addPageSchema, faqPageSchema } from '../../seoConfig'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -275,6 +277,13 @@ function FinalCTA() {
   )
 }
 
+const overviewWhatWeShip = [
+  { icon: Globe,     title: 'Greenfield HubSpot builds',  desc: 'Portal designed around your funnel from day one — objects, pipelines, automation, integrations.' },
+  { icon: RefreshCw, title: 'Salesforce ↔ HubSpot migrations', desc: 'Data mapping, automation rebuild, integration reconnection, and parallel-run validation either direction.' },
+  { icon: Bot,       title: 'Breeze AI activation',       desc: 'Copilot, Agents, and Intelligence enrichment configured against your brand voice from day one.' },
+  { icon: Workflow,  title: 'Dual-stack integration',     desc: 'Two-way Salesforce↔HubSpot sync via Operations Hub with field mapping and conflict rules.' },
+]
+
 export default function HubSpotOverview() {
   useEffect(() => {
     addPageSchema('faq', faqPageSchema(overviewFaqs))
@@ -284,6 +293,12 @@ export default function HubSpotOverview() {
     <>
       <PageHero />
       <Hubs />
+      <WhatWeShip
+        platformName="HubSpot"
+        accentColor="#FF7A59"
+        items={overviewWhatWeShip}
+        bgColor="#FFFFFF"
+      />
       <ServiceModel />
       <WhyUs />
       <FinalCTA />

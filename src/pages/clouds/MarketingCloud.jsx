@@ -1,8 +1,9 @@
 import {
   ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  Mail, Users, BarChart2, Target, Star, ChevronRight, Megaphone,
-  RefreshCw, Globe, MousePointerClick,
+  Mail, Users, BarChart2, Target, Star, Megaphone,
+  RefreshCw, Globe, MousePointerClick, Workflow,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +24,11 @@ const outcomes = [
   { icon: Clock,             value: '50%',    label: 'reduction in campaign build time with Journey Builder templates and reusable content blocks', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Email & Journey Automation',
-    icon: RefreshCw,
-    color: '#0176D3',
-    headline: 'Automated journeys that nurture, convert, and retain',
-    points: [
-      '<strong>Journey Builder</strong> orchestrates multi-channel CRM-triggered flows',
-      '<strong>Email Studio</strong> templates for welcome, cart, win-back',
-      '<strong>Content Builder</strong> swaps dynamic blocks per subscriber',
-      '<strong>Einstein Send Time Optimization</strong> per contact delivery',
-      '<strong>Marketing Cloud Engagement</strong> testing at scale',
-    ],
-  },
-  {
-    dept: 'Audience Segmentation & Data Cloud',
-    icon: Target,
-    color: '#10B981',
-    headline: 'One unified profile. Limitless segmentation.',
-    points: [
-      '<strong>Data Cloud segments</strong> unify all data into one profile',
-      '<strong>Audience Studio</strong> with behavioral and transactional filters',
-      '<strong>Real-time activation</strong> to email, SMS, ads, web',
-      '<strong>Native ad sync</strong> to Google, Meta, LinkedIn',
-      '<strong>Einstein Engagement Scoring</strong> predicts churn and LTV',
-    ],
-  },
-  {
-    dept: 'Analytics & Revenue Attribution',
-    icon: BarChart2,
-    color: '#F59E0B',
-    headline: 'Prove exactly which campaigns drive revenue',
-    points: [
-      '<strong>Marketing Cloud Intelligence</strong> ties campaigns to revenue',
-      '<strong>Real-time dashboards</strong> for deliverability, conversions, ROI',
-      '<strong>Einstein Engagement Scoring</strong> predicts opens and clicks',
-      '<strong>Campaign influence</strong> on every pipeline deal shown',
-      '<strong>Path analysis</strong> reveals deal-accelerating channels',
-    ],
-  },
-  {
-    dept: 'B2B Marketing (Account Engagement)',
-    icon: Users,
-    color: '#6366F1',
-    headline: 'Turn anonymous traffic into qualified pipeline',
-    points: [
-      '<strong>Account Engagement (Pardot)</strong> scores sales-ready prospects',
-      '<strong>Automated nurture</strong> advances MQLs with personalized content',
-      '<strong>Bi-directional CRM sync</strong> for real-time engagement visibility',
-      '<strong>Landing pages and forms</strong> built and attributed natively',
-      '<strong>Engagement Studio</strong> for complex B2B buying journeys',
-    ],
-  },
+const whatWeShip = [
+  { icon: Workflow,  title: 'Journey Builder design',         desc: 'Multi-channel journeys with branching, decision splits, and goal tracking tied to CRM events.' },
+  { icon: Users,     title: 'Audience segmentation',          desc: 'Data Cloud-grounded segments with calculated insights and identity resolution across sources.' },
+  { icon: Mail,      title: 'Email Studio + Content Builder', desc: 'Templated send blocks, dynamic content, and AMPscript for personalization at scale.' },
+  { icon: Target,    title: 'Account Engagement (Pardot)',    desc: 'B2B nurture, scoring, and Salesforce-CRM sync rebuilt around your funnel and lifecycle stages.' },
 ]
 
 const whyUs = [
@@ -194,54 +147,8 @@ export default function MarketingCloudPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What It Does For You</div>
-            <h2 className="section-title mb-4">
-              Four Engines That <span className="gradient-text">Drive Marketing Revenue</span>
-            </h2>
-            <p className="section-sub">
-              Marketing Cloud connects your customer data, automates personalized journeys, and attributes every conversion back to the campaign that caused it.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Marketing Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

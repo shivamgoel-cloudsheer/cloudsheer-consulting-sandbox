@@ -18,6 +18,7 @@ const data = {
   headlineGold: 'Connected to Your CRM by Default.',
   subhead: 'HubSpot CMS Hub builds — custom themes, modules, memberships, multi-language sites, and SEO-optimized pages all wired into your HubSpot CRM out of the box.',
   ctaLabel: 'Scope My CMS Hub Build',
+  platformName: 'CMS Hub',
   painPoints: [
     { pain: 'Website lives on WordPress and breaks every other plugin update', fix: '<strong>Managed CMS Hub hosting</strong> with automatic updates and 99.99% uptime SLA' },
     { pain: 'Forms submit to a black hole — sales never knows when leads come in', fix: '<strong>Native form integration</strong> creates/updates contacts in real time with full attribution' },
@@ -34,59 +35,11 @@ const data = {
     { icon: BarChart2,value: '99.99%', label: 'uptime SLA from HubSpot hosting (no plugin/server maintenance on your side)', color: '#10B981' },
     { icon: Lock,     value: 'SOC 2', label: 'Type II certified hosting with HSTS, SSL, and content-security defaults', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Custom Themes & Modules',
-      icon: Layout,
-      color: '#FF7A59',
-      headline: 'Pages that look custom, ship like a CMS',
-      points: [
-        '<strong>Custom themes</strong> built with HubL, fields, and theme settings',
-        '<strong>Drag-and-drop modules</strong> with marketer-safe constraints',
-        '<strong>Component library</strong> matched to your design system',
-        '<strong>Global modules</strong> for headers, footers, and navigation',
-        '<strong>Serverless functions</strong> for forms, lookups, and integrations',
-      ],
-    },
-    {
-      area: 'SEO & Performance',
-      icon: Search,
-      color: '#F59E0B',
-      headline: 'Rank higher without an SEO agency on retainer',
-      points: [
-        '<strong>Built-in SEO recommendations</strong> on every page',
-        '<strong>Schema markup</strong> for Organization, Article, Product, FAQ',
-        '<strong>Core Web Vitals</strong> optimization with image CDN and lazy loading',
-        '<strong>XML sitemap + robots.txt</strong> management',
-        '<strong>Topic clusters + pillar pages</strong> for content strategy',
-      ],
-    },
-    {
-      area: 'Memberships & Gating',
-      icon: Lock,
-      color: '#6366F1',
-      headline: 'Member experiences without plugin chaos',
-      points: [
-        '<strong>Membership login</strong> tied to CRM contact lists',
-        '<strong>Gated blogs and knowledge bases</strong> by lifecycle stage or list',
-        '<strong>Partner portals</strong> with branded experiences per audience',
-        '<strong>Customer-only content libraries</strong> with role-based access',
-        '<strong>Multi-language memberships</strong> for global communities',
-      ],
-    },
-    {
-      area: 'Multi-Language & Personalization',
-      icon: Globe,
-      color: '#06B6D4',
-      headline: 'One site. Every market. Every visitor.',
-      points: [
-        '<strong>Multi-language variants</strong> with language-specific URLs and SEO',
-        '<strong>Smart content</strong> personalized by lifecycle stage or device',
-        '<strong>A/B testing</strong> on landing pages, headlines, and CTAs',
-        '<strong>Adaptive testing</strong> with up to 5 variants',
-        '<strong>Geolocation-based content</strong> for region-specific offers',
-      ],
-    },
+  whatWeShip: [
+    { icon: Layout, title: 'Custom theme + module library', desc: 'HubL themes with marketer-safe drag-and-drop modules matched to your design system.' },
+    { icon: Search, title: 'SEO + Core Web Vitals',          desc: 'Schema markup, image CDN, sitemap and redirect maps that protect rankings through migration.' },
+    { icon: Lock,   title: 'Memberships + gating',           desc: 'Branded login, gated content, partner portals, and role-based access tied to CRM lists.' },
+    { icon: Globe,  title: 'Multi-language + personalization', desc: 'Localized URLs, smart content, A/B and adaptive testing for every market and persona.' },
   ],
   process: [
     { num: '01', title: 'Discovery & IA',         desc: "We map your information architecture, content inventory, conversion paths, and SEO baseline — plus any membership, multi-language, or gating requirements — before touching design." },

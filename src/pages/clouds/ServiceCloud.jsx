@@ -1,8 +1,9 @@
 import {
   ArrowRight, CheckCircle2, Headphones, MessageSquare, BookOpen, Phone,
   Zap, BarChart2, Users, Shield, Clock, DollarSign, TrendingUp, Star,
-  ChevronRight, Globe,
+  Globe, GitMerge, FileText, Layout, Bot,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +24,11 @@ const outcomes = [
   { icon: Globe,      value: '#1',        label: 'CRM platform for customer service - named a Leader in the Gartner Magic Quadrant 18 years running', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Omni-Channel Support',
-    icon: MessageSquare,
-    color: '#0176D3',
-    headline: 'Every channel. One workspace. Zero context lost.',
-    points: [
-      '<strong>Service Console</strong> for email, chat, phone, SMS',
-      '<strong>Omni-Channel Routing</strong> to the best-qualified agent',
-      '<strong>Customer timeline</strong> with purchases, cases, sentiment',
-      '<strong>Swarming</strong> pulls in experts with full context preserved',
-      '<strong>Incident Management</strong> with real-time queue monitoring',
-    ],
-  },
-  {
-    dept: 'AI-Powered Self-Service',
-    icon: Zap,
-    color: '#10B981',
-    headline: 'Resolve cases before they ever reach your team.',
-    points: [
-      '<strong>Agentforce Service Agent</strong> resolves Tier-1 and Tier-2 cases',
-      '<strong>Einstein Reply Recommendations</strong> speed up agent responses',
-      '<strong>Knowledge Base</strong> powers self-service portals and bots',
-      '<strong>Einstein Case Classification</strong> routes and categorises automatically',
-      '<strong>Human-in-the-loop</strong> escalation with full context preserved',
-    ],
-  },
-  {
-    dept: 'Field Service Management',
-    icon: Phone,
-    color: '#F59E0B',
-    headline: 'Dispatch the right technician. First time. Every time.',
-    points: [
-      '<strong>Field Service Lightning</strong> dispatches by proximity and skills',
-      '<strong>Visual Remote Assistant</strong> enables remote video diagnostics',
-      '<strong>Mobile app</strong> with offline access for technicians',
-      '<strong>Auto-created work orders</strong> from cases directly',
-      '<strong>Inventory Management</strong> ensures parts availability on-site',
-    ],
-  },
-  {
-    dept: 'Service Analytics & SLAs',
-    icon: BarChart2,
-    color: '#6366F1',
-    headline: 'See everything. Fix problems before customers notice.',
-    points: [
-      '<strong>Pre-built dashboards</strong> for CSAT, SLA, agent performance',
-      '<strong>Entitlement Management</strong> with automatic breach alerts',
-      '<strong>Einstein Case Classification</strong> flags at-risk escalations',
-      '<strong>Omni-Channel Routing</strong> analytics per channel and queue',
-      '<strong>Tableau integration</strong> for executive-ready service insights',
-    ],
-  },
+const whatWeShip = [
+  { icon: GitMerge,  title: 'Case routing engine',         desc: 'Omni-Channel routing by skill, capacity, and priority with SLA tracking and entitlements.' },
+  { icon: FileText,  title: 'Knowledge base build',        desc: 'Article migration, search tuning, and structure that survives Agentforce deflection at scale.' },
+  { icon: Layout,    title: 'Service Console design',      desc: 'Macros, quick actions, and 360-degree customer views that cut average handle time.' },
+  { icon: Bot,       title: 'Agentforce Service Agent',    desc: 'Tier-1 deflection with Einstein Case Classification wired to your knowledge base.' },
 ]
 
 const whyUs = [
@@ -195,55 +148,8 @@ export default function ServiceCloudPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What You Get</div>
-            <h2 className="section-title mb-4">
-              A Complete Support Operation -{' '}
-              <span className="gradient-text">Built For Your Business</span>
-            </h2>
-            <p className="section-sub">
-              Service Cloud is not just a ticketing system. It is the AI-powered platform that the world's best support teams use to deliver fast, personalized, and cost-efficient service at scale.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Service Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

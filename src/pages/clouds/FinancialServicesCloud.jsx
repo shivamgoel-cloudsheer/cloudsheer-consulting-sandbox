@@ -1,7 +1,8 @@
 import {
   ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign,
-  Users, Shield, ChevronRight, Star, Briefcase, Landmark, LineChart,
+  Users, Shield, Star, Briefcase, Landmark, Workflow,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -22,59 +23,11 @@ const outcomes = [
   { icon: Landmark,      value: '3x',   label: 'faster mortgage and lending decisions with Intelligent Document Automation and routing rules', color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    dept: 'Wealth & Advisory',
-    icon: Briefcase,
-    color: '#0176D3',
-    headline: 'Help advisors grow books. Not paperwork.',
-    points: [
-      "<strong>Client 360</strong> with household, goals, and held-away assets",
-      "<strong>Einstein Relationship Insights</strong> surface life events",
-      "<strong>Action Plans</strong> automate review cadence and tasks",
-      "<strong>Compliant Data Sharing</strong> for advisor-client portals",
-      "<strong>Financial Account Aggregation</strong> via integrations",
-    ],
-  },
-  {
-    dept: 'Retail & Commercial Banking',
-    icon: Landmark,
-    color: '#10B981',
-    headline: 'Faster onboarding. Lower service costs. Better experiences.',
-    points: [
-      "<strong>Customer 360</strong> across deposits, lending, and cards",
-      "<strong>Action Plans</strong> for KYC, AML, and new-account workflows",
-      "<strong>Service Console</strong> with omnichannel routing and 360",
-      "<strong>Intelligent Document Automation</strong> on every application",
-      "<strong>Agentforce Service Agent</strong> deflects routine inquiries",
-    ],
-  },
-  {
-    dept: 'Insurance',
-    icon: Shield,
-    color: '#F59E0B',
-    headline: 'Underwrite faster. Serve policyholders better.',
-    points: [
-      "<strong>Producer & Policyholder 360</strong> across lines of business",
-      "<strong>Insurance Document Generation</strong> and proposal workflows",
-      "<strong>Claims Workspace</strong> with FNOL automation and routing",
-      "<strong>Underwriting Workbench</strong> with rules and routing logic",
-      "<strong>Agentforce</strong> drafts coverage answers and policy summaries",
-    ],
-  },
-  {
-    dept: 'Lending & Mortgage',
-    icon: LineChart,
-    color: '#6366F1',
-    headline: 'Decision faster. Close more loans. Audit ready.',
-    points: [
-      "<strong>Mortgage Workspace</strong> with milestone tracking",
-      "<strong>Document Generation</strong> for disclosures and packets",
-      "<strong>Approval Routing</strong> with policy-driven exceptions",
-      "<strong>Compliant Data Sharing</strong> with borrowers and brokers",
-      "<strong>Agentforce</strong> answers borrower questions 24/7",
-    ],
-  },
+const whatWeShip = [
+  { icon: Briefcase, title: 'Client 360 architecture',     desc: 'Households, financial accounts, holdings, and goals modeled to your book of business.' },
+  { icon: Workflow,  title: 'Action Plans + onboarding',   desc: 'Templated workflows for onboarding, KYC, lending, and life-event servicing.' },
+  { icon: Shield,    title: 'Compliance + audit',          desc: 'Disclosures, retention rules, sharing model, and audit trail mapped to FINRA / SEC needs.' },
+  { icon: Users,     title: 'Relationship intelligence',   desc: 'Referral tracking, household roll-ups, and cross-sell scoring across advisors and channels.' },
 ]
 
 const whyUs = [
@@ -170,41 +123,7 @@ export default function FinancialServicesCloudPage() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">A Platform Built for Financial Services <span className="gradient-text">From the Ground Up</span></h2>
-            <p className="section-sub">FSC is not a generic CRM repainted. It is built around the data models, workflows, and compliance needs of regulated financial firms.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{dept}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all" style={{ color }}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Financial Services Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">

@@ -1,7 +1,9 @@
 import {
   ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign,
-  Users, Shield, ChevronRight, Star, GraduationCap, BookOpen, School, Award,
+  Users, Shield, Star, GraduationCap, BookOpen, School, Award,
+  Target, Heart,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -22,59 +24,11 @@ const outcomes = [
   { icon: GraduationCap, value: '3x',   label: 'faster alumni engagement growth with unified records, Marketing Cloud journeys, and event tracking', color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    dept: 'Recruitment & Admissions',
-    icon: School,
-    color: '#0176D3',
-    headline: 'Convert more inquiries. Process more applications. Faster.',
-    points: [
-      "<strong>Lead and Inquiry 360</strong> across every channel and source",
-      "<strong>Action Plans</strong> automate counselor follow-up cadence",
-      "<strong>Application workflows</strong> with document automation",
-      "<strong>Yield management</strong> dashboards with deposit tracking",
-      "<strong>Agentforce</strong> answers prospect questions 24/7",
-    ],
-  },
-  {
-    dept: 'Student Success',
-    icon: BookOpen,
-    color: '#10B981',
-    headline: 'Spot at-risk students early. Help them succeed.',
-    points: [
-      "<strong>Student 360</strong> across academic and engagement data",
-      "<strong>Success Plans</strong> with early-alert and intervention",
-      "<strong>Advising case management</strong> on Service Console",
-      "<strong>Care teams</strong> coordinate registrar, aid, and advising",
-      "<strong>Einstein</strong> surfaces retention risk and next steps",
-    ],
-  },
-  {
-    dept: 'Marketing & Engagement',
-    icon: TrendingUp,
-    color: '#F59E0B',
-    headline: 'One journey for every student, family, and alum.',
-    points: [
-      "<strong>Marketing Cloud</strong> journeys across the lifecycle",
-      "<strong>Account Engagement</strong> for prospect nurturing",
-      "<strong>Mobile push and SMS</strong> for retention nudges",
-      "<strong>Event Management</strong> for tours, fairs, and reunions",
-      "<strong>Einstein Send Time Optimization</strong> lifts response",
-    ],
-  },
-  {
-    dept: 'Advancement & Alumni',
-    icon: Award,
-    color: '#6366F1',
-    headline: 'Build deeper alumni relationships. Drive more giving.',
-    points: [
-      "<strong>Constituent 360</strong> with affiliation and giving history",
-      "<strong>Engagement Plans</strong> for prospects and major gifts",
-      "<strong>Volunteer and event tracking</strong> in one record",
-      "<strong>Gift entry and pledge management</strong> workflows",
-      "<strong>Einstein</strong> scores giving propensity and capacity",
-    ],
-  },
+const whatWeShip = [
+  { icon: GraduationCap, title: 'Recruitment + admissions', desc: 'Applicant management, application review, and yield optimization workflows.' },
+  { icon: Target,        title: 'Student success',          desc: 'Success plans, advising workflows, early-alert triggers, and intervention tracking.' },
+  { icon: Heart,         title: 'Advancement + giving',     desc: 'Donor cycles, gift entry, prospect management, and engagement scoring.' },
+  { icon: Shield,        title: 'FERPA-aware sharing',      desc: 'Sharing model, audit trail, and data handling that passes FERPA review.' },
 ]
 
 const whyUs = [
@@ -169,41 +123,7 @@ export default function EducationCloudPage() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">A Platform Built for Education <span className="gradient-text">From the Ground Up</span></h2>
-            <p className="section-sub">Education Cloud is purpose-built around the data, decisions, and stakeholders that drive enrollment, success, and engagement at every level.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{dept}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all" style={{ color }}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Education Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">

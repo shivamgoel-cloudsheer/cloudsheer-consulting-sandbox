@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  Headphones, Users, BarChart2, Shield, MessageSquare, Star, ChevronRight,
+  Headphones, Users, BarChart2, Shield, MessageSquare, Star,
+  Bot, Globe,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +25,11 @@ const outcomes = [
   { icon: Users,      value: '83%',     label: 'of Agentforce customers report measurable productivity gains within the first quarter', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Customer Service',
-    icon: Headphones,
-    color: '#0176D3',
-    headline: 'Resolve more cases. Hire fewer agents.',
-    points: [
-      "<strong>Agentforce Service Agent</strong> resolves resets, orders, FAQs",
-      "<strong>Grounding</strong> pulls answers from Knowledge Base and CRM",
-      "<strong>Actions</strong> process refunds, updates, and closures",
-      "<strong>Human-in-the-loop</strong> escalation with full context",
-      "<strong>24/7 coverage</strong> across chat, email, SMS, WhatsApp",
-    ],
-  },
-  {
-    dept: 'Sales',
-    icon: TrendingUp,
-    color: '#10B981',
-    headline: 'Turn every lead into a qualified opportunity.',
-    points: [
-      "<strong>Agentforce SDR Agent</strong> responds to leads instantly",
-      "<strong>Topics and Instructions</strong> guide ICP-based qualification",
-      "<strong>Actions</strong> book meetings directly into rep calendars",
-      "<strong>Atlas Reasoning Engine</strong> personalises follow-ups from CRM",
-      "<strong>Auto-updated pipeline</strong> keeps records clean automatically",
-    ],
-  },
-  {
-    dept: 'Operations',
-    icon: BarChart2,
-    color: '#F59E0B',
-    headline: 'Eliminate busywork. Accelerate execution.',
-    points: [
-      "<strong>Agent Builder</strong> creates multi-step automation flows",
-      "<strong>Actions</strong> generate scheduled reports automatically",
-      "<strong>Topics</strong> monitor SLAs with proactive breach alerts",
-      "<strong>Instructions</strong> enforce data hygiene and deduplication",
-      "<strong>System integration</strong> connects Salesforce to ERP, HRIS",
-    ],
-  },
-  {
-    dept: 'Commerce & Marketing',
-    icon: Users,
-    color: '#6366F1',
-    headline: 'Personalise every buyer journey at scale.',
-    points: [
-      "<strong>Grounding</strong> powers personalized product recommendations",
-      "<strong>Agentforce Service Agent</strong> answers pre-purchase questions",
-      "<strong>Actions</strong> trigger campaigns from real-time behavior",
-      "<strong>Einstein Trust Layer</strong> keeps re-engagement on-brand",
-      "<strong>Topics</strong> coordinate messaging across web, mobile, social",
-    ],
-  },
+const whatWeShip = [
+  { icon: Bot,    title: 'Agent design + build',    desc: 'Topics, Actions, Instructions, and Atlas reasoning tuned to your data and channels.' },
+  { icon: Globe,  title: 'Headless 360 wiring',     desc: 'Surface every Salesforce capability as an API or MCP tool for agent use.' },
+  { icon: Shield, title: 'Testing Center + evals',  desc: 'Custom scoring rubrics, Agent Script tests, and A/B validation before production.' },
+  { icon: Zap,    title: 'Multi-channel deploy',    desc: 'Live across Slack, WhatsApp, voice, mobile, and Experience Layer in one build.' },
 ]
 
 const whyUs = [
@@ -195,54 +149,8 @@ export default function AgentforcePage() {
         </div>
       </section>
 
-      {/* ── Use Cases by Department ──────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">
-              Autonomous Agents That Drive Results <span className="gradient-text">Across Your Business</span>
-            </h2>
-            <p className="section-sub">
-              Agentforce does not replace your team - it uses Agent Builder, Topics, and Actions to handle repetitive work so your people focus on strategy and revenue.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Agentforce" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

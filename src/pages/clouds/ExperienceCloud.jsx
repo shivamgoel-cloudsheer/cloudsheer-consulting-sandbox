@@ -1,8 +1,10 @@
 import {
-  ArrowRight, CheckCircle2, Globe, Users, Shield, Zap,
-  MessageSquare, BarChart2, Layout, Star, ChevronRight,
+  ArrowRight, CheckCircle2, Globe, Users,
+  BarChart2, Layout, Star,
   Headphones, Clock, TrendingUp, DollarSign,
+  Sparkles, Lock, Bot,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +25,11 @@ const outcomes = [
   { icon: BarChart2,  value: '2.6x',     label: 'higher partner engagement rates when portal includes deal registration, MDF, and co-selling tools', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Customer Self-Service',
-    icon: Globe,
-    color: '#0176D3',
-    headline: "Deflect tickets and delight customers at the same time",
-    points: [
-      '<strong>Customer Service template</strong> for accounts and orders',
-      '<strong>Authenticated pages</strong> with real-time case tracking',
-      '<strong>Salesforce CMS</strong> knowledge base surfaces answers',
-      '<strong>Agentforce AI chat</strong> resolves requests instantly',
-      '<strong>LWR sites</strong> responsive on desktop and mobile',
-    ],
-  },
-  {
-    dept: 'Partner Communities',
-    icon: Users,
-    color: '#10B981',
-    headline: "Accelerate channel revenue with a portal partners actually use",
-    points: [
-      '<strong>Partner Central template</strong> with pipeline visibility',
-      '<strong>Sharing Sets</strong> govern MDF and co-marketing assets',
-      '<strong>Experience Builder</strong> guided learning paths',
-      '<strong>External User Licenses</strong> scoped by partner tier',
-      '<strong>CRM Analytics dashboards</strong> and partner leaderboards',
-    ],
-  },
-  {
-    dept: 'Employee Experience',
-    icon: Shield,
-    color: '#F59E0B',
-    headline: "Replace your legacy intranet with a connected digital hub",
-    points: [
-      '<strong>Build Your Own (LWR)</strong> hub for HR and IT',
-      '<strong>Experience Builder</strong> onboarding from day one',
-      '<strong>Aura sites</strong> with social feeds and forums',
-      '<strong>Unauthenticated pages</strong> plus SSO for portal apps',
-      '<strong>Embedded Agentforce</strong> answers HR and IT questions',
-    ],
-  },
-  {
-    dept: 'B2B Client Portals',
-    icon: Layout,
-    color: '#6366F1',
-    headline: "Give every client a white-glove digital experience at scale",
-    points: [
-      '<strong>Lightning Web Runtime</strong> dashboards with milestones',
-      '<strong>Authenticated pages</strong> for invoices and contracts',
-      '<strong>Salesforce CMS</strong> messaging with your delivery team',
-      '<strong>Sharing Sets</strong> with granular per-client access',
-      '<strong>Experience Builder</strong> branded with your domain',
-    ],
-  },
+const whatWeShip = [
+  { icon: Layout,    title: 'Portal architecture',     desc: 'Customer, partner, or employee portals built on LWR or Aura with proper sharing model.' },
+  { icon: Sparkles,  title: 'Branded design system',   desc: 'Themes, components, and global navigation matched to your brand guidelines.' },
+  { icon: Lock,      title: 'Member access + SSO',     desc: 'Login flows, role-based access, audience targeting, and SAML/OpenID SSO integration.' },
+  { icon: Bot,       title: 'Agentforce in portals',   desc: 'Embed Agentforce agents directly in portal pages for member self-service.' },
 ]
 
 const whyUs = [
@@ -194,54 +148,7 @@ export default function ExperienceCloudPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What You Can Build</div>
-            <h2 className="section-title mb-4">
-              Portals For Every <span className="gradient-text">Audience and Use Case</span>
-            </h2>
-            <p className="section-sub">
-              Experience Cloud is not a one-size-fits-all tool. Cloudsheer configures it to match exactly what your customers, partners, or employees need - with the data, workflows, and branding that drive adoption.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Experience Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

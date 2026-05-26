@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import {
   Megaphone, TrendingUp, Mail, Target, Users, BarChart2,
-  Sparkles, DollarSign, Clock,
+  Sparkles, DollarSign, Clock, Workflow,
 } from 'lucide-react'
 import { addPageSchema, faqPageSchema } from '../../seoConfig'
 import HubPageTemplate from './HubPageTemplate'
@@ -19,6 +19,7 @@ const data = {
   headlineGold: 'Attribution You Can Trust.',
   subhead: 'HubSpot Marketing Hub built around your funnel — campaigns, automation, lead scoring, and revenue attribution wired into Breeze AI for content and audience generation.',
   ctaLabel: 'Scope My Marketing Hub Build',
+  platformName: 'Marketing Hub',
   painPoints: [
     { pain: 'Marketing claims credit for revenue Sales says came from outbound', fix: '<strong>Multi-touch revenue attribution</strong> ties every dollar back to the campaigns that actually drove it' },
     { pain: 'Workflows are a tangled mess no one wants to touch', fix: '<strong>Workflow audit + rebuild</strong> with proper naming, branching, and observability' },
@@ -35,59 +36,11 @@ const data = {
     { icon: Users,      value: '32%',  label: 'better SQL-to-customer conversion when lead scoring is rebuilt on actual closed-won data', color: '#10B981' },
     { icon: Clock,      value: '40%',  label: 'less time marketers spend on content production with Breeze Content Agent in the loop', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Campaigns & Workflows',
-      icon: Megaphone,
-      color: '#FF7A59',
-      headline: 'One pane of glass for every campaign',
-      points: [
-        '<strong>Campaigns tool</strong> ties emails, ads, social, and landing pages to one revenue goal',
-        '<strong>Workflows</strong> with branching, delays, if/then logic, and goal-based completion',
-        '<strong>A/B testing</strong> on emails, landing pages, and CTAs',
-        '<strong>Lifecycle stage automation</strong> driven by behavior and form fills',
-        '<strong>Smart content</strong> personalized by list, lifecycle stage, or device',
-      ],
-    },
-    {
-      area: 'Lead Scoring & Routing',
-      icon: Target,
-      color: '#F59E0B',
-      headline: 'Reps work the right leads first',
-      points: [
-        '<strong>Predictive lead scoring</strong> trained on your closed-won deals',
-        '<strong>Manual score overrides</strong> for known accounts and high-fit personas',
-        '<strong>Round-robin assignment</strong> with skill-based and territory routing',
-        '<strong>SLA tracking</strong> with escalation if leads sit untouched',
-        '<strong>Lifecycle stage transitions</strong> automated from score thresholds',
-      ],
-    },
-    {
-      area: 'Breeze AI for Marketing',
-      icon: Sparkles,
-      color: '#6366F1',
-      headline: 'AI that produces, not just summarizes',
-      points: [
-        '<strong>Breeze Content Agent</strong> generates blog drafts and email copy on-brand',
-        '<strong>Breeze Social Agent</strong> creates and schedules posts per channel',
-        '<strong>Breeze Copilot</strong> answers questions about your data in plain English',
-        '<strong>Breeze Intelligence</strong> enriches contact records with firmographic data',
-        '<strong>Subject line + send time optimization</strong> per recipient',
-      ],
-    },
-    {
-      area: 'Attribution & Reporting',
-      icon: BarChart2,
-      color: '#06B6D4',
-      headline: 'Prove marketing impact to the board',
-      points: [
-        '<strong>Multi-touch revenue attribution</strong> across first-touch, last-touch, and U-shaped',
-        '<strong>Custom report builder</strong> with cross-object joins (deals + contacts + activities)',
-        '<strong>Campaign ROI dashboards</strong> by source, channel, and audience',
-        '<strong>Funnel reports</strong> showing drop-off at every lifecycle stage',
-        '<strong>Sales-marketing handoff reports</strong> showing MQL→SQL→Customer flow',
-      ],
-    },
+  whatWeShip: [
+    { icon: Workflow,   title: 'Campaign + workflow architecture', desc: 'Campaigns tied to revenue goals, workflows with branching, A/B testing, and lifecycle automation.' },
+    { icon: Target,     title: 'Predictive lead scoring',          desc: 'Models trained on your closed-won deals, with routing, SLA tracking, and lifecycle handoffs.' },
+    { icon: Sparkles,   title: 'Breeze AI for marketing',          desc: 'Content, Social, and Copilot agents tuned to your brand voice — not generic AI output.' },
+    { icon: BarChart2,  title: 'Multi-touch attribution',          desc: 'First-touch, last-touch, and U-shaped attribution with funnel reports the board will trust.' },
   ],
   process: [
     { num: '01', title: 'Funnel & Persona Discovery', desc: "We map your actual funnel — ICP, personas, lifecycle stages, scoring criteria, and the campaigns that have historically driven pipeline — before configuring a single workflow." },

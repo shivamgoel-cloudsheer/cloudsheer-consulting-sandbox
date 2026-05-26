@@ -19,6 +19,7 @@ const data = {
   headlineGold: 'Resolve the Rest in Half the Time.',
   subhead: 'HubSpot Service Hub built for retention — ticketing, customer portal, knowledge base, SLA automation, CSAT/NPS surveys, and the Breeze customer agent for 24/7 deflection.',
   ctaLabel: 'Scope My Service Hub Build',
+  platformName: 'Service Hub',
   painPoints: [
     { pain: 'Support team drowning in tier-1 questions that have FAQ answers', fix: '<strong>Breeze Customer Agent</strong> deflects routine questions using your knowledge base' },
     { pain: 'Tickets sit in queues for hours and SLAs are missed', fix: '<strong>SLA automation</strong> with auto-assignment, escalation, and breach alerts' },
@@ -35,59 +36,11 @@ const data = {
     { icon: Clock,      value: '24/7', label: 'coverage with Breeze Customer Agent — no headcount needed for off-hours and weekends', color: '#10B981' },
     { icon: Users,      value: '2.1×', label: 'agent productivity with conversations inbox and Breeze Copilot drafting replies', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Tickets & Conversations',
-      icon: MessageSquare,
-      color: '#FF7A59',
-      headline: 'One inbox. Every channel. Full context.',
-      points: [
-        '<strong>Conversations inbox</strong> unifies email, chat, Facebook, and forms',
-        '<strong>Ticket pipelines</strong> with custom stages, properties, and automation',
-        '<strong>Round-robin assignment</strong> with skill and availability rules',
-        '<strong>Internal notes + @mentions</strong> for cross-team collaboration',
-        '<strong>Macros and saved replies</strong> for common responses',
-      ],
-    },
-    {
-      area: 'SLA & Routing Automation',
-      icon: Target,
-      color: '#F59E0B',
-      headline: 'SLAs that hold without human babysitting',
-      points: [
-        '<strong>SLA automation</strong> with response and resolution time targets',
-        '<strong>Breach alerts + auto-escalation</strong> to managers and senior reps',
-        '<strong>Business hours support</strong> with timezone and holiday awareness',
-        '<strong>Priority-based routing</strong> by customer tier or ticket severity',
-        '<strong>Workload balancing</strong> across agent capacity and availability',
-      ],
-    },
-    {
-      area: 'Breeze Customer Agent',
-      icon: Sparkles,
-      color: '#6366F1',
-      headline: '24/7 frontline that deflects the routine work',
-      points: [
-        '<strong>Breeze Customer Agent</strong> answers using your knowledge base in real time',
-        '<strong>Multi-language support</strong> out of the box',
-        '<strong>Human handoff</strong> with full conversation context preserved',
-        '<strong>Auto-suggested KB articles</strong> based on tickets without answers',
-        '<strong>Breeze Copilot</strong> drafts replies for agents and summarizes long threads',
-      ],
-    },
-    {
-      area: 'Customer Portal & Feedback',
-      icon: Star,
-      color: '#06B6D4',
-      headline: 'Make self-service feel like a feature, not a wall',
-      points: [
-        '<strong>Customer portal</strong> with branded UI and company-level access',
-        '<strong>Knowledge base</strong> with search, categories, and Breeze-suggested content',
-        '<strong>CSAT, NPS, CES surveys</strong> triggered on resolution and milestones',
-        '<strong>Feedback analytics</strong> with sentiment trends and agent coaching cues',
-        '<strong>Help center search</strong> with auto-suggestions before tickets are created',
-      ],
-    },
+  whatWeShip: [
+    { icon: MessageSquare, title: 'Conversations + ticket pipelines', desc: 'Unified inbox across email, chat, and forms with custom pipelines, routing, and automation.' },
+    { icon: Target,        title: 'SLA + escalation automation',      desc: 'Response and resolution targets with breach alerts and auto-escalation to managers.' },
+    { icon: Sparkles,      title: 'Breeze Customer Agent',            desc: 'KB-grounded deflection that hands off cleanly to humans with full conversation context.' },
+    { icon: Star,          title: 'Portal + survey loop',             desc: 'Branded customer portal, KB build, and CSAT/NPS surveys feeding agent coaching dashboards.' },
   ],
   process: [
     { num: '01', title: 'Support Process Audit',  desc: "We map your current ticket volume by category, channel mix, response and resolution times, SLA breach causes, and the questions your agents answer the most — before configuring a single pipeline." },

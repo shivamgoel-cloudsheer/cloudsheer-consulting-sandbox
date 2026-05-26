@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  MessageSquare, Users, BarChart2, Shield, Star, ChevronRight,
-  Hash, Workflow, BrainCircuit, Layers,
+  MessageSquare, Users, BarChart2, Shield, Star,
+  Hash, Workflow, BrainCircuit, Layers, RefreshCw, Code,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 const BASE = import.meta.env.BASE_URL
@@ -25,59 +26,11 @@ const outcomes = [
   { icon: BarChart2,     value: '26%',  label: 'improvement in employee satisfaction scores after consolidating tools and reducing context-switching', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Sales & Revenue',
-    icon: TrendingUp,
-    color: '#0176D3',
-    headline: 'Close deals faster without leaving the conversation.',
-    points: [
-      "<strong>Slack Sales Elevate</strong> surfaces pipeline in Channels",
-      "<strong>Slack Connect</strong> shares deal alerts with partners",
-      "<strong>Huddles</strong> loop in stakeholders - no scheduling",
-      "<strong>Slack AI</strong> summarizes deal threads for context",
-      "<strong>Workflow Builder</strong> routes approvals in minutes",
-    ],
-  },
-  {
-    dept: 'Operations & IT',
-    icon: Workflow,
-    color: '#10B981',
-    headline: 'Automate handoffs. Eliminate busywork.',
-    points: [
-      "<strong>Workflow Builder</strong> automates approvals and routing",
-      "<strong>App Directory</strong> connects 2,600+ integrations",
-      "<strong>Slack AI</strong> finds answers across all conversations",
-      "<strong>Canvas</strong> captures tribal knowledge in Channels",
-      "<strong>Slack Lists</strong> track incidents with the right people",
-    ],
-  },
-  {
-    dept: 'Customer Success',
-    icon: Users,
-    color: '#F59E0B',
-    headline: 'Retain more customers with faster, coordinated responses.',
-    points: [
-      "<strong>Slack Connect</strong> unites your team and clients",
-      "<strong>Channels</strong> surface churn signals for CSM action",
-      "<strong>Slack AI</strong> summarizes threads for CSM handoffs",
-      "<strong>Workflow Builder</strong> triggers QBR prep and renewals",
-      "<strong>Huddles</strong> swarm on urgent issues in seconds",
-    ],
-  },
-  {
-    dept: 'Leadership & Strategy',
-    icon: BarChart2,
-    color: '#6366F1',
-    headline: 'Make faster decisions with complete visibility.',
-    points: [
-      "<strong>Channels</strong> centralise updates from every department",
-      "<strong>Slack AI</strong> generates daily digests for leaders",
-      "<strong>Canvas</strong> for strategy briefs and decision logs",
-      "<strong>Slack Lists</strong> push KPIs into leadership Channels",
-      "<strong>Searchable history</strong> preserves decisions permanently",
-    ],
-  },
+const whatWeShip = [
+  { icon: Workflow,      title: 'Workflow automation',       desc: 'Slack Workflows with conditional logic, approvals, and Salesforce write-back triggers.' },
+  { icon: MessageSquare, title: 'Channel design + governance', desc: 'Channel taxonomy, naming conventions, and bot governance that scale past 1,000 channels.' },
+  { icon: RefreshCw,     title: 'Salesforce ↔ Slack sync',   desc: 'Sales Elevate, Service swarming channels, and Agentforce agents embedded inside Slack.' },
+  { icon: Code,          title: 'Custom Slack apps',         desc: 'Modals, slash commands, and Block Kit experiences built against your Slack workspace.' },
 ]
 
 const whyUs = [
@@ -197,54 +150,8 @@ export default function SlackPage() {
         </div>
       </section>
 
-      {/* ── Use Cases by Department ──────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">
-              One Platform That Drives Results <span className="gradient-text">Across Every Team</span>
-            </h2>
-            <p className="section-sub">
-              Slack does not just replace email - it becomes the operating system where your people, data, and workflows come together to move faster.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Slack" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

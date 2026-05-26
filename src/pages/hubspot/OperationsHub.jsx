@@ -18,6 +18,7 @@ const data = {
   headlineGold: 'Automate Without Limits.',
   subhead: 'HubSpot Operations Hub deployments — programmable automation, two-way data sync, data quality automation, custom datasets, and warehouse integration.',
   ctaLabel: 'Scope My Operations Hub Build',
+  platformName: 'Operations Hub',
   painPoints: [
     { pain: 'Salesforce and HubSpot drift apart — contact info contradicts in each', fix: '<strong>Two-way data sync</strong> with field-level mapping, conflict rules, and audit trails' },
     { pain: 'Zapier setup is fragile and bills are climbing', fix: '<strong>Operations Hub data sync</strong> scales to millions of records with native error handling' },
@@ -34,59 +35,11 @@ const data = {
     { icon: Shield,    value: 'SOC 2', label: 'Type II audit trail on every sync, automation, and custom action — for compliance reviews', color: '#10B981' },
     { icon: BarChart2, value: '3.4×',  label: 'faster reporting velocity with custom datasets vs. manual cross-object analysis', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Data Sync',
-      icon: RefreshCw,
-      color: '#FF7A59',
-      headline: 'Bidirectional sync that actually stays in sync',
-      points: [
-        '<strong>Native syncs</strong> for Salesforce, NetSuite, Shopify, Stripe, and 100+ more',
-        '<strong>Field-level mapping</strong> with type coercion and transformation',
-        '<strong>Conflict resolution rules</strong> per field — master record by source or recency',
-        '<strong>Historical sync</strong> for backfilling years of data',
-        '<strong>Audit log + error retry</strong> for every sync event',
-      ],
-    },
-    {
-      area: 'Programmable Automation',
-      icon: Code,
-      color: '#F59E0B',
-      headline: 'When workflows need to do more than native actions allow',
-      points: [
-        '<strong>Custom-coded actions</strong> in workflows — JavaScript with API access',
-        '<strong>Webhooks</strong> trigger workflows from any external system',
-        '<strong>Bot framework</strong> for chatbots with branching logic and CRM lookups',
-        '<strong>Scheduled workflows</strong> with cron-style timing',
-        '<strong>Error branches</strong> to handle API failures gracefully',
-      ],
-    },
-    {
-      area: 'Data Quality Automation',
-      icon: Shield,
-      color: '#6366F1',
-      headline: 'Data hygiene without manual cleanup',
-      points: [
-        '<strong>Format automation</strong> for phone, email, addresses, and capitalization',
-        '<strong>Property validation rules</strong> with required formats and dropdowns',
-        '<strong>Programmable deduplication</strong> with merge precedence rules',
-        '<strong>Date and timezone normalization</strong> across global teams',
-        '<strong>AI-powered duplicate detection</strong> with fuzzy matching',
-      ],
-    },
-    {
-      area: 'Custom Datasets & Warehouse',
-      icon: Database,
-      color: '#06B6D4',
-      headline: 'Reporting beyond HubSpot native limits',
-      points: [
-        '<strong>Custom datasets</strong> join objects, calculate fields, and serve any report',
-        '<strong>Snowflake data share</strong> push HubSpot data to your warehouse natively',
-        '<strong>BigQuery, Redshift connectors</strong> via Fivetran or HubSpot sync',
-        '<strong>Reverse ETL</strong> push enriched warehouse data back into HubSpot',
-        '<strong>Calculated properties</strong> at the contact, company, and deal level',
-      ],
-    },
+  whatWeShip: [
+    { icon: RefreshCw, title: 'Two-way data sync',         desc: 'Salesforce, NetSuite, Shopify, and 100+ native syncs with field mapping and conflict rules.' },
+    { icon: Code,      title: 'Programmable workflows',    desc: 'Custom-coded actions, webhooks, scheduled workflows, and error branches that scale.' },
+    { icon: Shield,    title: 'Data quality automation',   desc: 'Format, validate, deduplicate, and normalize on save — without manual cleanup queues.' },
+    { icon: Database,  title: 'Custom datasets + warehouse', desc: 'Cross-object datasets, Snowflake/BigQuery integration, and reverse ETL back into HubSpot.' },
   ],
   process: [
     { num: '01', title: 'Data Architecture Audit',  desc: "We map every system that talks to HubSpot today, the data quality state of your existing properties, sync conflicts you have lived with, and the reports you cannot build with native tools — before configuring a single sync." },

@@ -19,6 +19,7 @@ const data = {
   headlineGold: 'Not Just AI That Summarizes.',
   subhead: 'Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment — the autonomous AI layer wired across your full HubSpot stack.',
   ctaLabel: 'Scope My Breeze AI Deployment',
+  platformName: 'Breeze AI',
   painPoints: [
     { pain: 'Reps spend 70% of their week on research and admin, not selling', fix: '<strong>Breeze Prospecting Agent</strong> researches accounts, drafts outreach, and books meetings 24/7' },
     { pain: 'Support team buried in tier-1 questions that have FAQ answers', fix: '<strong>Breeze Customer Agent</strong> deflects routine tickets using your knowledge base' },
@@ -35,59 +36,11 @@ const data = {
     { icon: Database,    value: '92%',  label: 'contact record completeness with Breeze Intelligence enrichment continuously running', color: '#10B981' },
     { icon: Clock,       value: '<2s',  label: 'Breeze Copilot response time on data questions — faster than navigating to the report', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Breeze Copilot',
-      icon: Sparkles,
-      color: '#FF7A59',
-      headline: 'Plain-English access to your entire CRM',
-      points: [
-        '<strong>Conversational queries</strong> across contacts, companies, deals, and tickets',
-        '<strong>Draft assistance</strong> for emails, summaries, and meeting notes',
-        '<strong>Workflow + report explanations</strong> in natural language',
-        '<strong>Brand voice tuning</strong> so output matches how your team writes',
-        '<strong>Available across every Hub</strong> with role-based permissions',
-      ],
-    },
-    {
-      area: 'Breeze Agents',
-      icon: Bot,
-      color: '#F59E0B',
-      headline: '4 autonomous agents — one per growth function',
-      points: [
-        '<strong>Prospecting Agent</strong> researches accounts, drafts outreach, books meetings',
-        '<strong>Customer Agent</strong> answers tickets 24/7 using your knowledge base',
-        '<strong>Content Agent</strong> generates blog drafts, emails, ad copy on-brand',
-        '<strong>Social Agent</strong> creates and schedules channel-tuned social posts',
-        '<strong>Human handoff + audit trail</strong> on every agent action',
-      ],
-    },
-    {
-      area: 'Breeze Intelligence',
-      icon: Database,
-      color: '#6366F1',
-      headline: 'Enrichment that runs continuously, not on-demand',
-      points: [
-        '<strong>Firmographic enrichment</strong> — industry, size, revenue, location',
-        '<strong>Buyer intent signals</strong> from third-party data sources',
-        '<strong>Buyer fit scoring</strong> tuned to your ICP definition',
-        '<strong>Form shortening</strong> — autofill known data so forms feel lighter',
-        '<strong>Native HubSpot integration</strong> — no separate vendor or middleware',
-      ],
-    },
-    {
-      area: 'Breeze Governance',
-      icon: Target,
-      color: '#06B6D4',
-      headline: 'AI your compliance team will actually approve',
-      points: [
-        '<strong>Brand voice library</strong> with approved tone and forbidden words',
-        '<strong>Action audit trail</strong> for every Breeze Agent step',
-        '<strong>Human approval gates</strong> on outbound communication (configurable)',
-        '<strong>Data residency controls</strong> for regulated industries',
-        '<strong>Permission scopes</strong> — which records each agent can read or modify',
-      ],
-    },
+  whatWeShip: [
+    { icon: Sparkles, title: 'Breeze Copilot setup',       desc: 'Brand-voice tuning, role-based access, and prompts that produce ship-ready output for every Hub.' },
+    { icon: Bot,      title: 'Breeze Agent deployment',    desc: 'Prospecting, Customer, Content, and Social agents shipped with conservative guardrails first.' },
+    { icon: Database, title: 'Breeze Intelligence wiring', desc: 'Continuous firmographic enrichment, intent signals, and fit scoring tuned to your ICP.' },
+    { icon: Target,   title: 'Governance + audit',         desc: 'Brand voice library, action audit trail, human approval gates, and permission scopes per agent.' },
   ],
   process: [
     { num: '01', title: 'Use Case Discovery',     desc: "We map the highest-impact AI use cases for your business — outbound, support deflection, content production, enrichment — and stack-rank them by ROI before configuring a single agent." },

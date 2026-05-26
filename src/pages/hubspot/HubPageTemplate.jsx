@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import {
-  ArrowRight, CheckCircle2, Star, ChevronRight,
+  ArrowRight, CheckCircle2, Star,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -21,9 +22,10 @@ export default function HubPageTemplate({ data }) {
     headlineGold,
     subhead,
     ctaLabel,
+    platformName,
     painPoints,
     outcomes,
-    capabilities,
+    whatWeShip,
     process,
     whyUs,
     finalCtaHeadlineTop,
@@ -134,48 +136,14 @@ export default function HubPageTemplate({ data }) {
         </div>
       </section>
 
-      {/* ── Capabilities ─────────────────────────────────────── */}
-      <section className="py-14 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5" style={{ color: HS_ORANGE, backgroundColor: `${HS_ORANGE}12`, borderColor: `${HS_ORANGE}25` }}>What You Get</div>
-            <h2 className="section-title mb-4">
-              Everything You Need <span style={{ background: `linear-gradient(135deg, ${HS_ORANGE}, ${HS_ORANGE_DARK})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>In One Hub</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ area, icon: Icon, color, headline, points }) => (
-              <div key={area} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{area}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: HS_NAVY }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip
+        platformName={platformName}
+        accentColor={HS_ORANGE}
+        items={whatWeShip}
+        bgColor="#FFFFFF"
+      />
+      {/* end WhatWeShip */}
 
       {/* ── How We Implement ─────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: HS_BG_TINT }}>

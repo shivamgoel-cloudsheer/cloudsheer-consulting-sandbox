@@ -1,8 +1,9 @@
 import {
   ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  BarChart2, PieChart, Eye, Database, Target, Star, ChevronRight,
-  LineChart, Layers, RefreshCw,
+  BarChart2, PieChart, Eye, Database, Target, Star,
+  LineChart, Layers, RefreshCw, Sparkles, BarChart3,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +24,11 @@ const outcomes = [
   { icon: Database,    value: '3.5x',    label: 'more likely to exceed revenue targets when teams adopt analytics-driven decision making', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Sales & Revenue Operations',
-    icon: TrendingUp,
-    color: '#0176D3',
-    headline: 'Close more deals with pipeline intelligence',
-    points: [
-      '<strong>CRM Analytics Dashboards</strong> with velocity and forecast',
-      '<strong>Einstein Discovery</strong> predicts win probability automatically',
-      '<strong>Analytics Studio Lenses</strong> for quota and coaching',
-      '<strong>SAQL waterfall analysis</strong> shows pipeline movement',
-      '<strong>Tableau attribution</strong> from spend to closed revenue',
-    ],
-  },
-  {
-    dept: 'Service & Customer Success',
-    icon: Layers,
-    color: '#10B981',
-    headline: 'Resolve faster and retain more customers',
-    points: [
-      '<strong>CRM Analytics Dashboards</strong> for SLA and backlog',
-      '<strong>Lenses</strong> for CSAT and NPS drill-down by agent',
-      '<strong>Einstein Predictions</strong> flags at-risk accounts early',
-      '<strong>Dataflows</strong> benchmark agent utilization by team',
-      '<strong>Recipes</strong> build health scores from support and billing',
-    ],
-  },
-  {
-    dept: 'Executive & Finance',
-    icon: PieChart,
-    color: '#F59E0B',
-    headline: 'One source of truth for the leadership team',
-    points: [
-      '<strong>Tableau</strong> workbooks from Salesforce and Snowflake',
-      '<strong>Analytics Studio</strong> scorecards with KPI variance',
-      '<strong>Data Cloud</strong> cohort and revenue retention tracking',
-      '<strong>Dashboards</strong> automate board reports on schedule',
-      '<strong>Row-level security</strong> for authorised data access only',
-    ],
-  },
-  {
-    dept: 'Marketing & Growth',
-    icon: Target,
-    color: '#6366F1',
-    headline: 'Prove ROI on every campaign dollar spent',
-    points: [
-      '<strong>Tableau</strong> full-funnel attribution to closed revenue',
-      '<strong>CRM Analytics Lenses</strong> with conversion per stage',
-      '<strong>Data Cloud</strong> segmentation insights for targeting',
-      '<strong>Dashboards</strong> compare CPL, CPO, and CAC by campaign',
-      '<strong>Einstein Discovery</strong> next-best-action recommendations',
-    ],
-  },
+const whatWeShip = [
+  { icon: BarChart3, title: 'Dashboard architecture',     desc: 'Cross-object dashboards with drill-paths designed around your KPIs and decision flow.' },
+  { icon: Sparkles,  title: 'Einstein Discovery models',  desc: 'Predictive scoring trained on your historical data with explainable outputs and confidence intervals.' },
+  { icon: PieChart,  title: 'Tableau implementation',     desc: 'Tableau Cloud or Server deployments with row-level security and embedded analytics in Salesforce.' },
+  { icon: Database,  title: 'Calculated insights + datasets', desc: 'Reusable data prep recipes, materialized datasets, and Data Cloud joins for clean reporting.' },
 ]
 
 const whyUs = [
@@ -194,54 +147,8 @@ export default function AnalyticsPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What We Build</div>
-            <h2 className="section-title mb-4">
-              Analytics For Every <span className="gradient-text">Part of Your Business</span>
-            </h2>
-            <p className="section-sub">
-              From pipeline intelligence to executive scorecards - we build analytics that drive faster decisions across sales, service, finance, and marketing.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  Explore this for your team <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="CRM Analytics & Tableau" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

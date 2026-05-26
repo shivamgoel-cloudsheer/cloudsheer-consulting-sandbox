@@ -1,7 +1,8 @@
 import {
   ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign,
-  Users, Shield, ChevronRight, Star, FlaskConical, Microscope, Beaker, Pill,
+  Users, Shield, Star, FlaskConical, Microscope, Beaker, Pill, Heart,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -22,59 +23,11 @@ const outcomes = [
   { icon: Microscope,    value: '40%',   label: 'faster medical inquiry handling with Agentforce Service Agent and unified medical content library', color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    dept: 'Clinical Operations',
-    icon: FlaskConical,
-    color: '#0176D3',
-    headline: 'Activate trials faster. Engage patients better.',
-    points: [
-      "<strong>Site Management</strong> and investigator engagement",
-      "<strong>Patient Engagement</strong> portals for trial participants",
-      "<strong>Consent and eligibility</strong> automation with audit trail",
-      "<strong>Study oversight dashboards</strong> across all CRO partners",
-      "<strong>Adverse event capture</strong> with safety routing",
-    ],
-  },
-  {
-    dept: 'Medical Affairs',
-    icon: Microscope,
-    color: '#10B981',
-    headline: 'One view of every HCP. Every interaction. Every insight.',
-    points: [
-      "<strong>HCP 360</strong> across MSL, RWE, and publication activity",
-      "<strong>Engagement Plans</strong> for KOL and advisory programs",
-      "<strong>Medical inquiry management</strong> with content approval",
-      "<strong>Field Medical Mobile</strong> for offline interaction capture",
-      "<strong>Insight capture</strong> feeds R&D and commercial teams",
-    ],
-  },
-  {
-    dept: 'Commercial Ops',
-    icon: Pill,
-    color: '#F59E0B',
-    headline: 'Compliant engagement at scale across every channel.',
-    points: [
-      "<strong>HCP and HCO 360</strong> with Veeva-style data model",
-      "<strong>Approved content delivery</strong> with version control",
-      "<strong>Sample management</strong> with PDMA-compliant tracking",
-      "<strong>Next Best Action</strong> tailored to specialty and history",
-      "<strong>Agentforce</strong> drafts compliant follow-up communications",
-    ],
-  },
-  {
-    dept: 'Patient Services',
-    icon: Beaker,
-    color: '#6366F1',
-    headline: 'Help patients access therapy faster and stay on it.',
-    points: [
-      "<strong>Patient enrollment</strong> with eligibility and benefits checks",
-      "<strong>Hub services</strong> coordination with copay and assistance",
-      "<strong>Adherence tracking</strong> with proactive outreach",
-      "<strong>Adverse event capture</strong> routed to pharmacovigilance",
-      "<strong>Consent management</strong> across program and channel",
-    ],
-  },
+const whatWeShip = [
+  { icon: FlaskConical, title: 'Clinical Trial Management', desc: 'Protocol setup, site engagement, enrollment tracking, and IRB workflow automation.' },
+  { icon: Users,        title: 'HCP 360 + medical affairs', desc: 'Healthcare professional records, sample management, and MSL field engagement.' },
+  { icon: Shield,       title: 'GxP-validated build',       desc: 'GxP-compliant validation, audit trails, electronic signatures, and 21 CFR Part 11 controls.' },
+  { icon: Heart,        title: 'Patient services + adherence', desc: 'Patient programs, adherence tracking, hub services, and reimbursement workflows.' },
 ]
 
 const whyUs = [
@@ -169,41 +122,7 @@ export default function LifeSciencesCloudPage() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">A Platform Built for Life Sciences <span className="gradient-text">From the Ground Up</span></h2>
-            <p className="section-sub">Life Sciences Cloud is not a generic CRM. It is purpose-built around clinical, medical, commercial, and patient data with GxP-ready workflows.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{dept}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all" style={{ color }}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Life Sciences Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import {
-  ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  Heart, Users, BarChart2, Shield, MessageSquare, Star, ChevronRight,
-  Activity, FileText,
+  ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign,
+  Heart, Users, Shield, Star, Cable, Workflow,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -24,59 +24,11 @@ const outcomes = [
   { icon: Users,          value: '50%',    label: 'reduction in provider data management effort through automated credentialing and relationship tracking', color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    dept: 'Patient & Member 360',
-    icon: Heart,
-    color: '#0176D3',
-    headline: 'One view of every patient. Every interaction. Every outcome.',
-    points: [
-      "<strong>Patient 360</strong> combining clinical, claims, and social data",
-      "<strong>Care Programs</strong> surface risks and outstanding referrals",
-      "<strong>Clinical Data Model</strong> visibility across the care journey",
-      "<strong>HL7 FHIR</strong> APIs keep EHR data current in Salesforce",
-      "<strong>Health Cloud for Payers</strong> population health dashboards",
-    ],
-  },
-  {
-    dept: 'Care Coordination',
-    icon: Activity,
-    color: '#10B981',
-    headline: 'Faster handoffs. Fewer gaps. Better outcomes.',
-    points: [
-      "<strong>Care Plans</strong> for chronic, post-discharge, and wellness",
-      "<strong>Provider Search</strong> routes tasks by role and acuity",
-      "<strong>Care Programs</strong> escalate when patients fall behind",
-      "<strong>Health Cloud for Providers</strong> connects care teams",
-      "<strong>Intelligent Document Automation</strong> cuts readmission risk",
-    ],
-  },
-  {
-    dept: 'Patient Engagement',
-    icon: MessageSquare,
-    color: '#F59E0B',
-    headline: 'Keep patients connected between visits.',
-    points: [
-      "<strong>Experience Cloud portals</strong> for care plans and messaging",
-      "<strong>Medication Management</strong> reminders and refill tracking",
-      "<strong>Secure two-way messaging</strong> between patients and teams",
-      "<strong>Care Programs</strong> deliver personalized content by condition",
-      "<strong>Patient 360</strong> outcomes drive continuous care improvement",
-    ],
-  },
-  {
-    dept: 'Utilization & Authorization',
-    icon: FileText,
-    color: '#6366F1',
-    headline: 'Cut prior auth from days to hours.',
-    points: [
-      "<strong>Prior Authorization</strong> with rules-based routing and tracking",
-      "<strong>Utilization Management</strong> workspace for review decisions",
-      "<strong>Intelligent Document Automation</strong> with notifications",
-      "<strong>Health Cloud for Payers</strong> routes outliers to review",
-      "<strong>Care Programs</strong> analytics for denial and turnaround",
-    ],
-  },
+const whatWeShip = [
+  { icon: Heart,    title: 'Patient 360 build',           desc: 'Unified patient records with care plans, conditions, encounters, and care team links.' },
+  { icon: Cable,    title: 'HL7 FHIR integration',        desc: 'EHR connectivity for Epic, Cerner, and other HL7-compliant clinical systems.' },
+  { icon: Shield,   title: 'HIPAA-aligned workflows',     desc: 'Sharing model, audit trail, and PHI handling that passes compliance review.' },
+  { icon: Workflow, title: 'Care coordination automation', desc: 'Care plan templates, task assignment, and SLA-driven escalations across teams.' },
 ]
 
 const whyUs = [
@@ -195,54 +147,7 @@ export default function HealthCloudPage() {
         </div>
       </section>
 
-      {/* ── Capabilities ─────────────────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">
-              A Platform Built for Healthcare <span className="gradient-text">From the Ground Up</span>
-            </h2>
-            <p className="section-sub">
-              Health Cloud is not a generic CRM with a healthcare skin. It is purpose-built for the data models, workflows, and compliance requirements that payers, providers, and life sciences organizations demand.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Health Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

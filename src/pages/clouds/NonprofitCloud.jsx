@@ -1,7 +1,9 @@
 import {
   ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign,
-  Users, Shield, ChevronRight, Star, Heart, HandHeart, Gift, Megaphone,
+  Users, Shield, Star, Heart, HandHeart, Gift, Megaphone,
+  Workflow, Award,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -22,59 +24,11 @@ const outcomes = [
   { icon: Heart,         value: '100%', label: 'on the Salesforce Power of Us program for qualifying nonprofits with discounted licensing and resources', color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    dept: 'Fundraising',
-    icon: Gift,
-    color: '#0176D3',
-    headline: 'Raise more. Retain more. Steward better.',
-    points: [
-      "<strong>Constituent 360</strong> with giving and engagement history",
-      "<strong>Major gifts moves management</strong> with Engagement Plans",
-      "<strong>Recurring giving</strong> with retention dashboards",
-      "<strong>Online giving forms</strong> with Experience Cloud",
-      "<strong>Einstein</strong> scores giving propensity and capacity",
-    ],
-  },
-  {
-    dept: 'Programs & Impact',
-    icon: HandHeart,
-    color: '#10B981',
-    headline: 'Track impact. Report outcomes. Win more grants.",',
-    points: [
-      "<strong>Program Management</strong> with cohort and case workflows",
-      "<strong>Outcome capture</strong> ready for grant reports",
-      "<strong>Service delivery tracking</strong> across locations",
-      "<strong>Case management</strong> on Service Console",
-      "<strong>Beneficiary engagement</strong> through Experience Cloud",
-    ],
-  },
-  {
-    dept: 'Volunteers & Community',
-    icon: Users,
-    color: '#F59E0B',
-    headline: 'Activate volunteers. Build community.',
-    points: [
-      "<strong>Volunteer 360</strong> with skills and availability",
-      "<strong>Shift management</strong> and event coordination",
-      "<strong>Recognition and stewardship</strong> automation",
-      "<strong>Community portal</strong> with Experience Cloud",
-      "<strong>Mobile check-in</strong> for events and service days",
-    ],
-  },
-  {
-    dept: 'Marketing & Engagement',
-    icon: Megaphone,
-    color: '#6366F1',
-    headline: 'Reach the right supporters with the right message.',
-    points: [
-      "<strong>Marketing Cloud</strong> journeys across the supporter lifecycle",
-      "<strong>Email Studio and Account Engagement</strong> for nurturing",
-      "<strong>Mobile and SMS</strong> for urgent appeals and reminders",
-      "<strong>Event Management</strong> for galas, walks, and campaigns",
-      "<strong>Einstein</strong> Send Time Optimization lifts response",
-    ],
-  },
+const whatWeShip = [
+  { icon: Heart,     title: 'Fundraising operations',  desc: 'Gift cycles, donation processing, grant tracking, and donor stewardship workflows.' },
+  { icon: Workflow,  title: 'Program management',     desc: 'Case management, beneficiary records, outcomes tracking, and intake automation.' },
+  { icon: Users,     title: 'Volunteer engagement',   desc: 'Volunteer matching, hours tracking, recognition, and event management.' },
+  { icon: Award,     title: 'Grants + outcomes',      desc: 'Funder management, grant lifecycle, outcomes reporting, and logic model tracking.' },
 ]
 
 const whyUs = [
@@ -169,41 +123,7 @@ export default function NonprofitCloudPage() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">Where It Delivers</div>
-            <h2 className="section-title mb-4">A Platform Built for Mission-Driven Orgs <span className="gradient-text">From the Ground Up</span></h2>
-            <p className="section-sub">Nonprofit Cloud is purpose-built around fundraising, programs, volunteers, and the budget realities of mission-driven organizations.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{dept}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all" style={{ color }}>
-                  See how this works for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhatWeShip platformName="Nonprofit Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>
         <div className="section-wrap">

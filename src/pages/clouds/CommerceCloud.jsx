@@ -1,8 +1,9 @@
 import {
   ArrowRight, CheckCircle2, ShoppingCart, TrendingUp, Clock, DollarSign,
-  Globe, Users, BarChart2, Star, ChevronRight, Package, CreditCard,
-  RefreshCw, Zap, Search,
+  Globe, Users, BarChart2, Star, Package, CreditCard,
+  RefreshCw, Zap, Search, Layers, Workflow,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -23,59 +24,11 @@ const outcomes = [
   { icon: Users,       value: '$1B+',    label: 'in GMV processed annually by top Commerce Cloud merchants during peak shopping events', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'B2C Storefronts',
-    icon: ShoppingCart,
-    color: '#0176D3',
-    headline: 'High-converting storefronts built for speed',
-    points: [
-      '<strong>Composable Storefront</strong> with sub-second page loads',
-      '<strong>Einstein Product Recommendations</strong> drive 7-15% of revenue',
-      '<strong>PWA Kit</strong> delivers mobile-first experiences',
-      '<strong>Page Designer</strong> with built-in A/B testing',
-      '<strong>Headless Commerce</strong> with SEO-ready architecture',
-    ],
-  },
-  {
-    dept: 'B2B Commerce',
-    icon: Package,
-    color: '#10B981',
-    headline: 'Self-service portals that accelerate revenue',
-    points: [
-      '<strong>B2B Commerce</strong> with negotiated pricing and volume tiers',
-      '<strong>Bulk ordering</strong> with reorder lists and CSV upload',
-      '<strong>Role-based access</strong> with approval workflows per buyer',
-      '<strong>Inventory Management</strong> with ATP and delivery estimates',
-      '<strong>Pre-built MuleSoft connectors</strong> for major ERP systems',
-    ],
-  },
-  {
-    dept: 'Order Management',
-    icon: RefreshCw,
-    color: '#F59E0B',
-    headline: 'Fulfil from anywhere, faster',
-    points: [
-      '<strong>Order Management</strong> handles checkout through returns',
-      '<strong>Distributed routing</strong> sends orders to optimal fulfilment',
-      '<strong>Ship-from-store and BOPIS</strong> orchestration built in',
-      '<strong>Automated returns</strong> with configurable refund rules',
-      '<strong>Real-time order tracking</strong> reduces WISMO calls 30%',
-    ],
-  },
-  {
-    dept: 'AI & Commerce Intelligence',
-    icon: Zap,
-    color: '#6366F1',
-    headline: 'Let AI maximise every transaction',
-    points: [
-      '<strong>Commerce Cloud Einstein</strong> recommends across touchpoints',
-      '<strong>Einstein Product Recommendations</strong> reorder per shopper',
-      '<strong>AI-powered search</strong> with natural language and typo tolerance',
-      '<strong>Page Designer</strong> merchandising optimised for margin',
-      '<strong>Headless Commerce</strong> with revenue attribution and funnels',
-    ],
-  },
+const whatWeShip = [
+  { icon: ShoppingCart, title: 'Storefront builds',       desc: 'B2B or B2C storefronts with PWA Kit, headless options, and Page Designer.' },
+  { icon: CreditCard,   title: 'Payments + checkout',     desc: 'Stripe, Adyen, Apple Pay, and tax/fraud integration with single-page checkout flows.' },
+  { icon: Layers,       title: 'Catalog + merchandising', desc: 'Product hierarchies, search relevance, and Einstein-powered recommendations.' },
+  { icon: Workflow,     title: 'Order management',       desc: 'OMS routing, returns, and integration to ERP and warehouse systems for unified fulfillment.' },
 ]
 
 const whyUs = [
@@ -194,54 +147,8 @@ export default function CommerceCloudPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What We Build</div>
-            <h2 className="section-title mb-4">
-              Commerce Capabilities That <span className="gradient-text">Drive Growth</span>
-            </h2>
-            <p className="section-sub">
-              From storefront launch to global multi-site rollout - we build commerce experiences that convert, scale, and integrate across your entire Salesforce ecosystem.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  Discuss this for your business <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Commerce Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

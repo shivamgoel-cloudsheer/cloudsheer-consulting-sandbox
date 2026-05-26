@@ -1,7 +1,8 @@
 import {
   ArrowRight, CheckCircle2, Zap, TrendingUp, Clock, DollarSign,
-  Code, Layers, Package, Globe, Shield, Star, ChevronRight, Workflow,
+  Code, Layers, Package, Globe, Shield, Star, Workflow, GitMerge,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -22,59 +23,11 @@ const outcomes = [
   { icon: Globe,      value: '150K+',    label: 'companies worldwide running custom apps and automations on Salesforce Platform across every industry', color: '#0176D3' },
 ]
 
-const useCases = [
-  {
-    dept: 'Custom App Development',
-    icon: Code,
-    color: '#0176D3',
-    headline: 'Ship business apps in weeks, not quarters',
-    points: [
-      '<strong>Dynamic Forms</strong> and layouts built without code',
-      '<strong>Lightning Web Components (LWC)</strong> replace Visualforce',
-      '<strong>Apex</strong> for server-side logic and batch processing',
-      '<strong>Lightning Platform</strong> mobile-ready apps with offline',
-      '<strong>Change Data Capture</strong> with CI/CD governance',
-    ],
-  },
-  {
-    dept: 'Automation & Flow',
-    icon: Workflow,
-    color: '#10B981',
-    headline: 'Eliminate manual work across every department',
-    points: [
-      '<strong>Flow Builder</strong> replaces manual workflows without code',
-      '<strong>Record-Triggered Flows</strong> fire on record changes automatically',
-      '<strong>Screen Flows</strong> automate approvals and SLA enforcement',
-      '<strong>Flow Orchestrator</strong> for multi-department processes',
-      '<strong>Platform Events</strong> consolidate legacy triggers into Flows',
-    ],
-  },
-  {
-    dept: 'Integration & APIs',
-    icon: Globe,
-    color: '#F59E0B',
-    headline: 'Connect every system in your tech stack',
-    points: [
-      '<strong>MuleSoft</strong> connectors for 400+ systems including SAP',
-      '<strong>Platform Events</strong> deliver real-time sync without polling',
-      '<strong>Change Data Capture</strong> streams record changes externally',
-      '<strong>Big Objects</strong> store billions of rows at scale',
-      '<strong>Custom Metadata Types</strong> govern configuration as data',
-    ],
-  },
-  {
-    dept: 'AppExchange & Ecosystem',
-    icon: Package,
-    color: '#6366F1',
-    headline: 'Extend your org with proven, vetted solutions',
-    points: [
-      '<strong>AppExchange</strong> with 10,000+ pre-built apps available',
-      '<strong>Lightning Web Components</strong> for CPQ and e-signatures',
-      '<strong>Security reviewed</strong> - every app passes Salesforce review',
-      '<strong>AppExchange</strong> accelerates timelines over custom builds',
-      '<strong>Expert evaluation</strong> to pick the right solution',
-    ],
-  },
+const whatWeShip = [
+  { icon: Code,     title: 'LWC + Apex development',  desc: 'Lightning Web Components, Apex services, and Flow automation built to scale across orgs.' },
+  { icon: GitMerge, title: 'Integration + DevOps',    desc: 'CI/CD with sfdx, GitHub Actions, scratch orgs, and SFDX-Hardis pipelines for safe releases.' },
+  { icon: Layers,   title: 'Custom Salesforce apps',  desc: 'AppExchange-grade managed packages, security review prep, and ongoing ISV partner support.' },
+  { icon: Zap,      title: 'Performance + LDV tuning', desc: 'Large Data Volume optimization, async patterns, and query/governor tuning for high-scale orgs.' },
 ]
 
 const whyUs = [
@@ -191,55 +144,8 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* ── Use Cases / Capabilities ─────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What We Deliver</div>
-            <h2 className="section-title mb-4">
-              Platform Capabilities That{' '}
-              <span className="gradient-text">Accelerate Your Business</span>
-            </h2>
-            <p className="section-sub">
-              From rapid app development to enterprise-scale integrations - we build on every layer of Salesforce Platform to cut costs, automate operations, and unlock growth.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map(({ dept, icon: Icon, color, headline, points }) => (
-              <div key={dept} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5"
-                      style={{ color }}>
-                      {dept}
-                    </p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  Discuss this with us <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Salesforce Platform" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── Why Cloudsheer ───────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

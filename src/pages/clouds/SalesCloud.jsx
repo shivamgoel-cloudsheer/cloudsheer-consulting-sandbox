@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, CheckCircle2, TrendingUp, Clock, DollarSign, Zap,
-  Target, Users, BarChart2, Star, ChevronRight, Phone, Mail, Calendar,
+  Target, Users, BarChart2, Star, Phone, Mail, Calendar,
 } from 'lucide-react'
+import WhatWeShip from '../../components/WhatWeShip'
 
 const CAL_LINK = 'https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true'
 
@@ -24,59 +25,11 @@ const outcomes = [
   { icon: DollarSign,  value: '5×',     label: "average ROI within three years of deployment (Forrester Total Economic Impact)", color: '#0176D3' },
 ]
 
-const capabilities = [
-  {
-    area: 'Pipeline & Opportunity Management',
-    icon: Target,
-    color: '#0176D3',
-    headline: 'Turn pipeline visibility into predictable revenue',
-    points: [
-      '<strong>Pipeline Inspection</strong> surfaces deal health at a glance',
-      '<strong>Einstein Opportunity Scoring</strong> ranks deals by likelihood',
-      '<strong>Revenue Intelligence</strong> flags stalled opportunities and risks',
-      '<strong>Einstein Activity Capture</strong> shows all signals in one view',
-      '<strong>Kanban pipeline</strong> with drag-and-drop stage progression',
-    ],
-  },
-  {
-    area: 'Sales AI & Automation',
-    icon: Zap,
-    color: '#10B981',
-    headline: 'Automate the busywork - multiply rep selling time',
-    points: [
-      '<strong>Einstein Activity Capture</strong> syncs emails and calendar automatically',
-      '<strong>Einstein Lead Scoring</strong> identifies highest-converting leads',
-      '<strong>Sales Engagement</strong> automates multi-step outreach sequences',
-      '<strong>Agentforce SDR Agent</strong> qualifies leads and books meetings',
-      '<strong>Einstein Conversation Insights</strong> summarizes calls automatically',
-    ],
-  },
-  {
-    area: 'Forecasting & Revenue Intelligence',
-    icon: BarChart2,
-    color: '#F59E0B',
-    headline: 'Commit your number with 42% more accuracy',
-    points: [
-      '<strong>Forecast Management</strong> with AI-powered pipeline predictions',
-      '<strong>Revenue Intelligence</strong> dashboards for velocity and conversion',
-      '<strong>Pipeline Inspection</strong> surfaces sandbagging and coverage gaps',
-      '<strong>Einstein Lead Scoring</strong> prioritises high-converting prospects',
-      '<strong>Custom roll-up reports</strong> by territory, product, segment',
-    ],
-  },
-  {
-    area: 'CPQ & Quote-to-Cash',
-    icon: DollarSign,
-    color: '#6366F1',
-    headline: 'Eliminate quote delays that kill deal momentum',
-    points: [
-      '<strong>CPQ</strong> generates branded quotes in minutes',
-      '<strong>Guided selling rules</strong> ensure correct product and pricing',
-      '<strong>Automated approvals</strong> and pricing guardrails built in',
-      '<strong>One-click quote-to-contract</strong> with e-signature integration',
-      '<strong>Complex pricing support</strong> for subscriptions and renewals',
-    ],
-  },
+const whatWeShip = [
+  { icon: Target,     title: 'Pipeline architecture',  desc: 'Stages, exit criteria, and forecast roll-ups designed around your actual sales motion.' },
+  { icon: Zap,        title: 'Lead routing + scoring', desc: 'Einstein Lead Scoring trained on closed-won, routed by territory and skill.' },
+  { icon: BarChart2,  title: 'Forecasting setup',      desc: 'Revenue Intelligence with weighted pipeline and AI-suggested commits.' },
+  { icon: DollarSign, title: 'CPQ implementation',     desc: 'Configure-Price-Quote with approval workflows and e-signature in days, not months.' },
 ]
 
 const process = [
@@ -198,51 +151,8 @@ export default function SalesCloudPage() {
         </div>
       </section>
 
-      {/* ── Capabilities ─────────────────────────────────────── */}
-      <section className="py-14 sm:py-10 sm:py-16 bg-white">
-        <div className="section-wrap">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div className="tag mx-auto mb-5">What You Get</div>
-            <h2 className="section-title mb-4">
-              A Complete Revenue Engine <span className="gradient-text">Not Just a CRM</span>
-            </h2>
-            <p className="section-sub">
-              Sales Cloud combines pipeline management, AI automation, revenue intelligence, and CPQ into one platform - every feature designed to drive measurable revenue outcomes.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {capabilities.map(({ area, icon: Icon, color, headline, points }) => (
-              <div key={area} className="glass-card p-5 sm:p-7 flex flex-col group hover:-translate-y-1 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: `${color}15`, color }}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest mb-0.5" style={{ color }}>{area}</p>
-                    <h3 className="font-black text-lg leading-tight" style={{ color: '#032D60' }}>{headline}</h3>
-                  </div>
-                </div>
-                <ul className="space-y-2 flex-grow">
-                  {points.map(p => (
-                    <li key={p} className="flex items-start gap-2 text-xs sm:text-sm" style={{ color: '#475569' }}>
-                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" style={{ color }} />
-                      <span dangerouslySetInnerHTML={{ __html: p }} />
-                    </li>
-                  ))}
-                </ul>
-                <a href={CAL_LINK} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold mt-5 transition-all"
-                  style={{ color }}
-                  onMouseEnter={e => e.currentTarget.style.gap = '10px'}
-                  onMouseLeave={e => e.currentTarget.style.gap = '6px'}>
-                  See how this drives revenue for you <ChevronRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── What We Ship ─────────────────────────────────────── */}
+      <WhatWeShip platformName="Sales Cloud" accentColor="#0176D3" items={whatWeShip} />
 
       {/* ── How We Implement ─────────────────────────────────── */}
       <section className="py-10 sm:py-16" style={{ backgroundColor: '#EFF6FF' }}>

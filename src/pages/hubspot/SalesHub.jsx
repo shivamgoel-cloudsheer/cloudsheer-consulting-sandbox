@@ -18,6 +18,7 @@ const data = {
   headlineGold: 'Forecast Like a Public Company.',
   subhead: 'HubSpot Sales Hub built around your sales motion — custom deal stages, sequences, forecasting, prospecting workspace, and Breeze AI lead scoring that reps actually trust.',
   ctaLabel: 'Scope My Sales Hub Build',
+  platformName: 'Sales Hub',
   painPoints: [
     { pain: 'New reps take 4-6 months to ramp and miss their first quarter', fix: '<strong>Onboarding playbooks + sequences</strong> get reps productive in weeks' },
     { pain: 'Forecast roll-ups are guesswork — leadership lost trust', fix: '<strong>Forecast tool</strong> with weighted pipeline, deal-stage probability, and AI-suggested commits' },
@@ -34,59 +35,11 @@ const data = {
     { icon: DollarSign, value: '24%',  label: 'larger average deal size with structured deal stages and exit criteria', color: '#10B981' },
     { icon: Sparkles,   value: '2×',   label: 'faster rep ramp time with onboarding sequences and playbook automation', color: '#FF7A59' },
   ],
-  capabilities: [
-    {
-      area: 'Pipeline & Deal Management',
-      icon: Target,
-      color: '#FF7A59',
-      headline: 'Pipeline visibility your CFO will believe',
-      points: [
-        '<strong>Custom deal stages</strong> with required fields and exit criteria',
-        '<strong>Deal pipelines</strong> for multi-product or multi-segment teams',
-        '<strong>Forecast tool</strong> with weighted pipeline and AI-suggested commits',
-        '<strong>Pipeline analytics</strong> showing velocity, conversion, and stage time',
-        '<strong>Deal scoring</strong> flags at-risk and stalled opportunities',
-      ],
-    },
-    {
-      area: 'Sequences & Prospecting',
-      icon: TrendingUp,
-      color: '#F59E0B',
-      headline: 'Outbound that scales without losing personalization',
-      points: [
-        '<strong>Sequences</strong> with multi-step email, task, and call cadences',
-        '<strong>Prospecting workspace</strong> consolidates leads, tasks, and meetings',
-        '<strong>Snippets + templates</strong> keep messaging consistent and on-brand',
-        '<strong>Documents tool</strong> tracks proposal opens and engagement',
-        '<strong>Meeting links</strong> with round-robin and group availability',
-      ],
-    },
-    {
-      area: 'Breeze AI for Sales',
-      icon: Sparkles,
-      color: '#6366F1',
-      headline: 'Every rep gets a 24/7 research assistant',
-      points: [
-        '<strong>Breeze Prospecting Agent</strong> finds high-fit accounts and drafts outreach',
-        '<strong>Breeze Copilot</strong> answers questions about deals, contacts, and history',
-        '<strong>Breeze Intelligence</strong> enriches records with firmographic data',
-        '<strong>AI-generated forecast commits</strong> based on deal signals',
-        '<strong>Call summary + next-step extraction</strong> from recorded calls',
-      ],
-    },
-    {
-      area: 'Quoting & Quote-to-Cash',
-      icon: DollarSign,
-      color: '#06B6D4',
-      headline: 'Stop losing momentum on deals that are ready to close',
-      points: [
-        '<strong>Quotes tool</strong> generates branded proposals in minutes',
-        '<strong>Product library</strong> with pricing, currency, and discount rules',
-        '<strong>Approval workflows</strong> for non-standard pricing or terms',
-        '<strong>E-signature integration</strong> via DocuSign or HubSpot signatures',
-        '<strong>Renewal tracking</strong> with auto-created renewal opportunities',
-      ],
-    },
+  whatWeShip: [
+    { icon: Target,     title: 'Deal pipeline architecture', desc: 'Custom stages, exit criteria, and forecast roll-ups designed around your real sales motion.' },
+    { icon: TrendingUp, title: 'Sequences + prospecting',    desc: 'Cadences, templates, and prospecting workspace that scale outbound without losing personalization.' },
+    { icon: Sparkles,   title: 'Breeze AI for sales',        desc: 'Prospecting Agent, Copilot, and Intelligence enrichment wired against your deal data on day one.' },
+    { icon: DollarSign, title: 'Quote-to-cash setup',        desc: 'Quotes tool, product library, approval workflows, and e-signature for fast deal closure.' },
   ],
   process: [
     { num: '01', title: 'Sales Process Discovery', desc: "We interview reps, managers, and leadership to map your actual sales motion — stages, qualification criteria, handoff rules, and the metrics that matter — before configuring a single deal stage." },
