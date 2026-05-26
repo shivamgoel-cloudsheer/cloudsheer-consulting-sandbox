@@ -11,9 +11,11 @@ export const HOMEPAGE_FAQS = [
   { q: "What happens after go-live?",
     a: "Every project includes 30 days of post-launch support. We offer ongoing managed services for agent monitoring, performance optimization, and new agent deployments." },
   { q: "Can you handle large or multi-cloud projects?",
-    a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale with certified specialists from our extended network." },
+    a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud plus the full HubSpot stack. For larger engagements, we scale with certified specialists from our extended network." },
+  { q: "Do you work on HubSpot too, or only Salesforce?",
+    a: "Both. We implement and optimize HubSpot Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, and Breeze AI. We also handle Salesforce-to-HubSpot migrations, the reverse, and dual-stack integrations where a client runs both." },
   { q: "How do you handle data security and compliance?",
-    a: "All work is done within Salesforce's enterprise security framework (SOC 2 Type II, HIPAA-eligible, GDPR compliant). We follow Salesforce Well-Architected principles for data access, sharing rules, and encryption." },
+    a: "All work follows enterprise security standards — Salesforce's SOC 2 / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption to match." },
 ]
 
 const SEGMENT_NAMES = {
@@ -42,6 +44,13 @@ const SEGMENT_NAMES = {
   'education-cloud': 'Education Cloud',
   'nonprofit-cloud': 'Nonprofit Cloud',
   'agentforce-manufacturing': 'Agentforce Manufacturing',
+  'hubspot': 'HubSpot',
+  'hubspot-marketing-hub': 'HubSpot Marketing Hub',
+  'hubspot-sales-hub': 'HubSpot Sales Hub',
+  'hubspot-service-hub': 'HubSpot Service Hub',
+  'hubspot-cms-hub': 'HubSpot CMS Hub',
+  'hubspot-operations-hub': 'HubSpot Operations Hub',
+  'hubspot-breeze-ai': 'HubSpot Breeze AI',
 }
 
 function humanize(slug) {
@@ -62,16 +71,16 @@ export function breadcrumbsFromPath(pathname) {
 
 export const ROUTE_META = {
   '/': {
-    title: 'Cloudsheer Consulting | Salesforce & Agentforce Partner',
-    description: 'Certified Salesforce & Agentforce partner. Cut support costs by 40%, respond to leads in under 2 seconds with AI agents that run 24/7 inside your CRM.',
+    title: 'Cloudsheer Consulting | Salesforce, Agentforce & HubSpot Partner',
+    description: 'Certified Salesforce, Agentforce, and HubSpot consulting partner. Cut support costs by 40%, respond to leads in under 2 seconds with AI-powered CRM that runs 24/7.',
   },
   '/services': {
-    title: 'Salesforce Implementation Services | Cloudsheer Consulting',
-    description: 'Greenfield, brownfield, integration, and managed services for Salesforce. Delivered by 40+ certified consultants across Dallas, Delhi, London, and NY.',
+    title: 'Salesforce & HubSpot Implementation Services | Cloudsheer',
+    description: 'Greenfield, brownfield, integration, and managed services across Salesforce and HubSpot. Delivered by 40+ certified consultants in Dallas, Delhi, London, and NY.',
   },
   '/solutions': {
-    title: 'Salesforce Solutions | Cloudsheer Consulting',
-    description: 'Salesforce solutions across Sales, Service, Marketing, Commerce, Experience, Analytics, Platform, Slack, and Health Cloud — plus Agentforce AI agents.',
+    title: 'Salesforce & HubSpot Solutions | Cloudsheer Consulting',
+    description: 'Solutions across the full Salesforce stack — Sales, Service, Marketing, Commerce, Agentforce — and every HubSpot Hub including Marketing, Sales, Service, CMS, Operations, and Breeze AI.',
   },
   '/solutions/agentforce': {
     title: 'Agentforce AI Agent Deployment | Cloudsheer Consulting',
@@ -129,25 +138,53 @@ export const ROUTE_META = {
     title: 'Salesforce Nonprofit Cloud Consulting | Cloudsheer',
     description: 'Nonprofit Cloud for foundations, social services, advocacy, and faith organizations. Fundraising, programs, volunteers, and grants on one platform.',
   },
+  '/solutions/hubspot': {
+    title: 'HubSpot Consulting & Implementation | Cloudsheer',
+    description: 'End-to-end HubSpot implementation across Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, and Breeze AI. Salesforce-to-HubSpot migrations and dual-CRM integrations included.',
+  },
+  '/solutions/hubspot-marketing-hub': {
+    title: 'HubSpot Marketing Hub Consulting | Cloudsheer',
+    description: 'HubSpot Marketing Hub implementation: campaigns, workflows, lead scoring, attribution reporting, and Breeze-powered content. Built around your funnel, not a template.',
+  },
+  '/solutions/hubspot-sales-hub': {
+    title: 'HubSpot Sales Hub Consulting | Cloudsheer',
+    description: 'HubSpot Sales Hub setup with custom deal stages, sequences, forecasting, prospecting workspace, and Breeze AI lead scoring. Ramp reps in weeks, not quarters.',
+  },
+  '/solutions/hubspot-service-hub': {
+    title: 'HubSpot Service Hub Consulting | Cloudsheer',
+    description: 'HubSpot Service Hub deployments: ticketing, customer portal, knowledge base, SLA automation, CSAT/NPS surveys, and Breeze customer agent.',
+  },
+  '/solutions/hubspot-cms-hub': {
+    title: 'HubSpot CMS Hub Consulting & Development | Cloudsheer',
+    description: 'HubSpot CMS Hub website builds: custom themes, modules, memberships, multi-language sites, and SEO-optimized pages connected to your CRM.',
+  },
+  '/solutions/hubspot-operations-hub': {
+    title: 'HubSpot Operations Hub Consulting | Cloudsheer',
+    description: 'HubSpot Operations Hub setup: programmable automation, data sync, data quality automation, custom datasets, and snowflake/warehouse integration.',
+  },
+  '/solutions/hubspot-breeze-ai': {
+    title: 'HubSpot Breeze AI Consulting & Deployment | Cloudsheer',
+    description: 'Deploy HubSpot Breeze AI: Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment. Wired into your full HubSpot stack.',
+  },
   '/case-studies/agentforce-manufacturing': {
     title: 'Case Study: 92% Autonomous Cases with Agentforce | Cloudsheer',
     description: 'How Cloudsheer built the multi-agent Agentforce architecture Salesforce said was not possible. Shipped in 11 weeks, 12K+ cases/month, $340K saved annually.',
   },
   '/about': {
-    title: 'About Cloudsheer | Salesforce & Agentforce Specialists',
-    description: 'Cloudsheer is a 40+ person certified Salesforce and Agentforce consulting firm with offices in Dallas, New York, Delhi, and London.',
+    title: 'About Cloudsheer | Salesforce, Agentforce & HubSpot Specialists',
+    description: 'Cloudsheer is a 40+ person certified consulting firm covering the full Salesforce stack, Agentforce, and HubSpot — with offices in Dallas, New York, Delhi, and London.',
   },
   '/contact': {
-    title: 'Contact Cloudsheer Consulting | Salesforce & Agentforce',
-    description: 'Talk to Cloudsheer about Salesforce implementation or Agentforce deployment. Free 30-minute discovery call available.',
+    title: 'Contact Cloudsheer Consulting | Salesforce, Agentforce, HubSpot',
+    description: 'Talk to Cloudsheer about Salesforce, Agentforce, or HubSpot — or migrating between them. Free 30-minute discovery call available.',
   },
   '/blog': {
-    title: 'Salesforce & Agentforce Blog | Cloudsheer Insights',
-    description: 'Salesforce and Agentforce news, implementation guides, and ROI analysis from Cloudsheer\'s certified consultants.',
+    title: 'Salesforce, Agentforce & HubSpot Blog | Cloudsheer Insights',
+    description: 'Implementation guides, ROI analysis, and platform deep-dives across Salesforce, Agentforce, and HubSpot from Cloudsheer\'s certified consultants.',
   },
   '/careers': {
-    title: 'Careers at Cloudsheer | Salesforce & Agentforce Jobs',
-    description: 'Open roles at Cloudsheer Consulting for Salesforce developers, architects, and Agentforce specialists.',
+    title: 'Careers at Cloudsheer | Salesforce, Agentforce & HubSpot Jobs',
+    description: 'Open roles at Cloudsheer Consulting for Salesforce developers, Agentforce specialists, and HubSpot architects.',
   },
   '/privacy': {
     title: 'Privacy Policy | Cloudsheer Consulting',
@@ -309,13 +346,15 @@ export function professionalServiceSchema() {
     name: 'Cloudsheer Consulting',
     url: SITE_URL,
     image: `${SITE_URL}/cloudsheer-logo.png`,
-    description: 'Certified Salesforce & Agentforce consulting partner. We help mid-market and enterprise businesses cut costs, close more deals, and scale operations with Agentforce agents.',
+    description: 'Certified Salesforce, Agentforce, and HubSpot consulting partner. We help mid-market and enterprise businesses cut costs, close more deals, and scale operations across the full revenue stack.',
     email: 'hello@cloudsheer.com',
     priceRange: '$$$',
     areaServed: ['US', 'IN', 'GB'],
     serviceType: [
       'Salesforce Implementation',
       'Agentforce AI Agent Deployment',
+      'HubSpot Implementation',
+      'HubSpot Consulting',
       'Sales Cloud Consulting',
       'Service Cloud Consulting',
       'Marketing Cloud Consulting',
@@ -328,15 +367,25 @@ export function professionalServiceSchema() {
       'CRM Analytics & Tableau',
       'Salesforce Platform Development',
       'Slack Integration',
+      'HubSpot Marketing Hub',
+      'HubSpot Sales Hub',
+      'HubSpot Service Hub',
+      'HubSpot CMS Hub',
+      'HubSpot Operations Hub',
+      'HubSpot Breeze AI',
+      'Salesforce to HubSpot Migration',
+      'HubSpot to Salesforce Migration',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Salesforce Solutions',
+      name: 'CRM Solutions',
       itemListElement: [
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Agentforce AI Agent Deployment',
           description: 'Deploy autonomous Agentforce agents that handle support, sales, and operations 24/7 inside Salesforce.' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Salesforce Implementation',
           description: 'Full Salesforce cloud implementation including Sales, Service, Marketing, Commerce, and Experience Cloud.' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HubSpot Implementation',
+          description: 'End-to-end HubSpot implementation across Marketing, Sales, Service, CMS, Operations Hub, and Breeze AI.' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CRM Analytics & Tableau',
           description: 'Real-time dashboards, AI predictions, and visual analytics embedded in Salesforce.' } },
       ],

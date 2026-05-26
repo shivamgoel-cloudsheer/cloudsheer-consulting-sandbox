@@ -29,6 +29,13 @@ import FinancialServicesCloudPage from './pages/clouds/FinancialServicesCloud'
 import LifeSciencesCloudPage from './pages/clouds/LifeSciencesCloud'
 import EducationCloudPage from './pages/clouds/EducationCloud'
 import NonprofitCloudPage from './pages/clouds/NonprofitCloud'
+import HubSpotOverview    from './pages/hubspot/Overview'
+import HubSpotMarketingHub from './pages/hubspot/MarketingHub'
+import HubSpotSalesHub     from './pages/hubspot/SalesHub'
+import HubSpotServiceHub   from './pages/hubspot/ServiceHub'
+import HubSpotCmsHub       from './pages/hubspot/CmsHub'
+import HubSpotOperationsHub from './pages/hubspot/OperationsHub'
+import HubSpotBreezeAI     from './pages/hubspot/BreezeAI'
 import AgentforceManufacturingCase from './pages/case-studies/AgentforceManufacturing'
 import { ROUTE_META, applySEO, setPageSchemas, breadcrumbSchema, breadcrumbsFromPath,
          faqPageSchema, professionalServiceSchema, HOMEPAGE_FAQS } from './seoConfig'
@@ -102,6 +109,13 @@ export default function App() {
           <Route path="/solutions/life-sciences-cloud"      element={<LifeSciencesCloudPage />} />
           <Route path="/solutions/education-cloud"          element={<EducationCloudPage />} />
           <Route path="/solutions/nonprofit-cloud"          element={<NonprofitCloudPage />} />
+          <Route path="/solutions/hubspot"                  element={<HubSpotOverview />} />
+          <Route path="/solutions/hubspot-marketing-hub"    element={<HubSpotMarketingHub />} />
+          <Route path="/solutions/hubspot-sales-hub"        element={<HubSpotSalesHub />} />
+          <Route path="/solutions/hubspot-service-hub"      element={<HubSpotServiceHub />} />
+          <Route path="/solutions/hubspot-cms-hub"          element={<HubSpotCmsHub />} />
+          <Route path="/solutions/hubspot-operations-hub"   element={<HubSpotOperationsHub />} />
+          <Route path="/solutions/hubspot-breeze-ai"        element={<HubSpotBreezeAI />} />
           <Route path="/services" element={<Services />} />
           <Route path="/case-studies/agentforce-manufacturing" element={<AgentforceManufacturingCase />} />
           <Route path="/about" element={<About />} />

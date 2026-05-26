@@ -3,7 +3,8 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
          ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse,
-         Heart, Landmark, FlaskConical, GraduationCap, HandHeart } from 'lucide-react'
+         Heart, Landmark, FlaskConical, GraduationCap, HandHeart,
+         Sparkles, FileText, Workflow, Bot, Globe } from 'lucide-react'
 
 const clouds = [
   {
@@ -112,6 +113,60 @@ const clouds = [
   },
 ]
 
+const hubspotProducts = [
+  {
+    label: 'HubSpot Overview',
+    to: '/solutions/hubspot',
+    icon: Globe,
+    desc: 'Full HubSpot stack — all hubs in one place',
+    highlight: true,
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Breeze AI',
+    to: '/solutions/hubspot-breeze-ai',
+    icon: Sparkles,
+    desc: 'Copilot, agents, and Intelligence enrichment',
+    highlight: true,
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Marketing Hub',
+    to: '/solutions/hubspot-marketing-hub',
+    icon: Megaphone,
+    desc: 'Campaigns, automation, attribution',
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Sales Hub',
+    to: '/solutions/hubspot-sales-hub',
+    icon: TrendingUp,
+    desc: 'Pipeline, sequences, forecasting',
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Service Hub',
+    to: '/solutions/hubspot-service-hub',
+    icon: Headphones,
+    desc: 'Tickets, portal, SLAs, customer agent',
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'CMS Hub',
+    to: '/solutions/hubspot-cms-hub',
+    icon: FileText,
+    desc: 'Websites, themes, memberships',
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Operations Hub',
+    to: '/solutions/hubspot-operations-hub',
+    icon: Workflow,
+    desc: 'Data sync, programmable automation',
+    iconColor: '#FF7A59',
+  },
+]
+
 const navLinks = [
   { label: 'Services', to: '/services' },
   { label: 'About',   to: '/about' },
@@ -123,6 +178,7 @@ export default function Navbar() {
   const [open, setOpen]         = useState(false)   // mobile menu
   const [dropOpen, setDropOpen] = useState(false)   // desktop dropdown
   const [mobileDropOpen, setMobileDropOpen] = useState(false)
+  const [platformTab, setPlatformTab] = useState('salesforce') // 'salesforce' | 'hubspot'
   const [scrolled, setScrolled] = useState(false)
   const dropRef  = useRef(null)
   const panelRef = useRef(null)
@@ -184,17 +240,30 @@ export default function Navbar() {
               />
             </button>
 
-            {/* Dropdown panel - 4-column mega menu (portaled to body) */}
+            {/* Dropdown panel - mega menu with platform tabs (portaled to body) */}
             {dropOpen && (() => {
+              const isHubspot = platformTab === 'hubspot'
+              const accent = isHubspot ? '#FF7A59' : '#0176D3'
+              const accentTint = isHubspot ? 'rgba(255,122,89,0.08)' : 'rgba(1,118,211,0.08)'
+              const headerBg = isHubspot ? '#FFF4F0' : '#F0F7FF'
+
               const isCore = c => ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)
               const isAI   = c => ['Agentforce', 'Slack'].includes(c.label)
               const isExtend = c => !c.industry && !isCore(c) && !isAI(c)
-              const tiers = [
+              const sfTiers = [
                 { label: 'AI & Automation', items: clouds.filter(isAI) },
                 { label: 'Core Clouds',     items: clouds.filter(isCore) },
                 { label: 'Extend & Analyse',items: clouds.filter(isExtend) },
                 { label: 'Industry Clouds', items: clouds.filter(c => c.industry) },
               ]
+              const hsTiers = [
+                { label: 'Overview',          items: hubspotProducts.filter(p => ['HubSpot Overview'].includes(p.label)) },
+                { label: 'AI Layer',          items: hubspotProducts.filter(p => ['Breeze AI'].includes(p.label)) },
+                { label: 'Core Hubs',         items: hubspotProducts.filter(p => ['Marketing Hub', 'Sales Hub', 'Service Hub'].includes(p.label)) },
+                { label: 'Web & Operations',  items: hubspotProducts.filter(p => ['CMS Hub', 'Operations Hub'].includes(p.label)) },
+              ]
+              const tiers = isHubspot ? hsTiers : sfTiers
+
               return createPortal((
                 <div
                   ref={panelRef}
@@ -215,24 +284,42 @@ export default function Navbar() {
                     pointerEvents: 'auto',
                     width: 'min(960px, calc(100vw - 32px))',
                     background: '#ffffff',
-                    border: '1px solid rgba(1,118,211,0.12)',
-                    boxShadow: '0 20px 60px rgba(1,118,211,0.14)',
+                    border: `1px solid ${isHubspot ? 'rgba(255,122,89,0.18)' : 'rgba(1,118,211,0.12)'}`,
+                    boxShadow: isHubspot ? '0 20px 60px rgba(255,122,89,0.14)' : '0 20px 60px rgba(1,118,211,0.14)',
                   }}
                 >
-                  {/* Header bar */}
-                  <div className="px-5 py-3 flex items-center justify-between"
-                    style={{ borderBottom: '1px solid rgba(1,118,211,0.08)', background: '#F0F7FF' }}>
-                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: '#0176D3' }}>
-                      Salesforce Clouds &amp; Products
-                    </span>
-                    <Link
-                      to="/solutions"
-                      onClick={() => setDropOpen(false)}
-                      className="text-xs font-semibold flex items-center gap-1 transition-colors"
-                      style={{ color: '#0176D3' }}
-                    >
-                      View all solutions →
-                    </Link>
+                  {/* Platform tabs */}
+                  <div className="px-3 pt-3 pb-0 flex items-center gap-2" style={{ background: headerBg, borderBottom: `1px solid ${accentTint}` }}>
+                    <button
+                      onClick={() => setPlatformTab('salesforce')}
+                      className="px-4 py-2 rounded-t-lg text-xs font-bold uppercase tracking-widest transition-all duration-150"
+                      style={{
+                        background: !isHubspot ? '#ffffff' : 'transparent',
+                        color: !isHubspot ? '#0176D3' : '#64748B',
+                        borderBottom: !isHubspot ? '2px solid #0176D3' : '2px solid transparent',
+                      }}>
+                      Salesforce
+                    </button>
+                    <button
+                      onClick={() => setPlatformTab('hubspot')}
+                      className="px-4 py-2 rounded-t-lg text-xs font-bold uppercase tracking-widest transition-all duration-150"
+                      style={{
+                        background: isHubspot ? '#ffffff' : 'transparent',
+                        color: isHubspot ? '#FF7A59' : '#64748B',
+                        borderBottom: isHubspot ? '2px solid #FF7A59' : '2px solid transparent',
+                      }}>
+                      HubSpot
+                    </button>
+                    <div className="ml-auto pb-2 pr-2">
+                      <Link
+                        to="/solutions"
+                        onClick={() => setDropOpen(false)}
+                        className="text-xs font-semibold flex items-center gap-1 transition-colors"
+                        style={{ color: accent }}
+                      >
+                        View all solutions →
+                      </Link>
+                    </div>
                   </div>
 
                   {/* 4-column grid */}
@@ -240,18 +327,18 @@ export default function Navbar() {
                     {tiers.map(({ label: tierLabel, items }, tIdx) => (
                       <div key={tierLabel}
                         className="px-2"
-                        style={{ borderLeft: tIdx > 0 ? '1px solid rgba(1,118,211,0.06)' : 'none' }}>
+                        style={{ borderLeft: tIdx > 0 ? `1px solid ${accentTint}` : 'none' }}>
                         <p className="text-[10px] font-bold uppercase tracking-widest px-2 pt-1 pb-2" style={{ color: '#94A3B8' }}>
                           {tierLabel}
                         </p>
                         <div className="flex flex-col gap-0.5">
                           {items.map(({ label, to, icon: Icon, image, highlight, iconColor }) => {
-                            const color = iconColor || '#0176D3'
+                            const color = iconColor || accent
                             return (
                               <Link key={label} to={to} onClick={() => setDropOpen(false)}
                                 className="flex items-center gap-2.5 px-2 py-2 rounded-lg transition-all duration-150"
                                 style={{ textDecoration: 'none' }}
-                                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(1,118,211,0.06)' }}
+                                onMouseEnter={e => { e.currentTarget.style.background = `${color}10` }}
                                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
                                 <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0"
                                   style={{ backgroundColor: `${color}14`, color }}>
@@ -326,6 +413,7 @@ export default function Navbar() {
 
             {mobileDropOpen && (
               <div className="ml-2 flex flex-col gap-0.5 mb-1">
+                <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-2 pb-1" style={{ color: '#0176D3' }}>Salesforce</p>
                 {clouds.map(({ label, to, icon: Icon, image, highlight }) => (
                   <Link
                     key={label}
@@ -335,6 +423,21 @@ export default function Navbar() {
                     style={{ color: highlight ? '#0176D3' : '#475569' }}
                   >
                     {Icon ? <Icon className="w-4 h-4 shrink-0" /> : image ? <img src={import.meta.env.BASE_URL + image} alt="" className="w-5 h-5 shrink-0 rounded" /> : null}
+                    {label}
+                  </Link>
+                ))}
+                <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-3 pb-1" style={{ color: '#FF7A59' }}>HubSpot</p>
+                {hubspotProducts.map(({ label, to, icon: Icon, highlight }) => (
+                  <Link
+                    key={label}
+                    to={to}
+                    onClick={() => { setOpen(false); setMobileDropOpen(false) }}
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors"
+                    style={{ color: highlight ? '#FF7A59' : '#475569' }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,122,89,0.08)' }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
+                  >
+                    {Icon ? <Icon className="w-4 h-4 shrink-0" /> : null}
                     {label}
                   </Link>
                 ))}

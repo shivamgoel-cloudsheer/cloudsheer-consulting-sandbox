@@ -19,16 +19,16 @@ const services = [
     tagline: 'Start fresh. Build it right the first time.',
     color: '#0176D3',
     gradient: 'linear-gradient(135deg, #0176D3 0%, #38BDF8 100%)',
-    desc: 'Deploying Salesforce for the first time? We design and build your CRM from scratch - data model, automation, integrations, and Agentforce agents - so you launch with a system that scales from day one.',
+    desc: 'Deploying Salesforce or HubSpot for the first time? We design and build your CRM from scratch - data model, automation, integrations, and AI agents (Agentforce or Breeze) - so you launch with a system that scales from day one.',
     benefits: [
       'Full org design - objects, fields, page layouts, and security model',
-      'Sales, Service, or Marketing Cloud configured to your processes',
+      'Salesforce Sales/Service/Marketing Cloud or HubSpot Marketing/Sales/Service Hub configured to your processes',
       'Data migration from spreadsheets, legacy CRMs, or ERPs',
-      'Agentforce agents built and deployed from the start',
+      'Agentforce or Breeze AI agents built and deployed from the start',
       'User training and adoption playbooks included',
       'Go live in 4-8 weeks with post-launch support',
     ],
-    ideal: 'Companies new to Salesforce who want to skip the costly mistakes and get it right from the start.',
+    ideal: 'Companies new to Salesforce or HubSpot who want to skip the costly mistakes and get it right from the start.',
     stat: '4-8 weeks',
     statLabel: 'avg. go-live',
     visual: [
@@ -44,16 +44,16 @@ const services = [
     tagline: 'Fix what is broken. Unlock what is possible.',
     color: '#6366F1',
     gradient: 'linear-gradient(135deg, #6366F1 0%, #A78BFA 100%)',
-    desc: 'Already on Salesforce but not getting the results you expected? We audit your existing org, clean up technical debt, optimize workflows, and layer on Agentforce to transform what you already have.',
+    desc: 'Already on Salesforce or HubSpot but not getting the results you expected? We audit your existing portal or org, clean up technical debt, optimize workflows, and layer on AI agents (Agentforce or Breeze) to transform what you already have.',
     benefits: [
-      'Full org health check - automation audit, data quality, and security review',
-      'Technical debt cleanup - redundant flows, unused fields, broken automations',
+      'Full portal/org health check - automation audit, data quality, and security review',
+      'Technical debt cleanup - redundant flows, unused fields, broken automations or workflows',
       'Process re-engineering aligned to current business needs',
-      'Agentforce agents layered onto your existing data and processes',
-      'Performance optimization for Large Data Volumes (LDV)',
+      'Agentforce or Breeze AI agents layered onto your existing data and processes',
+      'Performance optimization for Large Data Volumes (LDV) and HubSpot list/workflow limits',
       'Zero disruption - phased rollout with parallel testing',
     ],
-    ideal: 'Companies with an existing Salesforce org that needs optimization, cleanup, or new capabilities.',
+    ideal: 'Companies with an existing Salesforce org or HubSpot portal that needs optimization, cleanup, or new capabilities.',
     stat: '250+',
     statLabel: 'orgs optimized',
     visual: [
@@ -69,16 +69,16 @@ const services = [
     tagline: 'Connect everything. Break the silos.',
     color: '#059669',
     gradient: 'linear-gradient(135deg, #059669 0%, #34D399 100%)',
-    desc: 'Salesforce is most powerful when it talks to your other systems. We build reliable, scalable integrations between Salesforce and your ERP, marketing tools, payment platforms, data warehouses, and custom applications.',
+    desc: 'Your CRM is most powerful when it talks to your other systems. We build reliable, scalable integrations between Salesforce, HubSpot, your ERP, marketing tools, payment platforms, data warehouses, and custom applications — including Salesforce↔HubSpot two-way sync for dual-stack teams.',
     benefits: [
-      'API-led connectivity using MuleSoft or native Salesforce APIs',
+      'API-led connectivity using MuleSoft, native Salesforce APIs, or HubSpot Operations Hub data sync',
       'ERP integrations - SAP, NetSuite, Microsoft Dynamics, QuickBooks',
-      'Marketing platform sync - HubSpot, Marketo, Mailchimp, Account Engagement',
-      'Data Cloud ingestion from any source - batch or real-time streaming',
+      'Cross-CRM sync - Salesforce ↔ HubSpot two-way sync with field mapping and conflict rules',
+      'Data Cloud ingestion or HubSpot custom datasets from any source - batch or real-time streaming',
       'Custom middleware and webhook-based integrations',
       'SSO and identity management via SAML 2.0 or OpenID Connect',
     ],
-    ideal: 'Businesses running multiple systems that need a unified view of customers, orders, and operations.',
+    ideal: 'Businesses running multiple systems (Salesforce, HubSpot, ERP, marketing tools) that need a unified view of customers, orders, and operations.',
     stat: '100+',
     statLabel: 'integrations built',
     visual: [
@@ -94,16 +94,16 @@ const services = [
     tagline: 'We keep it running. You keep growing.',
     color: '#D97706',
     gradient: 'linear-gradient(135deg, #D97706 0%, #FBBF24 100%)',
-    desc: 'After go-live, your Salesforce org needs ongoing care - bug fixes, new features, agent tuning, user support, and release management. Our managed services team acts as your dedicated Salesforce department.',
+    desc: 'After go-live, your Salesforce org or HubSpot portal needs ongoing care - bug fixes, new features, agent tuning, user support, and release management. Our managed services team acts as your dedicated CRM department.',
     benefits: [
-      'Dedicated Salesforce admin and developer support on retainer',
-      'Agentforce agent monitoring, tuning, and performance optimization',
-      'Salesforce release management - seasonal updates, sandbox testing',
+      'Dedicated admin and developer support on retainer for Salesforce, HubSpot, or both',
+      'Agentforce and Breeze AI monitoring, tuning, and performance optimization',
+      'Release management - Salesforce seasonal updates, HubSpot weekly changelog, sandbox testing',
       'New feature development and enhancement requests',
       'User training, onboarding, and adoption tracking',
       'Monthly health reports with actionable recommendations',
     ],
-    ideal: 'Companies that want expert Salesforce support without hiring a full-time team.',
+    ideal: 'Companies that want expert Salesforce or HubSpot support without hiring a full-time team.',
     stat: '24/7',
     statLabel: 'support coverage',
     visual: [
@@ -115,9 +115,11 @@ const services = [
 ]
 
 const serviceFaqs = [
-  { q: 'How do I know if I need a greenfield or brownfield implementation?', a: 'If you are deploying Salesforce for the first time, that is greenfield. If you already have a Salesforce org and want to improve, optimize, or add new capabilities, that is brownfield. Not sure? Book a discovery call and we will assess your situation.' },
-  { q: 'Can you handle integrations with custom or legacy systems?', a: 'Yes. We have built integrations with everything from modern REST APIs to legacy SOAP services and flat-file imports. If it has an API or data export, we can connect it to Salesforce.' },
-  { q: 'What is included in managed services?', a: 'A dedicated team handles admin support, bug fixes, new feature requests, Agentforce agent tuning, release management, and monthly health reports. Think of it as your outsourced Salesforce department.' },
+  { q: 'How do I know if I need a greenfield or brownfield implementation?', a: 'If you are deploying Salesforce or HubSpot for the first time, that is greenfield. If you already have an org or portal and want to improve, optimize, or add new capabilities, that is brownfield. Not sure? Book a discovery call and we will assess your situation.' },
+  { q: 'Do these services apply to HubSpot, or only Salesforce?', a: 'Both. Every service — greenfield, brownfield, integration, managed — covers Salesforce and HubSpot equally. We deliver across the full Salesforce stack (including Agentforce) and every HubSpot Hub (Marketing, Sales, Service, CMS, Operations, Breeze AI).' },
+  { q: 'Can you migrate us from Salesforce to HubSpot, or the other way?', a: 'Yes — both directions. Salesforce→HubSpot and HubSpot→Salesforce migrations are a standard offering, including data mapping, automation rebuild, integrations, and parallel-run testing. We also handle dual-stack setups where both platforms stay live and sync.' },
+  { q: 'Can you handle integrations with custom or legacy systems?', a: 'Yes. We have built integrations with everything from modern REST APIs to legacy SOAP services and flat-file imports. If it has an API or data export, we can connect it to Salesforce or HubSpot.' },
+  { q: 'What is included in managed services?', a: 'A dedicated team handles admin support, bug fixes, new feature requests, Agentforce/Breeze tuning, release management, and monthly health reports. Think of it as your outsourced CRM department.' },
   { q: 'How quickly can you start?', a: 'Most engagements kick off within 1-2 weeks of signing. Managed services can begin immediately. Every engagement starts with a free 30-minute discovery call to scope the work.' },
   { q: 'Do you offer fixed-price or time-and-materials?', a: 'Both. Greenfield and brownfield implementations are typically fixed-price after scoping. Integration projects can be either. Managed services are a monthly retainer based on hours and scope.' },
 ]
@@ -126,7 +128,7 @@ const serviceFaqs = [
 function Hero() {
   const stats = [
     { val: '250+', label: 'Projects Delivered' },
-    { val: '60+', label: 'Salesforce Certifications' },
+    { val: '60+', label: 'Salesforce & HubSpot Certs' },
     { val: '40+', label: 'Team Members' },
     { val: '100%', label: 'Project Success Rate' },
   ]
@@ -392,10 +394,10 @@ function ServiceSections() {
 function Comparison() {
   const cols = services.map(s => ({ id: s.id, title: s.title.split(' ')[0], color: s.color, gradient: s.gradient, icon: s.icon }))
   const rows = [
-    { label: 'Best for', icon: <Target className="w-4 h-4" />, values: ['New to Salesforce', 'Existing Salesforce org', 'Multi-system environments', 'Post go-live support'] },
+    { label: 'Best for', icon: <Target className="w-4 h-4" />, values: ['New to Salesforce/HubSpot', 'Existing org or portal', 'Multi-system environments', 'Post go-live support'] },
     { label: 'Timeline', icon: <Clock className="w-4 h-4" />, values: ['4-8 weeks', '3-6 weeks', '2-8 weeks', 'Ongoing'] },
     { label: 'Engagement', icon: <Layers className="w-4 h-4" />, values: ['Fixed price', 'Fixed price', 'Fixed or T&M', 'Monthly retainer'] },
-    { label: 'Agentforce', icon: <Zap className="w-4 h-4" />, values: ['Built-in', 'Added on', 'Connected', 'Monitored & tuned'] },
+    { label: 'AI agents', icon: <Zap className="w-4 h-4" />, values: ['Built-in', 'Added on', 'Connected', 'Monitored & tuned'] },
   ]
 
   return (

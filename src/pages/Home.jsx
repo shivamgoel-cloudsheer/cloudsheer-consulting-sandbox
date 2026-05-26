@@ -32,7 +32,7 @@ function Hero() {
           <div>
             <div className="tag-white inline-flex mb-8 animate-fade-up">
               <span className="w-1.5 h-1.5 rounded-full animate-pulse-slow" style={{ backgroundColor: '#F59E0B' }} />
-              Salesforce & Agentforce Implementation Partner
+              Salesforce, Agentforce &amp; HubSpot Implementation Partner
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl font-black leading-[1.05] mb-4 sm:mb-6 tracking-tight animate-fade-up-1 text-center md:text-left">
@@ -42,7 +42,7 @@ function Hero() {
 
             <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              Agentforce agents that work 24/7 across Slack, WhatsApp, voice, and every channel. Powered by Headless 360 and the Atlas Reasoning Engine.
+              AI-powered CRM across Salesforce and HubSpot — Agentforce agents that work 24/7 across every channel, and Breeze AI wired into your full HubSpot stack.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">
@@ -58,7 +58,7 @@ function Hero() {
               </Link>
             </div>
             <p className="text-xs mb-8 sm:mb-12 animate-fade-up-3 text-center md:text-left" style={{ color: 'rgba(186,220,255,0.55)' }}>
-              30-min call with a Salesforce architect. No pitch.
+              30-min call with a Salesforce or HubSpot architect. No pitch.
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-5 sm:gap-8 animate-fade-up-4">
@@ -614,7 +614,7 @@ function FAQ() {
     },
     {
       q: "How is Cloudsheer different from a large SI like Deloitte or Accenture?",
-      a: "We are a specialist Salesforce firm, not a generalist. Every consultant on our team works with Salesforce and Agentforce daily. You get senior architects on your project - not junior consultants learning on your dime. Our size means faster decisions, lower overhead, and direct access to leadership.",
+      a: "We are a specialist CRM firm, not a generalist. Every consultant on our team works with Salesforce, Agentforce, or HubSpot daily. You get senior architects on your project - not junior consultants learning on your dime. Our size means faster decisions, lower overhead, and direct access to leadership.",
     },
     {
       q: "What does pricing look like?",
@@ -633,12 +633,16 @@ function FAQ() {
       a: "It's a 30-minute video call with a Salesforce architect (not a sales rep). We will ask about your current setup, biggest pain points, and goals. You will leave with a clear picture of what's possible, a rough timeline, and an honest assessment of whether we are the right fit.",
     },
     {
-      q: "Can you handle large or multi-cloud projects?",
-      a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud. For larger engagements, we scale by bringing in certified specialists from our extended network. We have delivered multi-cloud implementations across Sales, Service, Marketing, and Experience Cloud simultaneously.",
+      q: "Can you handle large or multi-platform projects?",
+      a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud plus the full HubSpot stack (Marketing, Sales, Service, CMS, Operations Hub, and Breeze AI). For larger engagements, we scale by bringing in certified specialists from our extended network. We regularly run dual-stack engagements where Salesforce and HubSpot both live in production.",
+    },
+    {
+      q: "Do you work on HubSpot too, or only Salesforce?",
+      a: "Both. We deliver HubSpot implementations across every Hub, run Salesforce↔HubSpot migrations in either direction, and integrate the two when clients keep both. The Hub pages under Solutions cover the specifics.",
     },
     {
       q: "How do you handle data security and compliance?",
-      a: "All work is done within Salesforce's enterprise security framework (SOC 2 Type II, HIPAA-eligible, GDPR compliant). We follow Salesforce Well-Architected principles for data access, sharing rules, and encryption. For regulated industries, we have delivered Health Cloud implementations with full HIPAA compliance.",
+      a: "All work follows enterprise security standards — Salesforce's SOC 2 Type II / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption accordingly. For regulated industries we have delivered HIPAA-aligned Health Cloud implementations.",
     },
   ]
 
