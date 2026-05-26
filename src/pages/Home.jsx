@@ -4,6 +4,7 @@ import {
   ArrowRight, Bot, Zap, ShieldCheck, BarChart3,
   CheckCircle2, ChevronRight, Star, Users, TrendingUp,
   Sparkles, Clock, Settings, HelpCircle, ChevronDown, Award, Building2, UserCheck,
+  Headphones, Database, Megaphone, Globe,
 } from 'lucide-react'
 
 /* ─── Hero ─────────────────────────────────────────────────── */
@@ -301,47 +302,133 @@ function TrustedBy() {
   )
 }
 
-/* ─── Why Agentforce-first ──────────────────────────────────── */
+/* ─── What Changes When You Add AI to Your CRM ──────────────── */
 function WhyAgentforce() {
-  const points = [
-    { icon: <Clock className="w-5 h-5" />,      title: 'Headless 360',                desc: 'Every Salesforce capability is now an API, MCP tool, or CLI command. Build agents that work across Slack, WhatsApp, voice, and any channel.' },
-    { icon: <Zap className="w-5 h-5" />,         title: 'Agentforce Service Agent',    desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification. 78% deflection across every channel.' },
-    { icon: <ShieldCheck className="w-5 h-5" />, title: 'Einstein Trust Layer',        desc: 'Every agent action is grounded in your CRM data, logged, and auditable. Built-in guardrails prevent hallucination and unauthorized actions.' },
-    { icon: <BarChart3 className="w-5 h-5" />,   title: 'Agent Builder + Vibes 2.0',   desc: 'Configure Topics, Actions, and Instructions with natural language. Vibe-code with Claude Sonnet 4.5 and 60+ MCP tools.' },
-    { icon: <Users className="w-5 h-5" />,        title: 'Experience Layer',            desc: 'Build once, render everywhere. Same agent logic works natively across Slack, mobile, web, Teams, ChatGPT, and voice.' },
-    { icon: <Settings className="w-5 h-5" />,    title: 'Data Cloud Grounding',        desc: 'Agents access unified customer profiles from Data Cloud - real-time ingestion, identity resolution, and calculated insights.' },
+  const agentforcePoints = [
+    { icon: <Zap className="w-4 h-4" />,         title: 'Service Agent',          desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification.', metric: '78% deflection' },
+    { icon: <ShieldCheck className="w-4 h-4" />, title: 'Einstein Trust Layer',   desc: 'Every action grounded in your CRM data, logged, and auditable. Guardrails prevent hallucination.', metric: 'SOC 2 + audit' },
+    { icon: <Globe className="w-4 h-4" />,       title: 'Headless 360',           desc: 'Every Salesforce capability is now an API, MCP tool, or CLI command — agents work across any channel.', metric: 'Slack · voice · web' },
   ]
 
-  return (
-    <section className="py-16 sm:py-16 relative overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
-      <div className="glow-dot w-[500px] h-[500px] top-0 left-[-100px]"
-        style={{ backgroundColor: 'rgba(1,118,211,0.06)' }} />
-      <div className="section-wrap relative z-10">
-        <div className="max-w-3xl mb-10 sm:mb-10">
-          <div className="tag mb-5 animate-fade-up"><Sparkles className="w-3.5 h-3.5" /> Business Impact</div>
-          <h2 className="section-title mb-5 animate-fade-up-1">
-            What Changes When You<br />
-            <span className="gradient-text">Add Agentforce</span>
-          </h2>
-          <p className="section-sub animate-fade-up-2">
-            Your competitors are already automating support, sales, and operations
-            with Agentforce. Here is what it means for your bottom line.
-          </p>
+  const breezePoints = [
+    { icon: <Headphones className="w-4 h-4" />, title: 'Customer Agent',        desc: 'Resolves tier-1 tickets 24/7 against your HubSpot knowledge base with full human handoff.', metric: '40% deflection' },
+    { icon: <TrendingUp className="w-4 h-4" />, title: 'Prospecting Agent',     desc: 'Researches accounts, drafts personalized outreach, and books meetings into rep calendars autonomously.', metric: '3.4× meetings' },
+    { icon: <Database className="w-4 h-4" />,   title: 'Breeze Intelligence',   desc: 'Continuous firmographic enrichment, buyer intent signals, and fit scoring native to HubSpot.', metric: '92% record completeness' },
+  ]
+
+  const PlatformColumn = ({ platform, products, color, colorDark, points, badgeIcon: BadgeIcon, badgeLabel }) => (
+    <div className="rounded-3xl overflow-hidden h-full"
+      style={{ background: `linear-gradient(180deg, ${color}08 0%, transparent 100%)`, border: `1px solid ${color}20` }}>
+      {/* Header bar */}
+      <div className="px-6 py-4 flex items-center justify-between"
+        style={{ background: `linear-gradient(135deg, ${color}, ${colorDark})` }}>
+        <div className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center"
+            style={{ backgroundColor: 'rgba(255,255,255,0.20)', color: 'white' }}>
+            <BadgeIcon className="w-4 h-4" />
+          </div>
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              {badgeLabel}
+            </p>
+            <p className="text-base font-black text-white leading-tight">{platform}</p>
+          </div>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {points.map(({ icon, title, desc }, i) => (
-            <div key={title} className="glass-card p-6 group animate-fade-up"
-              style={{ animationDelay: `${i * 80}ms` }}>
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
-                style={{ backgroundColor: 'rgba(1,118,211,0.08)', border: '1px solid rgba(1,118,211,0.15)', color: '#0176D3' }}
-                onMouseEnter={e => { e.currentTarget.style.backgroundColor='#0176D3'; e.currentTarget.style.color='white'; }}
-                onMouseLeave={e => { e.currentTarget.style.backgroundColor='rgba(1,118,211,0.08)'; e.currentTarget.style.color='#0176D3'; }}>
+        <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
+          style={{ backgroundColor: 'rgba(255,255,255,0.18)', color: 'white' }}>
+          {products}
+        </span>
+      </div>
+
+      {/* Capability cards */}
+      <div className="p-5 space-y-3">
+        {points.map(({ icon, title, desc, metric }, i) => (
+          <div key={title} className="rounded-2xl p-4 transition-all duration-300 hover:-translate-y-0.5 animate-fade-up"
+            style={{ backgroundColor: 'white', border: `1px solid ${color}15`, boxShadow: `0 2px 12px ${color}08`, animationDelay: `${i * 80}ms` }}>
+            <div className="flex items-start gap-3">
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
+                style={{ backgroundColor: `${color}12`, color }}>
                 {icon}
               </div>
-              <h3 className="font-semibold mb-2" style={{ color: '#032D60' }}>{title}</h3>
-              <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <h4 className="font-bold text-sm leading-tight" style={{ color: '#032D60' }}>{title}</h4>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full whitespace-nowrap"
+                    style={{ color, backgroundColor: `${color}10`, border: `1px solid ${color}20` }}>
+                    {metric}
+                  </span>
+                </div>
+                <p className="text-xs leading-relaxed" style={{ color: '#64748B' }}>{desc}</p>
+              </div>
             </div>
-          ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+
+  return (
+    <section className="py-16 sm:py-20 relative overflow-hidden" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="glow-dot w-[500px] h-[500px] top-0 left-[-100px]"
+        style={{ backgroundColor: 'rgba(1,118,211,0.06)' }} />
+      <div className="glow-dot w-[500px] h-[500px] top-0 right-[-100px]"
+        style={{ backgroundColor: 'rgba(255,122,89,0.06)' }} />
+
+      <div className="section-wrap relative z-10">
+        {/* Section header */}
+        <div className="max-w-3xl mx-auto mb-10 sm:mb-12 text-center">
+          <div className="tag mx-auto mb-5 animate-fade-up"><Sparkles className="w-3.5 h-3.5" /> Business Impact</div>
+          <h2 className="section-title mb-5 animate-fade-up-1">
+            What Changes When You Add<br />
+            <span className="gradient-text">AI to Your CRM</span>
+          </h2>
+          <p className="section-sub animate-fade-up-2">
+            Whether you run Salesforce, HubSpot, or both — your competitors are already automating
+            support, sales, and prospecting. Here is what each platform brings to the table.
+          </p>
+        </div>
+
+        {/* Two-column platform split */}
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
+          <div className="animate-fade-up-2">
+            <PlatformColumn
+              platform="Agentforce"
+              products="On Salesforce"
+              color="#0176D3"
+              colorDark="#032D60"
+              points={agentforcePoints}
+              badgeIcon={Bot}
+              badgeLabel="Salesforce AI Layer"
+            />
+          </div>
+          <div className="animate-fade-up-3">
+            <PlatformColumn
+              platform="Breeze AI"
+              products="On HubSpot"
+              color="#FF7A59"
+              colorDark="#CC5535"
+              points={breezePoints}
+              badgeIcon={Sparkles}
+              badgeLabel="HubSpot AI Layer"
+            />
+          </div>
+        </div>
+
+        {/* Unifying message */}
+        <div className="max-w-3xl mx-auto text-center animate-fade-up">
+          <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#475569' }}>
+            <strong style={{ color: '#032D60' }}>Running both?</strong> We architect dual-stack environments where Agentforce handles enterprise sales and service while Breeze runs marketing and prospecting — kept in sync via Operations Hub data sync.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link to="/solutions/agentforce" className="btn-ghost text-sm"
+              style={{ color: '#0176D3', borderColor: 'rgba(1,118,211,0.30)' }}>
+              Explore Agentforce <ChevronRight className="w-4 h-4" />
+            </Link>
+            <Link to="/solutions/hubspot-breeze-ai" className="btn-ghost text-sm"
+              style={{ color: '#FF7A59', borderColor: 'rgba(255,122,89,0.30)' }}>
+              Explore Breeze AI <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>
