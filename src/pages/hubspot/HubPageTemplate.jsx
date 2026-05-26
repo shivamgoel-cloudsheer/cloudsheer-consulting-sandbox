@@ -39,7 +39,7 @@ export default function HubPageTemplate({ data }) {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-10 overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${HS_NAVY} 0%, #4A6075 55%, ${HS_ORANGE_DARK} 100%)` }}>
+        style={{ background: `linear-gradient(135deg, ${HS_NAVY} 0%, #4A6075 55%, ${HS_ORANGE} 100%)` }}>
         <div className="absolute inset-0 bg-grid-dark opacity-40" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
           style={{ backgroundColor: HS_ORANGE, opacity: 0.18 }} />
