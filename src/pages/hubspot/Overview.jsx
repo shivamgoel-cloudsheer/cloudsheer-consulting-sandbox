@@ -94,10 +94,12 @@ const overviewFaqs = [
 function PageHero() {
   return (
     <section className="relative pt-24 sm:pt-28 pb-10 sm:pb-14 overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${HS_NAVY} 0%, #4A6075 55%, ${HS_ORANGE} 100%)` }}>
-      <div className="absolute inset-0 bg-grid-dark opacity-40" />
-      <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-80px]"
-        style={{ backgroundColor: HS_ORANGE, opacity: 0.18 }} />
+      style={{ background: 'linear-gradient(135deg, #B8421C 0%, #E85A2E 35%, #FF7A59 70%, #FFA078 100%)' }}>
+      <div className="absolute inset-0 bg-grid-dark opacity-25" />
+      <div className="glow-dot w-[600px] h-[600px] top-[-200px] right-[-100px]"
+        style={{ backgroundColor: '#FFFFFF', opacity: 0.18 }} />
+      <div className="glow-dot w-[400px] h-[400px] bottom-[-100px] left-[-80px]"
+        style={{ backgroundColor: '#8B2A0B', opacity: 0.25 }} />
       <div className="section-wrap relative z-10 max-w-3xl mx-auto text-center">
         <div className="tag-white mx-auto mb-6 inline-flex">
           <Sparkles className="w-3.5 h-3.5" /> HubSpot Consulting &amp; Implementation
