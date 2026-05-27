@@ -118,7 +118,7 @@ const hubspotProducts = [
     label: 'HubSpot Overview',
     to: '/solutions/hubspot',
     icon: Globe,
-    desc: 'Full HubSpot stack — all hubs in one place',
+    desc: 'Full HubSpot stack - all hubs in one place',
     highlight: true,
     iconColor: '#FF7A59',
   },

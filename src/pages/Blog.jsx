@@ -373,7 +373,7 @@ export default function Blog() {
                   <span className="gradient-text-gold">Salesforce Said Couldn't Be Built</span>
                 </h2>
                 <p className="text-sm sm:text-base mb-6 max-w-xl" style={{ color: 'rgba(186,220,255,0.85)' }}>
-                  How Cloudsheer shipped a multi-agent Service Cloud architecture in 11 weeks that now resolves 92% of warranty cases autonomously — handling 12,000+ emails per month.
+                  How Cloudsheer shipped a multi-agent Service Cloud architecture in 11 weeks that now resolves 92% of warranty cases autonomously - handling 12,000+ emails per month.
                 </p>
                 <span className="inline-flex items-center gap-2 font-bold text-sm px-5 py-2.5 rounded-xl transition-all group-hover:gap-3"
                   style={{ backgroundColor: '#F59E0B', color: '#032D60' }}>

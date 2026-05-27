@@ -43,7 +43,7 @@ function Hero() {
 
             <p className="text-sm sm:text-base md:text-xl leading-relaxed mb-5 md:mb-10 max-w-lg animate-fade-up-2 text-center md:text-left"
               style={{ color: 'rgba(186,220,255,0.85)' }}>
-              AI-powered CRM across Salesforce and HubSpot — Agentforce agents that work 24/7 across every channel, and Breeze AI wired into your full HubSpot stack.
+              AI-powered CRM across Salesforce and HubSpot - Agentforce agents that work 24/7 across every channel, and Breeze AI wired into your full HubSpot stack.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-4 sm:mb-6 animate-fade-up-3">
@@ -307,7 +307,7 @@ function WhyAgentforce() {
   const agentforcePoints = [
     { icon: <Zap className="w-4 h-4" />,         title: 'Service Agent',          desc: 'Resolves Tier-1 cases autonomously using Knowledge Base and Einstein Case Classification.', metric: '78% deflection' },
     { icon: <ShieldCheck className="w-4 h-4" />, title: 'Einstein Trust Layer',   desc: 'Every action grounded in your CRM data, logged, and auditable. Guardrails prevent hallucination.', metric: 'SOC 2 + audit' },
-    { icon: <Globe className="w-4 h-4" />,       title: 'Headless 360',           desc: 'Every Salesforce capability is now an API, MCP tool, or CLI command — agents work across any channel.', metric: 'Slack · voice · web' },
+    { icon: <Globe className="w-4 h-4" />,       title: 'Headless 360',           desc: 'Every Salesforce capability is now an API, MCP tool, or CLI command - agents work across any channel.', metric: 'Slack · voice · web' },
   ]
 
   const breezePoints = [
@@ -383,7 +383,7 @@ function WhyAgentforce() {
             <span className="gradient-text">AI to Your CRM</span>
           </h2>
           <p className="section-sub animate-fade-up-2">
-            Whether you run Salesforce, HubSpot, or both — your competitors are already automating
+            Whether you run Salesforce, HubSpot, or both - your competitors are already automating
             support, sales, and prospecting. Here is what each platform brings to the table.
           </p>
         </div>
@@ -417,7 +417,7 @@ function WhyAgentforce() {
         {/* Unifying message */}
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
           <p className="text-sm sm:text-base leading-relaxed" style={{ color: '#475569' }}>
-            <strong style={{ color: '#032D60' }}>Running both?</strong> We architect dual-stack environments where Agentforce handles enterprise sales and service while Breeze runs marketing and prospecting — kept in sync via Operations Hub data sync.
+            <strong style={{ color: '#032D60' }}>Running both?</strong> We architect dual-stack environments where Agentforce handles enterprise sales and service while Breeze runs marketing and prospecting - kept in sync via Operations Hub data sync.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
             <Link to="/solutions/agentforce" className="btn-ghost text-sm"
@@ -729,7 +729,7 @@ function FAQ() {
     },
     {
       q: "How do you handle data security and compliance?",
-      a: "All work follows enterprise security standards — Salesforce's SOC 2 Type II / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption accordingly. For regulated industries we have delivered HIPAA-aligned Health Cloud implementations.",
+      a: "All work follows enterprise security standards - Salesforce's SOC 2 Type II / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption accordingly. For regulated industries we have delivered HIPAA-aligned Health Cloud implementations.",
     },
   ]
 

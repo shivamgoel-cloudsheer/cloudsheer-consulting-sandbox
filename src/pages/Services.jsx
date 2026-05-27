@@ -69,7 +69,7 @@ const services = [
     tagline: 'Connect everything. Break the silos.',
     color: '#059669',
     gradient: 'linear-gradient(135deg, #059669 0%, #34D399 100%)',
-    desc: 'Your CRM is most powerful when it talks to your other systems. We build reliable, scalable integrations between Salesforce, HubSpot, your ERP, marketing tools, payment platforms, data warehouses, and custom applications — including Salesforce↔HubSpot two-way sync for dual-stack teams.',
+    desc: 'Your CRM is most powerful when it talks to your other systems. We build reliable, scalable integrations between Salesforce, HubSpot, your ERP, marketing tools, payment platforms, data warehouses, and custom applications - including Salesforce↔HubSpot two-way sync for dual-stack teams.',
     benefits: [
       'API-led connectivity using MuleSoft, native Salesforce APIs, or HubSpot Operations Hub data sync',
       'ERP integrations - SAP, NetSuite, Microsoft Dynamics, QuickBooks',
@@ -116,8 +116,8 @@ const services = [
 
 const serviceFaqs = [
   { q: 'How do I know if I need a greenfield or brownfield implementation?', a: 'If you are deploying Salesforce or HubSpot for the first time, that is greenfield. If you already have an org or portal and want to improve, optimize, or add new capabilities, that is brownfield. Not sure? Book a discovery call and we will assess your situation.' },
-  { q: 'Do these services apply to HubSpot, or only Salesforce?', a: 'Both. Every service — greenfield, brownfield, integration, managed — covers Salesforce and HubSpot equally. We deliver across the full Salesforce stack (including Agentforce) and every HubSpot Hub (Marketing, Sales, Service, CMS, Operations, Breeze AI).' },
-  { q: 'Can you migrate us from Salesforce to HubSpot, or the other way?', a: 'Yes — both directions. Salesforce→HubSpot and HubSpot→Salesforce migrations are a standard offering, including data mapping, automation rebuild, integrations, and parallel-run testing. We also handle dual-stack setups where both platforms stay live and sync.' },
+  { q: 'Do these services apply to HubSpot, or only Salesforce?', a: 'Both. Every service - greenfield, brownfield, integration, managed - covers Salesforce and HubSpot equally. We deliver across the full Salesforce stack (including Agentforce) and every HubSpot Hub (Marketing, Sales, Service, CMS, Operations, Breeze AI).' },
+  { q: 'Can you migrate us from Salesforce to HubSpot, or the other way?', a: 'Yes - both directions. Salesforce→HubSpot and HubSpot→Salesforce migrations are a standard offering, including data mapping, automation rebuild, integrations, and parallel-run testing. We also handle dual-stack setups where both platforms stay live and sync.' },
   { q: 'Can you handle integrations with custom or legacy systems?', a: 'Yes. We have built integrations with everything from modern REST APIs to legacy SOAP services and flat-file imports. If it has an API or data export, we can connect it to Salesforce or HubSpot.' },
   { q: 'What is included in managed services?', a: 'A dedicated team handles admin support, bug fixes, new feature requests, Agentforce/Breeze tuning, release management, and monthly health reports. Think of it as your outsourced CRM department.' },
   { q: 'How quickly can you start?', a: 'Most engagements kick off within 1-2 weeks of signing. Managed services can begin immediately. Every engagement starts with a free 30-minute discovery call to scope the work.' },

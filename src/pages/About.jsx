@@ -16,14 +16,14 @@ const values = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'AI-First Thinking',        desc: 'Every engagement starts by asking: where can Agentforce or Breeze AI create the most value? We are built around this question.' },
   { icon: <Award className="w-5 h-5" />,    title: 'Excellence',               desc: 'We hold ourselves to the highest standard - in our code quality, solution design, and client communication.' },
   { icon: <Heart className="w-5 h-5" />,    title: 'True Partnership',         desc: 'We invest in long-term relationships, not one-off projects. Your success is the only metric we care about.' },
-  { icon: <Lightbulb className="w-5 h-5" />,title: 'Relentless Innovation',    desc: 'We stay at the frontier of Salesforce, Agentforce, and HubSpot — bringing the latest capabilities to our clients first.' },
+  { icon: <Lightbulb className="w-5 h-5" />,title: 'Relentless Innovation',    desc: 'We stay at the frontier of Salesforce, Agentforce, and HubSpot - bringing the latest capabilities to our clients first.' },
   { icon: <Users className="w-5 h-5" />,    title: 'People-First AI',          desc: 'AI should empower people, not replace them. We design every agent and automation to make your team more effective.' },
 ]
 
 const capabilities = [
   { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce & Breeze AI', desc: 'Deploy autonomous agents in Salesforce (Agentforce) or HubSpot (Breeze) that handle support, sales, and operations 24/7.' },
-  { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',  desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics — all connected.' },
-  { icon: <Users className="w-5 h-5" />,    title: 'Full HubSpot Stack',     desc: 'Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, plus Breeze AI — implementation and migration.' },
+  { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',  desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics - all connected.' },
+  { icon: <Users className="w-5 h-5" />,    title: 'Full HubSpot Stack',     desc: 'Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, plus Breeze AI - implementation and migration.' },
   { icon: <Heart className="w-5 h-5" />,    title: 'Strategy & Optimization', desc: 'From greenfield builds to ongoing managed services. Discovery to launch in 4-6 weeks, with measurable ROI from day one.' },
 ]
 
@@ -125,7 +125,7 @@ export default function About() {
             </h2>
             <p className="section-sub">
               We help businesses cut costs, close more deals, and scale operations across
-              Salesforce, Agentforce, and HubSpot — from strategy to deployment to ongoing optimization.
+              Salesforce, Agentforce, and HubSpot - from strategy to deployment to ongoing optimization.
             </p>
           </div>
 
@@ -168,10 +168,10 @@ export default function About() {
               </h2>
               <p className="section-sub mb-6">
                 60+ certifications across Salesforce, Agentforce, and HubSpot. 10 Salesforce clouds.
-                Every HubSpot Hub. 4 offices. Every project gets a senior architect — not a junior learning on your org.
+                Every HubSpot Hub. 4 offices. Every project gets a senior architect - not a junior learning on your org.
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
-                Our team has delivered across financial services, retail, healthcare, SaaS, and manufacturing —
+                Our team has delivered across financial services, retail, healthcare, SaaS, and manufacturing -
                 on Salesforce, HubSpot, or both. That cross-industry, cross-platform experience means we bring
                 proven patterns to your project instead of figuring it out as we go.
               </p>
@@ -230,7 +230,7 @@ export default function About() {
             </div>
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
-              40+ experts across Dallas, Delhi, London, and New York — united by a shared passion
+              40+ experts across Dallas, Delhi, London, and New York - united by a shared passion
               for Salesforce, Agentforce, HubSpot, and delivering outcomes that matter.
             </p>
           </div>

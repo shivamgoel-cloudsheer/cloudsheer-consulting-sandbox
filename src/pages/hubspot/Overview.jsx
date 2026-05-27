@@ -20,7 +20,7 @@ const hubs = [
     to: '/solutions/hubspot-marketing-hub',
     icon: Megaphone,
     title: 'Marketing Hub',
-    desc: 'Campaigns, workflows, lead scoring, and attribution reporting — wired into Breeze AI for content, copy, and segment generation.',
+    desc: 'Campaigns, workflows, lead scoring, and attribution reporting - wired into Breeze AI for content, copy, and segment generation.',
     tags: ['Campaigns', 'Workflows', 'Attribution', 'Breeze Content'],
   },
   {
@@ -41,7 +41,7 @@ const hubs = [
     to: '/solutions/hubspot-cms-hub',
     icon: FileText,
     title: 'CMS Hub',
-    desc: 'Custom themes, modules, memberships, multi-language sites, and SEO-optimized pages — all connected to your HubSpot CRM out of the box.',
+    desc: 'Custom themes, modules, memberships, multi-language sites, and SEO-optimized pages - all connected to your HubSpot CRM out of the box.',
     tags: ['Themes', 'Modules', 'Memberships', 'SEO'],
   },
   {
@@ -62,9 +62,9 @@ const hubs = [
 ]
 
 const services = [
-  { icon: Globe,     title: 'Greenfield HubSpot',      desc: 'New HubSpot portal designed around your funnel from day one — objects, pipelines, automation, integrations.' },
+  { icon: Globe,     title: 'Greenfield HubSpot',      desc: 'New HubSpot portal designed around your funnel from day one - objects, pipelines, automation, integrations.' },
   { icon: RefreshCw, title: 'Salesforce → HubSpot',   desc: 'Migration with full data mapping, automation rebuild, integration reconnection, and parallel-run validation.' },
-  { icon: Sparkles,  title: 'Brownfield Optimization', desc: 'Audit and rework existing HubSpot portals — clean lists, fix workflows, restructure deal stages, layer on Breeze AI.' },
+  { icon: Sparkles,  title: 'Brownfield Optimization', desc: 'Audit and rework existing HubSpot portals - clean lists, fix workflows, restructure deal stages, layer on Breeze AI.' },
   { icon: TrendingUp,title: 'Dual-Stack Integration',  desc: 'Two-way Salesforce↔HubSpot sync via Operations Hub with field mapping, conflict rules, and observability.' },
 ]
 
@@ -79,7 +79,7 @@ const overviewFaqs = [
   },
   {
     q: 'Can you migrate us from Salesforce to HubSpot?',
-    a: 'Yes — and the reverse. Standard scope covers data migration (contacts, companies, deals, custom objects, activities, attachments), automation rebuild, integration reconnection, user permissions, and a parallel-run window where both systems are live before final cutover.',
+    a: 'Yes - and the reverse. Standard scope covers data migration (contacts, companies, deals, custom objects, activities, attachments), automation rebuild, integration reconnection, user permissions, and a parallel-run window where both systems are live before final cutover.',
   },
   {
     q: 'How long does a HubSpot implementation take?',
@@ -110,7 +110,7 @@ function PageHero() {
         </h1>
         <p className="text-base sm:text-lg leading-relaxed mb-6 animate-fade-up-1"
           style={{ color: 'rgba(255,222,210,0.92)' }}>
-          End-to-end implementation, migration, and managed services across every HubSpot Hub —
+          End-to-end implementation, migration, and managed services across every HubSpot Hub -
           Marketing, Sales, Service, CMS, Operations, and Breeze AI. Plus Salesforce↔HubSpot migrations and dual-stack integrations.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-up-2">
@@ -208,10 +208,10 @@ function ServiceModel() {
 
 function WhyUs() {
   const reasons = [
-    { title: 'CRM-Native, Not Marketing-Agency-Trained', desc: "We do not bolt HubSpot onto a content shop. Our team treats HubSpot like the relational CRM it is — modeling deals, custom objects, and lifecycle stages around how your business actually operates." },
+    { title: 'CRM-Native, Not Marketing-Agency-Trained', desc: "We do not bolt HubSpot onto a content shop. Our team treats HubSpot like the relational CRM it is - modeling deals, custom objects, and lifecycle stages around how your business actually operates." },
     { title: 'Cross-Platform Fluency Most Partners Lack', desc: 'Salesforce-and-HubSpot consultancies are rare. We run both daily, which makes us the right partner for migrations, dual-stack ops, and Operations Hub sync work no single-platform shop can do well.' },
     { title: 'Senior Architects, Not Junior Consultants', desc: 'Every engagement gets an architect who owns the build end-to-end. No layered handoffs, no junior implementers learning HubSpot on your portal.' },
-    { title: 'Breeze AI From Day One', desc: 'Every implementation we ship is Breeze-ready. Copilot, Agents, and Intelligence enrichment are scoped into the build — not deferred to a future phase.' },
+    { title: 'Breeze AI From Day One', desc: 'Every implementation we ship is Breeze-ready. Copilot, Agents, and Intelligence enrichment are scoped into the build - not deferred to a future phase.' },
   ]
 
   return (
@@ -247,12 +247,12 @@ function WhyUs() {
 function FinalCTA() {
   return (
     <section className="py-14 sm:py-16 relative overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #4A1F0E 0%, #8B3820 50%, #B8421C 100%)' }}>
-      <div className="absolute inset-0 bg-grid-dark opacity-20" />
+      style={{ background: 'linear-gradient(135deg, #B8421C 0%, #E85A2E 50%, #FF7A59 100%)' }}>
+      <div className="absolute inset-0 bg-grid-dark opacity-15" />
       <div className="glow-dot w-[600px] h-[600px] top-[-150px] left-[50%] -translate-x-1/2"
-        style={{ backgroundColor: '#FF7A59', opacity: 0.30 }} />
+        style={{ backgroundColor: '#FFA078', opacity: 0.25 }} />
       <div className="glow-dot w-[350px] h-[350px] bottom-[-100px] right-[-50px]"
-        style={{ backgroundColor: '#FFFFFF', opacity: 0.06 }} />
+        style={{ backgroundColor: '#FFFFFF', opacity: 0.10 }} />
       <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
         <div className="tag-white mx-auto mb-6 inline-flex">
           <Sparkles className="w-3.5 h-3.5" /> Free HubSpot Discovery Call
@@ -262,7 +262,7 @@ function FinalCTA() {
           <span className="gradient-text-gold">HubSpot Setup or Migration</span>
         </h2>
         <p className="text-lg mb-4" style={{ color: 'rgba(255,222,210,0.88)' }}>
-          We will audit your current portal (or your destination requirements), identify the highest-impact moves, and give you a clear scope — at no cost.
+          We will audit your current portal (or your destination requirements), identify the highest-impact moves, and give you a clear scope - at no cost.
         </p>
         <ul className="flex flex-col sm:flex-row gap-3 justify-center mb-10 text-sm"
           style={{ color: 'rgba(255,222,210,0.85)' }}>
@@ -282,7 +282,7 @@ function FinalCTA() {
 }
 
 const overviewWhatWeShip = [
-  { icon: Globe,     title: 'Greenfield HubSpot builds',  desc: 'Portal designed around your funnel from day one — objects, pipelines, automation, integrations.' },
+  { icon: Globe,     title: 'Greenfield HubSpot builds',  desc: 'Portal designed around your funnel from day one - objects, pipelines, automation, integrations.' },
   { icon: RefreshCw, title: 'Salesforce ↔ HubSpot migrations', desc: 'Data mapping, automation rebuild, integration reconnection, and parallel-run validation either direction.' },
   { icon: Bot,       title: 'Breeze AI activation',       desc: 'Copilot, Agents, and Intelligence enrichment configured against your brand voice from day one.' },
   { icon: Workflow,  title: 'Dual-stack integration',     desc: 'Two-way Salesforce↔HubSpot sync via Operations Hub with field mapping and conflict rules.' },

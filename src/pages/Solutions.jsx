@@ -10,7 +10,7 @@ import FAQ from '../components/FAQ'
 import { addPageSchema, faqPageSchema } from '../seoConfig'
 
 const solutionFaqs = [
-  { q: 'Which platform should I start with — Salesforce or HubSpot?', a: 'It depends on team size, complexity, and existing investment. Mid-market and enterprise teams with complex workflows usually fit Salesforce; SMB and product-led-growth teams usually fit HubSpot. We assess on the discovery call. Many clients run both — Salesforce for enterprise sales/service, HubSpot for marketing — and we set up Operations Hub sync between them.' },
+  { q: 'Which platform should I start with - Salesforce or HubSpot?', a: 'It depends on team size, complexity, and existing investment. Mid-market and enterprise teams with complex workflows usually fit Salesforce; SMB and product-led-growth teams usually fit HubSpot. We assess on the discovery call. Many clients run both - Salesforce for enterprise sales/service, HubSpot for marketing - and we set up Operations Hub sync between them.' },
   { q: 'Which Salesforce cloud should I start with?', a: 'It depends on your biggest pain point. If support costs are high, start with Service Cloud + Agentforce. If leads are going cold, Sales Cloud + Agentforce SDR Agent. Book a discovery call and we will recommend based on your data.' },
   { q: 'Can you implement multiple clouds or hubs at once?', a: 'Yes. We regularly deliver multi-cloud Salesforce implementations (Sales + Service + Marketing) and multi-hub HubSpot bundles (Marketing + Sales + Service). Our team of 40+ covers every major Salesforce cloud and every HubSpot Hub.' },
   { q: 'How long does a typical implementation take?', a: 'Salesforce: Agentforce agents 3-6 weeks, single cloud 4-8 weeks, multi-cloud 8-16 weeks. HubSpot: single Hub 3-5 weeks, multi-Hub bundle 6-10 weeks, full stack 10-14 weeks. Every project starts with a scoped timeline during the discovery call.' },
@@ -80,7 +80,7 @@ function AgentforceHero() {
           <h1 className="section-title mb-4">
             CRM Solutions for <span className="gradient-text">Every Cloud and Hub</span>
           </h1>
-          <p className="section-sub">Every Salesforce cloud, every HubSpot Hub, plus AI agents from Agentforce and Breeze — each built to solve a specific business problem.</p>
+          <p className="section-sub">Every Salesforce cloud, every HubSpot Hub, plus AI agents from Agentforce and Breeze - each built to solve a specific business problem.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {agents.map(({ name, icon, metric, metricColor, border, features }) => (
@@ -240,11 +240,11 @@ function IndustryClouds() {
 
 const hubspotHubs = [
   { icon: <Globe className="w-6 h-6" />,     to: '/solutions/hubspot',                    title: 'HubSpot Overview',     desc: 'End-to-end HubSpot implementation, migration, and managed services. The full stack in one place.',                                              tags: ['Full Stack', 'Migration', 'Managed'] },
-  { icon: <Sparkles className="w-6 h-6" />,  to: '/solutions/hubspot-breeze-ai',          title: 'Breeze AI',            desc: 'Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment — wired across the whole HubSpot stack.', tags: ['Copilot', 'Agents', 'Intelligence'] },
+  { icon: <Sparkles className="w-6 h-6" />,  to: '/solutions/hubspot-breeze-ai',          title: 'Breeze AI',            desc: 'Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment - wired across the whole HubSpot stack.', tags: ['Copilot', 'Agents', 'Intelligence'] },
   { icon: <Megaphone className="w-6 h-6" />, to: '/solutions/hubspot-marketing-hub',      title: 'Marketing Hub',        desc: 'Campaigns, workflows, lead scoring, and multi-touch attribution. Built around your funnel, not a template.',                                    tags: ['Campaigns', 'Attribution', 'Workflows'] },
   { icon: <TrendingUp className="w-6 h-6" />,to: '/solutions/hubspot-sales-hub',          title: 'Sales Hub',            desc: 'Custom deal stages, sequences, forecasting, prospecting workspace, and Breeze AI lead scoring. Ramp reps in weeks.',                            tags: ['Pipeline', 'Sequences', 'Forecasting'] },
   { icon: <Headphones className="w-6 h-6" />,to: '/solutions/hubspot-service-hub',        title: 'Service Hub',          desc: 'Ticketing, customer portal, knowledge base, SLA automation, surveys, and the Breeze customer agent for 24/7 deflection.',                       tags: ['Tickets', 'Portal', 'Customer Agent'] },
-  { icon: <FileText className="w-6 h-6" />,  to: '/solutions/hubspot-cms-hub',            title: 'CMS Hub',              desc: 'Custom themes, modules, memberships, multi-language sites, and SEO-optimized pages — all connected to HubSpot CRM out of the box.',           tags: ['Themes', 'Memberships', 'SEO'] },
+  { icon: <FileText className="w-6 h-6" />,  to: '/solutions/hubspot-cms-hub',            title: 'CMS Hub',              desc: 'Custom themes, modules, memberships, multi-language sites, and SEO-optimized pages - all connected to HubSpot CRM out of the box.',           tags: ['Themes', 'Memberships', 'SEO'] },
   { icon: <Workflow className="w-6 h-6" />,  to: '/solutions/hubspot-operations-hub',     title: 'Operations Hub',       desc: 'Programmable automation, two-way data sync (Salesforce, NetSuite, Shopify), data quality automation, custom datasets, warehouse integration.', tags: ['Data Sync', 'Programmable', 'Datasets'] },
 ]
 
@@ -260,7 +260,7 @@ function HubSpotHubs() {
             The Full HubSpot Stack <span style={{ background: 'linear-gradient(135deg, #FF7A59, #CC5535)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Under One Roof</span>
           </h2>
           <p className="section-sub">
-            Every Hub — Marketing, Sales, Service, CMS, Operations — plus the Breeze AI layer. Implementation, migration, and managed services.
+            Every Hub - Marketing, Sales, Service, CMS, Operations - plus the Breeze AI layer. Implementation, migration, and managed services.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

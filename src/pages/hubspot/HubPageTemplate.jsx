@@ -12,8 +12,8 @@ const HS_NAVY        = '#33475B'
 const HS_BG_TINT     = '#FFF4F0'
 
 // Page skeleton shared across all HubSpot Hub detail pages. Each hub passes
-// `data` matching the shape used in SalesCloud.jsx — pain points, outcomes,
-// capabilities, process, whyUs — plus hero copy and an optional tag icon.
+// `data` matching the shape used in SalesCloud.jsx - pain points, outcomes,
+// capabilities, process, whyUs - plus hero copy and an optional tag icon.
 export default function HubPageTemplate({ data }) {
   const {
     tagIcon: TagIcon,
@@ -107,12 +107,12 @@ export default function HubPageTemplate({ data }) {
 
       {/* ── Outcomes ─────────────────────────────────────────── */}
       <section className="py-12 sm:py-16 relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #3D1A0A 0%, #6B2A12 50%, #8B3820 100%)' }}>
-        <div className="absolute inset-0 bg-grid-dark opacity-20" />
+        style={{ background: 'linear-gradient(135deg, #CC5535 0%, #E85A2E 50%, #FF7A59 100%)' }}>
+        <div className="absolute inset-0 bg-grid-dark opacity-15" />
         <div className="glow-dot w-[500px] h-[500px] top-[-150px] right-[-100px]"
-          style={{ backgroundColor: '#FF7A59', opacity: 0.15 }} />
+          style={{ backgroundColor: '#FFFFFF', opacity: 0.12 }} />
         <div className="glow-dot w-[400px] h-[400px] bottom-[-120px] left-[-80px]"
-          style={{ backgroundColor: '#FFA078', opacity: 0.08 }} />
+          style={{ backgroundColor: '#B8421C', opacity: 0.20 }} />
         <div className="section-wrap relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag-white mx-auto mb-5">Proven Business Outcomes</div>
@@ -160,7 +160,7 @@ export default function HubPageTemplate({ data }) {
               Live in Weeks, <span style={{ background: `linear-gradient(135deg, ${HS_ORANGE}, ${HS_ORANGE_DARK})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Not Months</span>
             </h2>
             <p className="section-sub">
-              A structured, four-step delivery that gets your team on HubSpot fast — without the chaos of a typical migration project.
+              A structured, four-step delivery that gets your team on HubSpot fast - without the chaos of a typical migration project.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -211,12 +211,12 @@ export default function HubPageTemplate({ data }) {
 
       {/* ── Final CTA ────────────────────────────────────────── */}
       <section className="py-14 sm:py-16 relative overflow-hidden"
-        style={{ background: 'linear-gradient(135deg, #4A1F0E 0%, #8B3820 50%, #B8421C 100%)' }}>
-        <div className="absolute inset-0 bg-grid-dark opacity-20" />
+        style={{ background: 'linear-gradient(135deg, #B8421C 0%, #E85A2E 50%, #FF7A59 100%)' }}>
+        <div className="absolute inset-0 bg-grid-dark opacity-15" />
         <div className="glow-dot w-[600px] h-[600px] top-[-150px] left-[50%] -translate-x-1/2"
-          style={{ backgroundColor: '#FF7A59', opacity: 0.30 }} />
+          style={{ backgroundColor: '#FFA078', opacity: 0.25 }} />
         <div className="glow-dot w-[350px] h-[350px] bottom-[-100px] right-[-50px]"
-          style={{ backgroundColor: '#FFFFFF', opacity: 0.06 }} />
+          style={{ backgroundColor: '#FFFFFF', opacity: 0.10 }} />
         <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
           <div className="tag-white mx-auto mb-6 inline-flex">
             {TagIcon && <TagIcon className="w-3.5 h-3.5" />} Free HubSpot Scoping Call

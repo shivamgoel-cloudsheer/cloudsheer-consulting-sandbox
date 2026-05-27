@@ -7,7 +7,7 @@ import { addPageSchema, faqPageSchema } from '../../seoConfig'
 import HubPageTemplate from './HubPageTemplate'
 
 const faqs = [
-  { q: 'Do we need Marketing Hub Pro or Enterprise?', a: 'Pro covers most teams: workflows, custom reporting, A/B testing, blog/SEO tools, and Breeze content. Enterprise adds advanced permissions, multi-touch revenue attribution, sandbox environments, and custom objects in marketing assets — relevant for $50M+ companies or compliance-heavy sectors.' },
+  { q: 'Do we need Marketing Hub Pro or Enterprise?', a: 'Pro covers most teams: workflows, custom reporting, A/B testing, blog/SEO tools, and Breeze content. Enterprise adds advanced permissions, multi-touch revenue attribution, sandbox environments, and custom objects in marketing assets - relevant for $50M+ companies or compliance-heavy sectors.' },
   { q: 'Will you migrate our existing campaigns from Marketo or Pardot?', a: 'Yes. Standard migration covers email templates, automation workflows, lead-scoring models, list segments, custom fields, and historical engagement data. Parallel-run validation runs before final cutover.' },
   { q: 'How does Breeze AI fit into Marketing Hub?', a: 'Breeze powers content generation (blog drafts, email copy, social posts, ad copy), audience segmentation suggestions, and campaign performance summaries. Setup is included in every Marketing Hub engagement.' },
 ]
@@ -17,13 +17,13 @@ const data = {
   tagLabel: 'HubSpot Marketing Hub',
   headlineTop: 'Campaigns That Convert.',
   headlineGold: 'Attribution You Can Trust.',
-  subhead: 'HubSpot Marketing Hub built around your funnel — campaigns, automation, lead scoring, and revenue attribution wired into Breeze AI for content and audience generation.',
+  subhead: 'HubSpot Marketing Hub built around your funnel - campaigns, automation, lead scoring, and revenue attribution wired into Breeze AI for content and audience generation.',
   ctaLabel: 'Scope My Marketing Hub Build',
   platformName: 'Marketing Hub',
   painPoints: [
     { pain: 'Marketing claims credit for revenue Sales says came from outbound', fix: '<strong>Multi-touch revenue attribution</strong> ties every dollar back to the campaigns that actually drove it' },
     { pain: 'Workflows are a tangled mess no one wants to touch', fix: '<strong>Workflow audit + rebuild</strong> with proper naming, branching, and observability' },
-    { pain: 'Lead scoring is guesswork and reps ignore the scores', fix: '<strong>Predictive lead scoring</strong> trained on closed-won deals — reps trust the rankings' },
+    { pain: 'Lead scoring is guesswork and reps ignore the scores', fix: '<strong>Predictive lead scoring</strong> trained on closed-won deals - reps trust the rankings' },
     { pain: 'Content production is the bottleneck on every campaign', fix: '<strong>Breeze Content Agent</strong> generates blog drafts, emails, and social copy on-brand' },
     { pain: 'Email engagement is flat and unsubscribes keep climbing', fix: '<strong>List segmentation rebuild</strong> with engagement-based suppression and re-engagement journeys' },
     { pain: 'Marketing reports do not match what leadership wants to see', fix: '<strong>Custom report builder</strong> dashboards mapped to your KPIs, refreshed in real time' },
@@ -39,24 +39,24 @@ const data = {
   whatWeShip: [
     { icon: Workflow,   title: 'Campaign + workflow architecture', desc: 'Campaigns tied to revenue goals, workflows with branching, A/B testing, and lifecycle automation.' },
     { icon: Target,     title: 'Predictive lead scoring',          desc: 'Models trained on your closed-won deals, with routing, SLA tracking, and lifecycle handoffs.' },
-    { icon: Sparkles,   title: 'Breeze AI for marketing',          desc: 'Content, Social, and Copilot agents tuned to your brand voice — not generic AI output.' },
+    { icon: Sparkles,   title: 'Breeze AI for marketing',          desc: 'Content, Social, and Copilot agents tuned to your brand voice - not generic AI output.' },
     { icon: BarChart2,  title: 'Multi-touch attribution',          desc: 'First-touch, last-touch, and U-shaped attribution with funnel reports the board will trust.' },
   ],
   process: [
-    { num: '01', title: 'Funnel & Persona Discovery', desc: "We map your actual funnel — ICP, personas, lifecycle stages, scoring criteria, and the campaigns that have historically driven pipeline — before configuring a single workflow." },
+    { num: '01', title: 'Funnel & Persona Discovery', desc: "We map your actual funnel - ICP, personas, lifecycle stages, scoring criteria, and the campaigns that have historically driven pipeline - before configuring a single workflow." },
     { num: '02', title: 'Hub Build & Migration',      desc: "Properties, lists, workflows, lead scoring, email templates, and campaign structure. If you're migrating from Marketo, Pardot, or Mailchimp, we move templates, automations, and engagement history with parallel-run validation." },
     { num: '03', title: 'Breeze AI Activation',       desc: "Breeze Copilot, Content Agent, and Social Agent configured against your brand voice and asset library. Reps and marketers trained on prompts that produce ship-ready output, not generic AI slop." },
     { num: '04', title: 'Attribution & Hypercare',    desc: "Multi-touch attribution wired up, dashboards built around your KPIs, and a hypercare window to fix anything that breaks in the first 30 days of live traffic." },
   ],
   whyUs: [
-    { title: 'We Treat HubSpot Like the CRM It Is',         desc: 'Most agencies treat Marketing Hub as a glorified email tool. We architect it like a CRM — modeling deals, custom objects, and revenue flow so attribution actually works.' },
-    { title: 'Breeze AI Goes Live With the Hub, Not Later', desc: 'Every Marketing Hub we deliver ships with Breeze Content, Social, and Copilot configured against your brand voice — not deferred to a phase-two roadmap that never happens.' },
-    { title: 'Migrations That Preserve Engagement History', desc: "Moving off Marketo or Pardot? We bring over open/click history, score history, and workflow membership — not just contact lists. Your re-engagement campaigns keep working on day one." },
+    { title: 'We Treat HubSpot Like the CRM It Is',         desc: 'Most agencies treat Marketing Hub as a glorified email tool. We architect it like a CRM - modeling deals, custom objects, and revenue flow so attribution actually works.' },
+    { title: 'Breeze AI Goes Live With the Hub, Not Later', desc: 'Every Marketing Hub we deliver ships with Breeze Content, Social, and Copilot configured against your brand voice - not deferred to a phase-two roadmap that never happens.' },
+    { title: 'Migrations That Preserve Engagement History', desc: "Moving off Marketo or Pardot? We bring over open/click history, score history, and workflow membership - not just contact lists. Your re-engagement campaigns keep working on day one." },
     { title: 'We Stay Until the Pipeline Moves',            desc: "Marketing Hub is judged on MQLs and revenue, not features shipped. We stay engaged through hypercare and beyond until those numbers move." },
   ],
   finalCtaHeadlineTop: 'Ready to Turn Marketing Hub Into a',
   finalCtaHeadlineGold: 'Real Revenue Engine?',
-  finalCtaBody: 'In 30 minutes we will audit your current setup (or scope your migration), show you where Marketing Hub will move the needle on pipeline, and hand you a clear implementation roadmap — at no cost.',
+  finalCtaBody: 'In 30 minutes we will audit your current setup (or scope your migration), show you where Marketing Hub will move the needle on pipeline, and hand you a clear implementation roadmap - at no cost.',
   finalCtaChecklist: ['Funnel audit included', 'Migration scoping if relevant', 'No obligation whatsoever'],
   finalCtaButton: 'Book My Free Marketing Hub Call',
 }

@@ -6,9 +6,9 @@ import { addPageSchema, faqPageSchema } from '../../seoConfig'
 import HubPageTemplate from './HubPageTemplate'
 
 const faqs = [
-  { q: 'What does Operations Hub actually do?', a: 'Three core things: (1) two-way data sync between HubSpot and other systems (Salesforce, NetSuite, Shopify, custom apps) with field mapping and conflict rules; (2) programmable automation via custom-coded actions in workflows; (3) data quality automation — formatting, deduplication, and validation rules at the property level.' },
+  { q: 'What does Operations Hub actually do?', a: 'Three core things: (1) two-way data sync between HubSpot and other systems (Salesforce, NetSuite, Shopify, custom apps) with field mapping and conflict rules; (2) programmable automation via custom-coded actions in workflows; (3) data quality automation - formatting, deduplication, and validation rules at the property level.' },
   { q: 'Do I need Operations Hub if I already use Zapier?', a: 'Zapier handles point-to-point triggers but breaks at scale, has unpredictable costs at high volume, and offers limited error handling. Operations Hub data sync is purpose-built for CRM use cases, scales to millions of records, and has audit trails Zapier does not. We commonly migrate clients off Zapier when complexity grows.' },
-  { q: 'Can you build custom-coded actions in workflows?', a: 'Yes. Custom-coded actions run JavaScript inside HubSpot workflows — for API calls, complex calculations, or business logic that native actions cannot handle. Operations Hub Professional and Enterprise required.' },
+  { q: 'Can you build custom-coded actions in workflows?', a: 'Yes. Custom-coded actions run JavaScript inside HubSpot workflows - for API calls, complex calculations, or business logic that native actions cannot handle. Operations Hub Professional and Enterprise required.' },
 ]
 
 const data = {
@@ -16,11 +16,11 @@ const data = {
   tagLabel: 'HubSpot Operations Hub',
   headlineTop: 'Sync Without Spaghetti.',
   headlineGold: 'Automate Without Limits.',
-  subhead: 'HubSpot Operations Hub deployments — programmable automation, two-way data sync, data quality automation, custom datasets, and warehouse integration.',
+  subhead: 'HubSpot Operations Hub deployments - programmable automation, two-way data sync, data quality automation, custom datasets, and warehouse integration.',
   ctaLabel: 'Scope My Operations Hub Build',
   platformName: 'Operations Hub',
   painPoints: [
-    { pain: 'Salesforce and HubSpot drift apart — contact info contradicts in each', fix: '<strong>Two-way data sync</strong> with field-level mapping, conflict rules, and audit trails' },
+    { pain: 'Salesforce and HubSpot drift apart - contact info contradicts in each', fix: '<strong>Two-way data sync</strong> with field-level mapping, conflict rules, and audit trails' },
     { pain: 'Zapier setup is fragile and bills are climbing', fix: '<strong>Operations Hub data sync</strong> scales to millions of records with native error handling' },
     { pain: 'Workflows hit native-action limits and we have to send to external tools', fix: '<strong>Custom-coded actions</strong> run JavaScript inside workflows for any logic or API call' },
     { pain: 'Phone numbers and addresses arrive in 17 different formats', fix: '<strong>Data quality automation</strong> formats, validates, and standardizes on save' },
@@ -29,33 +29,33 @@ const data = {
   ],
   outcomes: [
     { icon: RefreshCw, value: '99.5%', label: 'sync reliability with Operations Hub data sync vs. typical Zapier/iPaaS deployments', color: '#FF7A59' },
-    { icon: Database,  value: '10M+',  label: 'record-volume support per sync — far beyond what point-to-point tools can handle', color: '#F59E0B' },
+    { icon: Database,  value: '10M+',  label: 'record-volume support per sync - far beyond what point-to-point tools can handle', color: '#F59E0B' },
     { icon: Zap,       value: '60%',   label: 'fewer manual data corrections per quarter after data quality automation rules go live', color: '#6366F1' },
     { icon: GitMerge,  value: '100+',  label: 'native app integrations available with no coding required', color: '#06B6D4' },
-    { icon: Shield,    value: 'SOC 2', label: 'Type II audit trail on every sync, automation, and custom action — for compliance reviews', color: '#10B981' },
+    { icon: Shield,    value: 'SOC 2', label: 'Type II audit trail on every sync, automation, and custom action - for compliance reviews', color: '#10B981' },
     { icon: BarChart2, value: '3.4×',  label: 'faster reporting velocity with custom datasets vs. manual cross-object analysis', color: '#FF7A59' },
   ],
   whatWeShip: [
     { icon: RefreshCw, title: 'Two-way data sync',         desc: 'Salesforce, NetSuite, Shopify, and 100+ native syncs with field mapping and conflict rules.' },
     { icon: Code,      title: 'Programmable workflows',    desc: 'Custom-coded actions, webhooks, scheduled workflows, and error branches that scale.' },
-    { icon: Shield,    title: 'Data quality automation',   desc: 'Format, validate, deduplicate, and normalize on save — without manual cleanup queues.' },
+    { icon: Shield,    title: 'Data quality automation',   desc: 'Format, validate, deduplicate, and normalize on save - without manual cleanup queues.' },
     { icon: Database,  title: 'Custom datasets + warehouse', desc: 'Cross-object datasets, Snowflake/BigQuery integration, and reverse ETL back into HubSpot.' },
   ],
   process: [
-    { num: '01', title: 'Data Architecture Audit',  desc: "We map every system that talks to HubSpot today, the data quality state of your existing properties, sync conflicts you have lived with, and the reports you cannot build with native tools — before configuring a single sync." },
+    { num: '01', title: 'Data Architecture Audit',  desc: "We map every system that talks to HubSpot today, the data quality state of your existing properties, sync conflicts you have lived with, and the reports you cannot build with native tools - before configuring a single sync." },
     { num: '02', title: 'Sync & Automation Build',  desc: "Data syncs configured with field mapping and conflict rules. Programmable workflows built where native actions fall short. Data quality automation deployed against your dirtiest properties first." },
     { num: '03', title: 'Custom Datasets + Warehouse', desc: "Custom datasets built for the reports you have been hacking around. Warehouse integration scoped if you need Snowflake, BigQuery, or Redshift in the loop." },
     { num: '04', title: 'Observability & Hypercare', desc: "Sync error dashboards, automation logs, and data quality reports wired up. Hypercare window to fine-tune conflict rules and dedup logic as real data flows." },
   ],
   whyUs: [
-    { title: 'We Know Where iPaaS Tools Break',           desc: 'Most Operations Hub builds we inherit are recovering from Zapier or Workato sprawl. We know which patterns scale and which collapse — and we design syncs that survive 10x volume growth.' },
-    { title: 'Salesforce ↔ HubSpot Is Our Bread and Butter', desc: 'Dual-stack environments are most consultancies\' nightmare. They\'re ours by design — we run both platforms daily and know exactly where the two object models conflict and how to map them cleanly.' },
-    { title: 'Custom Code With Long-Term Maintainability',  desc: 'Programmable workflows are easy to write and hard to maintain. We code with idempotency, error handling, and documentation that lets the next person — or AI — modify them safely.' },
+    { title: 'We Know Where iPaaS Tools Break',           desc: 'Most Operations Hub builds we inherit are recovering from Zapier or Workato sprawl. We know which patterns scale and which collapse - and we design syncs that survive 10x volume growth.' },
+    { title: 'Salesforce ↔ HubSpot Is Our Bread and Butter', desc: 'Dual-stack environments are most consultancies\' nightmare. They\'re ours by design - we run both platforms daily and know exactly where the two object models conflict and how to map them cleanly.' },
+    { title: 'Custom Code With Long-Term Maintainability',  desc: 'Programmable workflows are easy to write and hard to maintain. We code with idempotency, error handling, and documentation that lets the next person - or AI - modify them safely.' },
     { title: "We Stay Until Sync Hits 99.5%",              desc: 'A sync that "mostly works" is a slow-bleeding data problem. We tune conflict rules and error handling through hypercare until reliability is rock-solid.' },
   ],
   finalCtaHeadlineTop: 'Ready to Untangle Your',
   finalCtaHeadlineGold: 'CRM Data Layer?',
-  finalCtaBody: 'In 30 minutes we will audit your current integrations and data quality, identify the highest-impact moves on sync reliability and reporting, and hand you a clear Operations Hub roadmap — at no cost.',
+  finalCtaBody: 'In 30 minutes we will audit your current integrations and data quality, identify the highest-impact moves on sync reliability and reporting, and hand you a clear Operations Hub roadmap - at no cost.',
   finalCtaChecklist: ['Integration audit included', 'Data quality assessment', 'No obligation whatsoever'],
   finalCtaButton: 'Book My Free Operations Hub Call',
 }

@@ -15,7 +15,7 @@ export const HOMEPAGE_FAQS = [
   { q: "Do you work on HubSpot too, or only Salesforce?",
     a: "Both. We implement and optimize HubSpot Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, and Breeze AI. We also handle Salesforce-to-HubSpot migrations, the reverse, and dual-stack integrations where a client runs both." },
   { q: "How do you handle data security and compliance?",
-    a: "All work follows enterprise security standards — Salesforce's SOC 2 / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption to match." },
+    a: "All work follows enterprise security standards - Salesforce's SOC 2 / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption to match." },
 ]
 
 const SEGMENT_NAMES = {
@@ -80,7 +80,7 @@ export const ROUTE_META = {
   },
   '/solutions': {
     title: 'Salesforce & HubSpot Solutions | Cloudsheer Consulting',
-    description: 'Solutions across the full Salesforce stack — Sales, Service, Marketing, Commerce, Agentforce — and every HubSpot Hub including Marketing, Sales, Service, CMS, Operations, and Breeze AI.',
+    description: 'Solutions across the full Salesforce stack - Sales, Service, Marketing, Commerce, Agentforce - and every HubSpot Hub including Marketing, Sales, Service, CMS, Operations, and Breeze AI.',
   },
   '/solutions/agentforce': {
     title: 'Agentforce AI Agent Deployment | Cloudsheer Consulting',
@@ -172,11 +172,11 @@ export const ROUTE_META = {
   },
   '/about': {
     title: 'About Cloudsheer | Salesforce, Agentforce & HubSpot Specialists',
-    description: 'Cloudsheer is a 40+ person certified consulting firm covering the full Salesforce stack, Agentforce, and HubSpot — with offices in Dallas, New York, Delhi, and London.',
+    description: 'Cloudsheer is a 40+ person certified consulting firm covering the full Salesforce stack, Agentforce, and HubSpot - with offices in Dallas, New York, Delhi, and London.',
   },
   '/contact': {
     title: 'Contact Cloudsheer Consulting | Salesforce, Agentforce, HubSpot',
-    description: 'Talk to Cloudsheer about Salesforce, Agentforce, or HubSpot — or migrating between them. Free 30-minute discovery call available.',
+    description: 'Talk to Cloudsheer about Salesforce, Agentforce, or HubSpot - or migrating between them. Free 30-minute discovery call available.',
   },
   '/blog': {
     title: 'Salesforce, Agentforce & HubSpot Blog | Cloudsheer Insights',
@@ -395,10 +395,10 @@ export function professionalServiceSchema() {
 
 export function localBusinessSchemas() {
   const offices = [
-    { id: '#dallas',   name: 'Cloudsheer Consulting — Dallas',   addressLocality: 'Dallas',   addressRegion: 'TX', addressCountry: 'US' },
-    { id: '#delhi',    name: 'Cloudsheer Consulting — Delhi',    addressLocality: 'Delhi',                          addressCountry: 'IN' },
-    { id: '#london',   name: 'Cloudsheer Consulting — London',   addressLocality: 'London',                         addressCountry: 'GB' },
-    { id: '#new-york', name: 'Cloudsheer Consulting — New York', addressLocality: 'New York', addressRegion: 'NY', addressCountry: 'US' },
+    { id: '#dallas',   name: 'Cloudsheer Consulting - Dallas',   addressLocality: 'Dallas',   addressRegion: 'TX', addressCountry: 'US' },
+    { id: '#delhi',    name: 'Cloudsheer Consulting - Delhi',    addressLocality: 'Delhi',                          addressCountry: 'IN' },
+    { id: '#london',   name: 'Cloudsheer Consulting - London',   addressLocality: 'London',                         addressCountry: 'GB' },
+    { id: '#new-york', name: 'Cloudsheer Consulting - New York', addressLocality: 'New York', addressRegion: 'NY', addressCountry: 'US' },
   ]
   return offices.map(o => ({
     '@context': 'https://schema.org',

@@ -18,15 +18,15 @@ const articles = {
       {
         heading: 'The Short Answer',
         paragraphs: [
-          "Headless 360 is Salesforce's new platform architecture that removes the requirement to use a browser UI to do work on Salesforce. Every capability — data, business logic, workflows, deployments, configuration — is now exposed as an API, MCP (Model Context Protocol) tool, or CLI command.",
+          "Headless 360 is Salesforce's new platform architecture that removes the requirement to use a browser UI to do work on Salesforce. Every capability - data, business logic, workflows, deployments, configuration - is now exposed as an API, MCP (Model Context Protocol) tool, or CLI command.",
           "In plain terms: AI agents, external developer tools, and automated systems can now use Salesforce directly without anyone logging in and clicking through screens. It was announced at TrailblazerDX 2026 on April 15 and Salesforce called it one of the biggest platform changes in 25 years.",
         ],
       },
       {
         heading: 'Why the Name "Headless"',
         paragraphs: [
-          "In web architecture, the user interface is called the \"head.\" A headless system is one where the head is removed and the underlying capabilities are exposed directly to whatever wants to use them — typically through APIs.",
-          "Salesforce has always had APIs, but most workflows historically went through the UI. Page layouts, Lightning components, Setup screens, list views — these were the primary surface for doing work. Headless 360 inverts that model. The UI is now optional. The platform itself is the product.",
+          "In web architecture, the user interface is called the \"head.\" A headless system is one where the head is removed and the underlying capabilities are exposed directly to whatever wants to use them - typically through APIs.",
+          "Salesforce has always had APIs, but most workflows historically went through the UI. Page layouts, Lightning components, Setup screens, list views - these were the primary surface for doing work. Headless 360 inverts that model. The UI is now optional. The platform itself is the product.",
         ],
       },
       {
@@ -90,7 +90,7 @@ const articles = {
           "Autonomous pipeline management: an SDR agent monitors opportunities, identifies stalled deals, sends follow-ups, and reassigns ownership without manager review.",
           "Voice case resolution: a service agent pulls customer records, reads open cases, checks SLA status, and resolves issues over a phone call without any custom middleware.",
           "Self-deploying changes: a developer describes a new approval flow to Claude Code, the agent generates the metadata, runs the tests, and pushes to the sandbox automatically.",
-          "Cross-system orchestration: an agent reads from your ERP, updates the Salesforce opportunity, drafts the proposal, and notifies the sales rep in Slack — one workflow, three systems.",
+          "Cross-system orchestration: an agent reads from your ERP, updates the Salesforce opportunity, drafts the proposal, and notifies the sales rep in Slack - one workflow, three systems.",
         ],
       },
       {
@@ -143,7 +143,7 @@ const articles = {
         heading: 'How Cloudsheer Can Help',
         paragraphs: [
           "We have been shipping Agentforce builds since launch and have deep hands-on experience with the new Headless 360 stack. Our team can audit your org for the highest-impact use cases, deploy your first Agentforce agents, set up the Experience Layer across your channels, and stand up governance with Agent Fabric.",
-          "Every engagement starts with a free 30-minute discovery call with a Salesforce architect — no sales pitch, just a clear assessment of what is buildable on Headless 360 for your business. Book yours at cal.com/cloudsheer-consulting/30min.",
+          "Every engagement starts with a free 30-minute discovery call with a Salesforce architect - no sales pitch, just a clear assessment of what is buildable on Headless 360 for your business. Book yours at cal.com/cloudsheer-consulting/30min.",
         ],
       },
     ],
