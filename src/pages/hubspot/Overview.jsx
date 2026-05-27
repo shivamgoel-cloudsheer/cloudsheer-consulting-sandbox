@@ -247,10 +247,12 @@ function WhyUs() {
 function FinalCTA() {
   return (
     <section className="py-14 sm:py-16 relative overflow-hidden"
-      style={{ background: `linear-gradient(135deg, ${HS_NAVY} 0%, #4A6075 100%)` }}>
-      <div className="absolute inset-0 bg-grid-dark opacity-30" />
-      <div className="glow-dot w-[500px] h-[500px] top-[-100px] left-[50%] -translate-x-1/2"
-        style={{ backgroundColor: HS_ORANGE, opacity: 0.25 }} />
+      style={{ background: 'linear-gradient(135deg, #4A1F0E 0%, #8B3820 50%, #B8421C 100%)' }}>
+      <div className="absolute inset-0 bg-grid-dark opacity-20" />
+      <div className="glow-dot w-[600px] h-[600px] top-[-150px] left-[50%] -translate-x-1/2"
+        style={{ backgroundColor: '#FF7A59', opacity: 0.30 }} />
+      <div className="glow-dot w-[350px] h-[350px] bottom-[-100px] right-[-50px]"
+        style={{ backgroundColor: '#FFFFFF', opacity: 0.06 }} />
       <div className="section-wrap relative z-10 text-center max-w-3xl mx-auto">
         <div className="tag-white mx-auto mb-6 inline-flex">
           <Sparkles className="w-3.5 h-3.5" /> Free HubSpot Discovery Call
