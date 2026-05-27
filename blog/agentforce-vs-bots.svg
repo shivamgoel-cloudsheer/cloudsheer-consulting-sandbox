@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A3F80"/>
+      <stop offset="100%" style="stop-color:#6366F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg2)" rx="16"/>
+  <g opacity="0.06" stroke="white" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
+  </g>
+  <!-- VS comparison -->
+  <rect x="150" y="90" width="200" height="140" rx="16" fill="white" opacity="0.1" stroke="white" stroke-opacity="0.15"/>
+  <text x="250" y="140" text-anchor="middle" fill="rgba(186,220,255,0.5)" font-family="Inter,sans-serif" font-size="12" font-weight="700">EINSTEIN BOTS</text>
+  <rect x="190" y="155" width="120" height="8" rx="4" fill="white" opacity="0.15"/>
+  <rect x="190" y="172" width="90" height="8" rx="4" fill="white" opacity="0.1"/>
+  <rect x="190" y="189" width="100" height="8" rx="4" fill="white" opacity="0.08"/>
+  <text x="400" y="170" text-anchor="middle" fill="#F59E0B" font-family="Inter,sans-serif" font-size="32" font-weight="900">VS</text>
+  <rect x="450" y="90" width="200" height="140" rx="16" fill="white" opacity="0.15" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <text x="550" y="140" text-anchor="middle" fill="#38BDF8" font-family="Inter,sans-serif" font-size="12" font-weight="700">AGENTFORCE</text>
+  <rect x="490" y="155" width="120" height="8" rx="4" fill="#38BDF8" opacity="0.3"/>
+  <rect x="490" y="172" width="90" height="8" rx="4" fill="#38BDF8" opacity="0.25"/>
+  <rect x="490" y="189" width="100" height="8" rx="4" fill="#38BDF8" opacity="0.2"/>
+  <!-- Text -->
+  <text x="400" y="290" text-anchor="middle" fill="white" font-family="Inter,sans-serif" font-size="24" font-weight="800">Agentforce vs Einstein Bots</text>
+  <text x="400" y="325" text-anchor="middle" fill="#F59E0B" font-family="Inter,sans-serif" font-size="22" font-weight="800">What's the Difference?</text>
+</svg>
