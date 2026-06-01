@@ -495,7 +495,7 @@ function AgentVisual() {
 /* ─── HubSpot Visual: marketing workflow ─────────────────── */
 function HubSpotVisual() {
   return (
-    <div className="relative w-full max-w-md animate-float mx-auto">
+    <div className="relative w-full max-w-lg animate-float mx-auto">
       <div className="rounded-2xl overflow-hidden"
         style={{ backgroundColor: 'white', boxShadow: '0 25px 60px rgba(204,85,53,0.30)', border: '1px solid rgba(0,0,0,0.08)' }}>
         {/* Top bar */}
@@ -610,7 +610,7 @@ function AWSServiceBlock({ icon: Icon, label, sub, wide }) {
 
 function AWSVisual() {
   return (
-    <div className="relative w-full max-w-md animate-float mx-auto">
+    <div className="relative w-full max-w-lg animate-float mx-auto">
       <div className="rounded-2xl overflow-hidden"
         style={{ backgroundColor: 'white', boxShadow: '0 25px 60px rgba(0,0,0,0.40)', border: '1px solid rgba(0,0,0,0.10)' }}>
         {/* Top bar */}
@@ -708,7 +708,7 @@ function DynamicsVisual() {
     { name: 'Initech Ltd', value: '$120k', heat: 'Cool', heatColor: '#94A3B8' },
   ]
   return (
-    <div className="relative w-full max-w-md animate-float mx-auto">
+    <div className="relative w-full max-w-lg animate-float mx-auto">
       <div className="rounded-2xl overflow-hidden"
         style={{ backgroundColor: 'white', boxShadow: '0 25px 60px rgba(0,32,80,0.35)', border: '1px solid rgba(0,0,0,0.08)' }}>
         {/* Top bar */}
@@ -781,7 +781,7 @@ function DynamicsVisual() {
 /* ─── AI Agents Visual: multi-agent orchestration flow ──── */
 function AIAgentsVisual() {
   return (
-    <div className="relative w-full max-w-md animate-float mx-auto">
+    <div className="relative w-full max-w-lg animate-float mx-auto">
       <div className="rounded-2xl overflow-hidden"
         style={{ backgroundColor: 'white', boxShadow: '0 25px 60px rgba(91,45,166,0.40)', border: '1px solid rgba(0,0,0,0.08)' }}>
         {/* Top bar */}
@@ -1542,8 +1542,8 @@ function LiveWorkflows() {
                 border: `1px solid ${current.color}25`,
                 transition: 'border-color 700ms ease',
               }} />
-            {/* Floating "Now playing" tab */}
-            <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full whitespace-nowrap animate-fade-up"
+            {/* Floating "Now playing" tab - lifted higher to clear floating chips inside visuals */}
+            <div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full whitespace-nowrap animate-fade-up"
               style={{
                 backgroundColor: '#0B1A36',
                 border: `1px solid ${current.color}50`,
