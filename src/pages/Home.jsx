@@ -355,12 +355,12 @@ function AgentVisual() {
         </div>
         {/* Nav items */}
         {[
-          { icon: <Bot className="w-4 h-4" />, label: 'Agents' },
           { icon: <Users className="w-4 h-4" />, label: 'Cases' },
+          { icon: <Bot className="w-4 h-4" />, label: 'Agents' },
           { icon: <TrendingUp className="w-4 h-4" />, label: 'Leads' },
         ].map(({ icon, label }) => (
           <div key={label} className="flex flex-col items-center gap-1 py-3 mx-2 rounded-lg mb-1"
-            style={{ backgroundColor: label === 'Agents' ? 'rgba(255,255,255,0.20)' : 'transparent' }}>
+            style={{ backgroundColor: label === 'Cases' ? 'rgba(255,255,255,0.20)' : 'transparent' }}>
             <span style={{ color: 'rgba(255,255,255,0.9)' }}>{icon}</span>
             <span className="text-[9px] font-semibold" style={{ color: 'rgba(255,255,255,0.8)' }}>{label}</span>
           </div>
@@ -395,20 +395,26 @@ function AgentVisual() {
 
         {/* Chat body */}
         <div className="px-5 py-4 space-y-5" style={{ backgroundColor: '#F8FAFC' }}>
-          {/* Customer message */}
+          {/* Customer case message */}
           <div className="flex items-start gap-3">
             <div className="w-9 h-9 rounded-full shrink-0 flex items-center justify-center text-white text-xs font-bold"
               style={{ background: 'linear-gradient(135deg,#0176D3,#38BDF8)' }}>
-              JR
+              MP
             </div>
             <div>
               <p className="text-xs font-bold" style={{ color: '#032D60' }}>
-                James Rivera <span className="font-normal" style={{ color: '#94A3B8' }}>to Agent</span>
+                Maya P. <span className="font-normal" style={{ color: '#94A3B8' }}>· Case #C-4821</span>
               </p>
               <div className="mt-2 rounded-xl px-4 py-3" style={{ backgroundColor: 'white', border: '1px solid #E2E8F0' }}>
                 <p className="text-sm" style={{ color: '#334155' }}>
-                  Our sales team is spending too much time on manual data entry. Can Agentforce help?
+                  My package was marked delivered on Nov 10 but I never received it. Can you help?
                 </p>
+              </div>
+              {/* Einstein classification chip */}
+              <div className="mt-2 inline-flex items-center gap-1.5 text-[10px] font-bold px-2 py-1 rounded-full"
+                style={{ backgroundColor: '#EFF6FF', color: '#0176D3', border: '1px solid #BFDBFE' }}>
+                <Sparkles className="w-3 h-3" />
+                Einstein: Shipping {'>'} Lost Package · 94%
               </div>
             </div>
           </div>
@@ -421,26 +427,26 @@ function AgentVisual() {
             </div>
             <div>
               <p className="text-xs font-bold" style={{ color: '#7B4AE2' }}>
-                Agent <span className="font-normal" style={{ color: '#94A3B8' }}>to James Rivera</span>
+                Agentforce <span className="font-normal" style={{ color: '#94A3B8' }}>· Service Cloud</span>
               </p>
               <div className="mt-2 rounded-xl px-4 py-3" style={{ backgroundColor: 'white', border: '1px solid #E2E8F0' }}>
                 <p className="text-sm mb-3" style={{ color: '#334155' }}>
-                  Absolutely. Based on your Salesforce data, here is what an Operations Agent can do:
+                  Sorry about that, Maya. Order <strong>#4821</strong> shows delivered with no signature. Based on similar resolved cases:
                 </p>
                 <ul className="space-y-1.5 mb-3">
                   {[
-                    'Auto-update records after every call',
-                    'Generate pipeline reports weekly',
-                    'Sync data across your CRM & ERP',
+                    { strong: 'Reship', rest: 'to your address - 2-day FedEx' },
+                    { strong: 'Refund', rest: '$89 to your original card' },
+                    { strong: 'Escalate', rest: 'to live agent with full context' },
                   ].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-sm">
+                    <li key={item.strong} className="flex items-center gap-2 text-sm">
                       <CheckCircle2 className="w-3.5 h-3.5 shrink-0" style={{ color: '#7B4AE2' }} />
-                      <span style={{ color: '#334155' }}><strong>{item.split(' ')[0]}</strong> {item.split(' ').slice(1).join(' ')}</span>
+                      <span style={{ color: '#334155' }}><strong>{item.strong}</strong> {item.rest}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm" style={{ color: '#334155' }}>
-                  This typically saves teams <strong>12+ hours/week</strong>. Would you like to book a call to see a live demo?
+                <p className="text-[11px]" style={{ color: '#64748B' }}>
+                  Drafted from <strong>KB-3041</strong> · 247 similar cases · audit logged
                 </p>
               </div>
             </div>
@@ -480,7 +486,7 @@ function AgentVisual() {
       <div className="absolute -bottom-4 left-2 rounded-xl px-3 py-2 flex items-center gap-2 animate-float"
         style={{ backgroundColor: 'white', boxShadow: '0 4px 20px rgba(1,118,211,0.15)', border: '1px solid rgba(1,118,211,0.12)', animationDelay: '1s' }}>
         <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-        <span className="text-xs font-semibold" style={{ color: '#032D60' }}>12 hrs/week saved</span>
+        <span className="text-xs font-semibold" style={{ color: '#032D60' }}>KB-3041 cited · audited</span>
       </div>
     </div>
   )
