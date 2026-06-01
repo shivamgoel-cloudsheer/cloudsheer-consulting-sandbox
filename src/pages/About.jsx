@@ -266,9 +266,8 @@ export default function About() {
                   )}
                 </div>
 
-                {/* Name & Role */}
+                {/* Name only */}
                 <p className="text-xs font-bold leading-tight" style={{ color: '#032D60' }}>{name}</p>
-                <p className="text-[10px] mt-0.5 leading-tight" style={{ color: '#64748B' }}>{role}</p>
 
               </div>
             ))}
