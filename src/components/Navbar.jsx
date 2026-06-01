@@ -4,7 +4,12 @@ import { Link, NavLink } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Headphones, TrendingUp, Megaphone,
          ShoppingCart, Users, BarChart2, Package, MessageSquare, HeartPulse,
          Heart, Landmark, FlaskConical, GraduationCap, HandHeart,
-         Sparkles, FileText, Workflow, Bot, Globe } from 'lucide-react'
+         Sparkles, FileText, Workflow, Bot, Globe, Briefcase, Database,
+         Cloud, Layers, Shield, DollarSign, GitBranch, RefreshCw, Network, Building2 } from 'lucide-react'
+import {
+  MarketingHubIcon, SalesHubIcon, ServiceHubIcon, ContentHubIcon, DataHubIcon,
+  CommerceHubIcon, SmartCRMIcon, SmallBusinessBundleIcon, BreezeIcon,
+} from './HubSpotIcons'
 
 const clouds = [
   {
@@ -117,7 +122,7 @@ const hubspotProducts = [
   {
     label: 'HubSpot Overview',
     to: '/solutions/hubspot',
-    icon: Globe,
+    icon: SmallBusinessBundleIcon,
     desc: 'Full HubSpot stack - all hubs in one place',
     highlight: true,
     iconColor: '#FF7A59',
@@ -125,46 +130,95 @@ const hubspotProducts = [
   {
     label: 'Breeze AI',
     to: '/solutions/hubspot-breeze-ai',
-    icon: Sparkles,
-    desc: 'Copilot, agents, and Intelligence enrichment',
+    icon: BreezeIcon,
+    desc: 'AI agents and Intelligence enrichment',
     highlight: true,
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Smart CRM',
+    to: '/solutions/hubspot-smart-crm',
+    icon: SmartCRMIcon,
+    desc: 'AI-powered, flexible CRM foundation',
     iconColor: '#FF7A59',
   },
   {
     label: 'Marketing Hub',
     to: '/solutions/hubspot-marketing-hub',
-    icon: Megaphone,
-    desc: 'Campaigns, automation, attribution',
+    icon: MarketingHubIcon,
+    desc: 'Marketing automation software',
     iconColor: '#FF7A59',
   },
   {
     label: 'Sales Hub',
     to: '/solutions/hubspot-sales-hub',
-    icon: TrendingUp,
-    desc: 'Pipeline, sequences, forecasting',
+    icon: SalesHubIcon,
+    desc: 'Sales software',
     iconColor: '#FF7A59',
   },
   {
     label: 'Service Hub',
     to: '/solutions/hubspot-service-hub',
-    icon: Headphones,
-    desc: 'Tickets, portal, SLAs, customer agent',
+    icon: ServiceHubIcon,
+    desc: 'Customer service software',
     iconColor: '#FF7A59',
   },
   {
-    label: 'CMS Hub',
-    to: '/solutions/hubspot-cms-hub',
-    icon: FileText,
-    desc: 'Websites, themes, memberships',
+    label: 'Content Hub',
+    to: '/solutions/hubspot-content-hub',
+    icon: ContentHubIcon,
+    desc: 'Content marketing software',
     iconColor: '#FF7A59',
   },
   {
-    label: 'Operations Hub',
-    to: '/solutions/hubspot-operations-hub',
-    icon: Workflow,
-    desc: 'Data sync, programmable automation',
+    label: 'Data Hub',
+    to: '/solutions/hubspot-data-hub',
+    icon: DataHubIcon,
+    desc: 'Data management software',
     iconColor: '#FF7A59',
   },
+  {
+    label: 'Commerce Hub',
+    to: '/solutions/hubspot-commerce-hub',
+    icon: CommerceHubIcon,
+    desc: 'CPQ, billing, and payments',
+    iconColor: '#FF7A59',
+  },
+  {
+    label: 'Small Business Bundle',
+    to: '/solutions/hubspot-small-business-bundle',
+    icon: SmallBusinessBundleIcon,
+    desc: 'Starter editions for startups and SMBs',
+    iconColor: '#FF7A59',
+  },
+]
+
+const awsProducts = [
+  { label: 'AWS Overview',         to: '/solutions/aws',                  icon: Cloud,        desc: 'Cloud architecture, migration, managed services', highlight: true, iconColor: '#FF9900' },
+  { label: 'Cloud Migration',      to: '/solutions/aws#migration',        icon: RefreshCw,    desc: 'Lift-and-shift, re-platform, modernize',            iconColor: '#FF9900' },
+  { label: 'Infrastructure & DevOps', to: '/solutions/aws#devops',        icon: GitBranch,    desc: 'CI/CD, IaC, container & serverless platforms',      iconColor: '#FF9900' },
+  { label: 'Security & Compliance',to: '/solutions/aws#security',         icon: Shield,       desc: 'Well-Architected, IAM, SOC 2, HIPAA',               iconColor: '#FF9900' },
+  { label: 'Cost Optimization',    to: '/solutions/aws#cost',             icon: DollarSign,   desc: 'Right-sizing, savings plans, FinOps',               iconColor: '#FF9900' },
+  { label: 'AI/ML on AWS',         to: '/solutions/aws#ai-ml',            icon: Bot,          desc: 'Bedrock, SageMaker, custom model deployment',       iconColor: '#FF9900' },
+]
+
+const dynamicsProducts = [
+  { label: 'Dynamics 365 Overview',     to: '/solutions/microsoft-dynamics',                        icon: Layers,     desc: 'Full Dynamics + Power Platform stack',                         highlight: true, iconColor: '#0078D4' },
+  { label: 'Customer Experience',       to: '/solutions/dynamics-365-customer-experience',          icon: Users,      desc: 'Sales + Customer Insights on shared Dataverse',                iconColor: '#0078D4' },
+  { label: 'Service',                   to: '/solutions/dynamics-365-service',                      icon: Headphones, desc: 'Customer Service, Contact Center, Field Service',             iconColor: '#0078D4' },
+  { label: 'Supply Chain',              to: '/solutions/dynamics-365-supply-chain',                 icon: Workflow,   desc: 'Supply Chain Management + Commerce',                           iconColor: '#0078D4' },
+  { label: 'Finance',                   to: '/solutions/dynamics-365-finance',                      icon: DollarSign, desc: 'Finance, Project Operations, Human Resources',                iconColor: '#0078D4' },
+  { label: 'Business Central',          to: '/solutions/dynamics-365-business-central',             icon: Building2,  desc: 'All-in-one ERP for small and medium business',                iconColor: '#0078D4' },
+  { label: 'Power Platform',            to: '/solutions/microsoft-power-platform',                  icon: Zap,        desc: 'Power Apps, Automate, BI, Copilot Studio',                    iconColor: '#0078D4' },
+]
+
+const aiAgentsProducts = [
+  { label: 'AI Agents Overview',       to: '/solutions/ai-agents',                  icon: Bot,        desc: 'Custom agents to retire legacy systems', highlight: true, iconColor: '#7B4AE2' },
+  { label: 'Legacy Modernization',     to: '/solutions/ai-agents#legacy',           icon: RefreshCw,  desc: 'Replace aging CRMs, ERPs, ticketing tools',                iconColor: '#7B4AE2' },
+  { label: 'Custom Agent Development', to: '/solutions/ai-agents#custom',           icon: Sparkles,   desc: 'Domain-specific agents built for your data',               iconColor: '#7B4AE2' },
+  { label: 'RPA & Workflow Replace',   to: '/solutions/ai-agents#rpa',              icon: Workflow,   desc: 'AI-native automation beyond brittle RPA',                  iconColor: '#7B4AE2' },
+  { label: 'LLM & Tool Integration',   to: '/solutions/ai-agents#llm',              icon: Globe,      desc: 'MCP, function calling, RAG over your data',                iconColor: '#7B4AE2' },
+  { label: 'Multi-Agent Orchestration',to: '/solutions/ai-agents#orchestration',    icon: Network,    desc: 'Specialist agents that coordinate to ship work',           iconColor: '#7B4AE2' },
 ]
 
 const navLinks = [
@@ -242,27 +296,57 @@ export default function Navbar() {
 
             {/* Dropdown panel - mega menu with platform tabs (portaled to body) */}
             {dropOpen && (() => {
-              const isHubspot = platformTab === 'hubspot'
-              const accent = isHubspot ? '#FF7A59' : '#0176D3'
-              const accentTint = isHubspot ? 'rgba(255,122,89,0.08)' : 'rgba(1,118,211,0.08)'
-              const headerBg = isHubspot ? '#FFF4F0' : '#F0F7FF'
+              const platforms = [
+                { key: 'salesforce', label: 'Salesforce',          accent: '#0176D3', tint: 'rgba(1,118,211,0.08)',  headerBg: '#F0F7FF' },
+                { key: 'hubspot',    label: 'HubSpot',             accent: '#FF7A59', tint: 'rgba(255,122,89,0.08)', headerBg: '#FFF4F0' },
+                { key: 'aws',        label: 'AWS',                 accent: '#FF9900', tint: 'rgba(255,153,0,0.10)',  headerBg: '#FFF8EB' },
+                { key: 'dynamics',   label: 'Microsoft Dynamics',  accent: '#0078D4', tint: 'rgba(0,120,212,0.08)',  headerBg: '#EFF6FF' },
+                { key: 'ai-agents',  label: 'AI Agents',           accent: '#7B4AE2', tint: 'rgba(123,74,226,0.08)', headerBg: '#F5F0FF' },
+              ]
+              const active = platforms.find(p => p.key === platformTab) || platforms[0]
+              const accent = active.accent
+              const accentTint = active.tint
+              const headerBg = active.headerBg
 
               const isCore = c => ['Sales Cloud', 'Service Cloud', 'Marketing Cloud', 'Commerce Cloud'].includes(c.label)
               const isAI   = c => ['Agentforce', 'Slack'].includes(c.label)
               const isExtend = c => !c.industry && !isCore(c) && !isAI(c)
-              const sfTiers = [
-                { label: 'AI & Automation', items: clouds.filter(isAI) },
-                { label: 'Core Clouds',     items: clouds.filter(isCore) },
-                { label: 'Extend & Analyse',items: clouds.filter(isExtend) },
-                { label: 'Industry Clouds', items: clouds.filter(c => c.industry) },
-              ]
-              const hsTiers = [
-                { label: 'Overview',          items: hubspotProducts.filter(p => ['HubSpot Overview'].includes(p.label)) },
-                { label: 'AI Layer',          items: hubspotProducts.filter(p => ['Breeze AI'].includes(p.label)) },
-                { label: 'Core Hubs',         items: hubspotProducts.filter(p => ['Marketing Hub', 'Sales Hub', 'Service Hub'].includes(p.label)) },
-                { label: 'Web & Operations',  items: hubspotProducts.filter(p => ['CMS Hub', 'Operations Hub'].includes(p.label)) },
-              ]
-              const tiers = isHubspot ? hsTiers : sfTiers
+
+              const tiersByPlatform = {
+                salesforce: [
+                  { label: 'AI & Automation', items: clouds.filter(isAI) },
+                  { label: 'Core Clouds',     items: clouds.filter(isCore) },
+                  { label: 'Extend & Analyse',items: clouds.filter(isExtend) },
+                  { label: 'Industry Clouds', items: clouds.filter(c => c.industry) },
+                ],
+                hubspot: [
+                  { label: 'Overview',     items: hubspotProducts.filter(p => ['HubSpot Overview'].includes(p.label)) },
+                  { label: 'Foundation',   items: hubspotProducts.filter(p => ['Smart CRM', 'Breeze AI'].includes(p.label)) },
+                  { label: 'Core Hubs',    items: hubspotProducts.filter(p => ['Marketing Hub', 'Sales Hub', 'Service Hub'].includes(p.label)) },
+                  { label: 'Content & Commerce', items: hubspotProducts.filter(p => ['Content Hub', 'Commerce Hub'].includes(p.label)) },
+                  { label: 'Data & SMB',   items: hubspotProducts.filter(p => ['Data Hub', 'Small Business Bundle'].includes(p.label)) },
+                ],
+                aws: [
+                  { label: 'Overview',           items: awsProducts.filter(p => ['AWS Overview'].includes(p.label)) },
+                  { label: 'Migrate & Build',    items: awsProducts.filter(p => ['Cloud Migration', 'Infrastructure & DevOps'].includes(p.label)) },
+                  { label: 'Secure & Optimize',  items: awsProducts.filter(p => ['Security & Compliance', 'Cost Optimization'].includes(p.label)) },
+                  { label: 'AI Workloads',       items: awsProducts.filter(p => ['AI/ML on AWS'].includes(p.label)) },
+                ],
+                dynamics: [
+                  { label: 'Overview',          items: dynamicsProducts.filter(p => ['Dynamics 365 Overview'].includes(p.label)) },
+                  { label: 'Customer-Facing',   items: dynamicsProducts.filter(p => ['Customer Experience', 'Service'].includes(p.label)) },
+                  { label: 'Operations',        items: dynamicsProducts.filter(p => ['Supply Chain', 'Finance'].includes(p.label)) },
+                  { label: 'SMB & Extensibility', items: dynamicsProducts.filter(p => ['Business Central', 'Power Platform'].includes(p.label)) },
+                ],
+                'ai-agents': [
+                  { label: 'Overview',  items: aiAgentsProducts.filter(p => ['AI Agents Overview'].includes(p.label)) },
+                  { label: 'Modernize', items: aiAgentsProducts.filter(p => ['Legacy Modernization', 'RPA & Workflow Replace'].includes(p.label)) },
+                  { label: 'Build',     items: aiAgentsProducts.filter(p => ['Custom Agent Development', 'LLM & Tool Integration'].includes(p.label)) },
+                  { label: 'Scale',     items: aiAgentsProducts.filter(p => ['Multi-Agent Orchestration'].includes(p.label)) },
+                ],
+              }
+              const tiers = tiersByPlatform[active.key]
+              const isHubspot = active.key === 'hubspot'
 
               return createPortal((
                 <div
@@ -282,34 +366,30 @@ export default function Navbar() {
                   className="rounded-2xl overflow-hidden animate-scale-in"
                   style={{
                     pointerEvents: 'auto',
-                    width: 'min(960px, calc(100vw - 32px))',
+                    width: 'min(1100px, calc(100vw - 32px))',
                     background: '#ffffff',
-                    border: `1px solid ${isHubspot ? 'rgba(255,122,89,0.18)' : 'rgba(1,118,211,0.12)'}`,
-                    boxShadow: isHubspot ? '0 20px 60px rgba(255,122,89,0.14)' : '0 20px 60px rgba(1,118,211,0.14)',
+                    border: `1px solid ${accent}20`,
+                    boxShadow: `0 20px 60px ${accent}24`,
                   }}
                 >
                   {/* Platform tabs */}
-                  <div className="px-3 pt-3 pb-0 flex items-center gap-2" style={{ background: headerBg, borderBottom: `1px solid ${accentTint}` }}>
-                    <button
-                      onClick={() => setPlatformTab('salesforce')}
-                      className="px-4 py-2 rounded-t-lg text-xs font-bold uppercase tracking-widest transition-all duration-150"
-                      style={{
-                        background: !isHubspot ? '#ffffff' : 'transparent',
-                        color: !isHubspot ? '#0176D3' : '#64748B',
-                        borderBottom: !isHubspot ? '2px solid #0176D3' : '2px solid transparent',
-                      }}>
-                      Salesforce
-                    </button>
-                    <button
-                      onClick={() => setPlatformTab('hubspot')}
-                      className="px-4 py-2 rounded-t-lg text-xs font-bold uppercase tracking-widest transition-all duration-150"
-                      style={{
-                        background: isHubspot ? '#ffffff' : 'transparent',
-                        color: isHubspot ? '#FF7A59' : '#64748B',
-                        borderBottom: isHubspot ? '2px solid #FF7A59' : '2px solid transparent',
-                      }}>
-                      HubSpot
-                    </button>
+                  <div className="px-3 pt-3 pb-0 flex items-center gap-1 flex-wrap" style={{ background: headerBg, borderBottom: `1px solid ${accentTint}` }}>
+                    {platforms.map(p => {
+                      const isActive = p.key === active.key
+                      return (
+                        <button
+                          key={p.key}
+                          onClick={() => setPlatformTab(p.key)}
+                          className="px-3 py-2 rounded-t-lg text-[11px] font-bold uppercase tracking-wider whitespace-nowrap transition-all duration-150"
+                          style={{
+                            background: isActive ? '#ffffff' : 'transparent',
+                            color: isActive ? p.accent : '#64748B',
+                            borderBottom: isActive ? `2px solid ${p.accent}` : '2px solid transparent',
+                          }}>
+                          {p.label}
+                        </button>
+                      )
+                    })}
                     <div className="ml-auto pb-2 pr-2">
                       <Link
                         to="/solutions"
@@ -434,8 +514,45 @@ export default function Navbar() {
                     onClick={() => { setOpen(false); setMobileDropOpen(false) }}
                     className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors"
                     style={{ color: highlight ? '#FF7A59' : '#475569' }}
-                    onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,122,89,0.08)' }}
-                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}
+                  >
+                    {Icon ? <Icon className="w-4 h-4 shrink-0" /> : null}
+                    {label}
+                  </Link>
+                ))}
+                <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-3 pb-1" style={{ color: '#FF9900' }}>AWS</p>
+                {awsProducts.map(({ label, to, icon: Icon, highlight }) => (
+                  <Link
+                    key={label}
+                    to={to}
+                    onClick={() => { setOpen(false); setMobileDropOpen(false) }}
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors"
+                    style={{ color: highlight ? '#FF9900' : '#475569' }}
+                  >
+                    {Icon ? <Icon className="w-4 h-4 shrink-0" /> : null}
+                    {label}
+                  </Link>
+                ))}
+                <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-3 pb-1" style={{ color: '#0078D4' }}>Microsoft Dynamics</p>
+                {dynamicsProducts.map(({ label, to, icon: Icon, highlight }) => (
+                  <Link
+                    key={label}
+                    to={to}
+                    onClick={() => { setOpen(false); setMobileDropOpen(false) }}
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors"
+                    style={{ color: highlight ? '#0078D4' : '#475569' }}
+                  >
+                    {Icon ? <Icon className="w-4 h-4 shrink-0" /> : null}
+                    {label}
+                  </Link>
+                ))}
+                <p className="text-[10px] font-bold uppercase tracking-widest px-3 pt-3 pb-1" style={{ color: '#7B4AE2' }}>AI Agents</p>
+                {aiAgentsProducts.map(({ label, to, icon: Icon, highlight }) => (
+                  <Link
+                    key={label}
+                    to={to}
+                    onClick={() => { setOpen(false); setMobileDropOpen(false) }}
+                    className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm transition-colors"
+                    style={{ color: highlight ? '#7B4AE2' : '#475569' }}
                   >
                     {Icon ? <Icon className="w-4 h-4 shrink-0" /> : null}
                     {label}

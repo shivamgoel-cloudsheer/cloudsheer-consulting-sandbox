@@ -4,12 +4,21 @@
     <meta charset="utf-8" />
     <title>Cloudsheer Consulting</title>
     <script>
-      // SPA redirect for GitHub Pages
-      var path = window.location.pathname;
-      var base = '/cloudsheer-consulting';
-      var route = path.replace(base, '') || '/';
-      sessionStorage.setItem('redirect', route);
-      window.location.replace(base + '/');
+      // Single Page Apps for GitHub Pages — rafgraph/spa-github-pages pattern.
+      // When the requested deep URL 404s, redirect to the SPA entry with the
+      // original path encoded in the query string. index.html then restores it
+      // before React Router boots.
+      // segmentCount = number of base-path segments to keep before the SPA path.
+      // For sandbox served at /cloudsheer-consulting-sandbox/, that is 1.
+      var segmentCount = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
   </head>
   <body></body>

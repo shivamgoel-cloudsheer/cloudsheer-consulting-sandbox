@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2, Award, Quote } from 'lucide-react'
+import { ArrowRight, Clock, Bot, Sparkles, TrendingUp, Database, Users, Zap, CheckCircle2, Award, Quote, Cloud, Layers, Megaphone } from 'lucide-react'
 import FAQ from '../components/FAQ'
+import BlogCoverArt from '../components/BlogCoverArt'
 import { addPageSchema, faqPageSchema } from '../seoConfig'
 
 const blogFaqs = [
@@ -12,10 +13,92 @@ const blogFaqs = [
 
 const posts = [
   {
+    slug: 'hubspot-2025-rebrand-smart-crm-content-data-commerce',
+    category: 'HubSpot',
+    categoryIcon: <Megaphone className="w-3 h-3" />,
+    categoryColor: 'text-orange-600 bg-orange-50 border-orange-200',
+    coverType: 'hub-stack',
+    title: 'The 2025 HubSpot Rebrand: Smart CRM, Content Hub, Data Hub, Commerce Hub Explained',
+    excerpt: 'HubSpot rebranded its core platform in 2024-2025: CMS Hub became Content Hub, Operations Hub became Data Hub, and Smart CRM and Commerce Hub joined the lineup. Here is what actually changed - and what to do about it.',
+    image: '/blog/spring-25.svg',
+    date: 'May 25, 2026', readTime: '8 min',
+    author: 'Shubham Bansal', initials: 'SB', avatarColor: 'from-orange-500 to-rose-500',
+    featured: false,
+  },
+  {
+    slug: 'salesforce-to-hubspot-migration-playbook',
+    category: 'HubSpot',
+    categoryIcon: <Megaphone className="w-3 h-3" />,
+    categoryColor: 'text-orange-600 bg-orange-50 border-orange-200',
+    coverType: 'migration-arrow',
+    coverProps: { leftLabel: 'SF', rightLabel: 'HS' },
+    title: 'Salesforce to HubSpot Migration: A Real-World Playbook',
+    excerpt: 'We have migrated mid-market teams off Salesforce onto HubSpot more times than we can count. Here is the actual playbook - data model, integrations, parallel-run, cutover - based on what works (and what breaks).',
+    image: '/blog/implementation-checklist.svg',
+    date: 'Apr 30, 2026', readTime: '11 min',
+    author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
+    featured: false,
+  },
+  {
+    slug: 'bedrock-vs-openai-production-ai-decision-framework',
+    category: 'AWS',
+    categoryIcon: <Cloud className="w-3 h-3" />,
+    categoryColor: 'text-amber-700 bg-amber-50 border-amber-300',
+    coverType: 'vs-split',
+    coverProps: { leftLabel: 'AWS', rightLabel: 'OAI' },
+    title: 'Bedrock vs OpenAI for Production AI: A Decision Framework',
+    excerpt: 'Both can ship a working AI feature this quarter. The real question is what happens at month 18 when latency, cost, model swaps, and data residency start to matter. Here is the framework we use.',
+    image: '/blog/data-cloud.svg',
+    date: 'May 8, 2026', readTime: '9 min',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
+    featured: false,
+  },
+  {
+    slug: 'aws-cost-optimization-mid-market-90-days',
+    category: 'AWS',
+    categoryIcon: <Cloud className="w-3 h-3" />,
+    categoryColor: 'text-amber-700 bg-amber-50 border-amber-300',
+    coverType: 'cost-chart',
+    title: '5 AWS Cost Optimization Wins for Mid-Market in 90 Days',
+    excerpt: 'Most mid-market AWS bills have 20-35% pure waste. Here are the five highest-leverage wins we ship in the first 90 days of an engagement - typically before any architectural work begins.',
+    image: '/blog/roi-agentforce.svg',
+    date: 'Apr 14, 2026', readTime: '7 min',
+    author: 'Rajat Sharma', initials: 'RS', avatarColor: 'from-emerald-500 to-teal-500',
+    featured: false,
+  },
+  {
+    slug: 'dynamics-365-vs-salesforce-honest-comparison',
+    category: 'Microsoft Dynamics',
+    categoryIcon: <Layers className="w-3 h-3" />,
+    categoryColor: 'text-sky-600 bg-sky-50 border-sky-200',
+    coverType: 'vs-split',
+    coverProps: { leftLabel: 'D365', rightLabel: 'SF' },
+    title: 'Dynamics 365 vs Salesforce: An Honest Side-by-Side',
+    excerpt: 'We implement both. The "which is better" question is the wrong one - the right question is which one matches your org, your stack, and your team. Here is the honest comparison we give clients on discovery calls.',
+    image: '/blog/agentforce-vs-bots.svg',
+    date: 'May 18, 2026', readTime: '10 min',
+    author: 'Tushar Sharma', initials: 'TS', avatarColor: 'from-cs-blue to-cs-electric',
+    featured: false,
+  },
+  {
+    slug: 'business-central-vs-finance-scm-tier-decision-guide',
+    category: 'Microsoft Dynamics',
+    categoryIcon: <Layers className="w-3 h-3" />,
+    categoryColor: 'text-sky-600 bg-sky-50 border-sky-200',
+    coverType: 'tier-decision',
+    title: 'Business Central or Finance + SCM? A Tier Decision Guide for Mid-Market',
+    excerpt: "Microsoft has two enterprise ERP tracks for very different shapes of business. Picking the wrong one is the most expensive mistake we see in Dynamics rollouts. Here is how to know which fits.",
+    image: '/blog/implementation-checklist.svg',
+    date: 'May 2, 2026', readTime: '8 min',
+    author: 'Shivam Goel', initials: 'SG', avatarColor: 'from-cs-purple to-indigo-600',
+    featured: false,
+  },
+  {
     slug: 'what-is-headless-360-complete-guide',
     category: 'Agentforce',
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
+    coverType: 'api-nodes',
     title: 'What is Headless 360? A Complete Guide',
     excerpt: 'Salesforce Headless 360 makes the entire platform programmable via APIs, MCP tools, and CLI commands. This complete guide breaks down what it is, how it works, and what it means for your business.',
     image: '/blog/spring-25.svg',
@@ -28,6 +111,7 @@ const posts = [
     category: 'Salesforce News',
     categoryIcon: <Zap className="w-3 h-3" />,
     categoryColor: 'text-rose-500 bg-rose-50 border-rose-200',
+    coverType: 'release-tag',
     title: 'Salesforce Headless 360: Everything You Need to Know from TDX 2026',
     excerpt: 'Salesforce just announced Headless 360 at TDX 2026 - making the entire platform programmable via APIs, MCP servers, and CLI commands. Here is what it means for your business.',
     image: '/blog/spring-25.svg',
@@ -40,6 +124,7 @@ const posts = [
     category: 'Agentforce',
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
+    coverType: 'agent-bot',
     title: 'Getting Started with Agentforce: A Practical Guide for 2026',
     excerpt: 'Agentforce is reshaping how businesses operate on Salesforce. We walk through the core concepts, agent architecture, and your first deployment steps - based on lessons from 20+ live implementations.',
     image: '/blog/agentforce-guide.svg',
@@ -52,6 +137,8 @@ const posts = [
     category: 'Agentforce',
     categoryIcon: <Bot className="w-3 h-3" />,
     categoryColor: 'text-cs-blue bg-cs-blue/8 border-cs-blue/20',
+    coverType: 'vs-split',
+    coverProps: { leftLabel: 'AF', rightLabel: 'EB' },
     title: "Agentforce vs Einstein Bots: What's the Difference?",
     image: '/blog/agentforce-vs-bots.svg',
     excerpt: "Many clients ask how Agentforce differs from Einstein Bots. The answer has major implications for your automation strategy - we explain it clearly with real-world examples.",
@@ -64,6 +151,7 @@ const posts = [
     category: 'Implementation',
     categoryIcon: <Sparkles className="w-3 h-3" />,
     categoryColor: 'text-cs-gold bg-cs-gold/10 border-cs-gold/25',
+    coverType: 'checklist',
     title: '10-Point Checklist for a Successful Salesforce Implementation',
     image: '/blog/implementation-checklist.svg',
     excerpt: 'After 250+ implementations we know exactly what separates a smooth go-live from a painful one. Here is our definitive pre-launch checklist.',
@@ -76,6 +164,7 @@ const posts = [
     category: 'ROI & Results',
     categoryIcon: <TrendingUp className="w-3 h-3" />,
     categoryColor: 'text-emerald-600 bg-emerald-50 border-emerald-200',
+    coverType: 'growth-chart',
     title: 'Measuring the ROI of Agentforce: What Our Clients Actually See',
     image: '/blog/roi-agentforce.svg',
     excerpt: 'We tracked results across 20 Agentforce deployments - case deflection rates, response times, CSAT scores, and cost savings. Here is what the data shows.',
@@ -88,6 +177,7 @@ const posts = [
     category: 'Data Cloud',
     categoryIcon: <Database className="w-3 h-3" />,
     categoryColor: 'text-cs-purple bg-cs-purple/10 border-cs-purple/20',
+    coverType: 'data-flow',
     title: 'How Data Cloud Makes Your Agentforce Agents Smarter',
     image: '/blog/data-cloud.svg',
     excerpt: 'Agentforce agents are only as intelligent as the data they can access. We show you exactly how Data Cloud unification supercharges agent responses and personalization.',
@@ -100,6 +190,7 @@ const posts = [
     category: 'Strategy',
     categoryIcon: <Users className="w-3 h-3" />,
     categoryColor: 'text-cs-teal bg-cs-teal/10 border-cs-teal/20',
+    coverType: 'team-circle',
     title: '7 Ways Agentforce Drives Salesforce Adoption Across Your Team',
     image: '/blog/crm-adoption.svg',
     excerpt: "When agents do the admin, reps actually use Salesforce. We've seen it repeatedly - here are the adoption patterns Agentforce unlocks that training programs never could.",
@@ -112,6 +203,7 @@ const posts = [
     category: 'Salesforce News',
     categoryIcon: <Zap className="w-3 h-3" />,
     categoryColor: 'text-rose-500 bg-rose-50 border-rose-200',
+    coverType: 'release-tag',
     title: "Top Agentforce Features in the Salesforce Spring '25 Release",
     image: '/blog/spring-25.svg',
     excerpt: "Spring '25 is the biggest Agentforce release yet. New agent templates, expanded action types, improved reasoning, and deeper Data Cloud integration - all covered here.",
@@ -121,16 +213,19 @@ const posts = [
   },
 ]
 
-const categories = ['All', 'Agentforce', 'Implementation', 'ROI & Results', 'Data Cloud', 'Strategy', 'Salesforce News']
+const categories = ['All', 'Agentforce', 'HubSpot', 'AWS', 'Microsoft Dynamics', 'Implementation', 'ROI & Results', 'Data Cloud', 'Strategy', 'Salesforce News']
 
 /* ─── Cover art per category ──────────────────────────────── */
 const CATEGORY_GRADIENTS = {
-  'Agentforce':       'linear-gradient(135deg, #0176D3 0%, #38BDF8 100%)',
-  'Implementation':   'linear-gradient(135deg, #D97706 0%, #FBBF24 100%)',
-  'ROI & Results':    'linear-gradient(135deg, #059669 0%, #34D399 100%)',
-  'Data Cloud':       'linear-gradient(135deg, #6366F1 0%, #A78BFA 100%)',
-  'Strategy':         'linear-gradient(135deg, #0EA5A4 0%, #5EEAD4 100%)',
-  'Salesforce News':  'linear-gradient(135deg, #DC2626 0%, #FB7185 100%)',
+  'Agentforce':         'linear-gradient(135deg, #0176D3 0%, #38BDF8 100%)',
+  'HubSpot':            'linear-gradient(135deg, #FF7A59 0%, #FFA07A 100%)',
+  'AWS':                'linear-gradient(135deg, #FF9900 0%, #FBBF24 100%)',
+  'Microsoft Dynamics': 'linear-gradient(135deg, #0078D4 0%, #5EB0F0 100%)',
+  'Implementation':     'linear-gradient(135deg, #D97706 0%, #FBBF24 100%)',
+  'ROI & Results':      'linear-gradient(135deg, #059669 0%, #34D399 100%)',
+  'Data Cloud':         'linear-gradient(135deg, #6366F1 0%, #A78BFA 100%)',
+  'Strategy':           'linear-gradient(135deg, #0EA5A4 0%, #5EEAD4 100%)',
+  'Salesforce News':    'linear-gradient(135deg, #DC2626 0%, #FB7185 100%)',
 }
 
 function CoverArt({ category, icon, large }) {
@@ -167,7 +262,8 @@ function CoverArt({ category, icon, large }) {
 }
 
 function PostCard({ post, large }) {
-  const { slug, category, categoryIcon, title, excerpt, date, readTime, author, initials, avatarColor } = post
+  const { slug, category, categoryIcon, coverType, coverProps, title, excerpt, date, readTime, author, initials, avatarColor } = post
+  const gradient = CATEGORY_GRADIENTS[category] || CATEGORY_GRADIENTS['Agentforce']
 
   if (large) {
     return (
@@ -181,7 +277,7 @@ function PostCard({ post, large }) {
         }}>
         <div className="grid md:grid-cols-2 gap-0 items-stretch">
           <div className="p-4 md:p-6 md:pr-3">
-            <CoverArt category={category} icon={categoryIcon} large />
+            <BlogCoverArt category={category} gradient={gradient} coverType={coverType} coverProps={coverProps} large />
           </div>
           <div className="flex flex-col justify-center p-6 md:py-10 md:pr-10 md:pl-3">
             <p className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: '#6B6B6B' }}>
@@ -220,7 +316,7 @@ function PostCard({ post, large }) {
         border: '1px solid rgba(1,118,211,0.10)',
         padding: '1rem',
       }}>
-      <CoverArt category={category} icon={categoryIcon} />
+      <BlogCoverArt category={category} gradient={gradient} coverType={coverType} coverProps={coverProps} />
 
       <div className="flex flex-col flex-grow pt-5 pb-2 px-1">
         <h3 className="font-bold text-base mb-2.5 group-hover:underline transition-all leading-snug"

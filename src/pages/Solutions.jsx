@@ -5,9 +5,14 @@ import {
   ShoppingCart, Headphones, Mail, Database, BarChart3, Zap,
   Heart, Briefcase, FlaskConical, GraduationCap, HandHeart,
   Megaphone, TrendingUp, FileText, Workflow, Globe,
+  Cloud, Layers, Shield, DollarSign, GitBranch, RefreshCw, Network, Building2,
 } from 'lucide-react'
 import FAQ from '../components/FAQ'
 import { addPageSchema, faqPageSchema } from '../seoConfig'
+import {
+  MarketingHubIcon, SalesHubIcon, ServiceHubIcon, ContentHubIcon, DataHubIcon,
+  CommerceHubIcon, SmartCRMIcon, SmallBusinessBundleIcon, BreezeIcon,
+} from '../components/HubSpotIcons'
 
 const solutionFaqs = [
   { q: 'Which platform should I start with - Salesforce or HubSpot?', a: 'It depends on team size, complexity, and existing investment. Mid-market and enterprise teams with complex workflows usually fit Salesforce; SMB and product-led-growth teams usually fit HubSpot. We assess on the discovery call. Many clients run both - Salesforce for enterprise sales/service, HubSpot for marketing - and we set up Operations Hub sync between them.' },
@@ -76,11 +81,11 @@ function AgentforceHero() {
     <section className="py-10 sm:py-16 bg-cs-bgsub">
       <div className="section-wrap">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-10">
-          <div className="tag mx-auto mb-5"><Bot className="w-3.5 h-3.5" /> Salesforce &amp; HubSpot Solutions</div>
+          <div className="tag mx-auto mb-5"><Layers className="w-3.5 h-3.5" /> Five Platform Pillars</div>
           <h1 className="section-title mb-4">
-            CRM Solutions for <span className="gradient-text">Every Cloud and Hub</span>
+            Solutions Across <span className="gradient-text">Every Platform You Run</span>
           </h1>
-          <p className="section-sub">Every Salesforce cloud, every HubSpot Hub, plus AI agents from Agentforce and Breeze - each built to solve a specific business problem.</p>
+          <p className="section-sub">Salesforce and HubSpot for CRM. AWS for cloud infrastructure. Microsoft Dynamics for ERP. Plus custom AI agents that retire the legacy systems none of them fit.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {agents.map(({ name, icon, metric, metricColor, border, features }) => (
@@ -239,13 +244,16 @@ function IndustryClouds() {
 }
 
 const hubspotHubs = [
-  { icon: <Globe className="w-6 h-6" />,     to: '/solutions/hubspot',                    title: 'HubSpot Overview',     desc: 'End-to-end HubSpot implementation, migration, and managed services. The full stack in one place.',                                              tags: ['Full Stack', 'Migration', 'Managed'] },
-  { icon: <Sparkles className="w-6 h-6" />,  to: '/solutions/hubspot-breeze-ai',          title: 'Breeze AI',            desc: 'Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment - wired across the whole HubSpot stack.', tags: ['Copilot', 'Agents', 'Intelligence'] },
-  { icon: <Megaphone className="w-6 h-6" />, to: '/solutions/hubspot-marketing-hub',      title: 'Marketing Hub',        desc: 'Campaigns, workflows, lead scoring, and multi-touch attribution. Built around your funnel, not a template.',                                    tags: ['Campaigns', 'Attribution', 'Workflows'] },
-  { icon: <TrendingUp className="w-6 h-6" />,to: '/solutions/hubspot-sales-hub',          title: 'Sales Hub',            desc: 'Custom deal stages, sequences, forecasting, prospecting workspace, and Breeze AI lead scoring. Ramp reps in weeks.',                            tags: ['Pipeline', 'Sequences', 'Forecasting'] },
-  { icon: <Headphones className="w-6 h-6" />,to: '/solutions/hubspot-service-hub',        title: 'Service Hub',          desc: 'Ticketing, customer portal, knowledge base, SLA automation, surveys, and the Breeze customer agent for 24/7 deflection.',                       tags: ['Tickets', 'Portal', 'Customer Agent'] },
-  { icon: <FileText className="w-6 h-6" />,  to: '/solutions/hubspot-cms-hub',            title: 'CMS Hub',              desc: 'Custom themes, modules, memberships, multi-language sites, and SEO-optimized pages - all connected to HubSpot CRM out of the box.',           tags: ['Themes', 'Memberships', 'SEO'] },
-  { icon: <Workflow className="w-6 h-6" />,  to: '/solutions/hubspot-operations-hub',     title: 'Operations Hub',       desc: 'Programmable automation, two-way data sync (Salesforce, NetSuite, Shopify), data quality automation, custom datasets, warehouse integration.', tags: ['Data Sync', 'Programmable', 'Datasets'] },
+  { icon: <SmallBusinessBundleIcon className="w-6 h-6" />, to: '/solutions/hubspot',                          title: 'HubSpot Overview',       desc: 'End-to-end HubSpot implementation, migration, and managed services - the full stack in one place.',                                  tags: ['Full Stack', 'Migration', 'Managed'] },
+  { icon: <BreezeIcon className="w-6 h-6" />,              to: '/solutions/hubspot-breeze-ai',                title: 'Breeze AI',              desc: 'Breeze Copilot, Breeze Agents, and Breeze Intelligence enrichment - wired across the whole HubSpot stack.',                            tags: ['Copilot', 'Agents', 'Intelligence'] },
+  { icon: <SmartCRMIcon className="w-6 h-6" />,            to: '/solutions/hubspot-smart-crm',                title: 'Smart CRM',              desc: 'The AI-powered CRM foundation under every Hub - schema, permissions, automation, and Breeze rollout strategy.',                       tags: ['Schema', 'Permissions', 'AI-Native'] },
+  { icon: <MarketingHubIcon className="w-6 h-6" />,        to: '/solutions/hubspot-marketing-hub',            title: 'Marketing Hub',          desc: 'Campaigns, workflows, lead scoring, and multi-touch attribution. Built around your funnel, not a template.',                          tags: ['Campaigns', 'Attribution', 'Workflows'] },
+  { icon: <SalesHubIcon className="w-6 h-6" />,            to: '/solutions/hubspot-sales-hub',                title: 'Sales Hub',              desc: 'Custom deal stages, sequences, forecasting, prospecting workspace, and Breeze AI lead scoring.',                                     tags: ['Pipeline', 'Sequences', 'Forecasting'] },
+  { icon: <ServiceHubIcon className="w-6 h-6" />,          to: '/solutions/hubspot-service-hub',              title: 'Service Hub',            desc: 'Ticketing, customer portal, knowledge base, SLA automation, surveys, and the Breeze customer agent.',                                tags: ['Tickets', 'Portal', 'Customer Agent'] },
+  { icon: <ContentHubIcon className="w-6 h-6" />,          to: '/solutions/hubspot-content-hub',              title: 'Content Hub',            desc: 'AI co-writer with brand voice, podcast hosting, content remix, memberships, multi-language sites, and SEO pages.',                     tags: ['Brand Voice', 'Podcasts', 'SEO'] },
+  { icon: <DataHubIcon className="w-6 h-6" />,             to: '/solutions/hubspot-data-hub',                 title: 'Data Hub',               desc: 'Two-way sync, Breeze Intelligence enrichment, programmable workflows, custom datasets, and Snowflake data share.',                    tags: ['Data Sync', 'Enrichment', 'Datasets'] },
+  { icon: <CommerceHubIcon className="w-6 h-6" />,         to: '/solutions/hubspot-commerce-hub',             title: 'Commerce Hub',           desc: 'CPQ, branded quotes, invoices, payment links, subscriptions, and self-serve customer portals - all native to Smart CRM.',           tags: ['CPQ', 'Billing', 'Subscriptions'] },
+  { icon: <SmallBusinessBundleIcon className="w-6 h-6" />, to: '/solutions/hubspot-small-business-bundle',    title: 'Small Business Bundle',  desc: 'Starter editions of every Hub - configured for go-live in 2-3 weeks. Built for startups and small teams.',                            tags: ['Starter', 'Fast Launch', 'Bundle'] },
 ]
 
 function HubSpotHubs() {
@@ -260,7 +268,7 @@ function HubSpotHubs() {
             The Full HubSpot Stack <span style={{ background: 'linear-gradient(135deg, #FF7A59, #CC5535)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Under One Roof</span>
           </h2>
           <p className="section-sub">
-            Every Hub - Marketing, Sales, Service, CMS, Operations - plus the Breeze AI layer. Implementation, migration, and managed services.
+            Every Hub - Marketing, Sales, Service, Content, Commerce, Data - on top of Smart CRM, powered by Breeze AI. Implementation, migration, and managed services.
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -287,6 +295,152 @@ function HubSpotHubs() {
         </div>
       </div>
     </section>
+  )
+}
+
+function PillarSection({ id, tagLabel, title, titleSpan, subtitle, accent, accentDark, tint, bg, items, ctaText, ctaTo, statusLabel }) {
+  return (
+    <section id={id} className="py-10 sm:py-16" style={{ backgroundColor: bg }}>
+      <div className="section-wrap">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+          <div className="tag mx-auto mb-5" style={{ color: accent, backgroundColor: tint, borderColor: `${accent}40` }}>
+            {tagLabel}
+          </div>
+          {statusLabel && (
+            <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4"
+              style={{ color: '#64748B', backgroundColor: 'rgba(148,163,184,0.12)', border: '1px solid rgba(148,163,184,0.25)' }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#94A3B8' }} />
+              {statusLabel}
+            </div>
+          )}
+          <h2 className="section-title mb-4">
+            {title} <span style={{ background: `linear-gradient(135deg, ${accent}, ${accentDark})`, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>{titleSpan}</span>
+          </h2>
+          <p className="section-sub">{subtitle}</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+          {items.map(({ icon, title: itemTitle, desc, tags, to }) => {
+            const CardInner = (
+              <>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-all"
+                  style={{ backgroundColor: tint, border: `1px solid ${accent}25`, color: accent }}>
+                  {icon}
+                </div>
+                <h3 className="font-bold mb-2" style={{ color: '#032D60' }}>{itemTitle}</h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: '#64748B' }}>{desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {tags.map(t => (
+                    <span key={t} className="text-[11px] px-2.5 py-1 rounded-full"
+                      style={{ color: '#64748B', backgroundColor: '#FFFFFF', border: `1px solid ${accent}25` }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )
+            return to ? (
+              <Link key={itemTitle} to={to} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300 no-underline block">
+                {CardInner}
+              </Link>
+            ) : (
+              <div key={itemTitle} className="glass-card p-6 group hover:-translate-y-1 transition-all duration-300">
+                {CardInner}
+              </div>
+            )
+          })}
+        </div>
+        <div className="text-center">
+          <Link to={ctaTo} className="inline-flex items-center gap-2 font-semibold px-7 py-3 rounded-xl transition-all duration-200"
+            style={{ background: `linear-gradient(135deg, ${accent}, ${accentDark})`, color: 'white', boxShadow: `0 6px 20px ${accent}40` }}>
+            {ctaText} <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function AWSSection() {
+  const items = [
+    { icon: <RefreshCw className="w-6 h-6" />,  title: 'Cloud Migration',           desc: 'Lift-and-shift, re-platform, or refactor. Discovery, wave planning, cutover, and post-migration validation.',                          tags: ['Discovery', 'MAP', 'Cutover'] },
+    { icon: <GitBranch className="w-6 h-6" />,  title: 'Infrastructure & DevOps',   desc: 'IaC with Terraform/CDK, CI/CD pipelines, container platforms (ECS, EKS), serverless (Lambda, Step Functions).',                tags: ['Terraform', 'EKS', 'CI/CD'] },
+    { icon: <Shield className="w-6 h-6" />,     title: 'Security & Compliance',     desc: 'Well-Architected reviews, IAM hardening, GuardDuty, Security Hub, SOC 2 / HIPAA / PCI-aligned baselines.',                       tags: ['IAM', 'GuardDuty', 'SOC 2'] },
+    { icon: <DollarSign className="w-6 h-6" />, title: 'Cost Optimization',         desc: 'Right-sizing, Savings Plans, Compute Optimizer, FinOps practice setup. Typical 25-40% AWS bill reduction.',                       tags: ['Savings Plans', 'FinOps', 'Right-sizing'] },
+    { icon: <Bot className="w-6 h-6" />,        title: 'AI/ML on AWS',              desc: 'Bedrock model deployments, SageMaker pipelines, custom model fine-tuning, RAG over your data with OpenSearch + S3.',           tags: ['Bedrock', 'SageMaker', 'RAG'] },
+    { icon: <Cloud className="w-6 h-6" />,      title: 'Managed Cloud Operations',  desc: 'Monitoring, incident response, patching, and continuous Well-Architected reviews after go-live.',                                tags: ['24/7 Ops', 'Monitoring', 'WAF Reviews'] },
+  ]
+  return (
+    <PillarSection
+      id="aws"
+      tagLabel={<><Cloud className="w-3.5 h-3.5" /> AWS Cloud</>}
+      title="Cloud Infrastructure"
+      titleSpan="Done Right"
+      subtitle="From first VPC to multi-account landing zone - migration, modernization, security, and FinOps under one roof. AWS partnership track in progress."
+      accent="#FF9900"
+      accentDark="#CC7A00"
+      tint="rgba(255,153,0,0.10)"
+      bg="#FFF8EB"
+      items={items}
+      ctaText="Explore AWS Solutions"
+      ctaTo="/solutions/aws"
+      statusLabel="Partnership in progress"
+    />
+  )
+}
+
+function DynamicsSection() {
+  const items = [
+    { icon: <Megaphone className="w-6 h-6" />,  to: '/solutions/dynamics-365-customer-experience', title: 'Customer Experience', desc: 'Dynamics 365 Sales + Customer Insights on shared Dataverse. Pipeline, Copilot for Sales, CDP, and real-time journeys.',           tags: ['Sales', 'Customer Insights', 'Copilot'] },
+    { icon: <Headphones className="w-6 h-6" />, to: '/solutions/dynamics-365-service',             title: 'Service',             desc: 'Customer Service, Contact Center, and Field Service - omnichannel cases, voice + digital channels, work orders, and Copilot agent assist.', tags: ['Cases', 'Contact Center', 'Field Service'] },
+    { icon: <Workflow className="w-6 h-6" />,   to: '/solutions/dynamics-365-supply-chain',        title: 'Supply Chain',        desc: 'Supply Chain Management + Commerce. Demand planning, warehouse, manufacturing, POS, and e-commerce on one operational backbone.',  tags: ['SCM', 'Warehouse', 'Commerce'] },
+    { icon: <DollarSign className="w-6 h-6" />, to: '/solutions/dynamics-365-finance',             title: 'Finance',             desc: 'Finance, Project Operations, and Human Resources. Close, PSA, statutory reporting, HR, and CFO-grade controls.',                     tags: ['Finance', 'PSA', 'HR'] },
+    { icon: <Building2 className="w-6 h-6" />,  to: '/solutions/dynamics-365-business-central',    title: 'Business Central',    desc: 'All-in-one ERP for small and medium business. Finance, sales, purchasing, inventory, and projects in one cloud app.',               tags: ['SMB', 'ERP', 'Cloud-native'] },
+    { icon: <Zap className="w-6 h-6" />,        to: '/solutions/microsoft-power-platform',         title: 'Power Platform',      desc: 'Power Apps for custom UX, Power Automate for workflows, Power BI for analytics, Copilot Studio for agents - low-code extensibility.', tags: ['Power Apps', 'Automate', 'Copilot Studio'] },
+  ]
+  return (
+    <PillarSection
+      id="dynamics"
+      tagLabel={<><Layers className="w-3.5 h-3.5" /> Microsoft Dynamics 365</>}
+      title="Dynamics 365 +"
+      titleSpan="Power Platform"
+      subtitle="Customer engagement and ERP on Microsoft's stack - extended with Power Platform and Copilot Studio. Microsoft partnership track in progress."
+      accent="#0078D4"
+      accentDark="#003B73"
+      tint="rgba(0,120,212,0.10)"
+      bg="#F0F7FF"
+      items={items}
+      ctaText="Explore Dynamics Solutions"
+      ctaTo="/solutions/microsoft-dynamics"
+      statusLabel="Partnership in progress"
+    />
+  )
+}
+
+function AIAgentsSection() {
+  const items = [
+    { icon: <RefreshCw className="w-6 h-6" />, title: 'Legacy System Modernization', desc: 'Replace aging CRMs, ERPs, ticketing tools, and home-grown apps with agents that work against the same data - without the box product tax.', tags: ['CRM Replacement', 'ERP Replacement', 'Data Migration'] },
+    { icon: <Sparkles className="w-6 h-6" />,  title: 'Custom Agent Development',    desc: 'Domain-specific agents built on your data, your rules, your workflows. Production-grade evals, guardrails, and observability.', tags: ['Evals', 'Guardrails', 'Observability'] },
+    { icon: <Workflow className="w-6 h-6" />,  title: 'RPA & Workflow Replacement',  desc: 'AI-native automation beyond brittle screen-scraping bots. Reasoning over context, not just clicking buttons.',                          tags: ['Process Automation', 'Decisioning', 'Triggers'] },
+    { icon: <Globe className="w-6 h-6" />,     title: 'LLM & Tool Integration',      desc: 'Function calling, MCP, RAG over your knowledge base. Plug agents into Salesforce, HubSpot, Slack, Jira, and your data warehouse.',     tags: ['MCP', 'RAG', 'Function Calling'] },
+    { icon: <Network className="w-6 h-6" />,   title: 'Multi-Agent Orchestration',   desc: 'Specialist agents that coordinate to ship work end-to-end - planner, executor, reviewer, verifier - with audit trails.',                  tags: ['Planner-Executor', 'Verifier', 'Audit'] },
+    { icon: <Shield className="w-6 h-6" />,    title: 'Trust, Safety & Governance',  desc: 'PII redaction, prompt-injection defenses, role-based tool access, full conversation logs for compliance review.',                       tags: ['PII', 'RBAC', 'Audit Logs'] },
+  ]
+  return (
+    <PillarSection
+      id="ai-agents"
+      tagLabel={<><Bot className="w-3.5 h-3.5" /> AI Agents</>}
+      title="AI Agents That"
+      titleSpan="Retire Legacy Systems"
+      subtitle="When a box product can't be made to fit, we build the agent that does. Production-ready, observable, and safe to put in front of customers."
+      accent="#7B4AE2"
+      accentDark="#5B2DA6"
+      tint="rgba(123,74,226,0.10)"
+      bg="#F5F0FF"
+      items={items}
+      ctaText="Explore AI Agent Solutions"
+      ctaTo="/solutions/ai-agents"
+      statusLabel="New Capability"
+    />
   )
 }
 
@@ -322,6 +476,9 @@ export default function Solutions() {
       <SalesforceClouds />
       <IndustryClouds />
       <HubSpotHubs />
+      <AWSSection />
+      <DynamicsSection />
+      <AIAgentsSection />
       <FAQ title="Solutions FAQ" items={solutionFaqs} />
       <CTA />
     </>

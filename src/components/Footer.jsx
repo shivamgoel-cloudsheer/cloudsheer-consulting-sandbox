@@ -3,32 +3,51 @@ import { ArrowRight, Linkedin, Mail, MapPin, Store } from 'lucide-react'
 
 const cols = [
   {
-    heading: 'Salesforce Clouds',
+    heading: 'Salesforce',
     links: [
       { label: 'Agentforce',            to: '/solutions/agentforce' },
       { label: 'Sales Cloud',           to: '/solutions/sales-cloud' },
       { label: 'Service Cloud',         to: '/solutions/service-cloud' },
       { label: 'Marketing Cloud',       to: '/solutions/marketing-cloud' },
       { label: 'Commerce Cloud',        to: '/solutions/commerce-cloud' },
-    ],
-  },
-  {
-    heading: 'More Solutions',
-    links: [
-      { label: 'Experience Cloud',      to: '/solutions/experience-cloud' },
-      { label: 'Analytics / Tableau',   to: '/solutions/analytics' },
-      { label: 'Platform & AppExchange',to: '/solutions/platform' },
       { label: 'Slack',                 to: '/solutions/slack' },
     ],
   },
   {
-    heading: 'Industry Clouds',
+    heading: 'HubSpot',
     links: [
-      { label: 'Health Cloud',              to: '/solutions/health-cloud' },
-      { label: 'Financial Services Cloud',  to: '/solutions/financial-services-cloud' },
-      { label: 'Life Sciences Cloud',       to: '/solutions/life-sciences-cloud' },
-      { label: 'Education Cloud',           to: '/solutions/education-cloud' },
-      { label: 'Nonprofit Cloud',           to: '/solutions/nonprofit-cloud' },
+      { label: 'HubSpot Overview',      to: '/solutions/hubspot' },
+      { label: 'Smart CRM',             to: '/solutions/hubspot-smart-crm' },
+      { label: 'Breeze AI',             to: '/solutions/hubspot-breeze-ai' },
+      { label: 'Marketing Hub',         to: '/solutions/hubspot-marketing-hub' },
+      { label: 'Sales Hub',             to: '/solutions/hubspot-sales-hub' },
+      { label: 'Service Hub',           to: '/solutions/hubspot-service-hub' },
+      { label: 'Content Hub',           to: '/solutions/hubspot-content-hub' },
+      { label: 'Data Hub',              to: '/solutions/hubspot-data-hub' },
+      { label: 'Commerce Hub',          to: '/solutions/hubspot-commerce-hub' },
+      { label: 'Small Business Bundle', to: '/solutions/hubspot-small-business-bundle' },
+    ],
+  },
+  {
+    heading: 'Microsoft Dynamics',
+    links: [
+      { label: 'Dynamics 365 Overview', to: '/solutions/microsoft-dynamics' },
+      { label: 'Customer Experience',   to: '/solutions/dynamics-365-customer-experience' },
+      { label: 'Service',               to: '/solutions/dynamics-365-service' },
+      { label: 'Supply Chain',          to: '/solutions/dynamics-365-supply-chain' },
+      { label: 'Finance',               to: '/solutions/dynamics-365-finance' },
+      { label: 'Business Central',      to: '/solutions/dynamics-365-business-central' },
+      { label: 'Power Platform',        to: '/solutions/microsoft-power-platform' },
+    ],
+  },
+  {
+    heading: 'Cloud & AI',
+    links: [
+      { label: 'AWS',                   to: '/solutions/aws' },
+      { label: 'AI Agents',             to: '/solutions/ai-agents' },
+      { label: 'Industry Clouds',       to: '/solutions#industry' },
+      { label: 'Analytics / Tableau',   to: '/solutions/analytics' },
+      { label: 'Platform & AppExchange',to: '/solutions/platform' },
     ],
   },
   {
@@ -53,10 +72,10 @@ export default function Footer() {
         <div className="section-wrap py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white font-bold text-lg sm:text-xl mb-1">
-              Ready to build your first AI Agent?
+              Ready to architect your next platform?
             </p>
             <p className="text-sm" style={{ color: 'rgba(148,196,255,0.85)' }}>
-              Book a free 30-min Agentforce discovery call with our team.
+              Book a free 30-min call with a senior architect - CRM, cloud, or AI.
             </p>
           </div>
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold shrink-0 animate-bounce-x">
@@ -67,7 +86,7 @@ export default function Footer() {
 
       {/* Main */}
       <div className="section-wrap py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="inline-flex mb-5 group">
@@ -79,8 +98,8 @@ export default function Footer() {
             </Link>
             <p className="text-sm leading-relaxed mb-5"
               style={{ color: 'rgba(148,196,255,0.80)' }}>
-              Helping businesses cut costs, close more deals, and scale operations
-              with Agentforce, powered by Salesforce.
+              One team for the platforms your business runs on - Salesforce, HubSpot,
+              AWS, Microsoft Dynamics, and custom AI agents that retire legacy systems.
             </p>
 
             {/* Contact micro */}

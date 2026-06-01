@@ -13,7 +13,7 @@ export const HOMEPAGE_FAQS = [
   { q: "Can you handle large or multi-cloud projects?",
     a: "Yes. Our 40+ person team spans 4 global offices and covers every major Salesforce cloud plus the full HubSpot stack. For larger engagements, we scale with certified specialists from our extended network." },
   { q: "Do you work on HubSpot too, or only Salesforce?",
-    a: "Both. We implement and optimize HubSpot Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, and Breeze AI. We also handle Salesforce-to-HubSpot migrations, the reverse, and dual-stack integrations where a client runs both." },
+    a: "Both. We implement and optimize the full HubSpot stack - Smart CRM, Breeze AI, Marketing, Sales, Service, Content, Data, Commerce Hubs, and the Small Business Bundle. We also handle Salesforce-to-HubSpot migrations, the reverse, and dual-stack integrations." },
   { q: "How do you handle data security and compliance?",
     a: "All work follows enterprise security standards - Salesforce's SOC 2 / HIPAA-eligible / GDPR framework on the Salesforce side, and HubSpot's SOC 2 Type II / GDPR-compliant tooling on the HubSpot side. We design data access, sharing rules, and encryption to match." },
 ]
@@ -45,12 +45,24 @@ const SEGMENT_NAMES = {
   'nonprofit-cloud': 'Nonprofit Cloud',
   'agentforce-manufacturing': 'Agentforce Manufacturing',
   'hubspot': 'HubSpot',
+  'hubspot-smart-crm': 'HubSpot Smart CRM',
+  'hubspot-breeze-ai': 'HubSpot Breeze AI',
   'hubspot-marketing-hub': 'HubSpot Marketing Hub',
   'hubspot-sales-hub': 'HubSpot Sales Hub',
   'hubspot-service-hub': 'HubSpot Service Hub',
-  'hubspot-cms-hub': 'HubSpot CMS Hub',
-  'hubspot-operations-hub': 'HubSpot Operations Hub',
-  'hubspot-breeze-ai': 'HubSpot Breeze AI',
+  'hubspot-content-hub': 'HubSpot Content Hub',
+  'hubspot-data-hub': 'HubSpot Data Hub',
+  'hubspot-commerce-hub': 'HubSpot Commerce Hub',
+  'hubspot-small-business-bundle': 'HubSpot Small Business Bundle',
+  'aws': 'AWS',
+  'microsoft-dynamics': 'Microsoft Dynamics',
+  'dynamics-365-customer-experience': 'Customer Experience',
+  'dynamics-365-service': 'Service',
+  'dynamics-365-supply-chain': 'Supply Chain',
+  'dynamics-365-finance': 'Finance',
+  'dynamics-365-business-central': 'Business Central',
+  'microsoft-power-platform': 'Power Platform',
+  'ai-agents': 'AI Agents',
 }
 
 function humanize(slug) {
@@ -71,16 +83,52 @@ export function breadcrumbsFromPath(pathname) {
 
 export const ROUTE_META = {
   '/': {
-    title: 'Cloudsheer Consulting | Salesforce, Agentforce & HubSpot Partner',
-    description: 'Certified Salesforce, Agentforce, and HubSpot consulting partner. Cut support costs by 40%, respond to leads in under 2 seconds with AI-powered CRM that runs 24/7.',
+    title: 'Cloudsheer Consulting | Salesforce, HubSpot, AWS, Dynamics & AI Agents',
+    description: 'Platform-agnostic implementation partner. Salesforce, HubSpot, AWS, Microsoft Dynamics, and custom AI agents that retire legacy systems - one team for the platforms your business runs on.',
   },
   '/services': {
-    title: 'Salesforce & HubSpot Implementation Services | Cloudsheer',
-    description: 'Greenfield, brownfield, integration, and managed services across Salesforce and HubSpot. Delivered by 40+ certified consultants in Dallas, Delhi, London, and NY.',
+    title: 'Multi-Platform Implementation Services | Cloudsheer',
+    description: 'Greenfield, brownfield, integration, and managed services across Salesforce, HubSpot, AWS, Microsoft Dynamics, and custom AI agents. Delivered by 40+ senior consultants in Dallas, Delhi, London, and NY.',
   },
   '/solutions': {
-    title: 'Salesforce & HubSpot Solutions | Cloudsheer Consulting',
-    description: 'Solutions across the full Salesforce stack - Sales, Service, Marketing, Commerce, Agentforce - and every HubSpot Hub including Marketing, Sales, Service, CMS, Operations, and Breeze AI.',
+    title: 'Solutions Across Every Platform You Run | Cloudsheer Consulting',
+    description: 'Salesforce and HubSpot for CRM. AWS for cloud infrastructure. Microsoft Dynamics for ERP. Plus custom AI agents that retire the legacy systems none of them fit.',
+  },
+  '/solutions/aws': {
+    title: 'AWS Cloud Consulting | Migration, DevOps, FinOps, AI | Cloudsheer',
+    description: 'AWS cloud infrastructure done right - migration, DevOps, security, cost optimization, and Bedrock for AI workloads. AWS partnership track in progress.',
+  },
+  '/solutions/microsoft-dynamics': {
+    title: 'Microsoft Dynamics 365 & Power Platform Consulting | Cloudsheer',
+    description: 'Dynamics 365 across Customer Experience, Service, Supply Chain, Finance, and Business Central - plus Power Platform extensibility. Microsoft partnership track in progress.',
+  },
+  '/solutions/dynamics-365-customer-experience': {
+    title: 'Dynamics 365 Customer Experience Consulting | Cloudsheer',
+    description: 'Dynamics 365 Sales + Customer Insights builds: pipeline, forecasting, Copilot for Sales, real-time journey orchestration, CDP segmentation, and predictive scoring on shared Dataverse.',
+  },
+  '/solutions/dynamics-365-service': {
+    title: 'Dynamics 365 Service Consulting (Customer Service, Contact Center, Field) | Cloudsheer',
+    description: 'Dynamics 365 Customer Service, Contact Center, and Field Service: omnichannel cases, voice + digital channels, work order dispatch, IoT, and Copilot agent assist.',
+  },
+  '/solutions/dynamics-365-supply-chain': {
+    title: 'Dynamics 365 Supply Chain & Commerce Consulting | Cloudsheer',
+    description: 'Dynamics 365 Supply Chain Management + Commerce: demand planning, warehouse management, manufacturing, POS, e-commerce, and B2B/B2C - integrated with Finance.',
+  },
+  '/solutions/dynamics-365-finance': {
+    title: 'Dynamics 365 Finance, Project Operations & HR Consulting | Cloudsheer',
+    description: 'Dynamics 365 Finance, Project Operations, and Human Resources: close, PSA, statutory reporting, multi-country localizations, controls, and CFO-grade dashboards.',
+  },
+  '/solutions/dynamics-365-business-central': {
+    title: 'Dynamics 365 Business Central Implementation | Cloudsheer',
+    description: 'Dynamics 365 Business Central all-in-one ERP for small and medium business - finance, sales, purchasing, inventory, projects, and Copilot - live in 8-14 weeks.',
+  },
+  '/solutions/microsoft-power-platform': {
+    title: 'Microsoft Power Platform Consulting | Cloudsheer',
+    description: 'Power Apps, Power Automate, Power BI, Power Pages, and Copilot Studio - low-code apps, automation, analytics, and AI agents with Center of Excellence governance.',
+  },
+  '/solutions/ai-agents': {
+    title: 'Custom AI Agents to Replace Legacy Systems | Cloudsheer',
+    description: 'When a box product cannot be made to fit, we build the agent that does. Production-ready, observable, and safe to put in front of customers - across LLMs and your data.',
   },
   '/solutions/agentforce': {
     title: 'Agentforce AI Agent Deployment | Cloudsheer Consulting',
@@ -140,7 +188,15 @@ export const ROUTE_META = {
   },
   '/solutions/hubspot': {
     title: 'HubSpot Consulting & Implementation | Cloudsheer',
-    description: 'End-to-end HubSpot implementation across Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, and Breeze AI. Salesforce-to-HubSpot migrations and dual-CRM integrations included.',
+    description: 'End-to-end HubSpot implementation on Smart CRM - Marketing, Sales, Service, Content, Data, Commerce Hubs - plus Breeze AI rollout, Salesforce migrations, and dual-CRM integrations.',
+  },
+  '/solutions/hubspot-smart-crm': {
+    title: 'HubSpot Smart CRM Consulting | Cloudsheer',
+    description: 'Smart CRM architecture, schema design, permissions, automation, and Breeze AI rollout. The CRM foundation under every HubSpot Hub - built for Pro and Enterprise editions.',
+  },
+  '/solutions/hubspot-breeze-ai': {
+    title: 'HubSpot Breeze AI Consulting & Deployment | Cloudsheer',
+    description: 'Deploy HubSpot Breeze AI: Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment. Wired into your full HubSpot stack.',
   },
   '/solutions/hubspot-marketing-hub': {
     title: 'HubSpot Marketing Hub Consulting | Cloudsheer',
@@ -154,17 +210,21 @@ export const ROUTE_META = {
     title: 'HubSpot Service Hub Consulting | Cloudsheer',
     description: 'HubSpot Service Hub deployments: ticketing, customer portal, knowledge base, SLA automation, CSAT/NPS surveys, and Breeze customer agent.',
   },
-  '/solutions/hubspot-cms-hub': {
-    title: 'HubSpot CMS Hub Consulting & Development | Cloudsheer',
-    description: 'HubSpot CMS Hub website builds: custom themes, modules, memberships, multi-language sites, and SEO-optimized pages connected to your CRM.',
+  '/solutions/hubspot-content-hub': {
+    title: 'HubSpot Content Hub Consulting & Development | Cloudsheer',
+    description: 'HubSpot Content Hub builds: AI co-writer with brand voice, podcast hosting, content remix, memberships, multi-language sites, and SEO pages tied to Smart CRM.',
   },
-  '/solutions/hubspot-operations-hub': {
-    title: 'HubSpot Operations Hub Consulting | Cloudsheer',
-    description: 'HubSpot Operations Hub setup: programmable automation, data sync, data quality automation, custom datasets, and snowflake/warehouse integration.',
+  '/solutions/hubspot-data-hub': {
+    title: 'HubSpot Data Hub Consulting | Cloudsheer',
+    description: 'HubSpot Data Hub setup: two-way sync, Breeze Intelligence enrichment, programmable workflows, data quality automation, custom datasets, and Snowflake data share.',
   },
-  '/solutions/hubspot-breeze-ai': {
-    title: 'HubSpot Breeze AI Consulting & Deployment | Cloudsheer',
-    description: 'Deploy HubSpot Breeze AI: Breeze Copilot, Breeze Agents (Prospecting, Customer, Content, Social), and Breeze Intelligence enrichment. Wired into your full HubSpot stack.',
+  '/solutions/hubspot-commerce-hub': {
+    title: 'HubSpot Commerce Hub Consulting | Cloudsheer',
+    description: 'HubSpot Commerce Hub: CPQ, branded quotes, invoices, payment links, subscriptions, and self-serve customer portals - all wired into Smart CRM.',
+  },
+  '/solutions/hubspot-small-business-bundle': {
+    title: 'HubSpot Small Business Bundle Setup | Cloudsheer',
+    description: 'Done-for-you HubSpot Starter Bundle setup - Marketing, Sales, Service, Content, Commerce, Operations Starter editions live in 2-3 weeks for startups and SMBs.',
   },
   '/case-studies/agentforce-manufacturing': {
     title: 'Case Study: 92% Autonomous Cases with Agentforce | Cloudsheer',
@@ -367,12 +427,15 @@ export function professionalServiceSchema() {
       'CRM Analytics & Tableau',
       'Salesforce Platform Development',
       'Slack Integration',
+      'HubSpot Smart CRM',
+      'HubSpot Breeze AI',
       'HubSpot Marketing Hub',
       'HubSpot Sales Hub',
       'HubSpot Service Hub',
-      'HubSpot CMS Hub',
-      'HubSpot Operations Hub',
-      'HubSpot Breeze AI',
+      'HubSpot Content Hub',
+      'HubSpot Data Hub',
+      'HubSpot Commerce Hub',
+      'HubSpot Small Business Bundle',
       'Salesforce to HubSpot Migration',
       'HubSpot to Salesforce Migration',
     ],
@@ -385,7 +448,7 @@ export function professionalServiceSchema() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Salesforce Implementation',
           description: 'Full Salesforce cloud implementation including Sales, Service, Marketing, Commerce, and Experience Cloud.' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HubSpot Implementation',
-          description: 'End-to-end HubSpot implementation across Marketing, Sales, Service, CMS, Operations Hub, and Breeze AI.' } },
+          description: 'End-to-end HubSpot implementation on Smart CRM - Marketing, Sales, Service, Content, Data, Commerce Hubs - plus Breeze AI rollout and the Small Business Bundle.' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'CRM Analytics & Tableau',
           description: 'Real-time dashboards, AI predictions, and visual analytics embedded in Salesforce.' } },
       ],

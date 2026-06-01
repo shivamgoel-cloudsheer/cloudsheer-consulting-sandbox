@@ -5,26 +5,27 @@ import FAQ from '../components/FAQ'
 import { addPageSchema, faqPageSchema, localBusinessSchemas } from '../seoConfig'
 
 const aboutFaqs = [
-  { q: 'How many certifications does your team hold?', a: '60+ certifications across Sales Cloud, Service Cloud, Marketing Cloud, Platform Developer, Agentforce Specialist, Data Cloud Consultant, plus HubSpot Solutions Partner credentials across Marketing, Sales, Service, CMS, and Operations Hub.' },
+  { q: 'How many certifications does your team hold?', a: '60+ certifications across Sales Cloud, Service Cloud, Marketing Cloud, Platform Developer, Agentforce Specialist, Data Cloud Consultant, plus HubSpot Solutions Partner credentials across Marketing, Sales, Service, CMS, and Operations Hub. AWS and Microsoft Dynamics partnership tracks are in progress.' },
+  { q: 'Which platforms do you cover?', a: 'Five pillars: Salesforce (verified partner), HubSpot, AWS, Microsoft Dynamics 365, and custom AI agents. We pick the platform that fits your business outcome - not the one that fits our certifications.' },
   { q: 'What industries do you work with?', a: 'Financial services, retail/e-commerce, healthcare, B2B SaaS, manufacturing, and professional services.' },
   { q: 'Where are your offices located?', a: 'Dallas (USA), Delhi/Noida (India), London (UK), and New York (USA). Our distributed team delivers round-the-clock coverage across 4 time zones.' },
-  { q: 'Do you work on both Salesforce and HubSpot?', a: 'Yes. We deliver across the full Salesforce stack (including Agentforce) and every HubSpot Hub (Marketing, Sales, Service, CMS, Operations, Breeze AI). We also handle Salesforce↔HubSpot migrations and dual-stack integrations.' },
+  { q: 'Can you build a custom AI agent instead of using a packaged tool?', a: 'Yes. When a box product like Agentforce or Breeze cannot be made to fit, we build a custom agent on the LLM of your choice (Claude, GPT, Gemini, or open-weight models) with evals, guardrails, and observability. Common use case: retiring an aging CRM, ERP, or ticketing system with an agent that works against the same underlying data.' },
   { q: 'Can I speak to a specific team member before engaging?', a: 'Yes. Book a discovery call and we will match you with the architect most relevant to your project.' },
 ]
 
 const values = [
-  { icon: <Sparkles className="w-5 h-5" />, title: 'AI-First Thinking',        desc: 'Every engagement starts by asking: where can Agentforce or Breeze AI create the most value? We are built around this question.' },
+  { icon: <Sparkles className="w-5 h-5" />, title: 'Platform-Agnostic by Default', desc: 'We pick the platform that fits your business - not the one that fits our certifications. Salesforce, HubSpot, AWS, Dynamics, or custom: the answer is whichever delivers the outcome.' },
   { icon: <Award className="w-5 h-5" />,    title: 'Excellence',               desc: 'We hold ourselves to the highest standard - in our code quality, solution design, and client communication.' },
   { icon: <Heart className="w-5 h-5" />,    title: 'True Partnership',         desc: 'We invest in long-term relationships, not one-off projects. Your success is the only metric we care about.' },
-  { icon: <Lightbulb className="w-5 h-5" />,title: 'Relentless Innovation',    desc: 'We stay at the frontier of Salesforce, Agentforce, and HubSpot - bringing the latest capabilities to our clients first.' },
+  { icon: <Lightbulb className="w-5 h-5" />,title: 'Relentless Innovation',    desc: 'We stay at the frontier across every platform we support - bringing new capabilities (Agentforce, Breeze AI, Bedrock, Copilot, custom agents) to our clients first.' },
   { icon: <Users className="w-5 h-5" />,    title: 'People-First AI',          desc: 'AI should empower people, not replace them. We design every agent and automation to make your team more effective.' },
 ]
 
 const capabilities = [
-  { icon: <Sparkles className="w-5 h-5" />, title: 'Agentforce & Breeze AI', desc: 'Deploy autonomous agents in Salesforce (Agentforce) or HubSpot (Breeze) that handle support, sales, and operations 24/7.' },
-  { icon: <Award className="w-5 h-5" />,    title: 'Full Salesforce Suite',  desc: 'Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, Experience Cloud, Analytics - all connected.' },
-  { icon: <Users className="w-5 h-5" />,    title: 'Full HubSpot Stack',     desc: 'Marketing Hub, Sales Hub, Service Hub, CMS Hub, Operations Hub, plus Breeze AI - implementation and migration.' },
-  { icon: <Heart className="w-5 h-5" />,    title: 'Strategy & Optimization', desc: 'From greenfield builds to ongoing managed services. Discovery to launch in 4-6 weeks, with measurable ROI from day one.' },
+  { icon: <Sparkles className="w-5 h-5" />, title: 'Salesforce + HubSpot CRM',     desc: 'Full Salesforce suite plus every HubSpot Hub. Agentforce and Breeze AI agents wired into the platforms your revenue team already uses.' },
+  { icon: <Award className="w-5 h-5" />,    title: 'AWS Cloud Infrastructure',     desc: 'Migration, DevOps, Well-Architected reviews, security baselines, FinOps cost optimization, and Bedrock for AI workloads.' },
+  { icon: <Users className="w-5 h-5" />,    title: 'Microsoft Dynamics + Power',   desc: 'Dynamics 365 customer engagement and ERP, plus Power Platform, Power BI, and Copilot Studio for custom extensions.' },
+  { icon: <Heart className="w-5 h-5" />,    title: 'Custom AI Agents',             desc: 'When a box product cannot be made to fit, we build the agent that does - production-grade, observable, and safe in front of customers.' },
 ]
 
 const offices = [
@@ -120,12 +121,12 @@ export default function About() {
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="tag mx-auto mb-5">What We Do</div>
             <h2 className="section-title mb-4">
-              Your CRM Partner for<br />
-              <span className="gradient-text">AI-Powered Growth</span>
+              One Team for the<br />
+              <span className="gradient-text">Platforms You Run On</span>
             </h2>
             <p className="section-sub">
-              We help businesses cut costs, close more deals, and scale operations across
-              Salesforce, Agentforce, and HubSpot - from strategy to deployment to ongoing optimization.
+              We help businesses cut costs, close more deals, and modernize operations across
+              CRM, cloud infrastructure, ERP, and custom AI - from strategy to deployment to ongoing optimization.
             </p>
           </div>
 
@@ -167,12 +168,12 @@ export default function About() {
                 Expertise Meets <span className="gradient-text">Knowledge</span>
               </h2>
               <p className="section-sub mb-6">
-                60+ certifications across Salesforce, Agentforce, and HubSpot. 10 Salesforce clouds.
-                Every HubSpot Hub. 4 offices. Every project gets a senior architect - not a junior learning on your org.
+                60+ certifications across Salesforce, Agentforce, and HubSpot. Active partnership tracks for AWS
+                and Microsoft. Hands-on AI agent development. Every project gets a senior architect - not a junior learning on your org.
               </p>
               <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
                 Our team has delivered across financial services, retail, healthcare, SaaS, and manufacturing -
-                on Salesforce, HubSpot, or both. That cross-industry, cross-platform experience means we bring
+                on whichever platform was the right fit. That cross-industry, cross-platform experience means we bring
                 proven patterns to your project instead of figuring it out as we go.
               </p>
             </div>
@@ -180,8 +181,8 @@ export default function About() {
             {/* Stat cards */}
             <div className="grid grid-cols-2 gap-5">
               {[
-                { value: '60+',    label: 'Salesforce & HubSpot Certs',    color: '#0176D3' },
-                { value: '40+',    label: 'Team Members Globally',         color: '#6366F1' },
+                { value: '60+',    label: 'Platform Certifications',       color: '#0176D3' },
+                { value: '5',      label: 'Pillars: SF, HS, AWS, Dynamics, AI', color: '#6366F1' },
                 { value: '4',      label: 'Global Office Locations',       color: '#06B6D4' },
                 { value: '250+',   label: 'Successful Projects',           color: '#F59E0B' },
               ].map(({ value, label, color }) => (
@@ -231,7 +232,7 @@ export default function About() {
             <h2 className="section-title mb-4">Meet the Team</h2>
             <p className="section-sub max-w-2xl mx-auto">
               40+ experts across Dallas, Delhi, London, and New York - united by a shared passion
-              for Salesforce, Agentforce, HubSpot, and delivering outcomes that matter.
+              for Salesforce, HubSpot, cloud, ERP, and AI agent work that delivers outcomes that matter.
             </p>
           </div>
 
@@ -292,7 +293,7 @@ export default function About() {
             Ready to See What We Can <span className="gradient-text-gold">Build for You?</span>
           </h2>
           <p className="mb-8" style={{ color: 'rgba(148,196,255,0.80)' }}>
-            30-minute call with a Salesforce or HubSpot architect. We will assess your setup, identify quick wins, and give you a clear plan.
+            30-minute call with a senior architect. We will assess your setup, identify quick wins, and give you a clear plan - whichever platform fits.
           </p>
           <a href="https://cal.com/cloudsheer-consulting/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="btn-gold">
             Book Free Discovery Call <ArrowRight className="w-4 h-4" />
